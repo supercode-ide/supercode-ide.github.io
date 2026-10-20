@@ -7,55 +7,55 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/?lang=zh</loc>
+        <loc>https://supercode-ide.github.io/zh/</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/?lang=es</loc>
+        <loc>https://supercode-ide.github.io/es/</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/?lang=ja</loc>
+        <loc>https://supercode-ide.github.io/ja/</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/?lang=de</loc>
+        <loc>https://supercode-ide.github.io/de/</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/?lang=fr</loc>
+        <loc>https://supercode-ide.github.io/fr/</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/?lang=ko</loc>
+        <loc>https://supercode-ide.github.io/ko/</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/?lang=pt</loc>
+        <loc>https://supercode-ide.github.io/pt/</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/?lang=hi</loc>
+        <loc>https://supercode-ide.github.io/hi/</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/?lang=ru</loc>
+        <loc>https://supercode-ide.github.io/ru/</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.95</priority>
@@ -67,55 +67,55 @@
         <priority>0.95</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/code-editor.html?lang=zh</loc>
+        <loc>https://supercode-ide.github.io/zh/code-editor.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/code-editor.html?lang=es</loc>
+        <loc>https://supercode-ide.github.io/es/code-editor.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/code-editor.html?lang=ja</loc>
+        <loc>https://supercode-ide.github.io/ja/code-editor.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/code-editor.html?lang=de</loc>
+        <loc>https://supercode-ide.github.io/de/code-editor.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/code-editor.html?lang=fr</loc>
+        <loc>https://supercode-ide.github.io/fr/code-editor.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/code-editor.html?lang=ko</loc>
+        <loc>https://supercode-ide.github.io/ko/code-editor.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/code-editor.html?lang=pt</loc>
+        <loc>https://supercode-ide.github.io/pt/code-editor.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/code-editor.html?lang=hi</loc>
+        <loc>https://supercode-ide.github.io/hi/code-editor.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/code-editor.html?lang=ru</loc>
+        <loc>https://supercode-ide.github.io/ru/code-editor.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
@@ -127,55 +127,55 @@
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/python-ide.html?lang=zh</loc>
+        <loc>https://supercode-ide.github.io/zh/python-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/python-ide.html?lang=es</loc>
+        <loc>https://supercode-ide.github.io/es/python-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/python-ide.html?lang=ja</loc>
+        <loc>https://supercode-ide.github.io/ja/python-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/python-ide.html?lang=de</loc>
+        <loc>https://supercode-ide.github.io/de/python-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/python-ide.html?lang=fr</loc>
+        <loc>https://supercode-ide.github.io/fr/python-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/python-ide.html?lang=ko</loc>
+        <loc>https://supercode-ide.github.io/ko/python-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/python-ide.html?lang=pt</loc>
+        <loc>https://supercode-ide.github.io/pt/python-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/python-ide.html?lang=hi</loc>
+        <loc>https://supercode-ide.github.io/hi/python-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/python-ide.html?lang=ru</loc>
+        <loc>https://supercode-ide.github.io/ru/python-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
@@ -187,55 +187,55 @@
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/cpp-ide.html?lang=zh</loc>
+        <loc>https://supercode-ide.github.io/zh/cpp-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/cpp-ide.html?lang=es</loc>
+        <loc>https://supercode-ide.github.io/es/cpp-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/cpp-ide.html?lang=ja</loc>
+        <loc>https://supercode-ide.github.io/ja/cpp-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/cpp-ide.html?lang=de</loc>
+        <loc>https://supercode-ide.github.io/de/cpp-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/cpp-ide.html?lang=fr</loc>
+        <loc>https://supercode-ide.github.io/fr/cpp-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/cpp-ide.html?lang=ko</loc>
+        <loc>https://supercode-ide.github.io/ko/cpp-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/cpp-ide.html?lang=pt</loc>
+        <loc>https://supercode-ide.github.io/pt/cpp-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/cpp-ide.html?lang=hi</loc>
+        <loc>https://supercode-ide.github.io/hi/cpp-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/cpp-ide.html?lang=ru</loc>
+        <loc>https://supercode-ide.github.io/ru/cpp-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
@@ -247,55 +247,55 @@
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/java-ide.html?lang=zh</loc>
+        <loc>https://supercode-ide.github.io/zh/java-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/java-ide.html?lang=es</loc>
+        <loc>https://supercode-ide.github.io/es/java-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/java-ide.html?lang=ja</loc>
+        <loc>https://supercode-ide.github.io/ja/java-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/java-ide.html?lang=de</loc>
+        <loc>https://supercode-ide.github.io/de/java-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/java-ide.html?lang=fr</loc>
+        <loc>https://supercode-ide.github.io/fr/java-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/java-ide.html?lang=ko</loc>
+        <loc>https://supercode-ide.github.io/ko/java-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/java-ide.html?lang=pt</loc>
+        <loc>https://supercode-ide.github.io/pt/java-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/java-ide.html?lang=hi</loc>
+        <loc>https://supercode-ide.github.io/hi/java-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/java-ide.html?lang=ru</loc>
+        <loc>https://supercode-ide.github.io/ru/java-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
@@ -307,55 +307,55 @@
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/web-ide.html?lang=zh</loc>
+        <loc>https://supercode-ide.github.io/zh/web-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/web-ide.html?lang=es</loc>
+        <loc>https://supercode-ide.github.io/es/web-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/web-ide.html?lang=ja</loc>
+        <loc>https://supercode-ide.github.io/ja/web-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/web-ide.html?lang=de</loc>
+        <loc>https://supercode-ide.github.io/de/web-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/web-ide.html?lang=fr</loc>
+        <loc>https://supercode-ide.github.io/fr/web-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/web-ide.html?lang=ko</loc>
+        <loc>https://supercode-ide.github.io/ko/web-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/web-ide.html?lang=pt</loc>
+        <loc>https://supercode-ide.github.io/pt/web-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/web-ide.html?lang=hi</loc>
+        <loc>https://supercode-ide.github.io/hi/web-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/web-ide.html?lang=ru</loc>
+        <loc>https://supercode-ide.github.io/ru/web-ide.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
@@ -367,55 +367,55 @@
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/git-client.html?lang=zh</loc>
+        <loc>https://supercode-ide.github.io/zh/git-client.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/git-client.html?lang=es</loc>
+        <loc>https://supercode-ide.github.io/es/git-client.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/git-client.html?lang=ja</loc>
+        <loc>https://supercode-ide.github.io/ja/git-client.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/git-client.html?lang=de</loc>
+        <loc>https://supercode-ide.github.io/de/git-client.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/git-client.html?lang=fr</loc>
+        <loc>https://supercode-ide.github.io/fr/git-client.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/git-client.html?lang=ko</loc>
+        <loc>https://supercode-ide.github.io/ko/git-client.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/git-client.html?lang=pt</loc>
+        <loc>https://supercode-ide.github.io/pt/git-client.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/git-client.html?lang=hi</loc>
+        <loc>https://supercode-ide.github.io/hi/git-client.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
-        <loc>https://supercode-ide.github.io/git-client.html?lang=ru</loc>
+        <loc>https://supercode-ide.github.io/ru/git-client.html</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>

@@ -26,17 +26,16 @@
   <link id="canonical-link" rel="canonical" href="https://supercode-ide.github.io/">
   <link rel="alternate" hreflang="x-default" href="https://supercode-ide.github.io/">
   <link rel="alternate" hreflang="en" href="https://supercode-ide.github.io/">
-  <link rel="alternate" hreflang="zh-Hans" href="https://supercode-ide.github.io/?lang=zh">
-  <link rel="alternate" hreflang="es" href="https://supercode-ide.github.io/?lang=es">
-  <link rel="alternate" hreflang="ja" href="https://supercode-ide.github.io/?lang=ja">
-  <link rel="alternate" hreflang="de" href="https://supercode-ide.github.io/?lang=de">
-  <link rel="alternate" hreflang="fr" href="https://supercode-ide.github.io/?lang=fr">
-  <link rel="alternate" hreflang="ko" href="https://supercode-ide.github.io/?lang=ko">
-  <link rel="alternate" hreflang="pt" href="https://supercode-ide.github.io/?lang=pt">
-  <link rel="alternate" hreflang="hi" href="https://supercode-ide.github.io/?lang=hi">
-  <link rel="alternate" hreflang="ru" href="https://supercode-ide.github.io/?lang=ru">
-
-  <!-- OpenGraph / Social Metadata -->
+  <link rel="alternate" hreflang="zh-Hans" href="https://supercode-ide.github.io/zh/">
+  <link rel="alternate" hreflang="es" href="https://supercode-ide.github.io/es/">
+  <link rel="alternate" hreflang="ja" href="https://supercode-ide.github.io/ja/">
+  <link rel="alternate" hreflang="de" href="https://supercode-ide.github.io/de/">
+  <link rel="alternate" hreflang="fr" href="https://supercode-ide.github.io/fr/">
+  <link rel="alternate" hreflang="ko" href="https://supercode-ide.github.io/ko/">
+  <link rel="alternate" hreflang="pt" href="https://supercode-ide.github.io/pt/">
+  <link rel="alternate" hreflang="hi" href="https://supercode-ide.github.io/hi/">
+  <link rel="alternate" hreflang="ru" href="https://supercode-ide.github.io/ru/">
+<!-- OpenGraph / Social Metadata -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Phoenix Global Studios &middot; Code Editor: SuperCode IDE">
   <meta id="og-title" property="og:title" content="Code Editor: SuperCode IDE &mdash; Offline Python IDE, C/C++ Compiler &amp; Java IDE">
@@ -1643,10 +1642,10 @@
       document.getElementById('meta-desc').setAttribute('content', dict.metaDesc);
       document.getElementById('og-title').setAttribute('content', dict.metaTitle);
       document.getElementById('og-desc').setAttribute('content', dict.metaDesc);
-      document.getElementById('og-url').setAttribute('content', dict.canonical);
+      document.getElementById('og-url').setAttribute('content', window.__SUPERCODE_STATIC_CANONICAL__ || dict.canonical);
       document.getElementById('tw-title').setAttribute('content', dict.metaTitle);
       document.getElementById('tw-desc').setAttribute('content', dict.metaDesc);
-      document.getElementById('canonical-link').setAttribute('href', dict.canonical);
+      document.getElementById('canonical-link').setAttribute('href', window.__SUPERCODE_STATIC_CANONICAL__ || dict.canonical);
 
       for (var i = 0; i < i18nNodes.length; i++) {
         var key = i18nNodes[i].getAttribute('data-i18n');
@@ -1670,7 +1669,7 @@
 
       syncInternalLinks(validLang);
 
-      if (window.history && window.history.replaceState) {
+      if (window.history && window.history.replaceState && !window.__SUPERCODE_STATIC_LANG__) {
         var newUrl = window.location.pathname + (validLang === 'en' ? '' : '?lang=' + validLang) + window.location.hash;
         window.history.replaceState({ lang: validLang }, '', newUrl);
       }

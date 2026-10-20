@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt" data-static-lang="pt" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#070A10">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <!-- ==========================================================================
+       WEB/WASM SPECIFIC SEO META TAGS (ON-PAGE SEO 2.0 - RANK #1 EDITION)
+       Targeting: html editor android, javascript ide offline, local http server android, web development app, wasm emulator
+       ========================================================================== -->
+  <title>Web Editor (Editor HTML/JS) e Servidor HTTP Local para Android | SuperCode</title>
+  <meta name="description" content="Crie e visualize sites no Android como um profissional. O SuperCode traz Servidor HTTP Local real, suporte a WebAssembly (WASM), m&#243;dulos ES6, cliente FTP/SFTP integrado e console JS DevTools.">
+  <meta name="keywords" content="html editor android, javascript ide offline, local http server android, web development app, wasm emulator, css editor, ftp client code editor, spck editor alternative, SuperCode IDE">
+  <meta name="author" content="Phoenix Global Studios">
+
+  <!-- Mobile App Deep Linking -->
+  <meta name="google-play-app" content="app-id=com.phoenixglobal.supercodeeditor">
+
+  <!-- ==========================================================================
+       MULTI-LANGUAGE SEO CLUSTER (10 LANGUAGES)
+       ========================================================================== -->
+  <link id="canonical-link" rel="canonical" href="https://supercode-ide.github.io/pt/web-ide.html">
+  <link rel="alternate" hreflang="x-default" href="https://supercode-ide.github.io/web-ide.html">
+  <link rel="alternate" hreflang="en" href="https://supercode-ide.github.io/web-ide.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://supercode-ide.github.io/zh/web-ide.html">
+  <link rel="alternate" hreflang="es" href="https://supercode-ide.github.io/es/web-ide.html">
+  <link rel="alternate" hreflang="ja" href="https://supercode-ide.github.io/ja/web-ide.html">
+  <link rel="alternate" hreflang="de" href="https://supercode-ide.github.io/de/web-ide.html">
+  <link rel="alternate" hreflang="fr" href="https://supercode-ide.github.io/fr/web-ide.html">
+  <link rel="alternate" hreflang="ko" href="https://supercode-ide.github.io/ko/web-ide.html">
+  <link rel="alternate" hreflang="pt" href="https://supercode-ide.github.io/pt/web-ide.html">
+  <link rel="alternate" hreflang="hi" href="https://supercode-ide.github.io/hi/web-ide.html">
+  <link rel="alternate" hreflang="ru" href="https://supercode-ide.github.io/ru/web-ide.html">
+<!-- OpenGraph / Social Metadata -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
+  <meta property="og:title" content="Web Editor (Editor HTML/JS) e Servidor HTTP Local para Android | SuperCode">
+  <meta property="og:description" content="Crie e visualize sites no Android como um profissional. O SuperCode traz Servidor HTTP Local real, suporte a WebAssembly (WASM), m&#243;dulos ES6, cliente FTP/SFTP integrado e console JS DevTools.">
+  <meta property="og:url" content="https://supercode-ide.github.io/pt/web-ide.html">
+
+  <!-- Physical SVG Favicon & Apple Touch Icon for Google SERP -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <!-- ==========================================================================
+       QUAD-CORE @GRAPH SCHEMA.ORG (Software/Mobile/WebApplication + Breadcrumb + HowTo + FAQPage)
+       ========================================================================== -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["SoftwareApplication", "MobileApplication", "WebApplication"],
+          "@id": "https://supercode-ide.github.io/#supercode-app",
+          "name": "Code Editor: SuperCode IDE",
+          "alternateName": ["SuperCode Web Editor & Local HTTP Server", "SuperCode Android HTML5 CSS3 JS IDE"],
+          "operatingSystem": "Android 8.0 - Android 15",
+          "applicationCategory": "DeveloperApplication",
+          "applicationSubCategory": "Web Development IDE & Local HTTP Server",
+          "fileSize": "40.2MB",
+          "softwareVersion": "2.8.5 (Build 15.273)",
+          "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
+          "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
+          "identifier": "com.phoenixglobal.supercodeeditor",
+          "url": "https://supercode-ide.github.io/web-ide.html",
+          "screenshot": "https://supercode-ide.github.io/favicon.svg",
+          "author": {
+            "@type": "Organization",
+            "name": "Phoenix Global Studios",
+            "url": "https://supercode-ide.github.io/"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.92",
+            "bestRating": "5.00",
+            "worstRating": "1.00",
+            "ratingCount": "51",
+            "reviewCount": "51"
+          },
+          "featureList": [
+            "Virtual Local HTTP Server (127.0.0.1) bypassing file:// CORS restrictions for ES6 Modules",
+            "Native WebAssembly (WASM) Binary Instantiation and HTML5 Canvas Execution Engine",
+            "Desktop-Grade Canvas.toBlob and Large Media Stream Export Directly to Android Gallery",
+            "Integrated SFTP & FTP Remote Server Synchronization with Instant Local Preview",
+            "60fps Crash-Proof JavaScript DevTools Console with High-Frequency Log Throttling"
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://supercode-ide.github.io/web-ide.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "SuperCode IDE",
+              "item": "https://supercode-ide.github.io/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Web Editor & Local HTTP Server",
+              "item": "https://supercode-ide.github.io/web-ide.html"
+            }
+          ]
+        },
+        {
+          "@type": "HowTo",
+          "name": "How to Run ES6 Modules and WebAssembly Offline on Android Without CORS Errors",
+          "description": "Step-by-step guide to launching a local HTTP server, testing ES6/WASM web apps, and syncing via SFTP on Android using SuperCode IDE.",
+          "totalTime": "PT1M",
+          "tool": [
+            {
+              "@type": "HowToTool",
+              "name": "Code Editor: SuperCode IDE (40.2 MB Android App)"
+            }
+          ],
+          "step": [
+            {
+              "@type": "HowToStep",
+              "position": 1,
+              "name": "Start the Built-in Virtual HTTP Server",
+              "text": "Open your HTML5, CSS3, or JavaScript project in SuperCode IDE. The built-in Virtual HTTP Sandbox automatically maps local files to 127.0.0.1, eliminating file:// CORS blocks.",
+              "url": "https://supercode-ide.github.io/web-ide.html#step1"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 2,
+              "name": "Test WebAssembly, Canvas & Media Exports",
+              "text": "Execute ES6 import/export modules, instantiate .wasm binaries, and export high-resolution Canvas Blobs directly to your Android photo gallery under a 30MB Anti-OOM shield.",
+              "url": "https://supercode-ide.github.io/web-ide.html#step2"
+            },
+            {
+              "@type": "HowToStep",
+              "position": 3,
+              "name": "Debug with 60fps JS DevTools and Deploy via SFTP",
+              "text": "Inspect console.log streams in the throttled floating DevTools drawer and synchronize verified frontend assets directly to production SFTP/FTP servers.",
+              "url": "https://supercode-ide.github.io/web-ide.html#step3"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://supercode-ide.github.io/web-ide.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the best HTML/JS web editor and local HTTP server for Android?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Code Editor: SuperCode IDE (rated 4.92/5.00) is the best offline HTML5, CSS3, and JavaScript web editor for Android 8.0 to Android 15. Within a 40.2 MB package, it features a built-in Virtual Local HTTP Server (127.0.0.1) that bypasses file:// CORS blocks to run ES6 modules and WebAssembly offline."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I fix CORS errors when testing ES6 modules and WebAssembly on Android?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Standard Android editors open HTML files via the file:// protocol, which browsers block from loading ES6 modules or fetch() requests due to CORS security policies. SuperCode IDE solves this by serving your project through a zero-configuration local HTTP server on 127.0.0.1."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       CARBON OBSIDIAN DESIGN SYSTEM (WEB CYAN ACCENT)
+       ========================================================================== */
+    :root {
+      --bg-obsidian: #070A10; --bg-obsidian-glass: rgba(7, 10, 16, 0.88);
+      --bg-slate: #0D1320; --bg-slate-elevated: #11192B; --bg-terminal: #05080D;
+      --border-electric: rgba(59, 130, 246, 0.25); --border-electric-bright: rgba(59, 130, 246, 0.55);
+      --accent-green: #10B981; --accent-blue: #3B82F6; --accent-blue-dim: rgba(59, 130, 246, 0.15);
+      --accent-web: #06B6D4; --accent-web-dim: rgba(6, 182, 212, 0.15);
+      --text-primary: #F8FAFC; --text-secondary: #94A3B8; --text-muted: #64748B;
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, monospace;
+      --max-w: 1080px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    html { background-color: var(--bg-obsidian); color: var(--text-primary); font-family: var(--font-sans); line-height: 1.6; scroll-behavior: smooth; }
+    body { background-color: var(--bg-obsidian); background-image: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.12) 0%, transparent 55%), radial-gradient(circle at 85% 20%, rgba(6, 182, 212, 0.08) 0%, transparent 40%); min-height: 100vh; overflow-x: hidden; padding-bottom: 60px; }
+    a, button { text-decoration: none; color: inherit; cursor: pointer; }
+
+    /* Top Navigation Bar */
+    .topbar { position: sticky; top: 0; z-index: 100; width: 100%; background: var(--bg-obsidian-glass); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--border-electric); }
+    .topbar-inner { max-width: var(--max-w); margin: 0 auto; padding: 10px 14px; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .brand-cluster { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .jewel-badge { width: 40px; height: 40px; flex-shrink: 0; border-radius: 10px; background: linear-gradient(145deg, #131C31 0%, #070A10 100%); border: 1px solid rgba(255, 215, 0, 0.38); display: flex; align-items: center; justify-content: center; }
+    .jewel-badge svg { width: 30px; height: 30px; }
+    .brand-main-title { font-size: clamp(0.92rem, 3.8vw, 1.05rem); font-weight: 800; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .topbar-controls { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .btn-lang-trigger { display: inline-flex; align-items: center; gap: 5px; background: var(--accent-blue-dim); color: var(--accent-web); border: 1px solid rgba(6, 182, 212, 0.35); padding: 6px 10px; border-radius: 6px; font-size: 0.78rem; font-weight: 700; font-family: var(--font-sans); transition: transform 0.18s, background 0.2s; }
+    .btn-lang-trigger:hover { background: rgba(59, 130, 246, 0.25); }
+    .btn-lang-trigger:active { transform: scale(0.96); }
+    .btn-back { font-size: 0.82rem; color: var(--accent-web); display: inline-flex; align-items: center; gap: 5px; font-weight: 700; background: var(--accent-web-dim); padding: 6px 12px; border-radius: 6px; border: 1px solid rgba(6, 182, 212, 0.3); white-space: nowrap; transition: transform 0.2s; }
+    .btn-back:active { transform: scale(0.96); }
+
+    /* Main Content Layout */
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 36px 14px; }
+    .hero-header { text-align: center; margin-bottom: 36px; }
+    .hero-tag { display: inline-block; font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-web); background: var(--accent-web-dim); border: 1px solid rgba(6, 182, 212, 0.3); padding: 4px 12px; border-radius: 999px; margin-bottom: 16px; font-weight: 700; letter-spacing: 0.05em; }
+    .hero-h1 { font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 900; line-height: 1.15; margin-bottom: 16px; }
+    .text-gradient { background: linear-gradient(90deg, #FFFFFF 0%, var(--accent-web) 50%, var(--accent-blue) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero-desc { font-size: 1.05rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 24px; }
+    .hero-desc strong { color: var(--text-primary); }
+
+    /* Featured Snippet Position #0 Definition + Interactive Web Sandbox */
+    .bento-sandbox-wrapper { background: var(--bg-slate); border: 1px solid var(--border-electric-bright); border-radius: 16px; padding: 24px; margin-bottom: 44px; box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55); }
+    .sandbox-header { margin-bottom: 18px; }
+    .sandbox-header h2 { font-size: 1.25rem; font-weight: 800; color: var(--accent-web); margin-bottom: 8px; }
+    .snippet-definition { font-size: 0.94rem; color: var(--text-secondary); line-height: 1.6; background: rgba(5, 8, 13, 0.65); border-left: 3px solid var(--accent-web); padding: 10px 14px; border-radius: 0 8px 8px 0; }
+    .snippet-definition strong { color: var(--text-primary); }
+    .carbon-sandbox-container { background: var(--bg-terminal); border: 1px solid var(--border-electric); border-radius: 12px; overflow: hidden; }
+    .sandbox-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; padding: 10px 12px; background: #090E18; border-bottom: 1px solid var(--border-electric); }
+    .sandbox-tabs-group { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tab-btn { background: rgba(255, 255, 255, 0.04); color: var(--text-secondary); border: 1px solid rgba(148, 163, 184, 0.2); padding: 6px 11px; border-radius: 6px; font-family: var(--font-mono); font-size: 0.74rem; font-weight: 600; transition: all 0.18s; }
+    .tab-btn.active { background: var(--accent-web-dim); color: var(--accent-web); border-color: var(--accent-web); font-weight: 700; }
+    .run-cta-btn { background: linear-gradient(90deg, var(--accent-web) 0%, var(--accent-blue) 100%); color: #FFFFFF; border: none; padding: 6px 14px; border-radius: 6px; font-family: var(--font-mono); font-size: 0.76rem; font-weight: 900; box-shadow: 0 0 12px rgba(6, 182, 212, 0.35); transition: transform 0.15s; }
+    .run-cta-btn:active { transform: scale(0.95); }
+    .sandbox-editor-split { display: grid; grid-template-columns: 1fr; }
+    @media (min-width: 768px) { .sandbox-editor-split { grid-template-columns: 1.15fr 0.85fr; } }
+    .code-viewport { width: 100%; min-height: 185px; background: #0B101B; color: #E2E8F0; border: none; border-bottom: 1px solid var(--border-electric); padding: 14px; font-family: var(--font-mono); font-size: 0.78rem; line-height: 1.55; resize: vertical; outline: none; }
+    @media (min-width: 768px) { .code-viewport { border-bottom: none; border-right: 1px solid var(--border-electric); } }
+    .terminal-drawer { padding: 14px; background: var(--bg-terminal); font-family: var(--font-mono); font-size: 0.75rem; display: flex; flex-direction: column; justify-content: space-between; }
+    .terminal-status { color: var(--accent-web); font-size: 0.69rem; font-weight: 700; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px dashed rgba(59, 130, 246, 0.25); }
+    #terminalStreamText { white-space: pre-wrap; word-break: break-word; color: #D1FAE5; line-height: 1.55; min-height: 115px; }
+
+    /* 4 Feature Cards Grid */
+    .feature-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-bottom: 44px; }
+    @media (min-width: 768px) { .feature-grid { grid-template-columns: 1fr 1fr; } }
+    .feature-card { background: var(--bg-slate); border: 1px solid var(--border-electric); border-radius: 16px; padding: 24px; transition: transform 0.2s, border-color 0.2s; }
+    .feature-card:hover { border-color: var(--border-electric-bright); transform: translateY(-3px); }
+    .f-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--accent-web-dim); border: 1px solid rgba(6, 182, 212, 0.22); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 18px; }
+    .f-title { font-size: 1.25rem; font-weight: 800; color: var(--text-primary); margin-bottom: 12px; }
+    .f-desc { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; }
+    .f-code { font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-web); background: var(--bg-terminal); padding: 8px 12px; border-radius: 8px; margin-top: 14px; border: 1px solid rgba(59, 130, 246, 0.15); display: inline-block; }
+
+    /* Benchmark Comparison Table Section */
+    .benchmark-comparison-section { background: var(--bg-slate); border: 1px solid var(--border-electric); border-radius: 16px; padding: 24px; margin-bottom: 44px; }
+    .benchmark-comparison-section h3 { font-size: 1.22rem; font-weight: 800; color: var(--text-primary); margin-bottom: 6px; }
+    .table-responsive { width: 100%; overflow-x: auto; margin-top: 14px; }
+    .obsidian-benchmark-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; text-align: left; }
+    .obsidian-benchmark-table caption { text-align: left; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); margin-bottom: 10px; }
+    .obsidian-benchmark-table th, .obsidian-benchmark-table td { padding: 11px 12px; border-bottom: 1px solid rgba(59, 130, 246, 0.18); }
+    .obsidian-benchmark-table thead th { background: var(--bg-terminal); color: var(--accent-web); font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; }
+    .obsidian-benchmark-table tbody th { color: var(--text-primary); font-weight: 700; background: rgba(5, 8, 13, 0.35); }
+    .obsidian-benchmark-table tbody td { color: var(--text-secondary); }
+    .obsidian-benchmark-table tbody td strong { color: var(--accent-web); }
+
+    /* Call to Action Box & Footer */
+    .cta-box { background: linear-gradient(180deg, #0D1320 0%, #070A10 100%); border: 1px solid var(--accent-web); border-radius: 16px; padding: 40px 20px; text-align: center; }
+    .cta-box h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 16px; }
+    .btn-play-hero { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(90deg, var(--accent-web) 0%, var(--accent-blue) 100%); color: #FFF; font-weight: 900; font-size: 1rem; padding: 14px 28px; border-radius: 8px; box-shadow: 0 6px 20px rgba(6, 182, 212, 0.3); transition: transform 0.2s; }
+    .btn-play-hero:active { transform: scale(0.96); }
+    .site-footer { text-align: center; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); padding: 24px 14px; border-top: 1px solid var(--border-electric); margin-top: 40px; }
+    .footer-seo-hub { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-bottom: 12px; }
+    .footer-seo-hub a { color: var(--accent-web); font-weight: 700; transition: color 0.2s; }
+    .footer-seo-hub a:hover { color: var(--accent-green); }
+
+    /* Language Selector Modal */
+    .modal-overlay { position: fixed; inset: 0; z-index: 9999; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); display: flex; align-items: flex-end; justify-content: center; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease; }
+    .modal-overlay.show { opacity: 1; visibility: visible; }
+    .lang-modal { width: 100%; max-width: 500px; background: var(--bg-slate); border-top: 1px solid var(--border-electric-bright); border-radius: 24px 24px 0 0; padding: 24px 24px calc(24px + env(safe-area-inset-bottom, 0px)); transform: translateY(100%); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+    .modal-overlay.show .lang-modal { transform: translateY(0); }
+    .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .modal-header h3 { font-size: 1.1rem; color: var(--text-primary); font-weight: 800; }
+    .btn-close-modal { background: rgba(255,255,255,0.08); border: none; color: var(--text-secondary); width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; display: flex; align-items: center; justify-content: center; }
+    .lang-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-height: 50vh; overflow-y: auto; padding-bottom: 10px; }
+    .lang-option { background: var(--bg-obsidian); border: 1px solid var(--border-electric); color: var(--text-primary); padding: 14px 16px; border-radius: 12px; font-size: 0.95rem; font-weight: 600; text-align: left; transition: background 0.2s, border-color 0.2s; }
+    .lang-option:hover { border-color: var(--border-electric-bright); }
+    .lang-option.active { background: var(--accent-blue-dim); border-color: var(--accent-blue); color: var(--accent-web); }
+    @media (min-width: 640px) {
+      .lang-modal { border-radius: 24px; border: 1px solid var(--border-electric-bright); margin-bottom: 40px; transform: scale(0.9); }
+      .modal-overlay { align-items: center; }
+      .modal-overlay.show .lang-modal { transform: scale(1); }
+    }
+  </style>
+</head>
+<body data-page="web_ide">
+<!-- TOP BAR -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="brand-cluster">
+      <div class="jewel-badge" aria-hidden="true">
+        <svg viewBox="20 14 68 72" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z" />
+          <path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z" />
+          <path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z" />
+          <path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0" />
+        </svg>
+      </div>
+      <span class="brand-main-title">SuperCode IDE</span>
+    </a>
+    <div class="topbar-controls">
+      <button id="langModalBtn" class="btn-lang-trigger" type="button" onclick="openLangModal()">
+        &#127760; <span id="langTriggerText">PT</span>
+      </button>
+      <a href="index.html" class="btn-back" data-i18n="btn_back">&#8592; Voltar ao In&#237;cio</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <!-- HERO SECTION -->
+  <header class="hero-header">
+    <span class="hero-tag" data-i18n="hero_tag">EST&#218;DIO WEB M&#211;VEL</span>
+    <h1 class="hero-h1" data-i18n="hero_h1">O Definitivo <span class="text-gradient">Web Editor (HTML/JS) &amp; Servidor Local</span></h1>
+    <p class="hero-desc" data-i18n="hero_desc">Pare de lutar contra as limita&#231;&#245;es do <code>file://</code>. O SuperCode transforma seu Android em um est&#250;dio completo de desenvolvimento web com Servidor HTTP Virtual sem erros de CORS e sincroniza&#231;&#227;o FTP/SFTP.</p>
+  </header>
+
+  <!-- ON-PAGE SEO 2.0: POSITION #0 FEATURED SNIPPET + INTERACTIVE WEB HTTP/WASM SANDBOX -->
+  <section id="interactive-web-sandbox" class="bento-sandbox-wrapper" aria-label="Interactive Local HTTP Server and WebAssembly Sandbox">
+    <div class="sandbox-header">
+      <h2>What is the best HTML/JS web editor and local HTTP server for Android?</h2>
+      <p class="snippet-definition">
+        <strong>Code Editor: SuperCode IDE</strong> is the best offline HTML5, CSS3, and JavaScript web editor for Android 8.0 to Android 15. Within a 40.2 MB package, it features a built-in <strong>Virtual Local HTTP Server (<code>127.0.0.1</code>)</strong> that bypasses <code>file://</code> CORS blocks to run ES6 modules and WebAssembly offline.
+      </p>
+    </div>
+
+    <div class="carbon-sandbox-container">
+      <div class="sandbox-toolbar" role="tablist">
+        <div class="sandbox-tabs-group">
+          <button type="button" class="tab-btn active" id="web-tab-cors" onclick="loadWebScenario('cors')">1. Virtual HTTP &amp; ES6/WASM (Zero CORS)</button>
+          <button type="button" class="tab-btn" id="web-tab-blob" onclick="loadWebScenario('blob')">2. Canvas.toBlob Gallery Stream</button>
+          <button type="button" class="tab-btn" id="web-tab-devtools" onclick="loadWebScenario('devtools')">3. 60fps Throttled JS DevTools</button>
+        </div>
+        <button type="button" class="run-cta-btn" id="runWebBtn" onclick="executeWebSimulation()">&#9654; Start HTTP Sandbox</button>
+      </div>
+
+      <div class="sandbox-editor-split">
+        <textarea id="webCodeInput" class="code-viewport" spellcheck="false" aria-label="HTML5 ES6 and WebAssembly Source Editor">&lt;!-- [Scenario 1]: Virtual HTTP Server (http://127.0.0.1:8080) --&gt;
+&lt;!-- Bypasses mobile file:// CORS blocks for ES6 Modules &amp; WASM --&gt;
+&lt;script type="module"&gt;
+  import { renderMatrix } from './modules/gl_shader.js';
+
+  const response = await fetch('/local/physics_kernel.wasm');
+  const { instance } = await WebAssembly.instantiateStreaming(response);
+  console.log('[Virtual-HTTP 200 OK] WASM Kernel Export:', instance.exports.step(120));
+&lt;/script&gt;</textarea>
+
+        <div id="webTerminalOutput" class="terminal-drawer" aria-live="polite">
+          <div class="terminal-status">Virtual HTTP Server Ready &middot; http://127.0.0.1:8080 &middot; Zero CORS Mode</div>
+          <pre id="terminalStreamText">Tap "&#9654; Start HTTP Sandbox" above to test local ES6 module imports, WebAssembly streaming, and 60fps JS DevTools...</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE FEATURES EXTRACTED FROM ARCHITECTURE -->
+  <div class="feature-grid">
+    <!-- Feature 1: HTTP Localhost Abstraction -->
+    <article class="feature-card" id="step1">
+      <div class="f-icon" aria-hidden="true">&#127760;</div>
+      <h2 class="f-title" data-i18n="f1_title">Verdadeiro Servidor HTTP Local (Sem Erros CORS)</h2>
+      <p class="f-desc" data-i18n="f1_desc">O SuperCode inicia um Sandbox HTTP Virtual mapeado para seus arquivos f&#237;sicos. Execute m&#243;dulos ES6 (<code>import/export</code>) e bin&#225;rios WebAssembly localmente.</p>
+      <div class="f-code">http://127.0.0.1/wasm-canvas-kernel.html</div>
+    </article>
+
+    <!-- Feature 2: Blob/Data URL Export Abstraction -->
+    <article class="feature-card" id="step2">
+      <div class="f-icon" aria-hidden="true">&#128190;</div>
+      <h2 class="f-title" data-i18n="f2_title">Exporta&#231;&#227;o de M&#237;dia de N&#237;vel Desktop</h2>
+      <p class="f-desc" data-i18n="f2_desc">Trabalhando com gr&#225;ficos Canvas ou arquivos grandes? Baixe exporta&#231;&#245;es pesadas de <code>Blob</code> e Data URL diretamente na Galeria do seu celular sem travar a mem&#243;ria.</p>
+      <div class="f-code">canvas.toBlob(blob =&gt; download(blob))</div>
+    </article>
+
+    <!-- Feature 3: RemoteConnectionManager Abstraction -->
+    <article class="feature-card" id="step3">
+      <div class="f-icon" aria-hidden="true">&#128279;</div>
+      <h2 class="f-title" data-i18n="f3_title">Integra&#231;&#227;o Perfeita com FTP / SFTP</h2>
+      <p class="f-desc" data-i18n="f3_desc">Conecte-se a servidores FTP ou SFTP remotos, edite arquivos localmente e visualize mudan&#231;as instantaneamente antes de sincronizar com a produ&#231;&#227;o.</p>
+      <div class="f-code">ssh://admin@production-server/var/www/</div>
+    </article>
+
+    <!-- Feature 4: Console Log Throttle Abstraction -->
+    <article class="feature-card">
+      <div class="f-icon" aria-hidden="true">&#9889;</div>
+      <h2 class="f-title" data-i18n="f4_title">Console JS DevTools &#224; Prova de Travamentos</h2>
+      <p class="f-desc" data-i18n="f4_desc">Depure seu JavaScript com um console flutuante interativo capaz de processar milhares de sa&#237;das <code>console.log</code> simultaneamente a 60fps.</p>
+      <div class="f-code">&gt; [System Guard] Console running smoothly at 60fps</div>
+    </article>
+  </div>
+
+  <!-- ON-PAGE SEO 2.0: GOOGLE TABLE SNIPPET WEB IDE COMPARISON -->
+  <section class="benchmark-comparison-section" aria-label="Android Web Editor and Local HTTP Server Comparison Table">
+    <h3>Android HTML/JS Web Editor &amp; Local Server Comparison (2026 Benchmark)</h3>
+    <div class="table-responsive">
+      <table class="obsidian-benchmark-table">
+        <caption>Technical comparison of local HTTP serving, CORS handling, WASM execution, and SFTP deployment across Android web editors</caption>
+        <thead>
+        <tr>
+          <th scope="col">Core Web IDE Metric</th>
+          <th scope="col">SuperCode IDE (v2.8.5)</th>
+          <th scope="col">Spck Editor / TrebEdit</th>
+          <th scope="col">Acode Editor</th>
+          <th scope="col">CodePen / JSFiddle (Mobile)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row">Local HTTP Server &amp; ES6 CORS</th>
+          <td><strong>Built-in Virtual HTTP (127.0.0.1)</strong></td>
+          <td>Limited Preview / CORS Blocks on WASM</td>
+          <td>Requires External Server Plugin</td>
+          <td>Cloud Only (No Local File System)</td>
+        </tr>
+        <tr>
+          <th scope="row">WebAssembly (WASM) &amp; Canvas Blob</th>
+          <td><strong>Native WASM + Direct Gallery Export</strong></td>
+          <td>Fails on Heavy Blob Downloads</td>
+          <td>WebView Dependent</td>
+          <td>Browser Memory Quota Limits</td>
+        </tr>
+        <tr>
+          <th scope="row">JS DevTools High-Output Protection</th>
+          <td><strong>60fps Throttled Anti-Freeze Console</strong></td>
+          <td>Freezes UI on Console Loops</td>
+          <td>Basic Log Viewer</td>
+          <td>Crashes Mobile Browser Tab</td>
+        </tr>
+        <tr>
+          <th scope="row">Visual Git &amp; SFTP Server Sync</th>
+          <td><strong>Visual Merge Resolver + Direct SFTP/FTP</strong></td>
+          <td>Git Client Only (No Native SFTP/C++)</td>
+          <td>FTP/SFTP + Plugin Git</td>
+          <td>No SFTP or Local Git</td>
+        </tr>
+        <tr>
+          <th scope="row">Full-Stack Backend Compilers</th>
+          <td><strong>Python 3.11, Clang 17 C++20, Java Dex, PHP</strong></td>
+          <td>Frontend HTML/CSS/JS Only</td>
+          <td>No Built-in Offline Compilers</td>
+          <td>Frontend Snippets Only</td>
+        </tr>
+        <tr>
+          <th scope="row">Google Play User Rating</th>
+          <td><strong>4.92 / 5.00 &#9733; (40.2 MB)</strong></td>
+          <td>4.20 / 5.00 &#9733;</td>
+          <td>3.40 / 5.00 &#9733;</td>
+          <td>N/A (Web Tool)</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <div class="cta-box">
+    <h2 data-i18n="cta_h2">Construa Sites Diretamente no Android Hoje</h2>
+    <p class="hero-desc" style="margin-bottom: 24px;" data-i18n="cta_desc">Junte-se a milhares de desenvolvedores frontend levando seu fluxo de trabalho para o celular.</p>
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn-play-hero">
+      <span>&#9654;</span>
+      <span data-i18n="cta_btn">Baixar SuperCode no Google Play</span>
+    </a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <nav class="footer-seo-hub" aria-label="SuperCode Workspaces">
+    <a href="index.html" data-i18n="nav_home">In&#237;cio</a>
+    <a href="code-editor.html" data-i18n="nav_code_editor">Code Editor (Editor de C&#243;digo)</a>
+    <a href="python-ide.html" data-i18n="nav_python_ide">Python IDE Offline</a>
+    <a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++ Compiler (Compilador C++)</a>
+    <a href="java-ide.html" data-i18n="nav_java_ide">Java IDE Nativo</a>
+    <a href="git-client.html" data-i18n="nav_git_client">Git Client &amp; SFTP</a>
+  </nav>
+  <p>&copy; 2026 Phoenix Global Studios &middot; Code Editor: SuperCode IDE</p>
+</footer>
+
+<!-- LANGUAGE SELECTOR MODAL (10 LANGUAGES) -->
+<div id="langModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="langModalTitle">
+  <div class="lang-modal">
+    <div class="modal-header">
+      <h3 id="langModalTitle" data-i18n="modal_title">Selecione o Idioma (Select Language)</h3>
+      <button type="button" class="btn-close-modal" onclick="closeLangModal()" aria-label="Close Language Selector">&#10005;</button>
+    </div>
+    <div class="lang-grid">
+      <button type="button" class="lang-option" data-code="en" onclick="setLanguage('en')">English</button>
+      <button type="button" class="lang-option" data-code="zh" onclick="setLanguage('zh')">&#31616;&#20307;&#20013;&#25991; (Chinese)</button>
+      <button type="button" class="lang-option" data-code="es" onclick="setLanguage('es')">Espa&ntilde;ol (Spanish)</button>
+      <button type="button" class="lang-option" data-code="ja" onclick="setLanguage('ja')">&#26085;&#26412;&#35486; (Japanese)</button>
+      <button type="button" class="lang-option" data-code="de" onclick="setLanguage('de')">Deutsch (German)</button>
+      <button type="button" class="lang-option" data-code="fr" onclick="setLanguage('fr')">Fran&ccedil;ais (French)</button>
+      <button type="button" class="lang-option" data-code="ko" onclick="setLanguage('ko')">&#54620;&#44397;&#50612; (Korean)</button>
+      <button type="button" class="lang-option" data-code="pt" onclick="setLanguage('pt')">Portugu&ecirc;s (Portuguese)</button>
+      <button type="button" class="lang-option" data-code="hi" onclick="setLanguage('hi')">&#2361;&#2367;&#2344;&#2381;&#2342;&#2368; (Hindi)</button>
+      <button type="button" class="lang-option" data-code="ru" onclick="setLanguage('ru')">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081; (Russian)</button>
+    </div>
+  </div>
+</div>
+
+<!-- UNIVERSAL 10-LANGUAGE DICTIONARY & ROUTER -->
+<script>window.__SUPERCODE_STATIC_LANG__="pt";window.__SUPERCODE_STATIC_CANONICAL__="https://supercode-ide.github.io/pt/web-ide.html";</script>
+  <script src="../i18n_extended.js"></script>
+
+<!-- INTERACTIVE WEB & LOCAL HTTP SERVER SANDBOX ENGINE (INLINE BRACE-SAFE) -->
+<script>
+  (function () {
+    'use strict';
+    var WEB_SCENARIOS = {
+      cors: '<!-- [Scenario 1]: Virtual HTTP Server (http://127.0.0.1:8080) -->\n<!-- Bypasses mobile file:// CORS blocks for ES6 Modules & WASM -->\n<script type="module">\n  import { renderMatrix } from \'./modules/gl_shader.js\';\n\n  const response = await fetch(\'/local/physics_kernel.wasm\');\n  const { instance } = await WebAssembly.instantiateStreaming(response);\n  console.log(\'[Virtual-HTTP 200 OK] WASM Kernel Export:\', instance.exports.step(120));\n<\/script>',
+      blob: '// [Scenario 2]: Desktop-Grade Canvas.toBlob & Media Stream Export\n// Streams high-res WebGL/Canvas frames directly to Android Gallery\nconst canvas = document.createElement(\'canvas\');\ncanvas.width = 3840; canvas.height = 2160; // 4K UHD Frame\ncanvas.toBlob((blob) => {\n  SuperCodeBridge.exportBlobToGallery(blob, \'render_4k_uhd.png\');\n  console.log(\'[Media-Stream] Exported 4K Blob safely under 30MB RAM Lock!\');\n}, \'image/png\');',
+      devtools: '// [Scenario 3]: 60fps High-Frequency Throttled JS DevTools Console\n// Prevents runaway console.log loops from freezing Android WebView UI\nfor (let frame = 1; frame <= 50000; frame++) {\n  console.log(`[DevTools Telemetry] Frame #${frame} rendered at 120Hz`);\n}'
+    };
+    var currentWebKey = 'cors';
+    var webTimers = [];
+
+    window.loadWebScenario = function (key) {
+      currentWebKey = WEB_SCENARIOS[key] ? key : 'cors';
+      var inputEl = document.getElementById('webCodeInput');
+      if (inputEl) { inputEl.value = WEB_SCENARIOS[currentWebKey]; }
+      var ids = ['cors', 'blob', 'devtools'];
+      for (var i = 0; i < ids.length; i++) {
+        var btn = document.getElementById('web-tab-' + ids[i]);
+        if (btn) { btn.classList.toggle('active', ids[i] === currentWebKey); } } };
+
+    window.executeWebSimulation = function () {
+      var out = document.getElementById('terminalStreamText');
+      if (!out) { return; }
+      for (var t = 0; t < webTimers.length; t++) { clearTimeout(webTimers[t]); }
+      webTimers = [];
+
+      var logsMap = {
+        cors: [
+          '$ httpd-sandbox --bind 127.0.0.1:8080 --root /storage/emulated/0/web_proj',
+          '[Virtual-HTTP] GET /modules/gl_shader.js -> 200 OK (application/javascript)',
+          '[Virtual-HTTP] GET /local/physics_kernel.wasm -> 200 OK (application/wasm, 0 CORS errors)',
+          '[Virtual-HTTP 200 OK] WASM Kernel Export: 14400 (Instantiated in 0.8ms)',
+          '>> Download SuperCode IDE (40.2 MB) on Google Play to run ES6 & WASM offline on Android!'
+        ],
+        blob: [
+          '$ supercode-webview --run canvas_exporter.js --ram-shield=30MB',
+          '[Canvas-Engine] Allocated 3840x2160 offscreen buffer -> Streaming chunks...',
+          '[Media-Stream] Exported 4K Blob safely under 30MB RAM Lock! (Saved to /DCIM/SuperCode)',
+          '>> Export heavy WebRTC, Canvas & Blob assets without OOM crashes on Google Play!'
+        ],
+        devtools: [
+          '$ js-devtools --throttle-hz=60 --buffer-lock=150000',
+          '[DevTools-Guard] High-frequency console.log stream detected (50,000 calls).',
+          '[Throttling-Engine] Batched DOM updates @ 60fps -> Android UI thread 100% responsive!',
+          '[DevTools Telemetry] Frame #50000 rendered at 120Hz | RAM: 22.1 MB / 30.0 MB Lock',
+          '>> Debug complex JavaScript apps with crash-proof DevTools & SFTP sync on Google Play!'
+        ]
+      };
+
+      var lines = logsMap[currentWebKey] || logsMap.cors;
+      out.textContent = '';
+      for (var idx = 0; idx < lines.length; idx++) {
+        (function (i) {
+          var tid = setTimeout(function () {
+            out.textContent += (i > 0 ? '\n' : '') + lines[i];
+          }, i * 160);
+          webTimers.push(tid);
+        })(idx); } };
+  })();
+</script>
+</body>
+</html>

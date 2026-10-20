@@ -1585,6 +1585,7 @@
     return { filename: filename, pageKey: bodyPage || pageKeyMap[filename] || 'index' }; } /* end getCurrentPageInfo */
 
   function detectInitialLanguage() {
+    if (window.__SUPERCODE_STATIC_LANG__) { return window.__SUPERCODE_STATIC_LANG__; }
     var urlParams = new URLSearchParams(window.location.search);
     var fromUrl = normalizeLangCode(urlParams.get('lang'));
     if (fromUrl) { return fromUrl; }
@@ -1600,6 +1601,9 @@
     return 'en'; } /* end detectInitialLanguage */
 
   function buildCanonicalUrl(filename, lang) {
+    if (window.__SUPERCODE_STATIC_CANONICAL__ && window.__SUPERCODE_STATIC_LANG__ === lang) {
+      return window.__SUPERCODE_STATIC_CANONICAL__;
+    }
     var cleanFile = (!filename || filename === 'index.html') ? '' : filename;
     var basePath = cleanFile ? '/' + cleanFile : '/';
     return BASE_DOMAIN + basePath + (lang === 'en' ? '' : '?lang=' + lang); } /* end buildCanonicalUrl */
@@ -1619,7 +1623,7 @@
       var basePart = parts[0].split('?')[0];
       var hashPart = parts[1] ? '#' + parts[1] : '';
       if (basePart.indexOf('.html') !== -1) {
-        var nextHref = basePart + (validLang === 'en' ? '' : '?lang=' + validLang) + hashPart;
+        var nextHref = basePart + ((validLang === 'en' || window.__SUPERCODE_STATIC_LANG__ === validLang) ? '' : '?lang=' + validLang) + hashPart;
         links[i].setAttribute('href', nextHref); } } } /* end syncInternalLinks */
 
   var subpageEnCache = {};
@@ -1663,7 +1667,7 @@
       var isMatch = langOptions[b].getAttribute('data-code') === validLang;
       langOptions[b].classList.toggle('active', isMatch); }
     syncInternalLinks(validLang);
-    if (window.history && window.history.replaceState) {
+    if (window.history && window.history.replaceState && !window.__SUPERCODE_STATIC_LANG__) {
       var newUrl = window.location.pathname + (validLang === 'en' ? '' : '?lang=' + validLang) + window.location.hash;
       window.history.replaceState({ lang: validLang }, '', newUrl); } } /* end applySubpageLanguage */
 
