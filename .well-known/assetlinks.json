@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.phoenixglobal.supercodeeditor",
+      "sha256_cert_fingerprints": [
+        "36:80:13:43:3E:43:72:1D:23:B2:EA:ED:63:9C:AB:53:1C:54:BF:2D:4B:D1:C9:56:A9:FD:73:77:0E:61:D4:5C"
+      ]
+    }
+  }
+]

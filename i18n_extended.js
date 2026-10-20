@@ -1,0 +1,1706 @@
+/* ==========================================================================
+   SUPERCODE IDE - UNIVERSAL 10-LANGUAGE DICTIONARY & ROUTER (i18n_extended.js)
+   100% PURE ASCII-SAFE EDITION (\uXXXX Unicode Escaped)
+   Zero Risk of Character Filtering, Missing Quotes, or Swallowed Braces
+   ========================================================================== */
+(function () {
+  'use strict';
+
+  /* ==================== 1. COMMON UI & NAVIGATION DICTIONARY ==================== */
+  var COMMON_UI = {
+  "en": {
+    "htmlLang": "en",
+    "btn_back": "&#8592; Back to Home",
+    "nav_home": "Home",
+    "nav_code_editor": "Code Editor",
+    "nav_python_ide": "Python IDE",
+    "nav_cpp_ide": "C++ Compiler",
+    "nav_java_ide": "Java IDE",
+    "nav_web_ide": "Web &amp; HTTP Server",
+    "nav_git_client": "Git &amp; SFTP Client",
+    "eco_title": "One Code Editor. Six Dedicated Offline Workspaces.",
+    "cta_btn": "Get SuperCode on Google Play",
+    "modal_title": "Select Language"
+  },
+  "zh": {
+    "htmlLang": "zh-Hans",
+    "btn_back": "&#8592; \u8fd4\u56de\u9996\u9875 (Home)",
+    "nav_home": "\u9996\u9875 (Home)",
+    "nav_code_editor": "Code Editor \u4ee3\u7801\u7f16\u8f91\u5668",
+    "nav_python_ide": "Python IDE \u7f16\u7a0b",
+    "nav_cpp_ide": "C++ Compiler \u7f16\u8bd1\u5668",
+    "nav_java_ide": "Java IDE \u5f00\u53d1\u73af\u5883",
+    "nav_web_ide": "Web &amp; HTTP \u672c\u5730\u670d\u52a1\u5668",
+    "nav_git_client": "Git &amp; SFTP \u5ba2\u6237\u7aef",
+    "eco_title": "\u4e00\u4e2a Code Editor \u4ee3\u7801\u7f16\u8f91\u5668\uff0c\u516d\u5927\u4e13\u4e1a\u79bb\u7ebf\u5f00\u53d1\u5de5\u4f5c\u533a",
+    "cta_btn": "\u5728 Google Play \u514d\u8d39\u83b7\u53d6 SuperCode",
+    "modal_title": "\u9009\u62e9\u8bed\u8a00 (Select Language)"
+  },
+  "es": {
+    "htmlLang": "es",
+    "btn_back": "&#8592; Volver al Inicio",
+    "nav_home": "Inicio",
+    "nav_code_editor": "Code Editor (Editor de C\u00f3digo)",
+    "nav_python_ide": "Python IDE Offline",
+    "nav_cpp_ide": "C++ Compiler (Compilador C++)",
+    "nav_java_ide": "Java IDE Nativo",
+    "nav_web_ide": "Web &amp; Servidor HTTP",
+    "nav_git_client": "Git Client &amp; SFTP",
+    "eco_title": "Un Code Editor. Seis Entornos de Desarrollo Offline.",
+    "cta_btn": "Descargar SuperCode en Google Play",
+    "modal_title": "Seleccionar idioma (Select Language)"
+  },
+  "ja": {
+    "htmlLang": "ja",
+    "btn_back": "&#8592; \u30db\u30fc\u30e0\u3078\u623b\u308b",
+    "nav_home": "\u30db\u30fc\u30e0 (Home)",
+    "nav_code_editor": "Code Editor (\u30b3\u30fc\u30c9\u30a8\u30c7\u30a3\u30bf)",
+    "nav_python_ide": "Python IDE (Python\u958b\u767a)",
+    "nav_cpp_ide": "C++ Compiler (C++\u30b3\u30f3\u30d1\u30a4\u30e9)",
+    "nav_java_ide": "Java IDE (Java\u958b\u767a)",
+    "nav_web_ide": "Web &amp; HTTP\u30b5\u30fc\u30d0\u30fc",
+    "nav_git_client": "Git Client &amp; SFTP",
+    "eco_title": "1\u3064\u306e Code Editor \u306b\u30016\u3064\u306e\u5c02\u7528\u30aa\u30d5\u30e9\u30a4\u30f3\u958b\u767a\u74b0\u5883\u3092\u7d71\u5408",
+    "cta_btn": "Google Play \u3067 SuperCode \u3092\u5165\u624b",
+    "modal_title": "\u8a00\u8a9e\u3092\u9078\u629e (Select Language)"
+  },
+  "de": {
+    "htmlLang": "de",
+    "btn_back": "&#8592; Zur\u00fcck zur Startseite",
+    "nav_home": "Startseite",
+    "nav_code_editor": "Code Editor (Code-Editor)",
+    "nav_python_ide": "Python IDE Offline",
+    "nav_cpp_ide": "C++ Compiler (C++-Kompilierer)",
+    "nav_java_ide": "Java IDE Nativ",
+    "nav_web_ide": "Web &amp; HTTP-Server",
+    "nav_git_client": "Git Client &amp; SFTP",
+    "eco_title": "Ein Code Editor. Sechs dedizierte Offline-Arbeitsbereiche.",
+    "cta_btn": "SuperCode bei Google Play laden",
+    "modal_title": "Sprache ausw\u00e4hlen (Select Language)"
+  },
+  "fr": {
+    "htmlLang": "fr",
+    "btn_back": "&#8592; Retour \u00e0 l'accueil",
+    "nav_home": "Accueil",
+    "nav_code_editor": "Code Editor (\u00c9diteur de Code)",
+    "nav_python_ide": "Python IDE Hors Ligne",
+    "nav_cpp_ide": "C++ Compiler (Compilateur C++)",
+    "nav_java_ide": "Java IDE Natif",
+    "nav_web_ide": "Serveur Web &amp; HTTP",
+    "nav_git_client": "Git Client &amp; SFTP",
+    "eco_title": "Un seul Code Editor. Six espaces de travail hors ligne d\u00e9di\u00e9s.",
+    "cta_btn": "T\u00e9l\u00e9charger SuperCode sur Google Play",
+    "modal_title": "S\u00e9lectionner la langue (Select Language)"
+  },
+  "ko": {
+    "htmlLang": "ko",
+    "btn_back": "&#8592; \ud648\uc73c\ub85c \ub3cc\uc544\uac00\uae30",
+    "nav_home": "\ud648 (Home)",
+    "nav_code_editor": "Code Editor (\ucf54\ub4dc \uc5d0\ub514\ud130)",
+    "nav_python_ide": "Python IDE (\ud30c\uc774\uc36c IDE)",
+    "nav_cpp_ide": "C++ Compiler (C++ \ucef4\ud30c\uc77c\ub7ec)",
+    "nav_java_ide": "Java IDE (\uc790\ubc14 IDE)",
+    "nav_web_ide": "Web &amp; HTTP \uc11c\ubc84",
+    "nav_git_client": "Git Client &amp; SFTP",
+    "eco_title": "\ud558\ub098\uc758 Code Editor, 6\uac1c\uc758 \uc804\uc6a9 \uc624\ud504\ub77c\uc778 \uac1c\ubc1c \uc6cc\ud06c\uc2a4\ud398\uc774\uc2a4",
+    "cta_btn": "Google Play\uc5d0\uc11c SuperCode \ub2e4\uc6b4\ub85c\ub4dc",
+    "modal_title": "\uc5b8\uc5b4 \uc120\ud0dd (Select Language)"
+  },
+  "pt": {
+    "htmlLang": "pt",
+    "btn_back": "&#8592; Voltar ao In\u00edcio",
+    "nav_home": "In\u00edcio",
+    "nav_code_editor": "Code Editor (Editor de C\u00f3digo)",
+    "nav_python_ide": "Python IDE Offline",
+    "nav_cpp_ide": "C++ Compiler (Compilador C++)",
+    "nav_java_ide": "Java IDE Nativo",
+    "nav_web_ide": "Servidor Web &amp; HTTP",
+    "nav_git_client": "Git Client &amp; SFTP",
+    "eco_title": "Um Code Editor. Seis Ambientes de Desenvolvimento Offline.",
+    "cta_btn": "Baixar SuperCode no Google Play",
+    "modal_title": "Selecione o Idioma (Select Language)"
+  },
+  "hi": {
+    "htmlLang": "hi",
+    "btn_back": "&#8592; \u0939\u094b\u092e \u092a\u0930 \u0935\u093e\u092a\u0938 \u091c\u093e\u090f\u0902",
+    "nav_home": "\u0939\u094b\u092e (Home)",
+    "nav_code_editor": "Code Editor (\u0915\u094b\u0921 \u090f\u0921\u093f\u091f\u0930)",
+    "nav_python_ide": "Python IDE (\u092a\u093e\u092f\u0925\u0928 IDE)",
+    "nav_cpp_ide": "C++ Compiler (C++ \u0915\u0902\u092a\u093e\u0907\u0932\u0930)",
+    "nav_java_ide": "Java IDE (\u091c\u093e\u0935\u093e IDE)",
+    "nav_web_ide": "Web &amp; HTTP \u0938\u0930\u094d\u0935\u0930",
+    "nav_git_client": "Git Client &amp; SFTP",
+    "eco_title": "\u090f\u0915 Code Editor. \u091b\u0939 \u0938\u092e\u0930\u094d\u092a\u093f\u0924 \u0911\u092b\u093c\u0932\u093e\u0907\u0928 \u0921\u0947\u0935\u0932\u092a\u092e\u0947\u0902\u091f \u0935\u0930\u094d\u0915\u0938\u094d\u092a\u0947\u0938\u0964",
+    "cta_btn": "Google Play \u0938\u0947 SuperCode \u0921\u093e\u0909\u0928\u0932\u094b\u0921 \u0915\u0930\u0947\u0902",
+    "modal_title": "\u092d\u093e\u0937\u093e \u091a\u0941\u0928\u0947\u0902 (Select Language)"
+  },
+  "ru": {
+    "htmlLang": "ru",
+    "btn_back": "&#8592; \u041d\u0430 \u0433\u043b\u0430\u0432\u043d\u0443\u044e",
+    "nav_home": "\u0413\u043b\u0430\u0432\u043d\u0430\u044f",
+    "nav_code_editor": "Code Editor (\u0420\u0435\u0434\u0430\u043a\u0442\u043e\u0440 \u043a\u043e\u0434\u0430)",
+    "nav_python_ide": "Python IDE \u041e\u0444\u043b\u0430\u0439\u043d",
+    "nav_cpp_ide": "C++ Compiler (\u041a\u043e\u043c\u043f\u0438\u043b\u044f\u0442\u043e\u0440 C++)",
+    "nav_java_ide": "Java IDE \u041d\u0430\u0442\u0438\u0432\u043d\u044b\u0439",
+    "nav_web_ide": "Web \u0438 HTTP-\u0441\u0435\u0440\u0432\u0435\u0440",
+    "nav_git_client": "Git Client \u0438 SFTP",
+    "eco_title": "\u041e\u0434\u0438\u043d Code Editor. \u0428\u0435\u0441\u0442\u044c \u0441\u043f\u0435\u0446\u0438\u0430\u043b\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0445 \u043e\u0444\u043b\u0430\u0439\u043d-\u0441\u0440\u0435\u0434 \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0438.",
+    "cta_btn": "\u0421\u043a\u0430\u0447\u0430\u0442\u044c SuperCode \u0432 Google Play",
+    "modal_title": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u044f\u0437\u044b\u043a (Select Language)"
+  }
+};
+
+  /* ==================== 2. INDEX.HTML EXTENDED 7-LANGUAGE PACK ==================== */
+  window.I18N_EXTENDED = {
+  "ja": {
+    "htmlLang": "ja",
+    "canonical": "https://supercode-ide.github.io/?lang=ja",
+    "metaTitle": "Code Editor: SuperCode IDE \u2014 \u30aa\u30d5\u30e9\u30a4\u30f3 Python IDE\u3001C/C++ Compiler & Java IDE (\u30b3\u30fc\u30c9\u30a8\u30c7\u30a3\u30bf)",
+    "metaDesc": "Phoenix Global Studios \u958b\u767a\u306e Android \u5411\u3051\u30d7\u30ed\u4ed5\u69d8\u30aa\u30d5\u30e9\u30a4\u30f3 IDE & Code Editor (\u30b3\u30fc\u30c9\u30a8\u30c7\u30a3\u30bf)\u3002Python 3.11 (.whl Pip & Edge WASM NumPy/Pandas)\u3001LLVM/Clang C11/C++20 \u30b3\u30f3\u30d1\u30a4\u30e9\u3001\u30cd\u30a4\u30c6\u30a3\u30d6 ECJ/D8 Java IDE\u3001WebAssembly Tree-Sitter AST\u300130MB Anti-OOM \u4fdd\u8b77\u3001150,000\u884c 120Hz \u30d3\u30e5\u30fc\u30dd\u30fc\u30c8\u3092\u642d\u8f09\u3002",
+    "studio_tag": "Phoenix Global Studios \u00b7 v15.273",
+    "nav_cta": "Google Play",
+    "pill_oom": "Anti-OOM \u30e1\u30e2\u30ea\u4fdd\u8b77",
+    "hero_h1": "Code Editor: <span class=\"text-gradient\">SuperCode IDE</span> \u2014 \u30aa\u30d5\u30e9\u30a4\u30f3 Python IDE\u3001C/C++ &amp; Java \u7d71\u5408\u958b\u767a\u74b0\u5883 (\u30b3\u30fc\u30c9\u30a8\u30c7\u30a3\u30bf)",
+    "hero_lead": "Android \u958b\u767a\u8005\u306e\u305f\u3081\u306b Phoenix Global Studios \u304c\u8a2d\u8a08\u3002Python 3.11 (.whl Pip + Serverless Edge WASM NumPy/Pandas) \u306e\u5b9f\u884c\u3001LLVM/Clang \u306b\u3088\u308b C11/C++20 \u306e\u30ed\u30fc\u30ab\u30eb\u30b3\u30f3\u30d1\u30a4\u30eb\u3001\u30cd\u30a4\u30c6\u30a3\u30d6 Java Dex \u30a2\u30d7\u30ea\u306e\u30aa\u30d5\u30e9\u30a4\u30f3\u69cb\u7bc9\u3092\u5b9f\u73fe\u3057\u307e\u3059\u3002",
+    "btn_run": "\u30b5\u30f3\u30c9\u30dc\u30c3\u30af\u30b9\u5b9f\u884c",
+    "term_title": "\u30b5\u30f3\u30c9\u30dc\u30c3\u30af\u30b9\u7aef\u672b\u30b9\u30c8\u30ea\u30fc\u30e0 \u00b7 ANTI-OOM \u30ed\u30c3\u30af: 30.0 MB",
+    "cta_main": "Google Play \u3067\u7121\u6599\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9",
+    "meta_ver": "Build 15.273 (v2.8.5) \u00b7 40.2 MB APK",
+    "sec1_eyebrow": "\u30de\u30eb\u30c1\u8a00\u8a9e\u30aa\u30d5\u30e9\u30a4\u30f3\u30fb\u30b5\u30f3\u30c9\u30dc\u30c3\u30af\u30b9",
+    "sec1_title": "6\u3064\u306e\u7523\u696d\u7528\u30b5\u30f3\u30c9\u30dc\u30c3\u30af\u30b9\u5b9f\u884c\u74b0\u5883 & \u30cf\u30a4\u30d6\u30ea\u30c3\u30c9\u30b3\u30f3\u30d1\u30a4\u30e9",
+    "rt1_title": "\u30d7\u30ed\u4ed5\u69d8 Python IDE & \u30aa\u30d5\u30e9\u30a4\u30f3 .whl Pip",
+    "rt1_desc": "\u30aa\u30d5\u30e9\u30a4\u30f3 .whl \u30d1\u30c3\u30b1\u30fc\u30b8 (requests, flask, telebot) \u306b\u5bfe\u5fdc\u3059\u308b\u8996\u899a\u7684 Pip \u30de\u30cd\u30fc\u30b8\u30e3\u30fc\u3092\u5099\u3048\u305f\u72ec\u7acb Python 3.11 \u74b0\u5883\u3002\u30b9\u30de\u30fc\u30c8 AST \u30b9\u30ad\u30e3\u30ca\u30fc\u304c NumPy \u3084 Pandas \u3092 Serverless Edge WASM \u30af\u30e9\u30b9\u30bf\u3078\u81ea\u52d5\u30eb\u30fc\u30c6\u30a3\u30f3\u30b0\u3057\u307e\u3059\u3002",
+    "rt2_title": "\u672c\u683c\u6d3e C11 / C++20 Compiler (LLVM/Clang)",
+    "rt2_desc": "\u30cd\u30a4\u30c6\u30a3\u30d6 LLVM/Clang \u30a8\u30f3\u30b8\u30f3\u306b\u3088\u308a\u9045\u5ef6\u30bc\u30ed\u306e\u30aa\u30d5\u30e9\u30a4\u30f3\u30b3\u30f3\u30d1\u30a4\u30eb\u3092\u5b9f\u73fe\u3002\u7121\u9650\u30eb\u30fc\u30d7\u3092\u906e\u65ad\u3057 OOM \u30af\u30e9\u30c3\u30b7\u30e5\u3092\u9632\u3050 150,000 \u6587\u5b57\u306e\u30cf\u30fc\u30c9\u30a6\u30a7\u30a2\u7d1a\u30d0\u30c3\u30d5\u30a1\u30ed\u30c3\u30af\u3092\u642d\u8f09\u3002",
+    "rt3_title": "\u30cd\u30a4\u30c6\u30a3\u30d6 Java 8+ Dex IDE (ECJ + D8)",
+    "rt3_desc": "\u30ed\u30fc\u30ab\u30eb\u306e Eclipse Compiler for Java (ECJ) \u3068 D8 \u30a8\u30f3\u30b8\u30f3\u3092\u7d71\u5408\u3002Java 8+ \u69cb\u6587\u3092\u30aa\u30d5\u30e9\u30a4\u30f3\u3067\u30cd\u30a4\u30c6\u30a3\u30d6 Dex \u5f62\u5f0f\u3078\u30b3\u30f3\u30d1\u30a4\u30eb\u3057\u3001DexClassLoader \u3067\u52d5\u7684\u306b\u5b9f\u884c\u3057\u307e\u3059\u3002",
+    "rt4_title": "Web Editor (HTML/JS) & WASM \u30b5\u30f3\u30c9\u30dc\u30c3\u30af\u30b9",
+    "rt4_desc": "Virtual HTTP \u30b5\u30f3\u30c9\u30dc\u30c3\u30af\u30b9\u5185\u3067 HTML5\u3001CSS3\u3001ES2026 JavaScript\u3001WebAssembly \u3092\u5b9f\u884c\u3002\u6b63\u78ba\u306a\u30ed\u30fc\u30ab\u30eb\u7d76\u5bfe\u30d1\u30b9\u30de\u30c3\u30d4\u30f3\u30b0\u3068\u5373\u6642\u30d7\u30ec\u30d3\u30e5\u30fc\u3092\u63d0\u4f9b\u3057\u307e\u3059\u3002",
+    "rt5_title": "Lua & \u30cd\u30a4\u30c6\u30a3\u30d6 Linux Shell \u30bf\u30fc\u30df\u30ca\u30eb",
+    "rt5_desc": "\u5b89\u5168\u306a\u30b5\u30f3\u30c9\u30dc\u30c3\u30af\u30b9\u3067\u306e Lua 5.4 \u30b9\u30af\u30ea\u30d7\u30c8\u5b9f\u884c\u3084\u3001\u30cd\u30a4\u30c6\u30a3\u30d6 Bash/Sh \u30bf\u30fc\u30df\u30ca\u30eb\u306b\u3088\u308b Android Linux \u30ab\u30fc\u30cd\u30eb\u3078\u306e\u76f4\u63a5\u63a5\u7d9a\u3092\u9045\u5ef6\u30bc\u30ed\u3067\u884c\u3048\u307e\u3059\u3002",
+    "rt6_title": "\u30b9\u30de\u30fc\u30c8\u30af\u30e9\u30a6\u30c9\u8a00\u8a9e\u30eb\u30fc\u30c6\u30a3\u30f3\u30b0",
+    "rt6_desc": "Kotlin (KT)\u3001PHP\u3001\u8907\u96d1\u306a SQL \u30af\u30a8\u30ea\u3082\u8a18\u8ff0\u53ef\u80fd\u3002\u30b9\u30de\u30fc\u30c8\u30eb\u30fc\u30c6\u30a3\u30f3\u30b0\u6a5f\u80fd\u304c\u9ad8\u6027\u80fd\u30af\u30e9\u30a6\u30c9\u30af\u30e9\u30b9\u30bf\u3068\u30b7\u30fc\u30e0\u30ec\u30b9\u306b\u9023\u643a\u3057\u3001\u30b5\u30fc\u30d0\u30fc\u30b5\u30a4\u30c9\u5b9f\u884c\u3092\u5b9f\u73fe\u3057\u307e\u3059\u3002",
+    "sec2_eyebrow": "\u30a2\u30fc\u30ad\u30c6\u30af\u30c1\u30e3\u306e\u9769\u65b0",
+    "sec2_title": "Android 15 \u5411\u3051\u306b\u69cb\u7bc9\u3055\u308c\u305f3\u3064\u306e\u6280\u8853\u7684\u652f\u67f1",
+    "pil1_title": "WebAssembly Tree-Sitter AST \u30a8\u30f3\u30b8\u30f3",
+    "pil1_desc": "\u6587\u8108\u306b\u5fdc\u3058\u305f\u30b7\u30f3\u30dc\u30eb\u30ca\u30d3\u30b2\u30fc\u30b7\u30e7\u30f3\u30681\u30df\u30ea\u79d2\u672a\u6e80\u306e\u9ad8\u901f\u30b3\u30fc\u30c9\u88dc\u5b8c\u3002AST \u69cb\u6587\u30cf\u30a4\u30e9\u30a4\u30c8\u3068 TextMate \u30c6\u30fc\u30de (Darcula/Monokai/VS Code) \u3092\u4e26\u5217\u5b9f\u884c\u3057\u3001\u8272\u5206\u3051\u306e\u7af6\u5408\u3092\u89e3\u6d88\u3057\u307e\u3059\u3002",
+    "pil2_title": "30MB Anti-OOM \u4fdd\u8b77 & O(1) 120Hz \u30d3\u30e5\u30fc\u30dd\u30fc\u30c8",
+    "pil2_desc": "\u30a2\u30af\u30c6\u30a3\u30d6\u30ad\u30e3\u30c3\u30b7\u30e5\u9000\u907f\u306b\u3088\u308a RAM \u4f7f\u7528\u91cf\u3092 30MB \u4ee5\u4e0b\u306b\u30ed\u30c3\u30af\u3057\u3001Android LMK/ANR \u30af\u30e9\u30c3\u30b7\u30e5\u3092\u6392\u9664\u3002O(1) \u30d3\u30e5\u30fc\u30dd\u30fc\u30c8\u304c 150,000 \u884c\u306e\u30ed\u30b0\u3084 PDF \u3092 120Hz \u3067\u77ac\u6642\u306b\u63cf\u753b\u3057\u307e\u3059\u3002",
+    "pil3_title": "\u30d3\u30b8\u30e5\u30a2\u30eb Git Client & SFTP DevOps",
+    "pil3_desc": "Clone\u3001Commit\u3001Push\u3001Pull \u3068\u30de\u30fc\u30b8\u7af6\u5408\u306e\u8996\u899a\u7684\u89e3\u6c7a\u3092\u30b5\u30dd\u30fc\u30c8\u3059\u308b\u30c8\u30dd\u30ed\u30b8\u30ab\u30eb\u30c4\u30ea\u30fc\u306b\u52a0\u3048\u3001\u672c\u756a\u30b5\u30fc\u30d0\u30fc\u3078\u306e\u76f4\u63a5 SFTP/FTP \u540c\u671f\u3092\u7d71\u5408\u3057\u3066\u3044\u307e\u3059\u3002",
+    "sec3_eyebrow": "\u6280\u8853\u4ed5\u69d8 & FAQ",
+    "sec3_title": "Android \u958b\u767a\u8005\u304b\u3089\u3088\u304f\u5bc4\u305b\u3089\u308c\u308b\u8cea\u554f",
+    "faq1_q": "Code Editor: SuperCode IDE \u306f Android \u3067 Python\u3001C/C++\u3001Java \u3092\u5b8c\u5168\u306b\u30aa\u30d5\u30e9\u30a4\u30f3\u3067\u30b3\u30f3\u30d1\u30a4\u30eb\u3067\u304d\u307e\u3059\u304b\uff1f",
+    "faq1_a": "\u306f\u3044\u3002Android 8.0 \u4ee5\u964d\u3067\u5b8c\u5168\u306a\u30aa\u30d5\u30e9\u30a4\u30f3\u30de\u30eb\u30c1\u8a00\u8a9e\u30b5\u30f3\u30c9\u30dc\u30c3\u30af\u30b9\u3092\u63d0\u4f9b\u3057\u307e\u3059\u3002\u30aa\u30d5\u30e9\u30a4\u30f3 .whl \u5c0e\u5165\u5bfe\u5fdc\u306e Python 3.11\u3001\u5185\u8535 LLVM/Clang \u306b\u3088\u308b C11/C++20 \u30b3\u30f3\u30d1\u30a4\u30eb\u3001ECJ \u3068 D8 \u306b\u3088\u308b Java 8+ \u306e\u30cd\u30a4\u30c6\u30a3\u30d6 Dex \u30b3\u30f3\u30d1\u30a4\u30eb\u304c\u3059\u3079\u3066\u30aa\u30d5\u30e9\u30a4\u30f3\u3067\u52d5\u4f5c\u3057\u307e\u3059\u3002",
+    "faq2_q": "NumPy \u3084 Pandas \u306e\u3088\u3046\u306a\u91cd\u3044 Python \u30e9\u30a4\u30d6\u30e9\u30ea\u3092\u30e1\u30e2\u30ea\u4e0d\u8db3\u306b\u306a\u3089\u305a\u306b\u5b9f\u884c\u3067\u304d\u308b\u306e\u306f\u306a\u305c\u3067\u3059\u304b\uff1f",
+    "faq2_a": "\u5185\u8535\u306e\u30b9\u30de\u30fc\u30c8 AST \u30b9\u30ad\u30e3\u30ca\u30fc\u304c NumPy \u3084 Pandas \u306a\u3069\u306e\u5927\u898f\u6a21\u30c7\u30fc\u30bf\u30b5\u30a4\u30a8\u30f3\u30b9\u30e9\u30a4\u30d6\u30e9\u30ea\u3092\u81ea\u52d5\u691c\u51fa\u3057\u3001Serverless Edge WASM \u30af\u30e9\u30b9\u30bf\u3078\u30eb\u30fc\u30c6\u30a3\u30f3\u30b0\u3059\u308b\u305f\u3081\u3001\u30ed\u30fc\u30ab\u30eb\u74b0\u5883\u306f\u5e38\u306b\u8d85\u8efd\u91cf\u306b\u4fdd\u305f\u308c\u307e\u3059\u3002",
+    "faq3_q": "30MB Anti-OOM \u30e1\u30e2\u30ea\u4fdd\u8b77\u3068 150K \u884c\u30d3\u30e5\u30fc\u30dd\u30fc\u30c8\u306f\u3069\u306e\u3088\u3046\u306b\u30af\u30e9\u30c3\u30b7\u30e5\u3092\u9632\u304e\u307e\u3059\u304b\uff1f",
+    "faq3_a": "Memory Guard \u30a8\u30f3\u30b8\u30f3\u304c RAM \u4f7f\u7528\u91cf\u3092 30MB \u306b\u5236\u9650\u3057\u3066 Android \u306e LMK \u3084 ANR \u3092\u9632\u304e\u307e\u3059\u3002\u3055\u3089\u306b O(1) \u30d3\u30e5\u30fc\u30dd\u30fc\u30c8\u304c\u753b\u9762\u5916\u63cf\u753b\u3092\u30b9\u30ad\u30c3\u30d7\u3057\u3066 150,000 \u884c\u306e\u30ed\u30b0\u3092 120Hz \u3067\u958b\u304d\u3001C/C++ \u306e 150,000 \u6587\u5b57\u30d0\u30c3\u30d5\u30a1\u30ed\u30c3\u30af\u304c\u7121\u9650\u30eb\u30fc\u30d7\u3092\u5b89\u5168\u306b\u906e\u65ad\u3057\u307e\u3059\u3002",
+    "faq4_q": "\u30d3\u30b8\u30e5\u30a2\u30eb Git\u3001Linux Bash \u30bf\u30fc\u30df\u30ca\u30eb\u3001SFTP \u30c7\u30d7\u30ed\u30a4\u306b\u306f\u5bfe\u5fdc\u3057\u3066\u3044\u307e\u3059\u304b\uff1f",
+    "faq4_a": "\u306f\u3044\u3002Visual Git (Clone\u3001Commit\u3001Push\u3001Pull\u3001\u7af6\u5408\u89e3\u6c7a)\u3001SFTP/FTP \u30b5\u30fc\u30d0\u30fc\u76f4\u63a5\u540c\u671f\u3001\u30cd\u30a4\u30c6\u30a3\u30d6 Linux Shell \u30bf\u30fc\u30df\u30ca\u30eb (Bash/Sh)\u3001\u304a\u3088\u3073 Lua \u30b5\u30f3\u30c9\u30dc\u30c3\u30af\u30b9\u3092\u7d71\u5408\u3057\u3066\u3044\u307e\u3059\u3002",
+    "bottom_sub": "4.92 \u2605 \u30aa\u30d5\u30e9\u30a4\u30f3 Python / C++20 / Java IDE",
+    "bottom_cta": "\u7121\u6599\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb",
+    "modal_title": "\u8a00\u8a9e\u3092\u9078\u629e (Select Language)"
+  },
+  "de": {
+    "htmlLang": "de",
+    "canonical": "https://supercode-ide.github.io/?lang=de",
+    "metaTitle": "Code Editor: SuperCode IDE \u2014 Offline Python IDE, C/C++ Compiler & Java IDE (Code-Editor)",
+    "metaDesc": "Industrietaugliche Offline-IDE & Code Editor f\u00fcr Android von Phoenix Global Studios. F\u00fchrt Python 3.11 (.whl Pip & Edge WASM NumPy/Pandas) aus, kompiliert C11/C++20 lokal via LLVM/Clang und bietet eine native ECJ/D8 Java IDE mit Tree-Sitter AST & 30MB Anti-OOM Guard.",
+    "studio_tag": "Phoenix Global Studios \u00b7 v15.273",
+    "nav_cta": "Google Play",
+    "pill_oom": "Anti-OOM-Schutzschild",
+    "hero_h1": "Code Editor: <span class=\"text-gradient\">SuperCode IDE</span> \u2014 Industrielle Offline Python IDE, C/C++ &amp; Java Konsole",
+    "hero_lead": "Entwickelt von Phoenix Global Studios f\u00fcr Android-Entwickler. F\u00fchren Sie Python 3.11 (.whl Pip + Serverless Edge WASM NumPy/Pandas) aus, kompilieren Sie C11/C++20 lokal mit LLVM/Clang und erstellen Sie native Java-Dex-Apps komplett ohne Netzwerk.",
+    "btn_run": "Sandbox Ausf\u00fchren",
+    "term_title": "SANDBOX-TERMINAL-STREAM \u00b7 ANTI-OOM-SPERRE: 30.0 MB",
+    "cta_main": "Kostenlos bei Google Play laden",
+    "meta_ver": "Build 15.273 (v2.8.5) \u00b7 40.2 MB APK",
+    "sec1_eyebrow": "MEHRSPRACHIGE OFFLINE-SANDBOX",
+    "sec1_title": "6 Industrielle Sandbox-Runtimes & Hybrid-Compiler",
+    "rt1_title": "Professionelle Python IDE & Offline .whl Pip",
+    "rt1_desc": "Isolierte Python 3.11-Laufzeit mit visuellem Pip-Manager f\u00fcr Offline-.whl-Pakete (requests, flask, telebot). Der Smart-AST-Scanner leitet NumPy & Pandas nahtlos an unseren Serverless Edge WASM-Cluster weiter.",
+    "rt2_title": "Hardcore C11 / C++20 Compiler (LLVM/Clang)",
+    "rt2_desc": "Angetrieben durch natives LLVM/Clang f\u00fcr latenzfreie Offline-Kompilierung. Enth\u00e4lt eine hardwarebasierte Puffersperre f\u00fcr 150.000 Zeichen, um Endlosschleifen abzufangen und OOM-Abst\u00fcrze zu verhindern.",
+    "rt3_title": "Native Java 8+ Dex IDE (ECJ + D8)",
+    "rt3_desc": "Integriert lokale ECJ-Compiler und D8-Engines. Kompiliert Java 8+-Syntax offline in native Dex-Formate, die dynamisch \u00fcber den DexClassLoader ausgef\u00fchrt werden.",
+    "rt4_title": "Web Editor (HTML/JS) & WASM Sandbox",
+    "rt4_desc": "F\u00fchrt HTML5, CSS3, ES2026 JavaScript und WebAssembly-Bin\u00e4rdateien in einer virtuellen HTTP-Sandbox mit pr\u00e4ziser lokaler Pfadzuordnung und Sofortvorschau aus.",
+    "rt5_title": "Lua & Natives Linux-Shell-Terminal",
+    "rt5_desc": "F\u00fchren Sie Lua-Skripte sicher aus oder verbinden Sie sich \u00fcber ein natives Bash/Sh-Terminal ohne Latenz direkt mit dem Android-Linux-Kernel.",
+    "rt6_title": "Smartes Cloud-Sprachrouting",
+    "rt6_desc": "Schreiben Sie Kotlin (KT), PHP oder SQL? Unser Routing-System verbindet sich nahtlos mit Hochleistungs-Cloud-Clustern f\u00fcr die serverseitige Ausf\u00fchrung.",
+    "sec2_eyebrow": "ARCHITEKTONISCHE DURCHBR\u00dcCHE",
+    "sec2_title": "3 Kerntechnologien entwickelt f\u00fcr Android 15",
+    "pil1_title": "WebAssembly Tree-Sitter AST Engine",
+    "pil1_desc": "Kontextsensitive Symbolnavigation und Code-Vervollst\u00e4ndigung in Sub-Millisekunden. AST-Highlighting l\u00e4uft parallel zu TextMate-Themes (Darcula/Monokai/VS Code).",
+    "pil2_title": "30MB Anti-OOM-Schutz & O(1) 120Hz Viewport",
+    "pil2_desc": "Aktive Cache-R\u00e4umung begrenzt die RAM-Nutzung auf 30 MB und verhindert LMK/ANR-Abst\u00fcrze. Der O(1)-Viewport \u00f6ffnet 150.000-zeilige Logs sofort mit fl\u00fcssigen 120Hz.",
+    "pil3_title": "Visuelle Git Client Topologie & SFTP DevOps",
+    "pil3_desc": "F\u00fchren Sie vollst\u00e4ndige Clone-, Commit-, Push- und Pull-Workflows mit einem visuellen Baum aus, kombiniert mit direkter SFTP/FTP-Serversynchronisation.",
+    "sec3_eyebrow": "TECHNISCHE SPEZIFIKATIONEN & FAQ",
+    "sec3_title": "H\u00e4ufig gestellte Fragen von Android-Entwicklern",
+    "faq1_q": "Kann Code Editor: SuperCode IDE Python, C/C++ und Java komplett offline auf Android kompilieren?",
+    "faq1_a": "Ja, SuperCode IDE bietet eine echte Offline-Mehrsprachen-Sandbox ab Android 8.0+. Es f\u00fchrt Python 3.11 mit Offline-.whl-Paketen aus, kompiliert C11/C++20 lokal \u00fcber LLVM/Clang und \u00fcbersetzt Java 8+ offline mittels ECJ und D8 in nativen Dex-Bytecode.",
+    "faq2_q": "Wie f\u00fchrt die IDE schwere Python-Bibliotheken wie NumPy und Pandas ohne Speicherverlust aus?",
+    "faq2_a": "Ein integrierter Smart-AST-Scanner erkennt schwere Data-Science-Bibliotheken wie NumPy und Pandas automatisch und leitet sie an ein Serverless Edge WASM-Cluster weiter, w\u00e4hrend lokale Pakete in der leichtgewichtigen Sandbox bleiben.",
+    "faq3_q": "Wie verhindert der 30MB Anti-OOM Guard und der 150K-Viewport Abst\u00fcrze auf Android?",
+    "faq3_a": "Die Memory-Guard-Engine sichert 30 MB RAM durch aktive Cache-Evakuierung gegen Android LMK/ANR. Der O(1)-Viewport \u00fcberspringt Off-Screen-Rendering f\u00fcr 150.000 Zeilen bei 120Hz, erg\u00e4nzt durch eine 150.000-Zeichen-Puffersperre in C/C++.",
+    "faq4_q": "Unterst\u00fctzt SuperCode IDE Visual Git, Linux Bash und SFTP-Deployment?",
+    "faq4_a": "Ja, es integriert Enterprise-DevOps-Workflows einschlie\u00dflich Visual Git (Clone, Commit, Push, Pull, Konfliktl\u00f6sung), direkter SFTP/FTP-Synchronisation und einem nativen Linux-Bash/Sh-Terminal.",
+    "bottom_sub": "4.92 \u2605 Offline Python / C++20 / Java IDE",
+    "bottom_cta": "Kostenlos Installieren",
+    "modal_title": "Sprache ausw\u00e4hlen (Select Language)"
+  },
+  "fr": {
+    "htmlLang": "fr",
+    "canonical": "https://supercode-ide.github.io/?lang=fr",
+    "metaTitle": "Code Editor: SuperCode IDE \u2014 Python IDE Hors Ligne, C/C++ Compiler & Java IDE (\u00c9diteur de Code)",
+    "metaDesc": "IDE hors ligne et Code Editor (\u00c9diteur de Code) industriel pour Android par Phoenix Global Studios. Ex\u00e9cute Python 3.11 (.whl Pip & Edge WASM NumPy), compilateur LLVM/Clang C11/C++20, Java IDE natif ECJ/D8, Tree-Sitter AST et bouclier Anti-OOM 30 Mo.",
+    "studio_tag": "Phoenix Global Studios \u00b7 v15.273",
+    "nav_cta": "Google Play",
+    "pill_oom": "Bouclier Anti-OOM",
+    "hero_h1": "Code Editor: <span class=\"text-gradient\">SuperCode IDE</span> \u2014 Console Hors Ligne Python IDE, C/C++ &amp; Java (\u00c9diteur de Code)",
+    "hero_lead": "Con\u00e7u par Phoenix Global Studios pour les d\u00e9veloppeurs Android. Ex\u00e9cutez Python 3.11 (.whl Pip + Serverless Edge WASM NumPy/Pandas), compilez C11/C++20 localement avec LLVM/Clang et cr\u00e9ez des applications Java Dex natives sans r\u00e9seau.",
+    "btn_run": "Lancer la Sandbox",
+    "term_title": "TERMINAL DE SANDBOX \u00b7 VERROUILLAGE ANTI-OOM : 30.0 MB",
+    "cta_main": "T\u00e9l\u00e9charger sur Google Play",
+    "meta_ver": "Build 15.273 (v2.8.5) \u00b7 40.2 MB APK",
+    "sec1_eyebrow": "SANDBOX MULTILINGUE HORS LIGNE",
+    "sec1_title": "6 Runtimes de Sandbox Industriels et Compilateurs Hybrides",
+    "rt1_title": "Python IDE Pro & Pip .whl Hors Ligne",
+    "rt1_desc": "Runtime Python 3.11 isol\u00e9 avec gestionnaire visuel Pip pour les paquets .whl hors ligne (requests, flask, telebot). Le scanner Smart AST achemine NumPy et Pandas vers notre cluster Serverless Edge WASM.",
+    "rt2_title": "C/C++ Compiler C11 / C++20 Hardcore (LLVM/Clang)",
+    "rt2_desc": "Propuls\u00e9 par LLVM/Clang natif pour une compilation hors ligne sans latence. Inclut un verrou de tampon de 150 000 caract\u00e8res pour intercepter les boucles infinies et \u00e9viter les plantages OOM.",
+    "rt3_title": "Java IDE 8+ Dex Natif (ECJ + D8)",
+    "rt3_desc": "Int\u00e8gre les compilateurs ECJ locaux et les moteurs D8 pour compiler la syntaxe Java 8+ en formats Dex natifs charg\u00e9s dynamiquement via DexClassLoader.",
+    "rt4_title": "Web Editor (HTML/JS) & Sandbox WASM",
+    "rt4_desc": "Ex\u00e9cute HTML5, CSS3, JavaScript ES2026 et les binaires WebAssembly dans une Sandbox HTTP virtuelle avec mappage absolu des chemins locaux et aper\u00e7u instantan\u00e9.",
+    "rt5_title": "Lua & Terminal Shell Linux Natif",
+    "rt5_desc": "Ex\u00e9cutez des scripts Lua 5.4 en toute s\u00e9curit\u00e9 ou connectez-vous directement au noyau Linux Android via un terminal Bash/Sh natif sans latence.",
+    "rt6_title": "Routage Linguistique Cloud Intelligent",
+    "rt6_desc": "Vous \u00e9crivez du Kotlin (KT), PHP ou SQL ? La d\u00e9tection de routage intelligent se connecte de mani\u00e8re transparente aux clusters cloud haute performance.",
+    "sec2_eyebrow": "AVANC\u00c9ES ARCHITECTURALES",
+    "sec2_title": "3 Piliers Techniques Con\u00e7us pour Android 15",
+    "pil1_title": "Moteur AST Tree-Sitter WebAssembly",
+    "pil1_desc": "Navigation des symboles contextuelle et compl\u00e9tion de code sous la milliseconde. La coloration syntaxique AST s'ex\u00e9cute en parall\u00e8le avec les th\u00e8mes TextMate (Darcula/Monokai/VS Code).",
+    "pil2_title": "Bouclier Anti-OOM 30 Mo & Viewport 120Hz O(1)",
+    "pil2_desc": "L'\u00e9vacuation active du cache verrouille la RAM \u00e0 30 Mo, \u00e9liminant les plantages LMK/ANR. Le viewport O(1) ouvre instantan\u00e9ment des journaux de 150 000 lignes \u00e0 120Hz.",
+    "pil3_title": "Topologie Git Client Visuelle & SFTP DevOps",
+    "pil3_desc": "Ex\u00e9cutez des flux complets Clone, Commit, Push et Pull avec un arbre visuel de r\u00e9solution de conflits, associ\u00e9 \u00e0 une synchronisation directe de serveurs SFTP/FTP.",
+    "sec3_eyebrow": "SP\u00c9CIFICATIONS TECHNIQUES ET FAQ",
+    "sec3_title": "Questions Fr\u00e9quentes des D\u00e9veloppeurs Android",
+    "faq1_q": "Code Editor: SuperCode IDE peut-il compiler Python, C/C++ et Java compl\u00e8tement hors ligne sur Android ?",
+    "faq1_a": "Oui, il offre une v\u00e9ritable sandbox multilingue hors ligne d\u00e8s Android 8.0+. Il ex\u00e9cute Python 3.11 avec paquets .whl locaux, compile C11/C++20 via LLVM/Clang int\u00e9gr\u00e9 et compile Java 8+ hors ligne en bytecode Dex natif via ECJ et D8.",
+    "faq2_q": "Comment SuperCode ex\u00e9cute-t-il des biblioth\u00e8ques Python lourdes comme NumPy et Pandas ?",
+    "faq2_a": "Un scanner Smart AST d\u00e9tecte et achemine automatiquement les biblioth\u00e8ques lourdes de science des donn\u00e9es vers un cluster Serverless Edge WASM, tout en gardant les paquets standards dans la sandbox locale.",
+    "faq3_q": "Comment le bouclier Anti-OOM de 30 Mo pr\u00e9vient-il les plantages sur Android ?",
+    "faq3_a": "Le moteur Memory Guard s\u00e9curise une empreinte RAM de 30 Mo via une \u00e9vacuation active du cache pour \u00e9liminer les erreurs LMK/ANR. Le viewport O(1) ouvre 150 000 lignes \u00e0 120Hz avec un verrou de tampon C/C++ de 150 000 caract\u00e8res.",
+    "faq4_q": "SuperCode IDE prend-il en charge Visual Git, le terminal Linux Bash et le d\u00e9ploiement SFTP ?",
+    "faq4_a": "Oui, il int\u00e8gre des flux DevOps complets incluant Visual Git (Clone, Commit, Push, Pull), la synchronisation directe de serveurs SFTP/FTP et un terminal Linux natif (Bash/Sh).",
+    "bottom_sub": "4.92 \u2605 IDE Hors Ligne Python / C++20 / Java",
+    "bottom_cta": "Installer Gratuitement",
+    "modal_title": "S\u00e9lectionner la langue (Select Language)"
+  },
+  "ko": {
+    "htmlLang": "ko",
+    "canonical": "https://supercode-ide.github.io/?lang=ko",
+    "metaTitle": "Code Editor: SuperCode IDE \u2014 \uc624\ud504\ub77c\uc778 Python IDE, C/C++ Compiler \ubc0f Java IDE (\ucf54\ub4dc \uc5d0\ub514\ud130)",
+    "metaDesc": "Phoenix Global Studios\uac00 \uac1c\ubc1c\ud55c Android\uc6a9 \uc0b0\uc5c5\uc6a9 \uc624\ud504\ub77c\uc778 IDE \ubc0f Code Editor (\ucf54\ub4dc \uc5d0\ub514\ud130). Python 3.11(.whl Pip & Edge WASM NumPy/Pandas), LLVM/Clang C11/C++20 \ucef4\ud30c\uc77c\ub7ec, \ub124\uc774\ud2f0\ube0c ECJ/D8 Java IDE, Tree-Sitter AST \ubc0f 30MB Anti-OOM \uac00\ub4dc \ud0d1\uc7ac.",
+    "studio_tag": "Phoenix Global Studios \u00b7 v15.273",
+    "nav_cta": "Google Play",
+    "pill_oom": "Anti-OOM \uba54\ubaa8\ub9ac \ubcf4\ud638",
+    "hero_h1": "Code Editor: <span class=\"text-gradient\">SuperCode IDE</span> \u2014 \uc624\ud504\ub77c\uc778 Python IDE, C/C++ &amp; Java \ucf58\uc194 (\ucf54\ub4dc \uc5d0\ub514\ud130)",
+    "hero_lead": "Android \uac1c\ubc1c\uc790\ub97c \uc704\ud574 Phoenix Global Studios\uc5d0\uc11c \uc124\uacc4\ud588\uc2b5\ub2c8\ub2e4. \ub124\ud2b8\uc6cc\ud06c \uc5f0\uacb0 \uc5c6\uc774 Python 3.11(.whl Pip + Serverless Edge WASM NumPy/Pandas) \uc2e4\ud589, LLVM/Clang \uae30\ubc18 C11/C++20 \ub85c\uceec \ucef4\ud30c\uc77c \ubc0f \ub124\uc774\ud2f0\ube0c Java Dex \uc571 \ube4c\ub4dc\ub97c \uc218\ud589\ud558\uc138\uc694.",
+    "btn_run": "\uc0cc\ub4dc\ubc15\uc2a4 \uc2e4\ud589",
+    "term_title": "\uc0cc\ub4dc\ubc15\uc2a4 \ud130\ubbf8\ub110 \uc2a4\ud2b8\ub9bc \u00b7 ANTI-OOM \uc7a0\uae08: 30.0 MB",
+    "cta_main": "Google Play\uc5d0\uc11c \ubb34\ub8cc \ub2e4\uc6b4\ub85c\ub4dc",
+    "meta_ver": "Build 15.273 (v2.8.5) \u00b7 40.2 MB APK",
+    "sec1_eyebrow": "\ub2e4\uad6d\uc5b4 \uc624\ud504\ub77c\uc778 \uc0cc\ub4dc\ubc15\uc2a4",
+    "sec1_title": "6\uac00\uc9c0 \uc0b0\uc5c5\uc6a9 \uc0cc\ub4dc\ubc15\uc2a4 \ub7f0\ud0c0\uc784 \ubc0f \ud558\uc774\ube0c\ub9ac\ub4dc \ucef4\ud30c\uc77c\ub7ec",
+    "rt1_title": "\uc804\ubb38\uac00\uc6a9 Python IDE \ubc0f \uc624\ud504\ub77c\uc778 .whl Pip",
+    "rt1_desc": "\uc624\ud504\ub77c\uc778 .whl \ud328\ud0a4\uc9c0(requests, flask, telebot)\ub97c \uc704\ud55c \uc2dc\uac01\uc801 Pip \uad00\ub9ac\uc790\uac00 \ud3ec\ud568\ub41c \ub3c5\ub9bd\ud615 Python 3.11 \ub7f0\ud0c0\uc784. \uc2a4\ub9c8\ud2b8 AST \uc2a4\uce90\ub108\uac00 NumPy \ubc0f Pandas\ub97c Serverless Edge WASM \ud074\ub7ec\uc2a4\ud130\ub85c \ub77c\uc6b0\ud305\ud569\ub2c8\ub2e4.",
+    "rt2_title": "\ud558\ub4dc\ucf54\uc5b4 C11 / C++20 Compiler (LLVM/Clang)",
+    "rt2_desc": "\ub124\uc774\ud2f0\ube0c LLVM/Clang \uae30\ubc18\uc73c\ub85c \uc9c0\uc5f0 \uc5c6\ub294 \uc624\ud504\ub77c\uc778 \ucef4\ud30c\uc77c\uc744 \uc81c\uacf5\ud569\ub2c8\ub2e4. \ubb34\ud55c \ub8e8\ud504\ub97c \ucc28\ub2e8\ud558\uace0 OOM \ucda9\ub3cc\uc744 \ubc29\uc9c0\ud558\ub294 150,000\uc790 \ud558\ub4dc\uc6e8\uc5b4\uae09 \ubc84\ud37c \uc7a0\uae08\uc774 \ud3ec\ud568\ub418\uc5b4 \uc788\uc2b5\ub2c8\ub2e4.",
+    "rt3_title": "\ub124\uc774\ud2f0\ube0c Java 8+ Dex IDE (ECJ + D8)",
+    "rt3_desc": "\ub85c\uceec ECJ \ucef4\ud30c\uc77c\ub7ec\uc640 D8 \uc5d4\uc9c4\uc744 \ud1b5\ud569\ud558\uc5ec Java 8+ \uad6c\ubb38\uc744 \uc624\ud504\ub77c\uc778\uc5d0\uc11c \ub124\uc774\ud2f0\ube0c Dex \ud3ec\ub9f7\uc73c\ub85c \ucef4\ud30c\uc77c\ud558\uace0 DexClassLoader\ub97c \ud1b5\ud574 \ub3d9\uc801\uc73c\ub85c \ub85c\ub4dc\ud569\ub2c8\ub2e4.",
+    "rt4_title": "Web Editor (HTML/JS) \ubc0f WASM \uc0cc\ub4dc\ubc15\uc2a4",
+    "rt4_desc": "\uac00\uc0c1 HTTP \uc0cc\ub4dc\ubc15\uc2a4 \ub0b4\uc5d0\uc11c \uc815\ud655\ud55c \ub85c\uceec \uc808\ub300 \uacbd\ub85c \ub9e4\ud551\uacfc \uc989\uc2dc \ubbf8\ub9ac\ubcf4\uae30\ub97c \ud1b5\ud574 HTML5, CSS3, ES2026 JavaScript \ubc0f WebAssembly \ubc14\uc774\ub108\ub9ac\ub97c \uc2e4\ud589\ud569\ub2c8\ub2e4.",
+    "rt5_title": "Lua \ubc0f \ub124\uc774\ud2f0\ube0c Linux Shell \ud130\ubbf8\ub110",
+    "rt5_desc": "\ubcf4\uc548 \uc0cc\ub4dc\ubc15\uc2a4\uc5d0\uc11c Lua 5.4 \uc790\ub3d9\ud654 \uc2a4\ud06c\ub9bd\ud2b8\ub97c \uc2e4\ud589\ud558\uac70\ub098 \ub124\uc774\ud2f0\ube0c Bash/Sh \ud130\ubbf8\ub110\uc744 \ud1b5\ud574 \uc9c0\uc5f0 \uc5c6\uc774 Android Linux \ucee4\ub110\uc5d0 \uc9c1\uc811 \uc5f0\uacb0\ud569\ub2c8\ub2e4.",
+    "rt6_title": "\uc2a4\ub9c8\ud2b8 \ud074\ub77c\uc6b0\ub4dc \uc5b8\uc5b4 \ub77c\uc6b0\ud305",
+    "rt6_desc": "Kotlin(KT), PHP \ub610\ub294 \ubcf5\uc7a1\ud55c SQL \ucffc\ub9ac\ub97c \uc791\uc131\ud558\uc2dc\ub098\uc694? \uc2a4\ub9c8\ud2b8 \ub77c\uc6b0\ud305 \uac10\uc9c0\uac00 \uace0\uc131\ub2a5 \ud074\ub77c\uc6b0\ub4dc \ud074\ub7ec\uc2a4\ud130\uc640 \uc6d0\ud65c\ud558\uac8c \uc5f0\uacb0\ub418\uc5b4 \uc11c\ubc84 \uce21 \uc2e4\ud589\uc744 \ucc98\ub9ac\ud569\ub2c8\ub2e4.",
+    "sec2_eyebrow": "\uc544\ud0a4\ud14d\ucc98 \ud601\uc2e0",
+    "sec2_title": "Android 15\ub97c \uc704\ud574 \uad6c\ucd95\ub41c 3\ub300 \ud575\uc2ec \uae30\uc220",
+    "pil1_title": "WebAssembly Tree-Sitter AST \uc5d4\uc9c4",
+    "pil1_desc": "\ucee8\ud14d\uc2a4\ud2b8 \uc778\uc2dd \uc2ec\ubcfc \ud0d0\uc0c9 \ubc0f 1\ubc00\ub9ac\ucd08 \ubbf8\ub9cc\uc758 \ucd08\uace0\uc18d \ucf54\ub4dc \uc790\ub3d9 \uc644\uc131. AST \uad6c\ubb38 \uac15\uc870\uac00 TextMate \ud14c\ub9c8(Darcula/Monokai/VS Code)\uc640 \ubcd1\ub82c\ub85c \uc2e4\ud589\ub418\uc5b4 \uc0c9\uc0c1 \ucda9\ub3cc\uc744 \uc81c\uac70\ud569\ub2c8\ub2e4.",
+    "pil2_title": "30MB Anti-OOM \uac00\ub4dc \ubc0f O(1) 120Hz \ubdf0\ud3ec\ud2b8",
+    "pil2_desc": "\ub2a5\ub3d9\ud615 \uce90\uc2dc \ube44\uc6b0\uae30\ub85c RAM \uc0ac\uc6a9\ub7c9\uc744 30MB\ub85c \uace0\uc815\ud558\uc5ec Android LMK/ANR \ucda9\ub3cc\uc744 \uc644\uc804\ud788 \ubc29\uc9c0\ud569\ub2c8\ub2e4. O(1) \ubdf0\ud3ec\ud2b8\uac00 150,000\uc904\uc758 \ub85c\uadf8\uc640 PDF\ub97c 120Hz\ub85c \uc989\uc2dc \uc5fd\ub2c8\ub2e4.",
+    "pil3_title": "\ube44\uc8fc\uc5bc Git Client \ud1a0\ud3f4\ub85c\uc9c0 \ubc0f SFTP DevOps",
+    "pil3_desc": "\ubcd1\ud569 \ucda9\ub3cc\uc744 \uc9c1\uad00\uc801\uc73c\ub85c \ud574\uacb0\ud558\ub294 \uc2dc\uac01\uc801 \ucee4\ubc0b \ud2b8\ub9ac\ub85c Clone, Commit, Push, Pull \uc6cc\ud06c\ud50c\ub85c\uc6b0\ub97c \uc2e4\ud589\ud558\uace0 \ud504\ub85c\ub355\uc158 SFTP/FTP \uc11c\ubc84\uc640 \uc9c1\uc811 \ub3d9\uae30\ud654\ud569\ub2c8\ub2e4.",
+    "sec3_eyebrow": "\uae30\uc220 \uc0ac\uc591 \ubc0f FAQ",
+    "sec3_title": "Android \uac1c\ubc1c\uc790\uac00 \uc790\uc8fc \ubb3b\ub294 \uc9c8\ubb38",
+    "faq1_q": "Code Editor: SuperCode IDE\ub294 Android\uc5d0\uc11c Python, C/C++, Java\ub97c \uc644\uc804\ud788 \uc624\ud504\ub77c\uc778\uc73c\ub85c \ucef4\ud30c\uc77c\ud560 \uc218 \uc788\ub098\uc694?",
+    "faq1_a": "\ub124, Android 8.0+\uc5d0\uc11c \uc644\ubcbd\ud55c \uc624\ud504\ub77c\uc778 \ub2e4\uc911 \uc5b8\uc5b4 \uc0cc\ub4dc\ubc15\uc2a4\ub97c \uc81c\uacf5\ud569\ub2c8\ub2e4. \uc624\ud504\ub77c\uc778 .whl \uc124\uce58\ub97c \uc9c0\uc6d0\ud558\ub294 Python 3.11, \ub0b4\uc7a5 LLVM/Clang\uc744 \ud1b5\ud55c C11/C++20 \ub85c\uceec \ucef4\ud30c\uc77c, ECJ \ubc0f D8 \uc5d4\uc9c4\uc744 \ud65c\uc6a9\ud55c Java 8+ \ub124\uc774\ud2f0\ube0c Dex \ucef4\ud30c\uc77c\uc744 \ubaa8\ub450 \uc624\ud504\ub77c\uc778\uc73c\ub85c \uc218\ud589\ud569\ub2c8\ub2e4.",
+    "faq2_q": "\ubaa8\ubc14\uc77c \uba54\ubaa8\ub9ac \ubd80\uc871 \uc5c6\uc774 NumPy \ubc0f Pandas \uac19\uc740 \ubb34\uac70\uc6b4 Python \ub77c\uc774\ube0c\ub7ec\ub9ac\ub97c \uc5b4\ub5bb\uac8c \uc2e4\ud589\ud558\ub098\uc694?",
+    "faq2_a": "\ub0b4\uc7a5\ub41c Smart AST \uc2a4\uce90\ub108\uac00 NumPy \ubc0f Pandas\uc640 \uac19\uc740 \ub300\uc6a9\ub7c9 \ub370\uc774\ud130 \uc0ac\uc774\uc5b8\uc2a4 \ub77c\uc774\ube0c\ub7ec\ub9ac\ub97c \uc790\ub3d9\uc73c\ub85c \uac10\uc9c0\ud558\uc5ec Serverless Edge WASM \ud074\ub7ec\uc2a4\ud130\ub85c \ub77c\uc6b0\ud305\ud558\uace0, \uc77c\ubc18 \ud328\ud0a4\uc9c0\ub294 \ucd08\uacbd\ub7c9 \ub85c\uceec \uc0cc\ub4dc\ubc15\uc2a4\uc5d0\uc11c \uc2e4\ud589\ud569\ub2c8\ub2e4.",
+    "faq3_q": "30MB Anti-OOM \uac00\ub4dc\uc640 150K \ub77c\uc778 \ubdf0\ud3ec\ud2b8\ub294 \uc5b4\ub5bb\uac8c Android \ucda9\ub3cc\uc744 \ubc29\uc9c0\ud558\ub098\uc694?",
+    "faq3_a": "Memory Guard \uc5d4\uc9c4\uc774 \ub2a5\ub3d9\uc801 \uce90\uc2dc \ube44\uc6b0\uae30\ub85c RAM \uc810\uc720\uc728\uc744 30MB \uc774\ub0b4\ub85c \uc720\uc9c0\ud558\uc5ec Android LMK\ub97c \ubc29\uc9c0\ud569\ub2c8\ub2e4. O(1) \ubdf0\ud3ec\ud2b8\ub294 \ud654\uba74 \ubc16 \ub80c\ub354\ub9c1\uc744 \uc0dd\ub7b5\ud558\uc5ec 120Hz\ub85c 150,000\uc904\uc744 \uc989\uc2dc \uc5f4\uba70, C/C++ \ucef4\ud30c\uc77c\ub7ec\uc758 150,000\uc790 \ubc84\ud37c \uc7a0\uae08\uc774 \ubb34\ud55c \ub8e8\ud504\ub97c \uc548\uc804\ud558\uac8c \ucc28\ub2e8\ud569\ub2c8\ub2e4.",
+    "faq4_q": "\ube44\uc8fc\uc5bc Git \ubc84\uc804 \uad00\ub9ac, Linux Bash \ud130\ubbf8\ub110 \ubc0f SFTP \uc11c\ubc84 \ubc30\ud3ec\ub97c \uc9c0\uc6d0\ud558\ub098\uc694?",
+    "faq4_a": "\ub124, Visual Git(Clone, Commit, Push, Pull \ubc0f \ucda9\ub3cc \ud574\uacb0), \uc9c1\uc811\uc801\uc778 SFTP/FTP \uc6d0\uaca9 \uc11c\ubc84 \ub3d9\uae30\ud654, \ub124\uc774\ud2f0\ube0c Linux Shell \ud130\ubbf8\ub110(Bash/Sh) \ubc0f Lua \uc2a4\ud06c\ub9bd\ud305 \uc0cc\ub4dc\ubc15\uc2a4\ub97c \uc644\ubcbd\ud788 \uc9c0\uc6d0\ud569\ub2c8\ub2e4.",
+    "bottom_sub": "4.92 \u2605 \uc624\ud504\ub77c\uc778 Python / C++20 / Java IDE",
+    "bottom_cta": "\ubb34\ub8cc \uc124\uce58",
+    "modal_title": "\uc5b8\uc5b4 \uc120\ud0dd (Select Language)"
+  },
+  "pt": {
+    "htmlLang": "pt",
+    "canonical": "https://supercode-ide.github.io/?lang=pt",
+    "metaTitle": "Code Editor: SuperCode IDE \u2014 Python IDE Offline, C/C++ Compiler e Java IDE (Editor de C\u00f3digo)",
+    "metaDesc": "IDE Offline Industrial e Code Editor (Editor de C\u00f3digo) para Android pela Phoenix Global Studios. Execute Python 3.11 (.whl Pip & Edge WASM NumPy/Pandas), Compilador LLVM/Clang C11/C++20, Java IDE Nativa ECJ/D8, WebAssembly Tree-Sitter AST e Escudo Anti-OOM de 30MB.",
+    "studio_tag": "Phoenix Global Studios \u00b7 v15.273",
+    "nav_cta": "Google Play",
+    "pill_oom": "Escudo Anti-OOM",
+    "hero_h1": "Code Editor: <span class=\"text-gradient\">SuperCode IDE</span> \u2014 Console Offline de Python IDE, C/C++ e Java (Editor de C\u00f3digo)",
+    "hero_lead": "Desenvolvido pela Phoenix Global Studios para desenvolvedores Android. Execute Python 3.11 (.whl Pip + Serverless Edge WASM NumPy/Pandas), compile C11/C++20 localmente com LLVM/Clang e crie apps Java Dex nativos com zero depend\u00eancia de rede.",
+    "btn_run": "Executar Sandbox",
+    "term_title": "TERMINAL DA SANDBOX \u00b7 BLOQUEIO ANTI-OOM: 30.0 MB",
+    "cta_main": "Baixar Gr\u00e1tis no Google Play",
+    "meta_ver": "Build 15.273 (v2.8.5) \u00b7 40.2 MB APK",
+    "sec1_eyebrow": "SANDBOX OFFLINE MULTIL\u00cdNGUE",
+    "sec1_title": "6 Ambientes Sandbox Industriais e Compiladores H\u00edbridos",
+    "rt1_title": "Python IDE Profissional & Pip .whl Offline",
+    "rt1_desc": "Ambiente Python 3.11 isolado com gerenciador Pip visual para pacotes .whl offline (requests, flask, telebot). O scanner Smart AST roteia NumPy e Pandas para nosso cluster Serverless Edge WASM.",
+    "rt2_title": "C/C++ Compiler C11 / C++20 Hardcore (LLVM/Clang)",
+    "rt2_desc": "Impulsionado por LLVM/Clang nativo para compila\u00e7\u00e3o offline com zero lat\u00eancia. Inclui bloqueio de buffer de 150.000 caracteres para interceptar loops infinitos e evitar travamentos OOM.",
+    "rt3_title": "Java IDE 8+ Dex Nativo (ECJ + D8)",
+    "rt3_desc": "Integra compiladores locais Eclipse (ECJ) e motores D8. Compila e converte a sintaxe Java 8+ para formatos Dex nativos carregados dinamicamente via DexClassLoader.",
+    "rt4_title": "Web Editor (HTML/JS) & Sandbox WASM",
+    "rt4_desc": "Executa bin\u00e1rios HTML5, CSS3, ES2026 JavaScript e WebAssembly dentro de um Sandbox HTTP Virtual com mapeamento preciso de caminho absoluto local e visualiza\u00e7\u00e3o instant\u00e2nea.",
+    "rt5_title": "Lua & Terminal Linux Shell Nativo",
+    "rt5_desc": "Execute scripts de automa\u00e7\u00e3o Lua 5.4 em um sandbox seguro ou conecte-se diretamente ao kernel Android Linux por meio de um terminal Bash/Sh nativo.",
+    "rt6_title": "Roteamento Inteligente em Nuvem",
+    "rt6_desc": "Escrevendo Kotlin (KT), PHP ou SQL? A detec\u00e7\u00e3o de roteamento inteligente conecta-se perfeitamente a clusters em nuvem de alto desempenho para execu\u00e7\u00e3o no servidor.",
+    "sec2_eyebrow": "AVAN\u00c7OS ARQUITET\u00d4NICOS",
+    "sec2_title": "3 Pilares T\u00e9cnicos Criados para Android 15",
+    "pil1_title": "Motor WebAssembly Tree-Sitter AST",
+    "pil1_desc": "Navega\u00e7\u00e3o de s\u00edmbolos sens\u00edvel ao contexto e conclus\u00e3o de c\u00f3digo sub-milissegundo. O realce de sintaxe AST funciona em paralelo com os temas TextMate (Darcula/Monokai/VS Code).",
+    "pil2_title": "Escudo Anti-OOM de 30MB & Viewport 120Hz O(1)",
+    "pil2_desc": "A evacua\u00e7\u00e3o ativa de cache bloqueia o uso de RAM em 30 MB, eliminando travamentos LMK/ANR. O viewport O(1) abre instantaneamente logs de 150.000 linhas e PDFs a 120Hz.",
+    "pil3_title": "Topologia Git Client Visual & SFTP DevOps",
+    "pil3_desc": "Execute fluxos completos de Clone, Commit, Push e Pull com uma \u00e1rvore topol\u00f3gica visual, combinada com sincroniza\u00e7\u00e3o direta de servidor de produ\u00e7\u00e3o SFTP/FTP.",
+    "sec3_eyebrow": "ESPECIFICA\u00c7\u00d5ES T\u00c9CNICAS E FAQ",
+    "sec3_title": "Perguntas Frequentes de Desenvolvedores Android",
+    "faq1_q": "O Code Editor: SuperCode IDE pode compilar Python, C/C++ e Java totalmente offline no Android?",
+    "faq1_a": "Sim, o SuperCode IDE possui um sandbox multil\u00edngue genuinamente offline no Android 8.0+. Ele executa Python 3.11 com pacotes .whl locais, compila C11 e C++20 localmente via n\u00facleo LLVM/Clang e compila c\u00f3digo Java 8+ offline em bytecode Dex nativo usando ECJ e D8.",
+    "faq2_q": "Como o SuperCode executa bibliotecas pesadas de Python como NumPy e Pandas sem esgotar a mem\u00f3ria?",
+    "faq2_a": "O SuperCode IDE utiliza um scanner Smart AST integrado que detecta e roteia automaticamente bibliotecas pesadas como NumPy e Pandas para um cluster Serverless Edge WASM, mantendo as bibliotecas padr\u00e3o no sandbox local ultraleve.",
+    "faq3_q": "Como o escudo Anti-OOM de 30MB previne travamentos no Android?",
+    "faq3_a": "O motor Memory Guard garante uma pegada rigorosa de 30 MB de RAM via evacua\u00e7\u00e3o ativa de cache para eliminar travamentos do Android LMK. Seu viewport O(1) abre logs de 150.000 linhas a 120 Hz com bloqueio de buffer C/C++ de 150.000 caracteres.",
+    "faq4_q": "O SuperCode IDE oferece suporte a Visual Git, terminal Linux Bash e implanta\u00e7\u00e3o SFTP?",
+    "faq4_a": "Sim, ele integra fluxos corporativos de DevOps, incluindo Git Visual (Clone, Commit, Push, Pull), sincroniza\u00e7\u00e3o remota de servidor SFTP/FTP direta e um terminal Linux Shell nativo (Bash/Sh).",
+    "bottom_sub": "4.92 \u2605 IDE Python / C++20 / Java Offline",
+    "bottom_cta": "Instalar Gr\u00e1tis",
+    "modal_title": "Selecione o Idioma (Select Language)"
+  },
+  "hi": {
+    "htmlLang": "hi",
+    "canonical": "https://supercode-ide.github.io/?lang=hi",
+    "metaTitle": "Code Editor: SuperCode IDE \u2014 \u0911\u092b\u093c\u0932\u093e\u0907\u0928 Python IDE, C/C++ Compiler \u0914\u0930 Java IDE (\u0915\u094b\u0921 \u090f\u0921\u093f\u091f\u0930)",
+    "metaDesc": "Phoenix Global Studios \u0926\u094d\u0935\u093e\u0930\u093e Android \u0915\u0947 \u0932\u093f\u090f \u0907\u0902\u0921\u0938\u094d\u091f\u094d\u0930\u093f\u092f\u0932 \u0911\u092b\u093c\u0932\u093e\u0907\u0928 IDE \u0914\u0930 Code Editor (\u0915\u094b\u0921 \u090f\u0921\u093f\u091f\u0930)\u0964 Python 3.11 (.whl Pip \u0914\u0930 Edge WASM NumPy/Pandas), LLVM/Clang C11/C++20 \u0915\u0902\u092a\u093e\u0907\u0932\u0930, \u0928\u0947\u091f\u093f\u0935 ECJ/D8 Java IDE, Tree-Sitter AST \u0914\u0930 30MB \u090f\u0902\u091f\u0940-OOM \u0936\u0940\u0932\u094d\u0921\u0964",
+    "studio_tag": "Phoenix Global Studios \u00b7 v15.273",
+    "nav_cta": "Google Play",
+    "pill_oom": "\u090f\u0902\u091f\u0940-OOM \u092e\u0947\u092e\u094b\u0930\u0940 \u0936\u0940\u0932\u094d\u0921",
+    "hero_h1": "Code Editor: <span class=\"text-gradient\">SuperCode IDE</span> \u2014 \u0907\u0902\u0921\u0938\u094d\u091f\u094d\u0930\u093f\u092f\u0932 \u0911\u092b\u093c\u0932\u093e\u0907\u0928 Python IDE, C/C++ \u0914\u0930 Java \u0915\u0902\u0938\u094b\u0932 (\u0915\u094b\u0921 \u090f\u0921\u093f\u091f\u0930)",
+    "hero_lead": "Android \u0921\u0947\u0935\u0932\u092a\u0930\u094d\u0938 \u0915\u0947 \u0932\u093f\u090f Phoenix Global Studios \u0926\u094d\u0935\u093e\u0930\u093e \u0928\u093f\u0930\u094d\u092e\u093f\u0924\u0964 \u092c\u093f\u0928\u093e \u0907\u0902\u091f\u0930\u0928\u0947\u091f \u0915\u0947 Python 3.11 (.whl Pip + Serverless Edge WASM NumPy/Pandas) \u091a\u0932\u093e\u090f\u0902, LLVM/Clang \u0915\u0947 \u0938\u093e\u0925 \u0938\u094d\u0925\u093e\u0928\u0940\u092f \u0930\u0942\u092a \u0938\u0947 C11/C++20 \u0915\u0902\u092a\u093e\u0907\u0932 \u0915\u0930\u0947\u0902 \u0914\u0930 \u0928\u0947\u091f\u093f\u0935 Java Dex \u0910\u092a\u094d\u0938 \u092c\u0928\u093e\u090f\u0902\u0964",
+    "btn_run": "\u0938\u0948\u0902\u0921\u092c\u0949\u0915\u094d\u0938 \u091a\u0932\u093e\u090f\u0902 (Run)",
+    "term_title": "\u0938\u0948\u0902\u0921\u092c\u0949\u0915\u094d\u0938 \u091f\u0930\u094d\u092e\u093f\u0928\u0932 \u0938\u094d\u091f\u094d\u0930\u0940\u092e \u00b7 \u090f\u0902\u091f\u0940-OOM \u0932\u0949\u0915: 30.0 MB",
+    "cta_main": "Google Play \u0938\u0947 \u092e\u0941\u092b\u093c\u094d\u0924 \u0921\u093e\u0909\u0928\u0932\u094b\u0921 \u0915\u0930\u0947\u0902",
+    "meta_ver": "Build 15.273 (v2.8.5) \u00b7 40.2 MB APK",
+    "sec1_eyebrow": "\u092e\u0932\u094d\u091f\u0940-\u0932\u0948\u0902\u0917\u094d\u0935\u0947\u091c \u0911\u092b\u093c\u0932\u093e\u0907\u0928 \u0938\u0948\u0902\u0921\u092c\u0949\u0915\u094d\u0938",
+    "sec1_title": "6 \u0907\u0902\u0921\u0938\u094d\u091f\u094d\u0930\u093f\u092f\u0932 \u0938\u0948\u0902\u0921\u092c\u0949\u0915\u094d\u0938 \u0930\u0928\u091f\u093e\u0907\u092e \u0914\u0930 \u0939\u093e\u0907\u092c\u094d\u0930\u093f\u0921 \u0915\u0902\u092a\u093e\u0907\u0932\u0930",
+    "rt1_title": "\u092a\u094d\u0930\u094b\u092b\u0947\u0936\u0928\u0932 Python IDE \u0914\u0930 \u0911\u092b\u093c\u0932\u093e\u0907\u0928 .whl Pip",
+    "rt1_desc": "\u0911\u092b\u093c\u0932\u093e\u0907\u0928 .whl \u092a\u0948\u0915\u0947\u091c (requests, flask, telebot) \u0915\u0947 \u0932\u093f\u090f \u0935\u093f\u091c\u093c\u0941\u0905\u0932 Pip \u092e\u0948\u0928\u0947\u091c\u0930 \u0915\u0947 \u0938\u093e\u0925 \u0906\u0907\u0938\u094b\u0932\u0947\u091f\u0947\u0921 Python 3.11 \u0930\u0928\u091f\u093e\u0907\u092e\u0964 \u0938\u094d\u092e\u093e\u0930\u094d\u091f AST \u0938\u094d\u0915\u0948\u0928\u0930 NumPy \u0914\u0930 Pandas \u0915\u094b \u0939\u092e\u093e\u0930\u0947 Serverless Edge WASM \u0915\u094d\u0932\u0938\u094d\u091f\u0930 \u092a\u0930 \u0930\u0942\u091f \u0915\u0930\u0924\u093e \u0939\u0948\u0964",
+    "rt2_title": "\u0939\u093e\u0930\u094d\u0921\u0915\u094b\u0930 C11 / C++20 Compiler (LLVM/Clang)",
+    "rt2_desc": "\u091c\u093c\u0940\u0930\u094b-\u0932\u0947\u091f\u0947\u0902\u0938\u0940 \u0911\u092b\u093c\u0932\u093e\u0907\u0928 \u0915\u0902\u092a\u093e\u0907\u0932\u0947\u0936\u0928 \u0915\u0947 \u0932\u093f\u090f \u0928\u0947\u091f\u093f\u0935 LLVM/Clang \u0926\u094d\u0935\u093e\u0930\u093e \u0938\u0902\u091a\u093e\u0932\u093f\u0924\u0964 \u0905\u0928\u0902\u0924 \u0932\u0942\u092a \u0915\u094b \u0930\u094b\u0915\u0928\u0947 \u0914\u0930 OOM \u0915\u094d\u0930\u0948\u0936 \u0938\u0947 \u092c\u091a\u093e\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f 150,000-\u0915\u0948\u0930\u0947\u0915\u094d\u091f\u0930 \u092c\u092b\u093c\u0930 \u0932\u0949\u0915 \u0936\u093e\u092e\u093f\u0932 \u0939\u0948\u0964",
+    "rt3_title": "\u0928\u0947\u091f\u093f\u0935 Java 8+ Dex IDE (ECJ + D8)",
+    "rt3_desc": "\u0932\u094b\u0915\u0932 ECJ \u0915\u0902\u092a\u093e\u0907\u0932\u0930 \u0914\u0930 D8 \u0907\u0902\u091c\u0928 \u0915\u094b \u090f\u0915\u0940\u0915\u0943\u0924 \u0915\u0930\u0924\u093e \u0939\u0948\u0964 Java 8+ \u0938\u093f\u0902\u091f\u0948\u0915\u094d\u0938 \u0915\u094b \u0928\u0947\u091f\u093f\u0935 Dex \u092b\u093c\u0949\u0930\u094d\u092e\u0947\u091f \u092e\u0947\u0902 \u0911\u092b\u093c\u0932\u093e\u0907\u0928 \u0915\u0902\u092a\u093e\u0907\u0932 \u0915\u0930\u0924\u093e \u0939\u0948 \u0914\u0930 DexClassLoader \u0915\u0947 \u092e\u093e\u0927\u094d\u092f\u092e \u0938\u0947 \u0932\u094b\u0921 \u0915\u0930\u0924\u093e \u0939\u0948\u0964",
+    "rt4_title": "Web Editor (HTML/JS) \u0914\u0930 WASM \u0938\u0948\u0902\u0921\u092c\u0949\u0915\u094d\u0938",
+    "rt4_desc": "\u0938\u091f\u0940\u0915 \u0932\u094b\u0915\u0932 \u092a\u093e\u0925 \u092e\u0948\u092a\u093f\u0902\u0917 \u0914\u0930 \u0924\u0941\u0930\u0902\u0924 \u092a\u094d\u0930\u0940\u0935\u094d\u092f\u0942 \u0915\u0947 \u0938\u093e\u0925 \u0935\u0930\u094d\u091a\u0941\u0905\u0932 HTTP \u0938\u0948\u0902\u0921\u092c\u0949\u0915\u094d\u0938 \u0915\u0947 \u0905\u0902\u0926\u0930 HTML5, CSS3, ES2026 JavaScript \u0914\u0930 WebAssembly \u092c\u093e\u0907\u0928\u0930\u0940 \u091a\u0932\u093e\u0924\u093e \u0939\u0948\u0964",
+    "rt5_title": "Lua \u0914\u0930 \u0928\u0947\u091f\u093f\u0935 Linux Shell \u091f\u0930\u094d\u092e\u093f\u0928\u0932",
+    "rt5_desc": "\u0938\u0941\u0930\u0915\u094d\u0937\u093f\u0924 \u0938\u0948\u0902\u0921\u092c\u0949\u0915\u094d\u0938 \u092e\u0947\u0902 Lua 5.4 \u0911\u091f\u094b\u092e\u0947\u0936\u0928 \u0938\u094d\u0915\u094d\u0930\u093f\u092a\u094d\u091f \u091a\u0932\u093e\u090f\u0902 \u092f\u093e \u0928\u0947\u091f\u093f\u0935 Bash/Sh \u091f\u0930\u094d\u092e\u093f\u0928\u0932 \u0915\u0947 \u092e\u093e\u0927\u094d\u092f\u092e \u0938\u0947 \u0938\u0940\u0927\u0947 Android Linux \u0915\u0930\u094d\u0928\u0947\u0932 \u0938\u0947 \u091c\u0941\u0921\u093c\u0947\u0902\u0964",
+    "rt6_title": "\u0938\u094d\u092e\u093e\u0930\u094d\u091f \u0915\u094d\u0932\u093e\u0909\u0921 \u0932\u0948\u0902\u0917\u094d\u0935\u0947\u091c \u0930\u093e\u0909\u091f\u093f\u0902\u0917",
+    "rt6_desc": "Kotlin (KT), PHP \u092f\u093e SQL \u0932\u093f\u0916 \u0930\u0939\u0947 \u0939\u0948\u0902? \u0938\u094d\u092e\u093e\u0930\u094d\u091f \u0930\u093e\u0909\u091f\u093f\u0902\u0917 \u0921\u093f\u091f\u0947\u0915\u094d\u0936\u0928 \u0938\u0930\u094d\u0935\u0930-\u0938\u093e\u0907\u0921 \u0928\u093f\u0937\u094d\u092a\u093e\u0926\u0928 \u0915\u0947 \u0932\u093f\u090f \u0939\u093e\u0908-\u092a\u0930\u092b\u0949\u0930\u094d\u092e\u0947\u0902\u0938 \u0915\u094d\u0932\u093e\u0909\u0921 \u0915\u094d\u0932\u0938\u094d\u091f\u0930 \u0938\u0947 \u0938\u0939\u091c\u0924\u093e \u0938\u0947 \u091c\u0941\u0921\u093c\u0924\u093e \u0939\u0948\u0964",
+    "sec2_eyebrow": "\u0906\u0930\u094d\u0915\u093f\u091f\u0947\u0915\u094d\u091a\u0930\u0932 \u0938\u092b\u0932\u0924\u093e\u090f\u0902",
+    "sec2_title": "Android 15 \u0915\u0947 \u0932\u093f\u090f \u0928\u093f\u0930\u094d\u092e\u093f\u0924 3 \u092e\u0941\u0916\u094d\u092f \u0924\u0915\u0928\u0940\u0915\u0940 \u0938\u094d\u0924\u0902\u092d",
+    "pil1_title": "WebAssembly Tree-Sitter AST \u0907\u0902\u091c\u0928",
+    "pil1_desc": "\u0938\u0902\u0926\u0930\u094d\u092d-\u091c\u093e\u0917\u0930\u0942\u0915 \u0938\u093f\u0902\u092c\u0932 \u0928\u0947\u0935\u093f\u0917\u0947\u0936\u0928 \u0914\u0930 \u0938\u092c-\u092e\u093f\u0932\u0940\u0938\u0947\u0915\u0902\u0921 \u0915\u094b\u0921 \u0915\u0902\u092a\u094d\u0932\u0940\u0936\u0928\u0964 \u0915\u0932\u0930\u093f\u0902\u0917 \u091f\u0915\u0930\u093e\u0935 \u0915\u094b \u0916\u0924\u094d\u092e \u0915\u0930\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f TextMate \u0925\u0940\u092e (Darcula/Monokai/VS Code) \u0915\u0947 \u0938\u092e\u093e\u0928\u093e\u0902\u0924\u0930 AST \u0939\u093e\u0907\u0932\u093e\u0907\u091f\u093f\u0902\u0917 \u091a\u0932\u093e\u0924\u093e \u0939\u0948\u0964",
+    "pil2_title": "30MB \u090f\u0902\u091f\u0940-OOM \u0936\u0940\u0932\u094d\u0921 \u0914\u0930 O(1) 120Hz \u0935\u094d\u092f\u0942\u092a\u094b\u0930\u094d\u091f",
+    "pil2_desc": "\u0938\u0915\u094d\u0930\u093f\u092f \u0915\u0948\u0936 \u0928\u093f\u0915\u093e\u0938\u0940 RAM \u0909\u092a\u092f\u094b\u0917 \u0915\u094b 30MB \u092a\u0930 \u0932\u0949\u0915 \u0915\u0930\u0924\u0940 \u0939\u0948, \u091c\u093f\u0938\u0938\u0947 LMK/ANR \u0915\u094d\u0930\u0948\u0936 \u0938\u092e\u093e\u092a\u094d\u0924 \u0939\u094b \u091c\u093e\u0924\u0947 \u0939\u0948\u0902\u0964 O(1) \u0935\u094d\u092f\u0942\u092a\u094b\u0930\u094d\u091f 120Hz \u092a\u0930 150,000-\u0932\u093e\u0907\u0928 \u0932\u0949\u0917 \u0924\u0941\u0930\u0902\u0924 \u0916\u094b\u0932\u0924\u093e \u0939\u0948\u0964",
+    "pil3_title": "\u0935\u093f\u091c\u093c\u0941\u0905\u0932 Git Client \u091f\u094b\u092a\u094b\u0932\u0949\u091c\u0940 \u0914\u0930 SFTP DevOps",
+    "pil3_desc": "\u092e\u0930\u094d\u091c \u0938\u0902\u0918\u0930\u094d\u0937\u094b\u0902 \u0915\u094b \u0906\u0938\u093e\u0928\u0940 \u0938\u0947 \u0939\u0932 \u0915\u0930\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u0935\u093f\u091c\u093c\u0941\u0905\u0932 \u091f\u094d\u0930\u0940 \u0915\u0947 \u0938\u093e\u0925 \u092a\u0942\u0930\u094d\u0923 Clone, Commit, Push \u0914\u0930 Pull \u0935\u0930\u094d\u0915\u092b\u093c\u094d\u0932\u094b \u0928\u093f\u0937\u094d\u092a\u093e\u0926\u093f\u0924 \u0915\u0930\u0947\u0902, \u0938\u093e\u0925 \u0939\u0940 \u0938\u0940\u0927\u0947 SFTP/FTP \u0938\u0930\u094d\u0935\u0930 \u0938\u093f\u0902\u0915 \u0915\u0930\u0947\u0902\u0964",
+    "sec3_eyebrow": "\u0924\u0915\u0928\u0940\u0915\u0940 \u0935\u093f\u0936\u093f\u0937\u094d\u091f\u0924\u093e\u090f\u0902 \u0914\u0930 FAQ",
+    "sec3_title": "Android \u0921\u0947\u0935\u0932\u092a\u0930\u094d\u0938 \u0926\u094d\u0935\u093e\u0930\u093e \u0905\u0915\u094d\u0938\u0930 \u092a\u0942\u091b\u0947 \u091c\u093e\u0928\u0947 \u0935\u093e\u0932\u0947 \u092a\u094d\u0930\u0936\u094d\u0928",
+    "faq1_q": "\u0915\u094d\u092f\u093e Code Editor: SuperCode IDE Android \u092a\u0930 Python, C/C++ \u0914\u0930 Java \u0915\u094b \u092a\u0942\u0930\u0940 \u0924\u0930\u0939 \u0938\u0947 \u0911\u092b\u093c\u0932\u093e\u0907\u0928 \u0915\u0902\u092a\u093e\u0907\u0932 \u0915\u0930 \u0938\u0915\u0924\u093e \u0939\u0948?",
+    "faq1_a": "\u0939\u093e\u0902, \u092f\u0939 Android 8.0+ \u092a\u0930 \u0935\u093e\u0938\u094d\u0924\u0935\u093f\u0915 \u0911\u092b\u093c\u0932\u093e\u0907\u0928 \u092e\u0932\u094d\u091f\u0940-\u0932\u0948\u0902\u0917\u094d\u0935\u0947\u091c \u0938\u0948\u0902\u0921\u092c\u0949\u0915\u094d\u0938 \u092a\u094d\u0930\u0926\u093e\u0928 \u0915\u0930\u0924\u093e \u0939\u0948\u0964 \u092f\u0939 \u0911\u092b\u093c\u0932\u093e\u0907\u0928 .whl \u092a\u0948\u0915\u0947\u091c \u0915\u0947 \u0938\u093e\u0925 Python 3.11 \u091a\u0932\u093e\u0924\u093e \u0939\u0948, \u090f\u092e\u094d\u092c\u0947\u0921\u0947\u0921 LLVM/Clang \u0915\u0947 \u092e\u093e\u0927\u094d\u092f\u092e \u0938\u0947 C11/C++20 \u0915\u0902\u092a\u093e\u0907\u0932 \u0915\u0930\u0924\u093e \u0939\u0948 \u0914\u0930 ECJ \u0935 D8 \u0907\u0902\u091c\u0928 \u0938\u0947 Java 8+ \u0915\u094b \u0928\u0947\u091f\u093f\u0935 Dex \u092e\u0947\u0902 \u0915\u0902\u092a\u093e\u0907\u0932 \u0915\u0930\u0924\u093e \u0939\u0948\u0964",
+    "faq2_q": "SuperCode \u092e\u094b\u092c\u093e\u0907\u0932 \u092e\u0947\u092e\u094b\u0930\u0940 \u0916\u0924\u094d\u092e \u0915\u093f\u090f \u092c\u093f\u0928\u093e NumPy \u0914\u0930 Pandas \u091c\u0948\u0938\u0940 \u092d\u093e\u0930\u0940 Python \u0932\u093e\u0907\u092c\u094d\u0930\u0947\u0930\u0940 \u0915\u0948\u0938\u0947 \u091a\u0932\u093e\u0924\u093e \u0939\u0948?",
+    "faq2_a": "\u0905\u0902\u0924\u0930\u094d\u0928\u093f\u0939\u093f\u0924 \u0938\u094d\u092e\u093e\u0930\u094d\u091f AST \u0938\u094d\u0915\u0948\u0928\u0930 \u0938\u094d\u0935\u091a\u093e\u0932\u093f\u0924 \u0930\u0942\u092a \u0938\u0947 NumPy \u0914\u0930 Pandas \u091c\u0948\u0938\u0940 \u092d\u093e\u0930\u0940 \u0921\u0947\u091f\u093e \u0938\u093e\u0907\u0902\u0938 \u0932\u093e\u0907\u092c\u094d\u0930\u0947\u0930\u0940 \u0915\u094b Serverless Edge WASM \u0915\u094d\u0932\u0938\u094d\u091f\u0930 \u092a\u0930 \u0930\u0942\u091f \u0915\u0930\u0924\u093e \u0939\u0948, \u091c\u092c\u0915\u093f \u092e\u093e\u0928\u0915 \u092a\u0948\u0915\u0947\u091c\u094b\u0902 \u0915\u094b \u0932\u094b\u0915\u0932 \u0938\u0948\u0902\u0921\u092c\u0949\u0915\u094d\u0938 \u092e\u0947\u0902 \u0930\u0916\u0924\u093e \u0939\u0948\u0964",
+    "faq3_q": "30MB \u090f\u0902\u091f\u0940-OOM \u0936\u0940\u0932\u094d\u0921 \u0914\u0930 150K-\u0932\u093e\u0907\u0928 \u0935\u094d\u092f\u0942\u092a\u094b\u0930\u094d\u091f Android \u092a\u0930 \u0915\u094d\u0930\u0948\u0936 \u0915\u094b \u0915\u0948\u0938\u0947 \u0930\u094b\u0915\u0924\u0947 \u0939\u0948\u0902?",
+    "faq3_a": "Memory Guard \u0907\u0902\u091c\u0928 Android LMK \u0938\u0947 \u092c\u091a\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f 30MB RAM \u092b\u093c\u0941\u091f\u092a\u094d\u0930\u093f\u0902\u091f \u0938\u0941\u0928\u093f\u0936\u094d\u091a\u093f\u0924 \u0915\u0930\u0924\u093e \u0939\u0948\u0964 O(1) \u0935\u094d\u092f\u0942\u092a\u094b\u0930\u094d\u091f 120Hz \u092a\u0930 150,000-\u0932\u093e\u0907\u0928 \u0932\u0949\u0917 \u0924\u0941\u0930\u0902\u0924 \u0916\u094b\u0932\u0924\u093e \u0939\u0948 \u0914\u0930 C/C++ \u092e\u0947\u0902 150,000-\u0915\u0948\u0930\u0947\u0915\u094d\u091f\u0930 \u092c\u092b\u093c\u0930 \u0932\u0949\u0915 \u0905\u0928\u0902\u0924 \u0932\u0942\u092a \u0915\u094b \u0930\u094b\u0915\u0924\u093e \u0939\u0948\u0964",
+    "faq4_q": "\u0915\u094d\u092f\u093e SuperCode IDE \u0935\u093f\u091c\u093c\u0941\u0905\u0932 Git, Linux Bash \u0914\u0930 SFTP \u092a\u0930\u093f\u0928\u093f\u092f\u094b\u091c\u0928 \u0915\u093e \u0938\u092e\u0930\u094d\u0925\u0928 \u0915\u0930\u0924\u093e \u0939\u0948?",
+    "faq4_a": "\u0939\u093e\u0902, \u0907\u0938\u092e\u0947\u0902 \u0935\u093f\u091c\u093c\u0941\u0905\u0932 Git (Clone, Commit, Push, Pull), \u0938\u0940\u0927\u093e SFTP/FTP \u0938\u0930\u094d\u0935\u0930 \u0938\u093f\u0902\u0915 \u0914\u0930 \u0928\u0947\u091f\u093f\u0935 Linux Shell \u091f\u0930\u094d\u092e\u093f\u0928\u0932 (Bash/Sh) \u0915\u0947 \u0938\u093e\u0925 \u090f\u0902\u091f\u0930\u092a\u094d\u0930\u093e\u0907\u091c\u093c DevOps \u0935\u0930\u094d\u0915\u092b\u093c\u094d\u0932\u094b \u0936\u093e\u092e\u093f\u0932 \u0939\u0948\u0902\u0964",
+    "bottom_sub": "4.92 \u2605 \u0911\u092b\u093c\u0932\u093e\u0907\u0928 Python / C++20 / Java IDE",
+    "bottom_cta": "\u092e\u0941\u092b\u093c\u094d\u0924 \u0907\u0902\u0938\u094d\u091f\u0949\u0932 \u0915\u0930\u0947\u0902",
+    "modal_title": "\u092d\u093e\u0937\u093e \u091a\u0941\u0928\u0947\u0902 (Select Language)"
+  },
+  "ru": {
+    "htmlLang": "ru",
+    "canonical": "https://supercode-ide.github.io/?lang=ru",
+    "metaTitle": "Code Editor: SuperCode IDE \u2014 \u041e\u0444\u043b\u0430\u0439\u043d Python IDE, C/C++ Compiler \u0438 Java IDE (\u0420\u0435\u0434\u0430\u043a\u0442\u043e\u0440 \u043a\u043e\u0434\u0430)",
+    "metaDesc": "\u041f\u0440\u043e\u043c\u044b\u0448\u043b\u0435\u043d\u043d\u0430\u044f \u043e\u0444\u043b\u0430\u0439\u043d IDE \u0438 Code Editor (\u0420\u0435\u0434\u0430\u043a\u0442\u043e\u0440 \u043a\u043e\u0434\u0430) \u0434\u043b\u044f Android \u043e\u0442 Phoenix Global Studios. \u0417\u0430\u043f\u0443\u0441\u043a Python 3.11 (.whl Pip \u0438 Edge WASM NumPy/Pandas), \u043a\u043e\u043c\u043f\u0438\u043b\u044f\u0442\u043e\u0440 LLVM/Clang C11/C++20, \u043d\u0430\u0442\u0438\u0432\u043d\u0430\u044f ECJ/D8 Java IDE, WebAssembly Tree-Sitter AST \u0438 \u0437\u0430\u0449\u0438\u0442\u0430 \u043f\u0430\u043c\u044f\u0442\u0438 30 \u041c\u0411 Anti-OOM.",
+    "studio_tag": "Phoenix Global Studios \u00b7 v15.273",
+    "nav_cta": "Google Play",
+    "pill_oom": "Anti-OOM \u0417\u0430\u0449\u0438\u0442\u0430 (30 \u041c\u0411)",
+    "hero_h1": "Code Editor: <span class=\"text-gradient\">SuperCode IDE</span> \u2014 \u041f\u0440\u043e\u043c\u044b\u0448\u043b\u0435\u043d\u043d\u0430\u044f \u043e\u0444\u043b\u0430\u0439\u043d-\u043a\u043e\u043d\u0441\u043e\u043b\u044c Python IDE, C/C++ \u0438 Java",
+    "hero_lead": "\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0430\u043d\u043e Phoenix Global Studios \u0434\u043b\u044f Android-\u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0447\u0438\u043a\u043e\u0432. \u0417\u0430\u043f\u0443\u0441\u043a\u0430\u0439\u0442\u0435 Python 3.11 (.whl Pip + Serverless Edge WASM NumPy/Pandas), \u043a\u043e\u043c\u043f\u0438\u043b\u0438\u0440\u0443\u0439\u0442\u0435 C11/C++20 \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u043e \u0447\u0435\u0440\u0435\u0437 LLVM/Clang \u0438 \u0441\u043e\u0437\u0434\u0430\u0432\u0430\u0439\u0442\u0435 \u043d\u0430\u0442\u0438\u0432\u043d\u044b\u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f Java Dex \u0431\u0435\u0437 \u0438\u043d\u0442\u0435\u0440\u043d\u0435\u0442\u0430.",
+    "btn_run": "\u0417\u0430\u043f\u0443\u0441\u0442\u0438\u0442\u044c \u043f\u0435\u0441\u043e\u0447\u043d\u0438\u0446\u0443",
+    "term_title": "\u041f\u041e\u0422\u041e\u041a \u0422\u0415\u0420\u041c\u0418\u041d\u0410\u041b\u0410 \u041f\u0415\u0421\u041e\u0427\u041d\u0418\u0426\u042b \u00b7 \u0411\u041b\u041e\u041a\u0418\u0420\u041e\u0412\u041a\u0410 ANTI-OOM: 30.0 \u041c\u0411",
+    "cta_main": "\u0421\u043a\u0430\u0447\u0430\u0442\u044c \u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u043e \u0432 Google Play",
+    "meta_ver": "\u0421\u0431\u043e\u0440\u043a\u0430 15.273 (v2.8.5) \u00b7 APK 40.2 \u041c\u0411",
+    "sec1_eyebrow": "\u041c\u0423\u041b\u042c\u0422\u0418\u042f\u0417\u042b\u0427\u041d\u0410\u042f \u041e\u0424\u041b\u0410\u0419\u041d-\u041f\u0415\u0421\u041e\u0427\u041d\u0418\u0426\u0410",
+    "sec1_title": "6 \u041f\u0440\u043e\u043c\u044b\u0448\u043b\u0435\u043d\u043d\u044b\u0445 \u0441\u0440\u0435\u0434 \u0432\u044b\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u044f \u0438 \u0433\u0438\u0431\u0440\u0438\u0434\u043d\u044b\u0445 \u043a\u043e\u043c\u043f\u0438\u043b\u044f\u0442\u043e\u0440\u043e\u0432",
+    "rt1_title": "\u041f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u0430\u044f Python IDE \u0438 \u043e\u0444\u043b\u0430\u0439\u043d .whl Pip",
+    "rt1_desc": "\u0418\u0437\u043e\u043b\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u0430\u044f \u0441\u0440\u0435\u0434\u0430 Python 3.11 \u0441 \u0432\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u044b\u043c \u043c\u0435\u043d\u0435\u0434\u0436\u0435\u0440\u043e\u043c Pip \u0434\u043b\u044f \u043e\u0444\u043b\u0430\u0439\u043d-\u043f\u0430\u043a\u0435\u0442\u043e\u0432 .whl (requests, flask, telebot). \u0423\u043c\u043d\u044b\u0439 \u0441\u043a\u0430\u043d\u0435\u0440 AST \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u044f\u0435\u0442 NumPy \u0438 Pandas \u0432 \u043a\u043b\u0430\u0441\u0442\u0435\u0440 Serverless Edge WASM.",
+    "rt2_title": "\u0425\u0430\u0440\u0434\u043a\u043e\u0440\u043d\u044b\u0439 C11 / C++20 Compiler (LLVM/Clang)",
+    "rt2_desc": "\u041d\u0430 \u0431\u0430\u0437\u0435 \u043d\u0430\u0442\u0438\u0432\u043d\u043e\u0433\u043e \u044f\u0434\u0440\u0430 LLVM/Clang \u0434\u043b\u044f \u043c\u0433\u043d\u043e\u0432\u0435\u043d\u043d\u043e\u0439 \u043e\u0444\u043b\u0430\u0439\u043d-\u043a\u043e\u043c\u043f\u0438\u043b\u044f\u0446\u0438\u0438. \u0412\u043a\u043b\u044e\u0447\u0430\u0435\u0442 \u0430\u043f\u043f\u0430\u0440\u0430\u0442\u043d\u0443\u044e \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u0443 \u0431\u0443\u0444\u0435\u0440\u0430 \u043d\u0430 150 000 \u0441\u0438\u043c\u0432\u043e\u043b\u043e\u0432 \u0434\u043b\u044f \u043f\u0435\u0440\u0435\u0445\u0432\u0430\u0442\u0430 \u0431\u0435\u0441\u043a\u043e\u043d\u0435\u0447\u043d\u044b\u0445 \u0446\u0438\u043a\u043b\u043e\u0432 \u0438 \u0437\u0430\u0449\u0438\u0442\u044b \u043e\u0442 OOM.",
+    "rt3_title": "\u041d\u0430\u0442\u0438\u0432\u043d\u0430\u044f Java 8+ Dex IDE (ECJ + D8)",
+    "rt3_desc": "\u0418\u043d\u0442\u0435\u0433\u0440\u0438\u0440\u0443\u0435\u0442 \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u044b\u0435 \u043a\u043e\u043c\u043f\u0438\u043b\u044f\u0442\u043e\u0440\u044b ECJ \u0438 \u0434\u0432\u0438\u0436\u043a\u0438 D8. \u041a\u043e\u043c\u043f\u0438\u043b\u0438\u0440\u0443\u0435\u0442 \u0441\u0438\u043d\u0442\u0430\u043a\u0441\u0438\u0441 Java 8+ \u0432 \u043d\u0430\u0442\u0438\u0432\u043d\u044b\u0439 \u0444\u043e\u0440\u043c\u0430\u0442 Dex \u0441 \u0434\u0438\u043d\u0430\u043c\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0437\u0430\u0433\u0440\u0443\u0437\u043a\u043e\u0439 \u0447\u0435\u0440\u0435\u0437 DexClassLoader.",
+    "rt4_title": "Web Editor (HTML/JS) \u0438 \u043f\u0435\u0441\u043e\u0447\u043d\u0438\u0446\u0430 WASM",
+    "rt4_desc": "\u0412\u044b\u043f\u043e\u043b\u043d\u044f\u0435\u0442 HTML5, CSS3, ES2026 JavaScript \u0438 \u043c\u043e\u0434\u0443\u043b\u0438 WebAssembly \u0432\u043d\u0443\u0442\u0440\u0438 \u0432\u0438\u0440\u0442\u0443\u0430\u043b\u044c\u043d\u043e\u0433\u043e HTTP-\u0441\u0435\u0440\u0432\u0435\u0440\u0430 \u0441 \u0442\u043e\u0447\u043d\u044b\u043c \u0441\u043e\u043f\u043e\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u0438\u0435\u043c \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u044b\u0445 \u043f\u0443\u0442\u0435\u0439 \u0438 \u043c\u0433\u043d\u043e\u0432\u0435\u043d\u043d\u044b\u043c \u043f\u0440\u0435\u0434\u043f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u043e\u043c.",
+    "rt5_title": "Lua \u0438 \u043d\u0430\u0442\u0438\u0432\u043d\u044b\u0439 \u0442\u0435\u0440\u043c\u0438\u043d\u0430\u043b Linux Shell",
+    "rt5_desc": "\u0411\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e \u0437\u0430\u043f\u0443\u0441\u043a\u0430\u0439\u0442\u0435 \u0441\u043a\u0440\u0438\u043f\u0442\u044b \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438 Lua 5.4 \u0438\u043b\u0438 \u043f\u043e\u0434\u043a\u043b\u044e\u0447\u0430\u0439\u0442\u0435\u0441\u044c \u043d\u0430\u043f\u0440\u044f\u043c\u0443\u044e \u043a \u044f\u0434\u0440\u0443 Android Linux \u0447\u0435\u0440\u0435\u0437 \u043d\u0430\u0442\u0438\u0432\u043d\u044b\u0439 \u0442\u0435\u0440\u043c\u0438\u043d\u0430\u043b Bash/Sh \u0431\u0435\u0437 \u0437\u0430\u0434\u0435\u0440\u0436\u0435\u043a.",
+    "rt6_title": "\u0423\u043c\u043d\u0430\u044f \u043e\u0431\u043b\u0430\u0447\u043d\u0430\u044f \u043c\u0430\u0440\u0448\u0440\u0443\u0442\u0438\u0437\u0430\u0446\u0438\u044f \u044f\u0437\u044b\u043a\u043e\u0432",
+    "rt6_desc": "\u041f\u0438\u0448\u0435\u0442\u0435 \u043d\u0430 Kotlin (KT), PHP \u0438\u043b\u0438 SQL? \u0418\u043d\u0442\u0435\u043b\u043b\u0435\u043a\u0442\u0443\u0430\u043b\u044c\u043d\u0430\u044f \u043c\u0430\u0440\u0448\u0440\u0443\u0442\u0438\u0437\u0430\u0446\u0438\u044f \u043f\u0440\u043e\u0437\u0440\u0430\u0447\u043d\u043e \u043f\u043e\u0434\u043a\u043b\u044e\u0447\u0430\u0435\u0442\u0441\u044f \u043a \u0432\u044b\u0441\u043e\u043a\u043e\u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u043c \u043e\u0431\u043b\u0430\u0447\u043d\u044b\u043c \u043a\u043b\u0430\u0441\u0442\u0435\u0440\u0430\u043c \u0434\u043b\u044f \u0441\u0435\u0440\u0432\u0435\u0440\u043d\u043e\u0433\u043e \u0432\u044b\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u044f.",
+    "sec2_eyebrow": "\u0410\u0420\u0425\u0418\u0422\u0415\u041a\u0422\u0423\u0420\u041d\u042b\u0415 \u041f\u0420\u041e\u0420\u042b\u0412\u042b",
+    "sec2_title": "3 \u041a\u043b\u044e\u0447\u0435\u0432\u044b\u0445 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u0441\u0442\u043e\u043b\u043f\u0430 \u0434\u043b\u044f Android 15",
+    "pil1_title": "\u0414\u0432\u0438\u0436\u043e\u043a WebAssembly Tree-Sitter AST",
+    "pil1_desc": "\u041a\u043e\u043d\u0442\u0435\u043a\u0441\u0442\u043d\u0430\u044f \u043d\u0430\u0432\u0438\u0433\u0430\u0446\u0438\u044f \u043f\u043e \u0441\u0438\u043c\u0432\u043e\u043b\u0430\u043c \u0438 \u0430\u0432\u0442\u043e\u0434\u043e\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u0435 \u043a\u043e\u0434\u0430 \u0431\u044b\u0441\u0442\u0440\u0435\u0435 \u043c\u0438\u043b\u043b\u0438\u0441\u0435\u043a\u0443\u043d\u0434\u044b. \u041f\u043e\u0434\u0441\u0432\u0435\u0442\u043a\u0430 AST \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442 \u043f\u0430\u0440\u0430\u043b\u043b\u0435\u043b\u044c\u043d\u043e \u0441 \u0442\u0435\u043c\u0430\u043c\u0438 TextMate (Darcula/Monokai/VS Code).",
+    "pil2_title": "\u0417\u0430\u0449\u0438\u0442\u0430 30 \u041c\u0411 Anti-OOM \u0438 O(1) 120 \u0413\u0446 Viewport",
+    "pil2_desc": "\u0410\u043a\u0442\u0438\u0432\u043d\u0430\u044f \u043e\u0447\u0438\u0441\u0442\u043a\u0430 \u043a\u044d\u0448\u0430 \u0443\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442 \u0440\u0430\u0441\u0445\u043e\u0434 \u041e\u0417\u0423 \u0432 \u043f\u0440\u0435\u0434\u0435\u043b\u0430\u0445 30 \u041c\u0411, \u043f\u0440\u0435\u0434\u043e\u0442\u0432\u0440\u0430\u0449\u0430\u044f \u0441\u0431\u043e\u0438 LMK/ANR. \u042d\u043a\u0440\u0430\u043d O(1) \u043c\u0433\u043d\u043e\u0432\u0435\u043d\u043d\u043e \u043e\u0442\u043a\u0440\u044b\u0432\u0430\u0435\u0442 \u043b\u043e\u0433\u0438 \u043d\u0430 150 000 \u0441\u0442\u0440\u043e\u043a \u043f\u0440\u0438 120 \u0413\u0446.",
+    "pil3_title": "\u0412\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u044b\u0439 Git Client \u0438 SFTP DevOps",
+    "pil3_desc": "\u041f\u043e\u043b\u043d\u044b\u0439 \u0446\u0438\u043a\u043b Clone, Commit, Push \u0438 Pull \u0441 \u0432\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u044b\u043c \u0434\u0435\u0440\u0435\u0432\u043e\u043c \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u0438\u044f \u043a\u043e\u043d\u0444\u043b\u0438\u043a\u0442\u043e\u0432 \u0441\u043b\u0438\u044f\u043d\u0438\u044f \u0438 \u043f\u0440\u044f\u043c\u043e\u0439 \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0430\u0446\u0438\u0435\u0439 \u0441 \u043f\u0440\u043e\u0434\u0430\u043a\u0448\u043d-\u0441\u0435\u0440\u0432\u0435\u0440\u0430\u043c\u0438 \u043f\u043e SFTP/FTP.",
+    "sec3_eyebrow": "\u0422\u0415\u0425\u041d\u0418\u0427\u0415\u0421\u041a\u0418\u0415 \u0425\u0410\u0420\u0410\u041a\u0422\u0415\u0420\u0418\u0421\u0422\u0418\u041a\u0418 \u0418 FAQ",
+    "sec3_title": "\u0427\u0430\u0441\u0442\u043e \u0437\u0430\u0434\u0430\u0432\u0430\u0435\u043c\u044b\u0435 \u0432\u043e\u043f\u0440\u043e\u0441\u044b Android-\u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0447\u0438\u043a\u043e\u0432",
+    "faq1_q": "\u041c\u043e\u0436\u0435\u0442 \u043b\u0438 Code Editor: SuperCode IDE \u043a\u043e\u043c\u043f\u0438\u043b\u0438\u0440\u043e\u0432\u0430\u0442\u044c Python, C/C++ \u0438 Java \u043f\u043e\u043b\u043d\u043e\u0441\u0442\u044c\u044e \u043e\u0444\u043b\u0430\u0439\u043d \u043d\u0430 Android?",
+    "faq1_a": "\u0414\u0430, SuperCode IDE \u0432\u043a\u043b\u044e\u0447\u0430\u0435\u0442 \u043f\u043e\u043b\u043d\u043e\u0446\u0435\u043d\u043d\u0443\u044e \u043e\u0444\u043b\u0430\u0439\u043d-\u043f\u0435\u0441\u043e\u0447\u043d\u0438\u0446\u0443 \u0434\u043b\u044f Android 8.0+. \u041e\u043d\u0430 \u0432\u044b\u043f\u043e\u043b\u043d\u044f\u0435\u0442 Python 3.11 \u0441 \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u043e\u0439 \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u043e\u0439 .whl, \u043a\u043e\u043c\u043f\u0438\u043b\u0438\u0440\u0443\u0435\u0442 C11/C++20 \u0447\u0435\u0440\u0435\u0437 \u0432\u0441\u0442\u0440\u043e\u0435\u043d\u043d\u044b\u0439 LLVM/Clang \u0438 \u0441\u043e\u0431\u0438\u0440\u0430\u0435\u0442 Java 8+ \u043e\u0444\u043b\u0430\u0439\u043d \u0432 \u0431\u0430\u0439\u0442-\u043a\u043e\u0434 Dex \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e ECJ \u0438 D8.",
+    "faq2_q": "\u041a\u0430\u043a SuperCode \u0437\u0430\u043f\u0443\u0441\u043a\u0430\u0435\u0442 \u0442\u044f\u0436\u0435\u043b\u044b\u0435 \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0438 NumPy \u0438 Pandas \u0431\u0435\u0437 \u043f\u0435\u0440\u0435\u0433\u0440\u0443\u0437\u043a\u0438 \u043f\u0430\u043c\u044f\u0442\u0438 \u0441\u043c\u0430\u0440\u0442\u0444\u043e\u043d\u0430?",
+    "faq2_a": "\u0412\u0441\u0442\u0440\u043e\u0435\u043d\u043d\u044b\u0439 \u0441\u043a\u0430\u043d\u0435\u0440 Smart AST \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438 \u0440\u0430\u0441\u043f\u043e\u0437\u043d\u0430\u0435\u0442 \u0442\u044f\u0436\u0435\u043b\u044b\u0435 \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0438 \u0430\u043d\u0430\u043b\u0438\u0437\u0430 \u0434\u0430\u043d\u043d\u044b\u0445 (NumPy, Pandas) \u0438 \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u044f\u0435\u0442 \u0438\u0445 \u0432 \u043a\u043b\u0430\u0441\u0442\u0435\u0440 Serverless Edge WASM, \u0441\u043e\u0445\u0440\u0430\u043d\u044f\u044f \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u0443\u044e \u043f\u0435\u0441\u043e\u0447\u043d\u0438\u0446\u0443 \u0441\u0432\u0435\u0440\u0445\u043b\u0435\u0433\u043a\u043e\u0439.",
+    "faq3_q": "\u041a\u0430\u043a \u0437\u0430\u0449\u0438\u0442\u0430 30 \u041c\u0411 Anti-OOM \u043f\u0440\u0435\u0434\u043e\u0442\u0432\u0440\u0430\u0449\u0430\u0435\u0442 \u0432\u044b\u043b\u0435\u0442\u044b \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f \u043d\u0430 Android?",
+    "faq3_a": "\u0414\u0432\u0438\u0436\u043e\u043a Memory Guard \u0436\u0435\u0441\u0442\u043a\u043e \u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0438\u0432\u0430\u0435\u0442 \u043f\u043e\u0442\u0440\u0435\u0431\u043b\u0435\u043d\u0438\u0435 \u041e\u0417\u0423 \u043d\u0430 \u0443\u0440\u043e\u0432\u043d\u0435 30 \u041c\u0411 \u0434\u043b\u044f \u0437\u0430\u0449\u0438\u0442\u044b \u043e\u0442 Android LMK. \u0412\u044c\u044e\u043f\u043e\u0440\u0442 O(1) \u043e\u0442\u043a\u0440\u044b\u0432\u0430\u0435\u0442 150 000 \u0441\u0442\u0440\u043e\u043a \u043f\u0440\u0438 120 \u0413\u0446, \u0430 \u0431\u0443\u0444\u0435\u0440 C/C++ \u043d\u0430 150 000 \u0441\u0438\u043c\u0432\u043e\u043b\u043e\u0432 \u0431\u043b\u043e\u043a\u0438\u0440\u0443\u0435\u0442 \u0431\u0435\u0441\u043a\u043e\u043d\u0435\u0447\u043d\u044b\u0435 \u0446\u0438\u043a\u043b\u044b.",
+    "faq4_q": "\u041f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442 \u043b\u0438 SuperCode IDE \u0432\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u044b\u0439 Git, \u0442\u0435\u0440\u043c\u0438\u043d\u0430\u043b Linux Bash \u0438 \u0434\u0435\u043f\u043b\u043e\u0439 \u043f\u043e SFTP?",
+    "faq4_a": "\u0414\u0430, \u0438\u043d\u0442\u0435\u0433\u0440\u0438\u0440\u043e\u0432\u0430\u043d\u044b \u0438\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u044b DevOps: \u0432\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u044b\u0439 Git (Clone, Commit, Push, Pull), \u043f\u0440\u044f\u043c\u0430\u044f \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0430\u0446\u0438\u044f \u0441 \u0441\u0435\u0440\u0432\u0435\u0440\u0430\u043c\u0438 SFTP/FTP \u0438 \u043d\u0430\u0442\u0438\u0432\u043d\u044b\u0439 \u0442\u0435\u0440\u043c\u0438\u043d\u0430\u043b Linux Shell (Bash/Sh).",
+    "bottom_sub": "4.92 \u2605 \u041e\u0444\u043b\u0430\u0439\u043d Python / C++20 / Java IDE",
+    "bottom_cta": "\u0423\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c \u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u043e",
+    "modal_title": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u044f\u0437\u044b\u043a (Select Language)"
+  }
+};
+
+  /* Merge COMMON_UI keys into I18N_EXTENDED immediately */
+  for (var extLang in window.I18N_EXTENDED) {
+    if (Object.prototype.hasOwnProperty.call(window.I18N_EXTENDED, extLang) && COMMON_UI[extLang]) {
+      var targetObj = window.I18N_EXTENDED[extLang];
+      var srcCommon = COMMON_UI[extLang];
+      for (var ck in srcCommon) {
+        if (Object.prototype.hasOwnProperty.call(srcCommon, ck) && !targetObj[ck]) {
+          targetObj[ck] = srcCommon[ck];
+        }
+      }
+    }
+  }
+
+  /* ==================== 3. 6 STANDALONE SUBPAGES x 10 LANGUAGES DICTIONARY ==================== */
+  window.SUPERCODE_PAGE_I18N = {
+  "code_editor": {
+    "en": {
+      "metaTitle": "Code Editor for Android \u2014 Offline AST & 120Hz IDE | SuperCode",
+      "metaDesc": "Experience the fastest offline Code Editor for Android. SuperCode combines a WebAssembly Tree-Sitter AST syntax engine, 30MB Anti-OOM memory shield, 150,000-line 120Hz viewport, 34 character encodings, and native Python/C++/Java compilers.",
+      "hero_tag": "INDUSTRIAL MOBILE CODE EDITOR",
+      "hero_h1": "The Ultimate <span class=\"text-gradient\">Code Editor</span> for Android",
+      "hero_desc": "Engineered for zero-compromise development. SuperCode combines a <strong>120Hz WebAssembly Tree-Sitter AST Code Editor</strong> with a strict <strong>30MB Anti-OOM Memory Shield</strong>. Edit massive 150,000-line files effortlessly, enjoy sub-millisecond smart completion, and compile code 100% offline.",
+      "f1_title": "WebAssembly Tree-Sitter AST Core",
+      "f1_desc": "Say goodbye to laggy regex highlighters. SuperCode runs a WebAssembly Tree-Sitter Abstract Syntax Tree (AST) engine in parallel with TextMate grammars. Enjoy sub-millisecond semantic coloring, context-aware auto-completion, and real-time syntax error radar.",
+      "f2_title": "30MB Anti-OOM &amp; 150K-Line Viewport",
+      "f2_desc": "Open massive logs and datasets without crashing your phone. Active cache evacuation locks RAM footprint at 30MB while our O(1) 120Hz viewport and Mega-File Paging System seamlessly stream files over 30MB in 10,000,000-character chunks.",
+      "f3_title": "34 Encodings &amp; Smart Sniffing",
+      "f3_desc": "Never see garbled text again. Our holographic encoding detector automatically identifies and converts across 34 international character sets (UTF-8, UTF-16, GB18030, GBK, Big5, Shift_JIS), paired with heuristic language detection across 20+ file extensions.",
+      "f4_title": "51 AI Templates &amp; Geek Peripherals",
+      "f4_desc": "Designed specifically for touchscreens. Features a 24-key customizable symbol bar, 4 language-locked quick keyboards, bracket smart guides, typewriter particle effects, and an offline AI assistant pre-loaded with 51 multi-file project templates.",
+      "cta_h2": "Upgrade Your Mobile Code Editor Today",
+      "cta_desc": "Join thousands of developers writing, analyzing, and compiling code offline on Android."
+    },
+    "zh": {
+      "metaTitle": "Android \u79bb\u7ebf Code Editor (\u4ee3\u7801\u7f16\u8f91\u5668) \u2014 AST \u8bed\u6cd5\u6811\u4e0e 120Hz \u7f16\u7a0b\u8f6f\u4ef6 | SuperCode",
+      "metaDesc": "\u4f53\u9a8c\u6781\u901f Android \u79bb\u7ebf Code Editor (\u4ee3\u7801\u7f16\u8f91\u5668)\u3002SuperCode \u878d\u5408 WebAssembly Tree-Sitter AST \u8bed\u6cd5\u5f15\u64ce\u300130MB \u9632 OOM \u5185\u5b58\u62a4\u76fe\u3001150,000 \u884c 120Hz \u89c6\u53e3\u300134 \u79cd\u5b57\u7b26\u7f16\u7801\u81ea\u52a8\u8bc6\u522b\u4ee5\u53ca Python/C++/Java \u539f\u751f\u7f16\u8bd1\u5668\u3002",
+      "hero_tag": "\u5de5\u4e1a\u7ea7\u79fb\u52a8 CODE EDITOR \u00b7 \u4ee3\u7801\u7f16\u8f91\u5668",
+      "hero_h1": "\u9762\u5411 Android \u7684\u7ec8\u6781 <span class=\"text-gradient\">Code Editor \u4ee3\u7801\u7f16\u8f91\u5668</span>",
+      "hero_desc": "\u4e13\u4e3a\u96f6\u59a5\u534f\u79fb\u52a8\u7814\u53d1\u6253\u9020\u3002SuperCode \u5c06 <strong>120Hz WebAssembly Tree-Sitter AST \u4ee3\u7801\u7f16\u8f91\u5668</strong> \u4e0e\u4e25\u82db\u7684 <strong>30MB Anti-OOM \u5185\u5b58\u62a4\u76fe</strong> \u878d\u4e3a\u4e00\u4f53\u3002\u8f7b\u677e\u7f16\u8f91 150,000 \u884c\u5de8\u578b\u6587\u4ef6\uff0c\u4eab\u53d7\u4e9a\u6beb\u79d2\u7ea7\u667a\u80fd\u4ee3\u7801\u8865\u5168\u4e0e 100% \u79bb\u7ebf\u7f16\u8bd1\u3002",
+      "f1_title": "WebAssembly Tree-Sitter AST \u53cc\u64ce\u9ad8\u4eae",
+      "f1_desc": "\u544a\u522b\u5361\u987f\u7684\u6b63\u5219\u9ad8\u4eae\u3002SuperCode \u5e76\u884c\u8fd0\u884c WebAssembly Tree-Sitter \u62bd\u8c61\u8bed\u6cd5\u6811 (AST) \u5f15\u64ce\u4e0e TextMate \u8bcd\u6cd5\u8bed\u6cd5\uff0c\u63d0\u4f9b\u4e9a\u6beb\u79d2\u7ea7\u8bed\u4e49\u7740\u8272\u3001\u4e0a\u4e0b\u6587\u611f\u77e5\u81ea\u52a8\u8865\u5168\u4e0e\u5b9e\u65f6\u8bed\u6cd5\u9519\u8bef\u96f7\u8fbe\u3002",
+      "f2_title": "30MB Anti-OOM \u62a4\u76fe\u4e0e 150K \u884c 120Hz \u89c6\u53e3",
+      "f2_desc": "\u6253\u5f00\u5de8\u578b\u65e5\u5fd7\u4e0e\u6570\u636e\u96c6\u7edd\u4e0d\u95ea\u9000\u3002\u4e3b\u52a8\u7f13\u5b58\u9a71\u9010\u5c06 RAM \u5360\u7528\u9501\u5b9a\u5728 30MB \u4ee5\u5185\uff0cO(1) 120Hz \u89c6\u53e3\u914d\u5408\u5de8\u578b\u6587\u4ef6\u5206\u9875\u6d41\u5f0f\u5f15\u64ce\uff0c\u4ee5\u4e00\u5343\u4e07\u5b57\u7b26\u5206\u5757\u4e1d\u6ed1\u52a0\u8f7d 30MB+ \u8d85\u5927\u6587\u4ef6\u3002",
+      "f3_title": "34 \u79cd\u5b57\u7b26\u7f16\u7801\u55c5\u63a2\u4e0e\u539f\u751f PDF \u5bfc\u51fa",
+      "f3_desc": "\u5f7b\u5e95\u544a\u522b\u4e71\u7801\u3002\u5168\u606f\u7f16\u7801\u63a2\u6d4b\u5668\u81ea\u52a8\u8bc6\u522b\u5e76\u8f6c\u6362 34 \u79cd\u56fd\u9645\u5b57\u7b26\u96c6\uff08UTF-8\u3001UTF-16\u3001GB18030\u3001GBK\u3001Big5\u3001Shift_JIS \u7b49\uff09\uff0c\u5e76\u652f\u6301 20+ \u79cd\u540e\u7f00\u542f\u53d1\u5f0f\u8bed\u8a00\u8bc6\u522b\u3002",
+      "f4_title": "51 \u5957 AI \u591a\u6587\u4ef6\u6a21\u677f\u4e0e\u6781\u5ba2\u89e6\u63a7\u5916\u8bbe",
+      "f4_desc": "\u4e13\u4e3a\u89e6\u5c4f\u7f16\u7a0b\u4f18\u5316\uff1a\u914d\u5907 24 \u952e\u81ea\u5b9a\u4e49\u7b26\u53f7\u680f\u30014 \u5957\u8bed\u8a00\u9501\u5b9a\u5feb\u6377\u952e\u76d8\u3001\u5f69\u8679\u62ec\u53f7\u5f15\u5bfc\u7ebf\u3001\u6253\u5b57\u673a\u7c92\u5b50\u7279\u6548\uff0c\u4ee5\u53ca\u9884\u7f6e 51 \u5957\u591a\u6587\u4ef6\u5de5\u7a0b\u6a21\u677f\u7684\u79bb\u7ebf AI \u7f16\u7a0b\u52a9\u624b\u3002",
+      "cta_h2": "\u7acb\u5373\u5347\u7ea7\u4f60\u7684\u79fb\u52a8 Code Editor \u4ee3\u7801\u7f16\u8f91\u5668",
+      "cta_desc": "\u52a0\u5165\u6210\u5343\u4e0a\u4e07\u540d\u5f00\u53d1\u8005\u7684\u884c\u5217\uff0c\u5728 Android \u4e0a\u79bb\u7ebf\u7f16\u5199\u3001\u5206\u6790\u5e76\u7f16\u8bd1\u4e13\u4e1a\u4ee3\u7801\u3002"
+    },
+    "es": {
+      "metaTitle": "Code Editor (Editor de C\u00f3digo) para Android \u2014 IDE Offline AST a 120Hz | SuperCode",
+      "metaDesc": "Descubre el Code Editor (Editor de C\u00f3digo) offline m\u00e1s r\u00e1pido para Android. SuperCode combina motor WebAssembly Tree-Sitter AST, escudo Anti-OOM de 30MB, 150,000 l\u00edneas a 120Hz, 34 codificaciones y compiladores Python/C++/Java.",
+      "hero_tag": "CODE EDITOR M\u00d3VIL INDUSTRIAL",
+      "hero_h1": "El <span class=\"text-gradient\">Code Editor (Editor de C\u00f3digo)</span> Definitivo para Android",
+      "hero_desc": "Dise\u00f1ado para el desarrollo profesional sin compromisos. SuperCode combina un <strong>Code Editor WebAssembly Tree-Sitter AST a 120Hz</strong> con un estricto <strong>Escudo de Memoria Anti-OOM de 30MB</strong>. Edita archivos de 150,000 l\u00edneas y compila 100% offline.",
+      "f1_title": "N\u00facleo WebAssembly Tree-Sitter AST",
+      "f1_desc": "Olv\u00eddate de los resaltadores lentos. SuperCode ejecuta un motor AST en WebAssembly en paralelo con gram\u00e1ticas TextMate, logrando coloreado sem\u00e1ntico y autocompletado inteligente en menos de 1 milisegundo.",
+      "f2_title": "Escudo Anti-OOM 30MB y Viewport de 150K L\u00edneas",
+      "f2_desc": "Abre registros masivos sin bloquear tu tel\u00e9fono. La evacuaci\u00f3n activa de cach\u00e9 fija la RAM en 30MB mientras el viewport O(1) a 120Hz pagina archivos de m\u00e1s de 30MB en bloques de 10 millones de caracteres.",
+      "f3_title": "34 Codificaciones y Detecci\u00f3n Inteligente",
+      "f3_desc": "Nunca m\u00e1s veas texto ilegible. Nuestro detector identifica y convierte autom\u00e1ticamente entre 34 conjuntos de caracteres (UTF-8, UTF-16, GB18030, Shift_JIS) con exportaci\u00f3n nativa a PDF.",
+      "f4_title": "51 Plantillas IA y Perif\u00e9ricos T\u00e1ctiles",
+      "f4_desc": "Creado para pantallas t\u00e1ctiles: barra personalizable de 24 s\u00edmbolos, 4 teclados r\u00e1pidos por lenguaje, gu\u00edas de corchetes, efectos de part\u00edculas y asistente IA offline con 51 plantillas de proyectos.",
+      "cta_h2": "Actualiza tu Code Editor M\u00f3vil Hoy",
+      "cta_desc": "\u00danete a miles de desarrolladores que programan, analizan y compilan c\u00f3digo offline en Android."
+    },
+    "ja": {
+      "metaTitle": "Android \u5411\u3051 Code Editor (\u30b3\u30fc\u30c9\u30a8\u30c7\u30a3\u30bf) \u2014 \u30aa\u30d5\u30e9\u30a4\u30f3 AST & 120Hz IDE | SuperCode",
+      "metaDesc": "Android \u6700\u901f\u306e\u30aa\u30d5\u30e9\u30a4\u30f3 Code Editor (\u30b3\u30fc\u30c9\u30a8\u30c7\u30a3\u30bf) \u3092\u4f53\u9a13\u3002WebAssembly Tree-Sitter AST \u30a8\u30f3\u30b8\u30f3\u300130MB Anti-OOM \u4fdd\u8b77\u3001150,000\u884c 120Hz \u30d3\u30e5\u30fc\u30dd\u30fc\u30c8\u300134\u7a2e\u985e\u306e\u6587\u5b57\u30b3\u30fc\u30c9\u81ea\u52d5\u5224\u5225\u3001Python/C++/Java \u30b3\u30f3\u30d1\u30a4\u30e9\u3092\u7d71\u5408\u3002",
+      "hero_tag": "\u30d7\u30ed\u4ed5\u69d8\u30e2\u30d0\u30a4\u30eb CODE EDITOR \u00b7 \u30b3\u30fc\u30c9\u30a8\u30c7\u30a3\u30bf",
+      "hero_h1": "Android \u5411\u3051\u7a76\u6975\u306e <span class=\"text-gradient\">Code Editor (\u30b3\u30fc\u30c9\u30a8\u30c7\u30a3\u30bf)</span>",
+      "hero_desc": "\u59a5\u5354\u306e\u306a\u3044\u30e2\u30d0\u30a4\u30eb\u958b\u767a\u306e\u305f\u3081\u306b\u8a2d\u8a08\u3002<strong>120Hz WebAssembly Tree-Sitter AST \u30b3\u30fc\u30c9\u30a8\u30c7\u30a3\u30bf</strong>\u3068\u53b3\u683c\u306a <strong>30MB Anti-OOM \u30e1\u30e2\u30ea\u4fdd\u8b77</strong>\u3092\u878d\u5408\u300215\u4e07\u884c\u306e\u5de8\u5927\u30d5\u30a1\u30a4\u30eb\u7de8\u96c6\u30011\u30df\u30ea\u79d2\u672a\u6e80\u306e\u88dc\u5b8c\u3001100%\u30aa\u30d5\u30e9\u30a4\u30f3\u30b3\u30f3\u30d1\u30a4\u30eb\u3092\u5b9f\u73fe\u3002",
+      "f1_title": "WebAssembly Tree-Sitter AST \u30b3\u30a2",
+      "f1_desc": "\u9045\u5ef6\u306e\u3042\u308b\u6b63\u898f\u8868\u73fe\u30cf\u30a4\u30e9\u30a4\u30c8\u3068\u306f\u7121\u7e01\u3067\u3059\u3002Tree-Sitter AST \u3068 TextMate \u6587\u6cd5\u3092\u4e26\u5217\u5b9f\u884c\u3057\u30011\u30df\u30ea\u79d2\u672a\u6e80\u306e\u30bb\u30de\u30f3\u30c6\u30a3\u30c3\u30af\u8272\u5206\u3051\u3068\u6587\u8108\u8a8d\u8b58\u30b3\u30fc\u30c9\u88dc\u5b8c\u3092\u63d0\u4f9b\u3057\u307e\u3059\u3002",
+      "f2_title": "30MB Anti-OOM & 150K\u884c 120Hz \u30d3\u30e5\u30fc\u30dd\u30fc\u30c8",
+      "f2_desc": "\u5de8\u5927\u30ed\u30b0\u3092\u958b\u3044\u3066\u3082\u30af\u30e9\u30c3\u30b7\u30e5\u3057\u307e\u305b\u3093\u3002RAM \u4f7f\u7528\u91cf\u3092 30MB \u306b\u30ed\u30c3\u30af\u3057\u3001O(1) 120Hz \u30d3\u30e5\u30fc\u30dd\u30fc\u30c8\u3068\u30e1\u30ac\u30d5\u30a1\u30a4\u30eb\u30da\u30fc\u30b8\u30f3\u30b0\u6a5f\u69cb\u306b\u3088\u308a 30MB \u8d85\u306e\u30d5\u30a1\u30a4\u30eb\u3092\u9ad8\u901f\u30b9\u30c8\u30ea\u30fc\u30df\u30f3\u30b0\u8868\u793a\u3057\u307e\u3059\u3002",
+      "f3_title": "34\u7a2e\u985e\u306e\u6587\u5b57\u30b3\u30fc\u30c9\u81ea\u52d5\u5224\u5225 (Shift_JIS / UTF-8)",
+      "f3_desc": "\u6587\u5b57\u5316\u3051\u3092\u5b8c\u5168\u306b\u89e3\u6d88\u3002Shift_JIS\u3001EUC-JP\u3001UTF-8\u3001UTF-16\u3001GB18030 \u306a\u3069 34 \u7a2e\u985e\u306e\u56fd\u969b\u6587\u5b57\u30bb\u30c3\u30c8\u3092\u81ea\u52d5\u8b58\u5225\u30fb\u5909\u63db\u3057\u3001\u30cd\u30a4\u30c6\u30a3\u30d6 PDF \u30a8\u30af\u30b9\u30dd\u30fc\u30c8\u306b\u3082\u5bfe\u5fdc\u3002",
+      "f4_title": "51\u7a2e\u985e\u306e AI \u30c6\u30f3\u30d7\u30ec\u30fc\u30c8 & \u5c02\u7528\u30ad\u30fc\u30d0\u30fc",
+      "f4_desc": "\u30bf\u30c3\u30c1\u753b\u9762\u5411\u3051\u306b\u6700\u9069\u5316\u3055\u308c\u305f 24 \u30ad\u30fc\u8a18\u53f7\u30d0\u30fc\u30014\u7a2e\u306e\u8a00\u8a9e\u5225\u30af\u30a4\u30c3\u30af\u30ad\u30fc\u30dc\u30fc\u30c9\u3001\u62ec\u5f27\u30ac\u30a4\u30c9\u3001\u30bf\u30a4\u30d7\u30e9\u30a4\u30bf\u30fc\u6f14\u51fa\u300151\u500b\u306e\u30de\u30eb\u30c1\u30d5\u30a1\u30a4\u30eb\u30c6\u30f3\u30d7\u30ec\u30fc\u30c8\u5185\u8535\u30aa\u30d5\u30e9\u30a4\u30f3 AI \u3092\u642d\u8f09\u3002",
+      "cta_h2": "\u30e2\u30d0\u30a4\u30eb Code Editor \u3092\u4eca\u3059\u3050\u30a2\u30c3\u30d7\u30b0\u30ec\u30fc\u30c9",
+      "cta_desc": "\u4f55\u5343\u4eba\u3082\u306e\u958b\u767a\u8005\u3068\u5171\u306b\u3001Android \u3067\u30aa\u30d5\u30e9\u30a4\u30f3\u306e\u30b3\u30fc\u30c9\u8a18\u8ff0\u30fb\u89e3\u6790\u30fb\u30b3\u30f3\u30d1\u30a4\u30eb\u3092\u59cb\u3081\u307e\u3057\u3087\u3046\u3002"
+    },
+    "de": {
+      "metaTitle": "Code Editor (Code-Editor) f\u00fcr Android \u2014 Offline AST & 120Hz IDE | SuperCode",
+      "metaDesc": "Erleben Sie den schnellsten Offline Code Editor f\u00fcr Android. SuperCode kombiniert eine WebAssembly Tree-Sitter AST-Engine, 30MB Anti-OOM-Schutz, 150.000-Zeilen 120Hz Viewport, 34 Zeichenkodierungen und native Python/C++/Java-Compiler.",
+      "hero_tag": "INDUSTRIELLER MOBILER CODE EDITOR",
+      "hero_h1": "Der Ultimative <span class=\"text-gradient\">Code Editor</span> f\u00fcr Android",
+      "hero_desc": "Entwickelt f\u00fcr kompromisslose Programmierung. SuperCode vereint einen <strong>120Hz WebAssembly Tree-Sitter AST Code Editor</strong> mit einem strikten <strong>30MB Anti-OOM-Speicherschutz</strong>. Bearbeiten Sie 150.000 Zeilen verz\u00f6gerungsfrei und kompilieren Sie 100% offline.",
+      "f1_title": "WebAssembly Tree-Sitter AST-Kern",
+      "f1_desc": "Schluss mit tr\u00e4gen Regex-Highlightern. SuperCode f\u00fchrt eine WebAssembly Tree-Sitter AST-Engine parallel zu TextMate-Grammatiken f\u00fcr Sub-Millisekunden-Auto-Vervollst\u00e4ndigung aus.",
+      "f2_title": "30MB Anti-OOM & 150K-Zeilen Viewport",
+      "f2_desc": "\u00d6ffnen Sie riesige Logs ohne Absturz. Aktive Cache-R\u00e4umung begrenzt den RAM auf 30MB, w\u00e4hrend der O(1) 120Hz Viewport Dateien \u00fcber 30MB nahtlos in 10-Millionen-Zeichen-Bl\u00f6cken streamt.",
+      "f3_title": "34 Kodierungen & Intelligente Erkennung",
+      "f3_desc": "Nie wieder Zeichensalat. Unser Detektor erkennt und konvertiert automatisch 34 Zeichens\u00e4tze (UTF-8, UTF-16, ISO-8859, Shift_JIS, GB18030) inklusive nativem PDF-Export.",
+      "f4_title": "51 KI-Vorlagen & Touchscreen-Peripherie",
+      "f4_desc": "Ma\u00dfgeschneidert f\u00fcr Touchscreens: Anpassbare 24-Tasten-Symbolleiste, 4 Schnell-Tastaturen, Klammer-Guides, Partikeleffekte und ein Offline-KI-Assistent mit 51 Projektvorlagen.",
+      "cta_h2": "Aktualisieren Sie Ihren Mobilen Code Editor Heute",
+      "cta_desc": "Schlie\u00dfen Sie sich tausenden Entwicklern an, die auf Android offline programmieren und kompilieren."
+    },
+    "fr": {
+      "metaTitle": "Code Editor (\u00c9diteur de Code) pour Android \u2014 IDE Hors Ligne AST 120Hz | SuperCode",
+      "metaDesc": "D\u00e9couvrez le Code Editor (\u00c9diteur de Code) hors ligne le plus rapide sur Android. Moteur WebAssembly Tree-Sitter AST, bouclier Anti-OOM 30 Mo, viewport 150 000 lignes \u00e0 120Hz, 34 encodages et compilateurs Python/C++/Java.",
+      "hero_tag": "CODE EDITOR MOBILE INDUSTRIEL",
+      "hero_h1": "L'Ultime <span class=\"text-gradient\">Code Editor (\u00c9diteur de Code)</span> pour Android",
+      "hero_desc": "Con\u00e7u pour un d\u00e9veloppement sans compromis. SuperCode associe un <strong>Code Editor WebAssembly Tree-Sitter AST \u00e0 120Hz</strong> \u00e0 un <strong>Bouclier M\u00e9moire Anti-OOM de 30 Mo</strong>. \u00c9ditez 150 000 lignes avec fluidit\u00e9 et compilez 100% hors ligne.",
+      "f1_title": "C\u0153ur WebAssembly Tree-Sitter AST",
+      "f1_desc": "Fini les surligneurs regex lents. SuperCode ex\u00e9cute un moteur AST WebAssembly en parall\u00e8le avec les grammaires TextMate pour une coloration s\u00e9mantique et une compl\u00e9tion en moins d'une milliseconde.",
+      "f2_title": "Anti-OOM 30 Mo & Viewport 150K Lignes",
+      "f2_desc": "Ouvrez des journaux massifs sans planter votre t\u00e9l\u00e9phone. La RAM est verrouill\u00e9e \u00e0 30 Mo tandis que notre viewport O(1) \u00e0 120Hz pagine les fichiers de plus de 30 Mo par blocs de 10 millions de caract\u00e8res.",
+      "f3_title": "34 Encodages & D\u00e9tection Intelligente",
+      "f3_desc": "Dites adieu aux caract\u00e8res corrompus. D\u00e9tection et conversion automatiques parmi 34 jeux de caract\u00e8res internationaux (UTF-8, UTF-16, GB18030, Shift_JIS) avec export PDF natif.",
+      "f4_title": "51 Mod\u00e8les IA & P\u00e9riph\u00e9riques Tactiles",
+      "f4_desc": "Pens\u00e9 pour le tactile : barre de 24 symboles personnalisable, 4 claviers rapides d\u00e9di\u00e9s, guides de parenth\u00e8ses, effets de particules et assistant IA hors ligne avec 51 mod\u00e8les multi-fichiers.",
+      "cta_h2": "Passez au Code Editor Mobile Sup\u00e9rieur Aujourd'hui",
+      "cta_desc": "Rejoignez des milliers de d\u00e9veloppeurs qui \u00e9crivent, analysent et compilent du code hors ligne sur Android."
+    },
+    "ko": {
+      "metaTitle": "Android\uc6a9 Code Editor (\ucf54\ub4dc \uc5d0\ub514\ud130) \u2014 \uc624\ud504\ub77c\uc778 AST & 120Hz IDE | SuperCode",
+      "metaDesc": "Android\uc5d0\uc11c \uac00\uc7a5 \ube60\ub978 \uc624\ud504\ub77c\uc778 Code Editor (\ucf54\ub4dc \uc5d0\ub514\ud130)\ub97c \uacbd\ud5d8\ud558\uc138\uc694. WebAssembly Tree-Sitter AST \uad6c\ubb38 \uc5d4\uc9c4, 30MB Anti-OOM \uba54\ubaa8\ub9ac \ubcf4\ud638, 150,000\uc904 120Hz \ubdf0\ud3ec\ud2b8, 34\uac1c \uc778\ucf54\ub529 \ubc0f Python/C++/Java \ucef4\ud30c\uc77c\ub7ec \ud0d1\uc7ac.",
+      "hero_tag": "\uc0b0\uc5c5\uc6a9 \ubaa8\ubc14\uc77c CODE EDITOR \u00b7 \ucf54\ub4dc \uc5d0\ub514\ud130",
+      "hero_h1": "Android\ub97c \uc704\ud55c \uad81\uadf9\uc758 <span class=\"text-gradient\">Code Editor (\ucf54\ub4dc \uc5d0\ub514\ud130)</span>",
+      "hero_desc": "\ud0c0\ud611 \uc5c6\ub294 \ubaa8\ubc14\uc77c \uac1c\ubc1c\uc744 \uc704\ud574 \uc124\uacc4\ub418\uc5c8\uc2b5\ub2c8\ub2e4. <strong>120Hz WebAssembly Tree-Sitter AST \ucf54\ub4dc \uc5d0\ub514\ud130</strong>\uc640 \uac15\ub825\ud55c <strong>30MB Anti-OOM \uba54\ubaa8\ub9ac \ubcf4\ud638</strong>\ub97c \uacb0\ud569\ud558\uc5ec 150,000\uc904\uc758 \ub300\uc6a9\ub7c9 \ud30c\uc77c \ud3b8\uc9d1\uacfc 100% \uc624\ud504\ub77c\uc778 \ucef4\ud30c\uc77c\uc744 \uc9c0\uc6d0\ud569\ub2c8\ub2e4.",
+      "f1_title": "WebAssembly Tree-Sitter AST \ucf54\uc5b4",
+      "f1_desc": "\ub290\ub9b0 \uc815\uaddc\uc2dd \ud558\uc774\ub77c\uc774\ud130\uc640 \uc791\ubcc4\ud558\uc138\uc694. Tree-Sitter AST \uc5d4\uc9c4\uacfc TextMate \ubb38\ubc95\uc744 \ubcd1\ub82c \uc2e4\ud589\ud558\uc5ec 1\ubc00\ub9ac\ucd08 \ubbf8\ub9cc\uc758 \uad6c\ubb38 \uac15\uc870, \ucee8\ud14d\uc2a4\ud2b8 \uc790\ub3d9 \uc644\uc131 \ubc0f \uc2e4\uc2dc\uac04 \uad6c\ubb38 \uc624\ub958 \ub808\uc774\ub354\ub97c \uc81c\uacf5\ud569\ub2c8\ub2e4.",
+      "f2_title": "30MB Anti-OOM \ubc0f 150K \ub77c\uc778 \ubdf0\ud3ec\ud2b8",
+      "f2_desc": "\uc2a4\ub9c8\ud2b8\ud3f0 \uba48\ucda4 \uc5c6\uc774 \ub300\uc6a9\ub7c9 \ub85c\uadf8\ub97c \uc5ec\uc138\uc694. RAM \uc810\uc720\uc728\uc744 30MB\ub85c \uace0\uc815\ud558\uace0 O(1) 120Hz \ubdf0\ud3ec\ud2b8\uc640 \uba54\uac00\ud30c\uc77c \ud398\uc774\uc9d5 \uc2dc\uc2a4\ud15c\uc73c\ub85c 30MB \uc774\uc0c1\uc758 \ud30c\uc77c\uc744 1,000\ub9cc \uae00\uc790 \ub2e8\uc704\ub85c \uc2a4\ud2b8\ub9ac\ubc0d\ud569\ub2c8\ub2e4.",
+      "f3_title": "34\uac1c \ubb38\uc790 \uc778\ucf54\ub529 \uc790\ub3d9 \uac10\uc9c0 \ubc0f \ubcc0\ud658",
+      "f3_desc": "\uae00\uc790 \uae68\uc9d0 \ud604\uc0c1\uc744 \uc644\ubcbd\ud788 \ud574\uacb0\ud569\ub2c8\ub2e4. 34\uac1c \uad6d\uc81c \ubb38\uc790\uc14b(UTF-8, EUC-KR, UTF-16, GB18030, Shift_JIS \ub4f1)\uc744 \uc790\ub3d9 \uc2dd\ubcc4 \ubc0f \ubcc0\ud658\ud558\uba70 \ub124\uc774\ud2f0\ube0c PDF \ub0b4\ubcf4\ub0b4\uae30\ub97c \uc9c0\uc6d0\ud569\ub2c8\ub2e4.",
+      "f4_title": "51\uac1c AI \ud15c\ud50c\ub9bf \ubc0f \ud130\uce58 \ucf54\ub529 \uc8fc\ubcc0\uae30\uae30",
+      "f4_desc": "\ud130\uce58\uc2a4\ud06c\ub9b0\uc5d0 \ucd5c\uc801\ud654\ub41c 24\ud0a4 \uc0ac\uc6a9\uc790 \uc9c0\uc815 \uae30\ud638 \ubc14, 4\uac00\uc9c0 \uc5b8\uc5b4 \uace0\uc815 \ud035 \ud0a4\ubcf4\ub4dc, \uad04\ud638 \uc2a4\ub9c8\ud2b8 \uac00\uc774\ub4dc, \ud0c0\uc774\ud504\ub77c\uc774\ud130 \ud30c\ud2f0\ud074 \ud6a8\uacfc \ubc0f 51\uac1c \ub2e4\uc911 \ud30c\uc77c \ud15c\ud50c\ub9bf\uc774 \ub0b4\uc7a5\ub41c \uc624\ud504\ub77c\uc778 AI\ub97c \uc81c\uacf5\ud569\ub2c8\ub2e4.",
+      "cta_h2": "\uc9c0\uae08 \ubaa8\ubc14\uc77c Code Editor\ub97c \uc5c5\uadf8\ub808\uc774\ub4dc\ud558\uc138\uc694",
+      "cta_desc": "\uc218\ucc9c \uba85\uc758 \uac1c\ubc1c\uc790\uc640 \ud568\uaed8 Android\uc5d0\uc11c \uc624\ud504\ub77c\uc778\uc73c\ub85c \ucf54\ub4dc\ub97c \uc791\uc131, \ubd84\uc11d \ubc0f \ucef4\ud30c\uc77c\ud558\uc138\uc694."
+    },
+    "pt": {
+      "metaTitle": "Code Editor (Editor de C\u00f3digo) para Android \u2014 IDE Offline AST 120Hz | SuperCode",
+      "metaDesc": "Experimente o Code Editor (Editor de C\u00f3digo) offline mais r\u00e1pido para Android. O SuperCode combina motor WebAssembly Tree-Sitter AST, escudo Anti-OOM de 30MB, 150.000 linhas a 120Hz, 34 codifica\u00e7\u00f5es e compiladores Python/C++/Java.",
+      "hero_tag": "CODE EDITOR M\u00d3VEL INDUSTRIAL",
+      "hero_h1": "O <span class=\"text-gradient\">Code Editor (Editor de C\u00f3digo)</span> Definitivo para Android",
+      "hero_desc": "Projetado para desenvolvimento sem concess\u00f5es. O SuperCode une um <strong>Code Editor WebAssembly Tree-Sitter AST a 120Hz</strong> com um rigoroso <strong>Escudo de Mem\u00f3ria Anti-OOM de 30MB</strong>. Edite arquivos de 150.000 linhas e compile 100% offline.",
+      "f1_title": "N\u00facleo WebAssembly Tree-Sitter AST",
+      "f1_desc": "Diga adeus aos real\u00e7adores lentos. O SuperCode executa um motor AST em WebAssembly em paralelo com gram\u00e1ticas TextMate, oferecendo colora\u00e7\u00e3o sem\u00e2ntica e autocompletar em menos de 1ms.",
+      "f2_title": "Escudo Anti-OOM 30MB e Viewport de 150K Linhas",
+      "f2_desc": "Abra logs gigantes sem travar seu celular. A evacua\u00e7\u00e3o ativa de cache trava a RAM em 30MB enquanto o viewport O(1) a 120Hz pagina arquivos acima de 30MB em blocos de 10 milh\u00f5es de caracteres.",
+      "f3_title": "34 Codifica\u00e7\u00f5es e Detec\u00e7\u00e3o Inteligente",
+      "f3_desc": "Nunca mais veja texto corrompido. Nosso detector identifica e converte automaticamente entre 34 conjuntos de caracteres (UTF-8, UTF-16, GB18030, Shift_JIS) com exporta\u00e7\u00e3o nativa para PDF.",
+      "f4_title": "51 Templates IA e Perif\u00e9ricos Touch",
+      "f4_desc": "Feito para telas sens\u00edveis ao toque: barra personaliz\u00e1vel de 24 s\u00edmbolos, 4 teclados r\u00e1pidos por linguagem, guias de colchetes, efeitos de part\u00edculas e assistente IA offline com 51 modelos.",
+      "cta_h2": "Atualize Seu Code Editor M\u00f3vel Hoje",
+      "cta_desc": "Junte-se a milhares de desenvolvedores escrevendo, analisando e compilando c\u00f3digo offline no Android."
+    },
+    "hi": {
+      "metaTitle": "Android \u0915\u0947 \u0932\u093f\u090f Code Editor (\u0915\u094b\u0921 \u090f\u0921\u093f\u091f\u0930) \u2014 \u0911\u092b\u093c\u0932\u093e\u0907\u0928 AST \u0914\u0930 120Hz IDE | SuperCode",
+      "metaDesc": "Android \u0915\u0947 \u0932\u093f\u090f \u0938\u092c\u0938\u0947 \u0924\u0947\u091c\u093c \u0911\u092b\u093c\u0932\u093e\u0907\u0928 Code Editor (\u0915\u094b\u0921 \u090f\u0921\u093f\u091f\u0930) \u0915\u093e \u0905\u0928\u0941\u092d\u0935 \u0915\u0930\u0947\u0902\u0964 SuperCode \u092e\u0947\u0902 WebAssembly Tree-Sitter AST \u0907\u0902\u091c\u0928, 30MB \u090f\u0902\u091f\u0940-OOM \u092e\u0947\u092e\u094b\u0930\u0940 \u0936\u0940\u0932\u094d\u0921, 150,000-\u0932\u093e\u0907\u0928 120Hz \u0935\u094d\u092f\u0942\u092a\u094b\u0930\u094d\u091f, 34 \u0915\u0948\u0930\u0947\u0915\u094d\u091f\u0930 \u090f\u0928\u094d\u0915\u094b\u0921\u093f\u0902\u0917 \u0914\u0930 \u0928\u0947\u091f\u093f\u0935 Python/C++/Java \u0915\u0902\u092a\u093e\u0907\u0932\u0930 \u0936\u093e\u092e\u093f\u0932 \u0939\u0948\u0902\u0964",
+      "hero_tag": "\u0907\u0902\u0921\u0938\u094d\u091f\u094d\u0930\u093f\u092f\u0932 \u092e\u094b\u092c\u093e\u0907\u0932 CODE EDITOR \u00b7 \u0915\u094b\u0921 \u090f\u0921\u093f\u091f\u0930",
+      "hero_h1": "Android \u0915\u0947 \u0932\u093f\u090f \u0938\u0930\u094d\u0935\u0936\u094d\u0930\u0947\u0937\u094d\u0920 <span class=\"text-gradient\">Code Editor (\u0915\u094b\u0921 \u090f\u0921\u093f\u091f\u0930)</span>",
+      "hero_desc": "\u092c\u093f\u0928\u093e \u0915\u093f\u0938\u0940 \u0938\u092e\u091d\u094c\u0924\u0947 \u0915\u0947 \u0921\u0947\u0935\u0932\u092a\u092e\u0947\u0902\u091f \u0915\u0947 \u0932\u093f\u090f \u0928\u093f\u0930\u094d\u092e\u093f\u0924\u0964 SuperCode \u090f\u0915 <strong>120Hz WebAssembly Tree-Sitter AST \u0915\u094b\u0921 \u090f\u0921\u093f\u091f\u0930</strong> \u0915\u094b \u0938\u0916\u094d\u0924 <strong>30MB \u090f\u0902\u091f\u0940-OOM \u092e\u0947\u092e\u094b\u0930\u0940 \u0936\u0940\u0932\u094d\u0921</strong> \u0915\u0947 \u0938\u093e\u0925 \u091c\u094b\u0921\u093c\u0924\u093e \u0939\u0948\u0964 150,000-\u0932\u093e\u0907\u0928 \u0915\u0940 \u0935\u093f\u0936\u093e\u0932 \u092b\u093c\u093e\u0907\u0932\u0947\u0902 \u0906\u0938\u093e\u0928\u0940 \u0938\u0947 \u090f\u0921\u093f\u091f \u0915\u0930\u0947\u0902 \u0914\u0930 100% \u0911\u092b\u093c\u0932\u093e\u0907\u0928 \u0915\u094b\u0921 \u0915\u0902\u092a\u093e\u0907\u0932 \u0915\u0930\u0947\u0902\u0964",
+      "f1_title": "WebAssembly Tree-Sitter AST \u0915\u094b\u0930",
+      "f1_desc": "\u0927\u0940\u092e\u0947 \u0930\u0947\u0917\u0947\u0915\u094d\u0938 \u0939\u093e\u0907\u0932\u093e\u0907\u091f\u0930\u094d\u0938 \u0915\u094b \u0905\u0932\u0935\u093f\u0926\u093e \u0915\u0939\u0947\u0902\u0964 SuperCode \u0938\u092c-\u092e\u093f\u0932\u0940\u0938\u0947\u0915\u0902\u0921 \u0938\u093f\u092e\u0947\u0902\u091f\u093f\u0915 \u0915\u0932\u0930\u093f\u0902\u0917, \u0938\u094d\u092e\u093e\u0930\u094d\u091f \u0911\u091f\u094b-\u0915\u0902\u092a\u094d\u0932\u0940\u0936\u0928 \u0914\u0930 \u0930\u093f\u092f\u0932-\u091f\u093e\u0907\u092e \u0938\u093f\u0902\u091f\u0948\u0915\u094d\u0938 \u090f\u0930\u0930 \u0930\u0921\u093e\u0930 \u0915\u0947 \u0932\u093f\u090f TextMate \u0917\u094d\u0930\u093e\u092e\u0930 \u0915\u0947 \u0938\u092e\u093e\u0928\u093e\u0902\u0924\u0930 Tree-Sitter AST \u0907\u0902\u091c\u0928 \u091a\u0932\u093e\u0924\u093e \u0939\u0948\u0964",
+      "f2_title": "30MB \u090f\u0902\u091f\u0940-OOM \u0914\u0930 150K-\u0932\u093e\u0907\u0928 \u0935\u094d\u092f\u0942\u092a\u094b\u0930\u094d\u091f",
+      "f2_desc": "\u092b\u093c\u094b\u0928 \u0915\u094d\u0930\u0948\u0936 \u0915\u093f\u090f \u092c\u093f\u0928\u093e \u0935\u093f\u0936\u093e\u0932 \u0932\u0949\u0917 \u0916\u094b\u0932\u0947\u0902\u0964 \u0938\u0915\u094d\u0930\u093f\u092f \u0915\u0948\u0936 \u0928\u093f\u0915\u093e\u0938\u0940 RAM \u0915\u094b 30MB \u092a\u0930 \u0932\u0949\u0915 \u0915\u0930\u0924\u0940 \u0939\u0948 \u091c\u092c\u0915\u093f \u0939\u092e\u093e\u0930\u093e O(1) 120Hz \u0935\u094d\u092f\u0942\u092a\u094b\u0930\u094d\u091f 30MB+ \u092b\u093c\u093e\u0907\u0932\u094b\u0902 \u0915\u094b 1 \u0915\u0930\u094b\u0921\u093c \u0915\u0948\u0930\u0947\u0915\u094d\u091f\u0930 \u0915\u0947 \u0939\u093f\u0938\u094d\u0938\u094b\u0902 \u092e\u0947\u0902 \u0938\u0941\u091a\u093e\u0930\u0942 \u0930\u0942\u092a \u0938\u0947 \u0938\u094d\u091f\u094d\u0930\u0940\u092e \u0915\u0930\u0924\u093e \u0939\u0948\u0964",
+      "f3_title": "34 \u090f\u0928\u094d\u0915\u094b\u0921\u093f\u0902\u0917 \u0914\u0930 \u0938\u094d\u092e\u093e\u0930\u094d\u091f \u092a\u0939\u091a\u093e\u0928",
+      "f3_desc": "\u092b\u093f\u0930 \u0915\u092d\u0940 \u0916\u0930\u093e\u092c \u091f\u0947\u0915\u094d\u0938\u094d\u091f \u0928 \u0926\u0947\u0916\u0947\u0902\u0964 \u0939\u092e\u093e\u0930\u093e \u0921\u093f\u091f\u0947\u0915\u094d\u091f\u0930 34 \u0905\u0902\u0924\u0930\u0930\u093e\u0937\u094d\u091f\u094d\u0930\u0940\u092f \u0915\u0948\u0930\u0947\u0915\u094d\u091f\u0930 \u0938\u0947\u091f (UTF-8, UTF-16, GB18030, Shift_JIS) \u0915\u094b \u0938\u094d\u0935\u0924\u0903 \u092a\u0939\u091a\u093e\u0928\u0924\u093e \u0914\u0930 \u092c\u0926\u0932\u0924\u093e \u0939\u0948, \u0938\u093e\u0925 \u0939\u0940 \u0928\u0947\u091f\u093f\u0935 PDF \u090f\u0915\u094d\u0938\u092a\u094b\u0930\u094d\u091f \u0915\u0940 \u0938\u0941\u0935\u093f\u0927\u093e \u0926\u0947\u0924\u093e \u0939\u0948\u0964",
+      "f4_title": "51 AI \u091f\u0947\u092e\u094d\u092a\u0932\u0947\u091f \u0914\u0930 \u091f\u091a\u0938\u094d\u0915\u094d\u0930\u0940\u0928 \u092a\u0947\u0930\u093f\u092b\u0947\u0930\u0932\u094d\u0938",
+      "f4_desc": "\u0935\u093f\u0936\u0947\u0937 \u0930\u0942\u092a \u0938\u0947 \u091f\u091a\u0938\u094d\u0915\u094d\u0930\u0940\u0928 \u0915\u0947 \u0932\u093f\u090f \u0921\u093f\u091c\u093c\u093e\u0907\u0928 \u0915\u093f\u092f\u093e \u0917\u092f\u093e: 24-\u0915\u0940 \u0915\u0938\u094d\u091f\u092e\u093e\u0907\u091c\u093c\u0947\u092c\u0932 \u0938\u093f\u0902\u092c\u0932 \u092c\u093e\u0930, 4 \u092d\u093e\u0937\u093e-\u0932\u0949\u0915 \u0915\u094d\u0935\u093f\u0915 \u0915\u0940\u092c\u094b\u0930\u094d\u0921, \u092c\u094d\u0930\u0948\u0915\u0947\u091f \u0938\u094d\u092e\u093e\u0930\u094d\u091f \u0917\u093e\u0907\u0921, \u092a\u093e\u0930\u094d\u091f\u093f\u0915\u0932 \u0907\u092b\u0947\u0915\u094d\u091f\u094d\u0938 \u0914\u0930 51 \u092e\u0932\u094d\u091f\u0940-\u092b\u093c\u093e\u0907\u0932 \u092a\u094d\u0930\u094b\u091c\u0947\u0915\u094d\u091f \u091f\u0947\u092e\u094d\u092a\u0932\u0947\u091f\u094d\u0938 \u0915\u0947 \u0938\u093e\u0925 \u0911\u092b\u093c\u0932\u093e\u0907\u0928 AI \u0905\u0938\u093f\u0938\u094d\u091f\u0947\u0902\u091f\u0964",
+      "cta_h2": "\u0906\u091c \u0939\u0940 \u0905\u092a\u0928\u0947 \u092e\u094b\u092c\u093e\u0907\u0932 Code Editor \u0915\u094b \u0905\u092a\u0917\u094d\u0930\u0947\u0921 \u0915\u0930\u0947\u0902",
+      "cta_desc": "Android \u092a\u0930 \u0911\u092b\u093c\u0932\u093e\u0907\u0928 \u0915\u094b\u0921 \u0932\u093f\u0916\u0928\u0947, \u0935\u093f\u0936\u094d\u0932\u0947\u0937\u0923 \u0915\u0930\u0928\u0947 \u0914\u0930 \u0915\u0902\u092a\u093e\u0907\u0932 \u0915\u0930\u0928\u0947 \u0935\u093e\u0932\u0947 \u0939\u091c\u093c\u093e\u0930\u094b\u0902 \u0921\u0947\u0935\u0932\u092a\u0930\u094d\u0938 \u0938\u0947 \u091c\u0941\u0921\u093c\u0947\u0902\u0964"
+    },
+    "ru": {
+      "metaTitle": "Code Editor (\u0420\u0435\u0434\u0430\u043a\u0442\u043e\u0440 \u043a\u043e\u0434\u0430) \u0434\u043b\u044f Android \u2014 \u041e\u0444\u043b\u0430\u0439\u043d AST \u0438 120Hz IDE | SuperCode",
+      "metaDesc": "\u0421\u0430\u043c\u044b\u0439 \u0431\u044b\u0441\u0442\u0440\u044b\u0439 \u043e\u0444\u043b\u0430\u0439\u043d Code Editor (\u0420\u0435\u0434\u0430\u043a\u0442\u043e\u0440 \u043a\u043e\u0434\u0430) \u0434\u043b\u044f Android. SuperCode \u043e\u0431\u044a\u0435\u0434\u0438\u043d\u044f\u0435\u0442 \u0434\u0432\u0438\u0436\u043e\u043a WebAssembly Tree-Sitter AST, \u0437\u0430\u0449\u0438\u0442\u0443 \u043f\u0430\u043c\u044f\u0442\u0438 30 \u041c\u0411 Anti-OOM, \u0432\u044c\u044e\u043f\u043e\u0440\u0442 \u043d\u0430 150 000 \u0441\u0442\u0440\u043e\u043a \u043f\u0440\u0438 120 \u0413\u0446, 34 \u043a\u043e\u0434\u0438\u0440\u043e\u0432\u043a\u0438 \u0438 \u043a\u043e\u043c\u043f\u0438\u043b\u044f\u0442\u043e\u0440\u044b Python/C++/Java.",
+      "hero_tag": "\u041f\u0420\u041e\u041c\u042b\u0428\u041b\u0415\u041d\u041d\u042b\u0419 \u041c\u041e\u0411\u0418\u041b\u042c\u041d\u042b\u0419 CODE EDITOR",
+      "hero_h1": "\u0418\u0434\u0435\u0430\u043b\u044c\u043d\u044b\u0439 <span class=\"text-gradient\">Code Editor (\u0420\u0435\u0434\u0430\u043a\u0442\u043e\u0440 \u043a\u043e\u0434\u0430)</span> \u0434\u043b\u044f Android",
+      "hero_desc": "\u0421\u043e\u0437\u0434\u0430\u043d \u0434\u043b\u044f \u0431\u0435\u0441\u043a\u043e\u043c\u043f\u0440\u043e\u043c\u0438\u0441\u0441\u043d\u043e\u0439 \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0438. SuperCode \u0441\u043e\u0447\u0435\u0442\u0430\u0435\u0442 <strong>120 \u0413\u0446 WebAssembly Tree-Sitter AST Code Editor</strong> \u0441\u043e \u0441\u0442\u0440\u043e\u0433\u043e\u0439 <strong>\u0437\u0430\u0449\u0438\u0442\u043e\u0439 \u043f\u0430\u043c\u044f\u0442\u0438 30 \u041c\u0411 Anti-OOM</strong>. \u0420\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u0443\u0439\u0442\u0435 \u0444\u0430\u0439\u043b\u044b \u043d\u0430 150 000 \u0441\u0442\u0440\u043e\u043a \u0438 \u043a\u043e\u043c\u043f\u0438\u043b\u0438\u0440\u0443\u0439\u0442\u0435 \u043a\u043e\u0434 \u043d\u0430 100% \u043e\u0444\u043b\u0430\u0439\u043d.",
+      "f1_title": "\u042f\u0434\u0440\u043e WebAssembly Tree-Sitter AST",
+      "f1_desc": "\u0417\u0430\u0431\u0443\u0434\u044c\u0442\u0435 \u043e \u043c\u0435\u0434\u043b\u0435\u043d\u043d\u044b\u0445 \u0440\u0435\u0433\u0443\u043b\u044f\u0440\u043d\u044b\u0445 \u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u044f\u0445. \u0414\u0432\u0438\u0436\u043e\u043a Tree-Sitter AST \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442 \u043f\u0430\u0440\u0430\u043b\u043b\u0435\u043b\u044c\u043d\u043e \u0441 \u0433\u0440\u0430\u043c\u043c\u0430\u0442\u0438\u043a\u0430\u043c\u0438 TextMate, \u043e\u0431\u0435\u0441\u043f\u0435\u0447\u0438\u0432\u0430\u044f \u0441\u0435\u043c\u0430\u043d\u0442\u0438\u0447\u0435\u0441\u043a\u0443\u044e \u043f\u043e\u0434\u0441\u0432\u0435\u0442\u043a\u0443 \u0438 \u0430\u0432\u0442\u043e\u0434\u043e\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u0435 \u0431\u044b\u0441\u0442\u0440\u0435\u0435 1 \u043c\u0441.",
+      "f2_title": "\u0417\u0430\u0449\u0438\u0442\u0430 30 \u041c\u0411 Anti-OOM \u0438 \u044d\u043a\u0440\u0430\u043d \u043d\u0430 150\u041a \u0441\u0442\u0440\u043e\u043a",
+      "f2_desc": "\u041e\u0442\u043a\u0440\u044b\u0432\u0430\u0439\u0442\u0435 \u0433\u0438\u0433\u0430\u043d\u0442\u0441\u043a\u0438\u0435 \u043b\u043e\u0433\u0438 \u0431\u0435\u0437 \u0432\u044b\u043b\u0435\u0442\u043e\u0432. \u0410\u043a\u0442\u0438\u0432\u043d\u0430\u044f \u043e\u0447\u0438\u0441\u0442\u043a\u0430 \u0443\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442 \u041e\u0417\u0423 \u0432 \u0440\u0430\u043c\u043a\u0430\u0445 30 \u041c\u0411, \u0430 \u0432\u044c\u044e\u043f\u043e\u0440\u0442 O(1) 120 \u0413\u0446 \u0438 \u0441\u0438\u0441\u0442\u0435\u043c\u0430 \u043f\u0430\u0433\u0438\u043d\u0430\u0446\u0438\u0438 \u043f\u043b\u0430\u0432\u043d\u043e \u0437\u0430\u0433\u0440\u0443\u0436\u0430\u044e\u0442 \u0444\u0430\u0439\u043b\u044b \u0441\u0432\u044b\u0448\u0435 30 \u041c\u0411 \u0431\u043b\u043e\u043a\u0430\u043c\u0438 \u043f\u043e 10 \u043c\u043b\u043d \u0441\u0438\u043c\u0432\u043e\u043b\u043e\u0432.",
+      "f3_title": "34 \u043a\u043e\u0434\u0438\u0440\u043e\u0432\u043a\u0438 \u0438 \u0443\u043c\u043d\u043e\u0435 \u0440\u0430\u0441\u043f\u043e\u0437\u043d\u0430\u0432\u0430\u043d\u0438\u0435",
+      "f3_desc": "\u041d\u0438\u043a\u0430\u043a\u0438\u0445 \u043a\u0440\u0430\u043a\u043e\u0437\u044f\u0431\u0440. \u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u043e\u0435 \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0438 \u043a\u043e\u043d\u0432\u0435\u0440\u0442\u0430\u0446\u0438\u044f 34 \u043a\u043e\u0434\u0438\u0440\u043e\u0432\u043e\u043a (UTF-8, Windows-1251, KOI8-R, UTF-16, GB18030, Shift_JIS) \u0438 \u043d\u0430\u0442\u0438\u0432\u043d\u044b\u0439 \u044d\u043a\u0441\u043f\u043e\u0440\u0442 \u043a\u043e\u0434\u0430 \u0432 PDF.",
+      "f4_title": "51 AI-\u0448\u0430\u0431\u043b\u043e\u043d \u0438 \u0433\u0438\u043a-\u043f\u0435\u0440\u0438\u0444\u0435\u0440\u0438\u044f \u0434\u043b\u044f \u0442\u0430\u0447\u0441\u043a\u0440\u0438\u043d\u0430",
+      "f4_desc": "\u041d\u0430\u0441\u0442\u0440\u0430\u0438\u0432\u0430\u0435\u043c\u0430\u044f \u043f\u0430\u043d\u0435\u043b\u044c \u043d\u0430 24 \u0441\u0438\u043c\u0432\u043e\u043b\u0430, 4 \u0431\u044b\u0441\u0442\u0440\u044b\u0435 \u043a\u043b\u0430\u0432\u0438\u0430\u0442\u0443\u0440\u044b \u043f\u043e\u0434 \u044f\u0437\u044b\u043a\u0438, \u0443\u043c\u043d\u044b\u0435 \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0438\u0435 \u0441\u043a\u043e\u0431\u043e\u043a, \u044d\u0444\u0444\u0435\u043a\u0442\u044b \u0447\u0430\u0441\u0442\u0438\u0446 \u043f\u0435\u0447\u0430\u0442\u043d\u043e\u0439 \u043c\u0430\u0448\u0438\u043d\u043a\u0438 \u0438 \u043e\u0444\u043b\u0430\u0439\u043d AI-\u0430\u0441\u0441\u0438\u0441\u0442\u0435\u043d\u0442 \u0441 51 \u0448\u0430\u0431\u043b\u043e\u043d\u043e\u043c \u043c\u043d\u043e\u0433\u043e\u0444\u0430\u0439\u043b\u043e\u0432\u044b\u0445 \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432.",
+      "cta_h2": "\u041e\u0431\u043d\u043e\u0432\u0438\u0442\u0435 \u0441\u0432\u043e\u0439 \u043c\u043e\u0431\u0438\u043b\u044c\u043d\u044b\u0439 Code Editor \u0441\u0435\u0433\u043e\u0434\u043d\u044f",
+      "cta_desc": "\u041f\u0440\u0438\u0441\u043e\u0435\u0434\u0438\u043d\u044f\u0439\u0442\u0435\u0441\u044c \u043a \u0442\u044b\u0441\u044f\u0447\u0430\u043c \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0447\u0438\u043a\u043e\u0432, \u043f\u0438\u0448\u0443\u0449\u0438\u0445 \u0438 \u043a\u043e\u043c\u043f\u0438\u043b\u0438\u0440\u0443\u044e\u0449\u0438\u0445 \u043a\u043e\u0434 \u043e\u0444\u043b\u0430\u0439\u043d \u043d\u0430 Android."
+    }
+  },
+  "python_ide": {
+    "en": {
+      "metaTitle": "Python IDE & Coding App for Android | Code Editor: SuperCode",
+      "metaDesc": "Turn your Android device into a professional Python IDE. SuperCode offers an offline Python 3.11 runtime, visual Pip manager for local .whl files, and seamless Data Science support for NumPy and Pandas. The ultimate Python coding app.",
+      "hero_tag": "MOBILE PYTHON WORKSPACE",
+      "hero_h1": "The Ultimate <span class=\"text-gradient\">Python Coding App</span> &amp; IDE",
+      "hero_desc": "Break free from desktop constraints. SuperCode transforms your Android device into an industrial-grade Python development environment. Experience true offline execution, visual package management, and seamless data science capabilities right in the palm of your hand.",
+      "f1_title": "Visual Pip &amp; Offline .whl Installer",
+      "f1_desc": "No internet? No problem. Our advanced visual Pip package manager natively supports installing custom <code>.whl</code> or <code>.tar.gz</code> packages directly from your device storage. Perfect for air-gapped environments or local development.",
+      "f2_title": "Data Science &amp; AI Ready",
+      "f2_desc": "Run heavy analytical workflows effortlessly. SuperCode's Smart Scanner automatically intercepts massive libraries like <strong>NumPy, Pandas, and Scikit-Learn</strong>, seamlessly routing their execution to a Serverless Edge Cluster to save your phone's memory and storage.",
+      "f3_title": "Multi-File Workspace Support",
+      "f3_desc": "Move beyond single-script limitations. Our intelligent Virtual Workspace automatically detects your project root, allowing for complex cross-directory <code>import</code> statements and structuring real-world Python applications flawlessly on mobile.",
+      "f4_title": "Crash-Proof Floating Terminal",
+      "f4_desc": "Code and monitor logs simultaneously with a draggable, split-screen interactive console. Backed by a strict Anti-OOM Memory Guard and an infinite-loop circuit breaker, guaranteeing your Android device never freezes, no matter the output.",
+      "cta_h2": "Start Coding Python on Android Today",
+      "cta_desc": "Join thousands of engineers and data scientists coding on the go."
+    },
+    "zh": {
+      "metaTitle": "Android \u79bb\u7ebf Python IDE \u4e0e Python \u7f16\u7a0b\u8f6f\u4ef6 | Code Editor: SuperCode",
+      "metaDesc": "\u5c06\u4f60\u7684 Android \u624b\u673a\u53d8\u8eab\u4e3a\u4e13\u4e1a\u7ea7\u79bb\u7ebf Python IDE \u7f16\u7a0b\u8f6f\u4ef6\u3002SuperCode \u63d0\u4f9b\u79bb\u7ebf Python 3.11 \u8fd0\u884c\u65f6\u3001\u53ef\u89c6\u5316\u672c\u5730 .whl Pip \u5305\u7ba1\u7406\u5668\uff0c\u4ee5\u53ca\u65e0\u7f1d\u8fd0\u884c NumPy \u4e0e Pandas \u6570\u636e\u79d1\u5b66\u5e93\u7684\u80fd\u529b\u3002",
+      "hero_tag": "\u79fb\u52a8 PYTHON IDE \u4e13\u4e1a\u5de5\u4f5c\u533a",
+      "hero_h1": "\u7ec8\u6781 <span class=\"text-gradient\">Python IDE \u7f16\u7a0b\u8f6f\u4ef6</span> \u4e0e\u79bb\u7ebf\u5f00\u53d1\u73af\u5883",
+      "hero_desc": "\u6446\u8131\u684c\u9762\u7535\u8111\u675f\u7f1a\u3002SuperCode \u5c06\u4f60\u7684 Android \u8bbe\u5907\u8f6c\u5316\u4e3a\u5de5\u4e1a\u7ea7 <strong>Python IDE</strong> \u5f00\u53d1\u73af\u5883\u3002\u5728\u638c\u4e2d\u5373\u53ef\u4f53\u9a8c\u771f\u6b63\u7684 Python 3.11 \u79bb\u7ebf\u8fd0\u884c\u3001\u53ef\u89c6\u5316\u7b2c\u4e09\u65b9\u5305\u7ba1\u7406\u4e0e\u4e1d\u6ed1\u7684\u6570\u636e\u79d1\u5b66\u8ba1\u7b97\u3002",
+      "f1_title": "\u53ef\u89c6\u5316 Pip \u4e0e\u79bb\u7ebf .whl \u5b89\u88c5\u5668",
+      "f1_desc": "\u6ca1\u6709\u7f51\u7edc\uff1f\u6beb\u65e0\u538b\u529b\u3002\u5148\u8fdb\u7684\u53ef\u89c6\u5316 Pip \u5305\u7ba1\u7406\u5668\u539f\u751f\u652f\u6301\u76f4\u63a5\u4ece\u624b\u673a\u5b58\u50a8\u5b89\u88c5\u81ea\u5b9a\u4e49 <code>.whl</code> \u6216 <code>.tar.gz</code> \u79bb\u7ebf\u5305\uff08\u5982 requests, flask, telebot\uff09\uff0c\u5b8c\u7f8e\u5951\u5408\u79bb\u7ebf\u5f00\u53d1\u3002",
+      "f2_title": "\u539f\u751f\u7ea7\u6570\u636e\u79d1\u5b66\u4e0e AI \u5c31\u7eea (NumPy / Pandas)",
+      "f2_desc": "\u8f7b\u677e\u8fd0\u884c\u91cd\u578b\u5206\u6790\u5de5\u4f5c\u6d41\u3002\u5185\u7f6e\u667a\u80fd AST \u626b\u63cf\u5668\u81ea\u52a8\u8bc6\u522b <strong>NumPy\u3001Pandas \u4e0e Scikit-Learn</strong> \u7b49\u5de8\u578b\u5e93\uff0c\u5e76\u5c06\u5176\u65e0\u7f1d\u8def\u7531\u81f3 Serverless Edge WASM \u96c6\u7fa4\uff0c\u8282\u7701\u624b\u673a\u5185\u5b58\u4e0e\u5b58\u50a8\u7a7a\u95f4\u3002",
+      "f3_title": "\u591a\u6587\u4ef6\u5de5\u7a0b\u4e0e\u8de8\u76ee\u5f55 Import \u652f\u6301",
+      "f3_desc": "\u7a81\u7834\u5355\u6587\u4ef6\u811a\u672c\u9650\u5236\u3002\u667a\u80fd\u865a\u62df\u5de5\u4f5c\u533a\u81ea\u52a8\u63a2\u6d4b\u9879\u76ee\u6839\u76ee\u5f55\uff0c\u5b8c\u7f8e\u652f\u6301\u590d\u6742\u7684\u8de8\u6587\u4ef6\u5939 <code>import</code> \u6a21\u5757\u5f15\u7528\uff0c\u5728\u624b\u673a\u4e0a\u89c4\u8303\u6784\u5efa\u771f\u5b9e\u7684 Python \u591a\u6587\u4ef6\u9879\u76ee\u3002",
+      "f4_title": "\u9632\u5d29\u6e83\u60ac\u6d6e\u5206\u5c4f\u4ea4\u4e92\u7ec8\u7aef",
+      "f4_desc": "\u901a\u8fc7\u53ef\u62d6\u62fd\u5206\u5c4f\u4ea4\u4e92\u63a7\u5236\u53f0\u8fb9\u5199\u4ee3\u7801\u8fb9\u770b\u65e5\u5fd7\u3002\u5e95\u5c42\u914d\u5907\u4e25\u82db\u7684 30MB Anti-OOM \u5185\u5b58\u62a4\u76fe\u4e0e\u6b7b\u5faa\u73af\u7194\u65ad\u5668\uff0c\u65e0\u8bba\u8f93\u51fa\u591a\u5927\u90fd\u7edd\u4e0d\u5361\u6b7b Android \u7cfb\u7edf\u3002",
+      "cta_h2": "\u7acb\u5373\u5728 Android \u4e0a\u5f00\u542f Python \u7f16\u7a0b",
+      "cta_desc": "\u52a0\u5165\u6570\u4ee5\u5343\u8ba1\u7684\u5de5\u7a0b\u5e08\u4e0e\u6570\u636e\u79d1\u5b66\u5bb6\uff0c\u968f\u65f6\u968f\u5730\u79bb\u7ebf\u7f16\u5199\u4e0e\u8fd0\u884c Python\u3002"
+    },
+    "es": {
+      "metaTitle": "Python IDE Offline y App para Programar Python en Android | SuperCode",
+      "metaDesc": "Convierte tu Android en un Python IDE profesional. SuperCode ofrece entorno Python 3.11 offline, gestor visual Pip para archivos .whl locales y soporte de Ciencia de Datos para NumPy y Pandas.",
+      "hero_tag": "ENTORNO PYTHON M\u00d3VIL",
+      "hero_h1": "La Mejor <span class=\"text-gradient\">Python Coding App &amp; Python IDE</span>",
+      "hero_desc": "Lib\u00e9rate del escritorio. SuperCode transforma tu dispositivo Android en un entorno de desarrollo <strong>Python IDE</strong> de grado industrial con ejecuci\u00f3n 100% offline, gestor visual de paquetes Pip y ciencia de datos.",
+      "f1_title": "Gestor Visual Pip e Instalador .whl Offline",
+      "f1_desc": "\u00bfSin internet? Sin problema. Nuestro gestor visual Pip soporta instalar paquetes <code>.whl</code> o <code>.tar.gz</code> directamente desde el almacenamiento de tu tel\u00e9fono.",
+      "f2_title": "Listo para Ciencia de Datos e IA (NumPy / Pandas)",
+      "f2_desc": "El esc\u00e1ner inteligente AST intercepta librer\u00edas pesadas como <strong>NumPy, Pandas y Scikit-Learn</strong>, enrutando su ejecuci\u00f3n a nuestro cl\u00faster Serverless Edge WASM sin gastar memoria m\u00f3vil.",
+      "f3_title": "Soporte de Proyectos Multi-Archivo",
+      "f3_desc": "Supera el l\u00edmite de un solo script. El espacio de trabajo virtual detecta la ra\u00edz de tu proyecto, permitiendo sentencias <code>import</code> entre m\u00faltiples directorios.",
+      "f4_title": "Terminal Flotante A Prueba de Fallos",
+      "f4_desc": "Programa y supervisa registros en pantalla dividida. Respaldado por nuestro escudo Anti-OOM de 30MB y disyuntor de bucles infinitos.",
+      "cta_h2": "Empieza a Programar en Python en Android Hoy",
+      "cta_desc": "\u00danete a miles de ingenieros y cient\u00edficos de datos que programan en cualquier lugar."
+    },
+    "ja": {
+      "metaTitle": "Android \u5411\u3051\u30aa\u30d5\u30e9\u30a4\u30f3 Python IDE & Python \u30d7\u30ed\u30b0\u30e9\u30df\u30f3\u30b0\u30a2\u30d7\u30ea | SuperCode",
+      "metaDesc": "Android \u7aef\u672b\u3092\u30d7\u30ed\u4ed5\u69d8\u306e Python IDE \u306b\u5909\u9769\u3002\u30aa\u30d5\u30e9\u30a4\u30f3 Python 3.11 \u5b9f\u884c\u74b0\u5883\u3001\u30ed\u30fc\u30ab\u30eb .whl \u5bfe\u5fdc\u306e\u8996\u899a\u7684 Pip \u30de\u30cd\u30fc\u30b8\u30e3\u30fc\u3001NumPy \u3084 Pandas \u306e\u30c7\u30fc\u30bf\u30b5\u30a4\u30a8\u30f3\u30b9\u5b9f\u884c\u3092\u30b5\u30dd\u30fc\u30c8\u3002",
+      "hero_tag": "\u30e2\u30d0\u30a4\u30eb PYTHON \u30ef\u30fc\u30af\u30b9\u30da\u30fc\u30b9",
+      "hero_h1": "\u7a76\u6975\u306e <span class=\"text-gradient\">Python IDE &amp; Python \u958b\u767a\u30a2\u30d7\u30ea</span>",
+      "hero_desc": "PC \u306e\u5236\u7d04\u304b\u3089\u89e3\u653e\u3055\u308c\u307e\u3057\u3087\u3046\u3002SuperCode \u306f Android \u30c7\u30d0\u30a4\u30b9\u3092\u7523\u696d\u30b0\u30ec\u30fc\u30c9\u306e <strong>Python IDE</strong> \u3078\u3068\u9032\u5316\u3055\u305b\u307e\u3059\u3002\u5b8c\u5168\u30aa\u30d5\u30e9\u30a4\u30f3\u5b9f\u884c\u3001\u8996\u899a\u7684\u30d1\u30c3\u30b1\u30fc\u30b8\u7ba1\u7406\u3001\u30c7\u30fc\u30bf\u30b5\u30a4\u30a8\u30f3\u30b9\u74b0\u5883\u3092\u624b\u306e\u3072\u3089\u306b\u3002",
+      "f1_title": "\u30d3\u30b8\u30e5\u30a2\u30eb Pip & \u30aa\u30d5\u30e9\u30a4\u30f3 .whl \u30a4\u30f3\u30b9\u30c8\u30fc\u30e9\u30fc",
+      "f1_desc": "\u30cd\u30c3\u30c8\u74b0\u5883\u304c\u306a\u304f\u3066\u3082\u554f\u984c\u3042\u308a\u307e\u305b\u3093\u3002\u7aef\u672b\u30b9\u30c8\u30ec\u30fc\u30b8\u304b\u3089\u76f4\u63a5 <code>.whl</code> \u3084 <code>.tar.gz</code> \u30d1\u30c3\u30b1\u30fc\u30b8\u3092\u5c0e\u5165\u3067\u304d\u308b\u8996\u899a\u7684 Pip \u30de\u30cd\u30fc\u30b8\u30e3\u30fc\u3092\u642d\u8f09\u3002",
+      "f2_title": "\u30c7\u30fc\u30bf\u30b5\u30a4\u30a8\u30f3\u30b9 & AI \u5bfe\u5fdc (NumPy / Pandas)",
+      "f2_desc": "\u30b9\u30de\u30fc\u30c8 AST \u30b9\u30ad\u30e3\u30ca\u30fc\u304c <strong>NumPy\u3001Pandas\u3001Scikit-Learn</strong> \u306a\u3069\u306e\u91cd\u3044\u30e9\u30a4\u30d6\u30e9\u30ea\u3092\u81ea\u52d5\u691c\u51fa\u3057\u3001Serverless Edge WASM \u30af\u30e9\u30b9\u30bf\u3078\u30b7\u30fc\u30e0\u30ec\u30b9\u306b\u30eb\u30fc\u30c6\u30a3\u30f3\u30b0\u3057\u3066\u30e1\u30e2\u30ea\u3092\u7bc0\u7d04\u3057\u307e\u3059\u3002",
+      "f3_title": "\u30de\u30eb\u30c1\u30d5\u30a1\u30a4\u30eb\u30fb\u30ef\u30fc\u30af\u30b9\u30da\u30fc\u30b9\u5bfe\u5fdc",
+      "f3_desc": "\u5358\u4e00\u30b9\u30af\u30ea\u30d7\u30c8\u306e\u9650\u754c\u3092\u7a81\u7834\u3002\u30d7\u30ed\u30b8\u30a7\u30af\u30c8\u30eb\u30fc\u30c8\u3092\u81ea\u52d5\u8a8d\u8b58\u3057\u3001\u8907\u6570\u30c7\u30a3\u30ec\u30af\u30c8\u30ea\u3092\u8de8\u3050\u8907\u96d1\u306a <code>import</code> \u6587\u3084\u672c\u683c\u7684\u306a Python \u30a2\u30d7\u30ea\u69cb\u7bc9\u3092\u30e2\u30d0\u30a4\u30eb\u3067\u5b9f\u73fe\u3057\u307e\u3059\u3002",
+      "f4_title": "\u30af\u30e9\u30c3\u30b7\u30e5\u9632\u6b62\u30d5\u30ed\u30fc\u30c6\u30a3\u30f3\u30b0\u7aef\u672b",
+      "f4_desc": "\u5206\u5272\u753b\u9762\u306e\u5bfe\u8a71\u578b\u30b3\u30f3\u30bd\u30fc\u30eb\u3067\u30b3\u30fc\u30c7\u30a3\u30f3\u30b0\u3068\u30ed\u30b0\u76e3\u8996\u3092\u540c\u6642\u306b\u5b9f\u884c\u300230MB Anti-OOM \u30e1\u30e2\u30ea\u4fdd\u8b77\u3068\u7121\u9650\u30eb\u30fc\u30d7\u906e\u65ad\u6a5f\u69cb\u306b\u3088\u308a\u3001\u7aef\u672b\u306e\u30d5\u30ea\u30fc\u30ba\u3092\u5b8c\u5168\u306b\u9632\u304e\u307e\u3059\u3002",
+      "cta_h2": "Android \u3067\u4eca\u3059\u3050 Python \u958b\u767a\u3092\u59cb\u3081\u3088\u3046",
+      "cta_desc": "\u5916\u51fa\u5148\u3067\u3082\u30b3\u30fc\u30c7\u30a3\u30f3\u30b0\u3092\u884c\u3046\u4f55\u5343\u4eba\u3082\u306e\u30a8\u30f3\u30b8\u30cb\u30a2\u3084\u30c7\u30fc\u30bf\u30b5\u30a4\u30a8\u30f3\u30c6\u30a3\u30b9\u30c8\u306b\u52a0\u308f\u308a\u307e\u3057\u3087\u3046\u3002"
+    },
+    "de": {
+      "metaTitle": "Python IDE & Python Programmier-App f\u00fcr Android | SuperCode",
+      "metaDesc": "Verwandeln Sie Ihr Android-Ger\u00e4t in eine professionelle Offline Python IDE. Python 3.11-Laufzeit, visueller Pip-Manager f\u00fcr lokale .whl-Dateien und Data-Science-Support f\u00fcr NumPy und Pandas.",
+      "hero_tag": "MOBILER PYTHON-ARBEITSBEREICH",
+      "hero_h1": "Die Ultimative <span class=\"text-gradient\">Python IDE &amp; Coding App</span>",
+      "hero_desc": "Befreien Sie sich vom Desktop. SuperCode verwandelt Ihr Android-Ger\u00e4t in eine industrielle <strong>Python IDE</strong> mit echter Offline-Ausf\u00fchrung, visuellem Paketmanagement und Data-Science-Power.",
+      "f1_title": "Visueller Pip & Offline .whl Installer",
+      "f1_desc": "Kein Internet? Kein Problem. Unser visueller Pip-Paketmanager installiert benutzerdefinierte <code>.whl</code>- oder <code>.tar.gz</code>-Pakete direkt aus Ihrem Ger\u00e4tespeicher.",
+      "f2_title": "Data Science & KI-Bereit (NumPy / Pandas)",
+      "f2_desc": "Der Smart-Scanner erkennt gro\u00dfe Bibliotheken wie <strong>NumPy, Pandas und Scikit-Learn</strong> automatisch und leitet sie speicherschonend an ein Serverless Edge WASM-Cluster weiter.",
+      "f3_title": "Multi-Datei-Projektunterst\u00fctzung",
+      "f3_desc": "Intelligente Erkennung des Projektstammverzeichnisses erm\u00f6glicht komplexe verzeichnis\u00fcbergreifende <code>import</code>-Anweisungen und modulare Python-Projekte.",
+      "f4_title": "Absturzsicheres Schwebendes Terminal",
+      "f4_desc": "Programmieren und Logs \u00fcberwachen im Split-Screen. Gesch\u00fctzt durch den 30MB Anti-OOM Memory Guard und einen Endlosschleifen-Schutzschalter.",
+      "cta_h2": "Starten Sie Heute mit Python auf Android",
+      "cta_desc": "Schlie\u00dfen Sie sich tausenden Ingenieuren und Data Scientists an, die mobil programmieren."
+    },
+    "fr": {
+      "metaTitle": "Python IDE Hors Ligne & Application Python pour Android | SuperCode",
+      "metaDesc": "Transformez votre Android en v\u00e9ritable Python IDE professionnel. Runtime Python 3.11 hors ligne, gestionnaire Pip visuel pour fichiers .whl locaux et support Data Science pour NumPy et Pandas.",
+      "hero_tag": "ESPACE PYTHON MOBILE",
+      "hero_h1": "L'Ultime <span class=\"text-gradient\">Python IDE &amp; Coding App</span>",
+      "hero_desc": "Lib\u00e9rez-vous du bureau. SuperCode transforme votre appareil Android en environnement de d\u00e9veloppement <strong>Python IDE</strong> industriel avec ex\u00e9cution 100% hors ligne, gestionnaire Pip visuel et Data Science.",
+      "f1_title": "Pip Visuel & Installateur .whl Hors Ligne",
+      "f1_desc": "Pas d'internet ? Aucun probl\u00e8me. Notre gestionnaire Pip visuel installe vos paquets <code>.whl</code> ou <code>.tar.gz</code> directement depuis le stockage local de votre t\u00e9l\u00e9phone.",
+      "f2_title": "Pr\u00eat pour la Data Science & l'IA (NumPy / Pandas)",
+      "f2_desc": "Le scanner intelligent intercepte les biblioth\u00e8ques lourdes comme <strong>NumPy, Pandas et Scikit-Learn</strong> et achemine leur ex\u00e9cution vers un cluster Serverless Edge WASM.",
+      "f3_title": "Support d'Espace de Travail Multi-Fichiers",
+      "f3_desc": "D\u00e9passez les scripts uniques. Notre espace de travail d\u00e9tecte la racine du projet pour permettre des instructions <code>import</code> complexes entre dossiers.",
+      "f4_title": "Terminal Flottant Anti-Plantage",
+      "f4_desc": "Codez et surveillez vos journaux en \u00e9cran partag\u00e9. Prot\u00e9g\u00e9 par le bouclier Anti-OOM de 30 Mo et un coupe-circuit contre les boucles infinies.",
+      "cta_h2": "Commencez \u00e0 Coder en Python sur Android Aujourd'hui",
+      "cta_desc": "Rejoignez des milliers d'ing\u00e9nieurs et de data scientists qui codent en d\u00e9placement."
+    },
+    "ko": {
+      "metaTitle": "Android\uc6a9 \uc624\ud504\ub77c\uc778 Python IDE \ubc0f \ud30c\uc774\uc36c \ucf54\ub529 \uc571 | SuperCode",
+      "metaDesc": "Android \uae30\uae30\ub97c \uc804\ubb38\uac00\uc6a9 \uc624\ud504\ub77c\uc778 Python IDE\ub85c \uc804\ud658\ud558\uc138\uc694. \uc624\ud504\ub77c\uc778 Python 3.11 \ub7f0\ud0c0\uc784, \ub85c\uceec .whl \ud30c\uc77c\uc6a9 \ube44\uc8fc\uc5bc Pip \uad00\ub9ac\uc790, NumPy \ubc0f Pandas \ub370\uc774\ud130 \uc0ac\uc774\uc5b8\uc2a4 \uc9c0\uc6d0.",
+      "hero_tag": "\ubaa8\ubc14\uc77c PYTHON \uc6cc\ud06c\uc2a4\ud398\uc774\uc2a4",
+      "hero_h1": "\uad81\uadf9\uc758 <span class=\"text-gradient\">Python IDE &amp; \ud30c\uc774\uc36c \ucf54\ub529 \uc571</span>",
+      "hero_desc": "\ub370\uc2a4\ud06c\ud1b1\uc758 \ud55c\uacc4\ub97c \ubc97\uc5b4\ub098\uc138\uc694. SuperCode\ub294 Android \uc2a4\ub9c8\ud2b8\ud3f0\uc744 \uc0b0\uc5c5\uc6a9 <strong>Python IDE</strong> \uac1c\ubc1c \ud658\uacbd\uc73c\ub85c \ubc14\uafd4\uc90d\ub2c8\ub2e4. \uc644\ubcbd\ud55c \uc624\ud504\ub77c\uc778 \uc2e4\ud589, \uc2dc\uac01\uc801 \ud328\ud0a4\uc9c0 \uad00\ub9ac \ubc0f \ub370\uc774\ud130 \uc0ac\uc774\uc5b8\uc2a4 \uae30\ub2a5\uc744 \uacbd\ud5d8\ud558\uc138\uc694.",
+      "f1_title": "\ube44\uc8fc\uc5bc Pip \ubc0f \uc624\ud504\ub77c\uc778 .whl \uc124\uce58\uae30",
+      "f1_desc": "\uc778\ud130\ub137\uc774 \uc5c6\uc5b4\ub3c4 \ubb38\uc81c\uc5c6\uc2b5\ub2c8\ub2e4. \uae30\uae30 \uc800\uc7a5\uc18c\uc5d0\uc11c \uc9c1\uc811 \uc0ac\uc6a9\uc790 \uc815\uc758 <code>.whl</code> \ub610\ub294 <code>.tar.gz</code> \ud328\ud0a4\uc9c0\ub97c \uc124\uce58\ud560 \uc218 \uc788\ub294 \ube44\uc8fc\uc5bc Pip \ud328\ud0a4\uc9c0 \uad00\ub9ac\uc790\ub97c \uae30\ubcf8 \uc9c0\uc6d0\ud569\ub2c8\ub2e4.",
+      "f2_title": "\ub370\uc774\ud130 \uc0ac\uc774\uc5b8\uc2a4 \ubc0f AI \uc9c0\uc6d0 (NumPy / Pandas)",
+      "f2_desc": "\uc2a4\ub9c8\ud2b8 \uc2a4\uce90\ub108\uac00 <strong>NumPy, Pandas, Scikit-Learn</strong> \uac19\uc740 \ub300\uc6a9\ub7c9 \ub77c\uc774\ube0c\ub7ec\ub9ac\ub97c \uc790\ub3d9\uc73c\ub85c \uac10\uc9c0\ud558\uc5ec Serverless Edge \ud074\ub7ec\uc2a4\ud130\ub85c \ub77c\uc6b0\ud305\ud568\uc73c\ub85c\uc368 \uc2a4\ub9c8\ud2b8\ud3f0 \uba54\ubaa8\ub9ac\ub97c \uc808\uc57d\ud569\ub2c8\ub2e4.",
+      "f3_title": "\ub2e4\uc911 \ud30c\uc77c \uc6cc\ud06c\uc2a4\ud398\uc774\uc2a4 \uc9c0\uc6d0",
+      "f3_desc": "\ub2e8\uc77c \uc2a4\ud06c\ub9bd\ud2b8\uc758 \ud55c\uacc4\ub97c \ub118\uc5b4 \ud504\ub85c\uc81d\ud2b8 \ub8e8\ud2b8\ub97c \uc790\ub3d9 \uac10\uc9c0\ud558\uace0 \ub514\ub809\ud130\ub9ac \uac04 <code>import</code> \uad6c\ubb38\uacfc \uc2e4\uc81c Python \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \uad6c\uc870\ub97c \uc644\ubcbd\ud788 \uc9c0\uc6d0\ud569\ub2c8\ub2e4.",
+      "f4_title": "\ucda9\ub3cc \ubc29\uc9c0 \ud50c\ub85c\ud305 \ud130\ubbf8\ub110",
+      "f4_desc": "\ub4dc\ub798\uadf8 \uac00\ub2a5\ud55c \ubd84\ud560 \ud654\uba74 \ucf58\uc194\ub85c \ucf54\ub529\uacfc \ub85c\uadf8 \ud655\uc778\uc744 \ub3d9\uc2dc\uc5d0 \uc218\ud589\ud558\uc138\uc694. 30MB Anti-OOM \uac00\ub4dc\uc640 \ubb34\ud55c \ub8e8\ud504 \ucc28\ub2e8\uae30\uac00 \uae30\uae30 \uba48\ucda4\uc744 \uc644\ubcbd\ud788 \ubc29\uc9c0\ud569\ub2c8\ub2e4.",
+      "cta_h2": "\uc9c0\uae08 Android\uc5d0\uc11c Python \ucf54\ub529\uc744 \uc2dc\uc791\ud558\uc138\uc694",
+      "cta_desc": "\uc774\ub3d9 \uc911\uc5d0\ub3c4 \ucf54\ub529\ud558\ub294 \uc218\ucc9c \uba85\uc758 \uc5d4\uc9c0\ub2c8\uc5b4 \ubc0f \ub370\uc774\ud130 \uc0ac\uc774\uc5b8\ud2f0\uc2a4\ud2b8\uc640 \ud568\uaed8\ud558\uc138\uc694."
+    },
+    "pt": {
+      "metaTitle": "Python IDE Offline e App de Programa\u00e7\u00e3o Python para Android | SuperCode",
+      "metaDesc": "Transforme seu Android em uma Python IDE profissional. O SuperCode oferece runtime Python 3.11 offline, gerenciador visual Pip para arquivos .whl locais e suporte a Data Science com NumPy e Pandas.",
+      "hero_tag": "AMBIENTE PYTHON M\u00d3VEL",
+      "hero_h1": "O Definitivo <span class=\"text-gradient\">Python IDE &amp; Python Coding App</span>",
+      "hero_desc": "Liberte-se do computador. O SuperCode transforma seu dispositivo Android em um ambiente <strong>Python IDE</strong> de n\u00edvel industrial com execu\u00e7\u00e3o 100% offline, gerenciador visual Pip e ci\u00eancia de dados.",
+      "f1_title": "Pip Visual & Instalador .whl Offline",
+      "f1_desc": "Sem internet? Sem problema. Nosso gerenciador visual Pip suporta instalar pacotes <code>.whl</code> ou <code>.tar.gz</code> diretamente do armazenamento do seu dispositivo.",
+      "f2_title": "Pronto para Data Science & IA (NumPy / Pandas)",
+      "f2_desc": "O Smart Scanner intercepta bibliotecas pesadas como <strong>NumPy, Pandas e Scikit-Learn</strong>, roteando sua execu\u00e7\u00e3o para um cluster Serverless Edge WASM para economizar mem\u00f3ria.",
+      "f3_title": "Suporte a Projetos Multi-Arquivo",
+      "f3_desc": "V\u00e1 al\u00e9m de scripts \u00fanicos. Nosso workspace virtual detecta a raiz do projeto, permitindo instru\u00e7\u00f5es <code>import</code> entre diret\u00f3rios com perfei\u00e7\u00e3o.",
+      "f4_title": "Terminal Flutuante \u00e0 Prova de Travamentos",
+      "f4_desc": "Programe e monitore logs em tela dividida. Protegido pelo escudo Anti-OOM de 30MB e disjuntor contra loops infinitos.",
+      "cta_h2": "Comece a Programar Python no Android Hoje",
+      "cta_desc": "Junte-se a milhares de engenheiros e cientistas de dados programando em qualquer lugar."
+    },
+    "hi": {
+      "metaTitle": "Android \u0915\u0947 \u0932\u093f\u090f \u0911\u092b\u093c\u0932\u093e\u0907\u0928 Python IDE \u0914\u0930 \u092a\u093e\u092f\u0925\u0928 \u0915\u094b\u0921\u093f\u0902\u0917 \u0910\u092a | SuperCode",
+      "metaDesc": "\u0905\u092a\u0928\u0947 Android \u0921\u093f\u0935\u093e\u0907\u0938 \u0915\u094b \u090f\u0915 \u092a\u094d\u0930\u094b\u092b\u0947\u0936\u0928\u0932 Python IDE \u092e\u0947\u0902 \u092c\u0926\u0932\u0947\u0902\u0964 SuperCode \u0911\u092b\u093c\u0932\u093e\u0907\u0928 Python 3.11 \u0930\u0928\u091f\u093e\u0907\u092e, \u0932\u094b\u0915\u0932 .whl \u092b\u093c\u093e\u0907\u0932\u094b\u0902 \u0915\u0947 \u0932\u093f\u090f \u0935\u093f\u091c\u093c\u0941\u0905\u0932 Pip \u092e\u0948\u0928\u0947\u091c\u0930 \u0914\u0930 NumPy \u0935 Pandas \u0915\u0947 \u0932\u093f\u090f \u0921\u0947\u091f\u093e \u0938\u093e\u0907\u0902\u0938 \u0938\u092a\u094b\u0930\u094d\u091f \u092a\u094d\u0930\u0926\u093e\u0928 \u0915\u0930\u0924\u093e \u0939\u0948\u0964",
+      "hero_tag": "\u092e\u094b\u092c\u093e\u0907\u0932 PYTHON \u0935\u0930\u094d\u0915\u0938\u094d\u092a\u0947\u0938",
+      "hero_h1": "\u0938\u0930\u094d\u0935\u0936\u094d\u0930\u0947\u0937\u094d\u0920 <span class=\"text-gradient\">Python IDE &amp; Python Coding App</span>",
+      "hero_desc": "\u0921\u0947\u0938\u094d\u0915\u091f\u0949\u092a \u0915\u0940 \u0938\u0940\u092e\u093e\u0913\u0902 \u0938\u0947 \u092e\u0941\u0915\u094d\u0924 \u0939\u094b\u0902\u0964 SuperCode \u0906\u092a\u0915\u0947 Android \u092b\u093c\u094b\u0928 \u0915\u094b \u0907\u0902\u0921\u0938\u094d\u091f\u094d\u0930\u093f\u092f\u0932-\u0917\u094d\u0930\u0947\u0921 <strong>Python IDE</strong> \u0921\u0947\u0935\u0932\u092a\u092e\u0947\u0902\u091f \u090f\u0928\u0935\u093e\u092f\u0930\u0928\u092e\u0947\u0902\u091f \u092e\u0947\u0902 \u092c\u0926\u0932 \u0926\u0947\u0924\u093e \u0939\u0948\u0964 \u0905\u092a\u0928\u0940 \u0939\u0925\u0947\u0932\u0940 \u092e\u0947\u0902 \u0938\u091a\u094d\u091a\u0947 \u0911\u092b\u093c\u0932\u093e\u0907\u0928 \u0928\u093f\u0937\u094d\u092a\u093e\u0926\u0928 \u0914\u0930 \u0935\u093f\u091c\u093c\u0941\u0905\u0932 \u092a\u0948\u0915\u0947\u091c \u092a\u094d\u0930\u092c\u0902\u0927\u0928 \u0915\u093e \u0905\u0928\u0941\u092d\u0935 \u0915\u0930\u0947\u0902\u0964",
+      "f1_title": "\u0935\u093f\u091c\u093c\u0941\u0905\u0932 Pip \u0914\u0930 \u0911\u092b\u093c\u0932\u093e\u0907\u0928 .whl \u0907\u0902\u0938\u094d\u091f\u0949\u0932\u0930",
+      "f1_desc": "\u0907\u0902\u091f\u0930\u0928\u0947\u091f \u0928\u0939\u0940\u0902 \u0939\u0948? \u0915\u094b\u0908 \u092c\u093e\u0924 \u0928\u0939\u0940\u0902\u0964 \u0939\u092e\u093e\u0930\u093e \u0935\u093f\u091c\u093c\u0941\u0905\u0932 Pip \u092a\u0948\u0915\u0947\u091c \u092e\u0948\u0928\u0947\u091c\u0930 \u0938\u0940\u0927\u0947 \u0906\u092a\u0915\u0947 \u092b\u093c\u094b\u0928 \u0938\u094d\u091f\u094b\u0930\u0947\u091c \u0938\u0947 \u0915\u0938\u094d\u091f\u092e <code>.whl</code> \u092f\u093e <code>.tar.gz</code> \u092a\u0948\u0915\u0947\u091c \u0907\u0902\u0938\u094d\u091f\u0949\u0932 \u0915\u0930\u0928\u0947 \u0915\u093e \u0938\u092e\u0930\u094d\u0925\u0928 \u0915\u0930\u0924\u093e \u0939\u0948\u0964",
+      "f2_title": "\u0921\u0947\u091f\u093e \u0938\u093e\u0907\u0902\u0938 \u0914\u0930 AI \u0924\u0948\u092f\u093e\u0930 (NumPy / Pandas)",
+      "f2_desc": "SuperCode \u0915\u093e \u0938\u094d\u092e\u093e\u0930\u094d\u091f \u0938\u094d\u0915\u0948\u0928\u0930 <strong>NumPy, Pandas \u0914\u0930 Scikit-Learn</strong> \u091c\u0948\u0938\u0940 \u092d\u093e\u0930\u0940 \u0932\u093e\u0907\u092c\u094d\u0930\u0947\u0930\u0940 \u0915\u094b \u0938\u094d\u0935\u0924\u0903 \u092a\u0939\u091a\u093e\u0928\u0924\u093e \u0939\u0948 \u0914\u0930 \u092b\u093c\u094b\u0928 \u0915\u0940 \u092e\u0947\u092e\u094b\u0930\u0940 \u092c\u091a\u093e\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u0909\u0928\u094d\u0939\u0947\u0902 Serverless Edge \u0915\u094d\u0932\u0938\u094d\u091f\u0930 \u092a\u0930 \u0930\u0942\u091f \u0915\u0930\u0924\u093e \u0939\u0948\u0964",
+      "f3_title": "\u092e\u0932\u094d\u091f\u0940-\u092b\u093c\u093e\u0907\u0932 \u0935\u0930\u094d\u0915\u0938\u094d\u092a\u0947\u0938 \u0938\u092a\u094b\u0930\u094d\u091f",
+      "f3_desc": "\u0938\u093f\u0902\u0917\u0932-\u0938\u094d\u0915\u094d\u0930\u093f\u092a\u094d\u091f \u0915\u0940 \u0938\u0940\u092e\u093e\u0913\u0902 \u0938\u0947 \u0906\u0917\u0947 \u092c\u0922\u093c\u0947\u0902\u0964 \u0939\u092e\u093e\u0930\u093e \u0935\u0930\u094d\u091a\u0941\u0905\u0932 \u0935\u0930\u094d\u0915\u0938\u094d\u092a\u0947\u0938 \u092a\u094d\u0930\u094b\u091c\u0947\u0915\u094d\u091f \u0930\u0942\u091f \u0915\u094b \u0938\u094d\u0935\u0924\u0903 \u092a\u0939\u091a\u093e\u0928\u0924\u093e \u0939\u0948, \u091c\u093f\u0938\u0938\u0947 \u0915\u094d\u0930\u0949\u0938-\u0921\u093e\u092f\u0930\u0947\u0915\u094d\u091f\u0930\u0940 <code>import</code> \u0938\u094d\u091f\u0947\u091f\u092e\u0947\u0902\u091f \u0906\u0938\u093e\u0928\u0940 \u0938\u0947 \u0915\u093e\u092e \u0915\u0930\u0924\u0947 \u0939\u0948\u0902\u0964",
+      "f4_title": "\u0915\u094d\u0930\u0948\u0936-\u092a\u094d\u0930\u0942\u092b \u092b\u094d\u0932\u094b\u091f\u093f\u0902\u0917 \u091f\u0930\u094d\u092e\u093f\u0928\u0932",
+      "f4_desc": "\u0938\u094d\u092a\u094d\u0932\u093f\u091f-\u0938\u094d\u0915\u094d\u0930\u0940\u0928 \u0907\u0902\u091f\u0930\u0948\u0915\u094d\u091f\u093f\u0935 \u0915\u0902\u0938\u094b\u0932 \u0915\u0947 \u0938\u093e\u0925 \u0915\u094b\u0921 \u0932\u093f\u0916\u0947\u0902 \u0914\u0930 \u0932\u0949\u0917 \u092e\u0949\u0928\u093f\u091f\u0930 \u0915\u0930\u0947\u0902\u0964 30MB \u090f\u0902\u091f\u0940-OOM \u092e\u0947\u092e\u094b\u0930\u0940 \u0917\u093e\u0930\u094d\u0921 \u0914\u0930 \u0905\u0928\u0902\u0924-\u0932\u0942\u092a \u0938\u0930\u094d\u0915\u093f\u091f \u092c\u094d\u0930\u0947\u0915\u0930 \u0926\u094d\u0935\u093e\u0930\u093e \u0938\u0941\u0930\u0915\u094d\u0937\u093f\u0924\u0964",
+      "cta_h2": "\u0906\u091c \u0939\u0940 Android \u092a\u0930 Python \u0915\u094b\u0921\u093f\u0902\u0917 \u0936\u0941\u0930\u0942 \u0915\u0930\u0947\u0902",
+      "cta_desc": "\u091a\u0932\u0924\u0947-\u092b\u093f\u0930\u0924\u0947 \u0915\u094b\u0921\u093f\u0902\u0917 \u0915\u0930\u0928\u0947 \u0935\u093e\u0932\u0947 \u0939\u091c\u093c\u093e\u0930\u094b\u0902 \u0907\u0902\u091c\u0940\u0928\u093f\u092f\u0930\u094b\u0902 \u0914\u0930 \u0921\u0947\u091f\u093e \u0935\u0948\u091c\u094d\u091e\u093e\u0928\u093f\u0915\u094b\u0902 \u0938\u0947 \u091c\u0941\u0921\u093c\u0947\u0902\u0964"
+    },
+    "ru": {
+      "metaTitle": "\u041e\u0444\u043b\u0430\u0439\u043d Python IDE \u0438 \u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0434\u043b\u044f \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f Python \u043d\u0430 Android | SuperCode",
+      "metaDesc": "\u041f\u0440\u0435\u0432\u0440\u0430\u0442\u0438\u0442\u0435 \u0441\u0432\u043e\u0439 Android \u0432 \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u0443\u044e Python IDE. \u041e\u0444\u043b\u0430\u0439\u043d \u0441\u0440\u0435\u0434\u0430 Python 3.11, \u0432\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u044b\u0439 \u043c\u0435\u043d\u0435\u0434\u0436\u0435\u0440 Pip \u0434\u043b\u044f \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u044b\u0445 \u0444\u0430\u0439\u043b\u043e\u0432 .whl \u0438 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430 Data Science (NumPy, Pandas).",
+      "hero_tag": "\u041c\u041e\u0411\u0418\u041b\u042c\u041d\u0410\u042f \u0421\u0420\u0415\u0414\u0410 PYTHON",
+      "hero_h1": "\u041b\u0443\u0447\u0448\u0430\u044f <span class=\"text-gradient\">Python IDE \u0438 Python Coding App</span>",
+      "hero_desc": "\u041e\u0441\u0432\u043e\u0431\u043e\u0434\u0438\u0442\u0435\u0441\u044c \u043e\u0442 \u043f\u0440\u0438\u0432\u044f\u0437\u043a\u0438 \u043a \u041f\u041a. SuperCode \u043f\u0440\u0435\u0432\u0440\u0430\u0449\u0430\u0435\u0442 \u0432\u0430\u0448\u0435 Android-\u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e \u0432 \u043f\u0440\u043e\u043c\u044b\u0448\u043b\u0435\u043d\u043d\u0443\u044e \u0441\u0440\u0435\u0434\u0443 \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0438 <strong>Python IDE</strong> \u0441 \u0447\u0435\u0441\u0442\u043d\u044b\u043c \u043e\u0444\u043b\u0430\u0439\u043d-\u0437\u0430\u043f\u0443\u0441\u043a\u043e\u043c, \u0432\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u044b\u043c \u043c\u0435\u043d\u0435\u0434\u0436\u0435\u0440\u043e\u043c \u043f\u0430\u043a\u0435\u0442\u043e\u0432 \u0438 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u043e\u0439 \u0430\u043d\u0430\u043b\u0438\u0437\u0430 \u0434\u0430\u043d\u043d\u044b\u0445.",
+      "f1_title": "\u0412\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u044b\u0439 Pip \u0438 \u043e\u0444\u043b\u0430\u0439\u043d-\u0443\u0441\u0442\u0430\u043d\u043e\u0432\u0449\u0438\u043a .whl",
+      "f1_desc": "\u041d\u0435\u0442 \u0438\u043d\u0442\u0435\u0440\u043d\u0435\u0442\u0430? \u041d\u0435 \u043f\u0440\u043e\u0431\u043b\u0435\u043c\u0430. \u0412\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u044b\u0439 \u043c\u0435\u043d\u0435\u0434\u0436\u0435\u0440 \u043f\u0430\u043a\u0435\u0442\u043e\u0432 Pip \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442 \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0443 \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u044b\u0445 \u043f\u0430\u043a\u0435\u0442\u043e\u0432 <code>.whl</code> \u0438 <code>.tar.gz</code> \u043f\u0440\u044f\u043c\u043e \u0438\u0437 \u043f\u0430\u043c\u044f\u0442\u0438 \u0441\u043c\u0430\u0440\u0442\u0444\u043e\u043d\u0430.",
+      "f2_title": "\u0413\u043e\u0442\u043e\u0432\u043d\u043e\u0441\u0442\u044c \u043a Data Science \u0438 \u0418\u0418 (NumPy / Pandas)",
+      "f2_desc": "\u0423\u043c\u043d\u044b\u0439 \u0441\u043a\u0430\u043d\u0435\u0440 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438 \u043f\u0435\u0440\u0435\u0445\u0432\u0430\u0442\u044b\u0432\u0430\u0435\u0442 \u0442\u044f\u0436\u0435\u043b\u044b\u0435 \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0438 <strong>NumPy, Pandas \u0438 Scikit-Learn</strong>, \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u044f\u044f \u0438\u0445 \u0432\u044b\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u0435 \u0432 Serverless Edge \u043a\u043b\u0430\u0441\u0442\u0435\u0440 \u0434\u043b\u044f \u044d\u043a\u043e\u043d\u043e\u043c\u0438\u0438 \u043f\u0430\u043c\u044f\u0442\u0438 \u0442\u0435\u043b\u0435\u0444\u043e\u043d\u0430.",
+      "f3_title": "\u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430 \u043c\u043d\u043e\u0433\u043e\u0444\u0430\u0439\u043b\u043e\u0432\u044b\u0445 \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432",
+      "f3_desc": "\u0412\u044b\u0445\u043e\u0434\u0438\u0442\u0435 \u0437\u0430 \u0440\u0430\u043c\u043a\u0438 \u043e\u0434\u043d\u043e\u0433\u043e \u0441\u043a\u0440\u0438\u043f\u0442\u0430. \u0412\u0438\u0440\u0442\u0443\u0430\u043b\u044c\u043d\u0430\u044f \u0440\u0430\u0431\u043e\u0447\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438 \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u044f\u0435\u0442 \u043a\u043e\u0440\u0435\u043d\u044c \u043f\u0440\u043e\u0435\u043a\u0442\u0430, \u043f\u043e\u0437\u0432\u043e\u043b\u044f\u044f \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u044c \u0441\u043b\u043e\u0436\u043d\u044b\u0435 \u043c\u0435\u0436\u043f\u0430\u043f\u043e\u0447\u043d\u044b\u0435 \u0438\u043d\u0441\u0442\u0440\u0443\u043a\u0446\u0438\u0438 <code>import</code>.",
+      "f4_title": "\u041d\u0435\u0443\u0431\u0438\u0432\u0430\u0435\u043c\u044b\u0439 \u043f\u043b\u0430\u0432\u0430\u044e\u0449\u0438\u0439 \u0442\u0435\u0440\u043c\u0438\u043d\u0430\u043b",
+      "f4_desc": "\u041f\u0438\u0448\u0438\u0442\u0435 \u043a\u043e\u0434 \u0438 \u0441\u043b\u0435\u0434\u0438\u0442\u0435 \u0437\u0430 \u043b\u043e\u0433\u0430\u043c\u0438 \u0432 \u0440\u0435\u0436\u0438\u043c\u0435 \u0440\u0430\u0437\u0434\u0435\u043b\u0435\u043d\u043d\u043e\u0433\u043e \u044d\u043a\u0440\u0430\u043d\u0430. \u0417\u0430\u0449\u0438\u0442\u0430 \u043f\u0430\u043c\u044f\u0442\u0438 30 \u041c\u0411 Anti-OOM \u0438 \u043f\u0440\u0435\u0440\u044b\u0432\u0430\u0442\u0435\u043b\u044c \u0431\u0435\u0441\u043a\u043e\u043d\u0435\u0447\u043d\u044b\u0445 \u0446\u0438\u043a\u043b\u043e\u0432 \u0433\u0430\u0440\u0430\u043d\u0442\u0438\u0440\u0443\u044e\u0442 \u0440\u0430\u0431\u043e\u0442\u0443 \u0431\u0435\u0437 \u0437\u0430\u0432\u0438\u0441\u0430\u043d\u0438\u0439.",
+      "cta_h2": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u043d\u0430 Python \u043d\u0430 Android \u0441\u0435\u0433\u043e\u0434\u043d\u044f",
+      "cta_desc": "\u041f\u0440\u0438\u0441\u043e\u0435\u0434\u0438\u043d\u044f\u0439\u0442\u0435\u0441\u044c \u043a \u0442\u044b\u0441\u044f\u0447\u0430\u043c \u0438\u043d\u0436\u0435\u043d\u0435\u0440\u043e\u0432 \u0438 \u0430\u043d\u0430\u043b\u0438\u0442\u0438\u043a\u043e\u0432 \u0434\u0430\u043d\u043d\u044b\u0445, \u043f\u0438\u0448\u0443\u0449\u0438\u0445 \u043a\u043e\u0434 \u0432 \u043b\u044e\u0431\u043e\u043c \u043c\u0435\u0441\u0442\u0435."
+    }
+  },
+  "cpp_ide": {
+    "en": {
+      "metaTitle": "C++ Compiler & IDE for Android | Code Editor: SuperCode",
+      "metaDesc": "Transform your Android phone into a hardcore C++ IDE. SuperCode brings a 100% offline LLVM/Clang compiler with full C11 and C++20 support, multi-file workspace resolution, and an infinite-loop protected mobile console.",
+      "hero_tag": "MOBILE C++ WORKSPACE",
+      "hero_h1": "The Ultimate <span class=\"text-gradient\">C++ Compiler</span> &amp; IDE",
+      "hero_desc": "Take system programming into your own hands. SuperCode transforms your Android device into a hardcore <strong>C++ IDE</strong> driven by a native LLVM/Clang core. Write, compile, and execute C11 and C++20 code anywhere with 100% offline capability and zero latency.",
+      "f1_title": "True Local LLVM / Clang Core",
+      "f1_desc": "Stop relying on slow online code editors. SuperCode runs a complete, native C/C++ compilation toolchain on your device. Compile your source files into executables offline, instantly, and securely.",
+      "f2_title": "Multi-File Build System",
+      "f2_desc": "Build complex modular applications. Our intelligent dependency mapper tracks your <code>#include \"...\"</code> headers across your project directory, automatically linking all necessary objects for a flawless multi-file build experience on mobile.",
+      "f3_title": "Crash-Proof Mobile Terminal",
+      "f3_desc": "Accidentally wrote an infinite loop? SuperCode's console includes a hardware-grade 150,000-character buffer lock. It safely intercepts runaway log outputs before they can freeze or crash your Android device.",
+      "f4_title": "Zero-Latency Interactive Console",
+      "f4_desc": "A terminal that feels just like desktop. Execute your compiled C++ binaries within an immersive, split-screen console that supports real-time Standard Input (<code>std::cin</code>) and fluid 120Hz output rendering.",
+      "cta_h2": "Start Compiling C++ on Android Today",
+      "cta_desc": "Join thousands of engineers pushing the boundaries of mobile coding."
+    },
+    "zh": {
+      "metaTitle": "Android \u79bb\u7ebf C++ Compiler (C/C++ \u7f16\u8bd1\u5668) \u4e0e C++ IDE | SuperCode",
+      "metaDesc": "\u5c06\u4f60\u7684 Android \u624b\u673a\u6253\u9020\u4e3a\u786c\u6838\u79bb\u7ebf C++ IDE\u3002SuperCode \u5185\u7f6e 100% \u79bb\u7ebf LLVM/Clang \u7f16\u8bd1\u5668\uff0c\u5b8c\u6574\u652f\u6301 C11 \u4e0e C++20 \u6807\u51c6\u3001\u591a\u6587\u4ef6\u5934\u6587\u4ef6\u81ea\u52a8\u94fe\u63a5\u4ee5\u53ca\u9632\u6b7b\u5faa\u73af\u5d29\u6e83\u7684\u79fb\u52a8\u7ec8\u7aef\u3002",
+      "hero_tag": "\u79fb\u52a8 C/C++ \u7f16\u8bd1\u5de5\u4f5c\u533a",
+      "hero_h1": "\u7ec8\u6781 <span class=\"text-gradient\">C++ Compiler (C++ \u7f16\u8bd1\u5668)</span> \u4e0e\u79bb\u7ebf IDE",
+      "hero_desc": "\u5c06\u7cfb\u7edf\u7ea7\u7f16\u7a0b\u638c\u63e1\u5728\u81ea\u5df1\u624b\u4e2d\u3002SuperCode \u501f\u52a9\u539f\u751f LLVM/Clang \u5185\u6838\uff0c\u5c06\u4f60\u7684 Android \u8bbe\u5907\u53d8\u4e3a\u786c\u6838 <strong>C++ IDE</strong>\u3002\u968f\u65f6\u968f\u5730 100% \u79bb\u7ebf\u3001\u96f6\u5ef6\u8fdf\u7f16\u5199\u3001\u7f16\u8bd1\u5e76\u8fd0\u884c C11 \u4e0e C++20 \u4ee3\u7801\u3002",
+      "f1_title": "\u771f\u6b63\u7684\u672c\u5730 LLVM / Clang \u7f16\u8bd1\u6838\u5fc3",
+      "f1_desc": "\u544a\u522b\u7f13\u6162\u7684\u5728\u7ebf\u7f16\u8bd1\u5668\u3002SuperCode \u5728\u624b\u673a\u672c\u5730\u8fd0\u884c\u5b8c\u6574\u7684 C/C++ \u7f16\u8bd1\u5de5\u5177\u94fe\uff0c\u65e0\u9700\u8054\u7f51\u5373\u53ef\u5feb\u901f\u3001\u5b89\u5168\u5730\u5c06\u6e90\u7801\u7f16\u8bd1\u4e3a\u53ef\u6267\u884c\u7a0b\u5e8f\u3002",
+      "f2_title": "\u591a\u6587\u4ef6\u6784\u5efa\u4e0e\u5934\u6587\u4ef6\u81ea\u52a8\u94fe\u63a5",
+      "f2_desc": "\u652f\u6301\u6a21\u5757\u5316\u5927\u578b\u5de5\u7a0b\u3002\u667a\u80fd\u4f9d\u8d56\u6620\u5c04\u5668\u81ea\u52a8\u8ffd\u8e2a\u9879\u76ee\u76ee\u5f55\u4e0b\u7684 <code>#include \"...\"</code> \u81ea\u5b9a\u4e49\u5934\u6587\u4ef6\u5e76\u81ea\u52a8\u5b8c\u6210\u591a\u6587\u4ef6\u7f16\u8bd1\u94fe\u63a5\u3002",
+      "f3_title": "150,000 \u5b57\u7b26\u786c\u4ef6\u7ea7\u9632\u6b7b\u5faa\u73af\u7ec8\u7aef",
+      "f3_desc": "\u4e0d\u5c0f\u5fc3\u5199\u51fa\u4e86\u6b7b\u5faa\u73af\uff1fSuperCode \u7ec8\u7aef\u5185\u7f6e\u786c\u4ef6\u7ea7 150,000 \u5b57\u7b26\u7f13\u51b2\u533a\u9501\uff0c\u5728\u5931\u63a7\u65e5\u5fd7\u51bb\u7ed3\u6216\u641e\u57ae Android \u624b\u673a\u524d\u5c06\u5176\u5b89\u5168\u62e6\u622a\u3002",
+      "f4_title": "\u96f6\u5ef6\u8fdf\u4ea4\u4e92\u5f0f\u63a7\u5236\u53f0 (\u652f\u6301 std::cin)",
+      "f4_desc": "\u5ab2\u7f8e\u684c\u9762\u7aef\u7684\u7ec8\u7aef\u4f53\u9a8c\u3002\u5728\u6c89\u6d78\u5f0f\u5206\u5c4f\u63a7\u5236\u53f0\u4e2d\u6267\u884c\u7f16\u8bd1\u540e\u7684 C++ \u7a0b\u5e8f\uff0c\u5b8c\u7f8e\u652f\u6301\u5b9e\u65f6\u6807\u51c6\u8f93\u5165 (<code>std::cin</code>) \u4e0e 120Hz \u6d41\u7545\u8f93\u51fa\u6e32\u67d3\u3002",
+      "cta_h2": "\u7acb\u5373\u5728 Android \u4e0a\u79bb\u7ebf\u7f16\u8bd1 C/C++",
+      "cta_desc": "\u52a0\u5165\u6570\u5343\u540d\u7a81\u7834\u79fb\u52a8\u7f16\u7a0b\u6781\u9650\u7684\u7cfb\u7edf\u5de5\u7a0b\u5e08\u4e0e\u7b97\u6cd5\u7ade\u8d5b\u5f00\u53d1\u8005\u3002"
+    },
+    "es": {
+      "metaTitle": "C++ Compiler (Compilador C++) y C++ IDE para Android | SuperCode",
+      "metaDesc": "Transforma tu Android en un potente C++ IDE. SuperCode incluye un compilador LLVM/Clang 100% offline con soporte completo C11 y C++20, proyectos multi-archivo y consola protegida contra bucles infinitos.",
+      "hero_tag": "ENTORNO C++ M\u00d3VIL",
+      "hero_h1": "El Mejor <span class=\"text-gradient\">C++ Compiler (Compilador C++)</span> e IDE",
+      "hero_desc": "Toma el control de la programaci\u00f3n de sistemas. SuperCode convierte tu Android en un <strong>C++ IDE</strong> impulsado por un n\u00facleo nativo LLVM/Clang. Compila y ejecuta c\u00f3digo C11 y C++20 100% offline y sin latencia.",
+      "f1_title": "N\u00facleo Local Real LLVM / Clang",
+      "f1_desc": "Deja de depender de editores online lentos. SuperCode ejecuta una cadena de compilaci\u00f3n C/C++ completa en tu dispositivo de forma instant\u00e1nea y segura.",
+      "f2_title": "Sistema de Compilaci\u00f3n Multi-Archivo",
+      "f2_desc": "Nuestro mapeador de dependencias rastrea tus cabeceras <code>#include \"...\"</code> en todo el directorio del proyecto, enlazando autom\u00e1ticamente todos los objetos.",
+      "f3_title": "Terminal M\u00f3vil a Prueba de Fallos",
+      "f3_desc": "\u00bfEscribiste un bucle infinito por error? La consola incluye un bloqueo de b\u00fafer de 150,000 caracteres que intercepta salidas descontroladas antes de congelar tu Android.",
+      "f4_title": "Consola Interactiva sin Latencia (std::cin)",
+      "f4_desc": "Ejecuta tus binarios C++ en una consola de pantalla dividida con soporte en tiempo real para entrada est\u00e1ndar (<code>std::cin</code>) a 120Hz.",
+      "cta_h2": "Empieza a Compilar C++ en Android Hoy",
+      "cta_desc": "\u00danete a miles de ingenieros que llevan la programaci\u00f3n de sistemas al m\u00f3vil."
+    },
+    "ja": {
+      "metaTitle": "Android \u5411\u3051\u30aa\u30d5\u30e9\u30a4\u30f3 C++ Compiler (C++\u30b3\u30f3\u30d1\u30a4\u30e9) & C++ IDE | SuperCode",
+      "metaDesc": "Android \u30b9\u30de\u30db\u3092\u672c\u683c\u6d3e C++ IDE \u306b\u9032\u5316\u3002C11 \u304a\u3088\u3073 C++20 \u306b\u5b8c\u5168\u5bfe\u5fdc\u3057\u305f 100% \u30aa\u30d5\u30e9\u30a4\u30f3\u306e LLVM/Clang \u30b3\u30f3\u30d1\u30a4\u30e9\u3001\u30de\u30eb\u30c1\u30d5\u30a1\u30a4\u30eb\u30d3\u30eb\u30c9\u3001\u7121\u9650\u30eb\u30fc\u30d7\u4fdd\u8b77\u30b3\u30f3\u30bd\u30fc\u30eb\u3092\u642d\u8f09\u3002",
+      "hero_tag": "\u30e2\u30d0\u30a4\u30eb C++ \u30ef\u30fc\u30af\u30b9\u30da\u30fc\u30b9",
+      "hero_h1": "\u7a76\u6975\u306e <span class=\"text-gradient\">C++ Compiler (C++\u30b3\u30f3\u30d1\u30a4\u30e9)</span> &amp; IDE",
+      "hero_desc": "\u30b7\u30b9\u30c6\u30e0\u30d7\u30ed\u30b0\u30e9\u30df\u30f3\u30b0\u3092\u305d\u306e\u624b\u306b\u3002\u30cd\u30a4\u30c6\u30a3\u30d6 LLVM/Clang \u30b3\u30a2\u3092\u642d\u8f09\u3057\u305f SuperCode \u304c\u3001Android \u7aef\u672b\u3092\u30cf\u30fc\u30c9\u30b3\u30a2\u306a <strong>C++ IDE</strong> \u306b\u5909\u3048\u307e\u3059\u3002C11 / C++20 \u30b3\u30fc\u30c9\u3092100%\u30aa\u30d5\u30e9\u30a4\u30f3\u30fb\u9045\u5ef6\u30bc\u30ed\u3067\u30b3\u30f3\u30d1\u30a4\u30eb\uff06\u5b9f\u884c\u3002",
+      "f1_title": "\u5b8c\u5168\u30ed\u30fc\u30ab\u30eb\u306e LLVM / Clang \u30b3\u30a2",
+      "f1_desc": "\u9045\u3044\u30aa\u30f3\u30e9\u30a4\u30f3\u30a8\u30c7\u30a3\u30bf\u306b\u983c\u308b\u5fc5\u8981\u306f\u3042\u308a\u307e\u305b\u3093\u3002\u7aef\u672b\u4e0a\u3067\u5b8c\u5168\u306a C/C++ \u30b3\u30f3\u30d1\u30a4\u30eb\u30c4\u30fc\u30eb\u30c1\u30a7\u30fc\u30f3\u3092\u5b9f\u884c\u3057\u3001\u30aa\u30d5\u30e9\u30a4\u30f3\u3067\u77ac\u6642\u306b\u30d0\u30a4\u30ca\u30ea\u3092\u751f\u6210\u3057\u307e\u3059\u3002",
+      "f2_title": "\u30de\u30eb\u30c1\u30d5\u30a1\u30a4\u30eb\u30fb\u30d3\u30eb\u30c9\u30b7\u30b9\u30c6\u30e0",
+      "f2_desc": "\u30a4\u30f3\u30c6\u30ea\u30b8\u30a7\u30f3\u30c8\u306a\u4f9d\u5b58\u95a2\u4fc2\u30de\u30c3\u30d1\u30fc\u304c\u30d7\u30ed\u30b8\u30a7\u30af\u30c8\u5185\u306e <code>#include \"...\"</code> \u30d8\u30c3\u30c0\u30fc\u3092\u8ffd\u8de1\u3057\u3001\u8907\u6570\u30bd\u30fc\u30b9\u30d5\u30a1\u30a4\u30eb\u3092\u81ea\u52d5\u30ea\u30f3\u30af\u3057\u3066\u30d3\u30eb\u30c9\u3057\u307e\u3059\u3002",
+      "f3_title": "\u30af\u30e9\u30c3\u30b7\u30e5\u9632\u6b62\u30e2\u30d0\u30a4\u30eb\u30bf\u30fc\u30df\u30ca\u30eb",
+      "f3_desc": "\u3046\u3063\u304b\u308a\u7121\u9650\u30eb\u30fc\u30d7\u3092\u66f8\u3044\u3066\u3082\u5b89\u5fc3\u3002150,000 \u6587\u5b57\u306e\u30cf\u30fc\u30c9\u30a6\u30a7\u30a2\u7d1a\u30d0\u30c3\u30d5\u30a1\u30ed\u30c3\u30af\u304c\u66b4\u8d70\u3059\u308b\u51fa\u529b\u3092\u5b89\u5168\u306b\u906e\u65ad\u3057\u3001\u7aef\u672b\u306e\u30d5\u30ea\u30fc\u30ba\u3092\u9632\u304e\u307e\u3059\u3002",
+      "f4_title": "\u9045\u5ef6\u30bc\u30ed\u306e\u5bfe\u8a71\u578b\u30b3\u30f3\u30bd\u30fc\u30eb (std::cin \u5bfe\u5fdc)",
+      "f4_desc": "\u30c7\u30b9\u30af\u30c8\u30c3\u30d7\u540c\u7b49\u306e\u30bf\u30fc\u30df\u30ca\u30eb\u4f53\u9a13\u3002\u30ea\u30a2\u30eb\u30bf\u30a4\u30e0\u6a19\u6e96\u5165\u529b (<code>std::cin</code>) \u3068\u6ed1\u3089\u304b\u306a 120Hz \u51fa\u529b\u63cf\u753b\u306b\u5bfe\u5fdc\u3059\u308b\u5206\u5272\u753b\u9762\u30b3\u30f3\u30bd\u30fc\u30eb\u3092\u642d\u8f09\u3002",
+      "cta_h2": "Android \u3067\u4eca\u3059\u3050 C++ \u30b3\u30f3\u30d1\u30a4\u30eb\u3092\u59cb\u3081\u3088\u3046",
+      "cta_desc": "\u30e2\u30d0\u30a4\u30eb\u30b3\u30fc\u30c7\u30a3\u30f3\u30b0\u306e\u9650\u754c\u3092\u62bc\u3057\u5e83\u3052\u308b\u4f55\u5343\u4eba\u3082\u306e\u30a8\u30f3\u30b8\u30cb\u30a2\u306b\u52a0\u308f\u308a\u307e\u3057\u3087\u3046\u3002"
+    },
+    "de": {
+      "metaTitle": "C++ Compiler (C++-Kompilierer) & C++ IDE f\u00fcr Android | SuperCode",
+      "metaDesc": "Verwandeln Sie Ihr Android-Smartphone in eine Hardcore C++ IDE. 100% Offline LLVM/Clang Compiler mit voller C11- und C++20-Unterst\u00fctzung, Multi-Datei-Build und Endlosschleifen-Schutz.",
+      "hero_tag": "MOBILER C++ ARBEITSBEREICH",
+      "hero_h1": "Der Ultimative <span class=\"text-gradient\">C++ Compiler</span> &amp; IDE",
+      "hero_desc": "Systemprogrammierung in Ihrer Hand. SuperCode verwandelt Ihr Android-Ger\u00e4t in eine <strong>C++ IDE</strong> mit nativem LLVM/Clang-Kern. Schreiben, kompilieren und starten Sie C11- und C++20-Code zu 100% offline.",
+      "f1_title": "Echter Lokaler LLVM / Clang Kern",
+      "f1_desc": "Keine langsamen Online-Compiler mehr. SuperCode f\u00fchrt eine komplette C/C++-Toolchain direkt auf Ihrem Ger\u00e4t aus \u2013 sofort, offline und sicher.",
+      "f2_title": "Multi-Datei-Build-System",
+      "f2_desc": "Unser Abh\u00e4ngigkeits-Mapper verfolgt Ihre <code>#include \"...\"</code>-Header im gesamten Projektverzeichnis und verkn\u00fcpft automatisch alle Objekte.",
+      "f3_title": "Absturzsicheres Mobiles Terminal",
+      "f3_desc": "Versehentlich eine Endlosschleife programmiert? Die 150.000-Zeichen-Puffersperre f\u00e4ngt unkontrollierte Ausgaben sicher ab, bevor Ihr Ger\u00e4t einfriert.",
+      "f4_title": "Interaktive Konsole ohne Latenz (std::cin)",
+      "f4_desc": "F\u00fchren Sie kompilierte C++-Bin\u00e4rdateien in einer Split-Screen-Konsole mit Echtzeit-Standardeingabe (<code>std::cin</code>) und 120Hz-Rendering aus.",
+      "cta_h2": "Kompilieren Sie C++ noch heute auf Android",
+      "cta_desc": "Schlie\u00dfen Sie sich tausenden Ingenieuren an, die mobil in C/C++ entwickeln."
+    },
+    "fr": {
+      "metaTitle": "C++ Compiler (Compilateur C++) & C++ IDE pour Android | SuperCode",
+      "metaDesc": "Transformez votre t\u00e9l\u00e9phone Android en v\u00e9ritable C++ IDE. Compilateur LLVM/Clang 100% hors ligne avec support complet C11 et C++20, compilation multi-fichiers et console prot\u00e9g\u00e9e contre les boucles infinies.",
+      "hero_tag": "ESPACE C++ MOBILE",
+      "hero_h1": "L'Ultime <span class=\"text-gradient\">C++ Compiler (Compilateur C++)</span> &amp; IDE",
+      "hero_desc": "Prenez en main la programmation syst\u00e8me. SuperCode transforme votre appareil Android en <strong>C++ IDE</strong> propuls\u00e9 par un c\u0153ur natif LLVM/Clang. Compilez et ex\u00e9cutez du code C11 et C++20 100% hors ligne.",
+      "f1_title": "V\u00e9ritable C\u0153ur Local LLVM / Clang",
+      "f1_desc": "Ne d\u00e9pendez plus des \u00e9diteurs en ligne lents. SuperCode ex\u00e9cute une cha\u00eene de compilation C/C++ compl\u00e8te sur votre appareil, instantan\u00e9ment et hors ligne.",
+      "f2_title": "Syst\u00e8me de Build Multi-Fichiers",
+      "f2_desc": "Notre analyseur de d\u00e9pendances suit vos en-t\u00eates <code>#include \"...\"</code> dans tout le r\u00e9pertoire du projet et lie automatiquement tous les fichiers objets.",
+      "f3_title": "Terminal Mobile Anti-Plantage",
+      "f3_desc": "Une boucle infinie par erreur ? Le verrou de tampon de 150 000 caract\u00e8res intercepte les sorties incontr\u00f4l\u00e9es avant qu'elles ne bloquent votre Android.",
+      "f4_title": "Console Interactive Z\u00e9ro Latence (std::cin)",
+      "f4_desc": "Ex\u00e9cutez vos binaires C++ dans une console en \u00e9cran partag\u00e9 prenant en charge l'entr\u00e9e standard en temps r\u00e9el (<code>std::cin</code>) et un rendu fluide \u00e0 120Hz.",
+      "cta_h2": "Commencez \u00e0 Compiler du C++ sur Android Aujourd'hui",
+      "cta_desc": "Rejoignez des milliers d'ing\u00e9nieurs qui repoussent les limites du codage mobile."
+    },
+    "ko": {
+      "metaTitle": "Android\uc6a9 \uc624\ud504\ub77c\uc778 C++ Compiler (C++ \ucef4\ud30c\uc77c\ub7ec) \ubc0f C++ IDE | SuperCode",
+      "metaDesc": "Android \uc2a4\ub9c8\ud2b8\ud3f0\uc744 \uac15\ub825\ud55c C++ IDE\ub85c \uc804\ud658\ud558\uc138\uc694. \uc644\ubcbd\ud55c C11 \ubc0f C++20\uc744 \uc9c0\uc6d0\ud558\ub294 100% \uc624\ud504\ub77c\uc778 LLVM/Clang \ucef4\ud30c\uc77c\ub7ec, \ub2e4\uc911 \ud30c\uc77c \ube4c\ub4dc \ubc0f \ubb34\ud55c \ub8e8\ud504 \ubcf4\ud638 \ucf58\uc194 \ud0d1\uc7ac.",
+      "hero_tag": "\ubaa8\ubc14\uc77c C++ \uc6cc\ud06c\uc2a4\ud398\uc774\uc2a4",
+      "hero_h1": "\uad81\uadf9\uc758 <span class=\"text-gradient\">C++ Compiler (C++ \ucef4\ud30c\uc77c\ub7ec)</span> &amp; IDE",
+      "hero_desc": "\uc2dc\uc2a4\ud15c \ud504\ub85c\uadf8\ub798\ubc0d\uc744 \ub0b4 \uc190\uc548\uc5d0. SuperCode\ub294 \ub124\uc774\ud2f0\ube0c LLVM/Clang \ucf54\uc5b4\ub97c \ud1b5\ud574 Android \uae30\uae30\ub97c \ud558\ub4dc\ucf54\uc5b4 <strong>C++ IDE</strong>\ub85c \ud0c8\ubc14\uafc8\uc2dc\ud0b5\ub2c8\ub2e4. \uc5b8\uc81c \uc5b4\ub514\uc11c\ub098 \uc9c0\uc5f0 \uc5c6\uc774 100% \uc624\ud504\ub77c\uc778\uc73c\ub85c C11 \ubc0f C++20 \ucf54\ub4dc\ub97c \uc791\uc131, \ucef4\ud30c\uc77c \ubc0f \uc2e4\ud589\ud558\uc138\uc694.",
+      "f1_title": "\uc9c4\uc815\ud55c \ub85c\uceec LLVM / Clang \ucf54\uc5b4",
+      "f1_desc": "\ub290\ub9b0 \uc628\ub77c\uc778 \ucf54\ub4dc \uc5d0\ub514\ud130\uc5d0 \uc758\uc874\ud558\uc9c0 \ub9c8\uc138\uc694. \uae30\uae30\uc5d0\uc11c \uc644\uc804\ud55c \ub124\uc774\ud2f0\ube0c C/C++ \ucef4\ud30c\uc77c \ud234\uccb4\uc778\uc744 \uc2e4\ud589\ud558\uc5ec \uc624\ud504\ub77c\uc778\uc5d0\uc11c \uc989\uc2dc \uc548\uc804\ud558\uac8c \ucef4\ud30c\uc77c\ud569\ub2c8\ub2e4.",
+      "f2_title": "\ub2e4\uc911 \ud30c\uc77c \ube4c\ub4dc \uc2dc\uc2a4\ud15c",
+      "f2_desc": "\uc9c0\ub2a5\ud615 \uc885\uc18d\uc131 \ub9e4\ud37c\uac00 \ud504\ub85c\uc81d\ud2b8 \ub514\ub809\ud130\ub9ac \uc804\uccb4\uc5d0\uc11c <code>#include \"...\"</code> \ud5e4\ub354\ub97c \ucd94\uc801\ud558\uc5ec \ud544\uc694\ud55c \ubaa8\ub4e0 \uc624\ube0c\uc81d\ud2b8\ub97c \uc790\ub3d9\uc73c\ub85c \ub9c1\ud06c\ud569\ub2c8\ub2e4.",
+      "f3_title": "\ucda9\ub3cc \ubc29\uc9c0 \ubaa8\ubc14\uc77c \ud130\ubbf8\ub110",
+      "f3_desc": "\uc2e4\uc218\ub85c \ubb34\ud55c \ub8e8\ud504\ub97c \uc791\uc131\ud558\uc168\ub098\uc694? \ud558\ub4dc\uc6e8\uc5b4\uae09 150,000\uc790 \ubc84\ud37c \uc7a0\uae08\uc774 \ud3ed\uc8fc\ud558\ub294 \ub85c\uadf8 \ucd9c\ub825\uc744 \uc548\uc804\ud558\uac8c \ucc28\ub2e8\ud558\uc5ec \uae30\uae30 \uba48\ucda4\uc744 \ubc29\uc9c0\ud569\ub2c8\ub2e4.",
+      "f4_title": "\uc9c0\uc5f0 \uc5c6\ub294 \ub300\ud654\ud615 \ucf58\uc194 (std::cin \uc9c0\uc6d0)",
+      "f4_desc": "\ub370\uc2a4\ud06c\ud1b1\uacfc \ub3d9\uc77c\ud55c \ud130\ubbf8\ub110 \ud658\uacbd. \uc2e4\uc2dc\uac04 \ud45c\uc900 \uc785\ub825(<code>std::cin</code>)\uacfc \ubd80\ub4dc\ub7ec\uc6b4 120Hz \ub80c\ub354\ub9c1\uc744 \uc9c0\uc6d0\ud558\ub294 \ubd84\ud560 \ud654\uba74 \ucf58\uc194\uc5d0\uc11c C++ \ubc14\uc774\ub108\ub9ac\ub97c \uc2e4\ud589\ud558\uc138\uc694.",
+      "cta_h2": "\uc9c0\uae08 Android\uc5d0\uc11c C++ \ucef4\ud30c\uc77c\uc744 \uc2dc\uc791\ud558\uc138\uc694",
+      "cta_desc": "\ubaa8\ubc14\uc77c \ucf54\ub529\uc758 \ud55c\uacc4\ub97c \ub113\ud600\uac00\ub294 \uc218\ucc9c \uba85\uc758 \uc5d4\uc9c0\ub2c8\uc5b4\uc640 \ud568\uaed8\ud558\uc138\uc694."
+    },
+    "pt": {
+      "metaTitle": "C++ Compiler (Compilador C++) e C++ IDE para Android | SuperCode",
+      "metaDesc": "Transforme seu celular Android em uma C++ IDE hardcore. O SuperCode traz um compilador LLVM/Clang 100% offline com suporte total a C11 e C++20, projetos multi-arquivo e console protegido contra loops infinitos.",
+      "hero_tag": "AMBIENTE C++ M\u00d3VEL",
+      "hero_h1": "O Definitivo <span class=\"text-gradient\">C++ Compiler (Compilador C++)</span> &amp; IDE",
+      "hero_desc": "Assuma o controle da programa\u00e7\u00e3o de sistemas. O SuperCode transforma seu dispositivo Android em uma <strong>C++ IDE</strong> impulsionada por um n\u00facleo nativo LLVM/Clang. Compile e execute c\u00f3digo C11 e C++20 100% offline.",
+      "f1_title": "Verdadeiro N\u00facleo Local LLVM / Clang",
+      "f1_desc": "Pare de depender de editores online lentos. O SuperCode executa uma cadeia completa de compila\u00e7\u00e3o C/C++ no seu dispositivo de forma instant\u00e2nea e segura.",
+      "f2_title": "Sistema de Build Multi-Arquivo",
+      "f2_desc": "Nosso mapeador inteligente rastreia seus cabe\u00e7alhos <code>#include \"...\"</code> em todo o diret\u00f3rio do projeto, vinculando automaticamente todos os objetos.",
+      "f3_title": "Terminal M\u00f3vel \u00e0 Prova de Travamentos",
+      "f3_desc": "Escreveu um loop infinito por acidente? O console inclui um bloqueio de buffer de 150.000 caracteres que intercepta sa\u00eddas descontroladas antes de travar seu Android.",
+      "f4_title": "Console Interativo com Zero Lat\u00eancia (std::cin)",
+      "f4_desc": "Execute seus bin\u00e1rios C++ em um console de tela dividida com suporte em tempo real para Entrada Padr\u00e3o (<code>std::cin</code>) e renderiza\u00e7\u00e3o a 120Hz.",
+      "cta_h2": "Comece a Compilar C++ no Android Hoje",
+      "cta_desc": "Junte-se a milhares de engenheiros expandindo os limites da programa\u00e7\u00e3o m\u00f3vel."
+    },
+    "hi": {
+      "metaTitle": "Android \u0915\u0947 \u0932\u093f\u090f \u0911\u092b\u093c\u0932\u093e\u0907\u0928 C++ Compiler (C++ \u0915\u0902\u092a\u093e\u0907\u0932\u0930) \u0914\u0930 C++ IDE | SuperCode",
+      "metaDesc": "\u0905\u092a\u0928\u0947 Android \u092b\u093c\u094b\u0928 \u0915\u094b \u0939\u093e\u0930\u094d\u0921\u0915\u094b\u0930 C++ IDE \u092e\u0947\u0902 \u092c\u0926\u0932\u0947\u0902\u0964 SuperCode \u092a\u0942\u0930\u094d\u0923 C11 \u0914\u0930 C++20 \u0938\u092a\u094b\u0930\u094d\u091f, \u092e\u0932\u094d\u091f\u0940-\u092b\u093c\u093e\u0907\u0932 \u0935\u0930\u094d\u0915\u0938\u094d\u092a\u0947\u0938 \u0914\u0930 \u0905\u0928\u0902\u0924-\u0932\u0942\u092a \u0938\u0941\u0930\u0915\u094d\u0937\u093f\u0924 \u0915\u0902\u0938\u094b\u0932 \u0915\u0947 \u0938\u093e\u0925 100% \u0911\u092b\u093c\u0932\u093e\u0907\u0928 LLVM/Clang \u0915\u0902\u092a\u093e\u0907\u0932\u0930 \u0932\u093e\u0924\u093e \u0939\u0948\u0964",
+      "hero_tag": "\u092e\u094b\u092c\u093e\u0907\u0932 C++ \u0935\u0930\u094d\u0915\u0938\u094d\u092a\u0947\u0938",
+      "hero_h1": "\u0938\u0930\u094d\u0935\u0936\u094d\u0930\u0947\u0937\u094d\u0920 <span class=\"text-gradient\">C++ Compiler (C++ \u0915\u0902\u092a\u093e\u0907\u0932\u0930)</span> \u0914\u0930 IDE",
+      "hero_desc": "\u0938\u093f\u0938\u094d\u091f\u092e \u092a\u094d\u0930\u094b\u0917\u094d\u0930\u093e\u092e\u093f\u0902\u0917 \u0915\u094b \u0905\u092a\u0928\u0947 \u0939\u093e\u0925\u094b\u0902 \u092e\u0947\u0902 \u0932\u0947\u0902\u0964 SuperCode \u0928\u0947\u091f\u093f\u0935 LLVM/Clang \u0915\u094b\u0930 \u0926\u094d\u0935\u093e\u0930\u093e \u0938\u0902\u091a\u093e\u0932\u093f\u0924 \u0906\u092a\u0915\u0947 Android \u0921\u093f\u0935\u093e\u0907\u0938 \u0915\u094b \u090f\u0915 \u0939\u093e\u0930\u094d\u0921\u0915\u094b\u0930 <strong>C++ IDE</strong> \u092e\u0947\u0902 \u092c\u0926\u0932 \u0926\u0947\u0924\u093e \u0939\u0948\u0964 100% \u0911\u092b\u093c\u0932\u093e\u0907\u0928 \u0914\u0930 \u091c\u093c\u0940\u0930\u094b \u0932\u0947\u091f\u0947\u0902\u0938\u0940 \u0915\u0947 \u0938\u093e\u0925 C11 \u0914\u0930 C++20 \u0915\u094b\u0921 \u0932\u093f\u0916\u0947\u0902, \u0915\u0902\u092a\u093e\u0907\u0932 \u0915\u0930\u0947\u0902 \u0914\u0930 \u091a\u0932\u093e\u090f\u0902\u0964",
+      "f1_title": "\u0938\u091a\u094d\u091a\u093e \u0932\u094b\u0915\u0932 LLVM / Clang \u0915\u094b\u0930",
+      "f1_desc": "\u0927\u0940\u092e\u0947 \u0911\u0928\u0932\u093e\u0907\u0928 \u0915\u094b\u0921 \u090f\u0921\u093f\u091f\u0930\u094d\u0938 \u092a\u0930 \u0928\u093f\u0930\u094d\u092d\u0930 \u0930\u0939\u0928\u093e \u092c\u0902\u0926 \u0915\u0930\u0947\u0902\u0964 SuperCode \u0906\u092a\u0915\u0947 \u0921\u093f\u0935\u093e\u0907\u0938 \u092a\u0930 \u090f\u0915 \u092a\u0942\u0930\u094d\u0923, \u0928\u0947\u091f\u093f\u0935 C/C++ \u0915\u0902\u092a\u093e\u0907\u0932\u0947\u0936\u0928 \u091f\u0942\u0932\u091a\u0947\u0928 \u0911\u092b\u093c\u0932\u093e\u0907\u0928 \u0914\u0930 \u0938\u0941\u0930\u0915\u094d\u0937\u093f\u0924 \u0930\u0942\u092a \u0938\u0947 \u091a\u0932\u093e\u0924\u093e \u0939\u0948\u0964",
+      "f2_title": "\u092e\u0932\u094d\u091f\u0940-\u092b\u093c\u093e\u0907\u0932 \u092c\u093f\u0932\u094d\u0921 \u0938\u093f\u0938\u094d\u091f\u092e",
+      "f2_desc": "\u091c\u091f\u093f\u0932 \u092e\u0949\u0921\u094d\u092f\u0942\u0932\u0930 \u090f\u092a\u094d\u0932\u093f\u0915\u0947\u0936\u0928 \u092c\u0928\u093e\u090f\u0902\u0964 \u0939\u092e\u093e\u0930\u093e \u0921\u093f\u092a\u0947\u0902\u0921\u0947\u0902\u0938\u0940 \u092e\u0948\u092a\u0930 \u0906\u092a\u0915\u0947 \u092a\u094d\u0930\u094b\u091c\u0947\u0915\u094d\u091f \u0921\u093e\u092f\u0930\u0947\u0915\u094d\u091f\u0930\u0940 \u092e\u0947\u0902 <code>#include \"...\"</code> \u0939\u0947\u0921\u0930 \u0915\u094b \u091f\u094d\u0930\u0948\u0915 \u0915\u0930\u0924\u093e \u0939\u0948 \u0914\u0930 \u0938\u092d\u0940 \u0906\u0935\u0936\u094d\u092f\u0915 \u0911\u092c\u094d\u091c\u0947\u0915\u094d\u091f\u094d\u0938 \u0915\u094b \u0938\u094d\u0935\u0924\u0903 \u0932\u093f\u0902\u0915 \u0915\u0930\u0924\u093e \u0939\u0948\u0964",
+      "f3_title": "\u0915\u094d\u0930\u0948\u0936-\u092a\u094d\u0930\u0942\u092b \u092e\u094b\u092c\u093e\u0907\u0932 \u091f\u0930\u094d\u092e\u093f\u0928\u0932",
+      "f3_desc": "\u0917\u0932\u0924\u0940 \u0938\u0947 \u0905\u0928\u0902\u0924 \u0932\u0942\u092a \u0932\u093f\u0916 \u0926\u093f\u092f\u093e? SuperCode \u0915\u0947 \u0915\u0902\u0938\u094b\u0932 \u092e\u0947\u0902 150,000-\u0915\u0948\u0930\u0947\u0915\u094d\u091f\u0930 \u092c\u092b\u093c\u0930 \u0932\u0949\u0915 \u0936\u093e\u092e\u093f\u0932 \u0939\u0948 \u091c\u094b \u0906\u092a\u0915\u0947 Android \u0921\u093f\u0935\u093e\u0907\u0938 \u0915\u094b \u092b\u094d\u0930\u0940\u091c\u093c \u0939\u094b\u0928\u0947 \u0938\u0947 \u092a\u0939\u0932\u0947 \u0939\u0940 \u0938\u0941\u0930\u0915\u094d\u0937\u093f\u0924 \u0930\u0942\u092a \u0938\u0947 \u0930\u094b\u0915 \u0932\u0947\u0924\u093e \u0939\u0948\u0964",
+      "f4_title": "\u091c\u093c\u0940\u0930\u094b-\u0932\u0947\u091f\u0947\u0902\u0938\u0940 \u0907\u0902\u091f\u0930\u0948\u0915\u094d\u091f\u093f\u0935 \u0915\u0902\u0938\u094b\u0932 (std::cin)",
+      "f4_desc": "\u0921\u0947\u0938\u094d\u0915\u091f\u0949\u092a \u091c\u0948\u0938\u093e \u091f\u0930\u094d\u092e\u093f\u0928\u0932 \u0905\u0928\u0941\u092d\u0935\u0964 \u0938\u094d\u092a\u094d\u0932\u093f\u091f-\u0938\u094d\u0915\u094d\u0930\u0940\u0928 \u0915\u0902\u0938\u094b\u0932 \u092e\u0947\u0902 \u0905\u092a\u0928\u0947 \u0915\u0902\u092a\u093e\u0907\u0932 \u0915\u093f\u090f \u0917\u090f C++ \u092c\u093e\u0907\u0928\u0930\u0940 \u091a\u0932\u093e\u090f\u0902 \u091c\u094b \u0930\u093f\u092f\u0932-\u091f\u093e\u0907\u092e \u0938\u094d\u091f\u0948\u0902\u0921\u0930\u094d\u0921 \u0907\u0928\u092a\u0941\u091f (<code>std::cin</code>) \u0914\u0930 120Hz \u0906\u0909\u091f\u092a\u0941\u091f \u0915\u093e \u0938\u092e\u0930\u094d\u0925\u0928 \u0915\u0930\u0924\u093e \u0939\u0948\u0964",
+      "cta_h2": "\u0906\u091c \u0939\u0940 Android \u092a\u0930 C++ \u0915\u0902\u092a\u093e\u0907\u0932 \u0915\u0930\u0928\u093e \u0936\u0941\u0930\u0942 \u0915\u0930\u0947\u0902",
+      "cta_desc": "\u092e\u094b\u092c\u093e\u0907\u0932 \u0915\u094b\u0921\u093f\u0902\u0917 \u0915\u0940 \u0938\u0940\u092e\u093e\u0913\u0902 \u0915\u094b \u0906\u0917\u0947 \u092c\u0922\u093c\u093e\u0928\u0947 \u0935\u093e\u0932\u0947 \u0939\u091c\u093c\u093e\u0930\u094b\u0902 \u0907\u0902\u091c\u0940\u0928\u093f\u092f\u0930\u094b\u0902 \u0938\u0947 \u091c\u0941\u0921\u093c\u0947\u0902\u0964"
+    },
+    "ru": {
+      "metaTitle": "\u041e\u0444\u043b\u0430\u0439\u043d C++ Compiler (\u041a\u043e\u043c\u043f\u0438\u043b\u044f\u0442\u043e\u0440 C++) \u0438 C++ IDE \u0434\u043b\u044f Android | SuperCode",
+      "metaDesc": "\u041f\u0440\u0435\u0432\u0440\u0430\u0442\u0438\u0442\u0435 \u0441\u0432\u043e\u0439 Android-\u0441\u043c\u0430\u0440\u0442\u0444\u043e\u043d \u0432 \u0445\u0430\u0440\u0434\u043a\u043e\u0440\u043d\u0443\u044e C++ IDE. 100% \u043e\u0444\u043b\u0430\u0439\u043d \u043a\u043e\u043c\u043f\u0438\u043b\u044f\u0442\u043e\u0440 LLVM/Clang \u0441 \u043f\u043e\u043b\u043d\u043e\u0439 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u043e\u0439 \u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043e\u0432 C11 \u0438 C++20, \u0441\u0431\u043e\u0440\u043a\u043e\u0439 \u043c\u043d\u043e\u0433\u043e\u0444\u0430\u0439\u043b\u043e\u0432\u044b\u0445 \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432 \u0438 \u0437\u0430\u0449\u0438\u0442\u043e\u0439 \u043e\u0442 \u0431\u0435\u0441\u043a\u043e\u043d\u0435\u0447\u043d\u044b\u0445 \u0446\u0438\u043a\u043b\u043e\u0432.",
+      "hero_tag": "\u041c\u041e\u0411\u0418\u041b\u042c\u041d\u0410\u042f \u0421\u0420\u0415\u0414\u0410 C++",
+      "hero_h1": "\u041b\u0443\u0447\u0448\u0438\u0439 <span class=\"text-gradient\">C++ Compiler (\u041a\u043e\u043c\u043f\u0438\u043b\u044f\u0442\u043e\u0440 C++)</span> \u0438 IDE",
+      "hero_desc": "\u0412\u043e\u0437\u044c\u043c\u0438\u0442\u0435 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u043e\u0435 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0432 \u0441\u0432\u043e\u0438 \u0440\u0443\u043a\u0438. SuperCode \u043f\u0440\u0435\u0432\u0440\u0430\u0449\u0430\u0435\u0442 \u0432\u0430\u0448\u0435 Android-\u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e \u0432 \u043c\u043e\u0449\u043d\u0443\u044e <strong>C++ IDE</strong> \u043d\u0430 \u0431\u0430\u0437\u0435 \u043d\u0430\u0442\u0438\u0432\u043d\u043e\u0433\u043e \u044f\u0434\u0440\u0430 LLVM/Clang. \u041f\u0438\u0448\u0438\u0442\u0435, \u043a\u043e\u043c\u043f\u0438\u043b\u0438\u0440\u0443\u0439\u0442\u0435 \u0438 \u0437\u0430\u043f\u0443\u0441\u043a\u0430\u0439\u0442\u0435 \u043a\u043e\u0434 C11 \u0438 C++20 \u043d\u0430 100% \u043e\u0444\u043b\u0430\u0439\u043d \u0431\u0435\u0437 \u0437\u0430\u0434\u0435\u0440\u0436\u0435\u043a.",
+      "f1_title": "\u041d\u0430\u0441\u0442\u043e\u044f\u0449\u0435\u0435 \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u043e\u0435 \u044f\u0434\u0440\u043e LLVM / Clang",
+      "f1_desc": "\u0425\u0432\u0430\u0442\u0438\u0442 \u0437\u0430\u0432\u0438\u0441\u0435\u0442\u044c \u043e\u0442 \u043c\u0435\u0434\u043b\u0435\u043d\u043d\u044b\u0445 \u043e\u043d\u043b\u0430\u0439\u043d-\u043a\u043e\u043c\u043f\u0438\u043b\u044f\u0442\u043e\u0440\u043e\u0432. SuperCode \u0437\u0430\u043f\u0443\u0441\u043a\u0430\u0435\u0442 \u043f\u043e\u043b\u043d\u043e\u0446\u0435\u043d\u043d\u044b\u0439 \u043d\u0430\u0442\u0438\u0432\u043d\u044b\u0439 \u0442\u0443\u043b\u0447\u0435\u0439\u043d \u043a\u043e\u043c\u043f\u0438\u043b\u044f\u0446\u0438\u0438 C/C++ \u043f\u0440\u044f\u043c\u043e \u043d\u0430 \u0432\u0430\u0448\u0435\u043c \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0435 \u2014 \u043c\u0433\u043d\u043e\u0432\u0435\u043d\u043d\u043e \u0438 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e.",
+      "f2_title": "\u041c\u043d\u043e\u0433\u043e\u0444\u0430\u0439\u043b\u043e\u0432\u0430\u044f \u0441\u0438\u0441\u0442\u0435\u043c\u0430 \u0441\u0431\u043e\u0440\u043a\u0438",
+      "f2_desc": "\u0421\u043e\u0437\u0434\u0430\u0432\u0430\u0439\u0442\u0435 \u043c\u043e\u0434\u0443\u043b\u044c\u043d\u044b\u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f. \u0423\u043c\u043d\u044b\u0439 \u0430\u043d\u0430\u043b\u0438\u0437\u0430\u0442\u043e\u0440 \u0437\u0430\u0432\u0438\u0441\u0438\u043c\u043e\u0441\u0442\u0435\u0439 \u043e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u0435\u0442 \u0432\u0430\u0448\u0438 \u0437\u0430\u0433\u043e\u043b\u043e\u0432\u043a\u0438 <code>#include \"...\"</code> \u043f\u043e \u0432\u0441\u0435\u0439 \u043f\u0430\u043f\u043a\u0435 \u043f\u0440\u043e\u0435\u043a\u0442\u0430 \u0438 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438 \u043b\u0438\u043d\u043a\u0443\u0435\u0442 \u043e\u0431\u044a\u0435\u043a\u0442\u043d\u044b\u0435 \u0444\u0430\u0439\u043b\u044b.",
+      "f3_title": "\u0417\u0430\u0449\u0438\u0449\u0435\u043d\u043d\u044b\u0439 \u043e\u0442 \u0437\u0430\u0432\u0438\u0441\u0430\u043d\u0438\u0439 \u0442\u0435\u0440\u043c\u0438\u043d\u0430\u043b",
+      "f3_desc": "\u0421\u043b\u0443\u0447\u0430\u0439\u043d\u043e \u043d\u0430\u043f\u0438\u0441\u0430\u043b\u0438 \u0431\u0435\u0441\u043a\u043e\u043d\u0435\u0447\u043d\u044b\u0439 \u0446\u0438\u043a\u043b? \u041a\u043e\u043d\u0441\u043e\u043b\u044c \u043e\u0441\u043d\u0430\u0449\u0435\u043d\u0430 \u0430\u043f\u043f\u0430\u0440\u0430\u0442\u043d\u043e\u0439 \u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u043a\u043e\u0439 \u0431\u0443\u0444\u0435\u0440\u0430 \u043d\u0430 150 000 \u0441\u0438\u043c\u0432\u043e\u043b\u043e\u0432, \u043a\u043e\u0442\u043e\u0440\u0430\u044f \u043f\u0435\u0440\u0435\u0445\u0432\u0430\u0442\u044b\u0432\u0430\u0435\u0442 \u043b\u0430\u0432\u0438\u043d\u0443 \u043b\u043e\u0433\u043e\u0432 \u0434\u043e \u0437\u0430\u0432\u0438\u0441\u0430\u043d\u0438\u044f \u0441\u043c\u0430\u0440\u0442\u0444\u043e\u043d\u0430.",
+      "f4_title": "\u0418\u043d\u0442\u0435\u0440\u0430\u043a\u0442\u0438\u0432\u043d\u0430\u044f \u043a\u043e\u043d\u0441\u043e\u043b\u044c \u0431\u0435\u0437 \u0437\u0430\u0434\u0435\u0440\u0436\u0435\u043a (std::cin)",
+      "f4_desc": "\u0417\u0430\u043f\u0443\u0441\u043a\u0430\u0439\u0442\u0435 \u0441\u043a\u043e\u043c\u043f\u0438\u043b\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0435 \u0431\u0438\u043d\u0430\u0440\u043d\u0438\u043a\u0438 C++ \u0432 \u043a\u043e\u043d\u0441\u043e\u043b\u0438 \u0441 \u0440\u0430\u0437\u0434\u0435\u043b\u0435\u043d\u0438\u0435\u043c \u044d\u043a\u0440\u0430\u043d\u0430, \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u043e\u0439 \u0432\u0432\u043e\u0434\u0430 \u0432 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u043c \u0432\u0440\u0435\u043c\u0435\u043d\u0438 (<code>std::cin</code>) \u0438 \u043f\u043b\u0430\u0432\u043d\u043e\u0439 \u043e\u0442\u0440\u0438\u0441\u043e\u0432\u043a\u043e\u0439 120 \u0413\u0446.",
+      "cta_h2": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043a\u043e\u043c\u043f\u0438\u043b\u0438\u0440\u043e\u0432\u0430\u0442\u044c C++ \u043d\u0430 Android \u0441\u0435\u0433\u043e\u0434\u043d\u044f",
+      "cta_desc": "\u041f\u0440\u0438\u0441\u043e\u0435\u0434\u0438\u043d\u044f\u0439\u0442\u0435\u0441\u044c \u043a \u0442\u044b\u0441\u044f\u0447\u0430\u043c \u0438\u043d\u0436\u0435\u043d\u0435\u0440\u043e\u0432, \u0440\u0430\u0441\u0448\u0438\u0440\u044f\u044e\u0449\u0438\u0445 \u0433\u0440\u0430\u043d\u0438\u0446\u044b \u043c\u043e\u0431\u0438\u043b\u044c\u043d\u043e\u0439 \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0438."
+    }
+  },
+  "java_ide": {
+    "en": {
+      "metaTitle": "Java Compiler & IDE for Android | Code Editor: SuperCode",
+      "metaDesc": "Stop relying on slow java ide online tools. SuperCode transforms your Android device into a true native Java IDE. Features 100% offline Java 8+ compilation, multi-file project support, and a zero-latency interactive terminal.",
+      "hero_tag": "MOBILE JAVA WORKSPACE",
+      "hero_h1": "The Ultimate <span class=\"text-gradient\">Java Compiler</span> &amp; IDE",
+      "hero_desc": "Stop relying on slow \"java ide online\" websites that lose your code. SuperCode transforms your Android device into a true native <strong>Java IDE</strong>. Experience 100% offline compilation, modern Java 8+ syntax support, and a zero-latency interactive console directly on your phone.",
+      "f1_title": "True Native Java 8+ Compiler",
+      "f1_desc": "No cloud connections required. SuperCode embeds a powerful local compiler engine (ECJ + D8) that instantly builds and executes your Java 8+ code (including Lambda expressions) offline, matching desktop-level performance.",
+      "f2_title": "Enterprise Multi-File Projects",
+      "f2_desc": "Build real-world applications, not just single scripts. Our intelligent workspace parses your <code>package</code> declarations and resolves cross-file dependencies automatically, allowing you to structure complex OOP projects flawlessly on mobile.",
+      "f3_title": "Zero-Latency Interactive Console",
+      "f3_desc": "Interact with your code in real-time. Whether you are using <code>java.util.Scanner</code> or streaming massive text outputs, our highly optimized terminal processes input and output without freezing your UI.",
+      "f4_title": "Infinite-Loop Crash Shield",
+      "f4_desc": "Accidentally wrote an endless <code>while(true)</code> loop? SuperCode's execution environment features a strict process guard. It safely halts runaway code and prevents your phone's battery from draining or crashing.",
+      "cta_h2": "Start Compiling Java on Android Today",
+      "cta_desc": "Join thousands of students and developers coding offline anywhere."
+    },
+    "zh": {
+      "metaTitle": "Android \u79bb\u7ebf Java IDE \u4e0e Java Compiler (Java \u7f16\u8bd1\u5668) | SuperCode",
+      "metaDesc": "\u544a\u522b\u7f13\u6162\u7684\u5728\u7ebf Java \u5de5\u5177\u3002SuperCode \u5c06\u4f60\u7684 Android \u624b\u673a\u53d8\u8eab\u4e3a\u771f\u6b63\u7684\u539f\u751f\u79bb\u7ebf Java IDE\u3002\u5185\u7f6e ECJ + D8 \u5f15\u64ce\uff0c\u652f\u6301 100% \u79bb\u7ebf Java 8+ \u7f16\u8bd1\u3001\u591a\u6587\u4ef6\u9762\u5411\u5bf9\u8c61\u5de5\u7a0b\u4e0e\u96f6\u5ef6\u8fdf Scanner \u4ea4\u4e92\u7ec8\u7aef\u3002",
+      "hero_tag": "\u79fb\u52a8 JAVA IDE \u5f00\u53d1\u5de5\u4f5c\u533a",
+      "hero_h1": "\u7ec8\u6781 <span class=\"text-gradient\">Java Compiler (Java \u7f16\u8bd1\u5668)</span> \u4e0e\u539f\u751f IDE",
+      "hero_desc": "\u544a\u522b\u5bb9\u6613\u4e22\u5931\u4ee3\u7801\u7684\u5728\u7ebf\u7f51\u9875\u7f16\u8bd1\u5668\u3002SuperCode \u5c06\u4f60\u7684 Android \u8bbe\u5907\u6253\u9020\u4e3a\u771f\u6b63\u7684\u539f\u751f <strong>Java IDE</strong>\u3002\u76f4\u63a5\u5728\u624b\u673a\u4e0a\u4f53\u9a8c 100% \u79bb\u7ebf\u7f16\u8bd1\u3001\u73b0\u4ee3 Java 8+ \u8bed\u6cd5\uff08\u542b Lambda \u8868\u8fbe\u5f0f\uff09\u4e0e\u96f6\u5ef6\u8fdf\u4ea4\u4e92\u5f0f\u63a7\u5236\u53f0\u3002",
+      "f1_title": "\u771f\u6b63\u7684\u539f\u751f Java 8+ \u79bb\u7ebf\u7f16\u8bd1\u5668 (ECJ + D8)",
+      "f1_desc": "\u65e0\u9700\u4efb\u4f55\u4e91\u7aef\u8fde\u63a5\u3002SuperCode \u5185\u5d4c\u5f3a\u5927\u7684\u672c\u5730 ECJ \u7f16\u8bd1\u5668\u4e0e D8 \u8131\u7cd6\u5f15\u64ce\uff0c\u53ef\u79bb\u7ebf\u6781\u901f\u6784\u5efa\u5e76\u8fd0\u884c Java 8+ \u4ee3\u7801\uff08\u652f\u6301 Lambda \u4e0e Stream API\uff09\uff0c\u6027\u80fd\u5ab2\u7f8e\u684c\u9762\u7ea7 IDE\u3002",
+      "f2_title": "\u4f01\u4e1a\u7ea7\u591a\u6587\u4ef6\u4e0e Package \u5305\u81ea\u52a8\u89e3\u6790",
+      "f2_desc": "\u6784\u5efa\u771f\u5b9e\u5de5\u7a0b\u800c\u975e\u5355\u6587\u4ef6\u811a\u672c\u3002\u667a\u80fd\u5de5\u4f5c\u533a\u81ea\u52a8\u89e3\u6790 <code>package</code> \u58f0\u660e\u5e76\u5904\u7406\u8de8\u6587\u4ef6\u7c7b\u4f9d\u8d56\uff0c\u8ba9\u4f60\u5728\u624b\u673a\u4e0a\u5b8c\u7f8e\u7ec4\u7ec7\u590d\u6742\u7684\u9762\u5411\u5bf9\u8c61 (OOP) \u9879\u76ee\u3002",
+      "f3_title": "\u96f6\u5ef6\u8fdf\u4ea4\u4e92\u5f0f\u63a7\u5236\u53f0 (\u652f\u6301 Scanner \u8f93\u5165)",
+      "f3_desc": "\u4e0e\u4f60\u7684\u4ee3\u7801\u5b9e\u65f6\u4e92\u52a8\u3002\u65e0\u8bba\u662f\u4f7f\u7528 <code>java.util.Scanner</code> \u8bfb\u53d6\u7528\u6237\u8f93\u5165\u8fd8\u662f\u8f93\u51fa\u6d77\u91cf\u6587\u672c\uff0c\u9ad8\u5ea6\u4f18\u5316\u7684\u7ec8\u7aef\u90fd\u80fd\u6d41\u7545\u5904\u7406\uff0c\u7edd\u4e0d\u963b\u585e UI\u3002",
+      "f4_title": "\u6b7b\u5faa\u73af\u8fdb\u7a0b\u62a4\u76fe\u4e0e\u9632\u5d29\u6e83\u4fdd\u62a4",
+      "f4_desc": "\u4e0d\u5c0f\u5fc3\u5199\u51fa\u4e86 <code>while(true)</code> \u6b7b\u5faa\u73af\uff1fSuperCode \u6267\u884c\u6c99\u76d2\u914d\u5907\u4e25\u683c\u7684\u7ebf\u7a0b\u4f18\u5148\u7ea7\u62a4\u76fe\uff0c\u53ef\u5b89\u5168\u4e2d\u6b62\u5931\u63a7\u4ee3\u7801\uff0c\u9632\u6b62\u624b\u673a\u53d1\u70ed\u8017\u7535\u6216\u5361\u6b7b\u3002",
+      "cta_h2": "\u7acb\u5373\u5728 Android \u4e0a\u79bb\u7ebf\u7f16\u8bd1\u5e76\u8fd0\u884c Java",
+      "cta_desc": "\u52a0\u5165\u6210\u5343\u4e0a\u4e07\u540d\u968f\u65f6\u968f\u5730\u79bb\u7ebf\u5b66\u4e60\u4e0e\u5f00\u53d1 Java \u7684\u5b66\u751f\u548c\u5de5\u7a0b\u5e08\u3002"
+    },
+    "es": {
+      "metaTitle": "Java IDE y Java Compiler (Compilador Java) para Android | SuperCode",
+      "metaDesc": "Deja de depender de herramientas java ide online lentas. SuperCode transforma tu Android en un verdadero Java IDE nativo con compilaci\u00f3n Java 8+ 100% offline, proyectos multi-archivo y consola interactiva.",
+      "hero_tag": "ENTORNO JAVA M\u00d3VIL",
+      "hero_h1": "El Mejor <span class=\"text-gradient\">Java Compiler (Compilador Java)</span> e IDE",
+      "hero_desc": "Olv\u00eddate de los sitios web lentos que pierden tu c\u00f3digo. SuperCode transforma tu Android en un verdadero <strong>Java IDE</strong> nativo con compilaci\u00f3n 100% offline, soporte Java 8+ y consola interactiva.",
+      "f1_title": "Compilador Nativo Java 8+ Offline (ECJ + D8)",
+      "f1_desc": "Sin conexi\u00f3n a la nube. SuperCode integra un motor compilador local que construye y ejecuta tu c\u00f3digo Java 8+ (incluyendo expresiones Lambda) de forma instant\u00e1nea.",
+      "f2_title": "Proyectos Multi-Archivo Empresariales",
+      "f2_desc": "Nuestro espacio de trabajo analiza tus declaraciones <code>package</code> y resuelve dependencias entre archivos autom\u00e1ticamente para estructurar proyectos POO complejos.",
+      "f3_title": "Consola Interactiva sin Latencia (Scanner)",
+      "f3_desc": "Interact\u00faa con tu c\u00f3digo en tiempo real usando <code>java.util.Scanner</code> o procesando grandes salidas de texto sin congelar la interfaz.",
+      "f4_title": "Escudo contra Bucles Infinitos",
+      "f4_desc": "\u00bfEscribiste un bucle <code>while(true)</code> sin salida? El guardi\u00e1n de procesos detiene de forma segura el c\u00f3digo descontrolado y protege tu bater\u00eda.",
+      "cta_h2": "Empieza a Compilar Java en Android Hoy",
+      "cta_desc": "\u00danete a miles de estudiantes y desarrolladores que programan en Java offline."
+    },
+    "ja": {
+      "metaTitle": "Android \u5411\u3051\u30aa\u30d5\u30e9\u30a4\u30f3 Java IDE & Java Compiler (Java\u30b3\u30f3\u30d1\u30a4\u30e9) | SuperCode",
+      "metaDesc": "\u9045\u3044\u30aa\u30f3\u30e9\u30a4\u30f3 Java \u30c4\u30fc\u30eb\u306f\u3082\u3046\u4e0d\u8981\u3002SuperCode \u306f Android \u7aef\u672b\u3092\u771f\u306e\u30cd\u30a4\u30c6\u30a3\u30d6 Java IDE \u306b\u5909\u3048\u307e\u3059\u3002100% \u30aa\u30d5\u30e9\u30a4\u30f3\u306e Java 8+ \u30b3\u30f3\u30d1\u30a4\u30eb\u3001\u30de\u30eb\u30c1\u30d5\u30a1\u30a4\u30eb\u5bfe\u5fdc\u3001Scanner \u5bfe\u5fdc\u30b3\u30f3\u30bd\u30fc\u30eb\u3092\u642d\u8f09\u3002",
+      "hero_tag": "\u30e2\u30d0\u30a4\u30eb JAVA \u30ef\u30fc\u30af\u30b9\u30da\u30fc\u30b9",
+      "hero_h1": "\u7a76\u6975\u306e <span class=\"text-gradient\">Java Compiler (Java\u30b3\u30f3\u30d1\u30a4\u30e9)</span> &amp; IDE",
+      "hero_desc": "\u30b3\u30fc\u30c9\u304c\u6d88\u3048\u308b\u4e0d\u5b89\u5b9a\u306a\u30aa\u30f3\u30e9\u30a4\u30f3 IDE \u306b\u983c\u308b\u306e\u306f\u3084\u3081\u307e\u3057\u3087\u3046\u3002SuperCode \u306f Android \u30c7\u30d0\u30a4\u30b9\u3092\u771f\u306e\u30cd\u30a4\u30c6\u30a3\u30d6 <strong>Java IDE</strong> \u306b\u9032\u5316\u3055\u305b\u307e\u3059\u3002100% \u30aa\u30d5\u30e9\u30a4\u30f3\u30b3\u30f3\u30d1\u30a4\u30eb\u3001Java 8+ \u69cb\u6587\u3001\u9045\u5ef6\u30bc\u30ed\u306e\u5bfe\u8a71\u578b\u30b3\u30f3\u30bd\u30fc\u30eb\u3092\u30b9\u30de\u30db\u3067\u4f53\u9a13\u3002",
+      "f1_title": "\u771f\u306e\u30cd\u30a4\u30c6\u30a3\u30d6 Java 8+ \u30b3\u30f3\u30d1\u30a4\u30e9 (ECJ + D8)",
+      "f1_desc": "\u30af\u30e9\u30a6\u30c9\u63a5\u7d9a\u306f\u4e0d\u8981\u3002\u30ed\u30fc\u30ab\u30eb\u306e ECJ \u30b3\u30f3\u30d1\u30a4\u30e9\u3068 D8 \u30a8\u30f3\u30b8\u30f3\u3092\u5185\u8535\u3057\u3001\u30e9\u30e0\u30c0\u5f0f\u3092\u542b\u3080 Java 8+ \u30b3\u30fc\u30c9\u3092\u30aa\u30d5\u30e9\u30a4\u30f3\u3067\u5373\u5ea7\u306b\u30d3\u30eb\u30c9\uff06\u5b9f\u884c\u3057\u307e\u3059\u3002",
+      "f2_title": "\u30de\u30eb\u30c1\u30d5\u30a1\u30a4\u30eb & Package \u81ea\u52d5\u89e3\u6c7a",
+      "f2_desc": "\u5358\u4e00\u30d5\u30a1\u30a4\u30eb\u3060\u3051\u3067\u306a\u304f\u672c\u683c\u7684\u306a\u30a2\u30d7\u30ea\u958b\u767a\u306b\u5bfe\u5fdc\u3002<code>package</code> \u5ba3\u8a00\u3092\u89e3\u6790\u3057\u3066\u30d5\u30a1\u30a4\u30eb\u9593\u306e\u4f9d\u5b58\u95a2\u4fc2\u3092\u81ea\u52d5\u89e3\u6c7a\u3057\u3001\u8907\u96d1\u306a\u30aa\u30d6\u30b8\u30a7\u30af\u30c8\u6307\u5411 (OOP) \u8a2d\u8a08\u3092\u53ef\u80fd\u306b\u3057\u307e\u3059\u3002",
+      "f3_title": "\u9045\u5ef6\u30bc\u30ed\u306e\u5bfe\u8a71\u578b\u30b3\u30f3\u30bd\u30fc\u30eb (Scanner \u5bfe\u5fdc)",
+      "f3_desc": "<code>java.util.Scanner</code> \u3092\u4f7f\u3063\u305f\u6a19\u6e96\u5165\u529b\u3084\u5927\u91cf\u306e\u30c6\u30ad\u30b9\u30c8\u51fa\u529b\u3082\u3001UI \u3092\u30d5\u30ea\u30fc\u30ba\u3055\u305b\u308b\u3053\u3068\u306a\u304f\u30ea\u30a2\u30eb\u30bf\u30a4\u30e0\u306b\u51e6\u7406\u3057\u307e\u3059\u3002",
+      "f4_title": "\u7121\u9650\u30eb\u30fc\u30d7\u30fb\u30af\u30e9\u30c3\u30b7\u30e5\u4fdd\u8b77\u30b7\u30fc\u30eb\u30c9",
+      "f4_desc": "\u8aa4\u3063\u3066 <code>while(true)</code> \u306e\u7121\u9650\u30eb\u30fc\u30d7\u3092\u66f8\u3044\u3066\u3082\u5b89\u5fc3\u3002\u53b3\u683c\u306a\u30d7\u30ed\u30bb\u30b9\u30ac\u30fc\u30c9\u304c\u66b4\u8d70\u30b3\u30fc\u30c9\u3092\u5b89\u5168\u306b\u505c\u6b62\u3055\u305b\u3001\u30d0\u30c3\u30c6\u30ea\u30fc\u6d88\u8017\u3084\u30af\u30e9\u30c3\u30b7\u30e5\u3092\u9632\u304e\u307e\u3059\u3002",
+      "cta_h2": "Android \u3067\u4eca\u3059\u3050 Java \u30b3\u30f3\u30d1\u30a4\u30eb\u3092\u59cb\u3081\u3088\u3046",
+      "cta_desc": "\u5834\u6240\u3092\u9078\u3070\u305a\u30aa\u30d5\u30e9\u30a4\u30f3\u3067 Java \u3092\u5b66\u3076\u4f55\u5343\u4eba\u3082\u306e\u5b66\u751f\u3084\u958b\u767a\u8005\u306b\u52a0\u308f\u308a\u307e\u3057\u3087\u3046\u3002"
+    },
+    "de": {
+      "metaTitle": "Java IDE & Java Compiler (Java-Kompilierer) f\u00fcr Android | SuperCode",
+      "metaDesc": "Schluss mit langsamen Online-Java-Tools. SuperCode verwandelt Ihr Android-Ger\u00e4t in eine echte native Java IDE mit 100% Offline Java 8+ Kompilierung, Multi-Datei-Projekten und interaktiver Konsole.",
+      "hero_tag": "MOBILER JAVA-ARBEITSBEREICH",
+      "hero_h1": "Der Ultimative <span class=\"text-gradient\">Java Compiler</span> &amp; IDE",
+      "hero_desc": "Verlassen Sie sich nicht l\u00e4nger auf langsame \u201eJava IDE Online\u201c-Webseiten. SuperCode macht Ihr Android-Smartphone zu einer echten nativen <strong>Java IDE</strong> mit 100% Offline-Kompilierung und moderner Java 8+-Syntax.",
+      "f1_title": "Echter Nativer Java 8+ Compiler (ECJ + D8)",
+      "f1_desc": "Keine Cloud erforderlich. SuperCode integriert lokale ECJ- und D8-Compiler, die Ihren Java 8+-Code (inklusive Lambda-Ausdr\u00fccken) sofort offline kompilieren und ausf\u00fchren.",
+      "f2_title": "Enterprise Multi-Datei-Projekte",
+      "f2_desc": "Unser intelligenter Arbeitsbereich analysiert Ihre <code>package</code>-Deklarationen und l\u00f6st datei\u00fcbergreifende Abh\u00e4ngigkeiten f\u00fcr komplexe OOP-Projekte automatisch auf.",
+      "f3_title": "Interaktive Konsole ohne Latenz (Scanner)",
+      "f3_desc": "Interagieren Sie in Echtzeit mit Ihrem Code \u2013 egal ob mit <code>java.util.Scanner</code> oder bei gro\u00dfen Textausgaben, ganz ohne Einfrieren der Oberfl\u00e4che.",
+      "f4_title": "Endlosschleifen-Schutzschild",
+      "f4_desc": "Versehentlich eine <code>while(true)</code>-Schleife geschrieben? Unser Prozessw\u00e4chter stoppt unkontrollierten Code sicher und schont Ihren Akku.",
+      "cta_h2": "Kompilieren Sie Java noch heute auf Android",
+      "cta_desc": "Schlie\u00dfen Sie sich tausenden Studenten und Entwicklern an, die \u00fcberall offline programmieren."
+    },
+    "fr": {
+      "metaTitle": "Java IDE & Java Compiler (Compilateur Java) pour Android | SuperCode",
+      "metaDesc": "Ne d\u00e9pendez plus des outils java ide en ligne lents. SuperCode transforme votre Android en v\u00e9ritable Java IDE natif avec compilation Java 8+ 100% hors ligne, projets multi-fichiers et console interactive.",
+      "hero_tag": "ESPACE JAVA MOBILE",
+      "hero_h1": "L'Ultime <span class=\"text-gradient\">Java Compiler (Compilateur Java)</span> &amp; IDE",
+      "hero_desc": "Arr\u00eatez de compter sur des sites web lents qui perdent votre code. SuperCode transforme votre appareil Android en v\u00e9ritable <strong>Java IDE</strong> natif avec compilation 100% hors ligne et support Java 8+.",
+      "f1_title": "V\u00e9ritable Compilateur Natif Java 8+ (ECJ + D8)",
+      "f1_desc": "Aucune connexion cloud requise. SuperCode embarque un moteur local puissant qui compile et ex\u00e9cute votre code Java 8+ (expressions Lambda incluses) hors ligne.",
+      "f2_title": "Projets Multi-Fichiers & Packages",
+      "f2_desc": "Notre espace de travail analyse vos d\u00e9clarations <code>package</code> et r\u00e9sout automatiquement les d\u00e9pendances entre fichiers pour structurer vos projets POO.",
+      "f3_title": "Console Interactive Z\u00e9ro Latence (Scanner)",
+      "f3_desc": "Interagissez en temps r\u00e9el avec <code>java.util.Scanner</code> ou affichez des flux massifs de texte sans jamais figer votre interface.",
+      "f4_title": "Bouclier Anti-Boucle Infinie",
+      "f4_desc": "Une boucle <code>while(true)</code> infinie par accident ? Le garde-processus arr\u00eate proprement le code en fuite et prot\u00e8ge votre batterie.",
+      "cta_h2": "Commencez \u00e0 Compiler du Java sur Android Aujourd'hui",
+      "cta_desc": "Rejoignez des milliers d'\u00e9tudiants et de d\u00e9veloppeurs qui codent hors ligne partout."
+    },
+    "ko": {
+      "metaTitle": "Android\uc6a9 \uc624\ud504\ub77c\uc778 Java IDE \ubc0f Java Compiler (\uc790\ubc14 \ucef4\ud30c\uc77c\ub7ec) | SuperCode",
+      "metaDesc": "\ub290\ub9b0 \uc628\ub77c\uc778 \uc790\ubc14 IDE \ub3c4\uad6c\uc5d0 \uc758\uc874\ud558\uc9c0 \ub9c8\uc138\uc694. SuperCode\ub294 Android \uae30\uae30\ub97c \uc9c4\uc815\ud55c \ub124\uc774\ud2f0\ube0c Java IDE\ub85c \ubcc0\ud658\ud569\ub2c8\ub2e4. 100% \uc624\ud504\ub77c\uc778 Java 8+ \ucef4\ud30c\uc77c, \ub2e4\uc911 \ud30c\uc77c \ud504\ub85c\uc81d\ud2b8 \ubc0f Scanner \ub300\ud654\ud615 \ud130\ubbf8\ub110 \uc9c0\uc6d0.",
+      "hero_tag": "\ubaa8\ubc14\uc77c JAVA \uc6cc\ud06c\uc2a4\ud398\uc774\uc2a4",
+      "hero_h1": "\uad81\uadf9\uc758 <span class=\"text-gradient\">Java Compiler (\uc790\ubc14 \ucef4\ud30c\uc77c\ub7ec)</span> &amp; IDE",
+      "hero_desc": "\ucf54\ub4dc\ub97c \uc783\uc5b4\ubc84\ub9ac\uae30 \uc26c\uc6b4 \ub290\ub9b0 \uc628\ub77c\uc778 \uc6f9\uc0ac\uc774\ud2b8\ub294 \uc774\uc81c \uadf8\ub9cc. SuperCode\ub294 Android \uae30\uae30\ub97c \uc9c4\uc815\ud55c \ub124\uc774\ud2f0\ube0c <strong>Java IDE</strong>\ub85c \ubc14\uafd4\uc90d\ub2c8\ub2e4. 100% \uc624\ud504\ub77c\uc778 \ucef4\ud30c\uc77c, \ubaa8\ub358 Java 8+ \uad6c\ubb38 \ubc0f \uc9c0\uc5f0 \uc5c6\ub294 \ucf58\uc194\uc744 \uc2a4\ub9c8\ud2b8\ud3f0\uc5d0\uc11c \uacbd\ud5d8\ud558\uc138\uc694.",
+      "f1_title": "\uc9c4\uc815\ud55c \ub124\uc774\ud2f0\ube0c Java 8+ \ucef4\ud30c\uc77c\ub7ec (ECJ + D8)",
+      "f1_desc": "\ud074\ub77c\uc6b0\ub4dc \uc5f0\uacb0\uc774 \ud544\uc694 \uc5c6\uc2b5\ub2c8\ub2e4. \uac15\ub825\ud55c \ub85c\uceec \ucef4\ud30c\uc77c\ub7ec \uc5d4\uc9c4\uc744 \ub0b4\uc7a5\ud558\uc5ec \ub78c\ub2e4\uc2dd\uc744 \ud3ec\ud568\ud55c Java 8+ \ucf54\ub4dc\ub97c \uc624\ud504\ub77c\uc778\uc5d0\uc11c \uc989\uc2dc \ube4c\ub4dc\ud558\uace0 \uc2e4\ud589\ud569\ub2c8\ub2e4.",
+      "f2_title": "\uc5d4\ud130\ud504\ub77c\uc774\uc988 \ub2e4\uc911 \ud30c\uc77c \ud504\ub85c\uc81d\ud2b8",
+      "f2_desc": "\uc9c0\ub2a5\ud615 \uc6cc\ud06c\uc2a4\ud398\uc774\uc2a4\uac00 <code>package</code> \uc120\uc5b8\uc744 \uad6c\ubb38 \ubd84\uc11d\ud558\uace0 \ud30c\uc77c \uac04 \uc885\uc18d\uc131\uc744 \uc790\ub3d9\uc73c\ub85c \ud574\uacb0\ud558\uc5ec \ubaa8\ubc14\uc77c\uc5d0\uc11c \ubcf5\uc7a1\ud55c OOP \ud504\ub85c\uc81d\ud2b8\ub97c \uc644\ubcbd\ud788 \uad6c\uc870\ud654\ud569\ub2c8\ub2e4.",
+      "f3_title": "\uc9c0\uc5f0 \uc5c6\ub294 \ub300\ud654\ud615 \ucf58\uc194 (Scanner \uc9c0\uc6d0)",
+      "f3_desc": "<code>java.util.Scanner</code>\ub85c \uc0ac\uc6a9\uc790 \uc785\ub825\uc744 \ubc1b\uac70\ub098 \ub300\ub7c9\uc758 \ud14d\uc2a4\ud2b8\ub97c \ucd9c\ub825\ud560 \ub54c\ub3c4 UI \uba48\ucda4 \uc5c6\uc774 \uc2e4\uc2dc\uac04\uc73c\ub85c \uc0c1\ud638\uc791\uc6a9\ud569\ub2c8\ub2e4.",
+      "f4_title": "\ubb34\ud55c \ub8e8\ud504 \ucda9\ub3cc \ubcf4\ud638\ub9c9",
+      "f4_desc": "\uc2e4\uc218\ub85c \ub05d\uc5c6\ub294 <code>while(true)</code> \ub8e8\ud504\ub97c \uc791\uc131\ud558\uc168\ub098\uc694? \uc5c4\uaca9\ud55c \ud504\ub85c\uc138\uc2a4 \uac00\ub4dc\uac00 \ud3ed\uc8fc\ud558\ub294 \ucf54\ub4dc\ub97c \uc548\uc804\ud558\uac8c \uc911\uc9c0\ud558\uace0 \ubc30\ud130\ub9ac \uc18c\ubaa8\ub97c \ubc29\uc9c0\ud569\ub2c8\ub2e4.",
+      "cta_h2": "\uc9c0\uae08 Android\uc5d0\uc11c Java \ucef4\ud30c\uc77c\uc744 \uc2dc\uc791\ud558\uc138\uc694",
+      "cta_desc": "\uc5b8\uc81c \uc5b4\ub514\uc11c\ub098 \uc624\ud504\ub77c\uc778\uc73c\ub85c \ucf54\ub529\ud558\ub294 \uc218\ucc9c \uba85\uc758 \ud559\uc0dd \ubc0f \uac1c\ubc1c\uc790\uc640 \ud568\uaed8\ud558\uc138\uc694."
+    },
+    "pt": {
+      "metaTitle": "Java IDE e Java Compiler (Compilador Java) para Android | SuperCode",
+      "metaDesc": "Pare de depender de ferramentas java ide online lentas. O SuperCode transforma seu Android em uma verdadeira Java IDE nativa com compila\u00e7\u00e3o Java 8+ 100% offline, projetos multi-arquivo e terminal interativo.",
+      "hero_tag": "AMBIENTE JAVA M\u00d3VEL",
+      "hero_h1": "O Definitivo <span class=\"text-gradient\">Java Compiler (Compilador Java)</span> &amp; IDE",
+      "hero_desc": "Pare de sofrer com sites lentos que perdem seu c\u00f3digo. O SuperCode transforma seu dispositivo Android em uma verdadeira <strong>Java IDE</strong> nativa com compila\u00e7\u00e3o 100% offline, suporte a Java 8+ e console interativo.",
+      "f1_title": "Verdadeiro Compilador Nativo Java 8+ (ECJ + D8)",
+      "f1_desc": "Sem necessidade de nuvem. O SuperCode embute um motor compilador local que constr\u00f3i e executa seu c\u00f3digo Java 8+ (incluindo express\u00f5es Lambda) offline instantaneamente.",
+      "f2_title": "Projetos Multi-Arquivo Corporativos",
+      "f2_desc": "Nosso workspace inteligente analisa suas declara\u00e7\u00f5es <code>package</code> e resolve depend\u00eancias entre arquivos automaticamente para estruturar projetos POO complexos.",
+      "f3_title": "Console Interativo com Zero Lat\u00eancia (Scanner)",
+      "f3_desc": "Interaja com seu c\u00f3digo em tempo real usando <code>java.util.Scanner</code> ou transmitindo grandes sa\u00eddas de texto sem congelar sua interface.",
+      "f4_title": "Escudo contra Loops Infinitos",
+      "f4_desc": "Escreveu um loop <code>while(true)</code> sem fim por engano? Nosso guardi\u00e3o de processos interrompe com seguran\u00e7a c\u00f3digos descontrolados e protege sua bateria.",
+      "cta_h2": "Comece a Compilar Java no Android Hoje",
+      "cta_desc": "Junte-se a milhares de estudantes e desenvolvedores programando offline em qualquer lugar."
+    },
+    "hi": {
+      "metaTitle": "Android \u0915\u0947 \u0932\u093f\u090f \u0911\u092b\u093c\u0932\u093e\u0907\u0928 Java IDE \u0914\u0930 Java Compiler (\u091c\u093e\u0935\u093e \u0915\u0902\u092a\u093e\u0907\u0932\u0930) | SuperCode",
+      "metaDesc": "\u0927\u0940\u092e\u0947 \u0911\u0928\u0932\u093e\u0907\u0928 \u091c\u093e\u0935\u093e \u091f\u0942\u0932\u094d\u0938 \u092a\u0930 \u0928\u093f\u0930\u094d\u092d\u0930 \u0930\u0939\u0928\u093e \u092c\u0902\u0926 \u0915\u0930\u0947\u0902\u0964 SuperCode \u0906\u092a\u0915\u0947 Android \u0921\u093f\u0935\u093e\u0907\u0938 \u0915\u094b \u090f\u0915 \u0938\u091a\u094d\u091a\u0947 \u0928\u0947\u091f\u093f\u0935 Java IDE \u092e\u0947\u0902 \u092c\u0926\u0932 \u0926\u0947\u0924\u093e \u0939\u0948\u0964 100% \u0911\u092b\u093c\u0932\u093e\u0907\u0928 Java 8+ \u0915\u0902\u092a\u093e\u0907\u0932\u0947\u0936\u0928, \u092e\u0932\u094d\u091f\u0940-\u092b\u093c\u093e\u0907\u0932 \u092a\u094d\u0930\u094b\u091c\u0947\u0915\u094d\u091f \u0914\u0930 \u0907\u0902\u091f\u0930\u0948\u0915\u094d\u091f\u093f\u0935 \u091f\u0930\u094d\u092e\u093f\u0928\u0932\u0964",
+      "hero_tag": "\u092e\u094b\u092c\u093e\u0907\u0932 JAVA \u0935\u0930\u094d\u0915\u0938\u094d\u092a\u0947\u0938",
+      "hero_h1": "\u0938\u0930\u094d\u0935\u0936\u094d\u0930\u0947\u0937\u094d\u0920 <span class=\"text-gradient\">Java Compiler (\u091c\u093e\u0935\u093e \u0915\u0902\u092a\u093e\u0907\u0932\u0930)</span> \u0914\u0930 IDE",
+      "hero_desc": "\u0927\u0940\u092e\u0940 \"java ide online\" \u0935\u0947\u092c\u0938\u093e\u0907\u091f\u094b\u0902 \u0915\u094b \u091b\u094b\u0921\u093c\u0947\u0902\u0964 SuperCode \u0906\u092a\u0915\u0947 Android \u0921\u093f\u0935\u093e\u0907\u0938 \u0915\u094b \u090f\u0915 \u0938\u091a\u094d\u091a\u0947 \u0928\u0947\u091f\u093f\u0935 <strong>Java IDE</strong> \u092e\u0947\u0902 \u092c\u0926\u0932 \u0926\u0947\u0924\u093e \u0939\u0948\u0964 \u0938\u0940\u0927\u0947 \u0905\u092a\u0928\u0947 \u092b\u093c\u094b\u0928 \u092a\u0930 100% \u0911\u092b\u093c\u0932\u093e\u0907\u0928 \u0915\u0902\u092a\u093e\u0907\u0932\u0947\u0936\u0928, \u0906\u0927\u0941\u0928\u093f\u0915 Java 8+ \u0938\u093f\u0902\u091f\u0948\u0915\u094d\u0938 \u0914\u0930 \u091c\u093c\u0940\u0930\u094b-\u0932\u0947\u091f\u0947\u0902\u0938\u0940 \u0915\u0902\u0938\u094b\u0932 \u0915\u093e \u0905\u0928\u0941\u092d\u0935 \u0915\u0930\u0947\u0902\u0964",
+      "f1_title": "\u0938\u091a\u094d\u091a\u093e \u0928\u0947\u091f\u093f\u0935 Java 8+ \u0915\u0902\u092a\u093e\u0907\u0932\u0930 (ECJ + D8)",
+      "f1_desc": "\u0915\u093f\u0938\u0940 \u0915\u094d\u0932\u093e\u0909\u0921 \u0915\u0928\u0947\u0915\u094d\u0936\u0928 \u0915\u0940 \u0906\u0935\u0936\u094d\u092f\u0915\u0924\u093e \u0928\u0939\u0940\u0902 \u0939\u0948\u0964 SuperCode \u090f\u0915 \u0936\u0915\u094d\u0924\u093f\u0936\u093e\u0932\u0940 \u0932\u094b\u0915\u0932 \u0915\u0902\u092a\u093e\u0907\u0932\u0930 \u0907\u0902\u091c\u0928 \u090f\u092e\u094d\u092c\u0947\u0921 \u0915\u0930\u0924\u093e \u0939\u0948 \u091c\u094b \u0906\u092a\u0915\u0947 Java 8+ \u0915\u094b\u0921 (Lambda \u090f\u0915\u094d\u0938\u092a\u094d\u0930\u0947\u0936\u0928 \u0938\u0939\u093f\u0924) \u0915\u094b \u0911\u092b\u093c\u0932\u093e\u0907\u0928 \u0924\u0941\u0930\u0902\u0924 \u092c\u0928\u093e\u0924\u093e \u0914\u0930 \u091a\u0932\u093e\u0924\u093e \u0939\u0948\u0964",
+      "f2_title": "\u090f\u0902\u091f\u0930\u092a\u094d\u0930\u093e\u0907\u091c\u093c \u092e\u0932\u094d\u091f\u0940-\u092b\u093c\u093e\u0907\u0932 \u092a\u094d\u0930\u094b\u091c\u0947\u0915\u094d\u091f\u094d\u0938",
+      "f2_desc": "\u0939\u092e\u093e\u0930\u093e \u0938\u094d\u092e\u093e\u0930\u094d\u091f \u0935\u0930\u094d\u0915\u0938\u094d\u092a\u0947\u0938 \u0906\u092a\u0915\u0947 <code>package</code> \u0918\u094b\u0937\u0923\u093e\u0913\u0902 \u0915\u094b \u092a\u093e\u0930\u094d\u0938 \u0915\u0930\u0924\u093e \u0939\u0948 \u0914\u0930 \u0915\u094d\u0930\u0949\u0938-\u092b\u093c\u093e\u0907\u0932 \u0928\u093f\u0930\u094d\u092d\u0930\u0924\u093e\u0913\u0902 \u0915\u094b \u0938\u094d\u0935\u0924\u0903 \u0939\u0932 \u0915\u0930\u0924\u093e \u0939\u0948, \u091c\u093f\u0938\u0938\u0947 \u0906\u092a \u092e\u094b\u092c\u093e\u0907\u0932 \u092a\u0930 \u091c\u091f\u093f\u0932 OOP \u092a\u094d\u0930\u094b\u091c\u0947\u0915\u094d\u091f \u092c\u0928\u093e \u0938\u0915\u0924\u0947 \u0939\u0948\u0902\u0964",
+      "f3_title": "\u091c\u093c\u0940\u0930\u094b-\u0932\u0947\u091f\u0947\u0902\u0938\u0940 \u0907\u0902\u091f\u0930\u0948\u0915\u094d\u091f\u093f\u0935 \u0915\u0902\u0938\u094b\u0932 (Scanner)",
+      "f3_desc": "\u0905\u092a\u0928\u0947 \u0915\u094b\u0921 \u0915\u0947 \u0938\u093e\u0925 \u0930\u093f\u092f\u0932-\u091f\u093e\u0907\u092e \u092e\u0947\u0902 \u0907\u0902\u091f\u0930\u0948\u0915\u094d\u091f \u0915\u0930\u0947\u0902\u0964 \u091a\u093e\u0939\u0947 \u0906\u092a <code>java.util.Scanner</code> \u0915\u093e \u0909\u092a\u092f\u094b\u0917 \u0915\u0930 \u0930\u0939\u0947 \u0939\u094b\u0902 \u092f\u093e \u0935\u093f\u0936\u093e\u0932 \u091f\u0947\u0915\u094d\u0938\u094d\u091f \u0906\u0909\u091f\u092a\u0941\u091f \u0915\u093e, \u0939\u092e\u093e\u0930\u093e \u091f\u0930\u094d\u092e\u093f\u0928\u0932 \u092c\u093f\u0928\u093e UI \u092b\u094d\u0930\u0940\u091c\u093c \u0915\u093f\u090f \u0915\u093e\u092e \u0915\u0930\u0924\u093e \u0939\u0948\u0964",
+      "f4_title": "\u0905\u0928\u0902\u0924-\u0932\u0942\u092a \u0915\u094d\u0930\u0948\u0936 \u0936\u0940\u0932\u094d\u0921",
+      "f4_desc": "\u0917\u0932\u0924\u0940 \u0938\u0947 \u0905\u0902\u0924\u0939\u0940\u0928 <code>while(true)</code> \u0932\u0942\u092a \u0932\u093f\u0916 \u0926\u093f\u092f\u093e? SuperCode \u0915\u093e \u092a\u094d\u0930\u094b\u0938\u0947\u0938 \u0917\u093e\u0930\u094d\u0921 \u0905\u0928\u093f\u092f\u0902\u0924\u094d\u0930\u093f\u0924 \u0915\u094b\u0921 \u0915\u094b \u0938\u0941\u0930\u0915\u094d\u0937\u093f\u0924 \u0930\u0942\u092a \u0938\u0947 \u0930\u094b\u0915\u0924\u093e \u0939\u0948 \u0914\u0930 \u0906\u092a\u0915\u0947 \u092b\u093c\u094b\u0928 \u0915\u0940 \u092c\u0948\u091f\u0930\u0940 \u0915\u094b \u092c\u091a\u093e\u0924\u093e \u0939\u0948\u0964",
+      "cta_h2": "\u0906\u091c \u0939\u0940 Android \u092a\u0930 Java \u0915\u0902\u092a\u093e\u0907\u0932 \u0915\u0930\u0928\u093e \u0936\u0941\u0930\u0942 \u0915\u0930\u0947\u0902",
+      "cta_desc": "\u0915\u0939\u0940\u0902 \u092d\u0940 \u0911\u092b\u093c\u0932\u093e\u0907\u0928 \u0915\u094b\u0921\u093f\u0902\u0917 \u0915\u0930\u0928\u0947 \u0935\u093e\u0932\u0947 \u0939\u091c\u093c\u093e\u0930\u094b\u0902 \u091b\u093e\u0924\u094d\u0930\u094b\u0902 \u0914\u0930 \u0921\u0947\u0935\u0932\u092a\u0930\u094d\u0938 \u0938\u0947 \u091c\u0941\u0921\u093c\u0947\u0902\u0964"
+    },
+    "ru": {
+      "metaTitle": "\u041e\u0444\u043b\u0430\u0439\u043d Java IDE \u0438 Java Compiler (\u041a\u043e\u043c\u043f\u0438\u043b\u044f\u0442\u043e\u0440 Java) \u0434\u043b\u044f Android | SuperCode",
+      "metaDesc": "\u041f\u0435\u0440\u0435\u0441\u0442\u0430\u043d\u044c\u0442\u0435 \u0437\u0430\u0432\u0438\u0441\u0435\u0442\u044c \u043e\u0442 \u043c\u0435\u0434\u043b\u0435\u043d\u043d\u044b\u0445 \u043e\u043d\u043b\u0430\u0439\u043d-\u0441\u0435\u0440\u0432\u0438\u0441\u043e\u0432. SuperCode \u043f\u0440\u0435\u0432\u0440\u0430\u0449\u0430\u0435\u0442 \u0432\u0430\u0448 Android \u0432 \u043f\u043e\u043b\u043d\u043e\u0446\u0435\u043d\u043d\u0443\u044e \u043d\u0430\u0442\u0438\u0432\u043d\u0443\u044e Java IDE: 100% \u043e\u0444\u043b\u0430\u0439\u043d-\u043a\u043e\u043c\u043f\u0438\u043b\u044f\u0446\u0438\u044f Java 8+, \u043c\u043d\u043e\u0433\u043e\u0444\u0430\u0439\u043b\u043e\u0432\u044b\u0435 \u043f\u0440\u043e\u0435\u043a\u0442\u044b \u0438 \u0438\u043d\u0442\u0435\u0440\u0430\u043a\u0442\u0438\u0432\u043d\u0430\u044f \u043a\u043e\u043d\u0441\u043e\u043b\u044c.",
+      "hero_tag": "\u041c\u041e\u0411\u0418\u041b\u042c\u041d\u0410\u042f \u0421\u0420\u0415\u0414\u0410 JAVA",
+      "hero_h1": "\u041b\u0443\u0447\u0448\u0438\u0439 <span class=\"text-gradient\">Java Compiler (\u041a\u043e\u043c\u043f\u0438\u043b\u044f\u0442\u043e\u0440 Java)</span> \u0438 IDE",
+      "hero_desc": "\u0417\u0430\u0431\u0443\u0434\u044c\u0442\u0435 \u043e \u043c\u0435\u0434\u043b\u0435\u043d\u043d\u044b\u0445 \u0441\u0430\u0439\u0442\u0430\u0445 \u00abjava ide online\u00bb, \u0442\u0435\u0440\u044f\u044e\u0449\u0438\u0445 \u0432\u0430\u0448 \u043a\u043e\u0434. SuperCode \u043f\u0440\u0435\u0432\u0440\u0430\u0449\u0430\u0435\u0442 Android-\u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e \u0432 \u043d\u0430\u0441\u0442\u043e\u044f\u0449\u0443\u044e \u043d\u0430\u0442\u0438\u0432\u043d\u0443\u044e <strong>Java IDE</strong> \u0441\u043e 100% \u043e\u0444\u043b\u0430\u0439\u043d-\u043a\u043e\u043c\u043f\u0438\u043b\u044f\u0446\u0438\u0435\u0439, \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u043e\u0439 Java 8+ \u0438 \u0431\u044b\u0441\u0442\u0440\u043e\u0439 \u043a\u043e\u043d\u0441\u043e\u043b\u044c\u044e.",
+      "f1_title": "\u041d\u0430\u0441\u0442\u043e\u044f\u0449\u0438\u0439 \u043d\u0430\u0442\u0438\u0432\u043d\u044b\u0439 \u043a\u043e\u043c\u043f\u0438\u043b\u044f\u0442\u043e\u0440 Java 8+ (ECJ + D8)",
+      "f1_desc": "\u0411\u0435\u0437 \u043f\u043e\u0434\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f \u043a \u043e\u0431\u043b\u0430\u043a\u0443. \u041c\u043e\u0449\u043d\u044b\u0439 \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u044b\u0439 \u0434\u0432\u0438\u0436\u043e\u043a \u043a\u043e\u043c\u043f\u0438\u043b\u044f\u0446\u0438\u0438 \u043c\u0433\u043d\u043e\u0432\u0435\u043d\u043d\u043e \u0441\u043e\u0431\u0438\u0440\u0430\u0435\u0442 \u0438 \u0437\u0430\u043f\u0443\u0441\u043a\u0430\u0435\u0442 \u043a\u043e\u0434 Java 8+ (\u0432\u043a\u043b\u044e\u0447\u0430\u044f \u043b\u044f\u043c\u0431\u0434\u0430-\u0432\u044b\u0440\u0430\u0436\u0435\u043d\u0438\u044f) \u043f\u043e\u043b\u043d\u043e\u0441\u0442\u044c\u044e \u043e\u0444\u043b\u0430\u0439\u043d.",
+      "f2_title": "\u041c\u043d\u043e\u0433\u043e\u0444\u0430\u0439\u043b\u043e\u0432\u044b\u0435 \u041e\u041e\u041f-\u043f\u0440\u043e\u0435\u043a\u0442\u044b \u0438 \u043f\u0430\u043a\u0435\u0442\u044b",
+      "f2_desc": "\u0423\u043c\u043d\u0430\u044f \u0440\u0430\u0431\u043e\u0447\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c \u0430\u043d\u0430\u043b\u0438\u0437\u0438\u0440\u0443\u0435\u0442 \u043e\u0431\u044a\u044f\u0432\u043b\u0435\u043d\u0438\u044f <code>package</code> \u0438 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438 \u0440\u0430\u0437\u0440\u0435\u0448\u0430\u0435\u0442 \u043c\u0435\u0436\u0444\u0430\u0439\u043b\u043e\u0432\u044b\u0435 \u0437\u0430\u0432\u0438\u0441\u0438\u043c\u043e\u0441\u0442\u0438 \u0434\u043b\u044f \u043f\u043e\u0441\u0442\u0440\u043e\u0435\u043d\u0438\u044f \u0441\u043b\u043e\u0436\u043d\u044b\u0445 \u041e\u041e\u041f-\u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0439.",
+      "f3_title": "\u0418\u043d\u0442\u0435\u0440\u0430\u043a\u0442\u0438\u0432\u043d\u0430\u044f \u043a\u043e\u043d\u0441\u043e\u043b\u044c \u0431\u0435\u0437 \u0437\u0430\u0434\u0435\u0440\u0436\u0435\u043a (Scanner)",
+      "f3_desc": "\u0412\u0437\u0430\u0438\u043c\u043e\u0434\u0435\u0439\u0441\u0442\u0432\u0443\u0439\u0442\u0435 \u0441 \u043a\u043e\u0434\u043e\u043c \u0432 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u043c \u0432\u0440\u0435\u043c\u0435\u043d\u0438 \u0447\u0435\u0440\u0435\u0437 <code>java.util.Scanner</code> \u0438\u043b\u0438 \u0432\u044b\u0432\u043e\u0434\u0438\u0442\u0435 \u043e\u0433\u0440\u043e\u043c\u043d\u044b\u0435 \u043c\u0430\u0441\u0441\u0438\u0432\u044b \u0442\u0435\u043a\u0441\u0442\u0430 \u0431\u0435\u0437 \u0437\u0430\u0432\u0438\u0441\u0430\u043d\u0438\u044f \u0438\u043d\u0442\u0435\u0440\u0444\u0435\u0439\u0441\u0430.",
+      "f4_title": "\u0417\u0430\u0449\u0438\u0442\u0430 \u043e\u0442 \u0431\u0435\u0441\u043a\u043e\u043d\u0435\u0447\u043d\u044b\u0445 \u0446\u0438\u043a\u043b\u043e\u0432",
+      "f4_desc": "\u0421\u043b\u0443\u0447\u0430\u0439\u043d\u043e \u043d\u0430\u043f\u0438\u0441\u0430\u043b\u0438 \u0432\u0435\u0447\u043d\u044b\u0439 \u0446\u0438\u043a\u043b <code>while(true)</code>? \u0412\u0441\u0442\u0440\u043e\u0435\u043d\u043d\u044b\u0439 \u0441\u0442\u0440\u0430\u0436 \u043f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u0432 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e \u043e\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442 \u0437\u0430\u0446\u0438\u043a\u043b\u0438\u0432\u0448\u0438\u0439\u0441\u044f \u043a\u043e\u0434 \u0438 \u0437\u0430\u0449\u0438\u0442\u0438\u0442 \u0431\u0430\u0442\u0430\u0440\u0435\u044e \u0441\u043c\u0430\u0440\u0442\u0444\u043e\u043d\u0430.",
+      "cta_h2": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043a\u043e\u043c\u043f\u0438\u043b\u0438\u0440\u043e\u0432\u0430\u0442\u044c Java \u043d\u0430 Android \u0441\u0435\u0433\u043e\u0434\u043d\u044f",
+      "cta_desc": "\u041f\u0440\u0438\u0441\u043e\u0435\u0434\u0438\u043d\u044f\u0439\u0442\u0435\u0441\u044c \u043a \u0442\u044b\u0441\u044f\u0447\u0430\u043c \u0441\u0442\u0443\u0434\u0435\u043d\u0442\u043e\u0432 \u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0447\u0438\u043a\u043e\u0432, \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0438\u0440\u0443\u044e\u0449\u0438\u0445 \u043e\u0444\u043b\u0430\u0439\u043d \u0433\u0434\u0435 \u0443\u0433\u043e\u0434\u043d\u043e."
+    }
+  },
+  "web_ide": {
+    "en": {
+      "metaTitle": "HTML/JS Editor & Local HTTP Server for Android | SuperCode",
+      "metaDesc": "Build and preview websites on Android like a pro. SuperCode features a true Local HTTP Server, WebAssembly (WASM) support, ES6 modules, an integrated FTP/SFTP client, and a crash-proof JS console.",
+      "hero_tag": "MOBILE WEB WORKSPACE",
+      "hero_h1": "The Ultimate <span class=\"text-gradient\">Web Editor &amp; Local Server</span>",
+      "hero_desc": "Stop fighting with <code>file://</code> limitations. SuperCode turns your Android device into a complete web development studio. Write HTML/JS/CSS, bypass strict CORS policies with our Virtual HTTP Server, and sync directly with FTP/SFTP environments.",
+      "f1_title": "True Local HTTP Server",
+      "f1_desc": "We ditched the broken <code>file://</code> protocol. SuperCode spins up a Virtual HTTP Sandbox mapping directly to your physical files. Run modern frameworks, ES6 modules (<code>import/export</code>), and WebAssembly binaries locally with zero CORS errors.",
+      "f2_title": "Desktop-Grade Media Export",
+      "f2_desc": "Working with WebRTC, Canvas graphics, or massive files? Our advanced engine bypasses mobile limitations, allowing you to stream and download heavy <code>Blob</code> and Data URL exports directly to your phone's Gallery without memory crashes.",
+      "f3_title": "Seamless FTP/SFTP Integration",
+      "f3_desc": "Your code editor and deployment tool, unified. Connect to remote FTP or SFTP servers, lazily fetch files into your sandbox, edit them locally, and instantly preview changes before syncing back to production.",
+      "f4_title": "Crash-Proof JS DevTools",
+      "f4_desc": "Debug your JavaScript like a pro. SuperCode features an interactive floating console. Backed by a high-frequency throttling engine, it can process thousands of <code>console.log</code> outputs simultaneously without freezing your device.",
+      "cta_h2": "Build Websites Directly on Android Today",
+      "cta_desc": "Join thousands of frontend developers taking their workflow mobile."
+    },
+    "zh": {
+      "metaTitle": "Android \u79bb\u7ebf HTML/JS Web Editor (\u7f51\u9875\u4ee3\u7801\u7f16\u8f91\u5668) \u4e0e\u672c\u5730 HTTP \u670d\u52a1\u5668 | SuperCode",
+      "metaDesc": "\u5728 Android \u4e0a\u50cf\u4e13\u5bb6\u4e00\u6837\u5f00\u53d1\u4e0e\u9884\u89c8\u7f51\u7ad9\u3002SuperCode \u5185\u7f6e\u771f\u6b63\u7684\u672c\u5730 HTTP \u670d\u52a1\u5668\u3001WebAssembly (WASM) \u4e0e ES6 \u6a21\u5757\u652f\u6301\u3001\u96c6\u6210 FTP/SFTP \u5ba2\u6237\u7aef\u4ee5\u53ca\u9632\u5d29\u6e83 JS DevTools \u63a7\u5236\u53f0\u3002",
+      "hero_tag": "\u79fb\u52a8 WEB \u524d\u7aef\u5168\u6808\u5de5\u4f5c\u533a",
+      "hero_h1": "\u7ec8\u6781 <span class=\"text-gradient\">Web Editor (HTML/JS \u7f16\u8f91\u5668)</span> \u4e0e\u672c\u5730\u670d\u52a1\u5668",
+      "hero_desc": "\u544a\u522b\u53d7\u9650\u7684 <code>file://</code> \u534f\u8bae\u3002SuperCode \u5c06\u4f60\u7684 Android \u8bbe\u5907\u6253\u9020\u4e3a\u5b8c\u6574\u7684 Web \u524d\u7aef\u5f00\u53d1\u5de5\u4f5c\u5ba4\u3002\u7f16\u5199 HTML5/CSS3/JS\uff0c\u901a\u8fc7\u5185\u7f6e\u865a\u62df HTTP \u670d\u52a1\u5668\u7ed5\u8fc7\u4e25\u683c\u7684 CORS \u8de8\u57df\u9650\u5236\uff0c\u5e76\u76f4\u63a5\u4e0e FTP/SFTP \u751f\u4ea7\u73af\u5883\u540c\u6b65\u3002",
+      "f1_title": "\u771f\u6b63\u7684\u672c\u5730 Virtual HTTP \u670d\u52a1\u5668 (\u96f6 CORS \u62a5\u9519)",
+      "f1_desc": "\u5f7b\u5e95\u6452\u5f03\u6b8b\u7f3a\u7684 <code>file://</code> \u534f\u8bae\u3002SuperCode \u5728\u672c\u5730\u542f\u52a8\u76f4\u63a5\u6620\u5c04\u7269\u7406\u6587\u4ef6\u7684\u865a\u62df HTTP \u6c99\u76d2\uff0c\u79bb\u7ebf\u6d41\u7545\u8fd0\u884c\u73b0\u4ee3\u524d\u7aef\u6846\u67b6\u3001ES6 \u6a21\u5757 (<code>import/export</code>) \u4e0e WebAssembly \u4e8c\u8fdb\u5236\u6a21\u5757\u3002",
+      "f2_title": "\u684c\u9762\u7ea7 Canvas / Blob \u5a92\u4f53\u6d41\u76f4\u51fa\u76f8\u518c",
+      "f2_desc": "\u6b63\u5728\u5f00\u53d1 WebRTC\u3001Canvas \u56fe\u5f62\u6216\u5927\u6587\u4ef6\u5bfc\u51fa\uff1f\u9ad8\u7ea7\u5a92\u4f53\u6d41\u5f15\u64ce\u7a81\u7834\u79fb\u52a8\u7aef WebView \u9650\u5236\uff0c\u652f\u6301\u5c06\u5927\u578b <code>Blob</code> \u4e0e Data URL \u76f4\u63a5\u6d41\u5f0f\u4fdd\u5b58\u81f3\u624b\u673a\u76f8\u518c\u800c\u7edd\u4e0d\u53d1\u751f\u5185\u5b58\u6ea2\u51fa\u3002",
+      "f3_title": "\u65e0\u7f1d FTP / SFTP \u8fdc\u7a0b\u670d\u52a1\u5668\u96c6\u6210",
+      "f3_desc": "\u4ee3\u7801\u7f16\u8f91\u5668\u4e0e\u90e8\u7f72\u5de5\u5177\u5408\u4e8c\u4e3a\u4e00\u3002\u8fde\u63a5\u8fdc\u7a0b FTP \u6216 SFTP \u670d\u52a1\u5668\uff0c\u6309\u9700\u62c9\u53d6\u6587\u4ef6\u81f3\u672c\u5730\u6c99\u76d2\u7f16\u8f91\u5e76\u5b9e\u65f6\u9884\u89c8\uff0c\u786e\u8ba4\u65e0\u8bef\u540e\u4e00\u952e\u540c\u6b65\u56de\u7ebf\u4e0a\u751f\u4ea7\u73af\u5883\u3002",
+      "f4_title": "\u9632\u5d29\u6e83 JavaScript DevTools \u60ac\u6d6e\u63a7\u5236\u53f0",
+      "f4_desc": "\u50cf\u4e13\u4e1a\u524d\u7aef\u5de5\u7a0b\u5e08\u4e00\u6837\u8c03\u8bd5 JS\u3002\u5185\u7f6e\u9ad8\u9891\u8282\u6d41\u5f15\u64ce\u7684\u60ac\u6d6e\u4ea4\u4e92\u5f0f\u63a7\u5236\u53f0\uff0c\u53ef\u540c\u65f6\u5904\u7406\u6210\u5343\u4e0a\u4e07\u6761 <code>console.log</code> \u8f93\u51fa\u800c\u7edd\u4e0d\u5361\u6b7b\u624b\u673a\u754c\u9762\u3002",
+      "cta_h2": "\u7acb\u5373\u5728 Android \u4e0a\u6784\u5efa\u73b0\u4ee3 Web \u7f51\u7ad9",
+      "cta_desc": "\u52a0\u5165\u6570\u4ee5\u5343\u8ba1\u5c06\u524d\u7aef\u5de5\u4f5c\u6d41\u88c5\u8fdb\u53e3\u888b\u7684 Web \u5f00\u53d1\u8005\u3002"
+    },
+    "es": {
+      "metaTitle": "Web Editor (Editor HTML/JS) y Servidor HTTP Local para Android | SuperCode",
+      "metaDesc": "Crea y previsualiza sitios web en Android como un profesional. SuperCode incluye Servidor HTTP Local real, soporte WebAssembly (WASM), m\u00f3dulos ES6, cliente FTP/SFTP y consola JS DevTools.",
+      "hero_tag": "ESTUDIO WEB M\u00d3VIL",
+      "hero_h1": "El Mejor <span class=\"text-gradient\">Web Editor (HTML/JS) y Servidor Local</span>",
+      "hero_desc": "Deja de luchar contra las limitaciones de <code>file://</code>. SuperCode convierte tu Android en un estudio completo de desarrollo web con Servidor HTTP Virtual sin errores CORS y sincronizaci\u00f3n FTP/SFTP.",
+      "f1_title": "Servidor HTTP Local Real (Sin Errores CORS)",
+      "f1_desc": "SuperCode inicia un Sandbox HTTP Virtual mapeado directamente a tus archivos f\u00edsicos. Ejecuta m\u00f3dulos ES6 (<code>import/export</code>) y binarios WebAssembly localmente.",
+      "f2_title": "Exportaci\u00f3n Multimedia de Nivel Escritorio",
+      "f2_desc": "\u00bfTrabajas con gr\u00e1ficos Canvas o archivos grandes? Descarga exportaciones pesadas de <code>Blob</code> y Data URL directamente a la galer\u00eda de tu tel\u00e9fono sin colapsar la memoria.",
+      "f3_title": "Integraci\u00f3n Fluida con FTP / SFTP",
+      "f3_desc": "Con\u00e9ctate a servidores FTP o SFTP remotos, edita archivos localmente y previsualiza los cambios al instante antes de sincronizarlos con producci\u00f3n.",
+      "f4_title": "Consola JS DevTools a Prueba de Fallos",
+      "f4_desc": "Depura tu JavaScript con una consola flotante interactiva capaz de procesar miles de salidas <code>console.log</code> simult\u00e1neamente a 60fps.",
+      "cta_h2": "Construye Sitios Web Directamente en Android Hoy",
+      "cta_desc": "\u00danete a miles de desarrolladores frontend que llevan su flujo de trabajo al m\u00f3vil."
+    },
+    "ja": {
+      "metaTitle": "Android \u5411\u3051 Web Editor (HTML/JS \u30a8\u30c7\u30a3\u30bf) & \u30ed\u30fc\u30ab\u30eb HTTP \u30b5\u30fc\u30d0\u30fc | SuperCode",
+      "metaDesc": "Android \u3067\u30d7\u30ed\u306e\u3088\u3046\u306b Web \u30b5\u30a4\u30c8\u3092\u69cb\u7bc9\u30fb\u30d7\u30ec\u30d3\u30e5\u30fc\u3002\u30ed\u30fc\u30ab\u30eb HTTP \u30b5\u30fc\u30d0\u30fc\u3001WebAssembly (WASM)\u3001ES6 \u30e2\u30b8\u30e5\u30fc\u30eb\u3001FTP/SFTP \u30af\u30e9\u30a4\u30a2\u30f3\u30c8\u3001\u30af\u30e9\u30c3\u30b7\u30e5\u9632\u6b62 JS \u30b3\u30f3\u30bd\u30fc\u30eb\u3092\u642d\u8f09\u3002",
+      "hero_tag": "\u30e2\u30d0\u30a4\u30eb WEB \u30ef\u30fc\u30af\u30b9\u30da\u30fc\u30b9",
+      "hero_h1": "\u7a76\u6975\u306e <span class=\"text-gradient\">Web Editor (HTML/JS) &amp; \u30ed\u30fc\u30ab\u30eb\u30b5\u30fc\u30d0\u30fc</span>",
+      "hero_desc": "<code>file://</code> \u30d7\u30ed\u30c8\u30b3\u30eb\u306e\u5236\u9650\u304b\u3089\u89e3\u653e\u3055\u308c\u307e\u3057\u3087\u3046\u3002SuperCode \u306f Android \u7aef\u672b\u3092\u5b8c\u5168\u306a Web \u958b\u767a\u30b9\u30bf\u30b8\u30aa\u306b\u5909\u3048\u307e\u3059\u3002Virtual HTTP \u30b5\u30fc\u30d0\u30fc\u3067 CORS \u30a8\u30e9\u30fc\u3092\u56de\u907f\u3057\u3001FTP/SFTP \u74b0\u5883\u3068\u76f4\u63a5\u540c\u671f\u3067\u304d\u307e\u3059\u3002",
+      "f1_title": "\u771f\u306e\u30ed\u30fc\u30ab\u30eb HTTP \u30b5\u30fc\u30d0\u30fc (CORS \u5236\u9650\u56de\u907f)",
+      "f1_desc": "\u7269\u7406\u30d5\u30a1\u30a4\u30eb\u306b\u76f4\u63a5\u30de\u30c3\u30d4\u30f3\u30b0\u3055\u308c\u305f Virtual HTTP \u30b5\u30f3\u30c9\u30dc\u30c3\u30af\u30b9\u3092\u8d77\u52d5\u3002\u30e2\u30c0\u30f3\u30d5\u30ec\u30fc\u30e0\u30ef\u30fc\u30af\u3001ES6 \u30e2\u30b8\u30e5\u30fc\u30eb (<code>import/export</code>)\u3001WebAssembly \u3092\u30ed\u30fc\u30ab\u30eb\u3067\u5b9f\u884c\u3067\u304d\u307e\u3059\u3002",
+      "f2_title": "\u30c7\u30b9\u30af\u30c8\u30c3\u30d7\u7d1a\u306e Blob / \u30e1\u30c7\u30a3\u30a2\u51fa\u529b",
+      "f2_desc": "Canvas \u30b0\u30e9\u30d5\u30a3\u30c3\u30af\u30b9\u3084\u5927\u5bb9\u91cf\u30c7\u30fc\u30bf\u306e\u51e6\u7406\u306b\u5bfe\u5fdc\u3002\u5927\u5bb9\u91cf\u306e <code>Blob</code> \u3084 Data URL \u3092\u30e1\u30e2\u30ea\u30af\u30e9\u30c3\u30b7\u30e5\u306a\u3057\u3067\u7aef\u672b\u306e\u30ae\u30e3\u30e9\u30ea\u30fc\u3078\u76f4\u63a5\u4fdd\u5b58\u3067\u304d\u307e\u3059\u3002",
+      "f3_title": "\u30b7\u30fc\u30e0\u30ec\u30b9\u306a FTP / SFTP \u7d71\u5408",
+      "f3_desc": "\u30a8\u30c7\u30a3\u30bf\u3068\u30c7\u30d7\u30ed\u30a4\u30c4\u30fc\u30eb\u3092\u7d71\u5408\u3002\u30ea\u30e2\u30fc\u30c8 FTP/SFTP \u30b5\u30fc\u30d0\u30fc\u306b\u63a5\u7d9a\u3057\u3066\u30d5\u30a1\u30a4\u30eb\u3092\u30ed\u30fc\u30ab\u30eb\u7de8\u96c6\u3057\u3001\u5373\u6642\u30d7\u30ec\u30d3\u30e5\u30fc\u5f8c\u306b\u672c\u756a\u74b0\u5883\u3078\u540c\u671f\u3067\u304d\u307e\u3059\u3002",
+      "f4_title": "\u30af\u30e9\u30c3\u30b7\u30e5\u9632\u6b62 JS DevTools \u30b3\u30f3\u30bd\u30fc\u30eb",
+      "f4_desc": "\u9ad8\u5468\u6ce2\u30b9\u30ed\u30c3\u30c8\u30ea\u30f3\u30b0\u30a8\u30f3\u30b8\u30f3\u3092\u5099\u3048\u305f\u5bfe\u8a71\u578b\u30d5\u30ed\u30fc\u30c6\u30a3\u30f3\u30b0\u30b3\u30f3\u30bd\u30fc\u30eb\u306b\u3088\u308a\u3001\u4f55\u5343\u884c\u3082\u306e <code>console.log</code> \u51fa\u529b\u3082\u30d5\u30ea\u30fc\u30ba\u305b\u305a\u306b 60fps \u3067\u51e6\u7406\u3057\u307e\u3059\u3002",
+      "cta_h2": "Android \u3067\u4eca\u3059\u3050 Web \u30b5\u30a4\u30c8\u69cb\u7bc9\u3092\u59cb\u3081\u3088\u3046",
+      "cta_desc": "\u30ef\u30fc\u30af\u30d5\u30ed\u30fc\u3092\u30e2\u30d0\u30a4\u30eb\u5316\u3059\u308b\u4f55\u5343\u4eba\u3082\u306e\u30d5\u30ed\u30f3\u30c8\u30a8\u30f3\u30c9\u958b\u767a\u8005\u306b\u52a0\u308f\u308a\u307e\u3057\u3087\u3046\u3002"
+    },
+    "de": {
+      "metaTitle": "Web Editor (HTML/JS-Editor) & Lokaler HTTP-Server f\u00fcr Android | SuperCode",
+      "metaDesc": "Erstellen und testen Sie Websites auf Android wie ein Profi. Echter lokaler HTTP-Server, WebAssembly (WASM), ES6-Module, integrierter FTP/SFTP-Client und absturzsichere JS-Konsole.",
+      "hero_tag": "MOBILES WEB-STUDIO",
+      "hero_h1": "Der Ultimative <span class=\"text-gradient\">Web Editor &amp; Lokale Server</span>",
+      "hero_desc": "Schluss mit <code>file://</code>-Einschr\u00e4nkungen. SuperCode verwandelt Ihr Android-Ger\u00e4t in ein komplettes Webentwicklungsstudio mit virtuellem HTTP-Server gegen CORS-Blockaden und direktem FTP/SFTP-Sync.",
+      "f1_title": "Echter Lokaler HTTP-Server (Ohne CORS-Fehler)",
+      "f1_desc": "SuperCode startet eine virtuelle HTTP-Sandbox direkt f\u00fcr Ihre lokalen Dateien. F\u00fchren Sie ES6-Module (<code>import/export</code>) und WebAssembly lokal aus.",
+      "f2_title": "Medienexport auf Desktop-Niveau",
+      "f2_desc": "Streamen und speichern Sie gro\u00dfe <code>Blob</code>- und Canvas-Data-URL-Exporte direkt in die Galerie Ihres Smartphones ohne Speicherabst\u00fcrze.",
+      "f3_title": "Nahtlose FTP / SFTP-Integration",
+      "f3_desc": "Verbinden Sie sich mit Remote-FTP/SFTP-Servern, bearbeiten Sie Dateien lokal mit Sofortvorschau und synchronisieren Sie \u00c4nderungen direkt zur\u00fcck.",
+      "f4_title": "Absturzsichere JS DevTools-Konsole",
+      "f4_desc": "Debuggen Sie JavaScript mit einer schwebenden Konsole, die dank Throttling-Engine tausende <code>console.log</code>-Ausgaben gleichzeitig fl\u00fcssig verarbeitet.",
+      "cta_h2": "Erstellen Sie Websites noch heute direkt auf Android",
+      "cta_desc": "Schlie\u00dfen Sie sich tausenden Frontend-Entwicklern an, die mobil arbeiten."
+    },
+    "fr": {
+      "metaTitle": "Web Editor (\u00c9diteur HTML/JS) & Serveur HTTP Local pour Android | SuperCode",
+      "metaDesc": "Cr\u00e9ez et pr\u00e9visualisez des sites web sur Android comme un pro. Serveur HTTP local, support WebAssembly (WASM), modules ES6, client FTP/SFTP int\u00e9gr\u00e9 et console JS DevTools anti-plantage.",
+      "hero_tag": "STUDIO WEB MOBILE",
+      "hero_h1": "L'Ultime <span class=\"text-gradient\">Web Editor (HTML/JS) &amp; Serveur Local</span>",
+      "hero_desc": "Ne luttez plus contre les limites du protocole <code>file://</code>. SuperCode transforme votre Android en studio de d\u00e9veloppement web complet avec Serveur HTTP Virtuel sans erreur CORS et synchronisation FTP/SFTP.",
+      "f1_title": "V\u00e9ritable Serveur HTTP Local (Z\u00e9ro Erreur CORS)",
+      "f1_desc": "SuperCode lance une Sandbox HTTP Virtuelle mapp\u00e9e sur vos fichiers physiques. Ex\u00e9cutez les modules ES6 (<code>import/export</code>) et WebAssembly localement.",
+      "f2_title": "Export M\u00e9dia de Qualit\u00e9 Bureau",
+      "f2_desc": "T\u00e9l\u00e9chargez de lourds exports <code>Blob</code> et Data URL Canvas directement dans la galerie de votre t\u00e9l\u00e9phone sans plantage m\u00e9moire.",
+      "f3_title": "Int\u00e9gration FTP / SFTP Transparente",
+      "f3_desc": "Connectez-vous aux serveurs FTP/SFTP distants, \u00e9ditez localement avec aper\u00e7u instantan\u00e9 et synchronisez directement vers la production.",
+      "f4_title": "Console JS DevTools Anti-Plantage",
+      "f4_desc": "D\u00e9boguez votre JavaScript avec une console flottante capable de traiter des milliers de <code>console.log</code> simultan\u00e9ment sans figer l'\u00e9cran.",
+      "cta_h2": "Cr\u00e9ez des Sites Web Directement sur Android Aujourd'hui",
+      "cta_desc": "Rejoignez des milliers de d\u00e9veloppeurs frontend qui ont adopt\u00e9 le flux mobile."
+    },
+    "ko": {
+      "metaTitle": "Android\uc6a9 Web Editor (HTML/JS \uc5d0\ub514\ud130) \ubc0f \ub85c\uceec HTTP \uc11c\ubc84 | SuperCode",
+      "metaDesc": "Android\uc5d0\uc11c \uc804\ubb38\uac00\ucc98\ub7fc \uc6f9\uc0ac\uc774\ud2b8\ub97c \uc81c\uc791\ud558\uace0 \ubbf8\ub9ac\ubcf4\uc138\uc694. \uc9c4\uc815\ud55c \ub85c\uceec HTTP \uc11c\ubc84, WebAssembly(WASM) \uc9c0\uc6d0, ES6 \ubaa8\ub4c8, \ud1b5\ud569 FTP/SFTP \ud074\ub77c\uc774\uc5b8\ud2b8 \ubc0f \ucda9\ub3cc \ubc29\uc9c0 JS \ucf58\uc194 \ud0d1\uc7ac.",
+      "hero_tag": "\ubaa8\ubc14\uc77c WEB \uc6cc\ud06c\uc2a4\ud398\uc774\uc2a4",
+      "hero_h1": "\uad81\uadf9\uc758 <span class=\"text-gradient\">Web Editor (HTML/JS) &amp; \ub85c\uceec \uc11c\ubc84</span>",
+      "hero_desc": "<code>file://</code> \ud504\ub85c\ud1a0\ucf5c\uc758 \ud55c\uacc4\uc640 \uc2f8\uc6b0\uc9c0 \ub9c8\uc138\uc694. SuperCode\ub294 Android \uae30\uae30\ub97c \uc644\ubcbd\ud55c \uc6f9 \uac1c\ubc1c \uc2a4\ud29c\ub514\uc624\ub85c \ubc14\uafd4\uc90d\ub2c8\ub2e4. \uac00\uc0c1 HTTP \uc11c\ubc84\ub85c CORS \uc815\ucc45\uc744 \uc6b0\ud68c\ud558\uace0 FTP/SFTP \uc11c\ubc84\uc640 \uc9c1\uc811 \ub3d9\uae30\ud654\ud558\uc138\uc694.",
+      "f1_title": "\uc9c4\uc815\ud55c \ub85c\uceec HTTP \uc11c\ubc84 (CORS \uc624\ub958 \uc81c\ub85c)",
+      "f1_desc": "\ubd88\uc548\uc815\ud55c <code>file://</code> \ub300\uc2e0 \uc2e4\uc81c \ud30c\uc77c\uc5d0 \uc9c1\uc811 \ub9e4\ud551\ub418\ub294 \uac00\uc0c1 HTTP \uc0cc\ub4dc\ubc15\uc2a4\ub97c \uad6c\ub3d9\ud569\ub2c8\ub2e4. ES6 \ubaa8\ub4c8(<code>import/export</code>)\uacfc WebAssembly\ub97c \ub85c\uceec\uc5d0\uc11c \uc644\ubcbd\ud788 \uc2e4\ud589\ud558\uc138\uc694.",
+      "f2_title": "\ub370\uc2a4\ud06c\ud1b1\uae09 Blob / \ubbf8\ub514\uc5b4 \ub0b4\ubcf4\ub0b4\uae30",
+      "f2_desc": "WebRTC\ub098 Canvas \uadf8\ub798\ud53d \uc791\uc5c5 \uc2dc \ub300\uc6a9\ub7c9 <code>Blob</code> \ubc0f Data URL \ub0b4\ubcf4\ub0b4\uae30\ub97c \uba54\ubaa8\ub9ac \ucda9\ub3cc \uc5c6\uc774 \uc2a4\ub9c8\ud2b8\ud3f0 \uac24\ub7ec\ub9ac\ub85c \uc9c1\uc811 \ub2e4\uc6b4\ub85c\ub4dc\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.",
+      "f3_title": "\uc6d0\ud65c\ud55c FTP / SFTP \ud1b5\ud569",
+      "f3_desc": "\uc6d0\uaca9 FTP \ub610\ub294 SFTP \uc11c\ubc84\uc5d0 \uc5f0\uacb0\ud558\uc5ec \ud30c\uc77c\uc744 \ub85c\uceec \uc0cc\ub4dc\ubc15\uc2a4\uc5d0\uc11c \ud3b8\uc9d1\ud558\uace0 \uc989\uc2dc \ubbf8\ub9ac\ubcf8 \ud6c4 \ud504\ub85c\ub355\uc158 \uc11c\ubc84\ub85c \ub3d9\uae30\ud654\ud558\uc138\uc694.",
+      "f4_title": "\ucda9\ub3cc \ubc29\uc9c0 JS DevTools \ucf58\uc194",
+      "f4_desc": "\uace0\uc8fc\ud30c \uc2a4\ub85c\ud2c0\ub9c1 \uc5d4\uc9c4\uc774 \ub4b7\ubc1b\uce68\ud558\ub294 \ub300\ud654\ud615 \ud50c\ub85c\ud305 \ucf58\uc194\ub85c \uae30\uae30 \uba48\ucda4 \uc5c6\uc774 \uc218\ucc9c \uac1c\uc758 <code>console.log</code> \ucd9c\ub825\uc744 60fps\ub85c \ub3d9\uc2dc\uc5d0 \ucc98\ub9ac\ud569\ub2c8\ub2e4.",
+      "cta_h2": "\uc9c0\uae08 Android\uc5d0\uc11c \uc9c1\uc811 \uc6f9\uc0ac\uc774\ud2b8\ub97c \uad6c\ucd95\ud558\uc138\uc694",
+      "cta_desc": "\ubaa8\ubc14\uc77c\ub85c \uc6cc\ud06c\ud50c\ub85c\uc6b0\ub97c \ud655\uc7a5\ud558\ub294 \uc218\ucc9c \uba85\uc758 \ud504\ub7f0\ud2b8\uc5d4\ub4dc \uac1c\ubc1c\uc790\uc640 \ud568\uaed8\ud558\uc138\uc694."
+    },
+    "pt": {
+      "metaTitle": "Web Editor (Editor HTML/JS) e Servidor HTTP Local para Android | SuperCode",
+      "metaDesc": "Crie e visualize sites no Android como um profissional. O SuperCode traz Servidor HTTP Local real, suporte a WebAssembly (WASM), m\u00f3dulos ES6, cliente FTP/SFTP integrado e console JS DevTools.",
+      "hero_tag": "EST\u00daDIO WEB M\u00d3VEL",
+      "hero_h1": "O Definitivo <span class=\"text-gradient\">Web Editor (HTML/JS) &amp; Servidor Local</span>",
+      "hero_desc": "Pare de lutar contra as limita\u00e7\u00f5es do <code>file://</code>. O SuperCode transforma seu Android em um est\u00fadio completo de desenvolvimento web com Servidor HTTP Virtual sem erros de CORS e sincroniza\u00e7\u00e3o FTP/SFTP.",
+      "f1_title": "Verdadeiro Servidor HTTP Local (Sem Erros CORS)",
+      "f1_desc": "O SuperCode inicia um Sandbox HTTP Virtual mapeado para seus arquivos f\u00edsicos. Execute m\u00f3dulos ES6 (<code>import/export</code>) e bin\u00e1rios WebAssembly localmente.",
+      "f2_title": "Exporta\u00e7\u00e3o de M\u00eddia de N\u00edvel Desktop",
+      "f2_desc": "Trabalhando com gr\u00e1ficos Canvas ou arquivos grandes? Baixe exporta\u00e7\u00f5es pesadas de <code>Blob</code> e Data URL diretamente na Galeria do seu celular sem travar a mem\u00f3ria.",
+      "f3_title": "Integra\u00e7\u00e3o Perfeita com FTP / SFTP",
+      "f3_desc": "Conecte-se a servidores FTP ou SFTP remotos, edite arquivos localmente e visualize mudan\u00e7as instantaneamente antes de sincronizar com a produ\u00e7\u00e3o.",
+      "f4_title": "Console JS DevTools \u00e0 Prova de Travamentos",
+      "f4_desc": "Depure seu JavaScript com um console flutuante interativo capaz de processar milhares de sa\u00eddas <code>console.log</code> simultaneamente a 60fps.",
+      "cta_h2": "Construa Sites Diretamente no Android Hoje",
+      "cta_desc": "Junte-se a milhares de desenvolvedores frontend levando seu fluxo de trabalho para o celular."
+    },
+    "hi": {
+      "metaTitle": "Android \u0915\u0947 \u0932\u093f\u090f Web Editor (HTML/JS \u090f\u0921\u093f\u091f\u0930) \u0914\u0930 \u0932\u094b\u0915\u0932 HTTP \u0938\u0930\u094d\u0935\u0930 | SuperCode",
+      "metaDesc": "Android \u092a\u0930 \u092a\u094d\u0930\u094b \u0915\u0940 \u0924\u0930\u0939 \u0935\u0947\u092c\u0938\u093e\u0907\u091f \u092c\u0928\u093e\u090f\u0902 \u0914\u0930 \u092a\u094d\u0930\u0940\u0935\u094d\u092f\u0942 \u0915\u0930\u0947\u0902\u0964 SuperCode \u092e\u0947\u0902 \u0938\u091a\u094d\u091a\u093e \u0932\u094b\u0915\u0932 HTTP \u0938\u0930\u094d\u0935\u0930, WebAssembly (WASM) \u0938\u092a\u094b\u0930\u094d\u091f, ES6 \u092e\u0949\u0921\u094d\u092f\u0942\u0932, \u090f\u0915\u0940\u0915\u0943\u0924 FTP/SFTP \u0915\u094d\u0932\u093e\u0907\u0902\u091f \u0914\u0930 \u0915\u094d\u0930\u0948\u0936-\u092a\u094d\u0930\u0942\u092b JS \u0915\u0902\u0938\u094b\u0932 \u0936\u093e\u092e\u093f\u0932 \u0939\u0948\u0964",
+      "hero_tag": "\u092e\u094b\u092c\u093e\u0907\u0932 WEB \u0935\u0930\u094d\u0915\u0938\u094d\u092a\u0947\u0938",
+      "hero_h1": "\u0938\u0930\u094d\u0935\u0936\u094d\u0930\u0947\u0937\u094d\u0920 <span class=\"text-gradient\">Web Editor (HTML/JS) \u0914\u0930 \u0932\u094b\u0915\u0932 \u0938\u0930\u094d\u0935\u0930</span>",
+      "hero_desc": "<code>file://</code> \u0915\u0940 \u0938\u0940\u092e\u093e\u0913\u0902 \u0938\u0947 \u091c\u0942\u091d\u0928\u093e \u092c\u0902\u0926 \u0915\u0930\u0947\u0902\u0964 SuperCode \u0906\u092a\u0915\u0947 Android \u0921\u093f\u0935\u093e\u0907\u0938 \u0915\u094b \u090f\u0915 \u092a\u0942\u0930\u094d\u0923 \u0935\u0947\u092c \u0921\u0947\u0935\u0932\u092a\u092e\u0947\u0902\u091f \u0938\u094d\u091f\u0942\u0921\u093f\u092f\u094b \u092e\u0947\u0902 \u092c\u0926\u0932 \u0926\u0947\u0924\u093e \u0939\u0948\u0964 \u0939\u092e\u093e\u0930\u0947 \u0935\u0930\u094d\u091a\u0941\u0905\u0932 HTTP \u0938\u0930\u094d\u0935\u0930 \u0915\u0947 \u0938\u093e\u0925 CORS \u0928\u0940\u0924\u093f\u092f\u094b\u0902 \u0915\u094b \u092c\u093e\u092f\u092a\u093e\u0938 \u0915\u0930\u0947\u0902 \u0914\u0930 \u0938\u0940\u0927\u0947 FTP/SFTP \u0938\u0947 \u0938\u093f\u0902\u0915 \u0915\u0930\u0947\u0902\u0964",
+      "f1_title": "\u0938\u091a\u094d\u091a\u093e \u0932\u094b\u0915\u0932 HTTP \u0938\u0930\u094d\u0935\u0930 (\u091c\u093c\u0940\u0930\u094b CORS \u090f\u0930\u0930)",
+      "f1_desc": "SuperCode \u0906\u092a\u0915\u0940 \u092d\u094c\u0924\u093f\u0915 \u092b\u093c\u093e\u0907\u0932\u094b\u0902 \u0938\u0947 \u0938\u0940\u0927\u0947 \u092e\u0948\u092a \u0915\u093f\u092f\u093e \u0917\u092f\u093e \u0935\u0930\u094d\u091a\u0941\u0905\u0932 HTTP \u0938\u0948\u0902\u0921\u092c\u0949\u0915\u094d\u0938 \u091a\u0932\u093e\u0924\u093e \u0939\u0948\u0964 \u0906\u0927\u0941\u0928\u093f\u0915 \u092b\u094d\u0930\u0947\u092e\u0935\u0930\u094d\u0915, ES6 \u092e\u0949\u0921\u094d\u092f\u0942\u0932 (<code>import/export</code>) \u0914\u0930 WebAssembly \u0915\u094b \u0938\u094d\u0925\u093e\u0928\u0940\u092f \u0930\u0942\u092a \u0938\u0947 \u091a\u0932\u093e\u090f\u0902\u0964",
+      "f2_title": "\u0921\u0947\u0938\u094d\u0915\u091f\u0949\u092a-\u0917\u094d\u0930\u0947\u0921 \u092e\u0940\u0921\u093f\u092f\u093e \u090f\u0915\u094d\u0938\u092a\u094b\u0930\u094d\u091f",
+      "f2_desc": "Canvas \u0917\u094d\u0930\u093e\u092b\u093c\u093f\u0915\u094d\u0938 \u092f\u093e \u092c\u0921\u093c\u0940 \u092b\u093c\u093e\u0907\u0932\u094b\u0902 \u0915\u0947 \u0938\u093e\u0925 \u0915\u093e\u092e \u0915\u0930 \u0930\u0939\u0947 \u0939\u0948\u0902? \u092c\u093f\u0928\u093e \u092e\u0947\u092e\u094b\u0930\u0940 \u0915\u094d\u0930\u0948\u0936 \u0915\u0947 \u092d\u093e\u0930\u0940 <code>Blob</code> \u0914\u0930 Data URL \u090f\u0915\u094d\u0938\u092a\u094b\u0930\u094d\u091f \u0915\u094b \u0938\u0940\u0927\u0947 \u0905\u092a\u0928\u0947 \u092b\u093c\u094b\u0928 \u0915\u0940 \u0917\u0948\u0932\u0930\u0940 \u092e\u0947\u0902 \u0921\u093e\u0909\u0928\u0932\u094b\u0921 \u0915\u0930\u0947\u0902\u0964",
+      "f3_title": "\u0938\u0939\u091c FTP / SFTP \u090f\u0915\u0940\u0915\u0930\u0923",
+      "f3_desc": "\u0930\u093f\u092e\u094b\u091f FTP \u092f\u093e SFTP \u0938\u0930\u094d\u0935\u0930 \u0938\u0947 \u091c\u0941\u0921\u093c\u0947\u0902, \u092b\u093c\u093e\u0907\u0932\u094b\u0902 \u0915\u094b \u0932\u094b\u0915\u0932 \u0938\u0948\u0902\u0921\u092c\u0949\u0915\u094d\u0938 \u092e\u0947\u0902 \u090f\u0921\u093f\u091f \u0915\u0930\u0947\u0902 \u0914\u0930 \u092a\u094d\u0930\u094b\u0921\u0915\u094d\u0936\u0928 \u092e\u0947\u0902 \u0938\u093f\u0902\u0915 \u0915\u0930\u0928\u0947 \u0938\u0947 \u092a\u0939\u0932\u0947 \u0924\u0941\u0930\u0902\u0924 \u092c\u0926\u0932\u093e\u0935\u094b\u0902 \u0915\u093e \u092a\u094d\u0930\u0940\u0935\u094d\u092f\u0942 \u0926\u0947\u0916\u0947\u0902\u0964",
+      "f4_title": "\u0915\u094d\u0930\u0948\u0936-\u092a\u094d\u0930\u0942\u092b JS DevTools \u0915\u0902\u0938\u094b\u0932",
+      "f4_desc": "\u0907\u0902\u091f\u0930\u0948\u0915\u094d\u091f\u093f\u0935 \u092b\u094d\u0932\u094b\u091f\u093f\u0902\u0917 \u0915\u0902\u0938\u094b\u0932 \u0915\u0947 \u0938\u093e\u0925 \u0905\u092a\u0928\u0947 JavaScript \u0915\u094b \u0921\u0940\u092c\u0917 \u0915\u0930\u0947\u0902\u0964 \u0939\u093e\u0908-\u092b\u093c\u094d\u0930\u0940\u0915\u094d\u0935\u0947\u0902\u0938\u0940 \u0925\u094d\u0930\u0949\u091f\u0932\u093f\u0902\u0917 \u0907\u0902\u091c\u0928 \u0915\u0947 \u0938\u093e\u0925 \u092f\u0939 \u0921\u093f\u0935\u093e\u0907\u0938 \u0915\u094b \u092b\u094d\u0930\u0940\u091c\u093c \u0915\u093f\u090f \u092c\u093f\u0928\u093e \u0939\u091c\u093c\u093e\u0930\u094b\u0902 <code>console.log</code> \u0906\u0909\u091f\u092a\u0941\u091f \u092a\u094d\u0930\u094b\u0938\u0947\u0938 \u0915\u0930\u0924\u093e \u0939\u0948\u0964",
+      "cta_h2": "\u0906\u091c \u0939\u0940 \u0938\u0940\u0927\u0947 Android \u092a\u0930 \u0935\u0947\u092c\u0938\u093e\u0907\u091f \u092c\u0928\u093e\u090f\u0902",
+      "cta_desc": "\u0905\u092a\u0928\u0947 \u0935\u0930\u094d\u0915\u092b\u093c\u094d\u0932\u094b \u0915\u094b \u092e\u094b\u092c\u093e\u0907\u0932 \u092a\u0930 \u0932\u0947 \u091c\u093e\u0928\u0947 \u0935\u093e\u0932\u0947 \u0939\u091c\u093c\u093e\u0930\u094b\u0902 \u092b\u094d\u0930\u0902\u091f\u090f\u0902\u0921 \u0921\u0947\u0935\u0932\u092a\u0930\u094d\u0938 \u0938\u0947 \u091c\u0941\u0921\u093c\u0947\u0902\u0964"
+    },
+    "ru": {
+      "metaTitle": "Web Editor (HTML/JS \u0420\u0435\u0434\u0430\u043a\u0442\u043e\u0440) \u0438 \u041b\u043e\u043a\u0430\u043b\u044c\u043d\u044b\u0439 HTTP-\u0441\u0435\u0440\u0432\u0435\u0440 \u0434\u043b\u044f Android | SuperCode",
+      "metaDesc": "\u0421\u043e\u0437\u0434\u0430\u0432\u0430\u0439\u0442\u0435 \u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u0443\u0439\u0442\u0435 \u0441\u0430\u0439\u0442\u044b \u043d\u0430 Android \u043f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u043e. \u041b\u043e\u043a\u0430\u043b\u044c\u043d\u044b\u0439 HTTP-\u0441\u0435\u0440\u0432\u0435\u0440, \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430 WebAssembly (WASM), ES6-\u043c\u043e\u0434\u0443\u043b\u0438, \u0432\u0441\u0442\u0440\u043e\u0435\u043d\u043d\u044b\u0439 FTP/SFTP-\u043a\u043b\u0438\u0435\u043d\u0442 \u0438 \u043a\u043e\u043d\u0441\u043e\u043b\u044c JS DevTools \u0431\u0435\u0437 \u0437\u0430\u0432\u0438\u0441\u0430\u043d\u0438\u0439.",
+      "hero_tag": "\u041c\u041e\u0411\u0418\u041b\u042c\u041d\u0410\u042f \u0412\u0415\u0411-\u0421\u0422\u0423\u0414\u0418\u042f",
+      "hero_h1": "\u041b\u0443\u0447\u0448\u0438\u0439 <span class=\"text-gradient\">Web Editor (HTML/JS) \u0438 \u041b\u043e\u043a\u0430\u043b\u044c\u043d\u044b\u0439 \u0441\u0435\u0440\u0432\u0435\u0440</span>",
+      "hero_desc": "\u0425\u0432\u0430\u0442\u0438\u0442 \u0431\u043e\u0440\u043e\u0442\u044c\u0441\u044f \u0441 \u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0435\u043d\u0438\u044f\u043c\u0438 \u043f\u0440\u043e\u0442\u043e\u043a\u043e\u043b\u0430 <code>file://</code>. SuperCode \u043f\u0440\u0435\u0432\u0440\u0430\u0449\u0430\u0435\u0442 \u0432\u0430\u0448 Android \u0432 \u043f\u043e\u043b\u043d\u043e\u0446\u0435\u043d\u043d\u0443\u044e \u0441\u0442\u0443\u0434\u0438\u044e \u0432\u0435\u0431-\u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0438 \u0441 \u0432\u0438\u0440\u0442\u0443\u0430\u043b\u044c\u043d\u044b\u043c HTTP-\u0441\u0435\u0440\u0432\u0435\u0440\u043e\u043c \u0431\u0435\u0437 \u043e\u0448\u0438\u0431\u043e\u043a CORS \u0438 \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0430\u0446\u0438\u0435\u0439 \u043f\u043e FTP/SFTP.",
+      "f1_title": "\u041d\u0430\u0441\u0442\u043e\u044f\u0449\u0438\u0439 \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u044b\u0439 HTTP-\u0441\u0435\u0440\u0432\u0435\u0440 (\u0411\u0435\u0437 \u043e\u0448\u0438\u0431\u043e\u043a CORS)",
+      "f1_desc": "\u0412\u0438\u0440\u0442\u0443\u0430\u043b\u044c\u043d\u0430\u044f HTTP-\u043f\u0435\u0441\u043e\u0447\u043d\u0438\u0446\u0430 \u043d\u0430\u043f\u0440\u044f\u043c\u0443\u044e \u0441\u043e\u043f\u043e\u0441\u0442\u0430\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u0441 \u0432\u0430\u0448\u0438\u043c\u0438 \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u044b\u043c\u0438 \u0444\u0430\u0439\u043b\u0430\u043c\u0438. \u0417\u0430\u043f\u0443\u0441\u043a\u0430\u0439\u0442\u0435 \u0441\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0435 \u0444\u0440\u0435\u0439\u043c\u0432\u043e\u0440\u043a\u0438, \u043c\u043e\u0434\u0443\u043b\u0438 ES6 (<code>import/export</code>) \u0438 WebAssembly \u043e\u0444\u043b\u0430\u0439\u043d.",
+      "f2_title": "\u042d\u043a\u0441\u043f\u043e\u0440\u0442 \u043c\u0435\u0434\u0438\u0430\u0444\u0430\u0439\u043b\u043e\u0432 \u043d\u0430\u0441\u0442\u043e\u043b\u044c\u043d\u043e\u0433\u043e \u0443\u0440\u043e\u0432\u043d\u044f",
+      "f2_desc": "\u0420\u0430\u0431\u043e\u0442\u0430\u0435\u0442\u0435 \u0441 \u0433\u0440\u0430\u0444\u0438\u043a\u043e\u0439 Canvas \u0438\u043b\u0438 \u0442\u044f\u0436\u0435\u043b\u044b\u043c\u0438 \u0444\u0430\u0439\u043b\u0430\u043c\u0438? \u0421\u043e\u0445\u0440\u0430\u043d\u044f\u0439\u0442\u0435 \u043e\u0431\u044a\u0435\u043c\u043d\u044b\u0435 \u043e\u0431\u044a\u0435\u043a\u0442\u044b <code>Blob</code> \u0438 Data URL \u043d\u0430\u043f\u0440\u044f\u043c\u0443\u044e \u0432 \u0433\u0430\u043b\u0435\u0440\u0435\u044e \u0441\u043c\u0430\u0440\u0442\u0444\u043e\u043d\u0430 \u0431\u0435\u0437 \u0441\u0431\u043e\u0435\u0432 \u043f\u0430\u043c\u044f\u0442\u0438.",
+      "f3_title": "\u0411\u0435\u0441\u0448\u043e\u0432\u043d\u0430\u044f \u0438\u043d\u0442\u0435\u0433\u0440\u0430\u0446\u0438\u044f \u0441 FTP / SFTP",
+      "f3_desc": "\u041f\u043e\u0434\u043a\u043b\u044e\u0447\u0430\u0439\u0442\u0435\u0441\u044c \u043a \u0443\u0434\u0430\u043b\u0435\u043d\u043d\u044b\u043c FTP/SFTP-\u0441\u0435\u0440\u0432\u0435\u0440\u0430\u043c, \u0440\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u0443\u0439\u0442\u0435 \u0444\u0430\u0439\u043b\u044b \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u043e \u0441 \u043c\u0433\u043d\u043e\u0432\u0435\u043d\u043d\u044b\u043c \u043f\u0440\u0435\u0434\u043f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u043e\u043c \u0438 \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0438\u0440\u0443\u0439\u0442\u0435 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f \u043e\u0431\u0440\u0430\u0442\u043d\u043e \u043d\u0430 \u043f\u0440\u043e\u0434\u0430\u043a\u0448\u043d.",
+      "f4_title": "\u041d\u0435\u0443\u0431\u0438\u0432\u0430\u0435\u043c\u0430\u044f \u043a\u043e\u043d\u0441\u043e\u043b\u044c JS DevTools",
+      "f4_desc": "\u041e\u0442\u043b\u0430\u0436\u0438\u0432\u0430\u0439\u0442\u0435 JavaScript \u0447\u0435\u0440\u0435\u0437 \u043f\u043b\u0430\u0432\u0430\u044e\u0449\u0443\u044e \u043a\u043e\u043d\u0441\u043e\u043b\u044c \u0441 \u043c\u0435\u0445\u0430\u043d\u0438\u0437\u043c\u043e\u043c \u0442\u0440\u043e\u0442\u0442\u043b\u0438\u043d\u0433\u0430, \u0441\u043f\u043e\u0441\u043e\u0431\u043d\u0443\u044e \u043e\u0431\u0440\u0430\u0431\u0430\u0442\u044b\u0432\u0430\u0442\u044c \u0442\u044b\u0441\u044f\u0447\u0438 \u0432\u044b\u0437\u043e\u0432\u043e\u0432 <code>console.log</code> \u043f\u0440\u0438 \u043f\u043b\u0430\u0432\u043d\u044b\u0445 60 \u043a\u0430\u0434\u0440\u0430\u0445/\u0441.",
+      "cta_h2": "\u0421\u043e\u0437\u0434\u0430\u0432\u0430\u0439\u0442\u0435 \u0432\u0435\u0431-\u0441\u0430\u0439\u0442\u044b \u043f\u0440\u044f\u043c\u043e \u043d\u0430 Android \u0441\u0435\u0433\u043e\u0434\u043d\u044f",
+      "cta_desc": "\u041f\u0440\u0438\u0441\u043e\u0435\u0434\u0438\u043d\u044f\u0439\u0442\u0435\u0441\u044c \u043a \u0442\u044b\u0441\u044f\u0447\u0430\u043c \u0444\u0440\u043e\u043d\u0442\u0435\u043d\u0434-\u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0447\u0438\u043a\u043e\u0432, \u043f\u0435\u0440\u0435\u043d\u0435\u0441\u0448\u0438\u0445 \u0441\u0432\u043e\u044e \u0440\u0430\u0431\u043e\u0442\u0443 \u043d\u0430 \u043c\u043e\u0431\u0438\u043b\u044c\u043d\u044b\u0435 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430."
+    }
+  },
+  "git_client": {
+    "en": {
+      "metaTitle": "Git Client & SFTP Code Editor for Android | SuperCode",
+      "metaDesc": "The ultimate Git client and SFTP code editor for Android. SuperCode offers a visual Git time machine, intuitive conflict resolution, and seamless FTP/SFTP server synchronization. Manage your DevOps workflow entirely on mobile.",
+      "hero_tag": "MOBILE DEVOPS STUDIO",
+      "hero_h1": "The Ultimate <span class=\"text-gradient\">Git Client &amp; SFTP Editor</span>",
+      "hero_desc": "Take full control of your source code and servers from anywhere. SuperCode integrates an industrial-grade <strong>Git Client</strong> and <strong>SFTP/FTP Editor</strong> directly into your Android device. Resolve merge conflicts visually, browse commit timelines, and deploy to production with zero friction.",
+      "f1_title": "Visual Merge Conflict Resolver",
+      "f1_desc": "No more deciphering cryptic <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> tags in a command line. Our intelligent parser detects Git merge conflicts and presents them in a beautiful side-by-side UI. Choose to keep local, remote, or both changes with a single tap.",
+      "f2_title": "Visual Git Time Machine",
+      "f2_desc": "Browse your entire repository timeline effortlessly. View commit history, switch branches instantly, or execute a safe <code>Hard Reset</code> to revert your project to a previous state all through a smooth, gesture-driven bottom sheet interface.",
+      "f3_title": "One-Click Smart Sync",
+      "f3_desc": "Automate your DevOps workflow. SuperCode's Git engine automatically tracks upstream branches and corrects desync issues. Execute full Clone, Commit, Push, and Pull operations reliably, even on unstable mobile networks.",
+      "f4_title": "Direct SFTP / FTP Deployment",
+      "f4_desc": "Manage your live production servers like local folders. Connect via SFTP/FTP to edit files remotely, transfer assets securely, and even execute remote SSH commands directly from the integrated SuperCode terminal.",
+      "cta_h2": "Master Mobile DevOps Today",
+      "cta_desc": "Join thousands of engineers deploying code and managing repositories on Android."
+    },
+    "zh": {
+      "metaTitle": "Android \u53ef\u89c6\u5316 Git Client (Git \u5ba2\u6237\u7aef) \u4e0e SFTP \u8fdc\u7a0b\u4ee3\u7801\u7f16\u8f91\u5668 | SuperCode",
+      "metaDesc": "\u9762\u5411 Android \u7684\u7ec8\u6781\u53ef\u89c6\u5316 Git Client \u4e0e SFTP \u4ee3\u7801\u7f16\u8f91\u5668\u3002SuperCode \u63d0\u4f9b Git \u65f6\u5149\u673a\u63d0\u4ea4\u62d3\u6251\u6811\u3001\u76f4\u89c2\u7684\u51b2\u7a81\u5408\u5e76\u89e3\u51b3\u5668\u4ee5\u53ca\u65e0\u7f1d\u7684 FTP/SFTP \u751f\u4ea7\u670d\u52a1\u5668\u540c\u6b65\u80fd\u529b\u3002",
+      "hero_tag": "\u79fb\u52a8 DEVOPS \u7814\u53d1\u8fd0\u7ef4\u5de5\u4f5c\u5ba4",
+      "hero_h1": "\u7ec8\u6781 <span class=\"text-gradient\">Git Client &amp; SFTP \u8fdc\u7a0b\u7f16\u8f91\u5668</span>",
+      "hero_desc": "\u968f\u65f6\u968f\u5730\u5168\u9762\u638c\u63a7\u6e90\u7801\u4e0e\u7ebf\u4e0a\u670d\u52a1\u5668\u3002SuperCode \u5728 Android \u8bbe\u5907\u4e2d\u6df1\u5ea6\u96c6\u6210\u4e86\u5de5\u4e1a\u7ea7 <strong>Git Client (Git \u5ba2\u6237\u7aef)</strong> \u4e0e <strong>SFTP/FTP \u7f16\u8f91\u5668</strong>\u3002\u53ef\u89c6\u5316\u89e3\u51b3\u5408\u5e76\u51b2\u7a81\u3001\u56de\u6eaf\u63d0\u4ea4\u5386\u53f2\u65f6\u95f4\u7ebf\uff0c\u5e76\u96f6\u963b\u529b\u90e8\u7f72\u81f3\u751f\u4ea7\u73af\u5883\u3002",
+      "f1_title": "\u53ef\u89c6\u5316\u5408\u5e76\u51b2\u7a81\u89e3\u51b3\u5668 (Merge Resolver)",
+      "f1_desc": "\u65e0\u9700\u518d\u5728\u547d\u4ee4\u884c\u91cc\u8270\u96be\u8fa8\u8ba4 <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> \u6807\u8bb0\u3002\u667a\u80fd\u89e3\u6790\u5668\u81ea\u52a8\u68c0\u6d4b Git \u5408\u5e76\u51b2\u7a81\u5e76\u4ee5\u6e05\u6670\u7684\u53cc\u680f\u5bf9\u6bd4 UI \u5448\u73b0\uff0c\u5355\u6307\u8f7b\u89e6\u5373\u53ef\u9009\u62e9\u4fdd\u7559\u672c\u5730\u3001\u8fdc\u7a0b\u6216\u53cc\u65b9\u4ee3\u7801\u3002",
+      "f2_title": "\u53ef\u89c6\u5316 Git \u65f6\u5149\u673a\u4e0e\u5206\u652f\u62d3\u6251\u6811",
+      "f2_desc": "\u8f7b\u677e\u6d4f\u89c8\u5b8c\u6574\u4ed3\u5e93\u65f6\u95f4\u7ebf\u3002\u901a\u8fc7\u4e1d\u6ed1\u7684\u624b\u52bf\u5e95\u90e8\u9762\u677f\u67e5\u770b Commit \u63d0\u4ea4\u5386\u53f2\u3001\u79d2\u7ea7\u5207\u6362\u5206\u652f\uff0c\u6216\u5b89\u5168\u6267\u884c <code>Hard Reset</code> \u5c06\u5de5\u7a0b\u56de\u6eda\u81f3\u4efb\u610f\u5386\u53f2\u8282\u70b9\u3002",
+      "f3_title": "\u4e00\u952e\u667a\u80fd\u540c\u6b65 (Clone / Commit / Push / Pull)",
+      "f3_desc": "\u81ea\u52a8\u5316\u4f60\u7684 DevOps \u5de5\u4f5c\u6d41\u3002SuperCode \u7684 Git \u5f15\u64ce\u81ea\u52a8\u8ffd\u8e2a\u4e0a\u6e38\u5206\u652f\u5e76\u4fee\u590d\u72b6\u6001\u4e0d\u540c\u6b65\u95ee\u9898\uff0c\u5373\u4f7f\u5728\u5f31\u7f51\u79fb\u52a8\u73af\u5883\u4e0b\u4e5f\u80fd\u53ef\u9760\u5b8c\u6210 Clone\u3001Commit\u3001Push \u4e0e Pull\u3002",
+      "f4_title": "SFTP / FTP \u751f\u4ea7\u670d\u52a1\u5668\u76f4\u8fde\u90e8\u7f72",
+      "f4_desc": "\u50cf\u7ba1\u7406\u672c\u5730\u6587\u4ef6\u5939\u4e00\u6837\u7ba1\u7406\u7ebf\u4e0a\u751f\u4ea7\u670d\u52a1\u5668\u3002\u901a\u8fc7 SFTP/FTP \u8fdc\u7a0b\u7f16\u8f91\u4ee3\u7801\u3001\u5b89\u5168\u4f20\u8f93\u9759\u6001\u8d44\u6e90\uff0c\u5e76\u5728\u96c6\u6210\u7684\u7ec8\u7aef\u4e2d\u76f4\u63a5\u6267\u884c\u8fdc\u7a0b\u7ba1\u7406\u64cd\u4f5c\u3002",
+      "cta_h2": "\u7acb\u5373\u638c\u63a7\u79fb\u52a8 DevOps \u4e0e Git \u7248\u672c\u63a7\u5236",
+      "cta_desc": "\u52a0\u5165\u6570\u4ee5\u5343\u8ba1\u5728 Android \u4e0a\u968f\u65f6\u7ba1\u7406\u4ee3\u7801\u4ed3\u5e93\u4e0e\u90e8\u7f72\u670d\u52a1\u7684\u5de5\u7a0b\u5e08\u3002"
+    },
+    "es": {
+      "metaTitle": "Git Client (Cliente Git) y Editor SFTP para Android | SuperCode",
+      "metaDesc": "El Git Client (Cliente Git) y editor de c\u00f3digo SFTP definitivo para Android. M\u00e1quina del tiempo Git visual, resoluci\u00f3n intuitiva de conflictos y sincronizaci\u00f3n de servidores FTP/SFTP.",
+      "hero_tag": "ESTUDIO DEVOPS M\u00d3VIL",
+      "hero_h1": "El Mejor <span class=\"text-gradient\">Git Client y Editor SFTP</span>",
+      "hero_desc": "Toma el control total de tu c\u00f3digo fuente y servidores desde cualquier lugar. SuperCode integra un <strong>Git Client</strong> de grado industrial y un <strong>Editor SFTP/FTP</strong> directamente en tu Android.",
+      "f1_title": "Resolutor Visual de Conflictos de Fusi\u00f3n",
+      "f1_desc": "Olv\u00eddate de descifrar etiquetas <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> en consola. Nuestro analizador detecta conflictos Git y te permite conservar cambios locales, remotos o ambos con un toque.",
+      "f2_title": "M\u00e1quina del Tiempo Git Visual",
+      "f2_desc": "Explora el historial de commits, cambia de rama al instante o ejecuta un <code>Hard Reset</code> seguro para revertir tu proyecto mediante una interfaz t\u00e1ctil fluida.",
+      "f3_title": "Sincronizaci\u00f3n Inteligente en Un Clic",
+      "f3_desc": "Ejecuta operaciones completas de Clone, Commit, Push y Pull de manera confiable, rastreando ramas remotas autom\u00e1ticamente.",
+      "f4_title": "Despliegue Directo por SFTP / FTP",
+      "f4_desc": "Gestiona tus servidores en producci\u00f3n como carpetas locales. Con\u00e9ctate por SFTP/FTP para editar archivos remotamente y transferir recursos con seguridad.",
+      "cta_h2": "Domina el DevOps M\u00f3vil Hoy",
+      "cta_desc": "\u00danete a miles de ingenieros que despliegan c\u00f3digo y gestionan repositorios en Android."
+    },
+    "ja": {
+      "metaTitle": "Android \u5411\u3051 Visual Git Client (Git\u30af\u30e9\u30a4\u30a2\u30f3\u30c8) & SFTP \u30a8\u30c7\u30a3\u30bf | SuperCode",
+      "metaDesc": "Android \u5411\u3051\u306e\u7a76\u6975\u306e Git Client \u304a\u3088\u3073 SFTP \u30b3\u30fc\u30c9\u30a8\u30c7\u30a3\u30bf\u3002\u30d3\u30b8\u30e5\u30a2\u30eb Git \u30bf\u30a4\u30e0\u30de\u30b7\u30f3\u3001\u76f4\u611f\u7684\u306a\u30de\u30fc\u30b8\u7af6\u5408\u89e3\u6c7a\u3001\u30b7\u30fc\u30e0\u30ec\u30b9\u306a FTP/SFTP \u30b5\u30fc\u30d0\u30fc\u540c\u671f\u3067\u30e2\u30d0\u30a4\u30eb DevOps \u3092\u5b9f\u73fe\u3002",
+      "hero_tag": "\u30e2\u30d0\u30a4\u30eb DEVOPS \u30b9\u30bf\u30b8\u30aa",
+      "hero_h1": "\u7a76\u6975\u306e <span class=\"text-gradient\">Git Client &amp; SFTP \u30a8\u30c7\u30a3\u30bf</span>",
+      "hero_desc": "\u5834\u6240\u3092\u9078\u3070\u305a\u30bd\u30fc\u30b9\u30b3\u30fc\u30c9\u3068\u30b5\u30fc\u30d0\u30fc\u3092\u5b8c\u5168\u5236\u5fa1\u3002SuperCode \u306f\u7523\u696d\u30b0\u30ec\u30fc\u30c9\u306e <strong>Git Client</strong> \u3068 <strong>SFTP/FTP \u30a8\u30c7\u30a3\u30bf</strong> \u3092 Android \u306b\u7d71\u5408\u3002\u30de\u30fc\u30b8\u7af6\u5408\u306e\u8996\u899a\u7684\u89e3\u6c7a\u3001\u30b3\u30df\u30c3\u30c8\u5c65\u6b74\u306e\u9061\u53ca\u3001\u672c\u756a\u30c7\u30d7\u30ed\u30a4\u3092\u30b9\u30e0\u30fc\u30ba\u306b\u884c\u3048\u307e\u3059\u3002",
+      "f1_title": "\u30d3\u30b8\u30e5\u30a2\u30eb\u30fb\u30de\u30fc\u30b8\u7af6\u5408\u30ea\u30be\u30eb\u30d0\u30fc",
+      "f1_desc": "\u30b3\u30de\u30f3\u30c9\u30e9\u30a4\u30f3\u3067\u8907\u96d1\u306a <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> \u30bf\u30b0\u3092\u89e3\u8aad\u3059\u308b\u5fc5\u8981\u306f\u3042\u308a\u307e\u305b\u3093\u3002\u7af6\u5408\u3092\u7f8e\u3057\u3044\u4e26\u5217 UI \u3067\u8868\u793a\u3057\u3001\u30ef\u30f3\u30bf\u30c3\u30d7\u3067\u30ed\u30fc\u30ab\u30eb\u30fb\u30ea\u30e2\u30fc\u30c8\u30fb\u4e21\u65b9\u306e\u5909\u66f4\u3092\u9078\u629e\u3067\u304d\u307e\u3059\u3002",
+      "f2_title": "\u30d3\u30b8\u30e5\u30a2\u30eb Git \u30bf\u30a4\u30e0\u30de\u30b7\u30f3",
+      "f2_desc": "\u30ea\u30dd\u30b8\u30c8\u30ea\u306e\u30bf\u30a4\u30e0\u30e9\u30a4\u30f3\u5168\u4f53\u3092\u76f4\u611f\u7684\u306b\u95b2\u89a7\u3002\u30b3\u30df\u30c3\u30c8\u5c65\u6b74\u306e\u78ba\u8a8d\u3001\u30d6\u30e9\u30f3\u30c1\u306e\u5373\u6642\u5207\u308a\u66ff\u3048\u3001\u5b89\u5168\u306a <code>Hard Reset</code> \u306b\u3088\u308b\u30ed\u30fc\u30eb\u30d0\u30c3\u30af\u3092\u30b9\u30e0\u30fc\u30ba\u306b\u5b9f\u884c\u3067\u304d\u307e\u3059\u3002",
+      "f3_title": "\u30ef\u30f3\u30af\u30ea\u30c3\u30af\u30fb\u30b9\u30de\u30fc\u30c8\u540c\u671f",
+      "f3_desc": "\u30a2\u30c3\u30d7\u30b9\u30c8\u30ea\u30fc\u30e0\u30d6\u30e9\u30f3\u30c1\u3092\u81ea\u52d5\u8ffd\u8de1\u3057\u3001\u4e0d\u5b89\u5b9a\u306a\u30e2\u30d0\u30a4\u30eb\u56de\u7dda\u3067\u3082 Clone\u3001Commit\u3001Push\u3001Pull \u306e\u5168\u64cd\u4f5c\u3092\u78ba\u5b9f\u306b\u5b9f\u884c\u3057\u307e\u3059\u3002",
+      "f4_title": "\u30c0\u30a4\u30ec\u30af\u30c8 SFTP / FTP \u30c7\u30d7\u30ed\u30a4",
+      "f4_desc": "\u672c\u756a\u30b5\u30fc\u30d0\u30fc\u3092\u30ed\u30fc\u30ab\u30eb\u30d5\u30a9\u30eb\u30c0\u306e\u3088\u3046\u306b\u7ba1\u7406\u3002SFTP/FTP \u7d4c\u7531\u3067\u30ea\u30e2\u30fc\u30c8\u30d5\u30a1\u30a4\u30eb\u3092\u7de8\u96c6\u30fb\u8ee2\u9001\u3057\u3001\u7d71\u5408\u30bf\u30fc\u30df\u30ca\u30eb\u304b\u3089\u8fc5\u901f\u306b\u30c7\u30d7\u30ed\u30a4\u3092\u884c\u3048\u307e\u3059\u3002",
+      "cta_h2": "\u30e2\u30d0\u30a4\u30eb DevOps \u3092\u4eca\u3059\u3050\u30de\u30b9\u30bf\u30fc\u3057\u3088\u3046",
+      "cta_desc": "Android \u3067\u30b3\u30fc\u30c9\u306e\u30c7\u30d7\u30ed\u30a4\u3068\u30ea\u30dd\u30b8\u30c8\u30ea\u7ba1\u7406\u3092\u884c\u3046\u4f55\u5343\u4eba\u3082\u306e\u30a8\u30f3\u30b8\u30cb\u30a2\u306b\u52a0\u308f\u308a\u307e\u3057\u3087\u3046\u3002"
+    },
+    "de": {
+      "metaTitle": "Git Client & SFTP Code Editor f\u00fcr Android | SuperCode",
+      "metaDesc": "Der ultimative Git Client und SFTP Code Editor f\u00fcr Android. Visuelle Git-Zeitmaschine, intuitive Konfliktl\u00f6sung und nahtlose FTP/SFTP-Serversynchronisation f\u00fcr Ihren mobilen DevOps-Workflow.",
+      "hero_tag": "MOBILES DEVOPS-STUDIO",
+      "hero_h1": "Der Ultimative <span class=\"text-gradient\">Git Client &amp; SFTP Editor</span>",
+      "hero_desc": "Volle Kontrolle \u00fcber Quellcode und Server von \u00fcberall. SuperCode integriert einen industriellen <strong>Git Client</strong> und <strong>SFTP/FTP-Editor</strong> direkt in Ihr Android-Ger\u00e4t.",
+      "f1_title": "Visueller Merge-Konfliktl\u00f6ser",
+      "f1_desc": "Kein Entschl\u00fcsseln kryptischer <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>-Tags mehr. Merge-Konflikte werden \u00fcbersichtlich nebeneinander dargestellt und per Fingertipp gel\u00f6st.",
+      "f2_title": "Visuelle Git-Zeitmaschine",
+      "f2_desc": "Durchsuchen Sie Ihre gesamte Commit-Historie, wechseln Sie Branches sofort oder f\u00fchren Sie einen sicheren <code>Hard Reset</code> auf einen fr\u00fcheren Zustand durch.",
+      "f3_title": "Intelligente Ein-Klick-Synchronisation",
+      "f3_desc": "F\u00fchren Sie Clone-, Commit-, Push- und Pull-Operationen zuverl\u00e4ssig aus \u2013 inklusive automatischer Verfolgung von Upstream-Branches.",
+      "f4_title": "Direktes SFTP / FTP-Deployment",
+      "f4_desc": "Verwalten Sie Live-Produktionsserver wie lokale Ordner. Verbinden Sie sich per SFTP/FTP, um Dateien remote zu bearbeiten und sicher zu \u00fcbertragen.",
+      "cta_h2": "Meistern Sie Mobiles DevOps noch heute",
+      "cta_desc": "Schlie\u00dfen Sie sich tausenden Ingenieuren an, die Repositories auf Android verwalten."
+    },
+    "fr": {
+      "metaTitle": "Git Client (Client Git) & \u00c9diteur SFTP pour Android | SuperCode",
+      "metaDesc": "L'ultime Git Client et \u00e9diteur de code SFTP pour Android. Machine \u00e0 remonter le temps Git visuelle, r\u00e9solution intuitive des conflits et synchronisation de serveurs FTP/SFTP.",
+      "hero_tag": "STUDIO DEVOPS MOBILE",
+      "hero_h1": "L'Ultime <span class=\"text-gradient\">Git Client &amp; \u00c9diteur SFTP</span>",
+      "hero_desc": "Prenez le contr\u00f4le total de votre code source et de vos serveurs o\u00f9 que vous soyez. SuperCode int\u00e8gre un <strong>Git Client</strong> industriel et un <strong>\u00c9diteur SFTP/FTP</strong> directement sur Android.",
+      "f1_title": "R\u00e9solveur Visuel de Conflits de Fusion",
+      "f1_desc": "Fini le d\u00e9chiffrage des balises <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>. Notre analyseur pr\u00e9sente les conflits Git c\u00f4te \u00e0 c\u00f4te pour choisir la version locale, distante ou les deux en un toucher.",
+      "f2_title": "Machine \u00e0 Remonter le Temps Git Visuelle",
+      "f2_desc": "Parcourez l'historique des commits, changez de branche instantan\u00e9ment ou ex\u00e9cutez un <code>Hard Reset</code> s\u00e9curis\u00e9 via une interface fluide.",
+      "f3_title": "Synchronisation Intelligente en Un Clic",
+      "f3_desc": "Ex\u00e9cutez des op\u00e9rations Clone, Commit, Push et Pull fiables avec suivi automatique des branches distantes.",
+      "f4_title": "D\u00e9ploiement Direct SFTP / FTP",
+      "f4_desc": "G\u00e9rez vos serveurs de production comme des dossiers locaux. Connectez-vous en SFTP/FTP pour \u00e9diter vos fichiers \u00e0 distance en toute s\u00e9curit\u00e9.",
+      "cta_h2": "Ma\u00eetrisez le DevOps Mobile Aujourd'hui",
+      "cta_desc": "Rejoignez des milliers d'ing\u00e9nieurs qui d\u00e9ploient du code et g\u00e8rent leurs d\u00e9p\u00f4ts sur Android."
+    },
+    "ko": {
+      "metaTitle": "Android\uc6a9 \ube44\uc8fc\uc5bc Git Client (Git \ud074\ub77c\uc774\uc5b8\ud2b8) \ubc0f SFTP \ucf54\ub4dc \uc5d0\ub514\ud130 | SuperCode",
+      "metaDesc": "Android\ub97c \uc704\ud55c \uad81\uadf9\uc758 Git Client \ubc0f SFTP \ucf54\ub4dc \uc5d0\ub514\ud130. \ube44\uc8fc\uc5bc Git \ud0c0\uc784\uba38\uc2e0, \uc9c1\uad00\uc801\uc778 \ubcd1\ud569 \ucda9\ub3cc \ud574\uacb0 \ubc0f \uc6d0\ud65c\ud55c FTP/SFTP \uc11c\ubc84 \ub3d9\uae30\ud654\ub85c \ubaa8\ubc14\uc77c DevOps \uc6cc\ud06c\ud50c\ub85c\uc6b0\ub97c \uc644\uc131\ud558\uc138\uc694.",
+      "hero_tag": "\ubaa8\ubc14\uc77c DEVOPS \uc2a4\ud29c\ub514\uc624",
+      "hero_h1": "\uad81\uadf9\uc758 <span class=\"text-gradient\">Git Client &amp; SFTP \uc5d0\ub514\ud130</span>",
+      "hero_desc": "\uc5b4\ub514\uc11c\ub098 \uc18c\uc2a4 \ucf54\ub4dc\uc640 \uc11c\ubc84\ub97c \uc644\ubcbd\ud558\uac8c \uc81c\uc5b4\ud558\uc138\uc694. SuperCode\ub294 \uc0b0\uc5c5\uc6a9 <strong>Git Client</strong>\uc640 <strong>SFTP/FTP \uc5d0\ub514\ud130</strong>\ub97c Android \uae30\uae30\uc5d0 \uc9c1\uc811 \ud1b5\ud569\ud558\uc5ec \uc2dc\uac01\uc801 \ucda9\ub3cc \ud574\uacb0\uacfc \ud504\ub85c\ub355\uc158 \ubc30\ud3ec\ub97c \uc9c0\uc6d0\ud569\ub2c8\ub2e4.",
+      "f1_title": "\ube44\uc8fc\uc5bc \ubcd1\ud569 \ucda9\ub3cc \ud574\uacb0\uae30 (Merge Resolver)",
+      "f1_desc": "\ubcf5\uc7a1\ud55c <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> \ud0dc\uadf8\ub97c \uc77c\uc77c\uc774 \ud574\ub3c5\ud560 \ud544\uc694\uac00 \uc5c6\uc2b5\ub2c8\ub2e4. \ubcd1\ud569 \ucda9\ub3cc\uc744 \ub098\ub780\ud788 \ube44\uad50\ud558\ub294 UI\ub85c \ubcf4\uc5ec\uc8fc\uba70 \ud55c \ubc88\uc758 \ud0ed\uc73c\ub85c \ub85c\uceec, \uc6d0\uaca9 \ub610\ub294 \ub450 \ubcc0\uacbd \uc0ac\ud56d\uc744 \ubaa8\ub450 \uc720\uc9c0\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.",
+      "f2_title": "\ube44\uc8fc\uc5bc Git \ud0c0\uc784\uba38\uc2e0",
+      "f2_desc": "\uc804\uccb4 \ub9ac\ud3ec\uc9c0\ud1a0\ub9ac \ud0c0\uc784\ub77c\uc778\uc744 \uc190\uc27d\uac8c \ud0d0\uc0c9\ud558\uc138\uc694. \ucee4\ubc0b \uae30\ub85d \ud655\uc778, \uc989\uac01\uc801\uc778 \ube0c\ub79c\uce58 \uc804\ud658 \ubc0f \uc548\uc804\ud55c <code>Hard Reset</code> \ubcf5\uc6d0\uc744 \ubd80\ub4dc\ub7ec\uc6b4 \uc81c\uc2a4\ucc98 \uc778\ud130\ud398\uc774\uc2a4\ub85c \uc2e4\ud589\ud569\ub2c8\ub2e4.",
+      "f3_title": "\uc6d0\ud074\ub9ad \uc2a4\ub9c8\ud2b8 \ub3d9\uae30\ud654 (Clone / Commit / Push / Pull)",
+      "f3_desc": "\uc5c5\uc2a4\ud2b8\u30ea\u30fc\u30e0 \ube0c\ub79c\uce58\ub97c \uc790\ub3d9 \ucd94\uc801\ud558\uace0 \ubd88\uc548\uc815\ud55c \ubaa8\ubc14\uc77c \ub124\ud2b8\uc6cc\ud06c\uc5d0\uc11c\ub3c4 Clone, Commit, Push, Pull \uc791\uc5c5\uc744 \uc548\uc815\uc801\uc73c\ub85c \uc218\ud589\ud569\ub2c8\ub2e4.",
+      "f4_title": "\uc9c1\uc811\uc801\uc778 SFTP / FTP \ubc30\ud3ec",
+      "f4_desc": "\uc2e4\uc81c \ud504\ub85c\ub355\uc158 \uc11c\ubc84\ub97c \ub85c\uceec \ud3f4\ub354\ucc98\ub7fc \uad00\ub9ac\ud558\uc138\uc694. SFTP/FTP\ub85c \uc5f0\uacb0\ud558\uc5ec \uc6d0\uaca9\uc73c\ub85c \ud30c\uc77c\uc744 \ud3b8\uc9d1\ud558\uace0 \uc790\uc0b0\uc744 \uc548\uc804\ud558\uac8c \uc804\uc1a1\ud569\ub2c8\ub2e4.",
+      "cta_h2": "\uc9c0\uae08 \ubaa8\ubc14\uc77c DevOps\ub97c \ub9c8\uc2a4\ud130\ud558\uc138\uc694",
+      "cta_desc": "Android\uc5d0\uc11c \ucf54\ub4dc\ub97c \ubc30\ud3ec\ud558\uace0 \ub9ac\ud3ec\uc9c0\ud1a0\ub9ac\ub97c \uad00\ub9ac\ud558\ub294 \uc218\ucc9c \uba85\uc758 \uc5d4\uc9c0\ub2c8\uc5b4\uc640 \ud568\uaed8\ud558\uc138\uc694."
+    },
+    "pt": {
+      "metaTitle": "Git Client (Cliente Git) e Editor SFTP para Android | SuperCode",
+      "metaDesc": "O Git Client e editor de c\u00f3digo SFTP definitivo para Android. M\u00e1quina do tempo Git visual, resolu\u00e7\u00e3o intuitiva de conflitos e sincroniza\u00e7\u00e3o perfeita com servidores FTP/SFTP.",
+      "hero_tag": "EST\u00daDIO DEVOPS M\u00d3VEL",
+      "hero_h1": "O Definitivo <span class=\"text-gradient\">Git Client &amp; Editor SFTP</span>",
+      "hero_desc": "Assuma o controle total do seu c\u00f3digo-fonte e servidores de qualquer lugar. O SuperCode integra um <strong>Git Client</strong> industrial e um <strong>Editor SFTP/FTP</strong> diretamente no seu Android.",
+      "f1_title": "Resolvedor Visual de Conflitos de Merge",
+      "f1_desc": "Chega de decifrar tags <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> no terminal. Nosso parser detecta conflitos Git e permite manter altera\u00e7\u00f5es locais, remotas ou ambas com um \u00fanico toque.",
+      "f2_title": "M\u00e1quina do Tempo Git Visual",
+      "f2_desc": "Navegue pelo hist\u00f3rico de commits, troque de branch instantaneamente ou execute um <code>Hard Reset</code> seguro para reverter seu projeto com fluidez.",
+      "f3_title": "Sincroniza\u00e7\u00e3o Inteligente em Um Clique",
+      "f3_desc": "Execute opera\u00e7\u00f5es completas de Clone, Commit, Push e Pull com confiabilidade e rastreamento autom\u00e1tico de branches.",
+      "f4_title": "Implanta\u00e7\u00e3o Direta via SFTP / FTP",
+      "f4_desc": "Gerencie seus servidores de produ\u00e7\u00e3o como pastas locais. Conecte-se via SFTP/FTP para editar arquivos remotamente e transferir ativos com seguran\u00e7a.",
+      "cta_h2": "Domine o DevOps M\u00f3vel Hoje",
+      "cta_desc": "Junte-se a milhares de engenheiros implantando c\u00f3digo e gerenciando reposit\u00f3rios no Android."
+    },
+    "hi": {
+      "metaTitle": "Android \u0915\u0947 \u0932\u093f\u090f \u0935\u093f\u091c\u093c\u0941\u0905\u0932 Git Client (Git \u0915\u094d\u0932\u093e\u0907\u0902\u091f) \u0914\u0930 SFTP \u0915\u094b\u0921 \u090f\u0921\u093f\u091f\u0930 | SuperCode",
+      "metaDesc": "Android \u0915\u0947 \u0932\u093f\u090f \u0938\u0930\u094d\u0935\u0936\u094d\u0930\u0947\u0937\u094d\u0920 Git Client \u0914\u0930 SFTP \u0915\u094b\u0921 \u090f\u0921\u093f\u091f\u0930\u0964 \u0935\u093f\u091c\u093c\u0941\u0905\u0932 Git \u091f\u093e\u0907\u092e \u092e\u0936\u0940\u0928, \u0906\u0938\u093e\u0928 \u092e\u0930\u094d\u091c \u0938\u0902\u0918\u0930\u094d\u0937 \u0938\u092e\u093e\u0927\u093e\u0928 \u0914\u0930 \u0938\u0939\u091c FTP/SFTP \u0938\u0930\u094d\u0935\u0930 \u0938\u093f\u0902\u0915\u094d\u0930\u0928\u093e\u0907\u091c\u093c\u0947\u0936\u0928 \u0915\u0947 \u0938\u093e\u0925 \u0905\u092a\u0928\u093e \u092e\u094b\u092c\u093e\u0907\u0932 DevOps \u092a\u094d\u0930\u092c\u0902\u0927\u093f\u0924 \u0915\u0930\u0947\u0902\u0964",
+      "hero_tag": "\u092e\u094b\u092c\u093e\u0907\u0932 DEVOPS \u0938\u094d\u091f\u0942\u0921\u093f\u092f\u094b",
+      "hero_h1": "\u0938\u0930\u094d\u0935\u0936\u094d\u0930\u0947\u0937\u094d\u0920 <span class=\"text-gradient\">Git Client \u0914\u0930 SFTP \u090f\u0921\u093f\u091f\u0930</span>",
+      "hero_desc": "\u0915\u0939\u0940\u0902 \u0938\u0947 \u092d\u0940 \u0905\u092a\u0928\u0947 \u0938\u094b\u0930\u094d\u0938 \u0915\u094b\u0921 \u0914\u0930 \u0938\u0930\u094d\u0935\u0930 \u092a\u0930 \u092a\u0942\u0930\u094d\u0923 \u0928\u093f\u092f\u0902\u0924\u094d\u0930\u0923 \u0930\u0916\u0947\u0902\u0964 SuperCode \u0906\u092a\u0915\u0947 Android \u0921\u093f\u0935\u093e\u0907\u0938 \u092e\u0947\u0902 \u0907\u0902\u0921\u0938\u094d\u091f\u094d\u0930\u093f\u092f\u0932-\u0917\u094d\u0930\u0947\u0921 <strong>Git Client</strong> \u0914\u0930 <strong>SFTP/FTP \u090f\u0921\u093f\u091f\u0930</strong> \u0915\u094b \u090f\u0915\u0940\u0915\u0943\u0924 \u0915\u0930\u0924\u093e \u0939\u0948\u0964",
+      "f1_title": "\u0935\u093f\u091c\u093c\u0941\u0905\u0932 \u092e\u0930\u094d\u091c \u0915\u0949\u0928\u094d\u092b\u094d\u0932\u093f\u0915\u094d\u091f \u0930\u093f\u091c\u093c\u0949\u0932\u094d\u0935\u0930",
+      "f1_desc": "\u0915\u092e\u093e\u0902\u0921 \u0932\u093e\u0907\u0928 \u092e\u0947\u0902 \u091c\u091f\u093f\u0932 <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> \u091f\u0948\u0917\u094d\u0938 \u0915\u094b \u0938\u092e\u091d\u0928\u0947 \u0915\u0940 \u091c\u093c\u0930\u0942\u0930\u0924 \u0928\u0939\u0940\u0902\u0964 \u090f\u0915 \u091f\u0948\u092a \u0938\u0947 \u0932\u094b\u0915\u0932, \u0930\u093f\u092e\u094b\u091f \u092f\u093e \u0926\u094b\u0928\u094b\u0902 \u092c\u0926\u0932\u093e\u0935\u094b\u0902 \u0915\u094b \u0930\u0916\u0928\u0947 \u0915\u093e \u0935\u093f\u0915\u0932\u094d\u092a \u091a\u0941\u0928\u0947\u0902\u0964",
+      "f2_title": "\u0935\u093f\u091c\u093c\u0941\u0905\u0932 Git \u091f\u093e\u0907\u092e \u092e\u0936\u0940\u0928",
+      "f2_desc": "\u0905\u092a\u0928\u0940 \u092a\u0942\u0930\u0940 \u0930\u093f\u092a\u0949\u091c\u093f\u091f\u0930\u0940 \u091f\u093e\u0907\u092e\u0932\u093e\u0907\u0928 \u0906\u0938\u093e\u0928\u0940 \u0938\u0947 \u092c\u094d\u0930\u093e\u0909\u091c\u093c \u0915\u0930\u0947\u0902\u0964 \u0915\u092e\u093f\u091f \u0939\u093f\u0938\u094d\u091f\u094d\u0930\u0940 \u0926\u0947\u0916\u0947\u0902, \u0924\u0941\u0930\u0902\u0924 \u092c\u094d\u0930\u093e\u0902\u091a \u092c\u0926\u0932\u0947\u0902 \u092f\u093e \u092a\u094d\u0930\u094b\u091c\u0947\u0915\u094d\u091f \u0915\u094b \u092a\u0941\u0930\u093e\u0928\u0940 \u0938\u094d\u0925\u093f\u0924\u093f \u092e\u0947\u0902 \u0935\u093e\u092a\u0938 \u0932\u093e\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u0938\u0941\u0930\u0915\u094d\u0937\u093f\u0924 <code>Hard Reset</code> \u0915\u0930\u0947\u0902\u0964",
+      "f3_title": "\u0935\u0928-\u0915\u094d\u0932\u093f\u0915 \u0938\u094d\u092e\u093e\u0930\u094d\u091f \u0938\u093f\u0902\u0915 (Clone / Commit / Push / Pull)",
+      "f3_desc": "\u0905\u0938\u094d\u0925\u093f\u0930 \u092e\u094b\u092c\u093e\u0907\u0932 \u0928\u0947\u091f\u0935\u0930\u094d\u0915 \u092a\u0930 \u092d\u0940 \u092a\u0942\u0930\u0947 Clone, Commit, Push \u0914\u0930 Pull \u0911\u092a\u0930\u0947\u0936\u0928\u094d\u0938 \u0915\u094b \u092d\u0930\u094b\u0938\u0947\u092e\u0902\u0926 \u0924\u0930\u0940\u0915\u0947 \u0938\u0947 \u0928\u093f\u0937\u094d\u092a\u093e\u0926\u093f\u0924 \u0915\u0930\u0947\u0902\u0964",
+      "f4_title": "\u0938\u0940\u0927\u093e SFTP / FTP \u092a\u0930\u093f\u0928\u093f\u092f\u094b\u091c\u0928 (Deployment)",
+      "f4_desc": "\u0905\u092a\u0928\u0947 \u0932\u093e\u0907\u0935 \u092a\u094d\u0930\u094b\u0921\u0915\u094d\u0936\u0928 \u0938\u0930\u094d\u0935\u0930 \u0915\u094b \u0932\u094b\u0915\u0932 \u092b\u093c\u094b\u0932\u094d\u0921\u0930 \u0915\u0940 \u0924\u0930\u0939 \u092a\u094d\u0930\u092c\u0902\u0927\u093f\u0924 \u0915\u0930\u0947\u0902\u0964 \u0930\u093f\u092e\u094b\u091f \u092b\u093c\u093e\u0907\u0932\u0947\u0902 \u090f\u0921\u093f\u091f \u0915\u0930\u0928\u0947 \u0914\u0930 \u0938\u0941\u0930\u0915\u094d\u0937\u093f\u0924 \u0930\u0942\u092a \u0938\u0947 \u090f\u0938\u0947\u091f\u094d\u0938 \u091f\u094d\u0930\u093e\u0902\u0938\u092b\u0930 \u0915\u0930\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f SFTP/FTP \u0938\u0947 \u091c\u0941\u0921\u093c\u0947\u0902\u0964",
+      "cta_h2": "\u0906\u091c \u0939\u0940 \u092e\u094b\u092c\u093e\u0907\u0932 DevOps \u092e\u0947\u0902 \u092e\u0939\u093e\u0930\u0924 \u0939\u093e\u0938\u093f\u0932 \u0915\u0930\u0947\u0902",
+      "cta_desc": "Android \u092a\u0930 \u0915\u094b\u0921 \u0921\u093f\u092a\u094d\u0932\u0949\u092f \u0915\u0930\u0928\u0947 \u0914\u0930 \u0930\u093f\u092a\u0949\u091c\u093f\u091f\u0930\u0940 \u092a\u094d\u0930\u092c\u0902\u0927\u093f\u0924 \u0915\u0930\u0928\u0947 \u0935\u093e\u0932\u0947 \u0939\u091c\u093c\u093e\u0930\u094b\u0902 \u0907\u0902\u091c\u0940\u0928\u093f\u092f\u0930\u094b\u0902 \u0938\u0947 \u091c\u0941\u0921\u093c\u0947\u0902\u0964"
+    },
+    "ru": {
+      "metaTitle": "\u0412\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u044b\u0439 Git Client (Git-\u043a\u043b\u0438\u0435\u043d\u0442) \u0438 SFTP-\u0440\u0435\u0434\u0430\u043a\u0442\u043e\u0440 \u0434\u043b\u044f Android | SuperCode",
+      "metaDesc": "\u041b\u0443\u0447\u0448\u0438\u0439 Git Client \u0438 SFTP \u0440\u0435\u0434\u0430\u043a\u0442\u043e\u0440 \u043a\u043e\u0434\u0430 \u0434\u043b\u044f Android. \u0412\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u0430\u044f \u043c\u0430\u0448\u0438\u043d\u0430 \u0432\u0440\u0435\u043c\u0435\u043d\u0438 Git, \u043d\u0430\u0433\u043b\u044f\u0434\u043d\u043e\u0435 \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u0438\u0435 \u043a\u043e\u043d\u0444\u043b\u0438\u043a\u0442\u043e\u0432 \u0441\u043b\u0438\u044f\u043d\u0438\u044f \u0438 \u043f\u0440\u044f\u043c\u0430\u044f \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0430\u0446\u0438\u044f \u0441 FTP/SFTP-\u0441\u0435\u0440\u0432\u0435\u0440\u0430\u043c\u0438.",
+      "hero_tag": "\u041c\u041e\u0411\u0418\u041b\u042c\u041d\u0410\u042f DEVOPS-\u0421\u0422\u0423\u0414\u0418\u042f",
+      "hero_h1": "\u041b\u0443\u0447\u0448\u0438\u0439 <span class=\"text-gradient\">Git Client \u0438 SFTP-\u0440\u0435\u0434\u0430\u043a\u0442\u043e\u0440</span>",
+      "hero_desc": "\u041f\u043e\u043b\u043d\u044b\u0439 \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u044c \u043d\u0430\u0434 \u0438\u0441\u0445\u043e\u0434\u043d\u044b\u043c \u043a\u043e\u0434\u043e\u043c \u0438 \u0441\u0435\u0440\u0432\u0435\u0440\u0430\u043c\u0438 \u0438\u0437 \u043b\u044e\u0431\u043e\u0439 \u0442\u043e\u0447\u043a\u0438 \u043c\u0438\u0440\u0430. SuperCode \u043e\u0431\u044a\u0435\u0434\u0438\u043d\u044f\u0435\u0442 \u043f\u0440\u043e\u043c\u044b\u0448\u043b\u0435\u043d\u043d\u044b\u0439 <strong>Git Client</strong> \u0438 <strong>SFTP/FTP-\u0440\u0435\u0434\u0430\u043a\u0442\u043e\u0440</strong> \u043f\u0440\u044f\u043c\u043e \u043d\u0430 \u0432\u0430\u0448\u0435\u043c Android-\u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0435.",
+      "f1_title": "\u0412\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u043e\u0435 \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u0438\u0435 \u043a\u043e\u043d\u0444\u043b\u0438\u043a\u0442\u043e\u0432 \u0441\u043b\u0438\u044f\u043d\u0438\u044f",
+      "f1_desc": "\u0411\u043e\u043b\u044c\u0448\u0435 \u043d\u0435 \u043d\u0443\u0436\u043d\u043e \u0440\u0430\u0437\u0431\u0438\u0440\u0430\u0442\u044c \u0442\u0435\u0433\u0438 <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> \u0432\u0440\u0443\u0447\u043d\u0443\u044e. \u0423\u043c\u043d\u044b\u0439 \u043f\u0430\u0440\u0441\u0435\u0440 \u043f\u043e\u043a\u0430\u0437\u044b\u0432\u0430\u0435\u0442 \u043a\u043e\u043d\u0444\u043b\u0438\u043a\u0442\u044b Git \u0432 \u0443\u0434\u043e\u0431\u043d\u043e\u043c \u0434\u0432\u0443\u0445\u043f\u0430\u043d\u0435\u043b\u044c\u043d\u043e\u043c \u0438\u043d\u0442\u0435\u0440\u0444\u0435\u0439\u0441\u0435 \u0434\u043b\u044f \u0432\u044b\u0431\u043e\u0440\u0430 \u043d\u0443\u0436\u043d\u043e\u0439 \u0432\u0435\u0440\u0441\u0438\u0438 \u0432 \u043e\u0434\u043d\u043e \u043a\u0430\u0441\u0430\u043d\u0438\u0435.",
+      "f2_title": "\u0412\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u0430\u044f \u043c\u0430\u0448\u0438\u043d\u0430 \u0432\u0440\u0435\u043c\u0435\u043d\u0438 Git",
+      "f2_desc": "\u041f\u0440\u043e\u0441\u043c\u0430\u0442\u0440\u0438\u0432\u0430\u0439\u0442\u0435 \u0438\u0441\u0442\u043e\u0440\u0438\u044e \u043a\u043e\u043c\u043c\u0438\u0442\u043e\u0432, \u043c\u0433\u043d\u043e\u0432\u0435\u043d\u043d\u043e \u043f\u0435\u0440\u0435\u043a\u043b\u044e\u0447\u0430\u0439\u0442\u0435 \u0432\u0435\u0442\u043a\u0438 \u0438\u043b\u0438 \u0432\u044b\u043f\u043e\u043b\u043d\u044f\u0439\u0442\u0435 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u044b\u0439 <code>Hard Reset</code> \u0434\u043b\u044f \u043e\u0442\u043a\u0430\u0442\u0430 \u043f\u0440\u043e\u0435\u043a\u0442\u0430 \u0447\u0435\u0440\u0435\u0437 \u043f\u043b\u0430\u0432\u043d\u0443\u044e \u0448\u0442\u043e\u0440\u043a\u0443 \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f.",
+      "f3_title": "\u0423\u043c\u043d\u0430\u044f \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0430\u0446\u0438\u044f \u0432 \u043e\u0434\u0438\u043d \u043a\u043b\u0438\u043a",
+      "f3_desc": "\u041d\u0430\u0434\u0435\u0436\u043d\u043e \u0432\u044b\u043f\u043e\u043b\u043d\u044f\u0439\u0442\u0435 \u043e\u043f\u0435\u0440\u0430\u0446\u0438\u0438 Clone, Commit, Push \u0438 Pull \u0441 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u043c \u043e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u043d\u0438\u0435\u043c \u0443\u0434\u0430\u043b\u0435\u043d\u043d\u044b\u0445 \u0432\u0435\u0442\u043e\u043a \u0434\u0430\u0436\u0435 \u043f\u0440\u0438 \u043d\u0435\u0441\u0442\u0430\u0431\u0438\u043b\u044c\u043d\u043e\u0439 \u043c\u043e\u0431\u0438\u043b\u044c\u043d\u043e\u0439 \u0441\u0435\u0442\u0438.",
+      "f4_title": "\u041f\u0440\u044f\u043c\u043e\u0439 \u0434\u0435\u043f\u043b\u043e\u0439 \u043f\u043e SFTP / FTP",
+      "f4_desc": "\u0423\u043f\u0440\u0430\u0432\u043b\u044f\u0439\u0442\u0435 \u043f\u0440\u043e\u0434\u0430\u043a\u0448\u043d-\u0441\u0435\u0440\u0432\u0435\u0440\u0430\u043c\u0438 \u043a\u0430\u043a \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u044b\u043c\u0438 \u043f\u0430\u043f\u043a\u0430\u043c\u0438. \u041f\u043e\u0434\u043a\u043b\u044e\u0447\u0430\u0439\u0442\u0435\u0441\u044c \u043f\u043e SFTP/FTP \u0434\u043b\u044f \u0443\u0434\u0430\u043b\u0435\u043d\u043d\u043e\u0433\u043e \u0440\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u0444\u0430\u0439\u043b\u043e\u0432 \u0438 \u0431\u0435\u0437\u043e\u043f\u0430\u0441\u043d\u043e\u0439 \u043f\u0435\u0440\u0435\u0434\u0430\u0447\u0438 \u0440\u0435\u0441\u0443\u0440\u0441\u043e\u0432.",
+      "cta_h2": "\u041e\u0441\u0432\u043e\u0439\u0442\u0435 \u043c\u043e\u0431\u0438\u043b\u044c\u043d\u044b\u0439 DevOps \u0441\u0435\u0433\u043e\u0434\u043d\u044f",
+      "cta_desc": "\u041f\u0440\u0438\u0441\u043e\u0435\u0434\u0438\u043d\u044f\u0439\u0442\u0435\u0441\u044c \u043a \u0442\u044b\u0441\u044f\u0447\u0430\u043c \u0438\u043d\u0436\u0435\u043d\u0435\u0440\u043e\u0432, \u0443\u043f\u0440\u0430\u0432\u043b\u044f\u044e\u0449\u0438\u0445 \u0440\u0435\u043f\u043e\u0437\u0438\u0442\u043e\u0440\u0438\u044f\u043c\u0438 \u0438 \u0441\u0435\u0440\u0432\u0435\u0440\u0430\u043c\u0438 \u043d\u0430 Android."
+    }
+  }
+};
+
+/* End of SUPERCODE_PAGE_I18N Dictionary */
+
+  /* ==================== 4. UNIVERSAL ROUTER & SEO 2.0 BOOSTER (INLINE BRACE-LOCKED) ==================== */
+  var ENABLE_DEVICE_LANG_AUTO_DETECT = true;
+  var STORAGE_KEY = 'supercode_lang';
+  var SUPPORTED_LANGS = ['en', 'zh', 'es', 'ja', 'de', 'fr', 'ko', 'pt', 'hi', 'ru'];
+  var BASE_DOMAIN = 'https://supercode-ide.github.io';
+
+  function normalizeLangCode(raw) {
+    if (!raw || typeof raw !== 'string') { return ''; }
+    var lower = raw.toLowerCase().trim();
+    if (lower.indexOf('zh') === 0) { return 'zh'; }
+    var prefix = lower.split('-')[0].split('_')[0];
+    return SUPPORTED_LANGS.indexOf(prefix) !== -1 ? prefix : ''; } /* end normalizeLangCode */
+
+  function getCurrentPageInfo() {
+    var bodyPage = document.body ? document.body.getAttribute('data-page') : '';
+    var path = window.location.pathname || '/';
+    var filename = path.split('/').pop() || 'index.html';
+    if (filename === '' || filename === '/') { filename = 'index.html'; }
+    if (filename.indexOf('.html') === -1 && filename !== 'index.html') { filename = filename + '.html'; }
+    var pageKeyMap = {
+      'index.html': 'index',
+      'code-editor.html': 'code_editor',
+      'python-ide.html': 'python_ide',
+      'cpp-ide.html': 'cpp_ide',
+      'java-ide.html': 'java_ide',
+      'web-ide.html': 'web_ide',
+      'git-client.html': 'git_client' };
+    return { filename: filename, pageKey: bodyPage || pageKeyMap[filename] || 'index' }; } /* end getCurrentPageInfo */
+
+  function detectInitialLanguage() {
+    var urlParams = new URLSearchParams(window.location.search);
+    var fromUrl = normalizeLangCode(urlParams.get('lang'));
+    if (fromUrl) { return fromUrl; }
+    try {
+      var saved = normalizeLangCode(window.localStorage.getItem(STORAGE_KEY));
+      if (saved) { return saved; }
+    } catch (e) { /* ignore storage error */ }
+    if (ENABLE_DEVICE_LANG_AUTO_DETECT && window.navigator) {
+      var navLangs = window.navigator.languages || [window.navigator.language || window.navigator.userLanguage];
+      for (var i = 0; i < navLangs.length; i++) {
+        var matched = normalizeLangCode(navLangs[i]);
+        if (matched) { return matched; } } }
+    return 'en'; } /* end detectInitialLanguage */
+
+  function buildCanonicalUrl(filename, lang) {
+    var cleanFile = (!filename || filename === 'index.html') ? '' : filename;
+    var basePath = cleanFile ? '/' + cleanFile : '/';
+    return BASE_DOMAIN + basePath + (lang === 'en' ? '' : '?lang=' + lang); } /* end buildCanonicalUrl */
+
+  function syncInternalLinks(lang) {
+    var validLang = normalizeLangCode(lang) || 'en';
+    var commonDict = COMMON_UI[validLang] || COMMON_UI.en;
+    var navNodes = document.querySelectorAll('[data-i18n^="nav_"], [data-i18n="btn_back"], [data-i18n="eco_title"], [data-i18n="cta_btn"], [data-i18n="modal_title"]');
+    for (var n = 0; n < navNodes.length; n++) {
+      var nk = navNodes[n].getAttribute('data-i18n');
+      if (commonDict[nk]) { navNodes[n].innerHTML = commonDict[nk]; } }
+    var links = document.querySelectorAll('a[href]');
+    for (var i = 0; i < links.length; i++) {
+      var rawHref = links[i].getAttribute('href');
+      if (!rawHref || rawHref.indexOf('http') === 0 || rawHref.indexOf('#') === 0 || rawHref.indexOf('mailto:') === 0) { continue; }
+      var parts = rawHref.split('#');
+      var basePart = parts[0].split('?')[0];
+      var hashPart = parts[1] ? '#' + parts[1] : '';
+      if (basePart.indexOf('.html') !== -1) {
+        var nextHref = basePart + (validLang === 'en' ? '' : '?lang=' + validLang) + hashPart;
+        links[i].setAttribute('href', nextHref); } } } /* end syncInternalLinks */
+
+  var subpageEnCache = {};
+
+  function applySubpageLanguage(lang) {
+    var info = getCurrentPageInfo();
+    if (info.pageKey === 'index') { return; }
+    var validLang = normalizeLangCode(lang) || 'en';
+    var pagePack = window.SUPERCODE_PAGE_I18N[info.pageKey] || {};
+    var pageDict = pagePack[validLang] || pagePack.en || {};
+    var commonDict = COMMON_UI[validLang] || COMMON_UI.en;
+    try { window.localStorage.setItem(STORAGE_KEY, validLang); } catch (e) { /* ignore */ }
+    document.documentElement.lang = commonDict.htmlLang || validLang;
+    var canonicalUrl = buildCanonicalUrl(info.filename, validLang);
+    if (pageDict.metaTitle) {
+      document.title = pageDict.metaTitle;
+      var ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) { ogTitle.setAttribute('content', pageDict.metaTitle); } }
+    if (pageDict.metaDesc) {
+      var metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) { metaDesc.setAttribute('content', pageDict.metaDesc); }
+      var ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc) { ogDesc.setAttribute('content', pageDict.metaDesc); } }
+    var ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) { ogUrl.setAttribute('content', canonicalUrl); }
+    var canLink = document.querySelector('link[rel="canonical"]');
+    if (canLink) { canLink.setAttribute('href', canonicalUrl); }
+    var nodes = document.querySelectorAll('[data-i18n]');
+    for (var i = 0; i < nodes.length; i++) {
+      var key = nodes[i].getAttribute('data-i18n');
+      if (!subpageEnCache[key]) { subpageEnCache[key] = nodes[i].innerHTML; }
+      if (pageDict[key]) { nodes[i].innerHTML = pageDict[key]; }
+      else if (commonDict[key]) { nodes[i].innerHTML = commonDict[key]; }
+      else if (validLang === 'en' && subpageEnCache[key]) { nodes[i].innerHTML = subpageEnCache[key]; } }
+    var langBtn = document.getElementById('langModalBtn');
+    if (langBtn) {
+      var label = validLang === 'zh' ? '\u4E2D\u6587' : validLang.toUpperCase();
+      langBtn.innerHTML = '\uD83C\uDF10 <span id="langTriggerText">' + label + '</span>'; }
+    var langOptions = document.querySelectorAll('.lang-option');
+    for (var b = 0; b < langOptions.length; b++) {
+      var isMatch = langOptions[b].getAttribute('data-code') === validLang;
+      langOptions[b].classList.toggle('active', isMatch); }
+    syncInternalLinks(validLang);
+    if (window.history && window.history.replaceState) {
+      var newUrl = window.location.pathname + (validLang === 'en' ? '' : '?lang=' + validLang) + window.location.hash;
+      window.history.replaceState({ lang: validLang }, '', newUrl); } } /* end applySubpageLanguage */
+
+  function injectSeo20Booster() {
+    if (HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')) {
+      var specScript = document.createElement('script');
+      specScript.type = 'speculationrules';
+      specScript.textContent = JSON.stringify({
+        prerender: [{ source: 'list', urls: ['index.html', 'code-editor.html', 'python-ide.html', 'cpp-ide.html', 'java-ide.html', 'web-ide.html', 'git-client.html'], eagerness: 'moderate' }]
+      });
+      document.head.appendChild(specScript); } } /* end injectSeo20Booster */
+
+  function initSubpageController() {
+    injectSeo20Booster();
+    var info = getCurrentPageInfo();
+    if (info.pageKey === 'index') { return; }
+    var modal = document.getElementById('langModal');
+    window.openLangModal = function () { if (modal) { modal.classList.add('show'); } };
+    window.closeLangModal = function () { if (modal) { modal.classList.remove('show'); } };
+    if (modal) {
+      modal.addEventListener('click', function (e) { if (e.target === modal) { window.closeLangModal(); } }); }
+    window.setLanguage = function (lang) { window.closeLangModal(); applySubpageLanguage(lang); };
+    var initialLang = detectInitialLanguage();
+    applySubpageLanguage(initialLang); } /* end initSubpageController */
+
+  window.SuperCodeI18nRouter = {
+    COMMON_UI: COMMON_UI,
+    normalizeLangCode: normalizeLangCode,
+    detectInitialLanguage: detectInitialLanguage,
+    syncInternalLinks: syncInternalLinks,
+    getCurrentPageInfo: getCurrentPageInfo,
+    buildCanonicalUrl: buildCanonicalUrl,
+    applySubpageLanguage: applySubpageLanguage,
+    saveLanguagePreference: function (lang) {
+      try { window.localStorage.setItem(STORAGE_KEY, normalizeLangCode(lang) || 'en'); } catch (e) { /* ignore */ } } };
+
+  if (window.I18N) { Object.assign(window.I18N, window.I18N_EXTENDED); }
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initSubpageController); }
+  else { initSubpageController(); }
+})(); /* End of Universal I18n Router */

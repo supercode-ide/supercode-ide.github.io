@@ -1,0 +1,25 @@
+2. 运行步骤、假设条件与限制说明运行步骤概览：确认 seo_audit.py 和你的网页文件（如 index.html）放在同一个文件夹下。   在该文件夹中打开终端窗口（Terminal），输入一行命令 python seo_audit.py 即可看到完整报告；
+
+
+
+========================================================================================
+SUPERCODE OFFICIAL WEBSITE - INDUSTRIAL ON-PAGE SEO 2.0 & FULL-STACK AUDITOR
+========================================================================================
+[PASS] index.html       -> SEO 2.0 Verified (@graph + Snippet#0 + Table + Sandbox) | Code Editor: SuperCode IDE...
+[PASS] code-editor.html -> SEO 2.0 Verified (@graph + Snippet#0 + Table + Sandbox) | Code Editor for Android...
+[PASS] python-ide.html  -> SEO 2.0 Verified (@graph + Snippet#0 + Table + Sandbox) | Python IDE & Coding App...
+[PASS] cpp-ide.html     -> SEO 2.0 Verified (@graph + Snippet#0 + Table + Sandbox) | C++ Compiler & IDE for...
+[PASS] java-ide.html    -> SEO 2.0 Verified (@graph + Snippet#0 + Table + Sandbox) | Java Compiler & IDE for...
+[PASS] web-ide.html     -> SEO 2.0 Verified (@graph + Snippet#0 + Table + Sandbox) | HTML/JS Editor & Local...
+[PASS] git-client.html  -> SEO 2.0 Verified (@graph + Snippet#0 + Table + Sandbox) | Git Client & SFTP Code...
+----------------------------------------------------------------------------------------
+[PASS] i18n_extended.js -> 10-Language router, balanced comments & 0ms Speculation Rules verified
+[PASS] .well-known/assetlinks.json -> Digital Asset Links verified (com.phoenixglobal.supercodeeditor | SHA-256 OK)
+[PASS] sitemap.xml      -> Verified (70 multilingual URLs, clean encoding)
+[PASS] sitemap.txt      -> Verified (70 plain-text URLs)
+[PASS] app-ads.txt      -> Verified (pub-1171858697665004)
+[PASS] Auxiliary assets -> robots.txt, .nojekyll & favicon.svg verified
+========================================================================================
+FINAL SUMMARY: 7/7 HTML pages passed 100% of On-Page SEO 2.0 checks.
+STATUS: ALL SYSTEMS GO! Ready for git commit & push to supercode-ide.github.io.
+========================================================================================
