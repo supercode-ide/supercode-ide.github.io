@@ -1,0 +1,2446 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" data-static-lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090A0F">
+  <meta name="color-scheme" content="only dark">
+  <meta name="supported-color-schemes" content="dark">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <title>Client Git visuel Android &#8212; Clone, Diff Temporel &amp; R&#233;solution de Conflits | SuperCode</title>
+  <meta name="description" content="Client Git visuel Android complet int&#233;gr&#233; &#224; SuperCode IDE : clonez vos d&#233;p&#244;ts GitHub/GitLab/Gitee par jeton PAT, inspectez les diffs color&#233;s, changez de branche, profitez de l&#8217;auto-stash au Pull et r&#233;solvez vos conflits visuellement.">
+  <meta name="keywords" content="client Git visuel Android, client Git pour Android, application GitHub &#233;diteur code Android, r&#233;solveur conflits fusion Git Android, git clone commit push Android, lecteur diff Git mobile, client GitLab Bitbucket Android">
+  <meta name="author" content="Phoenix Global Studios">
+  <meta name="google-play-app" content="app-id=com.phoenixglobal.supercodeeditor">
+
+  <link id="canonical-link" rel="canonical" href="https://supercode-ide.github.io/fr/git-client.html">
+  <link rel="alternate" hreflang="x-default" href="https://supercode-ide.github.io/git-client.html">
+  <link rel="alternate" hreflang="en" href="https://supercode-ide.github.io/git-client.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://supercode-ide.github.io/zh/git-client.html">
+  <link rel="alternate" hreflang="es" href="https://supercode-ide.github.io/es/git-client.html">
+  <link rel="alternate" hreflang="ja" href="https://supercode-ide.github.io/ja/git-client.html">
+  <link rel="alternate" hreflang="de" href="https://supercode-ide.github.io/de/git-client.html">
+  <link rel="alternate" hreflang="fr" href="https://supercode-ide.github.io/fr/git-client.html">
+  <link rel="alternate" hreflang="ko" href="https://supercode-ide.github.io/ko/git-client.html">
+  <link rel="alternate" hreflang="pt" href="https://supercode-ide.github.io/pt/git-client.html">
+  <link rel="alternate" hreflang="hi" href="https://supercode-ide.github.io/hi/git-client.html">
+  <link rel="alternate" hreflang="ru" href="https://supercode-ide.github.io/ru/git-client.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
+  <meta property="og:title" content="Client Git visuel Android &#8212; Clone, Diff Temporel &amp; R&#233;solution de Conflits | SuperCode">
+  <meta property="og:description" content="Client Git visuel Android complet int&#233;gr&#233; &#224; SuperCode IDE : clonez vos d&#233;p&#244;ts GitHub/GitLab/Gitee par jeton PAT, inspectez les diffs color&#233;s, changez de branche, profitez de l&#8217;auto-stash au Pull et r&#233;solvez vos conflits visuellement.">
+  <meta property="og:url" content="https://supercode-ide.github.io/fr/git-client.html">
+  <meta property="og:image" content="https://supercode-ide.github.io/favicon.svg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Client Git visuel Android &#8212; Clone, Diff Temporel &amp; R&#233;solution de Conflits | SuperCode">
+  <meta name="twitter:description" content="Client Git visuel Android complet int&#233;gr&#233; &#224; SuperCode IDE : clonez vos d&#233;p&#244;ts GitHub/GitLab/Gitee par jeton PAT, inspectez les diffs color&#233;s, changez de branche, profitez de l&#8217;auto-stash au Pull et r&#233;solvez vos conflits visuellement.">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <script>if(/SamsungBrowser/i.test(navigator.userAgent)){document.documentElement.classList.add('is-samsung');}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "SoftwareApplication",
+        "MobileApplication",
+        "WebApplication"
+      ],
+      "@id": "https://supercode-ide.github.io/#supercode-app",
+      "name": "Code Editor: SuperCode IDE",
+      "alternateName": [
+        "Git Client for Android",
+        "Visual Git Merge & Diff App",
+        "Android GitHub GitLab Gitee IDE"
+      ],
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Standalone Visual Git Client, Diff Viewer & Conflict Resolver for Android",
+      "inLanguage": "fr",
+      "fileSize": "40.2MB",
+      "softwareVersion": "1.5.503",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor"
+      ],
+      "potentialAction": [
+        {
+          "@type": "InstallAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
+            "actionPlatform": [
+              "http://schema.org/AndroidPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          }
+        },
+        {
+          "@type": "ViewAction",
+          "name": "Guide App",
+          "target": [
+            "https://supercode-ide.github.io/tutorial/",
+            "android-app://com.phoenixglobal.supercodeeditor/https/supercode-ide.github.io/tutorial"
+          ]
+        }
+      ],
+      "identifier": "com.phoenixglobal.supercodeeditor",
+      "url": "https://supercode-ide.github.io/fr/git-client.html",
+      "screenshot": "https://supercode-ide.github.io/favicon.svg",
+      "author": {
+        "@type": "Organization",
+        "name": "Phoenix Global Studios",
+        "url": "https://supercode-ide.github.io/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "66"
+      },
+      "featureList": [
+        "Moteur Git natif 100 % autonome \u2014 aucun paquet CLI externe ni \u00e9mulateur de terminal requis",
+        "S\u00e9lecteur multi-d\u00e9p\u00f4ts, montage en un geste d\u2019un d\u00e9p\u00f4t existant & clonage HTTPS avec coffre chiffr\u00e9 de jetons PAT",
+        "Sauvegarde automatique des onglets modifi\u00e9s avant Commit/Pull + aper\u00e7u des changements ([M]/[A]/[U]/[D]/[!]) & configuration d\u2019auteur",
+        "Pull intelligent avec auto-stash silencieux et rechargement \u00e0 chaud des onglets ouverts \u00e0 la ligne/colonne exacte du curseur",
+        "Machine \u00e0 remonter les commits : chronologie de 120 commits, Diff unifi\u00e9 2D color\u00e9, cr\u00e9ation de branches & Checkout/Reset s\u00e9curis\u00e9s",
+        "R\u00e9solveur visuel multi-fichiers de conflits de fusion (Garder Actuel / Garder Entrant / Garder les Deux -> indexation auto & Push)"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://supercode-ide.github.io/fr/git-client.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SuperCode IDE",
+          "item": "https://supercode-ide.github.io/fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Client Git Visuel",
+          "item": "https://supercode-ide.github.io/fr/git-client.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Guide complet en 6 \u00e9tapes : utiliser Git dans SuperCode IDE",
+      "description": "Suivez ce flux exact dans SuperCode pour cloner, cr\u00e9er vos branches, inspecter les diffs, fusionner et pousser depuis votre t\u00e9l\u00e9phone ou tablette.",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Cloner un d\u00e9p\u00f4t distant ou monter un projet local",
+          "text": "Collez votre URL HTTPS (ex. https://github.com/user/repo.git) et votre jeton PAT \u00e9ventuel, puis touchez CLONER \u2014 ou Monter un d\u00e9p\u00f4t existant si le dossier contient d\u00e9j\u00e0 .git.",
+          "url": "https://supercode-ide.github.io/fr/git-client.html#step1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Changer de branche ou cr\u00e9er une branche de fonctionnalit\u00e9",
+          "text": "Ouvrez la Machine \u00e0 commits Git et touchez le s\u00e9lecteur sup\u00e9rieur pour basculer de branche ou appuyez sur + Cr\u00e9er une branche\u2026 (ex. feature/ui-mobile) avec validation automatique du nom.",
+          "url": "https://supercode-ide.github.io/fr/git-client.html#step2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Modifier vos fichiers avec toute l\u2019intelligence de l\u2019IDE",
+          "text": "\u00c9ditez, formatez et testez votre code hors ligne. M\u00eame si vous oubliez d\u2019enregistrer un onglet ouvert, les commandes Git vident automatiquement les modifications sur le disque avant d\u2019agir.",
+          "url": "https://supercode-ide.github.io/fr/git-client.html#step3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "R\u00e9cup\u00e9rer les mises \u00e0 jour de l\u2019\u00e9quipe en toute s\u00e9curit\u00e9",
+          "text": "Touchez Pull avant de pousser. Vos modifications locales non valid\u00e9es sont mises en stash puis restaur\u00e9es automatiquement, et les onglets ouverts s\u2019actualisent sans d\u00e9placer votre curseur.",
+          "url": "https://supercode-ide.github.io/fr/git-client.html#step4"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "R\u00e9soudre visuellement toute collision de fusion",
+          "text": "En cas de modifications concurrentes, ouvrez le R\u00e9solveur de conflits, comparez les blocs Local et Distant c\u00f4te \u00e0 c\u00f4te, choisissez Garder Actuel / Entrant / Les Deux puis validez.",
+          "url": "https://supercode-ide.github.io/fr/git-client.html#step5"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "V\u00e9rifier les fichiers modifi\u00e9s, r\u00e9diger le message & pousser",
+          "text": "Contr\u00f4lez les badges [M]/[A]/[D] des modifications en attente, confirmez votre identit\u00e9 d\u2019auteur et votre message de commit, puis touchez COMMIT pour indexer, valider et pousser vers origin.",
+          "url": "https://supercode-ide.github.io/fr/git-client.html#step6"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://supercode-ide.github.io/fr/git-client.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Comment m\u2019authentifier aupr\u00e8s de d\u00e9p\u00f4ts priv\u00e9s GitHub, GitLab ou Gitee ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "G\u00e9n\u00e9rez un jeton d\u2019acc\u00e8s personnel HTTPS (PAT) dot\u00e9 de la permission repo sur GitHub/GitLab/Gitee et collez-le dans le champ Jeton lors d\u2019un Clone, Commit & Push ou Pull. SuperCode le conserve de fa\u00e7on chiffr\u00e9e pour vos prochaines op\u00e9rations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que se passe-t-il si j\u2019appuie sur Pull alors que j\u2019ai des onglets non enregistr\u00e9s ou des changements non valid\u00e9s ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SuperCode enregistre d\u2019abord vos onglets ouverts sur le disque, place automatiquement vos modifications locales suivies en stash, r\u00e9cup\u00e8re les commits distants, r\u00e9applique votre travail et recharge vos onglets \u00e0 la ligne exacte du curseur."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment consulter les modifications d\u2019un ancien commit ou revenir en arri\u00e8re ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ouvrez la Machine \u00e0 remonter les commits depuis le tableau de bord Git et touchez n\u2019importe quel commit. Choisissez Voir les changements (Commit Diff) pour le diff color\u00e9, Checkout (Lecture seule) pour inspecter l\u2019instantan\u00e9 sans risque, ou Hard Reset pour ramener la branche."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Puis-je valider des commits hors ligne lorsque je n\u2019ai pas acc\u00e8s \u00e0 internet ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui ! La mise en index, les commits locaux, la cr\u00e9ation de branches, l\u2019inspection de l\u2019historique, les diffs unifi\u00e9s et la r\u00e9solution de conflits fonctionnent enti\u00e8rement hors ligne ; poussez vos commits d\u00e8s le retour du r\u00e9seau."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <style>
+    /* ==========================================================================
+       SUPERCODE V3.1 MASTER FUSION DESIGN SYSTEM (PHI = 1.618 · OBSIDIAN & GOLD)
+       Samsung Internet Night-Mode Immune · Zero White-Alpha Inversion Architecture
+       ========================================================================== */
+    :root {
+      color-scheme: only dark;
+      forced-color-adjust: none;
+      --phi: 1.618;
+      --bg: #090A0F;
+      --bg-alt: #0D1018;
+      --surface: #141824;
+      --card: #171C2A;
+      --card-hover: #1E2436;
+      --well: #0E111A;
+      --elev: #1A2030;
+      --elev-hover: #22293D;
+      --line: #262D40;
+      --line-strong: #37415C;
+
+      --fg: #F5F7FA;
+      --fg-2: #C2CAD9;
+      --fg-3: #9BA5BA;
+      --fg-4: #727D95;
+
+      --gold: #F5C451;
+      --gold-border: #8C6F26;
+      --gold-border-hover: #C89E36;
+      --gold-soft: #241F14;
+
+      --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Noto Sans SC", "Noto Sans JP", "Noto Sans KR", system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", "SF Mono", "Cascadia Code", ui-monospace, Menlo, Consolas, monospace;
+
+      --text-xs: 0.75rem;
+      --text-sm: 0.875rem;
+      --text-base: 1rem;
+      --text-lg: clamp(1.06rem, 1.00rem + 0.28vw, 1.24rem);
+      --text-xl: clamp(1.30rem, 1.18rem + 0.45vw, 1.618rem);
+      --text-2xl: clamp(1.58rem, 3.6vw, 2.55rem);
+      --text-display: clamp(1.88rem, 4.8vw, 3.55rem);
+      --text-code: clamp(0.78rem, 0.75rem + 0.14vw, 0.845rem);
+
+      --s-1: 8px;
+      --s-2: 16px;
+      --s-3: 24px;
+      --s-4: 40px;
+      --s-5: 64px;
+      --s-6: 100px;
+
+      --r-sm: 8px;
+      --r-md: 10px;
+      --r-lg: 16px;
+
+      --topbar-h: 56px;
+      --gutter: clamp(16px, 4.2vw, 40px);
+      --maxw: 1200px;
+      --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    html.is-samsung {
+      --surface: #171D2C;
+      --card: #1C2336;
+      --card-hover: #242D44;
+      --elev: #20273B;
+      --elev-hover: #2A334C;
+      --line: #333D58;
+      --line-strong: #485578;
+      --fg-2: #D0D7E5;
+      --fg-3: #B0BACE;
+      --fg-4: #8893AB;
+    }
+
+    @media (min-width: 1024px) {
+      :root { --topbar-h: 64px; }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--topbar-h) + 20px);
+      background: var(--bg);
+      color: var(--fg-3);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.618;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    html[lang^="zh"] body, html[lang="ja"] body, html[lang="ko"] body { line-height: 1.72; }
+
+    body {
+      min-width: 320px;
+      background: var(--bg);
+      color: var(--fg-3);
+      overflow-x: hidden;
+    }
+
+    img, svg { display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; color: inherit; cursor: pointer; background: none; border: none; }
+    h1, h2, h3, h4 { color: var(--fg); font-weight: 600; text-wrap: balance; }
+    p { text-wrap: pretty; }
+
+    .container {
+      width: 100%;
+      max-width: calc(var(--maxw) + var(--gutter) * 2);
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+    }
+    .mono { font-family: var(--font-mono); }
+
+    /* ==================== STYLE D: OBSIDIAN WARM-GOLD BUTTONS ==================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      height: 42px;
+      padding: 0 18px;
+      border-radius: var(--r-md);
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: -0.008em;
+      line-height: 1;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: border-color 0.2s var(--ease), background-color 0.2s var(--ease), transform 0.18s var(--ease), color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+    }
+    .btn:active { transform: scale(0.975); }
+
+    .btn--gold {
+      background: linear-gradient(180deg, #1E2230 0%, #131620 100%);
+      border: 1px solid var(--gold-border);
+      box-shadow: 0 8px 24px -10px rgba(245, 196, 81, 0.24);
+      color: var(--fg);
+    }
+    .btn--gold:hover {
+      background: linear-gradient(180deg, #252A3B 0%, #171B27 100%);
+      border-color: var(--gold-border-hover);
+      box-shadow: 0 10px 28px -8px rgba(245, 196, 81, 0.34);
+      transform: translateY(-1px);
+    }
+
+    .btn--ghost {
+      background: var(--elev);
+      border: 1px solid var(--line-strong);
+      color: var(--fg-2);
+      font-weight: 500;
+    }
+    .btn--ghost:hover {
+      background: var(--elev-hover);
+      border-color: #4D5B80;
+      color: var(--fg);
+    }
+
+    .btn--sm { height: 34px; padding: 0 12px; border-radius: 8px; font-size: 0.8125rem; gap: 6px; }
+    .gp-prism { width: 15px; height: 15px; flex: none; }
+    .icon-ne { width: 13px; height: 13px; flex: none; opacity: 0.82; transition: transform 0.2s var(--ease); }
+    .btn--ghost:hover .icon-ne { transform: translate(1.5px, -1.5px); opacity: 1; }
+
+    .link-arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--fg-2);
+      font-size: var(--text-sm);
+      font-weight: 500;
+      transition: color 0.2s var(--ease);
+    }
+    .link-arrow svg { width: 14px; height: 14px; transition: transform 0.22s var(--ease); }
+    .link-arrow:hover { color: var(--fg); }
+    .link-arrow:hover svg { transform: translateX(3px); }
+
+    /* ==================== TOPBAR & UNIVERSAL 14-PAGE DRAWER ==================== */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 70;
+      height: var(--topbar-h);
+      background: rgba(9, 10, 15, 0.90);
+      backdrop-filter: saturate(1.6) blur(18px);
+      -webkit-backdrop-filter: saturate(1.6) blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar__inner {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      height: 100%;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      flex: none;
+      color: var(--fg);
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+    }
+    .brand__icon {
+      display: grid;
+      place-items: center;
+      width: 29px;
+      height: 29px;
+      border-radius: 8px;
+      background: linear-gradient(180deg, #1E2230 0%, #12151E 100%);
+      border: 1px solid var(--gold-border);
+    }
+    .brand__icon svg { width: 18px; height: 18px; }
+    .brand__tag {
+      font-family: var(--font-mono);
+      font-size: 9.5px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      color: var(--fg-2);
+      padding: 1px 4px;
+      border: 1px solid var(--line-strong);
+      border-radius: 4px;
+      line-height: 1.35;
+    }
+    @media (max-width: 374px) {
+      .brand__tag { display: none; }
+    }
+
+    .nav {
+      display: none;
+      margin-inline: auto;
+      align-items: center;
+      gap: 1px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .nav::-webkit-scrollbar { display: none; }
+    .nav a {
+      padding: 5px 8px;
+      border-radius: 7px;
+      font-size: 0.79rem;
+      color: var(--fg-2);
+      white-space: nowrap;
+      transition: color 0.2s var(--ease), background-color 0.2s var(--ease);
+    }
+    .nav a:hover { color: var(--fg); background: var(--elev); }
+    .nav a.is-current {
+      color: var(--fg);
+      background: var(--gold-soft);
+      box-shadow: inset 0 0 0 1px var(--gold-border);
+    }
+
+    .topbar__actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-left: auto;
+      flex: none;
+    }
+
+    .btn-lang-trigger {
+      height: 32px;
+      padding: 0 9px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      border-radius: 8px;
+      background: var(--elev);
+      border: 1px solid var(--line-strong);
+      color: var(--fg-2);
+      font-size: 0.74rem;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: color 0.2s var(--ease), border-color 0.2s var(--ease), background-color 0.2s var(--ease);
+    }
+    .btn-lang-trigger:hover { color: var(--fg); background: var(--elev-hover); border-color: #4D5B80; }
+    .lang-globe-svg { width: 13px; height: 13px; color: var(--fg-2); flex: none; }
+    .lang-chevron { font-size: 9px; color: var(--fg-4); }
+
+    .topbar__play { display: none; }
+
+    .btn-home-icon, .menu-btn {
+      display: grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--elev);
+      border: 1px solid var(--line-strong);
+      color: var(--fg-2);
+      flex: none;
+      transition: color 0.2s var(--ease), border-color 0.2s var(--ease), background-color 0.2s var(--ease), transform 0.18s var(--ease);
+    }
+    .btn-home-icon:hover, .menu-btn:hover {
+      color: var(--gold);
+      border-color: var(--gold-border);
+      background: var(--gold-soft);
+    }
+    .btn-home-icon:active, .menu-btn:active { transform: scale(0.95); }
+    .menu-btn svg { width: 16px; height: 16px; }
+    .menu-btn .i-close { display: none; }
+    .menu-btn[aria-expanded="true"] {
+      color: var(--gold);
+      border-color: var(--gold-border-hover);
+      background: var(--gold-soft);
+    }
+    .menu-btn[aria-expanded="true"] .i-menu { display: none; }
+    .menu-btn[aria-expanded="true"] .i-close { display: block; }
+
+    @media (min-width: 640px) {
+      .topbar__actions { gap: 8px; }
+      .btn-lang-trigger { height: 34px; padding: 0 11px; font-size: var(--text-xs); }
+      .btn-home-icon, .menu-btn { width: 34px; height: 34px; }
+    }
+    @media (min-width: 820px) {
+      .topbar__play { display: inline-flex; }
+    }
+    @media (min-width: 1220px) {
+      .nav { display: flex; }
+      .topbar__actions { margin-left: 0; }
+    }
+
+    /* Universal 14-Page Categorized Slide-Down Mega-Drawer (Works on Mobile & Desktop!) */
+    .menu-drawer {
+      position: fixed;
+      top: var(--topbar-h);
+      left: 0;
+      right: 0;
+      z-index: 69;
+      max-height: calc(100dvh - var(--topbar-h));
+      overflow-y: auto;
+      background: #0D1018;
+      border-bottom: 1px solid var(--line-strong);
+      box-shadow: 0 28px 64px rgba(0, 0, 0, 0.86);
+    }
+    .menu-drawer[hidden] { display: none; }
+    .menu-drawer__inner {
+      padding-block: 18px calc(36px + env(safe-area-inset-bottom, 0px));
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 20px;
+    }
+    .drawer-group__title {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--line);
+    }
+    .drawer-group__list {
+      display: grid;
+      gap: 4px;
+    }
+    .menu-drawer__link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 11px;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      color: var(--fg-2);
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: all 0.18s var(--ease);
+    }
+    .menu-drawer__link:hover {
+      color: var(--fg);
+      background: var(--elev);
+      border-color: var(--line);
+    }
+    .menu-drawer__link.is-current {
+      color: var(--fg);
+      background: var(--gold-soft);
+      border-color: var(--gold-border);
+    }
+    .menu-drawer__link span.mono { font-size: 11px; color: var(--fg-4); flex: none; }
+    .menu-drawer__link.is-current span.mono { color: var(--gold); }
+
+    @media (min-width: 820px) {
+      .menu-drawer__inner {
+        grid-template-columns: 1fr 1.35fr 1.1fr;
+        gap: 28px;
+        padding-block: 24px 30px;
+      }
+    }
+
+    /* ==================== SECTION 01: EDITORIAL HERO & UNIFIED IDE WORKBENCH ==================== */
+    .hero {
+      position: relative;
+      isolation: isolate;
+      padding-top: var(--s-4);
+      padding-bottom: var(--s-5);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: calc(var(--topbar-h) * -1) 0 auto 0;
+      height: 660px;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        radial-gradient(48% 50% at 72% 0%, rgba(245, 196, 81, 0.055), transparent 72%);
+    }
+
+    .hero__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--s-4);
+    }
+    .hero__copy { min-width: 0; }
+
+    .trust-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      max-width: 100%;
+      padding: 4px 12px 4px 5px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--fg-2);
+      font-size: var(--text-xs);
+      letter-spacing: 0.015em;
+    }
+    .trust-pill__score {
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--gold-soft);
+      border: 1px solid var(--gold-border);
+      color: var(--gold);
+      font-weight: 600;
+      flex: none;
+      font-variant-numeric: tabular-nums;
+    }
+    .trust-pill span:last-child {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .hero-h1 {
+      margin-top: 20px;
+      font-size: var(--text-display);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.13;
+      color: var(--fg);
+    }
+    html[lang^="zh"] .hero-h1, html[lang="ja"] .hero-h1, html[lang="ko"] .hero-h1 {
+      letter-spacing: -0.015em;
+      line-height: 1.21;
+    }
+    /* Solid foreground glyph tint (100% immune to Samsung Browser background-clip dark inversion!) */
+    .hero-h1 .text-gradient {
+      color: #FFF4D2;
+      background: none;
+      -webkit-text-fill-color: currentColor;
+    }
+
+    .hero-lead {
+      margin-top: 16px;
+      max-width: 41em;
+      font-size: var(--text-lg);
+      line-height: 1.62;
+      color: var(--fg-2);
+    }
+    .hero-lead strong { color: var(--fg); font-weight: 600; }
+
+    .hero__cta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .specs {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      min-width: 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding-block: 14px;
+      gap: 8px;
+    }
+    .spec {
+      min-width: 0;
+      padding-left: 10px;
+      border-left: 1px solid var(--line);
+    }
+    .spec:first-child { padding-left: 0; border-left: 0; }
+    .spec dt {
+      color: var(--fg);
+      font-size: clamp(1.00rem, 2.4vw, 1.42rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .spec dt small { font-size: 0.64em; font-weight: 500; color: var(--fg-2); margin-left: 2px; }
+    .spec dd {
+      margin-top: 3px;
+      font-size: 11px;
+      color: var(--fg-3);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    @media (min-width: 1024px) {
+      .hero { padding-top: var(--s-5); padding-bottom: var(--s-6); }
+      .hero__grid {
+        grid-template-columns: 1.618fr 1fr;
+        gap: var(--s-5);
+        align-items: end;
+      }
+      .specs {
+        grid-template-columns: 1fr 1fr;
+        padding-block: 0;
+        border-bottom: 0;
+        gap: 0;
+      }
+      .spec {
+        padding: 18px 0;
+        border-left: 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .spec:nth-child(even) {
+        padding-left: 24px;
+        border-left: 1px solid var(--line);
+      }
+      .spec dd { font-size: var(--text-xs); margin-top: 4px; }
+    }
+
+    /* ==================== STUDIO IDE WORKBENCH (100% UNIFIED ACROSS ALL 14 PAGES) ==================== */
+    .wb-caption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: var(--s-4);
+    }
+    .wb-caption__hint { display: none; font-size: var(--text-xs); color: var(--fg-3); }
+    @media (min-width: 768px) { .wb-caption__hint { display: block; } }
+    @media (min-width: 1024px) { .wb-caption { margin-top: var(--s-5); } }
+
+    .ide-workbench {
+      margin-top: 16px;
+      border: 1px solid var(--line-strong);
+      border-radius: 14px;
+      background: var(--well);
+      overflow: hidden;
+      box-shadow:
+        inset 0 1px 0 #262E44,
+        0 32px 72px -24px rgba(0, 0, 0, 0.82);
+    }
+    .wb-titlebar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      height: 44px;
+      padding: 0 10px 0 16px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+    }
+    .wb-dots { display: flex; gap: 6px; flex: none; }
+    .wb-dots i { width: 10px; height: 10px; border-radius: 50%; background: #282C38; }
+    .wb-title {
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--fg-3);
+    }
+    .wb-run {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      flex: none;
+      height: 30px;
+      padding: 0 12px;
+      border-radius: 7px;
+      background: linear-gradient(180deg, #1E222E 0%, #131620 100%);
+      border: 1px solid var(--gold-border);
+      box-shadow: inset 0 1px 0 rgba(255, 241, 118, 0.12);
+      color: var(--fg);
+      font-size: 12.5px;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: border-color 0.2s var(--ease), background-color 0.2s var(--ease);
+    }
+    .wb-run:hover { border-color: var(--gold-border-hover); background: #222634; }
+    .wb-run.is-running { opacity: 0.78; }
+    .wb-run__tri { color: var(--gold); font-size: 10px; }
+
+    .wb-tabs {
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+      background: #0E1017;
+      border-bottom: 1px solid var(--line);
+    }
+    .wb-tabs::-webkit-scrollbar { display: none; }
+    .ide-tab {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      flex: none;
+      height: 38px;
+      padding: 0 15px;
+      border-right: 1px solid var(--line);
+      color: var(--fg-3);
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      white-space: nowrap;
+      transition: color 0.18s var(--ease), background-color 0.18s var(--ease);
+    }
+    .ide-tab:hover { color: var(--fg-2); }
+    .ide-tab i { width: 6px; height: 6px; border-radius: 50%; background: var(--fg-4); }
+    .ide-tab.active { background: var(--well); color: var(--fg); }
+    .ide-tab.active i { background: var(--gold); }
+    .ide-tab.active::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .wb-body { display: grid; grid-template-columns: minmax(0, 1fr); }
+    .wb-explorer {
+      display: none;
+      padding: 12px 8px;
+      background: #0E1017;
+      border-right: 1px solid var(--line);
+    }
+    .wb-explorer__head {
+      padding: 4px 10px 10px;
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--fg-4);
+      text-transform: uppercase;
+    }
+    .wb-folder {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px 6px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--fg-2);
+    }
+    .wb-file {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      width: 100%;
+      padding: 5px 10px 5px 22px;
+      border-radius: 6px;
+      color: var(--fg-3);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      text-align: left;
+      transition: color 0.18s var(--ease), background-color 0.18s var(--ease);
+    }
+    .wb-file:hover { color: var(--fg); background: var(--elev); }
+    .wb-file.active { color: var(--fg); background: var(--elev-hover); }
+    .wb-file b { width: 32px; font-size: 10px; font-weight: 500; color: var(--fg-4); flex: none; }
+    .wb-file.active b { color: var(--gold); }
+    .wb-file span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+    .ide-editor-body {
+      padding: 16px 12px;
+      background: var(--well);
+      font-family: var(--font-mono);
+      font-size: var(--text-code);
+      line-height: 1.65;
+      min-height: 215px;
+      max-height: 320px;
+      overflow: auto;
+    }
+    .code-line { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 12px; align-items: baseline; padding: 1px 4px; border-radius: 4px; }
+    .code-line.active-line { background: #151926; }
+    .ln { color: var(--fg-4); text-align: right; user-select: none; font-size: 0.72rem; }
+    .code-content { white-space: pre-wrap; word-break: break-word; color: #DCE1EA; }
+    .tok-kw { color: #F472B6; font-weight: 500; }
+    .tok-fn { color: #67E8F9; }
+    .tok-str { color: #86EFAC; }
+    .tok-num { color: #FDE047; }
+    .tok-cmt { color: #7C88A1; font-style: italic; }
+
+    .ide-terminal {
+      background: #090B10;
+      font-family: var(--font-mono);
+      font-size: var(--text-code);
+      line-height: 1.6;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      padding: 0 16px;
+      transition: max-height 0.32s var(--ease), opacity 0.24s var(--ease), padding 0.24s var(--ease);
+    }
+    .ide-terminal.is-open {
+      max-height: 240px;
+      opacity: 1;
+      padding: 12px 16px 14px;
+      border-top: 1px solid var(--line);
+      overflow-y: auto;
+    }
+    .term-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      color: var(--fg-3);
+      font-size: 11px;
+      margin-bottom: 8px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--line);
+    }
+    .term-header-right { display: inline-flex; align-items: center; gap: 10px; }
+    .term-exec-badge { color: var(--fg-2); }
+    .term-exec-badge.done { color: var(--gold); }
+    .btn-term-close {
+      width: 22px; height: 22px; border-radius: 5px;
+      background: var(--elev); border: 1px solid var(--line); color: var(--fg-2);
+      font-size: 11px; display: grid; place-items: center;
+    }
+    .term-stream { white-space: pre-wrap; word-break: break-word; color: #C9D1DD; }
+    .term-line-item { display: block; }
+    .term-prompt { color: var(--gold); font-weight: 600; }
+    .term-info { color: #93C5FD; }
+    @keyframes blinkCursor { 50% { opacity: 0; } }
+    .term-cursor { display: inline-block; color: var(--fg-2); margin-left: 4px; animation: blinkCursor 1s steps(1) infinite; }
+
+    .wb-statusbar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      height: 28px;
+      padding: 0 16px;
+      border-top: 1px solid var(--line);
+      background: var(--surface);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--fg-3);
+    }
+    .wb-statusbar__dot { display: inline-flex; align-items: center; gap: 6px; color: var(--fg-2); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .wb-statusbar__dot i { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex: none; }
+    .wb-statusbar__right { margin-left: auto; display: flex; gap: 12px; flex: none; }
+
+    @media (min-width: 1024px) {
+      .wb-body { grid-template-columns: 220px minmax(0, 1fr); }
+      .wb-explorer { display: block; }
+      .ide-editor-body { min-height: 265px; max-height: 350px; padding: 18px 16px; }
+    }
+
+    /* ==================== SECTION HEADERS & RHYTHM ==================== */
+    .section {
+      padding-block: var(--s-5);
+      border-top: 1px solid var(--line);
+    }
+    .section--alt { background: var(--bg-alt); }
+
+    .sec-index {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: var(--s-3);
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      letter-spacing: 0.05em;
+      color: var(--fg-2);
+      text-transform: uppercase;
+    }
+    .sec-index .num { color: var(--gold); font-weight: 500; }
+    .sec-index .rule { width: 28px; height: 1px; background: var(--line-strong); flex: none; }
+
+    .sec-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px var(--s-5); }
+    .sec-grid h2, .h2 { font-size: var(--text-2xl); letter-spacing: -0.026em; line-height: 1.16; }
+    html[lang^="zh"] .sec-grid h2, html[lang^="zh"] .h2 { letter-spacing: -0.01em; line-height: 1.26; }
+    .sec-lead { max-width: 46ch; font-size: var(--text-base); color: var(--fg-2); }
+    .sec-body { margin-top: var(--s-4); }
+    .sec-foot {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px 24px;
+      margin-top: var(--s-4);
+      padding-top: var(--s-3);
+      border-top: 1px solid var(--line);
+      font-size: var(--text-sm);
+      color: var(--fg-3);
+    }
+
+    @media (min-width: 1024px) {
+      .section { padding-block: var(--s-6); }
+      .sec-grid { grid-template-columns: 1.618fr 1fr; align-items: end; }
+      .sec-body { margin-top: var(--s-5); }
+      .sec-foot { margin-top: var(--s-5); }
+    }
+
+    /* ==================== BENTO CARDS (HOMEPAGE 13-COL + SUBPAGE 6-CARD) ==================== */
+    .bento { display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
+    .card, .feature-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      min-width: 0;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      background: var(--card);
+      transition: border-color 0.25s var(--ease), background-color 0.25s var(--ease), transform 0.25s var(--ease);
+    }
+    .card:hover, .feature-card:hover { border-color: var(--line-strong); background: var(--card-hover); transform: translateY(-2px); }
+    .card__head { display: flex; flex-direction: column; gap: 12px; }
+    .card__top, .f-top { display: flex; align-items: center; justify-content: space-between; }
+    .card__icon, .f-icon {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border: 1px solid var(--line-strong);
+      border-radius: 10px;
+      background: var(--elev);
+      color: var(--fg-2);
+      transition: color 0.25s var(--ease), border-color 0.25s var(--ease);
+    }
+    .card__icon svg, .f-icon svg { width: 19px; height: 19px; }
+    .card:hover .card__icon, .feature-card:hover .f-icon { color: var(--gold); border-color: var(--gold-border); }
+    .card__idx, .f-idx { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--fg-4); letter-spacing: 0.04em; }
+    .card h3, .f-title { font-size: var(--text-lg); font-weight: 600; letter-spacing: -0.015em; line-height: 1.35; }
+    .card p, .f-desc { font-size: 0.9375rem; color: var(--fg-3); line-height: 1.62; }
+    .card__foot, .f-code {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--fg-3);
+    }
+    .card__go {
+      display: grid;
+      place-items: center;
+      flex: none;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid var(--line-strong);
+      color: var(--fg-2);
+      transition: all 0.25s var(--ease);
+    }
+    .card__go svg { width: 13px; height: 13px; }
+    .card:hover .card__go { color: var(--fg); border-color: var(--gold-border-hover); background: var(--gold-soft); transform: translateX(2px); }
+
+    .specimen {
+      min-width: 0;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: var(--well);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      line-height: 1.65;
+      color: #C9D1DD;
+      overflow: hidden;
+    }
+    .specimen__bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 7px 14px;
+      border-bottom: 1px solid var(--line);
+      font-size: 11px;
+      color: var(--fg-3);
+      background: var(--surface);
+    }
+    .specimen__bar i { font-style: normal; color: var(--fg-4); }
+    .specimen pre { margin: 0; padding: 12px 14px; overflow-x: auto; font: inherit; white-space: pre; }
+    .specimen table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+    .specimen th, .specimen td { padding: 7px 14px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+    .specimen th { font-weight: 500; color: var(--fg-3); font-size: 11px; }
+    .specimen td.r, .specimen th.r { text-align: right; }
+    .specimen tr:last-child td { border-bottom: 0; }
+    .sp-ok { color: var(--gold); }
+
+    @media (max-width: 639px) { .specimen { display: none; } }
+    @media (min-width: 768px) {
+      .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .bento .card--full { grid-column: 1 / -1; }
+    }
+    @media (min-width: 1024px) {
+      .bento--13 { grid-template-columns: repeat(13, minmax(0, 1fr)); gap: 20px; }
+      .bento--13 .card { padding: 30px; }
+      .bento--13 .card--lg {
+        grid-column: span 8;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.02fr);
+        grid-template-rows: 1fr auto;
+        column-gap: 26px;
+        row-gap: 18px;
+      }
+      .bento--13 .card--sm { grid-column: span 5; }
+      .bento--13 .card--full { grid-column: 1 / -1; }
+      .bento--13 .card--lg .card__head { grid-column: 1; grid-row: 1; }
+      .bento--13 .card--lg .card__foot { grid-column: 1; grid-row: 2; }
+      .bento--13 .card--lg .specimen { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 16px;
+    }
+    @media (min-width: 768px) {
+      .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    }
+    @media (min-width: 1080px) {
+      .feature-grid--6 { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+      .feature-card { padding: 26px; }
+    }
+
+    /* ==================== STEP-BY-STEP WORKFLOW TIMELINE ==================== */
+    .workflow-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 16px;
+    }
+    .wf-step {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 22px 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      background: var(--surface);
+      position: relative;
+    }
+    .wf-step__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .wf-step__badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 9px;
+      border-radius: 6px;
+      background: var(--gold-soft);
+      border: 1px solid rgba(245, 196, 81, 0.25);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--gold);
+    }
+    .wf-step__cmd {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--fg-4);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .wf-step h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--fg);
+      line-height: 1.38;
+    }
+    .wf-step p {
+      font-size: 0.91rem;
+      color: var(--fg-3);
+      line-height: 1.62;
+    }
+
+    @media (min-width: 768px) {
+      .workflow-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+      .workflow-grid--6 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
+    /* ==================== KEYSTRIP & PILLARS (HOMEPAGE / CODE EDITOR) ==================== */
+    .keystrip {
+      padding: 16px 0 16px 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      background: var(--surface);
+    }
+    .keystrip__meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-right: 20px;
+      margin-bottom: 12px;
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--fg-3);
+    }
+    .keystrip__meta span:first-child { color: var(--fg-2); }
+    .keys {
+      display: flex;
+      gap: 6px;
+      padding-right: 20px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent);
+      mask-image: linear-gradient(90deg, #000 88%, transparent);
+    }
+    .keys::-webkit-scrollbar { display: none; }
+    .keys span {
+      display: grid;
+      place-items: center;
+      flex: none;
+      min-width: 36px;
+      height: 38px;
+      padding: 0 8px;
+      border: 1px solid var(--line);
+      border-bottom-color: rgba(0, 0, 0, 0.55);
+      border-radius: 7px;
+      background: linear-gradient(180deg, #1E2332, #161A25);
+      box-shadow: inset 0 1px 0 #2B334B;
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      color: var(--fg-2);
+    }
+    .keys span.wide { min-width: 52px; font-size: 11.5px; }
+
+    .pillars { display: grid; margin-top: var(--s-4); border-top: 1px solid var(--line); }
+    .pillar { display: flex; flex-direction: column; padding: 32px 0; border-bottom: 1px solid var(--line); }
+    .pillar:last-child { border-bottom: 0; padding-bottom: 0; }
+    .pillar__stat { font-size: var(--text-2xl); font-weight: 600; letter-spacing: -0.03em; line-height: 1; color: var(--fg); font-variant-numeric: tabular-nums; }
+    .pillar__sub { margin-top: 8px; font-family: var(--font-mono); font-size: var(--text-xs); color: var(--gold); }
+    .pillar h3 { margin-top: 20px; font-size: var(--text-lg); letter-spacing: -0.015em; }
+    .pillar p { margin-top: 10px; font-size: 0.9375rem; color: var(--fg-3); line-height: 1.62; }
+    .pillar .link-arrow { margin-top: 20px; }
+
+    @media (min-width: 1024px) {
+      .keystrip { padding: 20px 28px; }
+      .keystrip__meta, .keys { padding-right: 0; }
+      .keys { -webkit-mask-image: none; mask-image: none; justify-content: space-between; }
+      .pillars { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: var(--s-5); }
+      .pillar { padding: 36px 32px 0; border-bottom: 0; border-left: 1px solid var(--line); }
+      .pillar:first-child { padding-left: 0; border-left: 0; }
+      .pillar:last-child { padding-right: 0; }
+      .pillar .link-arrow { margin-top: auto; padding-top: 24px; }
+    }
+
+    /* ==================== COMPARISON TABLE & SNIPPET ==================== */
+    .snippet-definition {
+      font-size: 0.95rem;
+      color: var(--fg-2);
+      line-height: 1.65;
+      max-width: 62ch;
+    }
+    .snippet-definition strong { color: var(--fg); font-weight: 600; }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      background: var(--surface);
+      scrollbar-width: thin;
+      -webkit-overflow-scrolling: touch;
+    }
+    .obsidian-benchmark-table {
+      width: 100%;
+      min-width: 680px;
+      border-collapse: separate;
+      border-spacing: 0;
+      font-size: var(--text-sm);
+      line-height: 1.55;
+    }
+    .obsidian-benchmark-table caption {
+      text-align: left;
+      padding: 14px 20px 10px;
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--fg-4);
+      border-bottom: 1px solid var(--line);
+    }
+    .obsidian-benchmark-table th, .obsidian-benchmark-table td {
+      padding: 14px 18px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
+    }
+    .obsidian-benchmark-table thead th {
+      background: #13151E;
+      font-size: var(--text-xs);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--fg-2);
+    }
+    .obsidian-benchmark-table tbody th {
+      font-weight: 500;
+      color: var(--fg);
+      position: sticky;
+      left: 0;
+      z-index: 2;
+      background: var(--surface);
+      box-shadow: 1px 0 0 var(--line);
+    }
+    .obsidian-benchmark-table thead th:first-child {
+      position: sticky;
+      left: 0;
+      z-index: 3;
+      background: #13151E;
+      box-shadow: 1px 0 0 var(--line);
+    }
+    .obsidian-benchmark-table tbody tr:last-child > * { border-bottom: 0; }
+    .obsidian-benchmark-table thead th:nth-child(2) {
+      color: var(--fg);
+      font-weight: 600;
+      box-shadow: inset 0 2px 0 var(--gold);
+      background: linear-gradient(180deg, rgba(245, 196, 81, 0.08), rgba(245, 196, 81, 0.02)), #13151E;
+    }
+    .obsidian-benchmark-table tbody td:nth-child(2) {
+      background: rgba(245, 196, 81, 0.03);
+      color: var(--fg);
+    }
+    .obsidian-benchmark-table tbody td strong { color: var(--fg); font-weight: 600; }
+
+    /* ==================== EDITORIAL SPLIT-COLUMN FAQ ==================== */
+    .faq-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-4); }
+    .faq-head .sec-lead { margin-top: 12px; }
+    .faq-list { border-top: 1px solid var(--line); }
+    .faq-item { border-bottom: 1px solid var(--line); }
+    .faq-item summary {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px 0;
+      list-style: none;
+      cursor: pointer;
+      color: var(--fg);
+      font-size: var(--text-lg);
+      font-weight: 500;
+      line-height: 1.45;
+      user-select: none;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-icon {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border: 1px solid var(--line-strong);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 0.9rem;
+      color: var(--fg-2);
+      transition: transform 0.25s var(--ease), border-color 0.25s var(--ease), color 0.25s var(--ease);
+    }
+    .faq-item[open] .faq-icon {
+      transform: rotate(45deg);
+      border-color: var(--gold-border-hover);
+      color: var(--gold);
+    }
+    .faq-answer {
+      padding: 0 32px 22px 0;
+      font-size: 0.9375rem;
+      color: var(--fg-3);
+      line-height: 1.68;
+      max-width: 64ch;
+    }
+
+    @media (min-width: 1024px) {
+      .faq-grid { grid-template-columns: 1fr 1.618fr; gap: var(--s-5); align-items: start; }
+      .faq-head { position: sticky; top: calc(var(--topbar-h) + 36px); }
+    }
+
+    /* ==================== UNIVERSAL 14-PAGE MULTI-COLUMN FOOTER ==================== */
+    .site-footer {
+      border-top: 1px solid var(--line);
+      background: var(--bg-alt);
+      padding-top: var(--s-5);
+    }
+    .footer-cta {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 20px;
+      padding-bottom: var(--s-5);
+      border-bottom: 1px solid var(--line);
+    }
+    .footer-cta p { margin-top: 10px; color: var(--fg-2); font-size: 0.95rem; max-width: 56ch; }
+    .footer-cta__btns { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    .footer-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px 22px;
+      padding-block: var(--s-5);
+    }
+    .footer-brand { grid-column: 1 / -1; }
+    .footer-brand p { margin-top: 14px; max-width: 36ch; font-size: var(--text-sm); color: var(--fg-3); line-height: 1.65; }
+    .footer-rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--gold);
+    }
+    .footer-col h4 {
+      margin-bottom: 14px;
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+    .footer-col ul { display: grid; gap: 9px; list-style: none; }
+    .footer-col a, .footer-col li { font-size: var(--text-sm); color: var(--fg-3); line-height: 1.48; transition: color 0.18s var(--ease); }
+    .footer-col a:hover, .footer-col a.is-current { color: var(--fg); }
+    .footer-col a.is-current { font-weight: 500; }
+
+    .footer-legal {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px 24px;
+      padding-top: 22px;
+      padding-bottom: calc(36px + env(safe-area-inset-bottom, 0px));
+      border-top: 1px solid var(--line);
+      font-size: var(--text-xs);
+      color: var(--fg-4);
+    }
+
+    @media (min-width: 768px) {
+      .footer-cols { grid-template-columns: 1.35fr 1fr 1fr 1fr; }
+      .footer-brand { grid-column: auto; }
+    }
+    @media (min-width: 920px) {
+      .footer-legal { padding-bottom: 24px; }
+    }
+    @media (min-width: 1024px) {
+      .site-footer { padding-top: var(--s-6); }
+      .footer-cta { grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: var(--s-5); }
+    }
+
+    /* ==================== PYTHON TOPICAL AUTHORITY SILO HUB ==================== */
+    .py-hub-crumb {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      padding: 5px 12px;
+      border-radius: 8px;
+      background: var(--surface);
+      border: 1px solid var(--line-strong);
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--fg-2);
+    }
+    .py-hub-crumb a { color: var(--gold); font-weight: 600; }
+    .py-hub-crumb a:hover { text-decoration: underline; }
+    .py-hub-crumb .sep { color: var(--fg-4); }
+
+    .py-cluster-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 16px;
+    }
+    .py-spoke-card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 22px 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      background: var(--card);
+      transition: border-color 0.22s var(--ease), background-color 0.22s var(--ease), transform 0.22s var(--ease);
+    }
+    .py-spoke-card:hover {
+      border-color: var(--gold-border-hover);
+      background: var(--card-hover);
+      transform: translateY(-2px);
+    }
+    .py-spoke-card.is-active {
+      border-color: var(--gold-border);
+      background: var(--surface);
+    }
+    .py-spoke-card__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .py-spoke-card__code {
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: var(--gold-soft);
+      border: 1px solid var(--gold-border);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--gold);
+      white-space: nowrap;
+      flex: none;
+    }
+    .py-spoke-card__tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--fg-4);
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .py-spoke-card h3 {
+      font-size: 1.06rem;
+      font-weight: 600;
+      color: var(--fg);
+      line-height: 1.35;
+    }
+    .py-spoke-card p {
+      font-size: 0.90rem;
+      color: var(--fg-3);
+      line-height: 1.6;
+    }
+    .py-spoke-card__go {
+      margin-top: auto;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--fg-2);
+    }
+    .py-spoke-card__go span:first-child {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .py-spoke-card__go span:last-child {
+      white-space: nowrap;
+      flex: none;
+    }
+    .py-spoke-card:hover .py-spoke-card__go { color: var(--gold); }
+    @media (min-width: 768px) {
+      .py-cluster-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    }
+    @media (min-width: 1080px) {
+      .py-cluster-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    }
+
+    /* ==================== SMART AUTO-HIDING MOBILE APP BAR ==================== */
+    .mobile-bottom-bar {
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+      z-index: 55;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      max-width: 460px;
+      margin-inline: auto;
+      padding: 8px 9px 8px 10px;
+      border: 1px solid var(--line-strong);
+      border-radius: 14px;
+      background: #121622;
+      box-shadow: 0 18px 42px -10px rgba(0, 0, 0, 0.92);
+      transform: translateY(calc(100% + 28px));
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.32s var(--ease), opacity 0.24s var(--ease);
+    }
+    .mobile-bottom-bar.is-visible { transform: translateY(0); opacity: 1; pointer-events: auto; }
+    .dock-app-icon {
+      display: grid; place-items: center; flex: none;
+      width: 34px; height: 34px; border-radius: 8px;
+      background: linear-gradient(180deg, #1E2230 0%, #12151E 100%);
+      border: 1px solid var(--gold-border);
+    }
+    .dock-app-icon svg { width: 20px; height: 20px; }
+    .bottom-bar-info { flex: 1; min-width: 0; line-height: 1.22; }
+    .bottom-bar-title { font-size: 0.84rem; font-weight: 600; color: var(--fg); white-space: nowrap; }
+    .bottom-bar-sub { font-size: 0.70rem; color: var(--gold); white-space: nowrap; margin-top: 2px; letter-spacing: 0.03em; }
+    .bottom-bar-actions { display: inline-flex; align-items: center; gap: 6px; flex: none; }
+    .btn-guide-mini {
+      height: 32px; padding: 0 11px; border-radius: 8px;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--elev); border: 1px solid var(--line-strong);
+      color: var(--fg); font-size: 0.76rem; font-weight: 500; white-space: nowrap;
+    }
+    .btn-play-mini {
+      height: 32px; padding: 0 13px; border-radius: 8px;
+      display: inline-flex; align-items: center; justify-content: center; gap: 5px;
+      background: linear-gradient(180deg, #1E2230 0%, #131620 100%);
+      border: 1px solid var(--gold-border);
+      color: var(--fg); font-size: 0.76rem; font-weight: 600; white-space: nowrap;
+    }
+    @media (min-width: 920px) { .mobile-bottom-bar { display: none !important; } }
+
+    /* ==================== 10-LANGUAGE MODAL SHEET ==================== */
+    .modal-overlay {
+      position: fixed; inset: 0; z-index: 9999;
+      background: rgba(0, 0, 0, 0.74);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      display: flex; align-items: flex-end; justify-content: center;
+      opacity: 0; visibility: hidden;
+      transition: opacity 0.24s var(--ease), visibility 0.24s var(--ease);
+    }
+    .modal-overlay.show { opacity: 1; visibility: visible; }
+    .lang-modal {
+      width: 100%; max-width: 460px;
+      background: var(--surface); border-top: 1px solid var(--line-strong);
+      border-radius: 20px 20px 0 0;
+      padding: 12px 20px calc(22px + env(safe-area-inset-bottom, 0px));
+      transform: translateY(100%); transition: transform 0.28s var(--ease);
+    }
+    .modal-overlay.show .lang-modal { transform: translateY(0); }
+    .sheet-handle { width: 36px; height: 4px; border-radius: 999px; background: var(--line-strong); margin: 0 auto 14px; }
+    .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+    .modal-header h3 { font-size: 0.96rem; font-weight: 600; color: var(--fg); }
+    .btn-close-modal { width: 28px; height: 28px; border-radius: 50%; background: var(--elev); border: 1px solid var(--line); color: var(--fg-2); display: grid; place-items: center; font-size: 0.8rem; }
+    .lang-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; max-height: 52vh; overflow-y: auto; }
+    .lang-option {
+      padding: 11px 13px; border-radius: 10px;
+      background: var(--elev); border: 1px solid var(--line);
+      color: var(--fg-2); font-size: 0.85rem; font-weight: 500; text-align: left;
+      transition: all 0.18s var(--ease);
+    }
+    .lang-option:hover { color: var(--fg); border-color: var(--line-strong); }
+    .lang-option.active { color: var(--fg); border-color: var(--gold-border-hover); background: var(--gold-soft); }
+    @media (min-width: 640px) {
+      .modal-overlay { align-items: center; }
+      .sheet-handle { display: none; }
+      .lang-modal { border: 1px solid var(--line-strong); border-radius: 18px; padding: 20px; transform: scale(0.95); }
+      .modal-overlay.show .lang-modal { transform: scale(1); }
+    }
+  </style>
+</head>
+<body data-page="git_client">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="sc-logo" viewBox="20 14 68 72">
+    <path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/>
+    <path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/>
+    <path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/>
+    <path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+  </symbol>
+  <symbol id="gp-prism" viewBox="0 0 24 24">
+    <path fill="#4285F4" d="M3.6,2.4C3.3,2.7,3.1,3.2,3.1,3.8v16.4c0,0.6,0.2,1.1,0.5,1.4l0.1,0.1L12.9,12v-0.2L3.7,2.3L3.6,2.4z"/>
+    <path fill="#34A853" d="M16,15.1l-3.1-3.1v-0.2L16,8.7l0.1,0.1l3.6,2.1c1,0.6,1,1.5,0,2.1l-3.6,2.1L16,15.1z"/>
+    <path fill="#FBBC05" d="M16.1,15.1L12.9,12L3.6,21.3c0.3,0.4,0.9,0.4,1.6,0.1L16.1,15.1z"/>
+    <path fill="#EA4335" d="M16.1,8.9L5.2,2.6C4.5,2.2,3.9,2.3,3.6,2.7L12.9,12L16.1,8.9z"/>
+  </symbol>
+  <symbol id="i-ne" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8 20 7.2v9.6L12 21.2 4 16.8V7.2z"/><path d="M4 7.2l8 4.4 8-4.4M12 11.6v9.6"/></g></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2.8v3.2M15 2.8v3.2M9 18v3.2M15 18v3.2M2.8 9H6M2.8 15H6M18 9h3.2M18 15h3.2"/></g></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 2.8 7.8 12 12.6l9.2-4.8z"/><path d="m2.8 12 9.2 4.8 9.2-4.8"/><path d="m2.8 16.2 9.2 4.8 9.2-4.8"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="M2.8 8.5h18.4"/><path d="m9.5 12.5-2.2 2.2 2.2 2.2M14.5 12.5l2.2 2.2-2.2 2.2"/></g></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5.6" rx="7.6" ry="2.8"/><path d="M4.4 5.6v12.8c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8V5.6"/><path d="M4.4 12c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8"/></g></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="m7.2 9.5 3 2.5-3 2.5M12.8 15h4"/></g></symbol>
+  <symbol id="i-git" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.3"/><circle cx="6" cy="18" r="2.3"/><circle cx="18" cy="12" r="2.3"/><path d="M6 8.3v7.4M8.3 6h4.2a3.5 3.5 0 0 1 3.5 3.5v.2"/></g></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5h11a4 4 0 0 0 .7-7.94A5.5 5.5 0 0 0 7.4 9.2 3.8 3.8 0 0 0 6.5 18.5z"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M13 2.8 4.8 13.2h6.3L10.2 21.2 19.2 10.6h-6.4z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 2.8 4.8 5.8v5.6c0 5 3.1 8.5 7.2 9.8 4.1-1.3 7.2-4.8 7.2-9.8V5.8z"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="index.html" class="brand" aria-label="SuperCode IDE Home">
+      <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+      <span>SuperCode</span>
+      <span class="brand__tag">IDE</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary Workspaces">
+      <a href="code-editor.html" data-i18n="nav_code_editor">&#201;diteur</a>
+      <a href="large-file-editor.html" data-i18n="nav_large_file">Fichiers Go</a>
+      <a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a>
+      <a href="c-compiler.html" data-i18n="nav_c_compiler">Compilateur C</a>
+      <a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a>
+      <a href="java-ide.html" data-i18n="nav_java_ide">Java 17</a>
+      <a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a>
+      <a href="web-ide.html" data-i18n="nav_web_ide">Web &amp; PHP</a>
+      <a href="sql-ide.html" data-i18n="nav_sql_ide">SQL Studio</a>
+      <a href="git-client.html" class="is-current" data-i18n="nav_git_client">Git Visuel</a>
+      <a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP &amp; FTPS</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button id="langModalBtn" class="btn-lang-trigger" type="button" onclick="openLangModal()" aria-label="Select Language">
+        <svg class="lang-globe-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span id="langTriggerText">FR</span>
+        <span class="lang-chevron" aria-hidden="true">&#9662;</span>
+      </button>
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+        <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+        <span data-i18n="nav_cta">Google Play</span>
+      </a>
+      <a href="index.html" class="btn-home-icon" aria-label="Home" title="Home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5"/>
+          <path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
+        </svg>
+      </a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteDrawer" aria-label="All Pages Directory">
+        <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 8.5h16M4 15.5h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-drawer" id="siteDrawer" hidden>
+  <nav class="container menu-drawer__inner" aria-label="All SuperCode Pages">
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_core">&#201;diteur &amp; Gros Fichiers</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="index.html"><span data-i18n="nav_home">Aper&#231;u</span><span class="mono">01</span></a>
+        <a class="menu-drawer__link" href="code-editor.html"><span data-i18n="nav_code_editor">&#201;diteur</span><span class="mono">02</span></a>
+        <a class="menu-drawer__link" href="large-file-editor.html"><span data-i18n="nav_large_file">Fichiers Go</span><span class="mono">03</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_lang">Compilateurs &amp; Langages Hors Ligne</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="python-ide.html"><span data-i18n="nav_python_ide">Python IDE</span><span class="mono">04</span></a>
+        <a class="menu-drawer__link" href="c-compiler.html"><span data-i18n="nav_c_compiler">Compilateur C</span><span class="mono">05</span></a>
+        <a class="menu-drawer__link" href="cpp-ide.html"><span data-i18n="nav_cpp_ide">C++20 IDE</span><span class="mono">06</span></a>
+        <a class="menu-drawer__link" href="java-ide.html"><span data-i18n="nav_java_ide">Java 17</span><span class="mono">07</span></a>
+        <a class="menu-drawer__link" href="javascript-ide.html"><span data-i18n="nav_js_ide">JavaScript</span><span class="mono">08</span></a>
+        <a class="menu-drawer__link" href="lua-ide.html"><span data-i18n="nav_lua_ide">Lua 5.4</span><span class="mono">09</span></a>
+        <a class="menu-drawer__link" href="shell-ide.html"><span data-i18n="nav_shell_ide">Shell &amp; Kotlin</span><span class="mono">10</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_devops">Web, SQL &amp; DevOps Distant</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="web-ide.html"><span data-i18n="nav_web_ide">Web &amp; PHP</span><span class="mono">11</span></a>
+        <a class="menu-drawer__link" href="sql-ide.html"><span data-i18n="nav_sql_ide">SQL Studio</span><span class="mono">12</span></a>
+        <a class="menu-drawer__link is-current" href="git-client.html"><span data-i18n="nav_git_client">Git Visuel</span><span class="mono">13</span></a>
+        <a class="menu-drawer__link" href="sftp-client.html"><span data-i18n="nav_sftp_client">SFTP &amp; FTPS</span><span class="mono">14</span></a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<main id="top">
+  <!-- ==================== 01 · EDITORIAL HERO & INTERACTIVE WORKBENCH ==================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <div class="trust-pill">
+            <span class="trust-pill__score"><span data-play-rating>4.9</span> &#9733;</span>
+            <span data-i18n="hero_tag">STATION DE TRAVAIL GIT VISUEL V2.0 AUTONOME</span>
+          </div>
+
+          <h1 class="hero-h1" data-i18n="hero_h1"><span class="text-gradient">Git visuel complet, Diff temporel &amp; fusion de conflits</span> sur Android.</h1>
+
+          <p class="hero-lead" data-i18n="hero_desc">Aucune d&#233;pendance de terminal externe requise. Clonez vos d&#233;p&#244;ts <strong>GitHub, GitLab, Gitee &amp; Bitbucket</strong> via jeton HTTPS, inspectez des <strong>Diffs unifi&#233;s color&#233;s</strong>, tirez les mises &#224; jour avec <strong>auto-stash &amp; rechargement &#224; chaud</strong>, et r&#233;solvez les <strong>conflits de fusion en un geste</strong>.</p>
+
+          <div class="hero__cta" id="heroCta">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold">
+              <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+              <span data-i18n="cta_btn">Sur Google Play</span>
+            </a>
+            <a href="https://supercode-ide.github.io/tutorial?ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+              <span data-i18n="cta_tutorial">Guide App</span>
+              <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <dl class="specs" aria-label="Key Specifications">
+          <div class="spec"><dt>0<small>Deps</small></dt><dd data-i18n="git_spec1">Moteur Git Int&#233;gr&#233;</dd></div>
+          <div class="spec"><dt>120</dt><dd data-i18n="git_spec2">Time Machine</dd></div>
+          <div class="spec"><dt>Diff</dt><dd data-i18n="git_spec3">Diff Unifi&#233; Couleur</dd></div>
+          <div class="spec"><dt>3-Way</dt><dd data-i18n="git_spec4">Fusion Visuelle</dd></div>
+        </dl>
+      </div>
+
+      <div class="wb-caption">
+        <div class="sec-index" style="margin-bottom:0">
+          <span class="num">01</span>
+          <span class="rule"></span>
+          <span data-i18n="wb_eyebrow">ATELIER INTERACTIF TABLEAU DE BORD GIT, DIFF &amp; FUSION</span>
+        </div>
+        <span class="wb-caption__hint mono">Clone HTTPS PAT &#183; Diff Unifi&#233; Temporel &#183; R&#233;solveur Visuel de Conflits</span>
+      </div>
+
+      <div class="ide-workbench">
+        <div class="wb-titlebar">
+          <div class="wb-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="wb-title" id="ide-compiler-label">Git Dashboard &#8212; Multi-Repo Switcher &amp; HTTPS Token Clone</div>
+          <button type="button" class="wb-run" id="btn-run-sandbox">
+            <span class="wb-run__tri" aria-hidden="true">&#9654;</span>
+            <span data-i18n="btn_run">Lancer la d&#233;mo</span>
+          </button>
+        </div>
+
+        <div class="wb-tabs" role="tablist" aria-label="Interactive Workspace Tabs">
+          <button type="button" class="ide-tab active" data-tab="git_clone" role="tab" aria-selected="true"><i></i>01_clone_status.git</button>
+          <button type="button" class="ide-tab" data-tab="git_diff" role="tab" aria-selected="false"><i></i>02_time_machine.diff</button>
+          <button type="button" class="ide-tab" data-tab="git_merge" role="tab" aria-selected="false"><i></i>03_conflict_resolver.kt</button>
+        </div>
+
+        <div class="wb-body">
+          <aside class="wb-explorer" aria-label="Project Explorer">
+            <div class="wb-explorer__head">Explorer</div>
+            <div class="wb-folder">&#9662; git-repository</div>
+            <button type="button" class="wb-file active" data-tab="git_clone"><b>CLONE</b><span>01_clone_status.git</span></button>
+            <button type="button" class="wb-file" data-tab="git_diff"><b>DIFF</b><span>02_time_machine.diff</span></button>
+            <button type="button" class="wb-file" data-tab="git_merge"><b>MERGE</b><span>03_conflict_resolver.kt</span></button>
+          </aside>
+
+          <div class="wb-main">
+            <div class="ide-editor-body" id="ide-code-box" role="region" aria-label="Interactive Code Preview"></div>
+            <div class="ide-terminal" id="ide-terminal-drawer" aria-live="polite">
+              <div class="term-header">
+                <span data-i18n="term_title">Sortie Console Interactive</span>
+                <div class="term-header-right">
+                  <span class="term-exec-badge" id="ide-exec-status">Ready</span>
+                  <button type="button" class="btn-term-close" id="btn-close-term" aria-label="Close terminal">&#10005;</button>
+                </div>
+              </div>
+              <div class="term-stream" id="ide-term-output"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wb-statusbar">
+          <span class="wb-statusbar__dot"><i></i><span id="wbStatusLang">Mounted: supercode-app &#183; main (&#8593;1 &#8595;0)</span></span>
+          <div class="wb-statusbar__right">
+            <span>UTF-8</span>
+            <span>LF</span>
+            <span>Ln 4, Col 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 02 · CORE CAPABILITIES ==================== -->
+  <section class="section section--alt" id="capabilities">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">02</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_cap_eyebrow">FONCTIONNALIT&#201;S CL&#201;S</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="sec_cap_title">Chaque op&#233;ration Git essentielle &#8212; repens&#233;e sp&#233;cifiquement pour le tactile</h2>
+        <p class="sec-lead" data-i18n="sec_cap_lead">Prot&#233;g&#233; par des verrous de d&#233;p&#244;t, l&#8217;enregistrement automatique des onglets ouverts et des banni&#232;res de secours Detached HEAD pour un versionnage mobile sans stress.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="feature-grid feature-grid--6">
+          <article class="feature-card" id="cap1">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-git"/></svg></span>
+              <span class="f-idx">02.1</span>
+            </div>
+            <h3 class="f-title" data-i18n="f1_title">Tableau de bord Git tactique &amp; s&#233;lecteur multi-d&#233;p&#244;ts</h3>
+            <p class="f-desc" data-i18n="f1_desc">Visualisez en un coup d&#8217;&#339;il le d&#233;p&#244;t mont&#233;, la branche active, le hachage court du commit, les compteurs &#8593; En avance / &#8595; En retard ainsi que les fichiers modifi&#233;s, ajout&#233;s, supprim&#233;s ou en conflit &#8212; et changez de d&#233;p&#244;t en un geste.</p>
+            <div class="f-code" data-i18n="f1_badge">S&#233;lecteur multi-d&#233;p&#244;ts &#183; &#8593;Avance &#8595;Retard &#183; Montage instantan&#233;</div>
+          </article>
+          <article class="feature-card" id="cap2">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <span class="f-idx">02.2</span>
+            </div>
+            <h3 class="f-title" data-i18n="f2_title">Clonage HTTPS + PAT &amp; persistance chiffr&#233;e des identifiants</h3>
+            <p class="f-desc" data-i18n="f2_desc">Clonez des d&#233;p&#244;ts publics ou priv&#233;s depuis GitHub, GitLab, Gitee, Bitbucket ou vos serveurs Git auto-h&#233;berg&#233;s par jeton d&#8217;acc&#232;s personnel (PAT). Le dossier cible est pr&#233;rempli et le jeton sauvegard&#233; en s&#233;curit&#233;.</p>
+            <div class="f-code" data-i18n="f2_badge">PAT GitHub / GitLab / Gitee &#183; Progression r&#233;seau en direct</div>
+          </article>
+          <article class="feature-card" id="cap3">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
+              <span class="f-idx">02.3</span>
+            </div>
+            <h3 class="f-title" data-i18n="f3_title">Sauvegarde auto des onglets, aper&#231;u des modifications &amp; auteur</h3>
+            <p class="f-desc" data-i18n="f3_desc">Avant chaque commit, SuperCode enregistre automatiquement tous les onglets modifi&#233;s sur le disque pour n&#8217;oublier aucune &#233;dition, pr&#233;visualise jusqu&#8217;&#224; 80 fichiers avec badges [M]/[A]/[U]/[D] et permet de d&#233;finir Nom &amp; E-mail d&#8217;auteur.</p>
+            <div class="f-code" data-i18n="f3_badge">Z&#233;ro oubli d&#8217;&#233;dition &#183; Auteur personnalis&#233; &#183; Liaison upstream auto</div>
+          </article>
+          <article class="feature-card" id="cap4">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+              <span class="f-idx">02.4</span>
+            </div>
+            <h3 class="f-title" data-i18n="f4_title">Pull intelligent avec Auto-Stash &amp; rechargement fid&#232;le au curseur</h3>
+            <p class="f-desc" data-i18n="f4_desc">Des modifications locales non valid&#233;es au moment du Pull ? SuperCode les met automatiquement de c&#244;t&#233; (stash) sans commit parasite, r&#233;cup&#232;re les nouveaut&#233;s distantes, r&#233;applique votre travail et recharge vos onglets &#224; la ligne exacte !</p>
+            <div class="f-code" data-i18n="f4_badge">Auto-Stash propre &#183; Rechargement &#224; chaud sur place</div>
+          </article>
+          <article class="feature-card" id="cap5">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-term"/></svg></span>
+              <span class="f-idx">02.5</span>
+            </div>
+            <h3 class="f-title" data-i18n="f5_title">Machine &#224; remonter les commits, branches &amp; Diff unifi&#233; 2D</h3>
+            <p class="f-desc" data-i18n="f5_desc">Parcourez jusqu&#8217;&#224; 120 commits, ouvrez un Diff unifi&#233; 2D d&#233;roulant (+vert / -rouge) pour chaque commit, cr&#233;ez ou changez de branche locale/distante, inspectez un instantan&#233; en lecture seule ou lancez un Hard Reset confirm&#233;.</p>
+            <div class="f-code" data-i18n="f5_badge">Visionneuse Diff unifi&#233; &#183; + Nouvelle branche &#183; Secours Detached HEAD</div>
+          </article>
+          <article class="feature-card" id="cap6">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-cube"/></svg></span>
+              <span class="f-idx">02.6</span>
+            </div>
+            <h3 class="f-title" data-i18n="f6_title">R&#233;solveur visuel multi-fichiers de conflits de fusion</h3>
+            <p class="f-desc" data-i18n="f6_desc">Ne retouchez plus jamais les marqueurs bruts &lt;&lt;&lt;&lt;&lt;&lt;&lt; &#224; la main. Parcourez les fichiers en conflit (1 / N) et touchez Garder Actuel, Garder Entrant ou Garder les Deux sur des cartes claires Local vs Distant &#8212; avec indexation automatique.</p>
+            <div class="f-code" data-i18n="f6_badge">Garder Actuel / Entrant / Les Deux &#183; Mise en index automatique</div>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">Con&#231;u pour Smartphones, Pliables &amp; Tablettes &#183; L&#233;ger 40,2 Mo</span>
+        <a class="link-arrow" href="index.html">
+          <span data-i18n="nav_home">Aper&#231;u</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 03 · STEP-BY-STEP WORKFLOW GUIDE ==================== -->
+  <section class="section" id="workflow">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">03</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_wf_eyebrow">GUIDE D&#8217;UTILISATION &#201;TAPE PAR &#201;TAPE</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="workflow_title">Guide complet en 6 &#233;tapes : utiliser Git dans SuperCode IDE</h2>
+        <p class="sec-lead" data-i18n="workflow_lead">Suivez ce flux exact dans SuperCode pour cloner, cr&#233;er vos branches, inspecter les diffs, fusionner et pousser depuis votre t&#233;l&#233;phone ou tablette.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="workflow-grid workflow-grid--6">
+          <article class="wf-step" id="step1">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 01</span>
+              <span class="wf-step__cmd">Menu -&gt; Git -&gt; Cloner</span>
+            </div>
+            <h3 data-i18n="wf1_title">Cloner un d&#233;p&#244;t distant ou monter un projet local</h3>
+            <p data-i18n="wf1_desc">Collez votre URL HTTPS (ex. https://github.com/user/repo.git) et votre jeton PAT &#233;ventuel, puis touchez CLONER &#8212; ou Monter un d&#233;p&#244;t existant si le dossier contient d&#233;j&#224; .git.</p>
+          </article>
+          <article class="wf-step" id="step2">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 02</span>
+              <span class="wf-step__cmd">Machine &#224; commits -&gt; Branche &#9662;</span>
+            </div>
+            <h3 data-i18n="wf2_title">Changer de branche ou cr&#233;er une branche de fonctionnalit&#233;</h3>
+            <p data-i18n="wf2_desc">Ouvrez la Machine &#224; commits Git et touchez le s&#233;lecteur sup&#233;rieur pour basculer de branche ou appuyez sur + Cr&#233;er une branche&#8230; (ex. feature/ui-mobile) avec validation automatique du nom.</p>
+          </article>
+          <article class="wf-step" id="step3">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 03</span>
+              <span class="wf-step__cmd">Onglets &#201;diteur -&gt; &#201;diter</span>
+            </div>
+            <h3 data-i18n="wf3_title">Modifier vos fichiers avec toute l&#8217;intelligence de l&#8217;IDE</h3>
+            <p data-i18n="wf3_desc">&#201;ditez, formatez et testez votre code hors ligne. M&#234;me si vous oubliez d&#8217;enregistrer un onglet ouvert, les commandes Git vident automatiquement les modifications sur le disque avant d&#8217;agir.</p>
+          </article>
+          <article class="wf-step" id="step4">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 04</span>
+              <span class="wf-step__cmd">Tableau Git -&gt; Pull</span>
+            </div>
+            <h3 data-i18n="wf4_title">R&#233;cup&#233;rer les mises &#224; jour de l&#8217;&#233;quipe en toute s&#233;curit&#233;</h3>
+            <p data-i18n="wf4_desc">Touchez Pull avant de pousser. Vos modifications locales non valid&#233;es sont mises en stash puis restaur&#233;es automatiquement, et les onglets ouverts s&#8217;actualisent sans d&#233;placer votre curseur.</p>
+          </article>
+          <article class="wf-step" id="step5">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 05</span>
+              <span class="wf-step__cmd">R&#233;solveur de conflits</span>
+            </div>
+            <h3 data-i18n="wf5_title">R&#233;soudre visuellement toute collision de fusion</h3>
+            <p data-i18n="wf5_desc">En cas de modifications concurrentes, ouvrez le R&#233;solveur de conflits, comparez les blocs Local et Distant c&#244;te &#224; c&#244;te, choisissez Garder Actuel / Entrant / Les Deux puis validez.</p>
+          </article>
+          <article class="wf-step" id="step6">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 06</span>
+              <span class="wf-step__cmd">Commit &amp; Push</span>
+            </div>
+            <h3 data-i18n="wf6_title">V&#233;rifier les fichiers modifi&#233;s, r&#233;diger le message &amp; pousser</h3>
+            <p data-i18n="wf6_desc">Contr&#244;lez les badges [M]/[A]/[D] des modifications en attente, confirmez votre identit&#233; d&#8217;auteur et votre message de commit, puis touchez COMMIT pour indexer, valider et pousser vers origin.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="wf_foot_note">R&#233;cup&#233;ration automatique des verrous index.lock obsol&#232;tes &#183; Commits locaux 100 % hors ligne pris en charge</span>
+        <a class="link-arrow" href="https://supercode-ide.github.io/tutorial?ref=official_web" data-supercode-tutorial="true">
+          <span data-i18n="cta_tutorial">Guide App</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 04 · FEATURED SUMMARY & COMPARISON MATRIX ==================== -->
+  <section class="section section--alt" id="comparison">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">04</span>
+        <span class="rule"></span>
+        <span data-i18n="comp_eyebrow">TABLEAU COMPARATIF</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="table_h2">Git visuel SuperCode face aux autres solutions Git sur Android</h2>
+        <p class="snippet-definition" data-i18n="snippet_p"><strong>SuperCode Visual Git Client</strong> est un client Git visuel Android autonome nativement int&#233;gr&#233; &#224; SuperCode IDE. Il prend en charge le clonage HTTPS + PAT, le basculement multi-d&#233;p&#244;ts, la gestion des branches, le Pull intelligent avec auto-stash, une Machine &#224; remonter 120 commits avec diffs unifi&#233;s color&#233;s et un r&#233;solveur visuel de conflits de fusion.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="table-wrap">
+          <table class="obsidian-benchmark-table">
+            <caption data-i18n="table_caption">MATRICE DES FLUX DE GESTION DE VERSIONS GIT SUR ANDROID</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="th_0">Flux Git</th>
+                <th scope="col" data-i18n="th_1">SuperCode Git Visuel V2</th>
+                <th scope="col" data-i18n="th_2">Greffons Git Mobiles Basiques</th>
+                <th scope="col" data-i18n="th_3">Git en Terminal CLI</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="tr1_c0">Installation &amp; d&#233;pendances</th>
+                <td><strong data-i18n="tr1_c1">Moteur int&#233;gr&#233; sans config + r&#233;paration des verrous</strong></td>
+                <td data-i18n="tr1_c2">Bugs d&#8217;extensions ou auth instable</td>
+                <td data-i18n="tr1_c3">Installation manuelle + config SSH/PAT</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr2_c0">Pull avec &#233;ditions locales</th>
+                <td><strong data-i18n="tr2_c1">Auto-Stash + restauration + rechargement d&#8217;onglets</strong></td>
+                <td data-i18n="tr2_c2">&#201;choue avec erreur de checkout</td>
+                <td data-i18n="tr2_c3">git stash / pop manuel obligatoire</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr3_c0">Historique &amp; Diffs de code</th>
+                <td><strong data-i18n="tr3_c1">Machine 120 commits + Diff unifi&#233; 2D color&#233;</strong></td>
+                <td data-i18n="tr3_c2">Texte brut du journal uniquement</td>
+                <td data-i18n="tr3_c3">D&#233;filement p&#233;nible sur petit &#233;cran</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr4_c0">Conflits de fusion</th>
+                <td><strong data-i18n="tr4_c1">Cartes visuelles : Garder Actuel / Entrant / Les Deux</strong></td>
+                <td data-i18n="tr4_c2">&#201;dition manuelle des &lt;&lt;&lt;&lt;&lt;&lt;&lt;</td>
+                <td data-i18n="tr4_c3">&#201;dition manuelle des marqueurs sous vim</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr5_c0">S&#233;curit&#233; Detached HEAD</th>
+                <td><strong data-i18n="tr5_c1">Banni&#232;re de secours en 1 geste (+ Branche / Retour)</strong></td>
+                <td data-i18n="tr5_c2">Perte facile de commits</td>
+                <td data-i18n="tr5_c3">&#201;tat CLI cryptique</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">Con&#231;u pour Smartphones, Pliables &amp; Tablettes &#183; L&#233;ger 40,2 Mo</span>
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener">
+          <span>Google Play</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 05 · VISIBLE EDITORIAL FAQ ==================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-head">
+          <div class="sec-index">
+            <span class="num">05</span>
+            <span class="rule"></span>
+            <span data-i18n="sec3_eyebrow">QUESTIONS &amp; R&#201;PONSES</span>
+          </div>
+          <h2 class="h2" data-i18n="sec3_title">Questions Fr&#233;quentes (FAQ)</h2>
+          <p class="sec-lead" data-i18n="faq_lead">R&#233;ponses pratiques sur les jetons d&#8217;acc&#232;s personnels GitHub, les d&#233;p&#244;ts priv&#233;s, les conflits de fusion et l&#8217;historique des commits.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary><span data-i18n="faq1_q">Comment m&#8217;authentifier aupr&#232;s de d&#233;p&#244;ts priv&#233;s GitHub, GitLab ou Gitee ?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq1_a">G&#233;n&#233;rez un jeton d&#8217;acc&#232;s personnel HTTPS (PAT) dot&#233; de la permission repo sur GitHub/GitLab/Gitee et collez-le dans le champ Jeton lors d&#8217;un Clone, Commit &amp; Push ou Pull. SuperCode le conserve de fa&#231;on chiffr&#233;e pour vos prochaines op&#233;rations.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq2_q">Que se passe-t-il si j&#8217;appuie sur Pull alors que j&#8217;ai des onglets non enregistr&#233;s ou des changements non valid&#233;s ?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq2_a">SuperCode enregistre d&#8217;abord vos onglets ouverts sur le disque, place automatiquement vos modifications locales suivies en stash, r&#233;cup&#232;re les commits distants, r&#233;applique votre travail et recharge vos onglets &#224; la ligne exacte du curseur.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq3_q">Comment consulter les modifications d&#8217;un ancien commit ou revenir en arri&#232;re ?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq3_a">Ouvrez la Machine &#224; remonter les commits depuis le tableau de bord Git et touchez n&#8217;importe quel commit. Choisissez Voir les changements (Commit Diff) pour le diff color&#233;, Checkout (Lecture seule) pour inspecter l&#8217;instantan&#233; sans risque, ou Hard Reset pour ramener la branche.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq4_q">Puis-je valider des commits hors ligne lorsque je n&#8217;ai pas acc&#232;s &#224; internet ?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq4_a">Oui ! La mise en index, les commits locaux, la cr&#233;ation de branches, l&#8217;inspection de l&#8217;historique, les diffs unifi&#233;s et la r&#233;solution de conflits fonctionnent enti&#232;rement hors ligne ; poussez vos commits d&#232;s le retour du r&#233;seau.</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="siteFooter">
+  <div class="container">
+    <div class="footer-cta" id="footerCta">
+      <div>
+        <h2 class="h2" data-i18n="cta_h2">G&#233;rez vos d&#233;p&#244;ts, diffs &amp; fusions sans effort sur Android.</h2>
+        <p data-i18n="cta_desc">T&#233;l&#233;chargez SuperCode IDE sur Google Play pour disposer d&#8217;un client Git visuel autonome associ&#233; &#224; plus de 10 environnements de programmation hors ligne.</p>
+      </div>
+      <div class="footer-cta__btns">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="cta_btn">Sur Google Play</span>
+        </a>
+        <a href="https://supercode-ide.github.io/tutorial?ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+          <span data-i18n="cta_tutorial">Guide App</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+          <span>SuperCode</span>
+          <span class="brand__tag">IDE</span>
+        </a>
+        <p data-i18n="footer_tagline">&#201;diteur de code mobile natif et studio de d&#233;veloppement hors ligne con&#231;u pour les ing&#233;nieurs et &#233;tudiants sur Android.</p>
+        <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
+        <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://supercode-ide.github.io/tutorial?ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">Guide App</span> &#8599;</a>
+          <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">Choisir la langue</span></button>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_core">&#201;diteur &amp; Gros Fichiers</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Aper&#231;u</a></li>
+          <li><a href="code-editor.html" data-i18n="nav_code_editor">&#201;diteur</a></li>
+          <li><a href="large-file-editor.html" data-i18n="nav_large_file">Fichiers Go</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_lang">Compilateurs &amp; Langages Hors Ligne</h4>
+        <ul>
+          <li><a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a></li>
+          <li><a href="c-compiler.html" data-i18n="nav_c_compiler">Compilateur C</a></li>
+          <li><a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a></li>
+          <li><a href="java-ide.html" data-i18n="nav_java_ide">Java 17</a></li>
+          <li><a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a></li>
+          <li><a href="lua-ide.html" data-i18n="nav_lua_ide">Lua 5.4</a></li>
+          <li><a href="shell-ide.html" data-i18n="nav_shell_ide">Shell &amp; Kotlin</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_devops">Web, SQL &amp; DevOps Distant</h4>
+        <ul>
+          <li><a href="web-ide.html" data-i18n="nav_web_ide">Web &amp; PHP</a></li>
+          <li><a href="sql-ide.html" data-i18n="nav_sql_ide">SQL Studio</a></li>
+          <li><a href="git-client.html" class="is-current" data-i18n="nav_git_client">Git Visuel</a></li>
+          <li><a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP &amp; FTPS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <span>&copy; 2026 Phoenix Global Studios. All rights reserved.</span>
+      <span class="mono">com.phoenixglobal.supercodeeditor</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="mobile-bottom-bar" id="mobileBottomBar" aria-label="Quick App Actions">
+  <div class="dock-app-icon" aria-hidden="true"><svg><use href="#sc-logo"/></svg></div>
+  <div class="bottom-bar-info">
+    <div class="bottom-bar-title">SuperCode</div>
+    <div class="bottom-bar-sub"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  </div>
+  <div class="bottom-bar-actions">
+    <a href="https://supercode-ide.github.io/tutorial?ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">Guide App</a>
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn-play-mini">
+      <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
+      <span data-i18n="bottom_cta">Obtenir</span>
+    </a>
+  </div>
+</aside>
+
+<div class="modal-overlay" id="langModal" role="dialog" aria-modal="true" aria-labelledby="langModalTitle">
+  <div class="lang-modal">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div class="modal-header">
+      <h3 id="langModalTitle" data-i18n="modal_title">Choisir la langue</h3>
+      <button type="button" class="btn-close-modal" onclick="closeLangModal()" aria-label="Close">&#10005;</button>
+    </div>
+    <div class="lang-grid">
+      <button type="button" class="lang-option" data-code="en" onclick="setLanguage('en')">English</button>
+      <button type="button" class="lang-option" data-code="zh" onclick="setLanguage('zh')">&#31616;&#20307;&#20013;&#25991;</button>
+      <button type="button" class="lang-option" data-code="es" onclick="setLanguage('es')">Espa&#241;ol</button>
+      <button type="button" class="lang-option" data-code="ja" onclick="setLanguage('ja')">&#26085;&#26412;&#35486;</button>
+      <button type="button" class="lang-option" data-code="de" onclick="setLanguage('de')">Deutsch</button>
+      <button type="button" class="lang-option active" data-code="fr" onclick="setLanguage('fr')">Fran&#231;ais</button>
+      <button type="button" class="lang-option" data-code="ko" onclick="setLanguage('ko')">&#54620;&#44397;&#50612;</button>
+      <button type="button" class="lang-option" data-code="pt" onclick="setLanguage('pt')">Portugu&#234;s</button>
+      <button type="button" class="lang-option" data-code="hi" onclick="setLanguage('hi')">&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;</button>
+      <button type="button" class="lang-option" data-code="ru" onclick="setLanguage('ru')">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var WORKBENCH_SAMPLES = {"git_clone": {"label": "Git Dashboard \u2014 Multi-Repo Switcher & HTTPS Token Clone", "status": "Mounted: supercode-app \u00b7 main (\u21911 \u21930)", "lines": ["<span class=\"tok-cmt\"># Step 1: Paste HTTPS URL + GitHub / GitLab / Gitee PAT Token<\/span>", "Repository : <span class=\"tok-str\">https://github.com/team/mobile-app.git<\/span>", "Branch     : <span class=\"tok-fn\">main<\/span>  (&uarr;1 ahead &middot; &darr;0 behind)", "Status     : Modified: <span class=\"tok-num\">2<\/span> &bull; Added: <span class=\"tok-num\">1<\/span> &bull; Deleted: <span class=\"tok-num\">0<\/span>"], "output": ["<span class=\"term-prompt\">&#10140;<\/span> Cloning into /storage/emulated/0/SuperCodeGIT/mobile-app...", "Receiving objects: 100% (418/418), 1.84 MiB | 6.2 MiB/s, done.", "<span class=\"term-info\">&#10003; Mounted into GIT workspace &middot;Encrypted PAT saved for Push/Pull<\/span>"]}, "git_diff": {"label": "Git Time Machine \u2014 Commit Timeline & Unified Diff Viewer", "status": "Time Machine \u00b7 120 Commits \u00b7 Unified Diff", "lines": ["<span class=\"tok-cmt\">@@ -42,4 +42,5 @@ public class AuthController<\/span>", "   <span class=\"tok-kw\">val<\/span> timeoutMs = <span class=\"tok-num\">5000L<\/span>", "-  <span class=\"tok-kw\">val<\/span> retryCount = <span class=\"tok-num\">1<\/span>", "+  <span class=\"tok-kw\">val<\/span> retryCount = <span class=\"tok-num\">3<\/span>", "+  <span class=\"tok-kw\">val<\/span> enableKeepAlive = <span class=\"tok-kw\">true<\/span>"], "output": ["<span class=\"term-prompt\">[Time Machine]<\/span> Commit a81f4c2 &middot; &quot;Improve session retry resilience&quot;", "Actions: [View Unified Diff]  [Checkout Snapshot]  [+ New Branch Here]  [Hard Reset]", "<span class=\"term-info\">&#10003; Smart Pull auto-stashes local edits &amp; hot-reloads open tabs in place<\/span>"]}, "git_merge": {"label": "Visual Conflict Resolver \u2014 File 1 of 1 (Current vs Incoming)", "status": "Conflict Resolver \u00b7 1-Tap Merge", "lines": ["<span class=\"tok-cmt\">// [Current Change - Local]<\/span>", "<span class=\"tok-kw\">const val<\/span> API_TIMEOUT = <span class=\"tok-num\">8000<\/span>", "<span class=\"tok-cmt\">// [Incoming Change - Remote origin/main]<\/span>", "<span class=\"tok-kw\">const val<\/span> API_TIMEOUT = <span class=\"tok-num\">10000<\/span>", "<span class=\"tok-cmt\">// Tap: [Keep Current]  [Keep Incoming]  [Keep Both]<\/span>"], "output": ["<span class=\"term-prompt\">[Conflict Resolver]<\/span> Selected: Keep Incoming (1 / 1 resolved)", "Clean file written, conflict markers removed &amp; staged automatically!", "<span class=\"term-info\">&#10003; Ready for 1-tap Commit &amp; Push to origin/main<\/span>"]}};
+    var currentTab = 'git_clone';
+    var runTimer = null;
+
+    function renderWorkbench(tabKey, animateRun) {
+      var sample = WORKBENCH_SAMPLES[tabKey] || WORKBENCH_SAMPLES['git_clone'];
+      if (!sample) { return; }
+      currentTab = tabKey;
+      var labelEl = document.getElementById('ide-compiler-label');
+      if (labelEl) { labelEl.textContent = sample.label; }
+      var statusEl = document.getElementById('wbStatusLang');
+      if (statusEl) { statusEl.textContent = sample.status; }
+
+      var tabs = document.querySelectorAll('.ide-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        var active = tabs[i].getAttribute('data-tab') === tabKey;
+        tabs[i].classList.toggle('active', active);
+        tabs[i].setAttribute('aria-selected', active ? 'true' : 'false');
+      }
+      var files = document.querySelectorAll('.wb-file');
+      for (var f = 0; f < files.length; f++) {
+        files[f].classList.toggle('active', files[f].getAttribute('data-tab') === tabKey);
+      }
+
+      var codeBox = document.getElementById('ide-code-box');
+      if (codeBox) {
+        var html = '';
+        for (var l = 0; l < sample.lines.length; l++) {
+          var activeCls = (l === sample.lines.length - 1) ? ' active-line' : '';
+          html += '<div class="code-line' + activeCls + '"><span class="ln">' + (l + 1) + '</span><span class="code-content">' + sample.lines[l] + '</span></div>';
+        }
+        codeBox.innerHTML = html;
+      }
+
+      if (animateRun) {
+        runWorkbenchSample();
+      }
+    }
+
+    function runWorkbenchSample() {
+      var sample = WORKBENCH_SAMPLES[currentTab] || WORKBENCH_SAMPLES['git_clone'];
+      var drawer = document.getElementById('ide-terminal-drawer');
+      var out = document.getElementById('ide-term-output');
+      var badge = document.getElementById('ide-exec-status');
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (!drawer || !out || !sample) { return; }
+
+      if (runTimer) { clearTimeout(runTimer); }
+      drawer.classList.add('is-open');
+      if (runBtn) { runBtn.classList.add('is-running'); }
+      if (badge) { badge.textContent = 'Running...'; badge.classList.remove('done'); }
+      out.innerHTML = '';
+
+      var idx = 0;
+      function step() {
+        if (idx < sample.output.length) {
+          var row = document.createElement('span');
+          row.className = 'term-line-item';
+          row.innerHTML = sample.output[idx];
+          out.appendChild(row);
+          idx++;
+          runTimer = setTimeout(step, 80);
+        } else {
+          var cur = document.createElement('span');
+          cur.className = 'term-cursor';
+          cur.textContent = '\u258b';
+          out.appendChild(cur);
+          if (badge) { badge.textContent = 'Completed'; badge.classList.add('done'); }
+          if (runBtn) { runBtn.classList.remove('is-running'); }
+        }
+      }
+      step();
+    }
+
+    function initNavigationAndSmartBar() {
+      var menuBtn = document.getElementById('menuBtn');
+      var drawer = document.getElementById('siteDrawer');
+      var bar = document.getElementById('mobileBottomBar');
+      var heroCta = document.getElementById('heroCta');
+      var siteFooter = document.getElementById('siteFooter');
+
+      function syncBar() {
+        if (!bar) { return; }
+        var drawerOpen = Boolean(drawer && !drawer.hasAttribute('hidden'));
+        var modalEl = document.getElementById('langModal');
+        var modalOpen = Boolean(modalEl && modalEl.classList.contains('show'));
+        var vh = window.innerHeight || document.documentElement.clientHeight || 800;
+        var heroInView = false;
+        if (heroCta) {
+          var hr = heroCta.getBoundingClientRect();
+          heroInView = (hr.bottom > 0 && hr.top < vh);
+        }
+        var footerInView = false;
+        if (siteFooter) {
+          var fr = siteFooter.getBoundingClientRect();
+          footerInView = (fr.top < vh + 24);
+        }
+        var scrollYVal = window.pageYOffset || window.scrollY || 0;
+        var docH = Math.max(document.body ? document.body.scrollHeight : 0, document.documentElement ? document.documentElement.scrollHeight : 0);
+        var nearBottom = (vh + scrollYVal) >= (docH - 120);
+        var shouldShow = !drawerOpen && !modalOpen && !heroInView && !footerInView && !nearBottom;
+        bar.classList.toggle('is-visible', shouldShow);
+      }
+
+      window.__supercodeSyncMobileBar = syncBar;
+
+      function setDrawer(open) {
+        if (!menuBtn || !drawer) { return; }
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { drawer.removeAttribute('hidden'); }
+        else { drawer.setAttribute('hidden', ''); }
+        syncBar();
+      }
+      if (menuBtn && drawer) {
+        menuBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          setDrawer(menuBtn.getAttribute('aria-expanded') !== 'true');
+        });
+        drawer.addEventListener('click', function (e) {
+          if (e.target && e.target.closest('a')) { setDrawer(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!drawer.hasAttribute('hidden') && !drawer.contains(e.target) && e.target !== menuBtn && !menuBtn.contains(e.target)) {
+            setDrawer(false);
+          }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') { setDrawer(false); }
+        });
+      }
+
+      if (bar) {
+        window.addEventListener('scroll', syncBar, { passive: true });
+        window.addEventListener('resize', syncBar);
+        syncBar();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var tabBtns = document.querySelectorAll('.ide-tab, .wb-file');
+      for (var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', function () {
+          renderWorkbench(this.getAttribute('data-tab'), true);
+        });
+      }
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (runBtn) { runBtn.addEventListener('click', function () { runWorkbenchSample(); }); }
+      var closeTerm = document.getElementById('btn-close-term');
+      if (closeTerm) {
+        closeTerm.addEventListener('click', function () {
+          var d = document.getElementById('ide-terminal-drawer');
+          if (d) { d.classList.remove('is-open'); }
+        });
+      }
+      initNavigationAndSmartBar();
+      renderWorkbench('git_clone', false);
+    });
+  })();
+</script>
+<script>window.__SUPERCODE_STATIC_LANG__="fr";window.__SUPERCODE_STATIC_CANONICAL__="https://supercode-ide.github.io/fr/git-client.html";</script>
+<script src="../i18n_extended.js"></script>
+</body>
+</html>

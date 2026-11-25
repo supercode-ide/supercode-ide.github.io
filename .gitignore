@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.py
+*.txt
+!robots.txt
+!app-ads.txt
+!sitemap.txt
+!llms.txt
+
+index-blueprint.html

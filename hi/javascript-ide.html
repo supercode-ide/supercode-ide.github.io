@@ -1,0 +1,2422 @@
+<!DOCTYPE html>
+<html lang="hi" dir="ltr" data-static-lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090A0F">
+  <meta name="color-scheme" content="only dark">
+  <meta name="supported-color-schemes" content="dark">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <title>&#2321;&#2347;&#2364;&#2354;&#2366;&#2311;&#2344; JavaScript IDE &#2324;&#2352; ES2024 &#2352;&#2344;&#2352; Android &#8212; ESM &#2357; Node &#2360;&#2346;&#2379;&#2352;&#2381;&#2335; | SuperCode</title>
+  <meta name="description" content="Android &#2346;&#2352; &#2310;&#2311;&#2360;&#2379;&#2354;&#2375;&#2335;&#2375;&#2337; &#2357;&#2352;&#2381;&#2325;&#2352; &#2325;&#2306;&#2360;&#2379;&#2354; &#2350;&#2375;&#2306; &#2360;&#2381;&#2335;&#2376;&#2306;&#2337;&#2309;&#2354;&#2379;&#2344; JavaScript (ES2024) &#2321;&#2347;&#2364;&#2354;&#2366;&#2311;&#2344; &#2330;&#2354;&#2366;&#2319;&#2306;&#2404; async/await, &#2350;&#2354;&#2381;&#2335;&#2368;-&#2347;&#2364;&#2366;&#2311;&#2354; ES Modules &#2357; CommonJS, JSON &#2311;&#2350;&#2381;&#2346;&#2379;&#2352;&#2381;&#2335;, &#2340;&#2369;&#2352;&#2306;&#2340; &#2354;&#2370;&#2346;-&#2325;&#2367;&#2354; &#2360;&#2369;&#2352;&#2325;&#2381;&#2359;&#2366;, AST &#2321;&#2335;&#2379;-&#2325;&#2306;&#2346;&#2381;&#2354;&#2368;&#2335; &#2324;&#2352; &#2325;&#2381;&#2354;&#2366;&#2313;&#2337; Node.js &#2360;&#2346;&#2379;&#2352;&#2381;&#2335;&#2404;">
+  <meta name="keywords" content="&#2321;&#2347;&#2364;&#2354;&#2366;&#2311;&#2344; JavaScript IDE Android, &#2350;&#2379;&#2348;&#2366;&#2311;&#2354; JS &#2325;&#2379;&#2337;&#2367;&#2306;&#2327; &#2320;&#2346;, mobile me javascript kaise chalaye offline, best javascript compiler app for android in hindi, es2024 node js runner mobile, javascript dsa practice phone, js ts formatter android">
+  <meta name="author" content="Phoenix Global Studios">
+  <meta name="google-play-app" content="app-id=com.phoenixglobal.supercodeeditor">
+
+  <link id="canonical-link" rel="canonical" href="https://supercode-ide.github.io/hi/javascript-ide.html">
+  <link rel="alternate" hreflang="x-default" href="https://supercode-ide.github.io/javascript-ide.html">
+  <link rel="alternate" hreflang="en" href="https://supercode-ide.github.io/javascript-ide.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://supercode-ide.github.io/zh/javascript-ide.html">
+  <link rel="alternate" hreflang="es" href="https://supercode-ide.github.io/es/javascript-ide.html">
+  <link rel="alternate" hreflang="ja" href="https://supercode-ide.github.io/ja/javascript-ide.html">
+  <link rel="alternate" hreflang="de" href="https://supercode-ide.github.io/de/javascript-ide.html">
+  <link rel="alternate" hreflang="fr" href="https://supercode-ide.github.io/fr/javascript-ide.html">
+  <link rel="alternate" hreflang="ko" href="https://supercode-ide.github.io/ko/javascript-ide.html">
+  <link rel="alternate" hreflang="pt" href="https://supercode-ide.github.io/pt/javascript-ide.html">
+  <link rel="alternate" hreflang="hi" href="https://supercode-ide.github.io/hi/javascript-ide.html">
+  <link rel="alternate" hreflang="ru" href="https://supercode-ide.github.io/ru/javascript-ide.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
+  <meta property="og:title" content="&#2321;&#2347;&#2364;&#2354;&#2366;&#2311;&#2344; JavaScript IDE &#2324;&#2352; ES2024 &#2352;&#2344;&#2352; Android &#8212; ESM &#2357; Node &#2360;&#2346;&#2379;&#2352;&#2381;&#2335; | SuperCode">
+  <meta property="og:description" content="Android &#2346;&#2352; &#2310;&#2311;&#2360;&#2379;&#2354;&#2375;&#2335;&#2375;&#2337; &#2357;&#2352;&#2381;&#2325;&#2352; &#2325;&#2306;&#2360;&#2379;&#2354; &#2350;&#2375;&#2306; &#2360;&#2381;&#2335;&#2376;&#2306;&#2337;&#2309;&#2354;&#2379;&#2344; JavaScript (ES2024) &#2321;&#2347;&#2364;&#2354;&#2366;&#2311;&#2344; &#2330;&#2354;&#2366;&#2319;&#2306;&#2404; async/await, &#2350;&#2354;&#2381;&#2335;&#2368;-&#2347;&#2364;&#2366;&#2311;&#2354; ES Modules &#2357; CommonJS, JSON &#2311;&#2350;&#2381;&#2346;&#2379;&#2352;&#2381;&#2335;, &#2340;&#2369;&#2352;&#2306;&#2340; &#2354;&#2370;&#2346;-&#2325;&#2367;&#2354; &#2360;&#2369;&#2352;&#2325;&#2381;&#2359;&#2366;, AST &#2321;&#2335;&#2379;-&#2325;&#2306;&#2346;&#2381;&#2354;&#2368;&#2335; &#2324;&#2352; &#2325;&#2381;&#2354;&#2366;&#2313;&#2337; Node.js &#2360;&#2346;&#2379;&#2352;&#2381;&#2335;&#2404;">
+  <meta property="og:url" content="https://supercode-ide.github.io/hi/javascript-ide.html">
+  <meta property="og:image" content="https://supercode-ide.github.io/favicon.svg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="&#2321;&#2347;&#2364;&#2354;&#2366;&#2311;&#2344; JavaScript IDE &#2324;&#2352; ES2024 &#2352;&#2344;&#2352; Android &#8212; ESM &#2357; Node &#2360;&#2346;&#2379;&#2352;&#2381;&#2335; | SuperCode">
+  <meta name="twitter:description" content="Android &#2346;&#2352; &#2310;&#2311;&#2360;&#2379;&#2354;&#2375;&#2335;&#2375;&#2337; &#2357;&#2352;&#2381;&#2325;&#2352; &#2325;&#2306;&#2360;&#2379;&#2354; &#2350;&#2375;&#2306; &#2360;&#2381;&#2335;&#2376;&#2306;&#2337;&#2309;&#2354;&#2379;&#2344; JavaScript (ES2024) &#2321;&#2347;&#2364;&#2354;&#2366;&#2311;&#2344; &#2330;&#2354;&#2366;&#2319;&#2306;&#2404; async/await, &#2350;&#2354;&#2381;&#2335;&#2368;-&#2347;&#2364;&#2366;&#2311;&#2354; ES Modules &#2357; CommonJS, JSON &#2311;&#2350;&#2381;&#2346;&#2379;&#2352;&#2381;&#2335;, &#2340;&#2369;&#2352;&#2306;&#2340; &#2354;&#2370;&#2346;-&#2325;&#2367;&#2354; &#2360;&#2369;&#2352;&#2325;&#2381;&#2359;&#2366;, AST &#2321;&#2335;&#2379;-&#2325;&#2306;&#2346;&#2381;&#2354;&#2368;&#2335; &#2324;&#2352; &#2325;&#2381;&#2354;&#2366;&#2313;&#2337; Node.js &#2360;&#2346;&#2379;&#2352;&#2381;&#2335;&#2404;">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <script>if(/SamsungBrowser/i.test(navigator.userAgent)){document.documentElement.classList.add('is-samsung');}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "SoftwareApplication",
+        "MobileApplication",
+        "WebApplication"
+      ],
+      "@id": "https://supercode-ide.github.io/#supercode-app",
+      "name": "Code Editor: SuperCode IDE",
+      "alternateName": [
+        "JavaScript IDE for Android",
+        "Offline JS Runner App",
+        "Mobile ES2024 & Node Module Studio"
+      ],
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Standalone ES2024 JavaScript & Module Runner for Android",
+      "inLanguage": "hi",
+      "fileSize": "40.2MB",
+      "softwareVersion": "1.5.503",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor"
+      ],
+      "potentialAction": [
+        {
+          "@type": "InstallAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
+            "actionPlatform": [
+              "http://schema.org/AndroidPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          }
+        },
+        {
+          "@type": "ViewAction",
+          "name": "\u0910\u092a \u0917\u093e\u0907\u0921",
+          "target": [
+            "https://supercode-ide.github.io/tutorial/",
+            "android-app://com.phoenixglobal.supercodeeditor/https/supercode-ide.github.io/tutorial"
+          ]
+        }
+      ],
+      "identifier": "com.phoenixglobal.supercodeeditor",
+      "url": "https://supercode-ide.github.io/hi/javascript-ide.html",
+      "screenshot": "https://supercode-ide.github.io/favicon.svg",
+      "author": {
+        "@type": "Organization",
+        "name": "Phoenix Global Studios",
+        "url": "https://supercode-ide.github.io/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "66"
+      },
+      "featureList": [
+        "\u092a\u0942\u0930\u094d\u0923 ES6\u2013ES2024 \u0938\u093f\u0902\u091f\u0948\u0915\u094d\u0938 \u0915\u094b \u0911\u092b\u093c\u0932\u093e\u0907\u0928 \u0938\u092a\u094b\u0930\u094d\u091f \u0915\u0930\u0928\u0947 \u0935\u093e\u0932\u093e \u0938\u092e\u0930\u094d\u092a\u093f\u0924 \u0906\u0907\u0938\u094b\u0932\u0947\u091f\u0947\u0921 \u092c\u0948\u0915\u0917\u094d\u0930\u093e\u0909\u0902\u0921 JavaScript \u0935\u0930\u094d\u0915\u0930 \u0930\u0928\u091f\u093e\u0907\u092e",
+        ".js, .mjs, .cjs \u0914\u0930 .json \u092b\u093c\u093e\u0907\u0932\u094b\u0902 \u092e\u0947\u0902 \u092e\u0932\u094d\u091f\u0940-\u092b\u093c\u093e\u0907\u0932 ES Modules (import/export) \u0935 CommonJS (require/module.exports)",
+        "\u0906\u0907\u0938\u094b\u0932\u0947\u091f\u0947\u0921 \u0935\u0930\u094d\u0915\u0930 \u0914\u0930 15s CPU \u0935\u0949\u091a\u0921\u0949\u0917 \u0915\u0947 \u091c\u093c\u0930\u093f\u090f <1ms \u091c\u093c\u0940\u0930\u094b-\u092b\u093c\u094d\u0930\u0940\u091c\u093c \u0907\u0928\u092b\u093c\u093e\u0907\u0928\u093e\u0907\u091f-\u0932\u0942\u092a \u0938\u0941\u0930\u0915\u094d\u0937\u093e",
+        "\u0938\u094d\u091f\u094d\u0930\u0915\u094d\u091a\u0930\u094d\u0921 \u0915\u0902\u0938\u094b\u0932 \u0906\u0909\u091f\u092a\u0941\u091f (log, info, warn, error, timers) \u0914\u0930 \u0932\u093e\u0907\u0935 \u0907\u0902\u091f\u0930\u0948\u0915\u094d\u091f\u093f\u0935 \u092a\u094d\u0930\u0949\u092e\u094d\u092a\u094d\u091f stdin",
+        "\u0911\u092b\u093c\u0932\u093e\u0907\u0928 AST \u0911\u091f\u094b-\u0915\u0902\u092a\u094d\u0932\u0940\u091f, JS/TS/JSON \u0935\u0928-\u091f\u0948\u092a \u092b\u093c\u0949\u0930\u094d\u092e\u0947\u091f\u0930 \u0914\u0930 21-\u0915\u0940 JS/TS \u0938\u093f\u0902\u092c\u0932 \u0915\u0940\u092c\u094b\u0930\u094d\u0921 \u092a\u094d\u0930\u094b\u092b\u093c\u093e\u0907\u0932",
+        "\u0938\u0930\u094d\u0935\u0930 OS/HTTP \u092e\u0949\u0921\u094d\u092f\u0942\u0932 \u0907\u092e\u094d\u092a\u094b\u0930\u094d\u091f \u0915\u0930\u0928\u0947 \u092a\u0930 \u0911\u091f\u094b\u092e\u0948\u091f\u093f\u0915 \u0915\u094d\u0932\u093e\u0909\u0921 Node.js \u092e\u0932\u094d\u091f\u0940-\u092e\u0949\u0921\u094d\u092f\u0942\u0932 \u092c\u0902\u0921\u0932\u0930"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://supercode-ide.github.io/hi/javascript-ide.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SuperCode IDE",
+          "item": "https://supercode-ide.github.io/hi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "JavaScript IDE",
+          "item": "https://supercode-ide.github.io/hi/javascript-ide.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "SuperCode \u092e\u0947\u0902 \u092e\u0949\u0921\u094d\u092f\u0942\u0932\u0930 JavaScript \u0915\u0948\u0938\u0947 \u092c\u0928\u093e\u090f\u0902 \u0914\u0930 \u091f\u0947\u0938\u094d\u091f \u0915\u0930\u0947\u0902",
+      "description": "JS \u092e\u0947\u0902 LeetCode \u092a\u094d\u0930\u0948\u0915\u094d\u091f\u093f\u0938, \u092e\u0949\u0921\u094d\u092f\u0942\u0932\u0930 \u092f\u0942\u091f\u093f\u0932\u093f\u091f\u0940\u091c\u093c, API \u092a\u0947\u0932\u094b\u0921 \u092e\u0949\u0921\u0932\u093f\u0902\u0917 \u0914\u0930 \u092b\u093c\u094d\u0930\u0902\u091f\u090f\u0902\u0921 \u0932\u0949\u091c\u093f\u0915 \u091f\u0947\u0938\u094d\u091f\u093f\u0902\u0917 \u0915\u0947 \u0932\u093f\u090f \u0906\u0926\u0930\u094d\u0936\u0964",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "\u0938\u094d\u091f\u0948\u0902\u0921\u0905\u0932\u094b\u0928 .js, .mjs, .cjs \u092f\u093e .json \u092b\u093c\u093e\u0907\u0932\u0947\u0902 \u092c\u0928\u093e\u090f\u0902",
+          "text": "\u0938\u0940\u0927\u0947 \u0936\u0941\u0926\u094d\u0927 JavaScript \u092f\u093e \u092e\u0949\u0921\u094d\u092f\u0942\u0932\u0930 \u092a\u0948\u0915\u0947\u091c \u0932\u093f\u0916\u0947\u0902 \u2014 \u0915\u093f\u0938\u0940 index.html \u0930\u0948\u092a\u0930 \u0915\u0940 \u091c\u093c\u0930\u0942\u0930\u0924 \u0928\u0939\u0940\u0902\u0964",
+          "url": "https://supercode-ide.github.io/hi/javascript-ide.html#step1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "\u0938\u093e\u092b\u093c Async \u0914\u0930 Arrow \u092b\u093c\u0902\u0915\u094d\u0936\u0928\u094d\u0938 \u0932\u093f\u0916\u0947\u0902",
+          "text": "\u0911\u092b\u093c\u0932\u093e\u0907\u0928 AST \u0911\u091f\u094b-\u0915\u0902\u092a\u094d\u0932\u0940\u091f \u0914\u0930 \u0935\u0928-\u091f\u0948\u092a JS \u092b\u093c\u0949\u0930\u094d\u092e\u0947\u091f\u093f\u0902\u0917 \u0915\u0947 \u0938\u093e\u0925 1-\u091f\u0948\u092a \u092e\u0947\u0902 =>, ?., === \u0914\u0930 \u091f\u0947\u092e\u094d\u092a\u0932\u0947\u091f-\u0932\u093f\u091f\u0930\u0932 \u092c\u0948\u0915\u091f\u093f\u0915\u094d\u0938 \u0915\u093e \u0909\u092a\u092f\u094b\u0917 \u0915\u0930\u0947\u0902\u0964",
+          "url": "https://supercode-ide.github.io/hi/javascript-ide.html#step2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "\u0906\u0907\u0938\u094b\u0932\u0947\u091f\u0947\u0921 \u0935\u0930\u094d\u0915\u0930 \u0915\u0902\u0938\u094b\u0932 \u092e\u0947\u0902 \u0924\u0941\u0930\u0902\u0924 \u0930\u0928 \u0915\u0930\u0947\u0902",
+          "text": "\u0932\u094b\u0915\u0932 \u092e\u0949\u0921\u094d\u092f\u0942\u0932\u094d\u0938 \u0932\u093f\u0902\u0915 \u0915\u0930\u0928\u0947, \u0938\u094d\u091f\u094d\u0930\u0915\u094d\u091a\u0930\u094d\u0921 \u0915\u0902\u0938\u094b\u0932 \u0906\u0909\u091f\u092a\u0941\u091f \u0926\u0947\u0916\u0928\u0947 \u0914\u0930 \u092e\u093f\u0932\u0940\u0938\u0947\u0915\u0902\u0921 \u0930\u0928\u091f\u093e\u0907\u092e \u091c\u093e\u0902\u091a\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f Run \u0926\u092c\u093e\u090f\u0902\u0964",
+          "url": "https://supercode-ide.github.io/hi/javascript-ide.html#step3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "\u0932\u093e\u0907\u0935 DOM \u092a\u094d\u0930\u0940\u0935\u094d\u092f\u0942 \u092a\u0930 \u0938\u094d\u0935\u093f\u091a \u0915\u0930\u0947\u0902 \u092f\u093e Git \u092a\u0930 \u092a\u0941\u0936 \u0915\u0930\u0947\u0902",
+          "text": "\u092a\u0942\u0930\u093e \u092c\u094d\u0930\u093e\u0909\u091c\u093c\u0930 DOM/Canvas/WASM \u091a\u093e\u0939\u093f\u090f? \u0905\u092a\u0928\u0940 \u0938\u094d\u0915\u094d\u0930\u093f\u092a\u094d\u091f\u094d\u0938 \u0915\u094b Web Studio \u092e\u0947\u0902 .html \u092b\u093c\u093e\u0907\u0932 \u0938\u0947 \u091c\u094b\u0921\u093c\u0947\u0902, \u092f\u093e \u0938\u0940\u0927\u0947 \u0935\u093f\u091c\u093c\u0941\u0905\u0932 Git \u0938\u0947 \u0915\u092e\u093f\u091f \u0915\u0930\u0947\u0902\u0964",
+          "url": "https://supercode-ide.github.io/hi/javascript-ide.html#step4"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://supercode-ide.github.io/hi/javascript-ide.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "\u0915\u094d\u092f\u093e \u092e\u0948\u0902 \u092c\u093f\u0928\u093e HTML \u092a\u0947\u091c \u092c\u0928\u093e\u090f Android \u092a\u0930 \u0938\u0940\u0927\u0947 .js \u092b\u093c\u093e\u0907\u0932 \u091a\u0932\u093e \u0938\u0915\u0924\u093e \u0939\u0942\u0902?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "\u091c\u0940 \u0939\u093e\u0902! \u0915\u093f\u0938\u0940 \u092d\u0940 .js, .mjs \u092f\u093e .cjs \u092b\u093c\u093e\u0907\u0932 \u092a\u0930 Run \u0926\u092c\u093e\u0924\u0947 \u0939\u0940 SuperCode \u0915\u093e \u0938\u094d\u091f\u0948\u0902\u0921\u0905\u0932\u094b\u0928 JavaScript \u0915\u0902\u0938\u094b\u0932 \u0924\u0941\u0930\u0902\u0924 \u0911\u092b\u093c\u0932\u093e\u0907\u0928 \u091a\u093e\u0932\u0942 \u0939\u094b \u091c\u093e\u0924\u093e \u0939\u0948\u0964"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "\u0915\u094d\u092f\u093e \u092e\u0948\u0902 \u0905\u092a\u0928\u0947 JavaScript \u0915\u094b\u0921 \u0915\u094b \u0915\u0908 \u092b\u093c\u093e\u0907\u0932\u094b\u0902 \u092e\u0947\u0902 \u092c\u093e\u0902\u091f\u0915\u0930 import/export \u092f\u093e require() \u0915\u0930 \u0938\u0915\u0924\u093e \u0939\u0942\u0902?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "\u0939\u093e\u0902\u0964 ES Modules (import / export), CommonJS (require / module.exports) \u0914\u0930 .json \u0907\u092e\u094d\u092a\u094b\u0930\u094d\u091f\u094d\u0938 \u0906\u092a\u0915\u0947 \u0932\u094b\u0915\u0932 \u092a\u094d\u0930\u094b\u091c\u0947\u0915\u094d\u091f \u092b\u093c\u093e\u0907\u0932\u094b\u0902 \u0914\u0930 \u092c\u093f\u0928\u093e \u0938\u0947\u0935 \u0915\u093f\u090f \u091f\u0948\u092c\u094d\u0938 \u092e\u0947\u0902 \u092a\u0942\u0930\u0940 \u0924\u0930\u0939 \u0915\u093e\u092e \u0915\u0930\u0924\u0947 \u0939\u0948\u0902\u0964"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "\u0915\u094d\u092f\u093e \u0917\u0932\u0924\u0940 \u0938\u0947 \u0932\u0917\u093e while(true) \u0932\u0942\u092a \u090f\u0921\u093f\u091f\u0930 \u0915\u094b \u0939\u0948\u0902\u0917 \u0915\u0930\u0947\u0917\u093e \u092f\u093e \u0905\u0928\u0938\u0947\u0935\u094d\u0921 \u0915\u094b\u0921 \u092e\u093f\u091f\u093e \u0926\u0947\u0917\u093e?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "\u0915\u092d\u0940 \u0928\u0939\u0940\u0902\u0964 \u0938\u092d\u0940 \u0938\u094d\u0915\u094d\u0930\u093f\u092a\u094d\u091f\u094d\u0938 15-\u0938\u0947\u0915\u0902\u0921 \u0935\u0949\u091a\u0921\u0949\u0917 \u0914\u0930 \u0906\u0909\u091f\u092a\u0941\u091f-\u092b\u093c\u094d\u0932\u0921 \u0917\u093e\u0930\u094d\u0921 \u0938\u0947 \u0938\u0941\u0930\u0915\u094d\u0937\u093f\u0924 \u0905\u0932\u0917 \u092c\u0948\u0915\u0917\u094d\u0930\u093e\u0909\u0902\u0921 \u0935\u0930\u094d\u0915\u0930 \u092e\u0947\u0902 \u091a\u0932\u0924\u0940 \u0939\u0948\u0902, \u091c\u094b UI \u0925\u094d\u0930\u0947\u0921 \u0915\u094b \u091b\u0941\u090f \u092c\u093f\u0928\u093e \u0905\u0928\u0902\u0924 \u0932\u0942\u092a\u094d\u0938 \u0915\u094b 1 \u092e\u093f\u0932\u0940\u0938\u0947\u0915\u0902\u0921 \u0915\u0947 \u092d\u0940\u0924\u0930 \u092c\u0902\u0926 \u0915\u0930 \u0926\u0947\u0924\u093e \u0939\u0948\u0964"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "\u0905\u0917\u0930 \u092e\u0941\u091d\u0947 HTML, CSS \u0914\u0930 WebAssembly \u0915\u0947 \u0938\u093e\u0925 \u0935\u093f\u091c\u093c\u0941\u0905\u0932 \u0935\u0947\u092c\u0938\u093e\u0907\u091f \u092c\u0928\u093e\u0928\u0940 \u0939\u094b \u0924\u094b?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SuperCode \u092e\u0947\u0902 \u0926\u094b\u0928\u094b\u0902 \u092e\u094c\u091c\u0942\u0926 \u0939\u0948\u0902! \u0936\u0941\u0926\u094d\u0927 JS/Node \u092e\u0949\u0921\u094d\u092f\u0942\u0932 \u0914\u0930 \u090f\u0932\u094d\u0917\u094b\u0930\u093f\u0926\u092e \u0915\u0947 \u0932\u093f\u090f \u0938\u094d\u091f\u0948\u0902\u0921\u0905\u0932\u094b\u0928 JavaScript IDE \u0907\u0938\u094d\u0924\u0947\u092e\u093e\u0932 \u0915\u0930\u0947\u0902, \u0914\u0930 \u0932\u093e\u0907\u0935 HTTP DOM \u0930\u0947\u0902\u0921\u0930\u093f\u0902\u0917, \u0930\u093f\u0938\u094d\u092a\u0949\u0928\u094d\u0938\u093f\u0935 \u0935\u094d\u092f\u0942\u092a\u094b\u0930\u094d\u091f \u0935 Web DevTools \u0915\u0947 \u0932\u093f\u090f Full-Stack Web & PHP Studio \u0916\u094b\u0932\u0947\u0902\u0964"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <style>
+    /* ==========================================================================
+       SUPERCODE V3.1 MASTER FUSION DESIGN SYSTEM (PHI = 1.618 · OBSIDIAN & GOLD)
+       Samsung Internet Night-Mode Immune · Zero White-Alpha Inversion Architecture
+       ========================================================================== */
+    :root {
+      color-scheme: only dark;
+      forced-color-adjust: none;
+      --phi: 1.618;
+      --bg: #090A0F;
+      --bg-alt: #0D1018;
+      --surface: #141824;
+      --card: #171C2A;
+      --card-hover: #1E2436;
+      --well: #0E111A;
+      --elev: #1A2030;
+      --elev-hover: #22293D;
+      --line: #262D40;
+      --line-strong: #37415C;
+
+      --fg: #F5F7FA;
+      --fg-2: #C2CAD9;
+      --fg-3: #9BA5BA;
+      --fg-4: #727D95;
+
+      --gold: #F5C451;
+      --gold-border: #8C6F26;
+      --gold-border-hover: #C89E36;
+      --gold-soft: #241F14;
+
+      --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Noto Sans SC", "Noto Sans JP", "Noto Sans KR", system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", "SF Mono", "Cascadia Code", ui-monospace, Menlo, Consolas, monospace;
+
+      --text-xs: 0.75rem;
+      --text-sm: 0.875rem;
+      --text-base: 1rem;
+      --text-lg: clamp(1.06rem, 1.00rem + 0.28vw, 1.24rem);
+      --text-xl: clamp(1.30rem, 1.18rem + 0.45vw, 1.618rem);
+      --text-2xl: clamp(1.58rem, 3.6vw, 2.55rem);
+      --text-display: clamp(1.88rem, 4.8vw, 3.55rem);
+      --text-code: clamp(0.78rem, 0.75rem + 0.14vw, 0.845rem);
+
+      --s-1: 8px;
+      --s-2: 16px;
+      --s-3: 24px;
+      --s-4: 40px;
+      --s-5: 64px;
+      --s-6: 100px;
+
+      --r-sm: 8px;
+      --r-md: 10px;
+      --r-lg: 16px;
+
+      --topbar-h: 56px;
+      --gutter: clamp(16px, 4.2vw, 40px);
+      --maxw: 1200px;
+      --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+
+    html.is-samsung {
+      --surface: #171D2C;
+      --card: #1C2336;
+      --card-hover: #242D44;
+      --elev: #20273B;
+      --elev-hover: #2A334C;
+      --line: #333D58;
+      --line-strong: #485578;
+      --fg-2: #D0D7E5;
+      --fg-3: #B0BACE;
+      --fg-4: #8893AB;
+    }
+
+    @media (min-width: 1024px) {
+      :root { --topbar-h: 64px; }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--topbar-h) + 20px);
+      background: var(--bg);
+      color: var(--fg-3);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.618;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    html[lang^="zh"] body, html[lang="ja"] body, html[lang="ko"] body { line-height: 1.72; }
+
+    body {
+      min-width: 320px;
+      background: var(--bg);
+      color: var(--fg-3);
+      overflow-x: hidden;
+    }
+
+    img, svg { display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; color: inherit; cursor: pointer; background: none; border: none; }
+    h1, h2, h3, h4 { color: var(--fg); font-weight: 600; text-wrap: balance; }
+    p { text-wrap: pretty; }
+
+    .container {
+      width: 100%;
+      max-width: calc(var(--maxw) + var(--gutter) * 2);
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+    }
+    .mono { font-family: var(--font-mono); }
+
+    /* ==================== STYLE D: OBSIDIAN WARM-GOLD BUTTONS ==================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      height: 42px;
+      padding: 0 18px;
+      border-radius: var(--r-md);
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: -0.008em;
+      line-height: 1;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: border-color 0.2s var(--ease), background-color 0.2s var(--ease), transform 0.18s var(--ease), color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+    }
+    .btn:active { transform: scale(0.975); }
+
+    .btn--gold {
+      background: linear-gradient(180deg, #1E2230 0%, #131620 100%);
+      border: 1px solid var(--gold-border);
+      box-shadow: 0 8px 24px -10px rgba(245, 196, 81, 0.24);
+      color: var(--fg);
+    }
+    .btn--gold:hover {
+      background: linear-gradient(180deg, #252A3B 0%, #171B27 100%);
+      border-color: var(--gold-border-hover);
+      box-shadow: 0 10px 28px -8px rgba(245, 196, 81, 0.34);
+      transform: translateY(-1px);
+    }
+
+    .btn--ghost {
+      background: var(--elev);
+      border: 1px solid var(--line-strong);
+      color: var(--fg-2);
+      font-weight: 500;
+    }
+    .btn--ghost:hover {
+      background: var(--elev-hover);
+      border-color: #4D5B80;
+      color: var(--fg);
+    }
+
+    .btn--sm { height: 34px; padding: 0 12px; border-radius: 8px; font-size: 0.8125rem; gap: 6px; }
+    .gp-prism { width: 15px; height: 15px; flex: none; }
+    .icon-ne { width: 13px; height: 13px; flex: none; opacity: 0.82; transition: transform 0.2s var(--ease); }
+    .btn--ghost:hover .icon-ne { transform: translate(1.5px, -1.5px); opacity: 1; }
+
+    .link-arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--fg-2);
+      font-size: var(--text-sm);
+      font-weight: 500;
+      transition: color 0.2s var(--ease);
+    }
+    .link-arrow svg { width: 14px; height: 14px; transition: transform 0.22s var(--ease); }
+    .link-arrow:hover { color: var(--fg); }
+    .link-arrow:hover svg { transform: translateX(3px); }
+
+    /* ==================== TOPBAR & UNIVERSAL 14-PAGE DRAWER ==================== */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 70;
+      height: var(--topbar-h);
+      background: rgba(9, 10, 15, 0.90);
+      backdrop-filter: saturate(1.6) blur(18px);
+      -webkit-backdrop-filter: saturate(1.6) blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar__inner {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      height: 100%;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      flex: none;
+      color: var(--fg);
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+    }
+    .brand__icon {
+      display: grid;
+      place-items: center;
+      width: 29px;
+      height: 29px;
+      border-radius: 8px;
+      background: linear-gradient(180deg, #1E2230 0%, #12151E 100%);
+      border: 1px solid var(--gold-border);
+    }
+    .brand__icon svg { width: 18px; height: 18px; }
+    .brand__tag {
+      font-family: var(--font-mono);
+      font-size: 9.5px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      color: var(--fg-2);
+      padding: 1px 4px;
+      border: 1px solid var(--line-strong);
+      border-radius: 4px;
+      line-height: 1.35;
+    }
+    @media (max-width: 374px) {
+      .brand__tag { display: none; }
+    }
+
+    .nav {
+      display: none;
+      margin-inline: auto;
+      align-items: center;
+      gap: 1px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .nav::-webkit-scrollbar { display: none; }
+    .nav a {
+      padding: 5px 8px;
+      border-radius: 7px;
+      font-size: 0.79rem;
+      color: var(--fg-2);
+      white-space: nowrap;
+      transition: color 0.2s var(--ease), background-color 0.2s var(--ease);
+    }
+    .nav a:hover { color: var(--fg); background: var(--elev); }
+    .nav a.is-current {
+      color: var(--fg);
+      background: var(--gold-soft);
+      box-shadow: inset 0 0 0 1px var(--gold-border);
+    }
+
+    .topbar__actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-left: auto;
+      flex: none;
+    }
+
+    .btn-lang-trigger {
+      height: 32px;
+      padding: 0 9px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      border-radius: 8px;
+      background: var(--elev);
+      border: 1px solid var(--line-strong);
+      color: var(--fg-2);
+      font-size: 0.74rem;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: color 0.2s var(--ease), border-color 0.2s var(--ease), background-color 0.2s var(--ease);
+    }
+    .btn-lang-trigger:hover { color: var(--fg); background: var(--elev-hover); border-color: #4D5B80; }
+    .lang-globe-svg { width: 13px; height: 13px; color: var(--fg-2); flex: none; }
+    .lang-chevron { font-size: 9px; color: var(--fg-4); }
+
+    .topbar__play { display: none; }
+
+    .btn-home-icon, .menu-btn {
+      display: grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--elev);
+      border: 1px solid var(--line-strong);
+      color: var(--fg-2);
+      flex: none;
+      transition: color 0.2s var(--ease), border-color 0.2s var(--ease), background-color 0.2s var(--ease), transform 0.18s var(--ease);
+    }
+    .btn-home-icon:hover, .menu-btn:hover {
+      color: var(--gold);
+      border-color: var(--gold-border);
+      background: var(--gold-soft);
+    }
+    .btn-home-icon:active, .menu-btn:active { transform: scale(0.95); }
+    .menu-btn svg { width: 16px; height: 16px; }
+    .menu-btn .i-close { display: none; }
+    .menu-btn[aria-expanded="true"] {
+      color: var(--gold);
+      border-color: var(--gold-border-hover);
+      background: var(--gold-soft);
+    }
+    .menu-btn[aria-expanded="true"] .i-menu { display: none; }
+    .menu-btn[aria-expanded="true"] .i-close { display: block; }
+
+    @media (min-width: 640px) {
+      .topbar__actions { gap: 8px; }
+      .btn-lang-trigger { height: 34px; padding: 0 11px; font-size: var(--text-xs); }
+      .btn-home-icon, .menu-btn { width: 34px; height: 34px; }
+    }
+    @media (min-width: 820px) {
+      .topbar__play { display: inline-flex; }
+    }
+    @media (min-width: 1220px) {
+      .nav { display: flex; }
+      .topbar__actions { margin-left: 0; }
+    }
+
+    /* Universal 14-Page Categorized Slide-Down Mega-Drawer (Works on Mobile & Desktop!) */
+    .menu-drawer {
+      position: fixed;
+      top: var(--topbar-h);
+      left: 0;
+      right: 0;
+      z-index: 69;
+      max-height: calc(100dvh - var(--topbar-h));
+      overflow-y: auto;
+      background: #0D1018;
+      border-bottom: 1px solid var(--line-strong);
+      box-shadow: 0 28px 64px rgba(0, 0, 0, 0.86);
+    }
+    .menu-drawer[hidden] { display: none; }
+    .menu-drawer__inner {
+      padding-block: 18px calc(36px + env(safe-area-inset-bottom, 0px));
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 20px;
+    }
+    .drawer-group__title {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--line);
+    }
+    .drawer-group__list {
+      display: grid;
+      gap: 4px;
+    }
+    .menu-drawer__link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 11px;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      color: var(--fg-2);
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: all 0.18s var(--ease);
+    }
+    .menu-drawer__link:hover {
+      color: var(--fg);
+      background: var(--elev);
+      border-color: var(--line);
+    }
+    .menu-drawer__link.is-current {
+      color: var(--fg);
+      background: var(--gold-soft);
+      border-color: var(--gold-border);
+    }
+    .menu-drawer__link span.mono { font-size: 11px; color: var(--fg-4); flex: none; }
+    .menu-drawer__link.is-current span.mono { color: var(--gold); }
+
+    @media (min-width: 820px) {
+      .menu-drawer__inner {
+        grid-template-columns: 1fr 1.35fr 1.1fr;
+        gap: 28px;
+        padding-block: 24px 30px;
+      }
+    }
+
+    /* ==================== SECTION 01: EDITORIAL HERO & UNIFIED IDE WORKBENCH ==================== */
+    .hero {
+      position: relative;
+      isolation: isolate;
+      padding-top: var(--s-4);
+      padding-bottom: var(--s-5);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: calc(var(--topbar-h) * -1) 0 auto 0;
+      height: 660px;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        radial-gradient(48% 50% at 72% 0%, rgba(245, 196, 81, 0.055), transparent 72%);
+    }
+
+    .hero__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--s-4);
+    }
+    .hero__copy { min-width: 0; }
+
+    .trust-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      max-width: 100%;
+      padding: 4px 12px 4px 5px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--fg-2);
+      font-size: var(--text-xs);
+      letter-spacing: 0.015em;
+    }
+    .trust-pill__score {
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--gold-soft);
+      border: 1px solid var(--gold-border);
+      color: var(--gold);
+      font-weight: 600;
+      flex: none;
+      font-variant-numeric: tabular-nums;
+    }
+    .trust-pill span:last-child {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .hero-h1 {
+      margin-top: 20px;
+      font-size: var(--text-display);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.13;
+      color: var(--fg);
+    }
+    html[lang^="zh"] .hero-h1, html[lang="ja"] .hero-h1, html[lang="ko"] .hero-h1 {
+      letter-spacing: -0.015em;
+      line-height: 1.21;
+    }
+    /* Solid foreground glyph tint (100% immune to Samsung Browser background-clip dark inversion!) */
+    .hero-h1 .text-gradient {
+      color: #FFF4D2;
+      background: none;
+      -webkit-text-fill-color: currentColor;
+    }
+
+    .hero-lead {
+      margin-top: 16px;
+      max-width: 41em;
+      font-size: var(--text-lg);
+      line-height: 1.62;
+      color: var(--fg-2);
+    }
+    .hero-lead strong { color: var(--fg); font-weight: 600; }
+
+    .hero__cta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .specs {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      min-width: 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding-block: 14px;
+      gap: 8px;
+    }
+    .spec {
+      min-width: 0;
+      padding-left: 10px;
+      border-left: 1px solid var(--line);
+    }
+    .spec:first-child { padding-left: 0; border-left: 0; }
+    .spec dt {
+      color: var(--fg);
+      font-size: clamp(1.00rem, 2.4vw, 1.42rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .spec dt small { font-size: 0.64em; font-weight: 500; color: var(--fg-2); margin-left: 2px; }
+    .spec dd {
+      margin-top: 3px;
+      font-size: 11px;
+      color: var(--fg-3);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    @media (min-width: 1024px) {
+      .hero { padding-top: var(--s-5); padding-bottom: var(--s-6); }
+      .hero__grid {
+        grid-template-columns: 1.618fr 1fr;
+        gap: var(--s-5);
+        align-items: end;
+      }
+      .specs {
+        grid-template-columns: 1fr 1fr;
+        padding-block: 0;
+        border-bottom: 0;
+        gap: 0;
+      }
+      .spec {
+        padding: 18px 0;
+        border-left: 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .spec:nth-child(even) {
+        padding-left: 24px;
+        border-left: 1px solid var(--line);
+      }
+      .spec dd { font-size: var(--text-xs); margin-top: 4px; }
+    }
+
+    /* ==================== STUDIO IDE WORKBENCH (100% UNIFIED ACROSS ALL 14 PAGES) ==================== */
+    .wb-caption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: var(--s-4);
+    }
+    .wb-caption__hint { display: none; font-size: var(--text-xs); color: var(--fg-3); }
+    @media (min-width: 768px) { .wb-caption__hint { display: block; } }
+    @media (min-width: 1024px) { .wb-caption { margin-top: var(--s-5); } }
+
+    .ide-workbench {
+      margin-top: 16px;
+      border: 1px solid var(--line-strong);
+      border-radius: 14px;
+      background: var(--well);
+      overflow: hidden;
+      box-shadow:
+        inset 0 1px 0 #262E44,
+        0 32px 72px -24px rgba(0, 0, 0, 0.82);
+    }
+    .wb-titlebar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      height: 44px;
+      padding: 0 10px 0 16px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+    }
+    .wb-dots { display: flex; gap: 6px; flex: none; }
+    .wb-dots i { width: 10px; height: 10px; border-radius: 50%; background: #282C38; }
+    .wb-title {
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--fg-3);
+    }
+    .wb-run {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      flex: none;
+      height: 30px;
+      padding: 0 12px;
+      border-radius: 7px;
+      background: linear-gradient(180deg, #1E222E 0%, #131620 100%);
+      border: 1px solid var(--gold-border);
+      box-shadow: inset 0 1px 0 rgba(255, 241, 118, 0.12);
+      color: var(--fg);
+      font-size: 12.5px;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: border-color 0.2s var(--ease), background-color 0.2s var(--ease);
+    }
+    .wb-run:hover { border-color: var(--gold-border-hover); background: #222634; }
+    .wb-run.is-running { opacity: 0.78; }
+    .wb-run__tri { color: var(--gold); font-size: 10px; }
+
+    .wb-tabs {
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+      background: #0E1017;
+      border-bottom: 1px solid var(--line);
+    }
+    .wb-tabs::-webkit-scrollbar { display: none; }
+    .ide-tab {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      flex: none;
+      height: 38px;
+      padding: 0 15px;
+      border-right: 1px solid var(--line);
+      color: var(--fg-3);
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      white-space: nowrap;
+      transition: color 0.18s var(--ease), background-color 0.18s var(--ease);
+    }
+    .ide-tab:hover { color: var(--fg-2); }
+    .ide-tab i { width: 6px; height: 6px; border-radius: 50%; background: var(--fg-4); }
+    .ide-tab.active { background: var(--well); color: var(--fg); }
+    .ide-tab.active i { background: var(--gold); }
+    .ide-tab.active::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .wb-body { display: grid; grid-template-columns: minmax(0, 1fr); }
+    .wb-explorer {
+      display: none;
+      padding: 12px 8px;
+      background: #0E1017;
+      border-right: 1px solid var(--line);
+    }
+    .wb-explorer__head {
+      padding: 4px 10px 10px;
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--fg-4);
+      text-transform: uppercase;
+    }
+    .wb-folder {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px 6px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--fg-2);
+    }
+    .wb-file {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      width: 100%;
+      padding: 5px 10px 5px 22px;
+      border-radius: 6px;
+      color: var(--fg-3);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      text-align: left;
+      transition: color 0.18s var(--ease), background-color 0.18s var(--ease);
+    }
+    .wb-file:hover { color: var(--fg); background: var(--elev); }
+    .wb-file.active { color: var(--fg); background: var(--elev-hover); }
+    .wb-file b { width: 32px; font-size: 10px; font-weight: 500; color: var(--fg-4); flex: none; }
+    .wb-file.active b { color: var(--gold); }
+    .wb-file span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+    .ide-editor-body {
+      padding: 16px 12px;
+      background: var(--well);
+      font-family: var(--font-mono);
+      font-size: var(--text-code);
+      line-height: 1.65;
+      min-height: 215px;
+      max-height: 320px;
+      overflow: auto;
+    }
+    .code-line { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 12px; align-items: baseline; padding: 1px 4px; border-radius: 4px; }
+    .code-line.active-line { background: #151926; }
+    .ln { color: var(--fg-4); text-align: right; user-select: none; font-size: 0.72rem; }
+    .code-content { white-space: pre-wrap; word-break: break-word; color: #DCE1EA; }
+    .tok-kw { color: #F472B6; font-weight: 500; }
+    .tok-fn { color: #67E8F9; }
+    .tok-str { color: #86EFAC; }
+    .tok-num { color: #FDE047; }
+    .tok-cmt { color: #7C88A1; font-style: italic; }
+
+    .ide-terminal {
+      background: #090B10;
+      font-family: var(--font-mono);
+      font-size: var(--text-code);
+      line-height: 1.6;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      padding: 0 16px;
+      transition: max-height 0.32s var(--ease), opacity 0.24s var(--ease), padding 0.24s var(--ease);
+    }
+    .ide-terminal.is-open {
+      max-height: 240px;
+      opacity: 1;
+      padding: 12px 16px 14px;
+      border-top: 1px solid var(--line);
+      overflow-y: auto;
+    }
+    .term-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      color: var(--fg-3);
+      font-size: 11px;
+      margin-bottom: 8px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--line);
+    }
+    .term-header-right { display: inline-flex; align-items: center; gap: 10px; }
+    .term-exec-badge { color: var(--fg-2); }
+    .term-exec-badge.done { color: var(--gold); }
+    .btn-term-close {
+      width: 22px; height: 22px; border-radius: 5px;
+      background: var(--elev); border: 1px solid var(--line); color: var(--fg-2);
+      font-size: 11px; display: grid; place-items: center;
+    }
+    .term-stream { white-space: pre-wrap; word-break: break-word; color: #C9D1DD; }
+    .term-line-item { display: block; }
+    .term-prompt { color: var(--gold); font-weight: 600; }
+    .term-info { color: #93C5FD; }
+    @keyframes blinkCursor { 50% { opacity: 0; } }
+    .term-cursor { display: inline-block; color: var(--fg-2); margin-left: 4px; animation: blinkCursor 1s steps(1) infinite; }
+
+    .wb-statusbar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      height: 28px;
+      padding: 0 16px;
+      border-top: 1px solid var(--line);
+      background: var(--surface);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--fg-3);
+    }
+    .wb-statusbar__dot { display: inline-flex; align-items: center; gap: 6px; color: var(--fg-2); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .wb-statusbar__dot i { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex: none; }
+    .wb-statusbar__right { margin-left: auto; display: flex; gap: 12px; flex: none; }
+
+    @media (min-width: 1024px) {
+      .wb-body { grid-template-columns: 220px minmax(0, 1fr); }
+      .wb-explorer { display: block; }
+      .ide-editor-body { min-height: 265px; max-height: 350px; padding: 18px 16px; }
+    }
+
+    /* ==================== SECTION HEADERS & RHYTHM ==================== */
+    .section {
+      padding-block: var(--s-5);
+      border-top: 1px solid var(--line);
+    }
+    .section--alt { background: var(--bg-alt); }
+
+    .sec-index {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: var(--s-3);
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      letter-spacing: 0.05em;
+      color: var(--fg-2);
+      text-transform: uppercase;
+    }
+    .sec-index .num { color: var(--gold); font-weight: 500; }
+    .sec-index .rule { width: 28px; height: 1px; background: var(--line-strong); flex: none; }
+
+    .sec-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px var(--s-5); }
+    .sec-grid h2, .h2 { font-size: var(--text-2xl); letter-spacing: -0.026em; line-height: 1.16; }
+    html[lang^="zh"] .sec-grid h2, html[lang^="zh"] .h2 { letter-spacing: -0.01em; line-height: 1.26; }
+    .sec-lead { max-width: 46ch; font-size: var(--text-base); color: var(--fg-2); }
+    .sec-body { margin-top: var(--s-4); }
+    .sec-foot {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px 24px;
+      margin-top: var(--s-4);
+      padding-top: var(--s-3);
+      border-top: 1px solid var(--line);
+      font-size: var(--text-sm);
+      color: var(--fg-3);
+    }
+
+    @media (min-width: 1024px) {
+      .section { padding-block: var(--s-6); }
+      .sec-grid { grid-template-columns: 1.618fr 1fr; align-items: end; }
+      .sec-body { margin-top: var(--s-5); }
+      .sec-foot { margin-top: var(--s-5); }
+    }
+
+    /* ==================== BENTO CARDS (HOMEPAGE 13-COL + SUBPAGE 6-CARD) ==================== */
+    .bento { display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
+    .card, .feature-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      min-width: 0;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      background: var(--card);
+      transition: border-color 0.25s var(--ease), background-color 0.25s var(--ease), transform 0.25s var(--ease);
+    }
+    .card:hover, .feature-card:hover { border-color: var(--line-strong); background: var(--card-hover); transform: translateY(-2px); }
+    .card__head { display: flex; flex-direction: column; gap: 12px; }
+    .card__top, .f-top { display: flex; align-items: center; justify-content: space-between; }
+    .card__icon, .f-icon {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border: 1px solid var(--line-strong);
+      border-radius: 10px;
+      background: var(--elev);
+      color: var(--fg-2);
+      transition: color 0.25s var(--ease), border-color 0.25s var(--ease);
+    }
+    .card__icon svg, .f-icon svg { width: 19px; height: 19px; }
+    .card:hover .card__icon, .feature-card:hover .f-icon { color: var(--gold); border-color: var(--gold-border); }
+    .card__idx, .f-idx { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--fg-4); letter-spacing: 0.04em; }
+    .card h3, .f-title { font-size: var(--text-lg); font-weight: 600; letter-spacing: -0.015em; line-height: 1.35; }
+    .card p, .f-desc { font-size: 0.9375rem; color: var(--fg-3); line-height: 1.62; }
+    .card__foot, .f-code {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--fg-3);
+    }
+    .card__go {
+      display: grid;
+      place-items: center;
+      flex: none;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid var(--line-strong);
+      color: var(--fg-2);
+      transition: all 0.25s var(--ease);
+    }
+    .card__go svg { width: 13px; height: 13px; }
+    .card:hover .card__go { color: var(--fg); border-color: var(--gold-border-hover); background: var(--gold-soft); transform: translateX(2px); }
+
+    .specimen {
+      min-width: 0;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: var(--well);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      line-height: 1.65;
+      color: #C9D1DD;
+      overflow: hidden;
+    }
+    .specimen__bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 7px 14px;
+      border-bottom: 1px solid var(--line);
+      font-size: 11px;
+      color: var(--fg-3);
+      background: var(--surface);
+    }
+    .specimen__bar i { font-style: normal; color: var(--fg-4); }
+    .specimen pre { margin: 0; padding: 12px 14px; overflow-x: auto; font: inherit; white-space: pre; }
+    .specimen table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+    .specimen th, .specimen td { padding: 7px 14px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+    .specimen th { font-weight: 500; color: var(--fg-3); font-size: 11px; }
+    .specimen td.r, .specimen th.r { text-align: right; }
+    .specimen tr:last-child td { border-bottom: 0; }
+    .sp-ok { color: var(--gold); }
+
+    @media (max-width: 639px) { .specimen { display: none; } }
+    @media (min-width: 768px) {
+      .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .bento .card--full { grid-column: 1 / -1; }
+    }
+    @media (min-width: 1024px) {
+      .bento--13 { grid-template-columns: repeat(13, minmax(0, 1fr)); gap: 20px; }
+      .bento--13 .card { padding: 30px; }
+      .bento--13 .card--lg {
+        grid-column: span 8;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.02fr);
+        grid-template-rows: 1fr auto;
+        column-gap: 26px;
+        row-gap: 18px;
+      }
+      .bento--13 .card--sm { grid-column: span 5; }
+      .bento--13 .card--full { grid-column: 1 / -1; }
+      .bento--13 .card--lg .card__head { grid-column: 1; grid-row: 1; }
+      .bento--13 .card--lg .card__foot { grid-column: 1; grid-row: 2; }
+      .bento--13 .card--lg .specimen { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 16px;
+    }
+    @media (min-width: 768px) {
+      .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    }
+    @media (min-width: 1080px) {
+      .feature-grid--6 { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+      .feature-card { padding: 26px; }
+    }
+
+    /* ==================== STEP-BY-STEP WORKFLOW TIMELINE ==================== */
+    .workflow-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 16px;
+    }
+    .wf-step {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 22px 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      background: var(--surface);
+      position: relative;
+    }
+    .wf-step__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .wf-step__badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 9px;
+      border-radius: 6px;
+      background: var(--gold-soft);
+      border: 1px solid rgba(245, 196, 81, 0.25);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--gold);
+    }
+    .wf-step__cmd {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--fg-4);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .wf-step h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--fg);
+      line-height: 1.38;
+    }
+    .wf-step p {
+      font-size: 0.91rem;
+      color: var(--fg-3);
+      line-height: 1.62;
+    }
+
+    @media (min-width: 768px) {
+      .workflow-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+      .workflow-grid--6 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
+    /* ==================== KEYSTRIP & PILLARS (HOMEPAGE / CODE EDITOR) ==================== */
+    .keystrip {
+      padding: 16px 0 16px 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      background: var(--surface);
+    }
+    .keystrip__meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-right: 20px;
+      margin-bottom: 12px;
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--fg-3);
+    }
+    .keystrip__meta span:first-child { color: var(--fg-2); }
+    .keys {
+      display: flex;
+      gap: 6px;
+      padding-right: 20px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent);
+      mask-image: linear-gradient(90deg, #000 88%, transparent);
+    }
+    .keys::-webkit-scrollbar { display: none; }
+    .keys span {
+      display: grid;
+      place-items: center;
+      flex: none;
+      min-width: 36px;
+      height: 38px;
+      padding: 0 8px;
+      border: 1px solid var(--line);
+      border-bottom-color: rgba(0, 0, 0, 0.55);
+      border-radius: 7px;
+      background: linear-gradient(180deg, #1E2332, #161A25);
+      box-shadow: inset 0 1px 0 #2B334B;
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      color: var(--fg-2);
+    }
+    .keys span.wide { min-width: 52px; font-size: 11.5px; }
+
+    .pillars { display: grid; margin-top: var(--s-4); border-top: 1px solid var(--line); }
+    .pillar { display: flex; flex-direction: column; padding: 32px 0; border-bottom: 1px solid var(--line); }
+    .pillar:last-child { border-bottom: 0; padding-bottom: 0; }
+    .pillar__stat { font-size: var(--text-2xl); font-weight: 600; letter-spacing: -0.03em; line-height: 1; color: var(--fg); font-variant-numeric: tabular-nums; }
+    .pillar__sub { margin-top: 8px; font-family: var(--font-mono); font-size: var(--text-xs); color: var(--gold); }
+    .pillar h3 { margin-top: 20px; font-size: var(--text-lg); letter-spacing: -0.015em; }
+    .pillar p { margin-top: 10px; font-size: 0.9375rem; color: var(--fg-3); line-height: 1.62; }
+    .pillar .link-arrow { margin-top: 20px; }
+
+    @media (min-width: 1024px) {
+      .keystrip { padding: 20px 28px; }
+      .keystrip__meta, .keys { padding-right: 0; }
+      .keys { -webkit-mask-image: none; mask-image: none; justify-content: space-between; }
+      .pillars { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: var(--s-5); }
+      .pillar { padding: 36px 32px 0; border-bottom: 0; border-left: 1px solid var(--line); }
+      .pillar:first-child { padding-left: 0; border-left: 0; }
+      .pillar:last-child { padding-right: 0; }
+      .pillar .link-arrow { margin-top: auto; padding-top: 24px; }
+    }
+
+    /* ==================== COMPARISON TABLE & SNIPPET ==================== */
+    .snippet-definition {
+      font-size: 0.95rem;
+      color: var(--fg-2);
+      line-height: 1.65;
+      max-width: 62ch;
+    }
+    .snippet-definition strong { color: var(--fg); font-weight: 600; }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      background: var(--surface);
+      scrollbar-width: thin;
+      -webkit-overflow-scrolling: touch;
+    }
+    .obsidian-benchmark-table {
+      width: 100%;
+      min-width: 680px;
+      border-collapse: separate;
+      border-spacing: 0;
+      font-size: var(--text-sm);
+      line-height: 1.55;
+    }
+    .obsidian-benchmark-table caption {
+      text-align: left;
+      padding: 14px 20px 10px;
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--fg-4);
+      border-bottom: 1px solid var(--line);
+    }
+    .obsidian-benchmark-table th, .obsidian-benchmark-table td {
+      padding: 14px 18px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
+    }
+    .obsidian-benchmark-table thead th {
+      background: #13151E;
+      font-size: var(--text-xs);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--fg-2);
+    }
+    .obsidian-benchmark-table tbody th {
+      font-weight: 500;
+      color: var(--fg);
+      position: sticky;
+      left: 0;
+      z-index: 2;
+      background: var(--surface);
+      box-shadow: 1px 0 0 var(--line);
+    }
+    .obsidian-benchmark-table thead th:first-child {
+      position: sticky;
+      left: 0;
+      z-index: 3;
+      background: #13151E;
+      box-shadow: 1px 0 0 var(--line);
+    }
+    .obsidian-benchmark-table tbody tr:last-child > * { border-bottom: 0; }
+    .obsidian-benchmark-table thead th:nth-child(2) {
+      color: var(--fg);
+      font-weight: 600;
+      box-shadow: inset 0 2px 0 var(--gold);
+      background: linear-gradient(180deg, rgba(245, 196, 81, 0.08), rgba(245, 196, 81, 0.02)), #13151E;
+    }
+    .obsidian-benchmark-table tbody td:nth-child(2) {
+      background: rgba(245, 196, 81, 0.03);
+      color: var(--fg);
+    }
+    .obsidian-benchmark-table tbody td strong { color: var(--fg); font-weight: 600; }
+
+    /* ==================== EDITORIAL SPLIT-COLUMN FAQ ==================== */
+    .faq-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-4); }
+    .faq-head .sec-lead { margin-top: 12px; }
+    .faq-list { border-top: 1px solid var(--line); }
+    .faq-item { border-bottom: 1px solid var(--line); }
+    .faq-item summary {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px 0;
+      list-style: none;
+      cursor: pointer;
+      color: var(--fg);
+      font-size: var(--text-lg);
+      font-weight: 500;
+      line-height: 1.45;
+      user-select: none;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-icon {
+      flex: none;
+      width: 26px;
+      height: 26px;
+      border: 1px solid var(--line-strong);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 0.9rem;
+      color: var(--fg-2);
+      transition: transform 0.25s var(--ease), border-color 0.25s var(--ease), color 0.25s var(--ease);
+    }
+    .faq-item[open] .faq-icon {
+      transform: rotate(45deg);
+      border-color: var(--gold-border-hover);
+      color: var(--gold);
+    }
+    .faq-answer {
+      padding: 0 32px 22px 0;
+      font-size: 0.9375rem;
+      color: var(--fg-3);
+      line-height: 1.68;
+      max-width: 64ch;
+    }
+
+    @media (min-width: 1024px) {
+      .faq-grid { grid-template-columns: 1fr 1.618fr; gap: var(--s-5); align-items: start; }
+      .faq-head { position: sticky; top: calc(var(--topbar-h) + 36px); }
+    }
+
+    /* ==================== UNIVERSAL 14-PAGE MULTI-COLUMN FOOTER ==================== */
+    .site-footer {
+      border-top: 1px solid var(--line);
+      background: var(--bg-alt);
+      padding-top: var(--s-5);
+    }
+    .footer-cta {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 20px;
+      padding-bottom: var(--s-5);
+      border-bottom: 1px solid var(--line);
+    }
+    .footer-cta p { margin-top: 10px; color: var(--fg-2); font-size: 0.95rem; max-width: 56ch; }
+    .footer-cta__btns { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    .footer-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px 22px;
+      padding-block: var(--s-5);
+    }
+    .footer-brand { grid-column: 1 / -1; }
+    .footer-brand p { margin-top: 14px; max-width: 36ch; font-size: var(--text-sm); color: var(--fg-3); line-height: 1.65; }
+    .footer-rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--gold);
+    }
+    .footer-col h4 {
+      margin-bottom: 14px;
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+    .footer-col ul { display: grid; gap: 9px; list-style: none; }
+    .footer-col a, .footer-col li { font-size: var(--text-sm); color: var(--fg-3); line-height: 1.48; transition: color 0.18s var(--ease); }
+    .footer-col a:hover, .footer-col a.is-current { color: var(--fg); }
+    .footer-col a.is-current { font-weight: 500; }
+
+    .footer-legal {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px 24px;
+      padding-top: 22px;
+      padding-bottom: calc(36px + env(safe-area-inset-bottom, 0px));
+      border-top: 1px solid var(--line);
+      font-size: var(--text-xs);
+      color: var(--fg-4);
+    }
+
+    @media (min-width: 768px) {
+      .footer-cols { grid-template-columns: 1.35fr 1fr 1fr 1fr; }
+      .footer-brand { grid-column: auto; }
+    }
+    @media (min-width: 920px) {
+      .footer-legal { padding-bottom: 24px; }
+    }
+    @media (min-width: 1024px) {
+      .site-footer { padding-top: var(--s-6); }
+      .footer-cta { grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: var(--s-5); }
+    }
+
+    /* ==================== PYTHON TOPICAL AUTHORITY SILO HUB ==================== */
+    .py-hub-crumb {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      padding: 5px 12px;
+      border-radius: 8px;
+      background: var(--surface);
+      border: 1px solid var(--line-strong);
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--fg-2);
+    }
+    .py-hub-crumb a { color: var(--gold); font-weight: 600; }
+    .py-hub-crumb a:hover { text-decoration: underline; }
+    .py-hub-crumb .sep { color: var(--fg-4); }
+
+    .py-cluster-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 16px;
+    }
+    .py-spoke-card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 22px 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--r-lg);
+      background: var(--card);
+      transition: border-color 0.22s var(--ease), background-color 0.22s var(--ease), transform 0.22s var(--ease);
+    }
+    .py-spoke-card:hover {
+      border-color: var(--gold-border-hover);
+      background: var(--card-hover);
+      transform: translateY(-2px);
+    }
+    .py-spoke-card.is-active {
+      border-color: var(--gold-border);
+      background: var(--surface);
+    }
+    .py-spoke-card__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .py-spoke-card__code {
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: var(--gold-soft);
+      border: 1px solid var(--gold-border);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--gold);
+      white-space: nowrap;
+      flex: none;
+    }
+    .py-spoke-card__tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--fg-4);
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .py-spoke-card h3 {
+      font-size: 1.06rem;
+      font-weight: 600;
+      color: var(--fg);
+      line-height: 1.35;
+    }
+    .py-spoke-card p {
+      font-size: 0.90rem;
+      color: var(--fg-3);
+      line-height: 1.6;
+    }
+    .py-spoke-card__go {
+      margin-top: auto;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: var(--fg-2);
+    }
+    .py-spoke-card__go span:first-child {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .py-spoke-card__go span:last-child {
+      white-space: nowrap;
+      flex: none;
+    }
+    .py-spoke-card:hover .py-spoke-card__go { color: var(--gold); }
+    @media (min-width: 768px) {
+      .py-cluster-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    }
+    @media (min-width: 1080px) {
+      .py-cluster-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    }
+
+    /* ==================== SMART AUTO-HIDING MOBILE APP BAR ==================== */
+    .mobile-bottom-bar {
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+      z-index: 55;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      max-width: 460px;
+      margin-inline: auto;
+      padding: 8px 9px 8px 10px;
+      border: 1px solid var(--line-strong);
+      border-radius: 14px;
+      background: #121622;
+      box-shadow: 0 18px 42px -10px rgba(0, 0, 0, 0.92);
+      transform: translateY(calc(100% + 28px));
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.32s var(--ease), opacity 0.24s var(--ease);
+    }
+    .mobile-bottom-bar.is-visible { transform: translateY(0); opacity: 1; pointer-events: auto; }
+    .dock-app-icon {
+      display: grid; place-items: center; flex: none;
+      width: 34px; height: 34px; border-radius: 8px;
+      background: linear-gradient(180deg, #1E2230 0%, #12151E 100%);
+      border: 1px solid var(--gold-border);
+    }
+    .dock-app-icon svg { width: 20px; height: 20px; }
+    .bottom-bar-info { flex: 1; min-width: 0; line-height: 1.22; }
+    .bottom-bar-title { font-size: 0.84rem; font-weight: 600; color: var(--fg); white-space: nowrap; }
+    .bottom-bar-sub { font-size: 0.70rem; color: var(--gold); white-space: nowrap; margin-top: 2px; letter-spacing: 0.03em; }
+    .bottom-bar-actions { display: inline-flex; align-items: center; gap: 6px; flex: none; }
+    .btn-guide-mini {
+      height: 32px; padding: 0 11px; border-radius: 8px;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--elev); border: 1px solid var(--line-strong);
+      color: var(--fg); font-size: 0.76rem; font-weight: 500; white-space: nowrap;
+    }
+    .btn-play-mini {
+      height: 32px; padding: 0 13px; border-radius: 8px;
+      display: inline-flex; align-items: center; justify-content: center; gap: 5px;
+      background: linear-gradient(180deg, #1E2230 0%, #131620 100%);
+      border: 1px solid var(--gold-border);
+      color: var(--fg); font-size: 0.76rem; font-weight: 600; white-space: nowrap;
+    }
+    @media (min-width: 920px) { .mobile-bottom-bar { display: none !important; } }
+
+    /* ==================== 10-LANGUAGE MODAL SHEET ==================== */
+    .modal-overlay {
+      position: fixed; inset: 0; z-index: 9999;
+      background: rgba(0, 0, 0, 0.74);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      display: flex; align-items: flex-end; justify-content: center;
+      opacity: 0; visibility: hidden;
+      transition: opacity 0.24s var(--ease), visibility 0.24s var(--ease);
+    }
+    .modal-overlay.show { opacity: 1; visibility: visible; }
+    .lang-modal {
+      width: 100%; max-width: 460px;
+      background: var(--surface); border-top: 1px solid var(--line-strong);
+      border-radius: 20px 20px 0 0;
+      padding: 12px 20px calc(22px + env(safe-area-inset-bottom, 0px));
+      transform: translateY(100%); transition: transform 0.28s var(--ease);
+    }
+    .modal-overlay.show .lang-modal { transform: translateY(0); }
+    .sheet-handle { width: 36px; height: 4px; border-radius: 999px; background: var(--line-strong); margin: 0 auto 14px; }
+    .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+    .modal-header h3 { font-size: 0.96rem; font-weight: 600; color: var(--fg); }
+    .btn-close-modal { width: 28px; height: 28px; border-radius: 50%; background: var(--elev); border: 1px solid var(--line); color: var(--fg-2); display: grid; place-items: center; font-size: 0.8rem; }
+    .lang-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; max-height: 52vh; overflow-y: auto; }
+    .lang-option {
+      padding: 11px 13px; border-radius: 10px;
+      background: var(--elev); border: 1px solid var(--line);
+      color: var(--fg-2); font-size: 0.85rem; font-weight: 500; text-align: left;
+      transition: all 0.18s var(--ease);
+    }
+    .lang-option:hover { color: var(--fg); border-color: var(--line-strong); }
+    .lang-option.active { color: var(--fg); border-color: var(--gold-border-hover); background: var(--gold-soft); }
+    @media (min-width: 640px) {
+      .modal-overlay { align-items: center; }
+      .sheet-handle { display: none; }
+      .lang-modal { border: 1px solid var(--line-strong); border-radius: 18px; padding: 20px; transform: scale(0.95); }
+      .modal-overlay.show .lang-modal { transform: scale(1); }
+    }
+  </style>
+</head>
+<body data-page="js_ide">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="sc-logo" viewBox="20 14 68 72">
+    <path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/>
+    <path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/>
+    <path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/>
+    <path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+  </symbol>
+  <symbol id="gp-prism" viewBox="0 0 24 24">
+    <path fill="#4285F4" d="M3.6,2.4C3.3,2.7,3.1,3.2,3.1,3.8v16.4c0,0.6,0.2,1.1,0.5,1.4l0.1,0.1L12.9,12v-0.2L3.7,2.3L3.6,2.4z"/>
+    <path fill="#34A853" d="M16,15.1l-3.1-3.1v-0.2L16,8.7l0.1,0.1l3.6,2.1c1,0.6,1,1.5,0,2.1l-3.6,2.1L16,15.1z"/>
+    <path fill="#FBBC05" d="M16.1,15.1L12.9,12L3.6,21.3c0.3,0.4,0.9,0.4,1.6,0.1L16.1,15.1z"/>
+    <path fill="#EA4335" d="M16.1,8.9L5.2,2.6C4.5,2.2,3.9,2.3,3.6,2.7L12.9,12L16.1,8.9z"/>
+  </symbol>
+  <symbol id="i-ne" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8 20 7.2v9.6L12 21.2 4 16.8V7.2z"/><path d="M4 7.2l8 4.4 8-4.4M12 11.6v9.6"/></g></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2.8v3.2M15 2.8v3.2M9 18v3.2M15 18v3.2M2.8 9H6M2.8 15H6M18 9h3.2M18 15h3.2"/></g></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 2.8 7.8 12 12.6l9.2-4.8z"/><path d="m2.8 12 9.2 4.8 9.2-4.8"/><path d="m2.8 16.2 9.2 4.8 9.2-4.8"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="M2.8 8.5h18.4"/><path d="m9.5 12.5-2.2 2.2 2.2 2.2M14.5 12.5l2.2 2.2-2.2 2.2"/></g></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5.6" rx="7.6" ry="2.8"/><path d="M4.4 5.6v12.8c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8V5.6"/><path d="M4.4 12c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8"/></g></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="m7.2 9.5 3 2.5-3 2.5M12.8 15h4"/></g></symbol>
+  <symbol id="i-git" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.3"/><circle cx="6" cy="18" r="2.3"/><circle cx="18" cy="12" r="2.3"/><path d="M6 8.3v7.4M8.3 6h4.2a3.5 3.5 0 0 1 3.5 3.5v.2"/></g></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5h11a4 4 0 0 0 .7-7.94A5.5 5.5 0 0 0 7.4 9.2 3.8 3.8 0 0 0 6.5 18.5z"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M13 2.8 4.8 13.2h6.3L10.2 21.2 19.2 10.6h-6.4z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 2.8 4.8 5.8v5.6c0 5 3.1 8.5 7.2 9.8 4.1-1.3 7.2-4.8 7.2-9.8V5.8z"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="index.html" class="brand" aria-label="SuperCode IDE Home">
+      <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+      <span>SuperCode</span>
+      <span class="brand__tag">IDE</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary Workspaces">
+      <a href="code-editor.html" data-i18n="nav_code_editor">&#2325;&#2379;&#2337; &#2319;&#2337;&#2367;&#2335;&#2352;</a>
+      <a href="large-file-editor.html" data-i18n="nav_large_file">GB &#2348;&#2337;&#2364;&#2368; &#2347;&#2364;&#2366;&#2311;&#2354;&#2375;&#2306;</a>
+      <a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a>
+      <a href="c-compiler.html" data-i18n="nav_c_compiler">C &#2325;&#2306;&#2346;&#2366;&#2311;&#2354;&#2352;</a>
+      <a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a>
+      <a href="java-ide.html" data-i18n="nav_java_ide">Java 17</a>
+      <a href="javascript-ide.html" class="is-current" data-i18n="nav_js_ide">JavaScript</a>
+      <a href="web-ide.html" data-i18n="nav_web_ide">Web &#2357; PHP</a>
+      <a href="sql-ide.html" data-i18n="nav_sql_ide">SQL &#2360;&#2381;&#2335;&#2370;&#2337;&#2367;&#2351;&#2379;</a>
+      <a href="git-client.html" data-i18n="nav_git_client">&#2357;&#2367;&#2332;&#2364;&#2369;&#2309;&#2354; Git</a>
+      <a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP &#2357; FTPS</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button id="langModalBtn" class="btn-lang-trigger" type="button" onclick="openLangModal()" aria-label="Select Language">
+        <svg class="lang-globe-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span id="langTriggerText">HI</span>
+        <span class="lang-chevron" aria-hidden="true">&#9662;</span>
+      </button>
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+        <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+        <span data-i18n="nav_cta">Google Play</span>
+      </a>
+      <a href="index.html" class="btn-home-icon" aria-label="Home" title="Home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5"/>
+          <path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
+        </svg>
+      </a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteDrawer" aria-label="All Pages Directory">
+        <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 8.5h16M4 15.5h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-drawer" id="siteDrawer" hidden>
+  <nav class="container menu-drawer__inner" aria-label="All SuperCode Pages">
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_core">&#2325;&#2379;&#2337; &#2319;&#2337;&#2367;&#2335;&#2352; &#2324;&#2352; &#2348;&#2337;&#2364;&#2368; &#2347;&#2364;&#2366;&#2311;&#2354;&#2375;&#2306;</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="index.html"><span data-i18n="nav_home">&#2350;&#2369;&#2326;&#2381;&#2351; &#2346;&#2375;&#2332;</span><span class="mono">01</span></a>
+        <a class="menu-drawer__link" href="code-editor.html"><span data-i18n="nav_code_editor">&#2325;&#2379;&#2337; &#2319;&#2337;&#2367;&#2335;&#2352;</span><span class="mono">02</span></a>
+        <a class="menu-drawer__link" href="large-file-editor.html"><span data-i18n="nav_large_file">GB &#2348;&#2337;&#2364;&#2368; &#2347;&#2364;&#2366;&#2311;&#2354;&#2375;&#2306;</span><span class="mono">03</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_lang">&#2321;&#2347;&#2364;&#2354;&#2366;&#2311;&#2344; &#2325;&#2306;&#2346;&#2366;&#2311;&#2354;&#2352; &#2324;&#2352; &#2349;&#2366;&#2359;&#2366;&#2319;&#2306;</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="python-ide.html"><span data-i18n="nav_python_ide">Python IDE</span><span class="mono">04</span></a>
+        <a class="menu-drawer__link" href="c-compiler.html"><span data-i18n="nav_c_compiler">C &#2325;&#2306;&#2346;&#2366;&#2311;&#2354;&#2352;</span><span class="mono">05</span></a>
+        <a class="menu-drawer__link" href="cpp-ide.html"><span data-i18n="nav_cpp_ide">C++20 IDE</span><span class="mono">06</span></a>
+        <a class="menu-drawer__link" href="java-ide.html"><span data-i18n="nav_java_ide">Java 17</span><span class="mono">07</span></a>
+        <a class="menu-drawer__link is-current" href="javascript-ide.html"><span data-i18n="nav_js_ide">JavaScript</span><span class="mono">08</span></a>
+        <a class="menu-drawer__link" href="lua-ide.html"><span data-i18n="nav_lua_ide">Lua 5.4</span><span class="mono">09</span></a>
+        <a class="menu-drawer__link" href="shell-ide.html"><span data-i18n="nav_shell_ide">Shell &#2357; Kotlin</span><span class="mono">10</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_devops">Web, SQL &#2324;&#2352; &#2352;&#2367;&#2350;&#2379;&#2335; DevOps</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="web-ide.html"><span data-i18n="nav_web_ide">Web &#2357; PHP</span><span class="mono">11</span></a>
+        <a class="menu-drawer__link" href="sql-ide.html"><span data-i18n="nav_sql_ide">SQL &#2360;&#2381;&#2335;&#2370;&#2337;&#2367;&#2351;&#2379;</span><span class="mono">12</span></a>
+        <a class="menu-drawer__link" href="git-client.html"><span data-i18n="nav_git_client">&#2357;&#2367;&#2332;&#2364;&#2369;&#2309;&#2354; Git</span><span class="mono">13</span></a>
+        <a class="menu-drawer__link" href="sftp-client.html"><span data-i18n="nav_sftp_client">SFTP &#2357; FTPS</span><span class="mono">14</span></a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<main id="top">
+  <!-- ==================== 01 · EDITORIAL HERO & INTERACTIVE WORKBENCH ==================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <div class="trust-pill">
+            <span class="trust-pill__score"><span data-play-rating>4.9</span> &#9733;</span>
+            <span data-i18n="hero_tag">&#2360;&#2381;&#2335;&#2376;&#2306;&#2337;&#2309;&#2354;&#2379;&#2344; ES2024 JAVASCRIPT &#2324;&#2352; &#2350;&#2377;&#2337;&#2381;&#2351;&#2370;&#2354; &#2360;&#2381;&#2335;&#2370;&#2337;&#2367;&#2351;&#2379;</span>
+          </div>
+
+          <h1 class="hero-h1" data-i18n="hero_h1">&#2348;&#2367;&#2344;&#2366; &#2361;&#2376;&#2306;&#2327; &#2361;&#2369;&#2319; &#2360;&#2381;&#2335;&#2376;&#2306;&#2337;&#2309;&#2354;&#2379;&#2344; <span class="text-gradient">ES2024 JavaScript &#2324;&#2352; &#2350;&#2377;&#2337;&#2381;&#2351;&#2370;&#2354;</span> &#2321;&#2347;&#2364;&#2354;&#2366;&#2311;&#2344; &#2330;&#2354;&#2366;&#2319;&#2306;&#2404;</h1>
+
+          <p class="hero-lead" data-i18n="hero_desc">&#2360;&#2367;&#2352;&#2381;&#2347;&#2364; JavaScript &#2354;&#2377;&#2332;&#2367;&#2325; &#2335;&#2375;&#2360;&#2381;&#2335; &#2325;&#2352;&#2344;&#2375; &#2325;&#2375; &#2354;&#2367;&#2319; &#2344;&#2325;&#2354;&#2368; HTML &#2347;&#2364;&#2366;&#2311;&#2354; &#2348;&#2344;&#2366;&#2344;&#2375; &#2325;&#2368; &#2332;&#2364;&#2352;&#2370;&#2352;&#2340; &#2344;&#2361;&#2368;&#2306;&#2404; <strong>&lt;1ms &#2354;&#2370;&#2346;-&#2325;&#2367;&#2354; &#2360;&#2369;&#2352;&#2325;&#2381;&#2359;&#2366;</strong> &#2357;&#2366;&#2354;&#2375; &#2310;&#2311;&#2360;&#2379;&#2354;&#2375;&#2335;&#2375;&#2337; &#2357;&#2352;&#2381;&#2325;&#2352; &#2325;&#2306;&#2360;&#2379;&#2354; &#2350;&#2375;&#2306; &#2360;&#2368;&#2343;&#2375; <strong>ES2024 <code>async/await</code></strong>, <strong>&#2350;&#2354;&#2381;&#2335;&#2368;-&#2347;&#2364;&#2366;&#2311;&#2354; ESM &#2357; CommonJS &#2350;&#2377;&#2337;&#2381;&#2351;&#2370;&#2354;</strong> &#2324;&#2352; <strong>DSA &#2319;&#2354;&#2381;&#2327;&#2379;&#2352;&#2367;&#2342;&#2350;</strong> &#2321;&#2347;&#2364;&#2354;&#2366;&#2311;&#2344; &#2352;&#2344; &#2325;&#2352;&#2375;&#2306;&#2404;</p>
+
+          <div class="hero__cta" id="heroCta">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold">
+              <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+              <span data-i18n="cta_btn">Google Play &#2360;&#2375; &#2346;&#2366;&#2319;&#2306;</span>
+            </a>
+            <a href="https://supercode-ide.github.io/tutorial?ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+              <span data-i18n="cta_tutorial">&#2320;&#2346; &#2327;&#2366;&#2311;&#2337;</span>
+              <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <dl class="specs" aria-label="Key Specifications">
+          <div class="spec"><dt>ES2024</dt><dd data-i18n="js_spec1">ES2024 &#2360;&#2367;&#2306;&#2335;&#2376;&#2325;&#2381;&#2360;</dd></div>
+          <div class="spec"><dt>ESM+CJS</dt><dd data-i18n="js_spec2">ESM &#2357; CommonJS</dd></div>
+          <div class="spec"><dt>&lt;1<small>ms</small></dt><dd data-i18n="js_spec3">&#2354;&#2370;&#2346; &#2360;&#2369;&#2352;&#2325;&#2381;&#2359;&#2366; &lt;1ms</dd></div>
+          <div class="spec"><dt>Node</dt><dd data-i18n="js_spec4">Node &#2325;&#2381;&#2354;&#2366;&#2313;&#2337; &#2348;&#2306;&#2337;&#2354;&#2352;</dd></div>
+        </dl>
+      </div>
+
+      <div class="wb-caption">
+        <div class="sec-index" style="margin-bottom:0">
+          <span class="num">01</span>
+          <span class="rule"></span>
+          <span data-i18n="wb_eyebrow">&#2360;&#2381;&#2335;&#2376;&#2306;&#2337;&#2309;&#2354;&#2379;&#2344; JAVASCRIPT &#2357;&#2352;&#2381;&#2325;&#2352; &#2325;&#2306;&#2360;&#2379;&#2354;</span>
+        </div>
+        <span class="wb-caption__hint mono">ES2024 Async &#183; ESM + CommonJS &#183; &#2332;&#2364;&#2368;&#2352;&#2379;-&#2347;&#2364;&#2381;&#2352;&#2368;&#2332;&#2364; &#2357;&#2352;&#2381;&#2325;&#2352; &#183; &#2325;&#2381;&#2354;&#2366;&#2313;&#2337; Node.js</span>
+      </div>
+
+      <div class="ide-workbench">
+        <div class="wb-titlebar">
+          <div class="wb-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="wb-title" id="ide-compiler-label">js-es2024-studio/pipeline.mjs &#8212; ES2024 Async &amp; Modules</div>
+          <button type="button" class="wb-run" id="btn-run-sandbox">
+            <span class="wb-run__tri" aria-hidden="true">&#9654;</span>
+            <span data-i18n="btn_run">&#2337;&#2375;&#2350;&#2379; &#2330;&#2354;&#2366;&#2319;&#2306;</span>
+          </button>
+        </div>
+
+        <div class="wb-tabs" role="tablist" aria-label="Interactive Workspace Tabs">
+          <button type="button" class="ide-tab active" data-tab="js_esm" role="tab" aria-selected="true"><i></i>pipeline.mjs</button>
+          <button type="button" class="ide-tab" data-tab="js_mod" role="tab" aria-selected="false"><i></i>mathUtil.js</button>
+          <button type="button" class="ide-tab" data-tab="js_node" role="tab" aria-selected="false"><i></i>crypto_hash.js</button>
+        </div>
+
+        <div class="wb-body">
+          <aside class="wb-explorer" aria-label="Project Explorer">
+            <div class="wb-explorer__head">Explorer</div>
+            <div class="wb-folder">&#9662; js-es2024-studio</div>
+            <button type="button" class="wb-file active" data-tab="js_esm"><b>ESM</b><span>pipeline.mjs</span></button>
+            <button type="button" class="wb-file" data-tab="js_mod"><b>MOD</b><span>mathUtil.js</span></button>
+            <button type="button" class="wb-file" data-tab="js_node"><b>API</b><span>crypto_hash.js</span></button>
+          </aside>
+
+          <div class="wb-main">
+            <div class="ide-editor-body" id="ide-code-box" role="region" aria-label="Interactive Code Preview"></div>
+            <div class="ide-terminal" id="ide-terminal-drawer" aria-live="polite">
+              <div class="term-header">
+                <span data-i18n="term_title">&#2311;&#2306;&#2335;&#2352;&#2376;&#2325;&#2381;&#2335;&#2367;&#2357; &#2325;&#2306;&#2360;&#2379;&#2354; &#2310;&#2313;&#2335;&#2346;&#2369;&#2335;</span>
+                <div class="term-header-right">
+                  <span class="term-exec-badge" id="ide-exec-status">Ready</span>
+                  <button type="button" class="btn-term-close" id="btn-close-term" aria-label="Close terminal">&#10005;</button>
+                </div>
+              </div>
+              <div class="term-stream" id="ide-term-output"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wb-statusbar">
+          <span class="wb-statusbar__dot"><i></i><span id="wbStatusLang">JavaScript ES2024 &#183; Isolated Worker</span></span>
+          <div class="wb-statusbar__right">
+            <span>UTF-8</span>
+            <span>LF</span>
+            <span>Ln 3, Col 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 02 · CORE CAPABILITIES ==================== -->
+  <section class="section section--alt" id="capabilities">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">02</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_cap_eyebrow">&#2346;&#2381;&#2352;&#2350;&#2369;&#2326; &#2357;&#2367;&#2358;&#2375;&#2359;&#2340;&#2366;&#2319;&#2306;</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="sec_cap_title">&#2348;&#2381;&#2352;&#2366;&#2313;&#2332;&#2364;&#2352; &#2335;&#2376;&#2348; &#2360;&#2375; &#2309;&#2354;&#2327; &#2319;&#2325; &#2360;&#2330;&#2381;&#2330;&#2366; &#2360;&#2381;&#2335;&#2376;&#2306;&#2337;&#2309;&#2354;&#2379;&#2344; JavaScript &#2352;&#2344;&#2335;&#2366;&#2311;&#2350;</h2>
+        <p class="sec-lead" data-i18n="sec_cap_lead">&#2340;&#2369;&#2352;&#2306;&#2340; &#2310;&#2313;&#2335;&#2346;&#2369;&#2335; &#2324;&#2352; &#2360;&#2335;&#2368;&#2325; &#2354;&#2366;&#2311;&#2344;-&#2344;&#2306;&#2348;&#2352; &#2319;&#2352;&#2352; &#2352;&#2367;&#2346;&#2379;&#2352;&#2381;&#2335;&#2367;&#2306;&#2327; &#2325;&#2375; &#2360;&#2366;&#2341; &#2337;&#2375;&#2335;&#2366; &#2360;&#2381;&#2335;&#2381;&#2352;&#2325;&#2381;&#2330;&#2352;&#2381;&#2360;, async &#2346;&#2366;&#2311;&#2346;&#2354;&#2366;&#2311;&#2344;, JSON &#2346;&#2381;&#2352;&#2379;&#2360;&#2375;&#2360;&#2367;&#2306;&#2327; &#2324;&#2352; &#2350;&#2377;&#2337;&#2381;&#2351;&#2370;&#2354;&#2352; &#2346;&#2376;&#2325;&#2375;&#2332; &#2335;&#2375;&#2360;&#2381;&#2335; &#2325;&#2352;&#2375;&#2306;&#2404;</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="feature-grid feature-grid--6">
+          <article class="feature-card" id="cap1">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
+              <span class="f-idx">02.1</span>
+            </div>
+            <h3 class="f-title" data-i18n="f1_title">&#2346;&#2370;&#2352;&#2381;&#2339; ES6&#8211;ES2024 &#2321;&#2347;&#2364;&#2354;&#2366;&#2311;&#2344; &#2349;&#2366;&#2359;&#2366; &#2360;&#2346;&#2379;&#2352;&#2381;&#2335;</h3>
+            <p class="f-desc" data-i18n="f1_desc">async/await, Promise.allSettled/any, generators, private class fields (#), optional chaining (?.), nullish coalescing (??), BigInt, structuredClone, timers &#2324;&#2352; performance.now() &#2325;&#2379; &#2321;&#2347;&#2364;&#2354;&#2366;&#2311;&#2344; &#2330;&#2354;&#2366;&#2319;&#2306;&#2404;</p>
+            <div class="f-code" data-i18n="f1_badge">ES2024 &#183; BigInt &#183; Private #Fields &#183; structuredClone</div>
+          </article>
+          <article class="feature-card" id="cap2">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+              <span class="f-idx">02.2</span>
+            </div>
+            <h3 class="f-title" data-i18n="f2_title">&#2350;&#2354;&#2381;&#2335;&#2368;-&#2347;&#2364;&#2366;&#2311;&#2354; ES Modules &#2324;&#2352; CommonJS &#2354;&#2367;&#2306;&#2325;&#2367;&#2306;&#2327;</h3>
+            <p class="f-desc" data-i18n="f2_desc">import/export &#2351;&#2366; require()/module.exports &#2325;&#2366; &#2313;&#2346;&#2351;&#2379;&#2327; &#2325;&#2352;&#2325;&#2375; &#2354;&#2379;&#2325;&#2354; .js, .mjs, .cjs &#2324;&#2352; .json &#2350;&#2377;&#2337;&#2381;&#2351;&#2370;&#2354;&#2381;&#2360; &#2325;&#2379; &#2310;&#2360;&#2366;&#2344;&#2368; &#2360;&#2375; &#2311;&#2350;&#2381;&#2346;&#2379;&#2352;&#2381;&#2335; &#2325;&#2352;&#2375;&#2306; &#8212; &#2348;&#2367;&#2344;&#2366; &#2360;&#2375;&#2357; &#2325;&#2367;&#2319; &#2326;&#2369;&#2354;&#2375; &#2335;&#2376;&#2348;&#2381;&#2360; &#2324;&#2352; &#2360;&#2381;&#2350;&#2366;&#2352;&#2381;&#2335; &#2319;&#2306;&#2335;&#2381;&#2352;&#2368;-&#2347;&#2364;&#2366;&#2311;&#2354; &#2346;&#2361;&#2330;&#2366;&#2344; &#2360;&#2361;&#2367;&#2340;&#2404;</p>
+            <div class="f-code" data-i18n="f2_badge">import / export &#183; require() &#183; .json &#2350;&#2377;&#2337;&#2381;&#2351;&#2370;&#2354; &#2311;&#2350;&#2381;&#2346;&#2379;&#2352;&#2381;&#2335;</div>
+          </article>
+          <article class="feature-card" id="cap3">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <span class="f-idx">02.3</span>
+            </div>
+            <h3 class="f-title" data-i18n="f3_title">&#2321;&#2347;&#2364;-UI &#2357;&#2352;&#2381;&#2325;&#2352; &#2310;&#2311;&#2360;&#2379;&#2354;&#2375;&#2358;&#2344; &#2324;&#2352; &lt;1ms &#2354;&#2370;&#2346;-&#2325;&#2367;&#2354; &#2360;&#2369;&#2352;&#2325;&#2381;&#2359;&#2366;</h3>
+            <p class="f-desc" data-i18n="f3_desc">UI &#2341;&#2381;&#2352;&#2375;&#2337; &#2325;&#2375; &#2348;&#2332;&#2366;&#2351; &#2360;&#2350;&#2352;&#2381;&#2346;&#2367;&#2340; &#2348;&#2376;&#2325;&#2327;&#2381;&#2352;&#2366;&#2313;&#2306;&#2337; &#2357;&#2352;&#2381;&#2325;&#2352; &#2341;&#2381;&#2352;&#2375;&#2337; &#2346;&#2352; &#2330;&#2354;&#2340;&#2366; &#2361;&#2376;&#2404; &#2327;&#2354;&#2340;&#2368; &#2360;&#2375; &#2354;&#2367;&#2326;&#2366; &#2327;&#2351;&#2366; while(true){} &#2311;&#2344;&#2347;&#2364;&#2366;&#2311;&#2344;&#2366;&#2311;&#2335; &#2354;&#2370;&#2346; &#2349;&#2368; &#2348;&#2367;&#2344;&#2366; &#2319;&#2337;&#2367;&#2335;&#2352; &#2309;&#2335;&#2325;&#2366;&#2319; 1 &#2350;&#2367;&#2354;&#2368;&#2360;&#2375;&#2325;&#2306;&#2337; &#2360;&#2375; &#2325;&#2350; &#2360;&#2350;&#2351; &#2350;&#2375;&#2306; &#2360;&#2366;&#2347;&#2364; &#2340;&#2380;&#2352; &#2346;&#2352; &#2352;&#2379;&#2325; &#2342;&#2367;&#2351;&#2366; &#2332;&#2366;&#2340;&#2366; &#2361;&#2376;&#2404;</p>
+            <div class="f-code" data-i18n="f3_badge">&#2332;&#2364;&#2368;&#2352;&#2379; UI &#2347;&#2364;&#2381;&#2352;&#2368;&#2332;&#2364; &#183; 15s &#2357;&#2377;&#2330;&#2337;&#2377;&#2327; &#183; 1:1 &#2354;&#2366;&#2311;&#2344; &#2319;&#2352;&#2352;</div>
+          </article>
+          <article class="feature-card" id="cap4">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-term"/></svg></span>
+              <span class="f-idx">02.4</span>
+            </div>
+            <h3 class="f-title" data-i18n="f4_title">&#2360;&#2381;&#2335;&#2381;&#2352;&#2325;&#2381;&#2330;&#2352;&#2381;&#2337; &#2325;&#2306;&#2360;&#2379;&#2354; &#2324;&#2352; &#2311;&#2306;&#2335;&#2352;&#2376;&#2325;&#2381;&#2335;&#2367;&#2357; Stdin</h3>
+            <p class="f-desc" data-i18n="f4_desc">&#2344;&#2375;&#2360;&#2381;&#2335;&#2375;&#2337; &#2321;&#2348;&#2381;&#2332;&#2375;&#2325;&#2381;&#2335;&#2381;&#2360;, &#2320;&#2352;&#2375;, console.warn/error &#2354;&#2375;&#2357;&#2354;&#2381;&#2360; &#2324;&#2352; &#2361;&#2366;&#2312;-&#2352;&#2375;&#2332;&#2364;&#2379;&#2354;&#2381;&#2351;&#2370;&#2358;&#2344; &#2335;&#2366;&#2311;&#2350;&#2352;&#2381;&#2360; &#2325;&#2379; &#2360;&#2381;&#2346;&#2359;&#2381;&#2335; &#2352;&#2370;&#2346; &#2360;&#2375; &#2342;&#2375;&#2326;&#2375;&#2306;, &#2340;&#2341;&#2366; CLI-&#2360;&#2381;&#2335;&#2366;&#2311;&#2354; JavaScript &#2309;&#2349;&#2381;&#2351;&#2366;&#2360; &#2325;&#2375; &#2354;&#2367;&#2319; &#2354;&#2366;&#2311;&#2357; &#2351;&#2370;&#2332;&#2364;&#2352; &#2311;&#2344;&#2346;&#2369;&#2335; &#2360;&#2381;&#2357;&#2368;&#2325;&#2366;&#2352; &#2325;&#2352;&#2375;&#2306;&#2404;</p>
+            <div class="f-code" data-i18n="f4_badge">&#2360;&#2381;&#2335;&#2381;&#2352;&#2325;&#2381;&#2330;&#2352;&#2381;&#2337; &#2321;&#2348;&#2381;&#2332;&#2375;&#2325;&#2381;&#2335;&#2381;&#2360; &#183; &#2354;&#2366;&#2311;&#2357; &#2311;&#2344;&#2346;&#2369;&#2335; &#183; &#2360;&#2381;&#2346;&#2381;&#2354;&#2367;&#2335; &#2325;&#2306;&#2360;&#2379;&#2354;</div>
+          </article>
+          <article class="feature-card" id="cap5">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-cube"/></svg></span>
+              <span class="f-idx">02.5</span>
+            </div>
+            <h3 class="f-title" data-i18n="f5_title">JS/TS AST &#2321;&#2335;&#2379;-&#2325;&#2306;&#2346;&#2381;&#2354;&#2368;&#2335; &#2324;&#2352; &#2357;&#2344;-&#2335;&#2376;&#2346; Prettier-&#2360;&#2381;&#2335;&#2366;&#2311;&#2354; &#2347;&#2364;&#2377;&#2352;&#2381;&#2350;&#2375;&#2335;&#2352;</h3>
+            <p class="f-desc" data-i18n="f5_desc">&#2311;&#2360;&#2350;&#2375;&#2306; &#2360;&#2350;&#2352;&#2381;&#2346;&#2367;&#2340; JS/TS 21-&#2325;&#2368; &#2360;&#2367;&#2306;&#2348;&#2354; &#2348;&#2366;&#2352; (=&gt;, ?., ===, ``, ${}), Array/Promise/JSON/Math/DOM &#2346;&#2352; &#2321;&#2347;&#2364;&#2354;&#2366;&#2311;&#2344; AST &#2325;&#2306;&#2346;&#2381;&#2354;&#2368;&#2358;&#2344; &#2324;&#2352; &#2360;&#2367;&#2306;&#2327;&#2354;-Undo JS/TS/JSON &#2347;&#2364;&#2377;&#2352;&#2381;&#2350;&#2375;&#2335;&#2352; &#2358;&#2366;&#2350;&#2367;&#2354; &#2361;&#2376;&#2404;</p>
+            <div class="f-code" data-i18n="f5_badge">JS/TS &#2360;&#2367;&#2306;&#2348;&#2354; &#2348;&#2366;&#2352; &#183; AST &#2325;&#2306;&#2346;&#2381;&#2354;&#2368;&#2358;&#2344; &#183; JSON &#2357;&#2376;&#2354;&#2367;&#2337;&#2375;&#2335;&#2352;</div>
+          </article>
+          <article class="feature-card" id="cap6">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-cloud"/></svg></span>
+              <span class="f-idx">02.6</span>
+            </div>
+            <h3 class="f-title" data-i18n="f6_title">&#2321;&#2335;&#2379;&#2350;&#2376;&#2335;&#2367;&#2325; &#2325;&#2381;&#2354;&#2366;&#2313;&#2337; Node.js &#2350;&#2354;&#2381;&#2335;&#2368;-&#2347;&#2364;&#2366;&#2311;&#2354; &#2348;&#2306;&#2337;&#2354;&#2352;</h3>
+            <p class="f-desc" data-i18n="f6_desc">Node.js &#2325;&#2379;&#2352; API (http, fs, crypto, child_process) &#2351;&#2366; // @cloud &#2311;&#2360;&#2381;&#2340;&#2375;&#2350;&#2366;&#2354; &#2325;&#2352; &#2352;&#2361;&#2375; &#2361;&#2376;&#2306;? SuperCode &#2310;&#2346;&#2325;&#2375; &#2354;&#2379;&#2325;&#2354; &#2350;&#2377;&#2337;&#2381;&#2351;&#2370;&#2354;&#2381;&#2360; &#2325;&#2379; &#2309;&#2346;&#2344;&#2375;-&#2310;&#2346; &#2319;&#2325; &#2319;&#2325;&#2368;&#2325;&#2371;&#2340; &#2325;&#2381;&#2354;&#2366;&#2313;&#2337; Node.js &#2346;&#2375;&#2354;&#2379;&#2337; &#2350;&#2375;&#2306; &#2348;&#2306;&#2337;&#2354; &#2325;&#2352; &#2352;&#2344; &#2325;&#2352;&#2340;&#2366; &#2361;&#2376;&#2404;</p>
+            <div class="f-code" data-i18n="f6_badge">Node.js API &#2346;&#2361;&#2330;&#2366;&#2344; &#183; &#2350;&#2354;&#2381;&#2335;&#2368;-&#2350;&#2377;&#2337;&#2381;&#2351;&#2370;&#2354; &#2325;&#2381;&#2354;&#2366;&#2313;&#2337; &#2348;&#2306;&#2337;&#2354;</div>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">&#2347;&#2364;&#2379;&#2344;, &#2347;&#2364;&#2379;&#2354;&#2381;&#2337;&#2375;&#2348;&#2354; &#2324;&#2352; &#2335;&#2376;&#2348;&#2354;&#2375;&#2335; &#2325;&#2375; &#2354;&#2367;&#2319; &#183; &#2361;&#2354;&#2381;&#2325;&#2366; 40.2 MB</span>
+        <a class="link-arrow" href="index.html">
+          <span data-i18n="nav_home">&#2350;&#2369;&#2326;&#2381;&#2351; &#2346;&#2375;&#2332;</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 03 · STEP-BY-STEP WORKFLOW GUIDE ==================== -->
+  <section class="section" id="workflow">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">03</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_wf_eyebrow">&#2360;&#2381;&#2335;&#2375;&#2346;-&#2348;&#2366;&#2351;-&#2360;&#2381;&#2335;&#2375;&#2346; &#2313;&#2346;&#2351;&#2379;&#2327; &#2327;&#2366;&#2311;&#2337;</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="workflow_title">SuperCode &#2350;&#2375;&#2306; &#2350;&#2377;&#2337;&#2381;&#2351;&#2370;&#2354;&#2352; JavaScript &#2325;&#2376;&#2360;&#2375; &#2348;&#2344;&#2366;&#2319;&#2306; &#2324;&#2352; &#2335;&#2375;&#2360;&#2381;&#2335; &#2325;&#2352;&#2375;&#2306;</h2>
+        <p class="sec-lead" data-i18n="workflow_lead">JS &#2350;&#2375;&#2306; LeetCode &#2346;&#2381;&#2352;&#2376;&#2325;&#2381;&#2335;&#2367;&#2360;, &#2350;&#2377;&#2337;&#2381;&#2351;&#2370;&#2354;&#2352; &#2351;&#2370;&#2335;&#2367;&#2354;&#2367;&#2335;&#2368;&#2332;&#2364;, API &#2346;&#2375;&#2354;&#2379;&#2337; &#2350;&#2377;&#2337;&#2354;&#2367;&#2306;&#2327; &#2324;&#2352; &#2347;&#2364;&#2381;&#2352;&#2306;&#2335;&#2319;&#2306;&#2337; &#2354;&#2377;&#2332;&#2367;&#2325; &#2335;&#2375;&#2360;&#2381;&#2335;&#2367;&#2306;&#2327; &#2325;&#2375; &#2354;&#2367;&#2319; &#2310;&#2342;&#2352;&#2381;&#2358;&#2404;</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="workflow-grid">
+          <article class="wf-step" id="step1">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 01</span>
+              <span class="wf-step__cmd">index.js / util.mjs</span>
+            </div>
+            <h3 data-i18n="wf1_title">&#2360;&#2381;&#2335;&#2376;&#2306;&#2337;&#2309;&#2354;&#2379;&#2344; .js, .mjs, .cjs &#2351;&#2366; .json &#2347;&#2364;&#2366;&#2311;&#2354;&#2375;&#2306; &#2348;&#2344;&#2366;&#2319;&#2306;</h3>
+            <p data-i18n="wf1_desc">&#2360;&#2368;&#2343;&#2375; &#2358;&#2369;&#2342;&#2381;&#2343; JavaScript &#2351;&#2366; &#2350;&#2377;&#2337;&#2381;&#2351;&#2370;&#2354;&#2352; &#2346;&#2376;&#2325;&#2375;&#2332; &#2354;&#2367;&#2326;&#2375;&#2306; &#8212; &#2325;&#2367;&#2360;&#2368; index.html &#2352;&#2376;&#2346;&#2352; &#2325;&#2368; &#2332;&#2364;&#2352;&#2370;&#2352;&#2340; &#2344;&#2361;&#2368;&#2306;&#2404;</p>
+          </article>
+          <article class="wf-step" id="step2">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 02</span>
+              <span class="wf-step__cmd">JS/TS Symbol Bar</span>
+            </div>
+            <h3 data-i18n="wf2_title">&#2360;&#2366;&#2347;&#2364; Async &#2324;&#2352; Arrow &#2347;&#2364;&#2306;&#2325;&#2381;&#2358;&#2344;&#2381;&#2360; &#2354;&#2367;&#2326;&#2375;&#2306;</h3>
+            <p data-i18n="wf2_desc">&#2321;&#2347;&#2364;&#2354;&#2366;&#2311;&#2344; AST &#2321;&#2335;&#2379;-&#2325;&#2306;&#2346;&#2381;&#2354;&#2368;&#2335; &#2324;&#2352; &#2357;&#2344;-&#2335;&#2376;&#2346; JS &#2347;&#2364;&#2377;&#2352;&#2381;&#2350;&#2375;&#2335;&#2367;&#2306;&#2327; &#2325;&#2375; &#2360;&#2366;&#2341; 1-&#2335;&#2376;&#2346; &#2350;&#2375;&#2306; =&gt;, ?., === &#2324;&#2352; &#2335;&#2375;&#2350;&#2381;&#2346;&#2354;&#2375;&#2335;-&#2354;&#2367;&#2335;&#2352;&#2354; &#2348;&#2376;&#2325;&#2335;&#2367;&#2325;&#2381;&#2360; &#2325;&#2366; &#2313;&#2346;&#2351;&#2379;&#2327; &#2325;&#2352;&#2375;&#2306;&#2404;</p>
+          </article>
+          <article class="wf-step" id="step3">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 03</span>
+              <span class="wf-step__cmd">Toolbar -&gt; Run &#9654;</span>
+            </div>
+            <h3 data-i18n="wf3_title">&#2310;&#2311;&#2360;&#2379;&#2354;&#2375;&#2335;&#2375;&#2337; &#2357;&#2352;&#2381;&#2325;&#2352; &#2325;&#2306;&#2360;&#2379;&#2354; &#2350;&#2375;&#2306; &#2340;&#2369;&#2352;&#2306;&#2340; &#2352;&#2344; &#2325;&#2352;&#2375;&#2306;</h3>
+            <p data-i18n="wf3_desc">&#2354;&#2379;&#2325;&#2354; &#2350;&#2377;&#2337;&#2381;&#2351;&#2370;&#2354;&#2381;&#2360; &#2354;&#2367;&#2306;&#2325; &#2325;&#2352;&#2344;&#2375;, &#2360;&#2381;&#2335;&#2381;&#2352;&#2325;&#2381;&#2330;&#2352;&#2381;&#2337; &#2325;&#2306;&#2360;&#2379;&#2354; &#2310;&#2313;&#2335;&#2346;&#2369;&#2335; &#2342;&#2375;&#2326;&#2344;&#2375; &#2324;&#2352; &#2350;&#2367;&#2354;&#2368;&#2360;&#2375;&#2325;&#2306;&#2337; &#2352;&#2344;&#2335;&#2366;&#2311;&#2350; &#2332;&#2366;&#2306;&#2330;&#2344;&#2375; &#2325;&#2375; &#2354;&#2367;&#2319; Run &#2342;&#2348;&#2366;&#2319;&#2306;&#2404;</p>
+          </article>
+          <article class="wf-step" id="step4">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 04</span>
+              <span class="wf-step__cmd">Web Studio / Git</span>
+            </div>
+            <h3 data-i18n="wf4_title">&#2354;&#2366;&#2311;&#2357; DOM &#2346;&#2381;&#2352;&#2368;&#2357;&#2381;&#2351;&#2370; &#2346;&#2352; &#2360;&#2381;&#2357;&#2367;&#2330; &#2325;&#2352;&#2375;&#2306; &#2351;&#2366; Git &#2346;&#2352; &#2346;&#2369;&#2358; &#2325;&#2352;&#2375;&#2306;</h3>
+            <p data-i18n="wf4_desc">&#2346;&#2370;&#2352;&#2366; &#2348;&#2381;&#2352;&#2366;&#2313;&#2332;&#2364;&#2352; DOM/Canvas/WASM &#2330;&#2366;&#2361;&#2367;&#2319;? &#2309;&#2346;&#2344;&#2368; &#2360;&#2381;&#2325;&#2381;&#2352;&#2367;&#2346;&#2381;&#2335;&#2381;&#2360; &#2325;&#2379; Web Studio &#2350;&#2375;&#2306; .html &#2347;&#2364;&#2366;&#2311;&#2354; &#2360;&#2375; &#2332;&#2379;&#2337;&#2364;&#2375;&#2306;, &#2351;&#2366; &#2360;&#2368;&#2343;&#2375; &#2357;&#2367;&#2332;&#2364;&#2369;&#2309;&#2354; Git &#2360;&#2375; &#2325;&#2350;&#2367;&#2335; &#2325;&#2352;&#2375;&#2306;&#2404;</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="wf_foot_note">6 &#2311;&#2344;-&#2348;&#2367;&#2354;&#2381;&#2335; JavaScript &#2313;&#2342;&#2366;&#2361;&#2352;&#2339; &#183; .js &#183; .mjs &#183; .cjs &#183; .ts &#183; .json &#2360;&#2350;&#2352;&#2381;&#2341;&#2367;&#2340;</span>
+        <a class="link-arrow" href="https://supercode-ide.github.io/tutorial?ref=official_web" data-supercode-tutorial="true">
+          <span data-i18n="cta_tutorial">&#2320;&#2346; &#2327;&#2366;&#2311;&#2337;</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 04 · FEATURED SUMMARY & COMPARISON MATRIX ==================== -->
+  <section class="section section--alt" id="comparison">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">04</span>
+        <span class="rule"></span>
+        <span data-i18n="comp_eyebrow">&#2325;&#2381;&#2359;&#2350;&#2340;&#2366; &#2340;&#2369;&#2354;&#2344;&#2366; &#2340;&#2366;&#2354;&#2367;&#2325;&#2366;</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="table_h2">SuperCode JavaScript IDE &#2348;&#2344;&#2366;&#2350; &#2348;&#2381;&#2352;&#2366;&#2313;&#2332;&#2364;&#2352; &#2325;&#2306;&#2360;&#2379;&#2354; &#2332;&#2369;&#2327;&#2366;&#2337;&#2364;</h2>
+        <p class="snippet-definition" data-i18n="snippet_p"><strong>SuperCode JavaScript IDE</strong> Android &#2325;&#2375; &#2354;&#2367;&#2319; &#2319;&#2325; &#2360;&#2350;&#2352;&#2381;&#2346;&#2367;&#2340; &#2321;&#2347;&#2364;&#2354;&#2366;&#2311;&#2344; ES2024 JavaScript &#2352;&#2344;&#2352; &#2324;&#2352; &#2350;&#2377;&#2337;&#2381;&#2351;&#2370;&#2354;&#2352; &#2325;&#2379;&#2337; &#2319;&#2337;&#2367;&#2335;&#2352; &#2361;&#2376;&#2404; &#2351;&#2361; &#2360;&#2348;-&#2350;&#2367;&#2354;&#2368;&#2360;&#2375;&#2325;&#2306;&#2337; &#2311;&#2344;&#2347;&#2364;&#2366;&#2311;&#2344;&#2366;&#2311;&#2335;-&#2354;&#2370;&#2346; &#2360;&#2369;&#2352;&#2325;&#2381;&#2359;&#2366;, &#2360;&#2381;&#2335;&#2381;&#2352;&#2325;&#2381;&#2330;&#2352;&#2381;&#2337; &#2325;&#2306;&#2360;&#2379;&#2354; &#2310;&#2313;&#2335;&#2346;&#2369;&#2335;, AST &#2321;&#2335;&#2379;-&#2325;&#2306;&#2346;&#2381;&#2354;&#2368;&#2335; &#2324;&#2352; &#2325;&#2381;&#2354;&#2366;&#2313;&#2337; Node.js &#2360;&#2346;&#2379;&#2352;&#2381;&#2335; &#2325;&#2375; &#2360;&#2366;&#2341; &#2310;&#2311;&#2360;&#2379;&#2354;&#2375;&#2335;&#2375;&#2337; &#2357;&#2352;&#2381;&#2325;&#2352; &#2341;&#2381;&#2352;&#2375;&#2337; &#2350;&#2375;&#2306; &#2350;&#2354;&#2381;&#2335;&#2368;-&#2347;&#2364;&#2366;&#2311;&#2354; ES Modules &#2357; CommonJS &#2360;&#2381;&#2325;&#2381;&#2352;&#2367;&#2346;&#2381;&#2335;&#2381;&#2360; &#2330;&#2354;&#2366;&#2340;&#2366; &#2361;&#2376;&#2404;</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="table-wrap">
+          <table class="obsidian-benchmark-table">
+            <caption data-i18n="table_caption">ANDROID JAVASCRIPT &#2344;&#2367;&#2359;&#2381;&#2346;&#2366;&#2342;&#2344; &#2324;&#2352; &#2319;&#2337;&#2367;&#2335;&#2352; &#2350;&#2376;&#2335;&#2381;&#2352;&#2367;&#2325;&#2381;&#2360;</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="th_0">JS &#2325;&#2381;&#2359;&#2350;&#2340;&#2366;</th>
+                <th scope="col" data-i18n="th_1">SuperCode JS IDE</th>
+                <th scope="col" data-i18n="th_2">&#2325;&#2375;&#2357;&#2354; HTML &#2357;&#2375;&#2348; &#2319;&#2337;&#2367;&#2335;&#2352;</th>
+                <th scope="col" data-i18n="th_3">&#2321;&#2344;&#2354;&#2366;&#2311;&#2344; JS &#2347;&#2364;&#2367;&#2337;&#2354;&#2381;&#2360;</th>
+                <th scope="col" data-i18n="th_4">CLI Node &#2360;&#2375;&#2335;&#2309;&#2346;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="tr1_c0">&#2360;&#2381;&#2335;&#2376;&#2306;&#2337;&#2309;&#2354;&#2379;&#2344; JS &#2352;&#2344;</th>
+                <td><strong data-i18n="tr1_c1">&#2360;&#2368;&#2343;&#2366; .js / .mjs / .cjs &#2321;&#2347;&#2364;&#2354;&#2366;&#2311;&#2344; &#2344;&#2367;&#2359;&#2381;&#2346;&#2366;&#2342;&#2344;</strong></td>
+                <td data-i18n="tr1_c2">&#2344;&#2325;&#2354;&#2368; HTML &#2347;&#2364;&#2366;&#2311;&#2354; &#2332;&#2364;&#2352;&#2370;&#2352;&#2368;</td>
+                <td data-i18n="tr1_c3">&#2311;&#2306;&#2335;&#2352;&#2344;&#2375;&#2335; &#2309;&#2344;&#2367;&#2357;&#2366;&#2352;&#2381;&#2351;</td>
+                <td data-i18n="tr1_c4">100MB+ CLI &#2311;&#2306;&#2360;&#2381;&#2335;&#2377;&#2354;</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr2_c0">&#2350;&#2377;&#2337;&#2381;&#2351;&#2370;&#2354; &#2360;&#2367;&#2360;&#2381;&#2335;&#2350;</th>
+                <td><strong data-i18n="tr2_c1">&#2354;&#2379;&#2325;&#2354; ESM import/export + CommonJS + .json</strong></td>
+                <td data-i18n="tr2_c2">file:// CORS &#2346;&#2352; &#2335;&#2370;&#2335; &#2332;&#2366;&#2340;&#2366; &#2361;&#2376;</td>
+                <td data-i18n="tr2_c3">&#2325;&#2375;&#2357;&#2354; &#2319;&#2325; &#2347;&#2364;&#2366;&#2311;&#2354; / &#2343;&#2368;&#2350;&#2366; CDN</td>
+                <td data-i18n="tr2_c4">&#2360;&#2350;&#2352;&#2381;&#2341;&#2367;&#2340;</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr3_c0">&#2311;&#2344;&#2347;&#2364;&#2366;&#2311;&#2344;&#2366;&#2311;&#2335; &#2354;&#2370;&#2346; &#2360;&#2369;&#2352;&#2325;&#2381;&#2359;&#2366;</th>
+                <td><strong data-i18n="tr3_c1">&#2310;&#2311;&#2360;&#2379;&#2354;&#2375;&#2335;&#2375;&#2337; &#2357;&#2352;&#2381;&#2325;&#2352; (&lt;1ms &#2340;&#2369;&#2352;&#2306;&#2340; &#2325;&#2367;&#2354;, 0 &#2354;&#2376;&#2327;)</strong></td>
+                <td data-i18n="tr3_c2">&#2346;&#2370;&#2352;&#2366; WebView UI &#2361;&#2376;&#2306;&#2327; &#2361;&#2379; &#2332;&#2366;&#2340;&#2366; &#2361;&#2376;</td>
+                <td data-i18n="tr3_c3">&#2350;&#2379;&#2348;&#2366;&#2311;&#2354; &#2348;&#2381;&#2352;&#2366;&#2313;&#2332;&#2364;&#2352; &#2335;&#2376;&#2348; &#2309;&#2335;&#2325;&#2340;&#2366; &#2361;&#2376;</td>
+                <td data-i18n="tr3_c4">&#2350;&#2376;&#2344;&#2369;&#2309;&#2354; &#2325;&#2367;&#2354;</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr4_c0">JS/TS &#2347;&#2364;&#2377;&#2352;&#2381;&#2350;&#2375;&#2335;&#2367;&#2306;&#2327;</th>
+                <td><strong data-i18n="tr4_c1">100% &#2321;&#2347;&#2364;&#2354;&#2366;&#2311;&#2344; JS/TS/JSX/JSON &#2347;&#2364;&#2377;&#2352;&#2381;&#2350;&#2375;&#2335;&#2352;</strong></td>
+                <td data-i18n="tr4_c2">&#2348;&#2375;&#2360;&#2367;&#2325; &#2351;&#2366; &#2346;&#2381;&#2354;&#2327;&#2311;&#2344;-&#2344;&#2367;&#2352;&#2381;&#2349;&#2352;</td>
+                <td data-i18n="tr4_c3">&#2325;&#2375;&#2357;&#2354; &#2321;&#2344;&#2354;&#2366;&#2311;&#2344;</td>
+                <td data-i18n="tr4_c4">npm prettier &#2310;&#2357;&#2358;&#2381;&#2351;&#2325;</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr5_c0">Node.js API &#2360;&#2346;&#2379;&#2352;&#2381;&#2335;</th>
+                <td><strong data-i18n="tr5_c1">&#2354;&#2379;&#2325;&#2354; &#2350;&#2377;&#2337;&#2381;&#2351;&#2370;&#2354;&#2381;&#2360; &#2325;&#2366; &#2325;&#2381;&#2354;&#2366;&#2313;&#2337; Node.js &#2321;&#2335;&#2379;-&#2348;&#2306;&#2337;&#2354;</strong></td>
+                <td data-i18n="tr5_c2">&#2325;&#2375;&#2357;&#2354; &#2348;&#2381;&#2352;&#2366;&#2313;&#2332;&#2364;&#2352; API</td>
+                <td data-i18n="tr5_c3">&#2325;&#2375;&#2357;&#2354; &#2348;&#2381;&#2352;&#2366;&#2313;&#2332;&#2364;&#2352; API</td>
+                <td data-i18n="tr5_c4">&#2325;&#2375;&#2357;&#2354; &#2354;&#2379;&#2325;&#2354; CLI</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">&#2347;&#2364;&#2379;&#2344;, &#2347;&#2364;&#2379;&#2354;&#2381;&#2337;&#2375;&#2348;&#2354; &#2324;&#2352; &#2335;&#2376;&#2348;&#2354;&#2375;&#2335; &#2325;&#2375; &#2354;&#2367;&#2319; &#183; &#2361;&#2354;&#2381;&#2325;&#2366; 40.2 MB</span>
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener">
+          <span>Google Play</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 05 · VISIBLE EDITORIAL FAQ ==================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-head">
+          <div class="sec-index">
+            <span class="num">05</span>
+            <span class="rule"></span>
+            <span data-i18n="sec3_eyebrow">&#2360;&#2357;&#2366;&#2354; &#2324;&#2352; &#2332;&#2357;&#2366;&#2348;</span>
+          </div>
+          <h2 class="h2" data-i18n="sec3_title">&#2309;&#2325;&#2381;&#2360;&#2352; &#2346;&#2370;&#2331;&#2375; &#2332;&#2366;&#2344;&#2375; &#2357;&#2366;&#2354;&#2375; &#2360;&#2357;&#2366;&#2354; (FAQ)</h2>
+          <p class="sec-lead" data-i18n="faq_lead">&#2348;&#2367;&#2344;&#2366; HTML &#2325;&#2375; .js &#2347;&#2364;&#2366;&#2311;&#2354; &#2330;&#2354;&#2366;&#2344;&#2375;, ES &#2350;&#2377;&#2337;&#2381;&#2351;&#2370;&#2354;&#2381;&#2360;, &#2311;&#2344;&#2347;&#2364;&#2366;&#2311;&#2344;&#2366;&#2311;&#2335; &#2354;&#2370;&#2346; &#2360;&#2369;&#2352;&#2325;&#2381;&#2359;&#2366; &#2324;&#2352; Node.js &#2350;&#2377;&#2337;&#2381;&#2351;&#2370;&#2354;&#2381;&#2360; &#2360;&#2375; &#2332;&#2369;&#2337;&#2364;&#2375; &#2360;&#2357;&#2366;&#2354;&#2404;</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary><span data-i18n="faq1_q">&#2325;&#2381;&#2351;&#2366; &#2350;&#2376;&#2306; &#2348;&#2367;&#2344;&#2366; HTML &#2346;&#2375;&#2332; &#2348;&#2344;&#2366;&#2319; Android &#2346;&#2352; &#2360;&#2368;&#2343;&#2375; .js &#2347;&#2364;&#2366;&#2311;&#2354; &#2330;&#2354;&#2366; &#2360;&#2325;&#2340;&#2366; &#2361;&#2370;&#2306;?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq1_a">&#2332;&#2368; &#2361;&#2366;&#2306;! &#2325;&#2367;&#2360;&#2368; &#2349;&#2368; .js, .mjs &#2351;&#2366; .cjs &#2347;&#2364;&#2366;&#2311;&#2354; &#2346;&#2352; Run &#2342;&#2348;&#2366;&#2340;&#2375; &#2361;&#2368; SuperCode &#2325;&#2366; &#2360;&#2381;&#2335;&#2376;&#2306;&#2337;&#2309;&#2354;&#2379;&#2344; JavaScript &#2325;&#2306;&#2360;&#2379;&#2354; &#2340;&#2369;&#2352;&#2306;&#2340; &#2321;&#2347;&#2364;&#2354;&#2366;&#2311;&#2344; &#2330;&#2366;&#2354;&#2370; &#2361;&#2379; &#2332;&#2366;&#2340;&#2366; &#2361;&#2376;&#2404;</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq2_q">&#2325;&#2381;&#2351;&#2366; &#2350;&#2376;&#2306; &#2309;&#2346;&#2344;&#2375; JavaScript &#2325;&#2379;&#2337; &#2325;&#2379; &#2325;&#2312; &#2347;&#2364;&#2366;&#2311;&#2354;&#2379;&#2306; &#2350;&#2375;&#2306; &#2348;&#2366;&#2306;&#2335;&#2325;&#2352; import/export &#2351;&#2366; require() &#2325;&#2352; &#2360;&#2325;&#2340;&#2366; &#2361;&#2370;&#2306;?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq2_a">&#2361;&#2366;&#2306;&#2404; ES Modules (import / export), CommonJS (require / module.exports) &#2324;&#2352; .json &#2311;&#2350;&#2381;&#2346;&#2379;&#2352;&#2381;&#2335;&#2381;&#2360; &#2310;&#2346;&#2325;&#2375; &#2354;&#2379;&#2325;&#2354; &#2346;&#2381;&#2352;&#2379;&#2332;&#2375;&#2325;&#2381;&#2335; &#2347;&#2364;&#2366;&#2311;&#2354;&#2379;&#2306; &#2324;&#2352; &#2348;&#2367;&#2344;&#2366; &#2360;&#2375;&#2357; &#2325;&#2367;&#2319; &#2335;&#2376;&#2348;&#2381;&#2360; &#2350;&#2375;&#2306; &#2346;&#2370;&#2352;&#2368; &#2340;&#2352;&#2361; &#2325;&#2366;&#2350; &#2325;&#2352;&#2340;&#2375; &#2361;&#2376;&#2306;&#2404;</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq3_q">&#2325;&#2381;&#2351;&#2366; &#2327;&#2354;&#2340;&#2368; &#2360;&#2375; &#2354;&#2327;&#2366; while(true) &#2354;&#2370;&#2346; &#2319;&#2337;&#2367;&#2335;&#2352; &#2325;&#2379; &#2361;&#2376;&#2306;&#2327; &#2325;&#2352;&#2375;&#2327;&#2366; &#2351;&#2366; &#2309;&#2344;&#2360;&#2375;&#2357;&#2381;&#2337; &#2325;&#2379;&#2337; &#2350;&#2367;&#2335;&#2366; &#2342;&#2375;&#2327;&#2366;?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq3_a">&#2325;&#2349;&#2368; &#2344;&#2361;&#2368;&#2306;&#2404; &#2360;&#2349;&#2368; &#2360;&#2381;&#2325;&#2381;&#2352;&#2367;&#2346;&#2381;&#2335;&#2381;&#2360; 15-&#2360;&#2375;&#2325;&#2306;&#2337; &#2357;&#2377;&#2330;&#2337;&#2377;&#2327; &#2324;&#2352; &#2310;&#2313;&#2335;&#2346;&#2369;&#2335;-&#2347;&#2364;&#2381;&#2354;&#2337; &#2327;&#2366;&#2352;&#2381;&#2337; &#2360;&#2375; &#2360;&#2369;&#2352;&#2325;&#2381;&#2359;&#2367;&#2340; &#2309;&#2354;&#2327; &#2348;&#2376;&#2325;&#2327;&#2381;&#2352;&#2366;&#2313;&#2306;&#2337; &#2357;&#2352;&#2381;&#2325;&#2352; &#2350;&#2375;&#2306; &#2330;&#2354;&#2340;&#2368; &#2361;&#2376;&#2306;, &#2332;&#2379; UI &#2341;&#2381;&#2352;&#2375;&#2337; &#2325;&#2379; &#2331;&#2369;&#2319; &#2348;&#2367;&#2344;&#2366; &#2309;&#2344;&#2306;&#2340; &#2354;&#2370;&#2346;&#2381;&#2360; &#2325;&#2379; 1 &#2350;&#2367;&#2354;&#2368;&#2360;&#2375;&#2325;&#2306;&#2337; &#2325;&#2375; &#2349;&#2368;&#2340;&#2352; &#2348;&#2306;&#2342; &#2325;&#2352; &#2342;&#2375;&#2340;&#2366; &#2361;&#2376;&#2404;</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq4_q">&#2309;&#2327;&#2352; &#2350;&#2369;&#2333;&#2375; HTML, CSS &#2324;&#2352; WebAssembly &#2325;&#2375; &#2360;&#2366;&#2341; &#2357;&#2367;&#2332;&#2364;&#2369;&#2309;&#2354; &#2357;&#2375;&#2348;&#2360;&#2366;&#2311;&#2335; &#2348;&#2344;&#2366;&#2344;&#2368; &#2361;&#2379; &#2340;&#2379;?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq4_a">SuperCode &#2350;&#2375;&#2306; &#2342;&#2379;&#2344;&#2379;&#2306; &#2350;&#2380;&#2332;&#2370;&#2342; &#2361;&#2376;&#2306;! &#2358;&#2369;&#2342;&#2381;&#2343; JS/Node &#2350;&#2377;&#2337;&#2381;&#2351;&#2370;&#2354; &#2324;&#2352; &#2319;&#2354;&#2381;&#2327;&#2379;&#2352;&#2367;&#2342;&#2350; &#2325;&#2375; &#2354;&#2367;&#2319; &#2360;&#2381;&#2335;&#2376;&#2306;&#2337;&#2309;&#2354;&#2379;&#2344; JavaScript IDE &#2311;&#2360;&#2381;&#2340;&#2375;&#2350;&#2366;&#2354; &#2325;&#2352;&#2375;&#2306;, &#2324;&#2352; &#2354;&#2366;&#2311;&#2357; HTTP DOM &#2352;&#2375;&#2306;&#2337;&#2352;&#2367;&#2306;&#2327;, &#2352;&#2367;&#2360;&#2381;&#2346;&#2377;&#2344;&#2381;&#2360;&#2367;&#2357; &#2357;&#2381;&#2351;&#2370;&#2346;&#2379;&#2352;&#2381;&#2335; &#2357; Web DevTools &#2325;&#2375; &#2354;&#2367;&#2319; Full-Stack Web &amp; PHP Studio &#2326;&#2379;&#2354;&#2375;&#2306;&#2404;</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="siteFooter">
+  <div class="container">
+    <div class="footer-cta" id="footerCta">
+      <div>
+        <h2 class="h2" data-i18n="cta_h2">&#2310;&#2343;&#2369;&#2344;&#2367;&#2325; ES2024 JavaScript &#2325;&#2361;&#2368;&#2306; &#2349;&#2368; &#2354;&#2367;&#2326;&#2375;&#2306; &#2324;&#2352; &#2352;&#2344; &#2325;&#2352;&#2375;&#2306;&#2404;</h2>
+        <p data-i18n="cta_desc">&#2360;&#2381;&#2335;&#2376;&#2306;&#2337;&#2309;&#2354;&#2379;&#2344; &#2321;&#2347;&#2364;&#2354;&#2366;&#2311;&#2344; JS &#2350;&#2377;&#2337;&#2381;&#2351;&#2370;&#2354;&#2381;&#2360;, AST &#2321;&#2335;&#2379;-&#2325;&#2306;&#2346;&#2381;&#2354;&#2368;&#2335; &#2324;&#2352; &#2347;&#2364;&#2369;&#2354;-&#2360;&#2381;&#2335;&#2376;&#2325; Web DevTools &#2325;&#2375; &#2354;&#2367;&#2319; Google Play &#2360;&#2375; SuperCode IDE &#2311;&#2306;&#2360;&#2381;&#2335;&#2377;&#2354; &#2325;&#2352;&#2375;&#2306;&#2404;</p>
+      </div>
+      <div class="footer-cta__btns">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="cta_btn">Google Play &#2360;&#2375; &#2346;&#2366;&#2319;&#2306;</span>
+        </a>
+        <a href="https://supercode-ide.github.io/tutorial?ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+          <span data-i18n="cta_tutorial">&#2320;&#2346; &#2327;&#2366;&#2311;&#2337;</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+          <span>SuperCode</span>
+          <span class="brand__tag">IDE</span>
+        </a>
+        <p data-i18n="footer_tagline">&#2342;&#2369;&#2344;&#2367;&#2351;&#2366; &#2349;&#2352; &#2325;&#2375; Android &#2337;&#2375;&#2357;&#2354;&#2346;&#2352;&#2381;&#2360;, &#2331;&#2366;&#2340;&#2381;&#2352;&#2379;&#2306; &#2324;&#2352; &#2358;&#2367;&#2325;&#2381;&#2359;&#2325;&#2379;&#2306; &#2325;&#2375; &#2354;&#2367;&#2319; &#2344;&#2367;&#2352;&#2381;&#2350;&#2367;&#2340; &#2344;&#2375;&#2335;&#2367;&#2357; &#2350;&#2379;&#2348;&#2366;&#2311;&#2354; &#2325;&#2379;&#2337; &#2319;&#2337;&#2367;&#2335;&#2352; &#2324;&#2352; &#2321;&#2347;&#2364;&#2354;&#2366;&#2311;&#2344; IDE&#2404;</p>
+        <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
+        <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://supercode-ide.github.io/tutorial?ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">&#2320;&#2346; &#2327;&#2366;&#2311;&#2337;</span> &#8599;</a>
+          <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">&#2349;&#2366;&#2359;&#2366; &#2330;&#2369;&#2344;&#2375;&#2306;</span></button>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_core">&#2325;&#2379;&#2337; &#2319;&#2337;&#2367;&#2335;&#2352; &#2324;&#2352; &#2348;&#2337;&#2364;&#2368; &#2347;&#2364;&#2366;&#2311;&#2354;&#2375;&#2306;</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">&#2350;&#2369;&#2326;&#2381;&#2351; &#2346;&#2375;&#2332;</a></li>
+          <li><a href="code-editor.html" data-i18n="nav_code_editor">&#2325;&#2379;&#2337; &#2319;&#2337;&#2367;&#2335;&#2352;</a></li>
+          <li><a href="large-file-editor.html" data-i18n="nav_large_file">GB &#2348;&#2337;&#2364;&#2368; &#2347;&#2364;&#2366;&#2311;&#2354;&#2375;&#2306;</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_lang">&#2321;&#2347;&#2364;&#2354;&#2366;&#2311;&#2344; &#2325;&#2306;&#2346;&#2366;&#2311;&#2354;&#2352; &#2324;&#2352; &#2349;&#2366;&#2359;&#2366;&#2319;&#2306;</h4>
+        <ul>
+          <li><a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a></li>
+          <li><a href="c-compiler.html" data-i18n="nav_c_compiler">C &#2325;&#2306;&#2346;&#2366;&#2311;&#2354;&#2352;</a></li>
+          <li><a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a></li>
+          <li><a href="java-ide.html" data-i18n="nav_java_ide">Java 17</a></li>
+          <li><a href="javascript-ide.html" class="is-current" data-i18n="nav_js_ide">JavaScript</a></li>
+          <li><a href="lua-ide.html" data-i18n="nav_lua_ide">Lua 5.4</a></li>
+          <li><a href="shell-ide.html" data-i18n="nav_shell_ide">Shell &#2357; Kotlin</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_devops">Web, SQL &#2324;&#2352; &#2352;&#2367;&#2350;&#2379;&#2335; DevOps</h4>
+        <ul>
+          <li><a href="web-ide.html" data-i18n="nav_web_ide">Web &#2357; PHP</a></li>
+          <li><a href="sql-ide.html" data-i18n="nav_sql_ide">SQL &#2360;&#2381;&#2335;&#2370;&#2337;&#2367;&#2351;&#2379;</a></li>
+          <li><a href="git-client.html" data-i18n="nav_git_client">&#2357;&#2367;&#2332;&#2364;&#2369;&#2309;&#2354; Git</a></li>
+          <li><a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP &#2357; FTPS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <span>&copy; 2026 Phoenix Global Studios. All rights reserved.</span>
+      <span class="mono">com.phoenixglobal.supercodeeditor</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="mobile-bottom-bar" id="mobileBottomBar" aria-label="Quick App Actions">
+  <div class="dock-app-icon" aria-hidden="true"><svg><use href="#sc-logo"/></svg></div>
+  <div class="bottom-bar-info">
+    <div class="bottom-bar-title">SuperCode</div>
+    <div class="bottom-bar-sub"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  </div>
+  <div class="bottom-bar-actions">
+    <a href="https://supercode-ide.github.io/tutorial?ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">&#2320;&#2346; &#2327;&#2366;&#2311;&#2337;</a>
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn-play-mini">
+      <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
+      <span data-i18n="bottom_cta">&#2346;&#2366;&#2319;&#2306;</span>
+    </a>
+  </div>
+</aside>
+
+<div class="modal-overlay" id="langModal" role="dialog" aria-modal="true" aria-labelledby="langModalTitle">
+  <div class="lang-modal">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div class="modal-header">
+      <h3 id="langModalTitle" data-i18n="modal_title">&#2349;&#2366;&#2359;&#2366; &#2330;&#2369;&#2344;&#2375;&#2306;</h3>
+      <button type="button" class="btn-close-modal" onclick="closeLangModal()" aria-label="Close">&#10005;</button>
+    </div>
+    <div class="lang-grid">
+      <button type="button" class="lang-option" data-code="en" onclick="setLanguage('en')">English</button>
+      <button type="button" class="lang-option" data-code="zh" onclick="setLanguage('zh')">&#31616;&#20307;&#20013;&#25991;</button>
+      <button type="button" class="lang-option" data-code="es" onclick="setLanguage('es')">Espa&#241;ol</button>
+      <button type="button" class="lang-option" data-code="ja" onclick="setLanguage('ja')">&#26085;&#26412;&#35486;</button>
+      <button type="button" class="lang-option" data-code="de" onclick="setLanguage('de')">Deutsch</button>
+      <button type="button" class="lang-option" data-code="fr" onclick="setLanguage('fr')">Fran&#231;ais</button>
+      <button type="button" class="lang-option" data-code="ko" onclick="setLanguage('ko')">&#54620;&#44397;&#50612;</button>
+      <button type="button" class="lang-option" data-code="pt" onclick="setLanguage('pt')">Portugu&#234;s</button>
+      <button type="button" class="lang-option active" data-code="hi" onclick="setLanguage('hi')">&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;</button>
+      <button type="button" class="lang-option" data-code="ru" onclick="setLanguage('ru')">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var WORKBENCH_SAMPLES = {"js_esm": {"label": "js-es2024-studio/pipeline.mjs \u2014 ES2024 Async & Modules", "status": "JavaScript ES2024 \u00b7 Isolated Worker", "lines": ["<span class=\"tok-kw\">const<\/span> tasks = [<span class=\"tok-num\">12<\/span>, <span class=\"tok-num\">24<\/span>, <span class=\"tok-num\">36<\/span>].<span class=\"tok-fn\">map<\/span>(<span class=\"tok-kw\">async<\/span> (n) =&gt; ({ n, sq: n ** <span class=\"tok-num\">2<\/span> }));", "<span class=\"tok-kw\">const<\/span> settled = <span class=\"tok-kw\">await<\/span> Promise.<span class=\"tok-fn\">all<\/span>(tasks);", "console.<span class=\"tok-fn\">log<\/span>(<span class=\"tok-str\">&quot;Computed:&quot;<\/span>, JSON.<span class=\"tok-fn\">stringify<\/span>(settled));"], "output": ["<span class=\"term-prompt\">&#9656;<\/span> JS Worker &middot; pipeline.mjs (ES2024)", "Computed: [{&quot;n&quot;:12,&quot;sq&quot;:144},{&quot;n&quot;:24,&quot;sq&quot;:576},{&quot;n&quot;:36,&quot;sq&quot;:1296}]", "<span class=\"term-info\">&#10003; Exit 0 &middot; 3.2 ms &middot; Off-UI Worker Thread<\/span>"]}, "js_mod": {"label": "js-es2024-studio/mathUtil.js \u2192 index.js \u2014 ESM + CommonJS", "status": "JS Project \u00b7 Multi-Module Linked", "lines": ["<span class=\"tok-kw\">export class<\/span> <span class=\"tok-fn\">MovingAvg<\/span> {", "  #window = [];", "  <span class=\"tok-fn\">push<\/span>(v) { <span class=\"tok-kw\">this<\/span>.#window.<span class=\"tok-fn\">push<\/span>(v); <span class=\"tok-kw\">return<\/span> <span class=\"tok-kw\">this<\/span>.#window.<span class=\"tok-fn\">reduce<\/span>((a,b)=&gt;a+b,<span class=\"tok-num\">0<\/span>) / <span class=\"tok-kw\">this<\/span>.#window.length; }", "}"], "output": ["<span class=\"term-prompt\">&#9656;<\/span> [JS Project] Linked 2 local modules (entry: index.js)", "Moving average: 25.0 -> 37.5 -> 50.0", "<span class=\"term-info\">&#10003; Supports import/export, require(), &amp; .json imports<\/span>"]}, "js_node": {"label": "js-es2024-studio/crypto_hash.js \u2014 Timers, structuredClone & Cloud Node", "status": "JavaScript \u00b7 15s Loop Watchdog", "lines": ["<span class=\"tok-kw\">const<\/span> t0 = performance.<span class=\"tok-fn\">now<\/span>();", "<span class=\"tok-kw\">const<\/span> state = <span class=\"tok-fn\">structuredClone<\/span>({ env: <span class=\"tok-str\">&quot;mobile&quot;<\/span>, flags: [<span class=\"tok-num\">1<\/span>, <span class=\"tok-num\">2<\/span>, <span class=\"tok-num\">3<\/span>] });", "console.<span class=\"tok-fn\">info<\/span>(<span class=\"tok-str\">`Cloned ${state.flags.length} flags in ${(performance.now()-t0).toFixed(2)} ms`<\/span>);"], "output": ["<span class=\"term-prompt\">&#9656;<\/span> JS Worker &middot; crypto_hash.js", "Cloned 3 flags in 0.18 ms", "<span class=\"term-info\">&#10003; &lt;1ms Infinite-Loop Kill &middot; Cloud Node.js Auto-Bundler<\/span>"]}};
+    var currentTab = 'js_esm';
+    var runTimer = null;
+
+    function renderWorkbench(tabKey, animateRun) {
+      var sample = WORKBENCH_SAMPLES[tabKey] || WORKBENCH_SAMPLES['js_esm'];
+      if (!sample) { return; }
+      currentTab = tabKey;
+      var labelEl = document.getElementById('ide-compiler-label');
+      if (labelEl) { labelEl.textContent = sample.label; }
+      var statusEl = document.getElementById('wbStatusLang');
+      if (statusEl) { statusEl.textContent = sample.status; }
+
+      var tabs = document.querySelectorAll('.ide-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        var active = tabs[i].getAttribute('data-tab') === tabKey;
+        tabs[i].classList.toggle('active', active);
+        tabs[i].setAttribute('aria-selected', active ? 'true' : 'false');
+      }
+      var files = document.querySelectorAll('.wb-file');
+      for (var f = 0; f < files.length; f++) {
+        files[f].classList.toggle('active', files[f].getAttribute('data-tab') === tabKey);
+      }
+
+      var codeBox = document.getElementById('ide-code-box');
+      if (codeBox) {
+        var html = '';
+        for (var l = 0; l < sample.lines.length; l++) {
+          var activeCls = (l === sample.lines.length - 1) ? ' active-line' : '';
+          html += '<div class="code-line' + activeCls + '"><span class="ln">' + (l + 1) + '</span><span class="code-content">' + sample.lines[l] + '</span></div>';
+        }
+        codeBox.innerHTML = html;
+      }
+
+      if (animateRun) {
+        runWorkbenchSample();
+      }
+    }
+
+    function runWorkbenchSample() {
+      var sample = WORKBENCH_SAMPLES[currentTab] || WORKBENCH_SAMPLES['js_esm'];
+      var drawer = document.getElementById('ide-terminal-drawer');
+      var out = document.getElementById('ide-term-output');
+      var badge = document.getElementById('ide-exec-status');
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (!drawer || !out || !sample) { return; }
+
+      if (runTimer) { clearTimeout(runTimer); }
+      drawer.classList.add('is-open');
+      if (runBtn) { runBtn.classList.add('is-running'); }
+      if (badge) { badge.textContent = 'Running...'; badge.classList.remove('done'); }
+      out.innerHTML = '';
+
+      var idx = 0;
+      function step() {
+        if (idx < sample.output.length) {
+          var row = document.createElement('span');
+          row.className = 'term-line-item';
+          row.innerHTML = sample.output[idx];
+          out.appendChild(row);
+          idx++;
+          runTimer = setTimeout(step, 80);
+        } else {
+          var cur = document.createElement('span');
+          cur.className = 'term-cursor';
+          cur.textContent = '\u258b';
+          out.appendChild(cur);
+          if (badge) { badge.textContent = 'Completed'; badge.classList.add('done'); }
+          if (runBtn) { runBtn.classList.remove('is-running'); }
+        }
+      }
+      step();
+    }
+
+    function initNavigationAndSmartBar() {
+      var menuBtn = document.getElementById('menuBtn');
+      var drawer = document.getElementById('siteDrawer');
+      var bar = document.getElementById('mobileBottomBar');
+      var heroCta = document.getElementById('heroCta');
+      var siteFooter = document.getElementById('siteFooter');
+
+      function syncBar() {
+        if (!bar) { return; }
+        var drawerOpen = Boolean(drawer && !drawer.hasAttribute('hidden'));
+        var modalEl = document.getElementById('langModal');
+        var modalOpen = Boolean(modalEl && modalEl.classList.contains('show'));
+        var vh = window.innerHeight || document.documentElement.clientHeight || 800;
+        var heroInView = false;
+        if (heroCta) {
+          var hr = heroCta.getBoundingClientRect();
+          heroInView = (hr.bottom > 0 && hr.top < vh);
+        }
+        var footerInView = false;
+        if (siteFooter) {
+          var fr = siteFooter.getBoundingClientRect();
+          footerInView = (fr.top < vh + 24);
+        }
+        var scrollYVal = window.pageYOffset || window.scrollY || 0;
+        var docH = Math.max(document.body ? document.body.scrollHeight : 0, document.documentElement ? document.documentElement.scrollHeight : 0);
+        var nearBottom = (vh + scrollYVal) >= (docH - 120);
+        var shouldShow = !drawerOpen && !modalOpen && !heroInView && !footerInView && !nearBottom;
+        bar.classList.toggle('is-visible', shouldShow);
+      }
+
+      window.__supercodeSyncMobileBar = syncBar;
+
+      function setDrawer(open) {
+        if (!menuBtn || !drawer) { return; }
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { drawer.removeAttribute('hidden'); }
+        else { drawer.setAttribute('hidden', ''); }
+        syncBar();
+      }
+      if (menuBtn && drawer) {
+        menuBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          setDrawer(menuBtn.getAttribute('aria-expanded') !== 'true');
+        });
+        drawer.addEventListener('click', function (e) {
+          if (e.target && e.target.closest('a')) { setDrawer(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!drawer.hasAttribute('hidden') && !drawer.contains(e.target) && e.target !== menuBtn && !menuBtn.contains(e.target)) {
+            setDrawer(false);
+          }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') { setDrawer(false); }
+        });
+      }
+
+      if (bar) {
+        window.addEventListener('scroll', syncBar, { passive: true });
+        window.addEventListener('resize', syncBar);
+        syncBar();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var tabBtns = document.querySelectorAll('.ide-tab, .wb-file');
+      for (var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', function () {
+          renderWorkbench(this.getAttribute('data-tab'), true);
+        });
+      }
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (runBtn) { runBtn.addEventListener('click', function () { runWorkbenchSample(); }); }
+      var closeTerm = document.getElementById('btn-close-term');
+      if (closeTerm) {
+        closeTerm.addEventListener('click', function () {
+          var d = document.getElementById('ide-terminal-drawer');
+          if (d) { d.classList.remove('is-open'); }
+        });
+      }
+      initNavigationAndSmartBar();
+      renderWorkbench('js_esm', false);
+    });
+  })();
+</script>
+<script>window.__SUPERCODE_STATIC_LANG__="hi";window.__SUPERCODE_STATIC_CANONICAL__="https://supercode-ide.github.io/hi/javascript-ide.html";</script>
+<script src="../i18n_extended.js"></script>
+</body>
+</html>

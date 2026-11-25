@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090A0F">
+  <meta name="robots" content="noindex, follow">
+  <title>SuperCode IDE &mdash; Interactive App Guide</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      --bg: #090A0F;
+      --card: #151821;
+      --line: rgba(255, 255, 255, 0.08);
+      --line-strong: rgba(255, 255, 255, 0.14);
+      --fg: #F5F7FA;
+      --fg-2: #9BA3B4;
+      --fg-3: #7E879A;
+      --gold: #F5C451;
+      --gold-border: rgba(255, 215, 0, 0.32);
+      --gold-border-hover: rgba(255, 215, 0, 0.55);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background:
+        radial-gradient(50% 45% at 50% 0%, rgba(245, 196, 81, 0.06), transparent 70%),
+        var(--bg);
+      color: var(--fg);
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Microsoft YaHei UI", system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .launchpad {
+      width: 100%;
+      max-width: 420px;
+      background: var(--card);
+      border: 1px solid var(--line-strong);
+      border-radius: 18px;
+      padding: 28px 24px 24px;
+      box-shadow: 0 28px 64px -16px rgba(0, 0, 0, 0.80), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    }
+    .lp-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 22px;
+    }
+    .badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 11px;
+      background: linear-gradient(180deg, #1B1E29 0%, #11131A 100%);
+      border: 1px solid rgba(255, 215, 0, 0.28);
+      display: grid;
+      place-items: center;
+    }
+    .badge svg { width: 26px; height: 26px; }
+    .btn-home-icon {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--line-strong);
+      color: var(--fg-2);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .btn-home-icon:hover { color: var(--gold); border-color: var(--gold-border); background: rgba(245, 196, 81, 0.08); }
+    h1 { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.3; margin-bottom: 10px; }
+    p { font-size: 0.9rem; color: var(--fg-2); line-height: 1.62; margin-bottom: 24px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn-gold {
+      flex: 1 1 auto;
+      height: 42px;
+      padding: 0 18px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(180deg, #1A1D27 0%, #11131A 100%);
+      border: 1px solid var(--gold-border);
+      box-shadow: inset 0 1px 0 rgba(255, 241, 118, 0.14), 0 8px 24px -10px rgba(255, 165, 0, 0.22);
+      color: var(--fg);
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .btn-gold:hover { border-color: var(--gold-border-hover); }
+    .btn-ghost {
+      flex: 1 1 auto;
+      height: 42px;
+      padding: 0 16px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid var(--line-strong);
+      color: var(--fg-2);
+      font-weight: 500;
+      font-size: 0.875rem;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .btn-ghost:hover { color: var(--fg); background: rgba(255, 255, 255, 0.06); }
+    .gp-prism { width: 15px; height: 15px; flex: none; }
+  </style>
+</head>
+<body>
+  <main class="launchpad">
+    <div class="lp-top">
+      <div class="badge" aria-hidden="true">
+        <svg viewBox="20 14 68 72" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z" />
+          <path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z" />
+          <path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z" />
+          <path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0" />
+        </svg>
+      </div>
+      <a href="/" class="btn-home-icon" aria-label="Home" title="Home">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5"/>
+          <path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
+        </svg>
+      </a>
+    </div>
+
+    <h1 id="lp-title">Opening SuperCode App Guide&hellip;</h1>
+    <p id="lp-desc">Launching the interactive onboarding walkthrough inside SuperCode IDE. Don&#39;t have the app yet? Get it on Google Play.</p>
+
+    <div class="actions">
+      <a id="btnOpenApp" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" class="btn-gold">
+        <span id="lp-open-text">Open App Guide</span>
+      </a>
+      <a id="btnPlayStore" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;referrer=utm_source%3Dofficial_web%26utm_medium%3Dtutorial_launchpad" class="btn-ghost">
+        <svg class="gp-prism" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#4285F4" d="M3.6,2.4C3.3,2.7,3.1,3.2,3.1,3.8v16.4c0,0.6,0.2,1.1,0.5,1.4l0.1,0.1L12.9,12v-0.2L3.7,2.3L3.6,2.4z"/>
+          <path fill="#34A853" d="M16,15.1l-3.1-3.1v-0.2L16,8.7l0.1,0.1l3.6,2.1c1,0.6,1,1.5,0,2.1l-3.6,2.1L16,15.1z"/>
+          <path fill="#FBBC05" d="M16.1,15.1L12.9,12L3.6,21.3c0.3,0.4,0.9,0.4,1.6,0.1L16.1,15.1z"/>
+          <path fill="#EA4335" d="M16.1,8.9L5.2,2.6C4.5,2.2,3.9,2.3,3.6,2.7L12.9,12L16.1,8.9z"/>
+        </svg>
+        <span id="lp-play-text">Google Play</span>
+      </a>
+    </div>
+  </main>
+  <script>
+    (function () {
+      var fallback = 'https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&referrer=utm_source%3Dofficial_web%26utm_medium%3Dtutorial_launchpad';
+      var intentUrl = 'intent://supercode-ide.github.io/tutorial?ref=launchpad#Intent;scheme=https;package=com.phoenixglobal.supercodeeditor;S.browser_fallback_url=' + encodeURIComponent(fallback) + ';end';
+      var isZh = /^zh/i.test(navigator.language || '');
+      if (isZh) {
+        document.getElementById('lp-title').textContent = '\u6b63\u5728\u5524\u8d77 SuperCode \u65b0\u624b\u5f15\u5bfc\u2026';
+        document.getElementById('lp-desc').textContent = '\u5373\u5c06\u5728 SuperCode IDE \u5185\u76f4\u8fbe\u5f00\u542f\u4ea4\u4e92\u5f0f\u65b0\u624b\u5bfc\u822a\u3002\u82e5\u5c1a\u672a\u5b89\u88c5\u5e94\u7528\uff0c\u53ef\u5728 Google Play \u83b7\u53d6\u3002';
+        document.getElementById('lp-open-text').textContent = '\u5f00\u542f\u65b0\u624b\u5f15\u5bfc';
+        document.getElementById('lp-play-text').textContent = 'Google Play \u83b7\u53d6';
+      }
+      var openBtn = document.getElementById('btnOpenApp');
+      if (/Android/i.test(navigator.userAgent || '')) {
+        openBtn.setAttribute('href', intentUrl);
+        window.location.replace(intentUrl);
+      } else {
+        openBtn.setAttribute('href', fallback);
+      }
+    })();
+  </script>
+</body>
+</html>
