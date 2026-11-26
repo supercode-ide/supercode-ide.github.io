@@ -1692,6 +1692,25 @@
       .modal-overlay.show .lang-modal { transform: scale(1); }
     }
   </style>
+<!-- SC_REAL_GALLERY_CSS_START -->
+<style>
+  .sc-real-gallery { background: linear-gradient(180deg, #090C15 0%, #0D1220 50%, #090A0F 100%); border-top: 1px solid rgba(148,163,184,0.14); border-bottom: 1px solid rgba(148,163,184,0.14); padding: 64px 0; }
+  .sc-gal-hero-wrap { margin: 28px 0 26px; border-radius: 18px; overflow: hidden; border: 1px solid rgba(245,196,81,0.32); box-shadow: 0 24px 64px rgba(0,0,0,0.62); background: #070A12; display: block; transition: transform .25s ease, border-color .25s ease; }
+  .sc-gal-hero-wrap:hover { transform: translateY(-2px); border-color: rgba(245,196,81,0.62); }
+  .sc-gal-hero-img { width: 100%; height: auto; display: block; aspect-ratio: 1200 / 630; object-fit: cover; }
+  .sc-gal-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin-top: 22px; }
+  .sc-gal-card { background: rgba(15,21,36,0.86); border: 1px solid rgba(148,163,184,0.20); border-radius: 16px; overflow: hidden; cursor: pointer; transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; display: flex; flex-direction: column; }
+  .sc-gal-card:hover { transform: translateY(-4px); border-color: rgba(245,196,81,0.55); box-shadow: 0 18px 42px rgba(0,0,0,0.55); }
+  .sc-gal-card img { width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; display: block; background: #0A0E18; }
+  .sc-gal-cap { padding: 11px 12px; font-size: 0.8125rem; font-weight: 600; color: #DCE6F5; text-align: center; border-top: 1px solid rgba(148,163,184,0.12); }
+  .sc-gal-foot { margin-top: 22px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; font-size: 0.875rem; color: #9BA8BF; }
+  .sc-lb-modal { position: fixed; inset: 0; z-index: 9999; background: rgba(4,6,12,0.92); backdrop-filter: blur(10px); display: none; align-items: center; justify-content: center; padding: 24px; cursor: zoom-out; }
+  .sc-lb-modal.is-open { display: flex; }
+  .sc-lb-modal img { max-width: min(94vw, 540px); max-height: 90vh; border-radius: 18px; border: 1px solid rgba(245,196,81,0.45); box-shadow: 0 30px 90px rgba(0,0,0,0.85); }
+  @media (max-width: 960px) { .sc-gal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; } }
+  @media (max-width: 520px) { .sc-real-gallery { padding: 44px 0; } .sc-gal-grid { gap: 10px; } .sc-gal-cap { font-size: 0.75rem; padding: 8px 6px; } }
+</style>
+<!-- SC_REAL_GALLERY_CSS_END -->
 </head>
 <body data-page="java_ide">
 
@@ -1899,6 +1918,51 @@
       </div>
     </div>
   </section>
+
+<!-- SC_REAL_GALLERY_START -->
+  <section class="section sc-real-gallery" id="screenshots" aria-label="Real Android Device Screenshots">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">HD</span>
+        <span class="rule"></span>
+        <span>असली ANDROID डिवाइस स्क्रीनशॉट</span>
+      </div>
+      <div class="sec-grid">
+        <h2>रियल Android फ़ोन कैप्चर &#8212; कोई नकली मॉकअप नहीं</h2>
+        <p class="sec-lead">हर स्क्रीनशॉट सीधे Android फ़ोन पर ऑफ़लाइन मल्टी-फ़ाइल प्रोजेक्ट, नेटिव कम्पाइलर, SQLite 3.54, लोकल PHP और विज़ुअल Git चलाकर लिया गया है।</p>
+      </div>
+      <a class="sc-gal-hero-wrap" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=java-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dhi%26utm_campaign%3Djava-ide%26utm_content%3Djava-ide" target="_blank" rel="noopener" aria-label="SuperCode Offline Java 17 IDE with Multi-File Packages and SQLite JDBC on Android">
+        <img class="sc-gal-hero-img" src="../assets/media/og-hero-hi.png" alt="SuperCode Offline Java 17 IDE with Multi-File Packages and SQLite JDBC on Android" width="1200" height="630" loading="eager" decoding="async">
+      </a>
+      <div class="sc-gal-grid">
+        <figure class="sc-gal-card" onclick="window.__scOpenLb(this.querySelector('img').src, this.querySelector('img').alt)">
+          <img src="../assets/gallery/hi/05_java17_ide.webp" alt="Java 17 Offline IDE &amp; JDBC - SuperCode IDE on Android" width="540" height="960" loading="lazy" decoding="async">
+          <figcaption class="sc-gal-cap">Java 17 Offline IDE &amp; JDBC</figcaption>
+        </figure>
+        <figure class="sc-gal-card" onclick="window.__scOpenLb(this.querySelector('img').src, this.querySelector('img').alt)">
+          <img src="../assets/gallery/hi/01_python_ide.webp" alt="Python 3.11 / 3.12 Offline IDE - SuperCode IDE on Android" width="540" height="960" loading="lazy" decoding="async">
+          <figcaption class="sc-gal-cap">Python 3.11 / 3.12 Offline IDE</figcaption>
+        </figure>
+        <figure class="sc-gal-card" onclick="window.__scOpenLb(this.querySelector('img').src, this.querySelector('img').alt)">
+          <img src="../assets/gallery/hi/02_cpp20_compiler.webp" alt="C17 &amp; C++20 Multi-File Compiler - SuperCode IDE on Android" width="540" height="960" loading="lazy" decoding="async">
+          <figcaption class="sc-gal-cap">C17 &amp; C++20 Multi-File Compiler</figcaption>
+        </figure>
+        <figure class="sc-gal-card" onclick="window.__scOpenLb(this.querySelector('img').src, this.querySelector('img').alt)">
+          <img src="../assets/gallery/hi/03_web_php_devtools.webp" alt="Local Web, Offline PHP &amp; DevTools - SuperCode IDE on Android" width="540" height="960" loading="lazy" decoding="async">
+          <figcaption class="sc-gal-cap">Local Web, Offline PHP &amp; DevTools</figcaption>
+        </figure>
+      </div>
+      <div class="sc-gal-foot">
+        <span>फ़ुल HD में देखने के लिए किसी भी स्क्रीनशॉट पर टैप करें</span>
+        <a class="btn btn--gold btn--sm" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=java-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dhi%26utm_campaign%3Djava-ide%26utm_content%3Djava-ide" target="_blank" rel="noopener">Google Play से इंस्टॉल करें &#8599;</a>
+      </div>
+    </div>
+  </section>
+  <div class="sc-lb-modal" id="scLightbox" onclick="this.classList.remove('is-open')" role="dialog" aria-modal="true" aria-label="Screenshot Preview">
+    <img id="scLightboxImg" src="" alt="SuperCode HD Screenshot">
+  </div>
+  <script>window.__scOpenLb=function(s,a){var m=document.getElementById('scLightbox'),i=document.getElementById('scLightboxImg');if(m&&i){i.src=s;i.alt=a||'SuperCode';m.classList.add('is-open');}};</script>
+<!-- SC_REAL_GALLERY_END -->
 
   <!-- ==================== 02 · CORE CAPABILITIES ==================== -->
   <section class="section section--alt" id="capabilities">
