@@ -28,7 +28,7 @@
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="SuperCode Offline Python 3.11 and 3.12 IDE with PIP and Split Console on Android">
+  <meta property="og:image:alt" content="Offline Python 3.11 / 3.12 IDE &amp; Split Console">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-python.png">
   <meta name="twitter:title" content="Supported Python Libraries on Android &#8212; 250+ Offline, PyPI &amp; Data Science Packages | SuperCode">
@@ -93,11 +93,11 @@
         "https://supercode-ide.github.io/assets/screenshots/01_python_ide.png",
         "https://supercode-ide.github.io/assets/screenshots/02_cpp20_compiler.png",
         "https://supercode-ide.github.io/assets/screenshots/03_web_php_devtools.png",
-        "https://supercode-ide.github.io/assets/screenshots/04_sql_sqlite_studio.png",
-        "https://supercode-ide.github.io/assets/screenshots/05_java17_ide.png",
-        "https://supercode-ide.github.io/assets/screenshots/06_visual_git_timemachine.png",
-        "https://supercode-ide.github.io/assets/screenshots/07_symbol_keyboard_tools.png",
-        "https://supercode-ide.github.io/assets/screenshots/08_themes_32languages.png"
+        "https://supercode-ide.github.io/assets/screenshots/04_file_manager_tree.png",
+        "https://supercode-ide.github.io/assets/screenshots/05_sql_sqlite_studio.png",
+        "https://supercode-ide.github.io/assets/screenshots/06_java17_ide.png",
+        "https://supercode-ide.github.io/assets/screenshots/07_visual_git_timemachine.png",
+        "https://supercode-ide.github.io/assets/screenshots/08_symbol_keyboard_themes.png"
       ],
       "author": {
         "@type": "Organization",
@@ -1691,21 +1691,323 @@
   </style>
 <!-- SC_REAL_GALLERY_CSS_START -->
 <style>
-  .sc-real-gallery { background: linear-gradient(180deg, #090C15 0%, #0D1220 50%, #090A0F 100%); border-top: 1px solid rgba(148,163,184,0.14); border-bottom: 1px solid rgba(148,163,184,0.14); padding: 64px 0; }
-  .sc-gal-hero-wrap { margin: 28px 0 26px; border-radius: 18px; overflow: hidden; border: 1px solid rgba(245,196,81,0.32); box-shadow: 0 24px 64px rgba(0,0,0,0.62); background: #070A12; display: block; transition: transform .25s ease, border-color .25s ease; }
-  .sc-gal-hero-wrap:hover { transform: translateY(-2px); border-color: rgba(245,196,81,0.62); }
-  .sc-gal-hero-img { width: 100%; height: auto; display: block; aspect-ratio: 1200 / 630; object-fit: cover; }
-  .sc-gal-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin-top: 22px; }
-  .sc-gal-card { background: rgba(15,21,36,0.86); border: 1px solid rgba(148,163,184,0.20); border-radius: 16px; overflow: hidden; cursor: pointer; transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; display: flex; flex-direction: column; }
-  .sc-gal-card:hover { transform: translateY(-4px); border-color: rgba(245,196,81,0.55); box-shadow: 0 18px 42px rgba(0,0,0,0.55); }
-  .sc-gal-card img { width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; display: block; background: #0A0E18; }
-  .sc-gal-cap { padding: 11px 12px; font-size: 0.8125rem; font-weight: 600; color: #DCE6F5; text-align: center; border-top: 1px solid rgba(148,163,184,0.12); }
-  .sc-gal-foot { margin-top: 22px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; font-size: 0.875rem; color: #9BA8BF; }
-  .sc-lb-modal { position: fixed; inset: 0; z-index: 9999; background: rgba(4,6,12,0.92); backdrop-filter: blur(10px); display: none; align-items: center; justify-content: center; padding: 24px; cursor: zoom-out; }
+  /* Google Play Golden-Height Horizontal Media Carousel + Fullscreen Back-to-Page Viewer */
+  .sc-real-gallery {
+    --gp-h: 296px;
+    background: linear-gradient(180deg, #090A0F 0%, #0D111C 52%, #090A0F 100%);
+    border-top: 1px solid rgba(148,163,184,0.12);
+    border-bottom: 1px solid rgba(148,163,184,0.12);
+    padding: 48px 0 44px;
+  }
+  .sc-gp-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .sc-gp-head-left { max-width: 760px; min-width: 0; }
+  .sc-gp-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #F5C451;
+    margin-bottom: 8px;
+  }
+  .sc-gp-eyebrow::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #34D399;
+    box-shadow: 0 0 10px rgba(52,211,153,0.75);
+  }
+  .sc-gp-title {
+    margin: 0 0 6px;
+    font-size: clamp(1.32rem, 2.2vw, 1.78rem);
+    font-weight: 750;
+    line-height: 1.22;
+    letter-spacing: -0.02em;
+    color: #F5F7FA;
+  }
+  .sc-gp-short {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: #A6B2C9;
+  }
+  .sc-gp-head-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .sc-gp-hint {
+    font-size: 0.8125rem;
+    color: #7E8BA4;
+  }
+  .sc-gp-stage {
+    position: relative;
+  }
+  .sc-gp-rail {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 4px 2px 10px;
+    cursor: grab;
+  }
+  .sc-gp-rail.is-dragging { cursor: grabbing; scroll-behavior: auto; scroll-snap-type: none; }
+  .sc-gp-rail::-webkit-scrollbar { display: none; }
+  .sc-gp-item {
+    position: relative;
+    flex: 0 0 auto;
+    height: var(--gp-h);
+    padding: 0;
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(148,163,184,0.22);
+    background: #0D111C;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.44);
+    cursor: zoom-in;
+    scroll-snap-align: start;
+    transition: transform .2s cubic-bezier(.22,1,.36,1), border-color .2s ease, box-shadow .2s ease;
+    display: block;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  .sc-gp-item--feature { aspect-ratio: 1024 / 500; border-color: rgba(245,196,81,0.34); }
+  .sc-gp-item--shot { aspect-ratio: 9 / 16; }
+  .sc-gp-item:hover, .sc-gp-item:focus-visible {
+    transform: translateY(-2px);
+    border-color: rgba(245,196,81,0.68);
+    box-shadow: 0 14px 32px rgba(0,0,0,0.62);
+    outline: none;
+  }
+  .sc-gp-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+  }
+  .sc-gp-zoom-cue {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    background: rgba(9,10,15,0.72);
+    border: 1px solid rgba(255,255,255,0.22);
+    color: #F5F7FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .18s ease;
+    pointer-events: none;
+  }
+  .sc-gp-item:hover .sc-gp-zoom-cue, .sc-gp-item:focus-visible .sc-gp-zoom-cue { opacity: 1; }
+  .sc-gp-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-54%);
+    z-index: 6;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(245,196,81,0.36);
+    background: rgba(13,17,28,0.92);
+    color: #F5F7FA;
+    box-shadow: 0 8px 26px rgba(0,0,0,0.62);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity .2s ease, transform .2s ease, border-color .2s ease, background .2s ease;
+  }
+  .sc-gp-nav:hover { background: rgba(24,31,48,0.98); border-color: #F5C451; color: #F5C451; }
+  .sc-gp-nav--prev { left: -16px; }
+  .sc-gp-nav--next { right: -16px; }
+  .sc-gp-nav.is-hidden { opacity: 0; pointer-events: none; }
+  /* Fullscreen Lightbox Viewer */
+  .sc-lb-modal {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100dvh;
+    z-index: 10000;
+    background: rgba(5,7,13,0.96);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    display: none;
+    flex-direction: column;
+    overscroll-behavior: contain;
+  }
   .sc-lb-modal.is-open { display: flex; }
-  .sc-lb-modal img { max-width: min(94vw, 540px); max-height: 90vh; border-radius: 18px; border: 1px solid rgba(245,196,81,0.45); box-shadow: 0 30px 90px rgba(0,0,0,0.85); }
-  @media (max-width: 960px) { .sc-gal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; } }
-  @media (max-width: 520px) { .sc-real-gallery { padding: 44px 0; } .sc-gal-grid { gap: 10px; } .sc-gal-cap { font-size: 0.75rem; padding: 8px 6px; } }
+  .sc-lb-topbar {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 18px;
+    border-bottom: 1px solid rgba(148,163,184,0.14);
+    background: rgba(9,10,15,0.72);
+  }
+  .sc-lb-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    height: 38px;
+    padding: 0 15px 0 11px;
+    border-radius: 999px;
+    border: 1px solid rgba(245,196,81,0.42);
+    background: rgba(245,196,81,0.12);
+    color: #F8FAFC;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .18s ease, border-color .18s ease;
+    white-space: nowrap;
+  }
+  .sc-lb-back:hover { background: rgba(245,196,81,0.22); border-color: #F5C451; color: #F5C451; }
+  .sc-lb-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .sc-lb-counter {
+    flex: 0 0 auto;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: rgba(148,163,184,0.14);
+    color: #F5C451;
+    font-size: 0.78rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+  .sc-lb-title {
+    color: #DCE5F4;
+    font-size: 0.875rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .sc-lb-close {
+    flex: 0 0 auto;
+    width: 38px;
+    height: 38px;
+    border-radius: 999px;
+    border: 1px solid rgba(148,163,184,0.24);
+    background: rgba(20,24,36,0.88);
+    color: #F5F7FA;
+    font-size: 1.25rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color .18s ease, color .18s ease;
+  }
+  .sc-lb-close:hover { border-color: #F5C451; color: #F5C451; }
+  .sc-lb-stage {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 68px;
+    user-select: none;
+  }
+  .sc-lb-img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 14px;
+    border: 1px solid rgba(245,196,81,0.32);
+    box-shadow: 0 28px 80px rgba(0,0,0,0.82);
+    background: #090A0F;
+  }
+  .sc-lb-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    border-radius: 999px;
+    border: 1px solid rgba(148,163,184,0.28);
+    background: rgba(15,20,34,0.86);
+    color: #F5F7FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color .18s ease, color .18s ease, background .18s ease;
+  }
+  .sc-lb-arrow:hover { border-color: #F5C451; color: #F5C451; background: rgba(24,31,48,0.96); }
+  .sc-lb-arrow--prev { left: 14px; }
+  .sc-lb-arrow--next { right: 14px; }
+  .sc-lb-dots {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px max(14px, env(safe-area-inset-bottom));
+  }
+  .sc-lb-dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(148,163,184,0.36);
+    cursor: pointer;
+    transition: width .2s ease, background .2s ease;
+  }
+  .sc-lb-dot--wide { width: 16px; }
+  .sc-lb-dot.is-active { width: 26px; background: #F5C451; }
+  @media (max-width: 1023px) {
+    .sc-real-gallery { --gp-h: 244px; padding: 40px 0 36px; }
+    .sc-gp-nav--prev { left: 4px; }
+    .sc-gp-nav--next { right: 4px; }
+  }
+  @media (max-width: 640px) {
+    .sc-real-gallery { --gp-h: 164px; padding: 30px 0 26px; }
+    .sc-gp-head { margin-bottom: 14px; gap: 10px; }
+    .sc-gp-hint { font-size: 0.75rem; }
+    .sc-gp-rail { margin-inline: -16px; padding: 4px 16px 8px; gap: 10px; }
+    .sc-gp-nav { display: none; }
+    .sc-lb-topbar { padding: 10px 12px; }
+    .sc-lb-title { display: none; }
+    .sc-lb-stage { padding: 12px 12px; }
+    .sc-lb-arrow { width: 38px; height: 38px; background: rgba(15,20,34,0.62); }
+    .sc-lb-arrow--prev { left: 8px; }
+    .sc-lb-arrow--next { right: 8px; }
+  }
 </style>
 <!-- SC_REAL_GALLERY_CSS_END -->
 </head>
@@ -1918,49 +2220,240 @@
   </section>
 
 <!-- SC_REAL_GALLERY_START -->
-  <section class="section sc-real-gallery" id="screenshots" aria-label="Real Android Device Screenshots">
+  <section class="section sc-real-gallery" id="screenshots" aria-label="App Preview and Screenshots">
     <div class="container">
-      <div class="sec-index">
-        <span class="num">HD</span>
-        <span class="rule"></span>
-        <span>REAL ANDROID DEVICE CAPTURES</span>
+      <div class="sc-gp-head">
+        <div class="sc-gp-head-left">
+          <div class="sc-gp-eyebrow" data-i18n="gal_eyebrow">REAL ANDROID CAPTURES</div>
+          <h2 class="sc-gp-title" data-i18n="gal_title">App Preview &amp; Screenshots</h2>
+          <p class="sc-gp-short" data-i18n="gal_short_desc">Offline IDE &amp; Compiler: Python, C/C++, Java, JS, HTML, SQL, PHP, Lua, Git, SFTP</p>
+        </div>
+        <div class="sc-gp-head-right">
+          <span class="sc-gp-hint" data-i18n="gal_hint">Swipe horizontally &middot; Tap any image for fullscreen</span>
+          <a class="btn btn--gold btn--sm" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Den%26utm_campaign%3Dpython-ide%26utm_content%3Dpython-offline-libraries" target="_blank" rel="noopener"><span data-i18n="gal_cta">Google Play</span> &#8599;</a>
+        </div>
       </div>
-      <div class="sec-grid">
-        <h2>Captured Live on Android &#8212; Zero Mockups</h2>
-        <p class="sec-lead">Every screenshot below is captured directly on an Android smartphone running real offline multi-file workspaces, native compilers, local PHP/SQLite engines, and visual Git.</p>
-      </div>
-      <a class="sc-gal-hero-wrap" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Den%26utm_campaign%3Dpython-ide%26utm_content%3Dpython-offline-libraries" target="_blank" rel="noopener" aria-label="SuperCode Offline Python 3.11 and 3.12 IDE with PIP and Split Console on Android">
-        <img class="sc-gal-hero-img" src="assets/media/og-python.png" alt="SuperCode Offline Python 3.11 and 3.12 IDE with PIP and Split Console on Android" width="1200" height="630" loading="eager" decoding="async">
-      </a>
-      <div class="sc-gal-grid">
-        <figure class="sc-gal-card" onclick="window.__scOpenLb(this.querySelector('img').src, this.querySelector('img').alt)">
-          <img src="assets/gallery/en/01_python_ide.webp" alt="Python 3.11 / 3.12 Offline IDE - SuperCode IDE on Android" width="540" height="960" loading="lazy" decoding="async">
-          <figcaption class="sc-gal-cap">Python 3.11 / 3.12 Offline IDE</figcaption>
-        </figure>
-        <figure class="sc-gal-card" onclick="window.__scOpenLb(this.querySelector('img').src, this.querySelector('img').alt)">
-          <img src="assets/gallery/en/02_cpp20_compiler.webp" alt="C17 &amp; C++20 Multi-File Compiler - SuperCode IDE on Android" width="540" height="960" loading="lazy" decoding="async">
-          <figcaption class="sc-gal-cap">C17 &amp; C++20 Multi-File Compiler</figcaption>
-        </figure>
-        <figure class="sc-gal-card" onclick="window.__scOpenLb(this.querySelector('img').src, this.querySelector('img').alt)">
-          <img src="assets/gallery/en/03_web_php_devtools.webp" alt="Local Web, Offline PHP &amp; DevTools - SuperCode IDE on Android" width="540" height="960" loading="lazy" decoding="async">
-          <figcaption class="sc-gal-cap">Local Web, Offline PHP &amp; DevTools</figcaption>
-        </figure>
-        <figure class="sc-gal-card" onclick="window.__scOpenLb(this.querySelector('img').src, this.querySelector('img').alt)">
-          <img src="assets/gallery/en/04_sql_sqlite_studio.webp" alt="SQLite 3.54 Studio &amp; .db Viewer - SuperCode IDE on Android" width="540" height="960" loading="lazy" decoding="async">
-          <figcaption class="sc-gal-cap">SQLite 3.54 Studio &amp; .db Viewer</figcaption>
-        </figure>
-      </div>
-      <div class="sc-gal-foot">
-        <span>Tap any screen to inspect full resolution</span>
-        <a class="btn btn--gold btn--sm" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Den%26utm_campaign%3Dpython-ide%26utm_content%3Dpython-offline-libraries" target="_blank" rel="noopener">Install on Google Play &#8599;</a>
+      <div class="sc-gp-stage">
+        <button type="button" class="sc-gp-nav sc-gp-nav--prev is-hidden" id="scGpPrev" aria-label="Previous image">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="sc-gp-rail" id="scGpRail">
+          <button type="button" class="sc-gp-item sc-gp-item--feature" aria-label="Code Editor: SuperCode IDE — Offline Mobile IDE">
+            <img src="assets/gallery/en/00_feature_graphic.webp" data-sc-file="00_feature_graphic.webp" data-sc-prefix="" data-sc-cap-key="gal_cap_0" data-cap="Code Editor: SuperCode IDE — Offline Mobile IDE" alt="Code Editor: SuperCode IDE — Offline Mobile IDE" width="1024" height="500" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Offline Python 3.11 / 3.12 IDE &amp; Split Console">
+            <img src="assets/gallery/en/01_python_ide.webp" data-sc-file="01_python_ide.webp" data-sc-prefix="" data-sc-cap-key="gal_cap_1" data-cap="Offline Python 3.11 / 3.12 IDE &amp; Split Console" alt="Offline Python 3.11 / 3.12 IDE &amp; Split Console" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Local C17 &amp; C++20 Multi-File Compiler">
+            <img src="assets/gallery/en/02_cpp20_compiler.webp" data-sc-file="02_cpp20_compiler.webp" data-sc-prefix="" data-sc-cap-key="gal_cap_2" data-cap="Local C17 &amp; C++20 Multi-File Compiler" alt="Local C17 &amp; C++20 Multi-File Compiler" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Local Web Server, Offline PHP &amp; DevTools">
+            <img src="assets/gallery/en/03_web_php_devtools.webp" data-sc-file="03_web_php_devtools.webp" data-sc-prefix="" data-sc-cap-key="gal_cap_3" data-cap="Local Web Server, Offline PHP &amp; DevTools" alt="Local Web Server, Offline PHP &amp; DevTools" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Global File Tree &amp; Local File Manager (SAF)">
+            <img src="assets/gallery/en/04_file_manager_tree.webp" data-sc-file="04_file_manager_tree.webp" data-sc-prefix="" data-sc-cap-key="gal_cap_4" data-cap="Global File Tree &amp; Local File Manager (SAF)" alt="Global File Tree &amp; Local File Manager (SAF)" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Offline SQLite 3.54 Studio &amp; .db Inspector">
+            <img src="assets/gallery/en/05_sql_sqlite_studio.webp" data-sc-file="05_sql_sqlite_studio.webp" data-sc-prefix="" data-sc-cap-key="gal_cap_5" data-cap="Offline SQLite 3.54 Studio &amp; .db Inspector" alt="Offline SQLite 3.54 Studio &amp; .db Inspector" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Offline Java 17 IDE &amp; SQLite JDBC">
+            <img src="assets/gallery/en/06_java17_ide.webp" data-sc-file="06_java17_ide.webp" data-sc-prefix="" data-sc-cap-key="gal_cap_6" data-cap="Offline Java 17 IDE &amp; SQLite JDBC" alt="Offline Java 17 IDE &amp; SQLite JDBC" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Visual Git Client, Time Machine &amp; SFTP">
+            <img src="assets/gallery/en/07_visual_git_timemachine.webp" data-sc-file="07_visual_git_timemachine.webp" data-sc-prefix="" data-sc-cap-key="gal_cap_7" data-cap="Visual Git Client, Time Machine &amp; SFTP" alt="Visual Git Client, Time Machine &amp; SFTP" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="21-Key Symbol Bar &amp; 8 Crafted IDE Themes">
+            <img src="assets/gallery/en/08_symbol_keyboard_themes.webp" data-sc-file="08_symbol_keyboard_themes.webp" data-sc-prefix="" data-sc-cap-key="gal_cap_8" data-cap="21-Key Symbol Bar &amp; 8 Crafted IDE Themes" alt="21-Key Symbol Bar &amp; 8 Crafted IDE Themes" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+        </div>
+        <button type="button" class="sc-gp-nav sc-gp-nav--next" id="scGpNext" aria-label="Next image">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
       </div>
     </div>
   </section>
-  <div class="sc-lb-modal" id="scLightbox" onclick="this.classList.remove('is-open')" role="dialog" aria-modal="true" aria-label="Screenshot Preview">
-    <img id="scLightboxImg" src="" alt="SuperCode HD Screenshot">
+  <div class="sc-lb-modal" id="scLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="App Preview and Screenshots">
+    <div class="sc-lb-topbar">
+      <button type="button" class="sc-lb-back" id="scLbBack">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-i18n="gal_back">Back</span>
+      </button>
+      <div class="sc-lb-meta">
+        <span class="sc-lb-counter" id="scLbCounter">1 / 9</span>
+        <span class="sc-lb-title" id="scLbTitle"></span>
+      </div>
+      <button type="button" class="sc-lb-close" id="scLbClose" aria-label="Close preview">&times;</button>
+    </div>
+    <div class="sc-lb-stage">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--prev" id="scLbPrev" aria-label="Previous image">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <img class="sc-lb-img" id="scLbImg" src="" alt="SuperCode IDE Preview">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--next" id="scLbNext" aria-label="Next image">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="sc-lb-dots" id="scLbDots"></div>
   </div>
-  <script>window.__scOpenLb=function(s,a){var m=document.getElementById('scLightbox'),i=document.getElementById('scLightboxImg');if(m&&i){i.src=s;i.alt=a||'SuperCode';m.classList.add('is-open');}};</script>
+  <script>
+  (function(){
+    var rail = document.getElementById('scGpRail');
+    var prevBtn = document.getElementById('scGpPrev');
+    var nextBtn = document.getElementById('scGpNext');
+    var modal = document.getElementById('scLightbox');
+    var lbImg = document.getElementById('scLbImg');
+    var lbTitle = document.getElementById('scLbTitle');
+    var lbCounter = document.getElementById('scLbCounter');
+    var lbDots = document.getElementById('scLbDots');
+    var lbBack = document.getElementById('scLbBack');
+    var lbClose = document.getElementById('scLbClose');
+    var lbPrev = document.getElementById('scLbPrev');
+    var lbNext = document.getElementById('scLbNext');
+    if (!rail || !modal) return;
+
+    function getItems(){ return Array.prototype.slice.call(rail.querySelectorAll('.sc-gp-item')); }
+    function updateArrows(){
+      if (!prevBtn || !nextBtn) return;
+      prevBtn.classList.toggle('is-hidden', rail.scrollLeft <= 6);
+      nextBtn.classList.toggle('is-hidden', rail.scrollLeft + rail.clientWidth >= rail.scrollWidth - 8);
+    }
+    if (prevBtn) prevBtn.addEventListener('click', function(){ rail.scrollBy({ left: -Math.max(320, rail.clientWidth * 0.72), behavior: 'smooth' }); });
+    if (nextBtn) nextBtn.addEventListener('click', function(){ rail.scrollBy({ left: Math.max(320, rail.clientWidth * 0.72), behavior: 'smooth' }); });
+    rail.addEventListener('scroll', updateArrows, { passive: true });
+    window.addEventListener('resize', updateArrows, { passive: true });
+    updateArrows();
+
+    /* Smooth desktop drag-to-scroll without breaking clicks */
+    var isDown = false, startX = 0, startScroll = 0, moved = false;
+    rail.addEventListener('mousedown', function(e){
+      if (e.button !== 0) return;
+      isDown = true; moved = false; startX = e.pageX; startScroll = rail.scrollLeft;
+      rail.classList.add('is-dragging');
+    });
+    window.addEventListener('mousemove', function(e){
+      if (!isDown) return;
+      var dx = e.pageX - startX;
+      if (Math.abs(dx) > 6) { moved = true; e.preventDefault(); rail.scrollLeft = startScroll - dx; }
+    });
+    window.addEventListener('mouseup', function(){
+      if (!isDown) return;
+      isDown = false; rail.classList.remove('is-dragging');
+      setTimeout(function(){ moved = false; }, 40);
+    });
+
+    /* Fullscreen Lightbox with History Back & Touch Swipe */
+    var curIdx = 0, pushedState = false;
+    function renderSlide(idx){
+      var items = getItems();
+      if (!items.length) return;
+      curIdx = (idx + items.length) % items.length;
+      var img = items[curIdx].querySelector('img');
+      if (img) {
+        lbImg.src = img.getAttribute('src') || img.src;
+        lbImg.alt = img.alt || 'SuperCode IDE';
+        if (lbTitle) lbTitle.textContent = img.getAttribute('data-cap') || img.alt || '';
+      }
+      if (lbCounter) lbCounter.textContent = (curIdx + 1) + ' / ' + items.length;
+      if (lbDots) {
+        var dots = lbDots.querySelectorAll('.sc-lb-dot');
+        for (var d = 0; d < dots.length; d++) { dots[d].classList.toggle('is-active', d === curIdx); }
+      }
+    }
+    function buildDots(){
+      if (!lbDots) return;
+      var items = getItems();
+      lbDots.innerHTML = '';
+      for (var i = 0; i < items.length; i++) {
+        (function(k){
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'sc-lb-dot' + (k === 0 ? ' sc-lb-dot--wide' : '');
+          b.setAttribute('aria-label', String(k + 1));
+          b.addEventListener('click', function(){ renderSlide(k); });
+          lbDots.appendChild(b);
+        })(i);
+      }
+    }
+    function openLb(idx){
+      buildDots();
+      renderSlide(idx);
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+      try {
+        if (window.history && window.history.pushState) {
+          window.history.pushState({ scLightbox: true }, '', window.location.href);
+          pushedState = true;
+        }
+      } catch (e) { pushedState = false; }
+    }
+    function closeLb(fromPop){
+      if (!modal.classList.contains('is-open')) return;
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+      if (!fromPop && pushedState) {
+        pushedState = false;
+        try { window.history.back(); } catch (e) {}
+      } else {
+        pushedState = false;
+      }
+    }
+
+    rail.addEventListener('click', function(e){
+      if (moved) return;
+      var btn = e.target.closest ? e.target.closest('.sc-gp-item') : null;
+      if (!btn) return;
+      var items = getItems();
+      var idx = items.indexOf(btn);
+      if (idx >= 0) openLb(idx);
+    });
+    if (lbBack) lbBack.addEventListener('click', function(){ closeLb(false); });
+    if (lbClose) lbClose.addEventListener('click', function(){ closeLb(false); });
+    if (lbPrev) lbPrev.addEventListener('click', function(e){ e.stopPropagation(); renderSlide(curIdx - 1); });
+    if (lbNext) lbNext.addEventListener('click', function(e){ e.stopPropagation(); renderSlide(curIdx + 1); });
+    modal.addEventListener('click', function(e){
+      if (e.target === modal || e.target.classList.contains('sc-lb-stage')) closeLb(false);
+    });
+    window.addEventListener('popstate', function(){ if (modal.classList.contains('is-open')) closeLb(true); });
+    window.addEventListener('keydown', function(e){
+      if (!modal.classList.contains('is-open')) return;
+      if (e.key === 'Escape') closeLb(false);
+      else if (e.key === 'ArrowLeft') renderSlide(curIdx - 1);
+      else if (e.key === 'ArrowRight') renderSlide(curIdx + 1);
+    });
+
+    /* Mobile touch swipe: left/right to flip, down to close & return */
+    var tx0 = 0, ty0 = 0;
+    modal.addEventListener('touchstart', function(e){
+      if (e.touches && e.touches.length === 1) { tx0 = e.touches[0].clientX; ty0 = e.touches[0].clientY; }
+    }, { passive: true });
+    modal.addEventListener('touchend', function(e){
+      if (!e.changedTouches || !e.changedTouches.length) return;
+      var dx = e.changedTouches[0].clientX - tx0;
+      var dy = e.changedTouches[0].clientY - ty0;
+      if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy)) {
+        renderSlide(dx < 0 ? curIdx + 1 : curIdx - 1);
+      } else if (dy > 76 && Math.abs(dy) > Math.abs(dx)) {
+        closeLb(false);
+      }
+    }, { passive: true });
+  })();
+  </script>
 <!-- SC_REAL_GALLERY_END -->
+
+
 
   <!-- ==================== 02 · CORE CAPABILITIES ==================== -->
   <section class="section section--alt" id="capabilities">
