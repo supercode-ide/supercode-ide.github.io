@@ -23,8 +23,14 @@
   <meta property="og:title" content="Mobile Web DevTools Console, Network Log, DOM REPL &amp; WASM on Android | SuperCode">
   <meta property="og:description" content="Debug mobile web apps without a desktop cable. SuperCode embeds a resizable DevTools Console (All/Error/Warn/Net), HTTP timing monitor, live async DOM JS REPL, and native WebAssembly (.wasm) streaming on Android.">
   <meta property="og:url" content="https://supercode-ide.github.io/mobile-web-devtools-wasm-studio.html">
-  <meta property="og:image" content="https://supercode-ide.github.io/favicon.svg">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-web-php.png">
+  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-web-php.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SuperCode Local Web Server, Offline PHP + PDO SQLite and Mobile DevTools on Android">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-web-php.png">
   <meta name="twitter:title" content="Mobile Web DevTools Console, Network Log, DOM REPL &amp; WASM on Android | SuperCode">
   <meta name="twitter:description" content="Debug mobile web apps without a desktop cable. SuperCode embeds a resizable DevTools Console (All/Error/Warn/Net), HTTP timing monitor, live async DOM JS REPL, and native WebAssembly (.wasm) streaming on Android.">
 
@@ -55,8 +61,8 @@
       "inLanguage": "en",
       "fileSize": "40.2MB",
       "softwareVersion": "1.5.503",
-      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
-      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&listing=web-php-studio",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&listing=web-php-studio",
       "sameAs": [
         "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor"
       ],
@@ -65,7 +71,7 @@
           "@type": "InstallAction",
           "target": {
             "@type": "EntryPoint",
-            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&listing=web-php-studio",
             "actionPlatform": [
               "http://schema.org/AndroidPlatform",
               "http://schema.org/MobileWebPlatform"
@@ -83,7 +89,16 @@
       ],
       "identifier": "com.phoenixglobal.supercodeeditor",
       "url": "https://supercode-ide.github.io/mobile-web-devtools-wasm-studio.html",
-      "screenshot": "https://supercode-ide.github.io/favicon.svg",
+      "screenshot": [
+        "https://supercode-ide.github.io/assets/screenshots/03_web_php_devtools.png",
+        "https://supercode-ide.github.io/assets/screenshots/01_python_ide.png",
+        "https://supercode-ide.github.io/assets/screenshots/02_cpp20_compiler.png",
+        "https://supercode-ide.github.io/assets/screenshots/04_sql_sqlite_studio.png",
+        "https://supercode-ide.github.io/assets/screenshots/05_java17_ide.png",
+        "https://supercode-ide.github.io/assets/screenshots/06_visual_git_timemachine.png",
+        "https://supercode-ide.github.io/assets/screenshots/07_symbol_keyboard_tools.png",
+        "https://supercode-ide.github.io/assets/screenshots/08_themes_32languages.png"
+      ],
       "author": {
         "@type": "Organization",
         "name": "Phoenix Global Studios",
@@ -104,12 +119,13 @@
       },
       "featureList": [
         "Resizable in-preview Web DevTools drawer with All, Error, Warn, and Net filter tabs plus a live red error-count badge",
-        "Real-time HTTP, fetch(), XHR, and PHP network monitor logging METHOD /path -> status \u00b7 ms \u00b7 bytes for every request",
+        "Real-time HTTP, fetch(), XHR, and PHP network monitor logging METHOD /path -> status · ms · bytes for every request",
         "Interactive > Run JavaScript... live DOM REPL supporting async Promise resolution and real-time page mutation",
         "Smart DOM Element serialization (<div#app.card>) and crash-free circular object, Map, Set, and Error tree inspection",
         "Native WebAssembly.instantiateStreaming() support via exact application/wasm MIME headers over local HTTP",
         "Automatic capture of uncaught window.onerror stack traces and unhandled Promise rejections with file, line, and column"
-      ]
+      ],
+      "image": "https://supercode-ide.github.io/assets/media/og-web-php.png"
     },
     {
       "@type": "BreadcrumbList",
@@ -145,7 +161,7 @@
           "@type": "HowToStep",
           "position": 1,
           "name": "Launch Your Web or WASM Project Over Local HTTP",
-          "text": "Open your .html, .js, or .php entry file and tap Run \u25b6 \u2014 DevTools hooks and network telemetry attach automatically.",
+          "text": "Open your .html, .js, or .php entry file and tap Run ▶ — DevTools hooks and network telemetry attach automatically.",
           "url": "https://supercode-ide.github.io/mobile-web-devtools-wasm-studio.html#step1"
         },
         {
@@ -177,10 +193,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Do I need to paste `\u003cscript src=\"eruda.js\">` or have internet for DevTools to work?",
+          "name": "Do I need to paste `<script src=\"eruda.js\">` or have internet for DevTools to work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No! SuperCode's Web DevTools Console, Network monitor, and interactive JavaScript REPL are built natively into the offline preview engine \u2014 zero external CDN script tags needed and 100% functional in airplane mode."
+            "text": "No! SuperCode's Web DevTools Console, Network monitor, and interactive JavaScript REPL are built natively into the offline preview engine — zero external CDN script tags needed and 100% functional in airplane mode."
           }
         },
         {
@@ -188,7 +204,7 @@
           "name": "Can I run binary `.wasm` WebAssembly files compiled from Rust or C/C++?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Place your `.wasm` binary inside your project folder and load it with `WebAssembly.instantiateStreaming(fetch('./module.wasm'))` \u2014 SuperCode serves `.wasm` with the exact `application/wasm` MIME type."
+            "text": "Yes. Place your `.wasm` binary inside your project folder and load it with `WebAssembly.instantiateStreaming(fetch('./module.wasm'))` — SuperCode serves `.wasm` with the exact `application/wasm` MIME type."
           }
         },
         {
@@ -1733,7 +1749,7 @@
         <span id="langTriggerText">EN</span>
         <span class="lang-chevron" aria-hidden="true">&#9662;</span>
       </button>
-      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Den%26utm_campaign%3Dweb-php-studio%26utm_content%3Dmobile-web-devtools-wasm-studio" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
         <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
         <span data-i18n="nav_cta">Google Play</span>
       </a>
@@ -1802,7 +1818,7 @@
           <p class="hero-lead" data-i18n="hero_desc">Android browsers strip away the F12 DevTools drawer right when you need to diagnose a silent <code>fetch()</code> failure, a layout bug, or a binary <code>.wasm</code> module. SuperCode builds a <strong>resizable Web DevTools Console, HTTP Network timer, live DOM JS REPL, and <code>application/wasm</code> server</strong> straight into your mobile preview.</p>
 
           <div class="hero__cta" id="heroCta">
-            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Den%26utm_campaign%3Dweb-php-studio%26utm_content%3Dmobile-web-devtools-wasm-studio" target="_blank" rel="noopener" class="btn btn--gold">
               <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
               <span data-i18n="cta_btn">Get on Google Play</span>
             </a>
@@ -2096,7 +2112,7 @@
 
       <div class="sec-foot">
         <span data-i18n="meta_ver">Built for Phones, Foldables &amp; Tablets &#183; Lightweight 40.2 MB</span>
-        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener">
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Den%26utm_campaign%3Dweb-php-studio%26utm_content%3Dmobile-web-devtools-wasm-studio" target="_blank" rel="noopener">
           <span>Google Play</span>
           <svg aria-hidden="true"><use href="#i-ne"/></svg>
         </a>
@@ -2237,7 +2253,7 @@
         <p data-i18n="cta_desc">Download SuperCode IDE free on Google Play &#8212; built-in Web DevTools, live DOM REPL, and offline WASM streaming.</p>
       </div>
       <div class="footer-cta__btns">
-        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Den%26utm_campaign%3Dweb-php-studio%26utm_content%3Dmobile-web-devtools-wasm-studio" target="_blank" rel="noopener" class="btn btn--gold">
           <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
           <span data-i18n="cta_btn">Get on Google Play</span>
         </a>
@@ -2258,7 +2274,7 @@
         <p data-i18n="footer_tagline">Native mobile code editor and offline development studio crafted for Android engineers, students, and educators worldwide.</p>
         <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
         <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
-          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Den%26utm_campaign%3Dweb-php-studio%26utm_content%3Dmobile-web-devtools-wasm-studio" target="_blank" rel="noopener">Google Play &#8599;</a>
           <a href="https://supercode-ide.github.io/tutorial?ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">App Guide</span> &#8599;</a>
           <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">Select Language</span></button>
         </div>
@@ -2312,7 +2328,7 @@
   </div>
   <div class="bottom-bar-actions">
     <a href="https://supercode-ide.github.io/tutorial?ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">App Guide</a>
-    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn-play-mini">
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Den%26utm_campaign%3Dweb-php-studio%26utm_content%3Dmobile-web-devtools-wasm-studio" target="_blank" rel="noopener" class="btn-play-mini">
       <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
       <span data-i18n="bottom_cta">Get</span>
     </a>

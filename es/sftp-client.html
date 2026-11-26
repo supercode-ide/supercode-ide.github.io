@@ -32,8 +32,14 @@
   <meta property="og:title" content="Editor SFTP y FTPS Android &#8212; B&#243;veda de Llaves SSH y Guardado At&#243;mico | SuperCode">
   <meta property="og:description" content="Editor SFTP y FTPS Android integrado en SuperCode IDE. Con&#233;ctate a servidores SFTP, FTPS (TLS 1.3) y FTP con llaves SSH Ed25519/RSA/PEM en b&#243;veda AES-256, edita con guardado at&#243;mico en 3 fases y reanuda transferencias.">
   <meta property="og:url" content="https://supercode-ide.github.io/es/sftp-client.html">
-  <meta property="og:image" content="https://supercode-ide.github.io/favicon.svg">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-hero-es.png">
+  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-hero-es.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SuperCode Visual Git Time Machine, Encrypted SFTP/FTPS and Linux Shell on Android">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-hero-es.png">
   <meta name="twitter:title" content="Editor SFTP y FTPS Android &#8212; B&#243;veda de Llaves SSH y Guardado At&#243;mico | SuperCode">
   <meta name="twitter:description" content="Editor SFTP y FTPS Android integrado en SuperCode IDE. Con&#233;ctate a servidores SFTP, FTPS (TLS 1.3) y FTP con llaves SSH Ed25519/RSA/PEM en b&#243;veda AES-256, edita con guardado at&#243;mico en 3 fases y reanuda transferencias.">
 
@@ -64,8 +70,8 @@
       "inLanguage": "es",
       "fileSize": "40.2MB",
       "softwareVersion": "1.5.503",
-      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
-      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&listing=git-sftp-devops",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&listing=git-sftp-devops",
       "sameAs": [
         "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor"
       ],
@@ -74,7 +80,7 @@
           "@type": "InstallAction",
           "target": {
             "@type": "EntryPoint",
-            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&listing=git-sftp-devops",
             "actionPlatform": [
               "http://schema.org/AndroidPlatform",
               "http://schema.org/MobileWebPlatform"
@@ -83,7 +89,7 @@
         },
         {
           "@type": "ViewAction",
-          "name": "Gu\u00eda App",
+          "name": "Guía App",
           "target": [
             "https://supercode-ide.github.io/tutorial/",
             "android-app://com.phoenixglobal.supercodeeditor/https/supercode-ide.github.io/tutorial"
@@ -92,7 +98,16 @@
       ],
       "identifier": "com.phoenixglobal.supercodeeditor",
       "url": "https://supercode-ide.github.io/es/sftp-client.html",
-      "screenshot": "https://supercode-ide.github.io/favicon.svg",
+      "screenshot": [
+        "https://supercode-ide.github.io/assets/screenshots/06_visual_git_timemachine.png",
+        "https://supercode-ide.github.io/assets/screenshots/01_python_ide.png",
+        "https://supercode-ide.github.io/assets/screenshots/02_cpp20_compiler.png",
+        "https://supercode-ide.github.io/assets/screenshots/03_web_php_devtools.png",
+        "https://supercode-ide.github.io/assets/screenshots/04_sql_sqlite_studio.png",
+        "https://supercode-ide.github.io/assets/screenshots/05_java17_ide.png",
+        "https://supercode-ide.github.io/assets/screenshots/07_symbol_keyboard_tools.png",
+        "https://supercode-ide.github.io/assets/screenshots/08_themes_32languages.png"
+      ],
       "author": {
         "@type": "Organization",
         "name": "Phoenix Global Studios",
@@ -112,13 +127,14 @@
         "ratingCount": "66"
       },
       "featureList": [
-        "Los 4 Protocolos: SFTP, FTPS Expl\u00edcito, FTPS Impl\u00edcito y FTP \u2014 Soporta SSH SFTP (puerto 22), FTPS Expl\u00edcito sobre TLS 1.2/1.3 con canales pasivos de datos cifrados (PBSZ 0 + PROT P), FTPS Impl\u00edcito (puerto 990) y FTP pasivo UTF-8 (puerto 21).",
-        "Selector de Llaves Privadas SSH, B\u00f3veda AES-256 y Escudo TOFU \u2014 Importa llaves OpenSSH, PEM, RSA, Ed25519 o ECDSA (.pem, .key, id_rsa, id_ed25519) + frases de paso. Todos los secretos se cifran mediante Android KeyStore AES-256-GCM con alertas SHA256 ante cambios de huella del servidor.",
-        "Guardado Remoto At\u00f3mico en 3 Fases (Cero Archivos de 0 Bytes) \u2014 Al abrir un archivo remoto se crea una pesta\u00f1a espejo local persistente (\u2601\ufe0f). Al pulsar Guardar se sube primero a un archivo temporal, se verifica el tama\u00f1o exacto en bytes v\u00eda STAT/SIZE y se renombra at\u00f3micamente conservando permisos POSIX.",
-        "Consola en Vivo de Prueba de Handshake y Pool Autorreparable \u2014 Comprueba la negociaci\u00f3n TCP, TLS/SSH y la autenticaci\u00f3n con llave en una consola de diagn\u00f3stico integrada antes de guardar el servidor. Un pool de 3 canales recupera sockets inactivos tras cambiar entre Wi-Fi y 5G.",
-        "Cola de Transferencia de 4 Flujos y Reanudaci\u00f3n Exacta por Byte \u2014 Sube o descarga \u00e1rboles completos de directorios en 4 flujos paralelos con panel de velocidad MB/s a 20fps. \u00a1Las transferencias pesadas interrumpidas se reanudan desde el byte exacto mediante SFTP RESUME o FTP REST!",
-        "B\u00fasqueda Difusa Remota y Vista Previa Web Remota en Vivo \u2014 Busca nombres de archivo en carpetas remotas, recarga pesta\u00f1as con cualquiera de las 34 codificaciones y pulsa Ejecutar sobre archivos HTML/PHP remotos para previsualizar el sitio antes o despu\u00e9s de guardar."
-      ]
+        "Los 4 Protocolos: SFTP, FTPS Explícito, FTPS Implícito y FTP — Soporta SSH SFTP (puerto 22), FTPS Explícito sobre TLS 1.2/1.3 con canales pasivos de datos cifrados (PBSZ 0 + PROT P), FTPS Implícito (puerto 990) y FTP pasivo UTF-8 (puerto 21).",
+        "Selector de Llaves Privadas SSH, Bóveda AES-256 y Escudo TOFU — Importa llaves OpenSSH, PEM, RSA, Ed25519 o ECDSA (.pem, .key, id_rsa, id_ed25519) + frases de paso. Todos los secretos se cifran mediante Android KeyStore AES-256-GCM con alertas SHA256 ante cambios de huella del servidor.",
+        "Guardado Remoto Atómico en 3 Fases (Cero Archivos de 0 Bytes) — Al abrir un archivo remoto se crea una pestaña espejo local persistente (☁️). Al pulsar Guardar se sube primero a un archivo temporal, se verifica el tamaño exacto en bytes vía STAT/SIZE y se renombra atómicamente conservando permisos POSIX.",
+        "Consola en Vivo de Prueba de Handshake y Pool Autorreparable — Comprueba la negociación TCP, TLS/SSH y la autenticación con llave en una consola de diagnóstico integrada antes de guardar el servidor. Un pool de 3 canales recupera sockets inactivos tras cambiar entre Wi-Fi y 5G.",
+        "Cola de Transferencia de 4 Flujos y Reanudación Exacta por Byte — Sube o descarga árboles completos de directorios en 4 flujos paralelos con panel de velocidad MB/s a 20fps. ¡Las transferencias pesadas interrumpidas se reanudan desde el byte exacto mediante SFTP RESUME o FTP REST!",
+        "Búsqueda Difusa Remota y Vista Previa Web Remota en Vivo — Busca nombres de archivo en carpetas remotas, recarga pestañas con cualquiera de las 34 codificaciones y pulsa Ejecutar sobre archivos HTML/PHP remotos para previsualizar el sitio antes o después de guardar."
+      ],
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-es.png"
     },
     {
       "@type": "BreadcrumbList",
@@ -133,43 +149,43 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Cliente SFTP \u00b7 FTPS \u00b7 FTP",
+          "name": "Cliente SFTP · FTPS · FTP",
           "item": "https://supercode-ide.github.io/es/sftp-client.html"
         }
       ]
     },
     {
       "@type": "HowTo",
-      "name": "C\u00f3mo Conectarte y Editar Servidores en Vivo de Forma Segura desde Android",
-      "description": "Configura tu servidor una sola vez en la b\u00f3veda cifrada por hardware y despliega correcciones urgentes en segundos.",
+      "name": "Cómo Conectarte y Editar Servidores en Vivo de Forma Segura desde Android",
+      "description": "Configura tu servidor una sola vez en la bóveda cifrada por hardware y despliega correcciones urgentes en segundos.",
       "totalTime": "PT2M",
       "step": [
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "Elige el Protocolo e Importa Contrase\u00f1a o Llave SSH",
-          "text": "Selecciona SFTP, FTPS (TLS), FTPS (990) o FTP, ingresa host y usuario, y escribe tu contrase\u00f1a o elige tu archivo de llave privada .pem / id_ed25519.",
+          "name": "Elige el Protocolo e Importa Contraseña o Llave SSH",
+          "text": "Selecciona SFTP, FTPS (TLS), FTPS (990) o FTP, ingresa host y usuario, y escribe tu contraseña o elige tu archivo de llave privada .pem / id_ed25519.",
           "url": "https://supercode-ide.github.io/es/sftp-client.html#step1"
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "Verifica el Diagn\u00f3stico y Conf\u00eda en la Huella SHA256",
-          "text": "Toca Probar Handshake para validar la autenticaci\u00f3n TCP/TLS/SSH en tiempo real, confirma la huella SHA256 del host y gu\u00e1rdalo en la b\u00f3veda AES-256.",
+          "name": "Verifica el Diagnóstico y Confía en la Huella SHA256",
+          "text": "Toca Probar Handshake para validar la autenticación TCP/TLS/SSH en tiempo real, confirma la huella SHA256 del host y guárdalo en la bóveda AES-256.",
           "url": "https://supercode-ide.github.io/es/sftp-client.html#step2"
         },
         {
           "@type": "HowToStep",
           "position": 3,
-          "name": "Explora el \u00c1rbol Remoto y Edita con AST y Formateo",
-          "text": "Abre configuraciones Nginx, c\u00f3digo backend Python/PHP o scripts shell directo en pesta\u00f1as con autocompletado AST, Radar de Errores y formateo en un toque.",
+          "name": "Explora el Árbol Remoto y Edita con AST y Formateo",
+          "text": "Abre configuraciones Nginx, código backend Python/PHP o scripts shell directo en pestañas con autocompletado AST, Radar de Errores y formateo en un toque.",
           "url": "https://supercode-ide.github.io/es/sftp-client.html#step3"
         },
         {
           "@type": "HowToStep",
           "position": 4,
-          "name": "Guarda de Forma At\u00f3mica o Sincroniza Carpetas con Control",
-          "text": "Pulsa Guardar para despliegue at\u00f3mico en 3 fases, o selecciona m\u00faltiples carpetas para subir/descargar eligiendo Sobrescribir, Reanudar Bytes, Conservar Ambos u Omitir.",
+          "name": "Guarda de Forma Atómica o Sincroniza Carpetas con Control",
+          "text": "Pulsa Guardar para despliegue atómico en 3 fases, o selecciona múltiples carpetas para subir/descargar eligiendo Sobrescribir, Reanudar Bytes, Conservar Ambos u Omitir.",
           "url": "https://supercode-ide.github.io/es/sftp-client.html#step4"
         }
       ]
@@ -180,34 +196,34 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "\u00bfQu\u00e9 formatos de llave privada SSH funcionan para AWS EC2, DigitalOcean o servidores VPS Linux?",
+          "name": "¿Qué formatos de llave privada SSH funcionan para AWS EC2, DigitalOcean o servidores VPS Linux?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "SuperCode admite llaves privadas OpenSSH, PEM (.pem), RSA (id_rsa), Ed25519 (id_ed25519) y ECDSA \u2014 con o sin frase de contrase\u00f1a (passphrase) \u2014 e incluye acceso r\u00e1pido a las carpetas Descargas y .ssh."
+            "text": "SuperCode admite llaves privadas OpenSSH, PEM (.pem), RSA (id_rsa), Ed25519 (id_ed25519) y ECDSA — con o sin frase de contraseña (passphrase) — e incluye acceso rápido a las carpetas Descargas y .ssh."
           }
         },
         {
           "@type": "Question",
-          "name": "\u00bfC\u00f3mo evita SuperCode dejar archivos corruptos de 0 bytes en mi servidor si se corta el 5G al guardar?",
+          "name": "¿Cómo evita SuperCode dejar archivos corruptos de 0 bytes en mi servidor si se corta el 5G al guardar?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Cada guardado remoto aplica una Transacci\u00f3n At\u00f3mica en 3 Fases: primero sube el contenido a un archivo temporal, luego consulta al servidor mediante STAT/SIZE para verificar que llegaron todos los bytes intactos y solo entonces lo renombra at\u00f3micamente sobre el archivo destino conservando sus permisos Linux."
+            "text": "Cada guardado remoto aplica una Transacción Atómica en 3 Fases: primero sube el contenido a un archivo temporal, luego consulta al servidor mediante STAT/SIZE para verificar que llegaron todos los bytes intactos y solo entonces lo renombra atómicamente sobre el archivo destino conservando sus permisos Linux."
           }
         },
         {
           "@type": "Question",
-          "name": "\u00bfSoporta SuperCode FTPS (FTP sobre SSL/TLS) adem\u00e1s de SSH SFTP?",
+          "name": "¿Soporta SuperCode FTPS (FTP sobre SSL/TLS) además de SSH SFTP?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "\u00a1S\u00ed! Soporta de forma nativa tanto FTPS Expl\u00edcito (AUTH TLS 1.2/1.3 en el puerto 21 con canales pasivos de datos cifrados PROT P) como FTPS Impl\u00edcito (puerto 990), adem\u00e1s de FTP pasivo est\u00e1ndar con UTF-8."
+            "text": "¡Sí! Soporta de forma nativa tanto FTPS Explícito (AUTH TLS 1.2/1.3 en el puerto 21 con canales pasivos de datos cifrados PROT P) como FTPS Implícito (puerto 990), además de FTP pasivo estándar con UTF-8."
           }
         },
         {
           "@type": "Question",
-          "name": "\u00bfPuedo reanudar la descarga o subida de un respaldo grande si se interrumpe la conexi\u00f3n?",
+          "name": "¿Puedo reanudar la descarga o subida de un respaldo grande si se interrumpe la conexión?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "S\u00ed. Al detectar un archivo parcial previo, SuperCode calcula el tama\u00f1o ya transferido y ofrece Reanudar Transferencia Parcial en un toque desde el desplazamiento exacto de bytes sin reenviar lo ya completado."
+            "text": "Sí. Al detectar un archivo parcial previo, SuperCode calcula el tamaño ya transferido y ofrece Reanudar Transferencia Parcial en un toque desde el desplazamiento exacto de bytes sin reenviar lo ya completado."
           }
         }
       ]
@@ -1736,7 +1752,7 @@
         <span id="langTriggerText">ES</span>
         <span class="lang-chevron" aria-hidden="true">&#9662;</span>
       </button>
-      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=git-sftp-devops&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Des%26utm_campaign%3Dgit-sftp-devops%26utm_content%3Dsftp-client" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
         <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
         <span data-i18n="nav_cta">Google Play</span>
       </a>
@@ -1804,7 +1820,7 @@
           <p class="hero-lead" data-i18n="hero_desc">Dise&#241;ado para ingenieros cloud, sysadmins y desarrolladores web de guardia. Con&#233;ctate por <strong>SFTP (SSH 22), FTPS Expl&#237;cito/Impl&#237;cito (TLS 1.3) o FTP</strong> usando <strong>llaves Ed25519/RSA/PEM</strong> protegidas en una <strong>b&#243;veda por hardware AES-256</strong>, y edita archivos remotos con <strong>guardado at&#243;mico sin corrupci&#243;n</strong>.</p>
 
           <div class="hero__cta" id="heroCta">
-            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=git-sftp-devops&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Des%26utm_campaign%3Dgit-sftp-devops%26utm_content%3Dsftp-client" target="_blank" rel="noopener" class="btn btn--gold">
               <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
               <span data-i18n="cta_btn">Descargar en Play</span>
             </a>
@@ -2092,7 +2108,7 @@
 
       <div class="sec-foot">
         <span data-i18n="meta_ver">Para Tel&#233;fonos, Plegables y Tablets &#183; Ligero 40.2 MB</span>
-        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener">
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=git-sftp-devops&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Des%26utm_campaign%3Dgit-sftp-devops%26utm_content%3Dsftp-client" target="_blank" rel="noopener">
           <span>Google Play</span>
           <svg aria-hidden="true"><use href="#i-ne"/></svg>
         </a>
@@ -2145,7 +2161,7 @@
         <p data-i18n="cta_desc">Instala SuperCode IDE en Google Play para contar con edici&#243;n SFTP/FTPS cifrada con AES-256, llaves SSH y despliegue at&#243;mico en 3 fases.</p>
       </div>
       <div class="footer-cta__btns">
-        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=git-sftp-devops&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Des%26utm_campaign%3Dgit-sftp-devops%26utm_content%3Dsftp-client" target="_blank" rel="noopener" class="btn btn--gold">
           <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
           <span data-i18n="cta_btn">Descargar en Play</span>
         </a>
@@ -2166,7 +2182,7 @@
         <p data-i18n="footer_tagline">Editor de c&#243;digo nativo y estudio de desarrollo offline creado para ingenieros, estudiantes y docentes en Android.</p>
         <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
         <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
-          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=git-sftp-devops&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Des%26utm_campaign%3Dgit-sftp-devops%26utm_content%3Dsftp-client" target="_blank" rel="noopener">Google Play &#8599;</a>
           <a href="https://supercode-ide.github.io/tutorial?ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">Gu&#237;a App</span> &#8599;</a>
           <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">Seleccionar idioma</span></button>
         </div>
@@ -2220,7 +2236,7 @@
   </div>
   <div class="bottom-bar-actions">
     <a href="https://supercode-ide.github.io/tutorial?ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">Gu&#237;a App</a>
-    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn-play-mini">
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=git-sftp-devops&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Des%26utm_campaign%3Dgit-sftp-devops%26utm_content%3Dsftp-client" target="_blank" rel="noopener" class="btn-play-mini">
       <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
       <span data-i18n="bottom_cta">Obtener</span>
     </a>

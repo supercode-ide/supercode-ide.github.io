@@ -32,8 +32,14 @@
   <meta property="og:title" content="Compilateur C Android hors ligne &#8212; IDE GNU C17, Pointeurs &amp; Multi-fichiers | SuperCode">
   <meta property="og:description" content="Compilateur C Android hors ligne d&#233;di&#233; et IDE de programmation C17. Compilez vos projets multi-fichiers .c et .h sans Makefile, testez pointeurs et structs, utilisez scanf/fgets en direct et formatez votre code C hors ligne.">
   <meta property="og:url" content="https://supercode-ide.github.io/fr/c-compiler.html">
-  <meta property="og:image" content="https://supercode-ide.github.io/favicon.svg">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-hero-fr.png">
+  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-hero-fr.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SuperCode Offline C17 & C++20 Multi-File Compiler with Full STL on Android">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-hero-fr.png">
   <meta name="twitter:title" content="Compilateur C Android hors ligne &#8212; IDE GNU C17, Pointeurs &amp; Multi-fichiers | SuperCode">
   <meta name="twitter:description" content="Compilateur C Android hors ligne d&#233;di&#233; et IDE de programmation C17. Compilez vos projets multi-fichiers .c et .h sans Makefile, testez pointeurs et structs, utilisez scanf/fgets en direct et formatez votre code C hors ligne.">
 
@@ -64,8 +70,8 @@
       "inLanguage": "fr",
       "fileSize": "40.2MB",
       "softwareVersion": "1.5.503",
-      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
-      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&listing=c-cpp-compiler",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&listing=c-cpp-compiler",
       "sameAs": [
         "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor"
       ],
@@ -74,7 +80,7 @@
           "@type": "InstallAction",
           "target": {
             "@type": "EntryPoint",
-            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&listing=c-cpp-compiler",
             "actionPlatform": [
               "http://schema.org/AndroidPlatform",
               "http://schema.org/MobileWebPlatform"
@@ -92,7 +98,16 @@
       ],
       "identifier": "com.phoenixglobal.supercodeeditor",
       "url": "https://supercode-ide.github.io/fr/c-compiler.html",
-      "screenshot": "https://supercode-ide.github.io/favicon.svg",
+      "screenshot": [
+        "https://supercode-ide.github.io/assets/screenshots/02_cpp20_compiler.png",
+        "https://supercode-ide.github.io/assets/screenshots/01_python_ide.png",
+        "https://supercode-ide.github.io/assets/screenshots/03_web_php_devtools.png",
+        "https://supercode-ide.github.io/assets/screenshots/04_sql_sqlite_studio.png",
+        "https://supercode-ide.github.io/assets/screenshots/05_java17_ide.png",
+        "https://supercode-ide.github.io/assets/screenshots/06_visual_git_timemachine.png",
+        "https://supercode-ide.github.io/assets/screenshots/07_symbol_keyboard_tools.png",
+        "https://supercode-ide.github.io/assets/screenshots/08_themes_32languages.png"
+      ],
       "author": {
         "@type": "Organization",
         "name": "Phoenix Global Studios",
@@ -112,13 +127,14 @@
         "ratingCount": "66"
       },
       "featureList": [
-        "Compilateur GNU C17 (-std=gnu17) hors ligne d\u00e9di\u00e9 avec biblioth\u00e8que standard C pure & <math.h> (-lm)",
-        "D\u00e9couverte et \u00e9dition de liens multi-fichiers .c et .h sans configuration, avec arbitrage automatique en-t\u00eate -> main.c",
-        "Cache incr\u00e9mental par hachage de contenu \u00e9vitant de recompiler les fichiers .c inchang\u00e9s",
-        "Entr\u00e9e standard interactive en direct pour scanf, fgets et getchar avec envoi explicite de [EOF]",
-        "Synchronisation automatique des fichiers cr\u00e9\u00e9s via fopen / fwrite et 6 mod\u00e8les de programmation C int\u00e9gr\u00e9s",
-        "Chien de garde CPU 15 s contre les boucles infinies & coupe-circuit d\u2019affichage 250K caract\u00e8res avec repli Cloud C POSIX"
-      ]
+        "Compilateur GNU C17 (-std=gnu17) hors ligne dédié avec bibliothèque standard C pure & <math.h> (-lm)",
+        "Découverte et édition de liens multi-fichiers .c et .h sans configuration, avec arbitrage automatique en-tête -> main.c",
+        "Cache incrémental par hachage de contenu évitant de recompiler les fichiers .c inchangés",
+        "Entrée standard interactive en direct pour scanf, fgets et getchar avec envoi explicite de [EOF]",
+        "Synchronisation automatique des fichiers créés via fopen / fwrite et 6 modèles de programmation C intégrés",
+        "Chien de garde CPU 15 s contre les boucles infinies & coupe-circuit d’affichage 250K caractères avec repli Cloud C POSIX"
+      ],
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-fr.png"
     },
     {
       "@type": "BreadcrumbList",
@@ -140,36 +156,36 @@
     },
     {
       "@type": "HowTo",
-      "name": "Comment compiler et d\u00e9boguer des programmes C multi-fichiers sur Android",
-      "description": "\u00c9crivez des exercices mono-fichier ou des projets C modulaires sans aucun script de build \u00e0 configurer.",
+      "name": "Comment compiler et déboguer des programmes C multi-fichiers sur Android",
+      "description": "Écrivez des exercices mono-fichier ou des projets C modulaires sans aucun script de build à configurer.",
       "totalTime": "PT2M",
       "step": [
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "Cr\u00e9er vos sources .c & fichiers d\u2019en-t\u00eate .h",
-          "text": "Utilisez la barre symbole C/C++ \u00e0 21 touches (->, *, &, {}, ;, #include) et l\u2019autocompl\u00e9tion AST des champs de struct pour \u00e9crire un code C17 modulaire.",
+          "name": "Créer vos sources .c & fichiers d’en-tête .h",
+          "text": "Utilisez la barre symbole C/C++ à 21 touches (->, *, &, {}, ;, #include) et l’autocomplétion AST des champs de struct pour écrire un code C17 modulaire.",
           "url": "https://supercode-ide.github.io/fr/c-compiler.html#step1"
         },
         {
           "@type": "HowToStep",
           "position": 2,
-          "name": "V\u00e9rifier les directives & aligner l\u2019indentation hors ligne",
-          "text": "Le Radar d\u2019erreurs rep\u00e8re aussit\u00f4t les #include malform\u00e9s et accolades non ferm\u00e9es ; touchez Formater pour aligner proprement vos blocs K&R/Allman et macros.",
+          "name": "Vérifier les directives & aligner l’indentation hors ligne",
+          "text": "Le Radar d’erreurs repère aussitôt les #include malformés et accolades non fermées ; touchez Formater pour aligner proprement vos blocs K&R/Allman et macros.",
           "url": "https://supercode-ide.github.io/fr/c-compiler.html#step2"
         },
         {
           "@type": "HowToStep",
           "position": 3,
-          "name": "Compiler & lier hors ligne depuis n\u2019importe quel onglet",
-          "text": "M\u00eame si votre curseur se trouve dans utils.h, appuyer sur Ex\u00e9cuter localise main.c, compile les unit\u00e9s modifi\u00e9es, lie -lm et lance l\u2019ex\u00e9cutable.",
+          "name": "Compiler & lier hors ligne depuis n’importe quel onglet",
+          "text": "Même si votre curseur se trouve dans utils.h, appuyer sur Exécuter localise main.c, compile les unités modifiées, lie -lm et lance l’exécutable.",
           "url": "https://supercode-ide.github.io/fr/c-compiler.html#step3"
         },
         {
           "@type": "HowToStep",
           "position": 4,
-          "name": "Fournir les entr\u00e9es scanf & inspecter les fichiers g\u00e9n\u00e9r\u00e9s",
-          "text": "Saisissez vos valeurs de test en direct dans le terminal ancr\u00e9 ou lat\u00e9ral et v\u00e9rifiez le code de sortie, le temps en ms, la m\u00e9moire et les fichiers \u00e9crits.",
+          "name": "Fournir les entrées scanf & inspecter les fichiers générés",
+          "text": "Saisissez vos valeurs de test en direct dans le terminal ancré ou latéral et vérifiez le code de sortie, le temps en ms, la mémoire et les fichiers écrits.",
           "url": "https://supercode-ide.github.io/fr/c-compiler.html#step4"
         }
       ]
@@ -180,34 +196,34 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Le compilateur C de SuperCode est-il r\u00e9ellement distinct du C++ ?",
+          "name": "Le compilateur C de SuperCode est-il réellement distinct du C++ ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Oui. L\u2019ouverture d\u2019un fichier .c active la console GNU C17 d\u00e9di\u00e9e (-std=gnu17) et l\u2019\u00e9dition de liens avec la biblioth\u00e8que standard C pure, au lieu de compiler votre code C comme du C++."
+            "text": "Oui. L’ouverture d’un fichier .c active la console GNU C17 dédiée (-std=gnu17) et l’édition de liens avec la bibliothèque standard C pure, au lieu de compiler votre code C comme du C++."
           }
         },
         {
           "@type": "Question",
-          "name": "Dois-je \u00e9crire un Makefile pour compiler plusieurs fichiers .c et .h ?",
+          "name": "Dois-je écrire un Makefile pour compiler plusieurs fichiers .c et .h ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Non. SuperCode analyse automatiquement les en-t\u00eates #include \"...\" et les fichiers .c compagnons de votre dossier et de vos onglets ouverts, compile de mani\u00e8re incr\u00e9mentale les fichiers modifi\u00e9s et lie <math.h> (-lm)."
+            "text": "Non. SuperCode analyse automatiquement les en-têtes #include \"...\" et les fichiers .c compagnons de votre dossier et de vos onglets ouverts, compile de manière incrémentale les fichiers modifiés et lie <math.h> (-lm)."
           }
         },
         {
           "@type": "Question",
-          "name": "Les fonctions scanf() et fgets() fonctionnent-elles de mani\u00e8re interactive sur Android ?",
+          "name": "Les fonctions scanf() et fgets() fonctionnent-elles de manière interactive sur Android ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Oui. Le terminal en \u00e9cran partag\u00e9 met l\u2019ex\u00e9cution en pause d\u00e8s que votre programme C lit sur stdin, vous permet de taper plusieurs lignes en direct et envoie EOF lorsque vous validez une invite vide."
+            "text": "Oui. Le terminal en écran partagé met l’exécution en pause dès que votre programme C lit sur stdin, vous permet de taper plusieurs lignes en direct et envoie EOF lorsque vous validez une invite vide."
           }
         },
         {
           "@type": "Question",
-          "name": "Que se passe-t-il si mon code C utilise des en-t\u00eates POSIX Linux comme <pthread.h> ou <sys/socket.h> ?",
+          "name": "Que se passe-t-il si mon code C utilise des en-têtes POSIX Linux comme <pthread.h> ou <sys/socket.h> ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "SuperCode d\u00e9tecte automatiquement les en-t\u00eates syst\u00e8me POSIX et compile votre projet multi-fichiers sur la cha\u00eene Cloud POSIX tout en conservant les num\u00e9ros de ligne exacts de vos fichiers locaux."
+            "text": "SuperCode détecte automatiquement les en-têtes système POSIX et compile votre projet multi-fichiers sur la chaîne Cloud POSIX tout en conservant les numéros de ligne exacts de vos fichiers locaux."
           }
         }
       ]
@@ -1736,7 +1752,7 @@
         <span id="langTriggerText">FR</span>
         <span class="lang-chevron" aria-hidden="true">&#9662;</span>
       </button>
-      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dfr%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dc-compiler" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
         <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
         <span data-i18n="nav_cta">Google Play</span>
       </a>
@@ -1804,7 +1820,7 @@
           <p class="hero-lead" data-i18n="hero_desc">Con&#231;u sp&#233;cifiquement pour le langage C &#8212; sans la surcharge d&#8217;ex&#233;cution du C++. Compilez vos programmes <strong>GNU C17 (<code>-std=gnu17</code>)</strong> hors ligne avec <strong>liaison automatique multi-fichiers <code>.c/.h</code></strong>, <strong><code>&lt;math.h&gt;</code></strong>, saisie interactive <strong><code>scanf</code> / <code>fgets</code></strong> et t&#233;l&#233;m&#233;trie &#224; la microseconde.</p>
 
           <div class="hero__cta" id="heroCta">
-            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dfr%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dc-compiler" target="_blank" rel="noopener" class="btn btn--gold">
               <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
               <span data-i18n="cta_btn">Sur Google Play</span>
             </a>
@@ -2098,7 +2114,7 @@
 
       <div class="sec-foot">
         <span data-i18n="meta_ver">Con&#231;u pour Smartphones, Pliables &amp; Tablettes &#183; L&#233;ger 40,2 Mo</span>
-        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener">
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dfr%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dc-compiler" target="_blank" rel="noopener">
           <span>Google Play</span>
           <svg aria-hidden="true"><use href="#i-ne"/></svg>
         </a>
@@ -2151,7 +2167,7 @@
         <p data-i18n="cta_desc">Installez SuperCode IDE sur Google Play pour profiter d&#8217;un compilateur GNU C17 hors ligne d&#233;di&#233;, de mod&#232;les de pointeurs et d&#8217;un espace multi-fichiers.</p>
       </div>
       <div class="footer-cta__btns">
-        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dfr%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dc-compiler" target="_blank" rel="noopener" class="btn btn--gold">
           <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
           <span data-i18n="cta_btn">Sur Google Play</span>
         </a>
@@ -2172,7 +2188,7 @@
         <p data-i18n="footer_tagline">&#201;diteur de code mobile natif et studio de d&#233;veloppement hors ligne con&#231;u pour les ing&#233;nieurs et &#233;tudiants sur Android.</p>
         <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
         <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
-          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dfr%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dc-compiler" target="_blank" rel="noopener">Google Play &#8599;</a>
           <a href="https://supercode-ide.github.io/tutorial?ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">Guide App</span> &#8599;</a>
           <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">Choisir la langue</span></button>
         </div>
@@ -2226,7 +2242,7 @@
   </div>
   <div class="bottom-bar-actions">
     <a href="https://supercode-ide.github.io/tutorial?ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">Guide App</a>
-    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn-play-mini">
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dfr%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dc-compiler" target="_blank" rel="noopener" class="btn-play-mini">
       <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
       <span data-i18n="bottom_cta">Obtenir</span>
     </a>

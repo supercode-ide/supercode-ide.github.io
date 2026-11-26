@@ -32,8 +32,14 @@
   <meta property="og:title" content="IDE SQL Android &#8212; Practicar SQL y Abrir Archivos .db en Android Offline | SuperCode">
   <meta property="og:description" content="La herramienta ideal para practicar SQL y abrir archivos .db en Android sin conexi&#243;n. Soporta funciones de ventana, CTEs, consultas JSON, 9 formatos de salida (Box, Markdown, CSV, JSON), importaci&#243;n CSV/JSON y MySQL 8.0.">
   <meta property="og:url" content="https://supercode-ide.github.io/es/sql-ide.html">
-  <meta property="og:image" content="https://supercode-ide.github.io/favicon.svg">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-hero-es.png">
+  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-hero-es.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SuperCode Offline SQL Editor and SQLite 3.54 Database Inspector on Android">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-hero-es.png">
   <meta name="twitter:title" content="IDE SQL Android &#8212; Practicar SQL y Abrir Archivos .db en Android Offline | SuperCode">
   <meta name="twitter:description" content="La herramienta ideal para practicar SQL y abrir archivos .db en Android sin conexi&#243;n. Soporta funciones de ventana, CTEs, consultas JSON, 9 formatos de salida (Box, Markdown, CSV, JSON), importaci&#243;n CSV/JSON y MySQL 8.0.">
 
@@ -64,8 +70,8 @@
       "inLanguage": "es",
       "fileSize": "40.2MB",
       "softwareVersion": "1.5.503",
-      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
-      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&listing=sql-sqlite-studio",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&listing=sql-sqlite-studio",
       "sameAs": [
         "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor"
       ],
@@ -74,7 +80,7 @@
           "@type": "InstallAction",
           "target": {
             "@type": "EntryPoint",
-            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&listing=sql-sqlite-studio",
             "actionPlatform": [
               "http://schema.org/AndroidPlatform",
               "http://schema.org/MobileWebPlatform"
@@ -83,7 +89,7 @@
         },
         {
           "@type": "ViewAction",
-          "name": "Gu\u00eda App",
+          "name": "Guía App",
           "target": [
             "https://supercode-ide.github.io/tutorial/",
             "android-app://com.phoenixglobal.supercodeeditor/https/supercode-ide.github.io/tutorial"
@@ -92,7 +98,16 @@
       ],
       "identifier": "com.phoenixglobal.supercodeeditor",
       "url": "https://supercode-ide.github.io/es/sql-ide.html",
-      "screenshot": "https://supercode-ide.github.io/favicon.svg",
+      "screenshot": [
+        "https://supercode-ide.github.io/assets/screenshots/04_sql_sqlite_studio.png",
+        "https://supercode-ide.github.io/assets/screenshots/01_python_ide.png",
+        "https://supercode-ide.github.io/assets/screenshots/02_cpp20_compiler.png",
+        "https://supercode-ide.github.io/assets/screenshots/03_web_php_devtools.png",
+        "https://supercode-ide.github.io/assets/screenshots/05_java17_ide.png",
+        "https://supercode-ide.github.io/assets/screenshots/06_visual_git_timemachine.png",
+        "https://supercode-ide.github.io/assets/screenshots/07_symbol_keyboard_tools.png",
+        "https://supercode-ide.github.io/assets/screenshots/08_themes_32languages.png"
+      ],
       "author": {
         "@type": "Organization",
         "name": "Phoenix Global Studios",
@@ -112,13 +127,14 @@
         "ratingCount": "66"
       },
       "featureList": [
-        "SQL Moderno Offline: Funciones de Ventana, CTEs y JSONB \u2014 Soporta ROW_NUMBER/RANK/DENSE_RANK/LAG/LEAD OVER(...), WITH RECURSIVE CTEs, RETURNING, UPSERT, operadores JSON -> y ->>, json_each() y b\u00fasqueda de texto completo BM25 100% sin conexi\u00f3n.",
-        "9 Modos de Renderizado de Resultados y Exportaci\u00f3n Directa \u2014 Visualiza resultados en cuadr\u00edculas Unicode perfectamente alineadas (\u250c\u2500\u2500\u252c\u2500\u2500\u2510) por defecto, o cambia con .mode a table, markdown, csv, tsv, json, line, list o sentencias SQL insert \u2014 y exporta con .once.",
-        "Inspector .db / .sqlite en Un Toque y Automontaje \u2014 Abre cualquier archivo .db, .sqlite, .sqlite3 o .db3 para inspeccionar al instante metadatos de p\u00e1ginas, tablas, vistas, \u00edndices y esquemas CREATE completos. \u00a1Tus scripts .sql en la misma carpeta montan la base autom\u00e1ticamente!",
-        "Importaci\u00f3n CSV / TSV / JSON y M\u00e1s de 60 Funciones Anal\u00edticas \u2014 Importa archivos CSV, TSV y arreglos de objetos JSON directo a tablas tipadas (.import --csv / --json) y aprovecha m\u00e1s de 60 funciones integradas como SHA256, REGEXP_EXTRACT, MEDIAN, STDDEV, PERCENTILE y UUID.",
-        "Compatibilidad de Sintaxis MySQL / PostgreSQL y READ_STDIN() \u2014 Escribe consultas cotidianas con AUTO_INCREMENT, SERIAL, ENUM, SHOW TABLES, DESCRIBE e ILIKE localmente sin tediosas reescrituras, y solicita par\u00e1metros interactivos en consola dentro de tu SQL con READ_STDIN().",
-        "Tuber\u00edas SQL Multiarchivo y Cloud MySQL 8.0 \u2014 Encadena autom\u00e1ticamente 01_schema.sql -> 02_seed.sql -> 03_report.sql en orden topol\u00f3gico, o ejecuta procedimientos almacenados de MySQL 8.0 (DELIMITER, CREATE PROCEDURE, CALL, JSON_TABLE) en el cl\u00faster Cloud MySQL."
-      ]
+        "SQL Moderno Offline: Funciones de Ventana, CTEs y JSONB — Soporta ROW_NUMBER/RANK/DENSE_RANK/LAG/LEAD OVER(...), WITH RECURSIVE CTEs, RETURNING, UPSERT, operadores JSON -> y ->>, json_each() y búsqueda de texto completo BM25 100% sin conexión.",
+        "9 Modos de Renderizado de Resultados y Exportación Directa — Visualiza resultados en cuadrículas Unicode perfectamente alineadas (┌──┬──┐) por defecto, o cambia con .mode a table, markdown, csv, tsv, json, line, list o sentencias SQL insert — y exporta con .once.",
+        "Inspector .db / .sqlite en Un Toque y Automontaje — Abre cualquier archivo .db, .sqlite, .sqlite3 o .db3 para inspeccionar al instante metadatos de páginas, tablas, vistas, índices y esquemas CREATE completos. ¡Tus scripts .sql en la misma carpeta montan la base automáticamente!",
+        "Importación CSV / TSV / JSON y Más de 60 Funciones Analíticas — Importa archivos CSV, TSV y arreglos de objetos JSON directo a tablas tipadas (.import --csv / --json) y aprovecha más de 60 funciones integradas como SHA256, REGEXP_EXTRACT, MEDIAN, STDDEV, PERCENTILE y UUID.",
+        "Compatibilidad de Sintaxis MySQL / PostgreSQL y READ_STDIN() — Escribe consultas cotidianas con AUTO_INCREMENT, SERIAL, ENUM, SHOW TABLES, DESCRIBE e ILIKE localmente sin tediosas reescrituras, y solicita parámetros interactivos en consola dentro de tu SQL con READ_STDIN().",
+        "Tuberías SQL Multiarchivo y Cloud MySQL 8.0 — Encadena automáticamente 01_schema.sql -> 02_seed.sql -> 03_report.sql en orden topológico, o ejecuta procedimientos almacenados de MySQL 8.0 (DELIMITER, CREATE PROCEDURE, CALL, JSON_TABLE) en el clúster Cloud MySQL."
+      ],
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-es.png"
     },
     {
       "@type": "BreadcrumbList",
@@ -140,7 +156,7 @@
     },
     {
       "@type": "HowTo",
-      "name": "C\u00f3mo Consultar Bases de Datos e Importar Datasets en SuperCode",
+      "name": "Cómo Consultar Bases de Datos e Importar Datasets en SuperCode",
       "description": "Flujos limpios basados en scripts que persisten directamente en la carpeta de tu proyecto en Android.",
       "totalTime": "PT2M",
       "step": [
@@ -161,15 +177,15 @@
         {
           "@type": "HowToStep",
           "position": 3,
-          "name": "Ejecuta Consultas Multisentencia Sin Conexi\u00f3n",
-          "text": "Revisa cuadr\u00edculas Unicode, tablas Markdown o salidas JSON en la consola dividida, con entrada de par\u00e1metros en vivo v\u00eda READ_STDIN() si lo necesitas.",
+          "name": "Ejecuta Consultas Multisentencia Sin Conexión",
+          "text": "Revisa cuadrículas Unicode, tablas Markdown o salidas JSON en la consola dividida, con entrada de parámetros en vivo vía READ_STDIN() si lo necesitas.",
           "url": "https://supercode-ide.github.io/es/sql-ide.html#step3"
         },
         {
           "@type": "HowToStep",
           "position": 4,
           "name": "Exporta Reportes Limpios y Comparte .db con PHP/Java",
-          "text": "Guarda bases .db actualizadas o reportes .csv/.json directo en tu proyecto \u2014 \u00a1listos para ser consultados desde PHP PDO o Java JDBC en SuperCode!",
+          "text": "Guarda bases .db actualizadas o reportes .csv/.json directo en tu proyecto — ¡listos para ser consultados desde PHP PDO o Java JDBC en SuperCode!",
           "url": "https://supercode-ide.github.io/es/sql-ide.html#step4"
         }
       ]
@@ -180,34 +196,34 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "\u00bfPuedo practicar consultas SQL sin internet y sin instalar un servidor de bases de datos?",
+          "name": "¿Puedo practicar consultas SQL sin internet y sin instalar un servidor de bases de datos?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "\u00a1S\u00ed! Crea cualquier archivo .sql y pulsa Ejecutar para correr sentencias m\u00faltiples CREATE, INSERT, JOIN, CTE y Funciones de Ventana 100% offline con tablas Unicode perfectamente alineadas."
+            "text": "¡Sí! Crea cualquier archivo .sql y pulsa Ejecutar para correr sentencias múltiples CREATE, INSERT, JOIN, CTE y Funciones de Ventana 100% offline con tablas Unicode perfectamente alineadas."
           }
         },
         {
           "@type": "Question",
-          "name": "\u00bfPuede SuperCode abrir archivos .db y .sqlite que ya tenga en mi tel\u00e9fono?",
+          "name": "¿Puede SuperCode abrir archivos .db y .sqlite que ya tenga en mi teléfono?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "S\u00ed. Al tocar o ejecutar un archivo .db, .sqlite, .sqlite3 o .db3 se inspeccionan todas sus tablas, vistas, \u00edndices y esquemas, y cualquier script .sql en esa misma carpeta puede consultar la base directamente."
+            "text": "Sí. Al tocar o ejecutar un archivo .db, .sqlite, .sqlite3 o .db3 se inspeccionan todas sus tablas, vistas, índices y esquemas, y cualquier script .sql en esa misma carpeta puede consultar la base directamente."
           }
         },
         {
           "@type": "Question",
-          "name": "\u00bfAdmite sintaxis de MySQL como AUTO_INCREMENT, SHOW TABLES, DESCRIBE o Procedimientos Almacenados?",
+          "name": "¿Admite sintaxis de MySQL como AUTO_INCREMENT, SHOW TABLES, DESCRIBE o Procedimientos Almacenados?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Los comandos y DDL habituales de MySQL/PostgreSQL (AUTO_INCREMENT, ENUM, SHOW TABLES, DESCRIBE, ILIKE) corren localmente offline, mientras que los Procedimientos Almacenados y Triggers propios de MySQL 8.0 se enrutan autom\u00e1ticamente a Cloud MySQL 8.0."
+            "text": "Los comandos y DDL habituales de MySQL/PostgreSQL (AUTO_INCREMENT, ENUM, SHOW TABLES, DESCRIBE, ILIKE) corren localmente offline, mientras que los Procedimientos Almacenados y Triggers propios de MySQL 8.0 se enrutan automáticamente a Cloud MySQL 8.0."
           }
         },
         {
           "@type": "Question",
-          "name": "\u00bfC\u00f3mo exporto los resultados de una consulta SQL a CSV, Markdown o JSON?",
+          "name": "¿Cómo exporto los resultados de una consulta SQL a CSV, Markdown o JSON?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A\u00f1ade `.mode csv` (o `.mode markdown` / `.mode json`) y `.once salida.csv` antes de tu consulta SELECT \u2014 SuperCode guardar\u00e1 el archivo exportado directamente en la carpeta de tu proyecto."
+            "text": "Añade `.mode csv` (o `.mode markdown` / `.mode json`) y `.once salida.csv` antes de tu consulta SELECT — SuperCode guardará el archivo exportado directamente en la carpeta de tu proyecto."
           }
         }
       ]
@@ -1736,7 +1752,7 @@
         <span id="langTriggerText">ES</span>
         <span class="lang-chevron" aria-hidden="true">&#9662;</span>
       </button>
-      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=sql-sqlite-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Des%26utm_campaign%3Dsql-sqlite-studio%26utm_content%3Dsql-ide" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
         <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
         <span data-i18n="nav_cta">Google Play</span>
       </a>
@@ -1804,7 +1820,7 @@
           <p class="hero-lead" data-i18n="hero_desc">Creado a medida para ingenieros de datos, analistas y estudiantes de bases de datos. Ejecuta <strong>funciones de ventana, CTEs, JSONB y b&#250;squeda de texto completo</strong> sin internet en <strong>9 modos de salida</strong>, abre e inspecciona <strong>archivos binarios <code>.db/.sqlite</code></strong> en un toque e importa <strong>datasets CSV/JSON</strong>.</p>
 
           <div class="hero__cta" id="heroCta">
-            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=sql-sqlite-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Des%26utm_campaign%3Dsql-sqlite-studio%26utm_content%3Dsql-ide" target="_blank" rel="noopener" class="btn btn--gold">
               <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
               <span data-i18n="cta_btn">Descargar en Play</span>
             </a>
@@ -2092,7 +2108,7 @@
 
       <div class="sec-foot">
         <span data-i18n="meta_ver">Para Tel&#233;fonos, Plegables y Tablets &#183; Ligero 40.2 MB</span>
-        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener">
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=sql-sqlite-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Des%26utm_campaign%3Dsql-sqlite-studio%26utm_content%3Dsql-ide" target="_blank" rel="noopener">
           <span>Google Play</span>
           <svg aria-hidden="true"><use href="#i-ne"/></svg>
         </a>
@@ -2145,7 +2161,7 @@
         <p data-i18n="cta_desc">Instala SuperCode IDE en Google Play para tener un ejecutor SQL offline completo, explorador .db y estudio de datos CSV/JSON.</p>
       </div>
       <div class="footer-cta__btns">
-        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=sql-sqlite-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Des%26utm_campaign%3Dsql-sqlite-studio%26utm_content%3Dsql-ide" target="_blank" rel="noopener" class="btn btn--gold">
           <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
           <span data-i18n="cta_btn">Descargar en Play</span>
         </a>
@@ -2166,7 +2182,7 @@
         <p data-i18n="footer_tagline">Editor de c&#243;digo nativo y estudio de desarrollo offline creado para ingenieros, estudiantes y docentes en Android.</p>
         <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
         <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
-          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=sql-sqlite-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Des%26utm_campaign%3Dsql-sqlite-studio%26utm_content%3Dsql-ide" target="_blank" rel="noopener">Google Play &#8599;</a>
           <a href="https://supercode-ide.github.io/tutorial?ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">Gu&#237;a App</span> &#8599;</a>
           <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">Seleccionar idioma</span></button>
         </div>
@@ -2220,7 +2236,7 @@
   </div>
   <div class="bottom-bar-actions">
     <a href="https://supercode-ide.github.io/tutorial?ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">Gu&#237;a App</a>
-    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn-play-mini">
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=sql-sqlite-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Des%26utm_campaign%3Dsql-sqlite-studio%26utm_content%3Dsql-ide" target="_blank" rel="noopener" class="btn-play-mini">
       <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
       <span data-i18n="bottom_cta">Obtener</span>
     </a>

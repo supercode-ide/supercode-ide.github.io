@@ -32,8 +32,14 @@
   <meta property="og:title" content="Servidor PHP y HTML Offline Android &#8212; IDE Web HTML5, CSS3, JS, WASM y SQL | SuperCode">
   <meta property="og:description" content="Servidor PHP y HTML offline Android completo para crear sitios web full-stack sin internet. Servidor HTTP local real con HTML5, CSS3, ES Modules, WebAssembly (.wasm), PHP din&#225;mico + PDO SQLite, DevTools REPL y SFTP.">
   <meta property="og:url" content="https://supercode-ide.github.io/es/web-ide.html">
-  <meta property="og:image" content="https://supercode-ide.github.io/favicon.svg">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-hero-es.png">
+  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-hero-es.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SuperCode Local Web Server, Offline PHP + PDO SQLite and Mobile DevTools on Android">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-hero-es.png">
   <meta name="twitter:title" content="Servidor PHP y HTML Offline Android &#8212; IDE Web HTML5, CSS3, JS, WASM y SQL | SuperCode">
   <meta name="twitter:description" content="Servidor PHP y HTML offline Android completo para crear sitios web full-stack sin internet. Servidor HTTP local real con HTML5, CSS3, ES Modules, WebAssembly (.wasm), PHP din&#225;mico + PDO SQLite, DevTools REPL y SFTP.">
 
@@ -64,8 +70,8 @@
       "inLanguage": "es",
       "fileSize": "40.2MB",
       "softwareVersion": "1.5.503",
-      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
-      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&listing=web-php-studio",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&listing=web-php-studio",
       "sameAs": [
         "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor"
       ],
@@ -74,7 +80,7 @@
           "@type": "InstallAction",
           "target": {
             "@type": "EntryPoint",
-            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&listing=web-php-studio",
             "actionPlatform": [
               "http://schema.org/AndroidPlatform",
               "http://schema.org/MobileWebPlatform"
@@ -83,7 +89,7 @@
         },
         {
           "@type": "ViewAction",
-          "name": "Gu\u00eda App",
+          "name": "Guía App",
           "target": [
             "https://supercode-ide.github.io/tutorial/",
             "android-app://com.phoenixglobal.supercodeeditor/https/supercode-ide.github.io/tutorial"
@@ -92,7 +98,16 @@
       ],
       "identifier": "com.phoenixglobal.supercodeeditor",
       "url": "https://supercode-ide.github.io/es/web-ide.html",
-      "screenshot": "https://supercode-ide.github.io/favicon.svg",
+      "screenshot": [
+        "https://supercode-ide.github.io/assets/screenshots/03_web_php_devtools.png",
+        "https://supercode-ide.github.io/assets/screenshots/01_python_ide.png",
+        "https://supercode-ide.github.io/assets/screenshots/02_cpp20_compiler.png",
+        "https://supercode-ide.github.io/assets/screenshots/04_sql_sqlite_studio.png",
+        "https://supercode-ide.github.io/assets/screenshots/05_java17_ide.png",
+        "https://supercode-ide.github.io/assets/screenshots/06_visual_git_timemachine.png",
+        "https://supercode-ide.github.io/assets/screenshots/07_symbol_keyboard_tools.png",
+        "https://supercode-ide.github.io/assets/screenshots/08_themes_32languages.png"
+      ],
       "author": {
         "@type": "Organization",
         "name": "Phoenix Global Studios",
@@ -112,13 +127,14 @@
         "ratingCount": "66"
       },
       "featureList": [
-        "Origen HTTP Local Real para HTML5, CSS3, JS y WASM \u2014 Sirve tus proyectos bajo un origen HTTP/1.1 local aut\u00e9ntico en lugar de rutas file:// limitadas \u2014 habilitando fetch(), \u003cscript type=\"module\">, WebAssembly.instantiateStreaming() (.wasm), modelos 3D WebGL .glb/.gltf, IndexedDB y streaming de v\u00eddeo/audio HTTP 206.",
-        "Motor Backend PHP Din\u00e1mico 100% Sin Conexi\u00f3n \u2014 Ejecuta plantillas .php multip\u00e1gina, clases POO, closures, match e include/require totalmente offline con $_GET, $_POST, $_SESSION persistente, subida de $_FILES, cabeceras JSON REST y password_hash().",
-        "Bases de Datos SQL Integradas mediante PDO y SQLite3 \u2014 Crea aplicaciones PHP conectadas a datos sin internet usando new PDO('sqlite:app.db') o SQLite3 con consultas preparadas (? y :nombre), transacciones ACID e inspecci\u00f3n inmediata de tablas en el IDE SQL.",
-        "Consola DevTools Flotante, Registro de Red y REPL de JS \u2014 Inspecciona peticiones HTTP en vivo (GET /api.php -> 200 \u00b7 3ms \u00b7 1.2 KB), filtra registros Todo / Error / Aviso / Red, explora \u00e1rboles DOM/Objetos y eval\u00faa expresiones al vuelo en el REPL > Ejecutar JavaScript...",
-        "Selector de 3 Vistas Responsivas y Captura PNG a 2560px \u2014 Alterna al instante entre dise\u00f1o M\u00f3vil, Tablet (768dp) y Escritorio desde la Isla Din\u00e1mica arrastrable, prueba subidas de c\u00e1mara/galer\u00eda con <input type=\"file\"> y exporta capturas PNG n\u00edtidas de 2560px.",
-        "Vista Previa Web en Vivo y Publicaci\u00f3n sobre FTP / FTPS / SFTP \u2014 \u00bfEditando un sitio en producci\u00f3n por SFTP o FTPS? Pulsa Ejecutar para previsualizar p\u00e1ginas remotas localmente (descargando CSS, JS e im\u00e1genes relativas bajo demanda) y guarda de forma at\u00f3mica en tu hosting."
-      ]
+        "Origen HTTP Local Real para HTML5, CSS3, JS y WASM — Sirve tus proyectos bajo un origen HTTP/1.1 local auténtico en lugar de rutas file:// limitadas — habilitando fetch(), <script type=\"module\">, WebAssembly.instantiateStreaming() (.wasm), modelos 3D WebGL .glb/.gltf, IndexedDB y streaming de vídeo/audio HTTP 206.",
+        "Motor Backend PHP Dinámico 100% Sin Conexión — Ejecuta plantillas .php multipágina, clases POO, closures, match e include/require totalmente offline con $_GET, $_POST, $_SESSION persistente, subida de $_FILES, cabeceras JSON REST y password_hash().",
+        "Bases de Datos SQL Integradas mediante PDO y SQLite3 — Crea aplicaciones PHP conectadas a datos sin internet usando new PDO('sqlite:app.db') o SQLite3 con consultas preparadas (? y :nombre), transacciones ACID e inspección inmediata de tablas en el IDE SQL.",
+        "Consola DevTools Flotante, Registro de Red y REPL de JS — Inspecciona peticiones HTTP en vivo (GET /api.php -> 200 · 3ms · 1.2 KB), filtra registros Todo / Error / Aviso / Red, explora árboles DOM/Objetos y evalúa expresiones al vuelo en el REPL > Ejecutar JavaScript...",
+        "Selector de 3 Vistas Responsivas y Captura PNG a 2560px — Alterna al instante entre diseño Móvil, Tablet (768dp) y Escritorio desde la Isla Dinámica arrastrable, prueba subidas de cámara/galería con <input type=\"file\"> y exporta capturas PNG nítidas de 2560px.",
+        "Vista Previa Web en Vivo y Publicación sobre FTP / FTPS / SFTP — ¿Editando un sitio en producción por SFTP o FTPS? Pulsa Ejecutar para previsualizar páginas remotas localmente (descargando CSS, JS e imágenes relativas bajo demanda) y guarda de forma atómica en tu hosting."
+      ],
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-es.png"
     },
     {
       "@type": "BreadcrumbList",
@@ -140,7 +156,7 @@
     },
     {
       "@type": "HowTo",
-      "name": "C\u00f3mo Crear, Depurar y Publicar un Sitio Full-Stack en Android",
+      "name": "Cómo Crear, Depurar y Publicar un Sitio Full-Stack en Android",
       "description": "Desde el prototipado local con HTML/CSS/WASM y PHP+SQL hasta el despliegue en tu servidor en vivo.",
       "totalTime": "PT2M",
       "step": [
@@ -148,7 +164,7 @@
           "@type": "HowToStep",
           "position": 1,
           "name": "Escribe Archivos HTML5, CSS3, JS, WASM y PHP",
-          "text": "Edita proyectos web multiarchivo con autocompletado AST para HTML/CSS/JS/PHP y formateo recursivo en un toque que sangra \u003cscript> y <style> incrustados a la vez.",
+          "text": "Edita proyectos web multiarchivo con autocompletado AST para HTML/CSS/JS/PHP y formateo recursivo en un toque que sangra <script> y <style> incrustados a la vez.",
           "url": "https://supercode-ide.github.io/es/web-ide.html#step1"
         },
         {
@@ -161,15 +177,15 @@
         {
           "@type": "HowToStep",
           "position": 3,
-          "name": "Previsualiza en M\u00f3vil, Tablet y Escritorio + DevTools",
-          "text": "Cambia de resoluci\u00f3n al vuelo, revisa el estado de red y errores JS en el panel redimensionable de DevTools, o prueba cambios del DOM en el REPL.",
+          "name": "Previsualiza en Móvil, Tablet y Escritorio + DevTools",
+          "text": "Cambia de resolución al vuelo, revisa el estado de red y errores JS en el panel redimensionable de DevTools, o prueba cambios del DOM en el REPL.",
           "url": "https://supercode-ide.github.io/es/web-ide.html#step3"
         },
         {
           "@type": "HowToStep",
           "position": 4,
           "name": "Publica tus Cambios Directo en tu Hosting o GitHub Pages",
-          "text": "Sube sitios est\u00e1ticos/WASM a GitHub Pages con Git Visual, o despliega aplicaciones PHP y recursos web en tu VPS mediante SFTP/FTPS.",
+          "text": "Sube sitios estáticos/WASM a GitHub Pages con Git Visual, o despliega aplicaciones PHP y recursos web en tu VPS mediante SFTP/FTPS.",
           "url": "https://supercode-ide.github.io/es/web-ide.html#step4"
         }
       ]
@@ -180,34 +196,34 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "\u00bfPuedo ejecutar sitios web din\u00e1micos en PHP y conectarlos a bases de datos SQL sin internet en Android?",
+          "name": "¿Puedo ejecutar sitios web dinámicos en PHP y conectarlos a bases de datos SQL sin internet en Android?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "\u00a1S\u00ed! SuperCode ejecuta p\u00e1ginas .php, endpoints REST JSON, sesiones, subida de formularios e includes multiarchivo totalmente offline, con soporte integrado para bases de datos PDO('sqlite:...') y SQLite3."
+            "text": "¡Sí! SuperCode ejecuta páginas .php, endpoints REST JSON, sesiones, subida de formularios e includes multiarchivo totalmente offline, con soporte integrado para bases de datos PDO('sqlite:...') y SQLite3."
           }
         },
         {
           "@type": "Question",
-          "name": "\u00bfFuncionan los m\u00f3dulos ES6 (\u003cscript type=\"module\">), fetch() y WebAssembly (.wasm)?",
+          "name": "¿Funcionan los módulos ES6 (<script type=\"module\">), fetch() y WebAssembly (.wasm)?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "S\u00ed. Como SuperCode sirve tu proyecto sobre un servidor HTTP local real con m\u00e1s de 65 tipos MIME (incluido application/wasm), fetch(), ES modules, modelos 3D WebGL y WebAssembly.instantiateStreaming() funcionan sin restricciones."
+            "text": "Sí. Como SuperCode sirve tu proyecto sobre un servidor HTTP local real con más de 65 tipos MIME (incluido application/wasm), fetch(), ES modules, modelos 3D WebGL y WebAssembly.instantiateStreaming() funcionan sin restricciones."
           }
         },
         {
           "@type": "Question",
-          "name": "\u00bfC\u00f3mo depuro errores de JavaScript, peticiones de red y vistas de escritorio en un tel\u00e9fono?",
+          "name": "¿Cómo depuro errores de JavaScript, peticiones de red y vistas de escritorio en un teléfono?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Toca la p\u00edldora arrastrable de la Isla Din\u00e1mica en la vista previa para cambiar entre M\u00f3vil, Tablet (768dp) y Escritorio, o abre el caj\u00f3n redimensionable de Web DevTools para filtrar errores/red y evaluar JavaScript en vivo en el REPL."
+            "text": "Toca la píldora arrastrable de la Isla Dinámica en la vista previa para cambiar entre Móvil, Tablet (768dp) y Escritorio, o abre el cajón redimensionable de Web DevTools para filtrar errores/red y evaluar JavaScript en vivo en el REPL."
           }
         },
         {
           "@type": "Question",
-          "name": "\u00bfPuedo previsualizar y actualizar sitios alojados en un servidor FTP o SFTP remoto?",
+          "name": "¿Puedo previsualizar y actualizar sitios alojados en un servidor FTP o SFTP remoto?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "S\u00ed. Monta tu servidor en el espacio SFTP/FTPS/FTP, edita pesta\u00f1as remotas HTML/CSS/JS/PHP directamente con guardado at\u00f3mico en 3 fases y pulsa Ejecutar para previsualizar p\u00e1ginas remotas descargando recursos bajo demanda."
+            "text": "Sí. Monta tu servidor en el espacio SFTP/FTPS/FTP, edita pestañas remotas HTML/CSS/JS/PHP directamente con guardado atómico en 3 fases y pulsa Ejecutar para previsualizar páginas remotas descargando recursos bajo demanda."
           }
         }
       ]
@@ -1736,7 +1752,7 @@
         <span id="langTriggerText">ES</span>
         <span class="lang-chevron" aria-hidden="true">&#9662;</span>
       </button>
-      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Des%26utm_campaign%3Dweb-php-studio%26utm_content%3Dweb-ide" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
         <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
         <span data-i18n="nav_cta">Google Play</span>
       </a>
@@ -1804,7 +1820,7 @@
           <p class="hero-lead" data-i18n="hero_desc">No es un simple visor est&#225;tico <code>file://</code> &#8212; es un servidor web full-stack completo en tu bolsillo. Ejecuta <strong>HTML5, CSS3, ES Modules y WebAssembly (<code>.wasm</code>)</strong> junto con <strong>PHP din&#225;mico sin internet</strong>, <strong>bases de datos PDO SQLite</strong>, <strong>DevTools responsivas</strong> y <strong>publicaci&#243;n directa por FTP/SFTP</strong>.</p>
 
           <div class="hero__cta" id="heroCta">
-            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Des%26utm_campaign%3Dweb-php-studio%26utm_content%3Dweb-ide" target="_blank" rel="noopener" class="btn btn--gold">
               <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
               <span data-i18n="cta_btn">Descargar en Play</span>
             </a>
@@ -2092,7 +2108,7 @@
 
       <div class="sec-foot">
         <span data-i18n="meta_ver">Para Tel&#233;fonos, Plegables y Tablets &#183; Ligero 40.2 MB</span>
-        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener">
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Des%26utm_campaign%3Dweb-php-studio%26utm_content%3Dweb-ide" target="_blank" rel="noopener">
           <span>Google Play</span>
           <svg aria-hidden="true"><use href="#i-ne"/></svg>
         </a>
@@ -2145,7 +2161,7 @@
         <p data-i18n="cta_desc">Descarga SuperCode IDE en Google Play y construye, depura y despliega aplicaciones web completas desde Android.</p>
       </div>
       <div class="footer-cta__btns">
-        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Des%26utm_campaign%3Dweb-php-studio%26utm_content%3Dweb-ide" target="_blank" rel="noopener" class="btn btn--gold">
           <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
           <span data-i18n="cta_btn">Descargar en Play</span>
         </a>
@@ -2166,7 +2182,7 @@
         <p data-i18n="footer_tagline">Editor de c&#243;digo nativo y estudio de desarrollo offline creado para ingenieros, estudiantes y docentes en Android.</p>
         <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
         <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
-          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Des%26utm_campaign%3Dweb-php-studio%26utm_content%3Dweb-ide" target="_blank" rel="noopener">Google Play &#8599;</a>
           <a href="https://supercode-ide.github.io/tutorial?ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">Gu&#237;a App</span> &#8599;</a>
           <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">Seleccionar idioma</span></button>
         </div>
@@ -2220,7 +2236,7 @@
   </div>
   <div class="bottom-bar-actions">
     <a href="https://supercode-ide.github.io/tutorial?ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">Gu&#237;a App</a>
-    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn-play-mini">
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Des%26utm_campaign%3Dweb-php-studio%26utm_content%3Dweb-ide" target="_blank" rel="noopener" class="btn-play-mini">
       <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
       <span data-i18n="bottom_cta">Obtener</span>
     </a>

@@ -23,8 +23,14 @@
   <meta property="og:title" content="Compile Multiple Java Classes &amp; .jar Libraries on Android &#8212; Offline Package IDE | SuperCode">
   <meta property="og:description" content="Build multi-class, multi-package Java 17 projects offline on Android. Scan up to 500 .java files, auto-load custom libs/*.jar libraries (up to 30 MB), bundle resources/, and re-run in ~0ms via SHA-256 cache.">
   <meta property="og:url" content="https://supercode-ide.github.io/java-multiclass-packages-ide.html">
-  <meta property="og:image" content="https://supercode-ide.github.io/favicon.svg">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-java.png">
+  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-java.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SuperCode Offline Java 17 IDE with Multi-File Packages and SQLite JDBC on Android">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-java.png">
   <meta name="twitter:title" content="Compile Multiple Java Classes &amp; .jar Libraries on Android &#8212; Offline Package IDE | SuperCode">
   <meta name="twitter:description" content="Build multi-class, multi-package Java 17 projects offline on Android. Scan up to 500 .java files, auto-load custom libs/*.jar libraries (up to 30 MB), bundle resources/, and re-run in ~0ms via SHA-256 cache.">
 
@@ -55,8 +61,8 @@
       "inLanguage": "en",
       "fileSize": "40.2MB",
       "softwareVersion": "1.5.503",
-      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
-      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&listing=java-ide",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&listing=java-ide",
       "sameAs": [
         "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor"
       ],
@@ -65,7 +71,7 @@
           "@type": "InstallAction",
           "target": {
             "@type": "EntryPoint",
-            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&listing=java-ide",
             "actionPlatform": [
               "http://schema.org/AndroidPlatform",
               "http://schema.org/MobileWebPlatform"
@@ -83,7 +89,16 @@
       ],
       "identifier": "com.phoenixglobal.supercodeeditor",
       "url": "https://supercode-ide.github.io/java-multiclass-packages-ide.html",
-      "screenshot": "https://supercode-ide.github.io/favicon.svg",
+      "screenshot": [
+        "https://supercode-ide.github.io/assets/screenshots/05_java17_ide.png",
+        "https://supercode-ide.github.io/assets/screenshots/01_python_ide.png",
+        "https://supercode-ide.github.io/assets/screenshots/02_cpp20_compiler.png",
+        "https://supercode-ide.github.io/assets/screenshots/03_web_php_devtools.png",
+        "https://supercode-ide.github.io/assets/screenshots/04_sql_sqlite_studio.png",
+        "https://supercode-ide.github.io/assets/screenshots/06_visual_git_timemachine.png",
+        "https://supercode-ide.github.io/assets/screenshots/07_symbol_keyboard_tools.png",
+        "https://supercode-ide.github.io/assets/screenshots/08_themes_32languages.png"
+      ],
       "author": {
         "@type": "Organization",
         "name": "Phoenix Global Studios",
@@ -107,9 +122,10 @@
         "Zero-config third-party .jar library loader scanning project libs/ and lib/ directories up to 30 MB",
         "Classpath resource packaging for resources/ and src/main/resources/ via Class.getResourceAsStream()",
         "Smart main() entry-class arbitrator when pressing Run from an interface, record, enum, or service tab",
-        "SHA-256 transitive closure cache delivering near-0ms instant \u26a1 Cache re-runs on unchanged sources",
+        "SHA-256 transitive closure cache delivering near-0ms instant ⚡ Cache re-runs on unchanged sources",
         "Live overlay of unsaved open editor tabs during multi-file compilation plus built-in Visual Git"
-      ]
+      ],
+      "image": "https://supercode-ide.github.io/assets/media/og-java.png"
     },
     {
       "@type": "BreadcrumbList",
@@ -159,7 +175,7 @@
           "@type": "HowToStep",
           "position": 3,
           "name": "Press Run Without Leaving Your Helper Class",
-          "text": "Tap Run \u25b6 even while viewing a model or interface tab \u2014 SuperCode arbitrates main() and compiles the entire package tree offline.",
+          "text": "Tap Run ▶ even while viewing a model or interface tab — SuperCode arbitrates main() and compiles the entire package tree offline.",
           "url": "https://supercode-ide.github.io/java-multiclass-packages-ide.html#step3"
         },
         {
@@ -180,7 +196,7 @@
           "name": "How do I add an external `.jar` library like Gson or Commons Lang in SuperCode?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Create a folder named `libs` (or `lib`) inside your Java project root and copy your `.jar` file into it. SuperCode automatically adds all `.jar` archives in `libs/` (up to 30 MB) to both the compile-time and runtime classpath \u2014 no build scripts required."
+            "text": "Create a folder named `libs` (or `lib`) inside your Java project root and copy your `.jar` file into it. SuperCode automatically adds all `.jar` archives in `libs/` (up to 30 MB) to both the compile-time and runtime classpath — no build scripts required."
           }
         },
         {
@@ -188,7 +204,7 @@
           "name": "What happens if I press Run while editing a Java class that doesn't have `main()`?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "SuperCode's entry-point arbitrator scans your project's compiled classes, automatically selects the primary entry class containing `main()`, and runs it \u2014 saving you from constantly switching back and forth between tabs."
+            "text": "SuperCode's entry-point arbitrator scans your project's compiled classes, automatically selects the primary entry class containing `main()`, and runs it — saving you from constantly switching back and forth between tabs."
           }
         },
         {
@@ -1733,7 +1749,7 @@
         <span id="langTriggerText">EN</span>
         <span class="lang-chevron" aria-hidden="true">&#9662;</span>
       </button>
-      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=java-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Den%26utm_campaign%3Djava-ide%26utm_content%3Djava-multiclass-packages-ide" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
         <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
         <span data-i18n="nav_cta">Google Play</span>
       </a>
@@ -1802,7 +1818,7 @@
           <p class="hero-lead" data-i18n="hero_desc">Real object-oriented software doesn't live inside a single <code>Main.java</code> file. SuperCode compiles up to <strong>500 <code>.java</code> classes across nested packages</strong>, mounts external <strong><code>libs/*.jar</code> libraries</strong> automatically, resolves <strong><code>getResourceAsStream()</code></strong> assets, and re-runs unchanged builds in <strong>near <code>0ms</code></strong>.</p>
 
           <div class="hero__cta" id="heroCta">
-            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=java-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Den%26utm_campaign%3Djava-ide%26utm_content%3Djava-multiclass-packages-ide" target="_blank" rel="noopener" class="btn btn--gold">
               <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
               <span data-i18n="cta_btn">Get on Google Play</span>
             </a>
@@ -2096,7 +2112,7 @@
 
       <div class="sec-foot">
         <span data-i18n="meta_ver">Built for Phones, Foldables &amp; Tablets &#183; Lightweight 40.2 MB</span>
-        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener">
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=java-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Den%26utm_campaign%3Djava-ide%26utm_content%3Djava-multiclass-packages-ide" target="_blank" rel="noopener">
           <span>Google Play</span>
           <svg aria-hidden="true"><use href="#i-ne"/></svg>
         </a>
@@ -2237,7 +2253,7 @@
         <p data-i18n="cta_desc">Get SuperCode IDE free on Google Play &#8212; 500-file Java 17 builds, libs/*.jar support, and 0ms cached runs.</p>
       </div>
       <div class="footer-cta__btns">
-        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn btn--gold">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=java-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Den%26utm_campaign%3Djava-ide%26utm_content%3Djava-multiclass-packages-ide" target="_blank" rel="noopener" class="btn btn--gold">
           <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
           <span data-i18n="cta_btn">Get on Google Play</span>
         </a>
@@ -2258,7 +2274,7 @@
         <p data-i18n="footer_tagline">Native mobile code editor and offline development studio crafted for Android engineers, students, and educators worldwide.</p>
         <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
         <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
-          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=java-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Den%26utm_campaign%3Djava-ide%26utm_content%3Djava-multiclass-packages-ide" target="_blank" rel="noopener">Google Play &#8599;</a>
           <a href="https://supercode-ide.github.io/tutorial?ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">App Guide</span> &#8599;</a>
           <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">Select Language</span></button>
         </div>
@@ -2312,7 +2328,7 @@
   </div>
   <div class="bottom-bar-actions">
     <a href="https://supercode-ide.github.io/tutorial?ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">App Guide</a>
-    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener" class="btn-play-mini">
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=java-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Den%26utm_campaign%3Djava-ide%26utm_content%3Djava-multiclass-packages-ide" target="_blank" rel="noopener" class="btn-play-mini">
       <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
       <span data-i18n="bottom_cta">Get</span>
     </a>
