@@ -48,6 +48,7 @@
   <link rel="alternate" hreflang="ms" href="https://supercode-ide.github.io/ms/sql-python-php-java-lua-integration.html">
   <link rel="alternate" hreflang="fil" href="https://supercode-ide.github.io/tl/sql-python-php-java-lua-integration.html">
   <link rel="alternate" hreflang="bn" href="https://supercode-ide.github.io/bn/sql-python-php-java-lua-integration.html">
+  <link rel="alternate" type="application/rss+xml" title="SuperCode IDE Guides &amp; Releases" href="https://supercode-ide.github.io/feed.xml">
 
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
@@ -157,7 +158,8 @@
         "Disk-paged GB Large File Editor capable of opening, searching, and regex-cleaning multi-gigabyte .sql database dumps smoothly",
         "Real Android filesystem ACID persistence with Git version control for schema migrations and SFTP remote database transfers"
       ],
-      "image": "https://supercode-ide.github.io/assets/media/og-hero-ja.png"
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-ja.png",
+      "dateModified": "2026-11-27"
     },
     {
       "@type": "BreadcrumbList",
@@ -194,30 +196,31 @@
           "position": 1,
           "name": "Design Tables, Indexes & Seed Data in SQL Studio",
           "text": "Create app.db inside your project folder using SQLite 3.54.1 DDL, STRICT types, FTS5 indexes, or CSV/JSON imports.",
-          "url": "https://supercode-ide.github.io/sql-python-php-java-lua-integration.html#step1"
+          "url": "https://supercode-ide.github.io/ja/sql-python-php-java-lua-integration.html#step1"
         },
         {
           "@type": "HowToStep",
           "position": 2,
           "name": "Ingest or Process Records via Python, Java or Lua",
           "text": "Connect to 'app.db' via Python sqlite3, Java jdbc:sqlite:app.db, or Lua lsqlite3 with zero driver installation.",
-          "url": "https://supercode-ide.github.io/sql-python-php-java-lua-integration.html#step2"
+          "url": "https://supercode-ide.github.io/ja/sql-python-php-java-lua-integration.html#step2"
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "Serve a Dynamic Web UI Over Localhost PHP PDO",
           "text": "Open dashboard.php and query new PDO('sqlite:app.db') to render responsive charts and CRUD forms in the 3-viewport browser.",
-          "url": "https://supercode-ide.github.io/sql-python-php-java-lua-integration.html#step3"
+          "url": "https://supercode-ide.github.io/ja/sql-python-php-java-lua-integration.html#step3"
         },
         {
           "@type": "HowToStep",
           "position": 4,
           "name": "Audit Live Tables or Clean GB-Scale .sql Backups",
           "text": "Tap app.db anytime to verify state in 9 output modes, or open multi-GB .sql dumps in the disk-paged Large File Editor.",
-          "url": "https://supercode-ide.github.io/sql-python-php-java-lua-integration.html#step4"
+          "url": "https://supercode-ide.github.io/ja/sql-python-php-java-lua-integration.html#step4"
         }
-      ]
+      ],
+      "inLanguage": "ja"
     },
     {
       "@type": "FAQPage",
@@ -255,7 +258,8 @@
             "text": "はい。SuperCodeのGB級大容量ファイルエディタは、ファイル全体をRAMに展開せずディスクページから直接ストリーミング処理するため、正規表現検索・置換や文字コード判定付きで快適に開けます。"
           }
         }
-      ]
+      ],
+      "inLanguage": "ja"
     }
   ]
 }
@@ -381,7 +385,7 @@
       <div class="drawer-top__left">
         <span class="drawer-top__dot" aria-hidden="true"></span>
         <span class="drawer-top__title" data-i18n="sitemap_title">全サイトマップ</span>
-        <span class="drawer-top__badge" data-i18n="sitemap_badge">53ページ · 32言語</span>
+        <span class="drawer-top__badge" data-i18n="sitemap_badge">61 ページ · 32 言語</span>
       </div>
       <button type="button" class="drawer-toggle-all" id="drawerToggleAll" data-expanded="false" data-expand-label="すべて展開" data-collapse-label="すべて折りたたむ">
         <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8h9M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
@@ -431,7 +435,7 @@
         </div>
         <div class="drawer-node" data-hub="c-compiler.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="c-compiler.html"><span class="drawer-link__title" data-i18n="nav_c_compiler">C言語</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="c-compiler.html"><span class="drawer-link__title" data-i18n="nav_c_compiler">C言語</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-c-compiler" aria-label="サブページを切り替え: C言語">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -441,11 +445,12 @@
             <a class="drawer-sub__link" href="c-multifile-header-projects.html"><span class="drawer-sub__code">C-02</span><span class="drawer-sub__title">マルチファイル .c/.h &amp; CMake ビルド</span></a>
             <a class="drawer-sub__link" href="c-scanf-file-io-console.html"><span class="drawer-sub__code">C-03</span><span class="drawer-sub__title">対話型 scanf 標準入力 &amp; ファイル I/O</span></a>
             <a class="drawer-sub__link" href="c-posix-systems-programming.html"><span class="drawer-sub__code">C-04</span><span class="drawer-sub__title">POSIX ヘッダ・スレッド・ソケット</span></a>
+            <a class="drawer-sub__link" href="c-algorithms-data-structures-android.html"><span class="drawer-sub__code">C-05</span><span class="drawer-sub__title">C言語アルゴリズム・データ構造・ビット演算</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="cpp-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="cpp-ide.html"><span class="drawer-link__title" data-i18n="nav_cpp_ide">C++20</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="cpp-ide.html"><span class="drawer-link__title" data-i18n="nav_cpp_ide">C++20</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-cpp-ide" aria-label="サブページを切り替え: C++20">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -455,11 +460,12 @@
             <a class="drawer-sub__link" href="cpp-oop-smart-pointers-modern.html"><span class="drawer-sub__code">CPP-02</span><span class="drawer-sub__title">モダン C++20・Ranges &amp; OOP</span></a>
             <a class="drawer-sub__link" href="cpp-multifile-hpp-builder.html"><span class="drawer-sub__code">CPP-03</span><span class="drawer-sub__title">21種のマルチファイル C++ &amp; CMake プロジェクト</span></a>
             <a class="drawer-sub__link" href="learn-cpp-offline-android.html"><span class="drawer-sub__code">CPP-04</span><span class="drawer-sub__title">Android で C++ をオフライン学習</span></a>
+            <a class="drawer-sub__link" href="cpp-debugging-cmake-git-workflow.html"><span class="drawer-sub__code">CPP-05</span><span class="drawer-sub__title">C++ 診断・フォーマッタ・Visual Git</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="java-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="java-ide.html"><span class="drawer-link__title" data-i18n="nav_java_ide">Java 17</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="java-ide.html"><span class="drawer-link__title" data-i18n="nav_java_ide">Java 17</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-java-ide" aria-label="サブページを切り替え: Java 17">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -469,11 +475,12 @@
             <a class="drawer-sub__link" href="java-multiclass-packages-ide.html"><span class="drawer-sub__code">JV-02</span><span class="drawer-sub__title">マルチクラスパッケージ &amp; .jar ライブラリ</span></a>
             <a class="drawer-sub__link" href="java-jdbc-sqlite-file-io.html"><span class="drawer-sub__code">JV-03</span><span class="drawer-sub__title">オフライン Java SQLite JDBC &amp; NIO.2</span></a>
             <a class="drawer-sub__link" href="learn-java-dsa-android.html"><span class="drawer-sub__code">JV-04</span><span class="drawer-sub__title">Java・AP CS &amp; DSA をオフライン学習</span></a>
+            <a class="drawer-sub__link" href="java-25-project-templates-android.html"><span class="drawer-sub__code">JV-05</span><span class="drawer-sub__title">複数ファイル構成の Java テンプレート 25選</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="javascript-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="javascript-ide.html"><span class="drawer-link__title" data-i18n="nav_js_ide">JavaScript</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="javascript-ide.html"><span class="drawer-link__title" data-i18n="nav_js_ide">JavaScript</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-javascript-ide" aria-label="サブページを切り替え: JavaScript">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -483,11 +490,12 @@
             <a class="drawer-sub__link" href="javascript-es2024-async-console.html"><span class="drawer-sub__code">JS-02</span><span class="drawer-sub__title">ES2024 非同期・Top-Level Await &amp; Fetch</span></a>
             <a class="drawer-sub__link" href="javascript-web-crypto-security.html"><span class="drawer-sub__code">JS-03</span><span class="drawer-sub__title">Node.js &amp; Web Crypto（AES-GCM / SHA）</span></a>
             <a class="drawer-sub__link" href="learn-javascript-dsa-android.html"><span class="drawer-sub__code">JS-04</span><span class="drawer-sub__title">JS &amp; アルゴリズムをオフライン学習</span></a>
+            <a class="drawer-sub__link" href="javascript-json-regex-formatter-android.html"><span class="drawer-sub__code">JS-05</span><span class="drawer-sub__title">JSON/JSONC 整形・正規表現・REST Fetch</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="lua-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="lua-ide.html"><span class="drawer-link__title" data-i18n="nav_lua_ide">Lua 5.4</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="lua-ide.html"><span class="drawer-link__title" data-i18n="nav_lua_ide">Lua 5.4</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-lua-ide" aria-label="サブページを切り替え: Lua 5.4">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -497,11 +505,12 @@
             <a class="drawer-sub__link" href="lua-builtin-modules-cjson-sqlite.html"><span class="drawer-sub__code">LUA-02</span><span class="drawer-sub__title">11種以上の内蔵モジュール（cjson, lsqlite3, lfs）</span></a>
             <a class="drawer-sub__link" href="lua-54-bitwise-close-multifile.html"><span class="drawer-sub__code">LUA-03</span><span class="drawer-sub__title">Lua 5.4 ビット演算・&lt;close&gt; &amp; マルチファイル</span></a>
             <a class="drawer-sub__link" href="learn-lua-offline-android.html"><span class="drawer-sub__code">LUA-04</span><span class="drawer-sub__title">Android で Lua をオフライン学習</span></a>
+            <a class="drawer-sub__link" href="lua-android-crypto-regex-http-automation.html"><span class="drawer-sub__code">LUA-05</span><span class="drawer-sub__title">暗号・正規表現・HTTP・ファイル自動化</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="shell-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="shell-ide.html"><span class="drawer-link__title" data-i18n="nav_shell_ide">Shell &amp; Kotlin</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="shell-ide.html"><span class="drawer-link__title" data-i18n="nav_shell_ide">Shell &amp; Kotlin</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-shell-ide" aria-label="サブページを切り替え: Shell &amp; Kotlin">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -511,6 +520,7 @@
             <a class="drawer-sub__link" href="shell-awk-sed-grep-log-pipelines.html"><span class="drawer-sub__code">SH-02</span><span class="drawer-sub__title">awk・sed・grep &amp; curl テキストパイプライン</span></a>
             <a class="drawer-sub__link" href="kotlin-coding-app-compiler-android.html"><span class="drawer-sub__code">SH-03</span><span class="drawer-sub__title">Kotlin コードエディタ &amp; .kt/.kts 実行環境</span></a>
             <a class="drawer-sub__link" href="linux-devops-shell-sftp-git-android.html"><span class="drawer-sub__code">SH-04</span><span class="drawer-sub__title">ポケット Linux DevOps：Shell + SFTP + Git</span></a>
+            <a class="drawer-sub__link" href="kotlin-coroutines-collections-dsa-android.html"><span class="drawer-sub__code">SH-05</span><span class="drawer-sub__title">Kotlin コレクション・OOP・DSA 演習</span></a>
           </div>
         </div>
         </div>
@@ -520,7 +530,7 @@
         <div class="drawer-group__list">
         <div class="drawer-node" data-hub="web-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="web-ide.html"><span class="drawer-link__title" data-i18n="nav_web_ide">Web &amp; PHP</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="web-ide.html"><span class="drawer-link__title" data-i18n="nav_web_ide">Web &amp; PHP</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-web-ide" aria-label="サブページを切り替え: Web &amp; PHP">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -530,11 +540,12 @@
             <a class="drawer-sub__link" href="html-css-js-responsive-preview.html"><span class="drawer-sub__code">WEB-02</span><span class="drawer-sub__title">HTML5・CSS3 &amp; 3画面レスポンシブプレビュー</span></a>
             <a class="drawer-sub__link" href="mobile-web-devtools-wasm-studio.html"><span class="drawer-sub__code">WEB-03</span><span class="drawer-sub__title">モバイル Web DevTools・JS REPL &amp; WASM</span></a>
             <a class="drawer-sub__link" href="fullstack-web-sftp-deploy-android.html"><span class="drawer-sub__code">WEB-04</span><span class="drawer-sub__title">リモート FTP/SFTP ライブ Web デプロイ</span></a>
+            <a class="drawer-sub__link" href="web-canvas-media-export-pwa-android.html"><span class="drawer-sub__code">WEB-05</span><span class="drawer-sub__title">Canvas・メディア出力・オフライン Web アプリ</span></a>
           </div>
         </div>
         <div class="drawer-node is-open" data-hub="sql-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="sql-ide.html"><span class="drawer-link__title" data-i18n="nav_sql_ide">SQL</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="sql-ide.html"><span class="drawer-link__title" data-i18n="nav_sql_ide">SQL</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="true" aria-controls="sub-sql-ide" aria-label="サブページを切り替え: SQL">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -544,6 +555,7 @@
             <a class="drawer-sub__link" href="sql-window-functions-fts5-json.html"><span class="drawer-sub__code">SQL-02</span><span class="drawer-sub__title">ウィンドウ関数・CTE・JSONB &amp; FTS5</span></a>
             <a class="drawer-sub__link" href="mysql-postgresql-syntax-android.html"><span class="drawer-sub__code">SQL-03</span><span class="drawer-sub__title">MySQL &amp; PostgreSQL 構文互換</span></a>
             <a class="drawer-sub__link is-current" href="sql-python-php-java-lua-integration.html"><span class="drawer-sub__code">SQL-04</span><span class="drawer-sub__title">SQL・Python・PHP・Java で .db を共有</span></a>
+            <a class="drawer-sub__link" href="sql-crypto-regex-udf-scripts-android.html"><span class="drawer-sub__code">SQL-05</span><span class="drawer-sub__title">暗号・正規表現 UDF と複数ファイル .read</span></a>
           </div>
         </div>
         <div class="drawer-node">
@@ -1034,8 +1046,8 @@
       </div>
 
       <div class="sec-grid">
-        <h2>SQL &amp; データベーススタジオ完全ドキュメント</h2>
-        <p class="sec-lead">オフライン SQL IDE のメインハブと4つの専門データベースエンジニアリングガイドへ素早く移動。</p>
+        <h2>SQL &amp; データベース スタジオ ドキュメント一覧</h2>
+        <p class="sec-lead">メインのオフライン SQL IDE ハブと、データベース技術専門ガイド全5編を移動できます。</p>
       </div>
 
       <div class="sec-body">
@@ -1100,11 +1112,23 @@
               <span>ガイド表示中</span>
             </div>
           </a>
+          <a href="sql-crypto-regex-udf-scripts-android.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">SQL-05</span>
+              <span class="py-spoke-card__tag">SHA-256 · ICU 正規表現 · ATTACH/.read</span>
+            </div>
+            <h3>暗号・正規表現 UDF と複数ファイル .read</h3>
+            <p>ハードウェア支援 SHA-256/HMAC 暗号 UDF、ICU REGEXP_REPLACE/REGEXP_EXTRACT、複数 DB の ATTACH DATABASE パイプライン、ネストされた .read SQL を Android で100%オフライン実行。</p>
+            <div class="py-spoke-card__go">
+              <span>sql-crypto-regex-udf-scripts-android</span>
+              <span>ガイドを開く &rarr;</span>
+            </div>
+          </a>
         </div>
       </div>
 
       <div class="sec-foot">
-        <span>5つの連携 SQL ガイド · SQLite 3.54.1 + 50種以上の MySQL/Postgres 関数</span>
+        <span>6つの連携 SQL ガイド · SQLite 3.54.1 + 50種以上の MySQL/Postgres 関数</span>
         <a class="link-arrow" href="sql-ide.html">
           <span>SQL &amp; SQLite スタジオ ハブ</span>
           <svg aria-hidden="true"><use href="#i-arrow"/></svg>

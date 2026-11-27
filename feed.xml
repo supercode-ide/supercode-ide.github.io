@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code Editor: SuperCode IDE — Official Guides &amp; Releases</title>
+    <link>https://supercode-ide.github.io/</link>
+    <atom:link href="https://supercode-ide.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Official offline Android IDE guides across Python, C17, C++20, Java 17, JavaScript ES2024, Web/PHP 8.2, SQLite 3.54, Lua 5.4, Linux Shell, Kotlin, Visual Git, and SFTP — available in 32 languages.</description>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Nov 2026 16:52:14 +0000</lastBuildDate>
+    <item>
+      <title>C Data Structures, Algorithms &amp; Bitwise Compiler for Android | SuperCode</title>
+      <link>https://supercode-ide.github.io/c-algorithms-data-structures-android.html</link>
+      <guid isPermaLink="true">https://supercode-ide.github.io/c-algorithms-data-structures-android.html</guid>
+      <category>New Deep-Dive Guide</category>
+      <pubDate>Fri, 27 Nov 2026 16:52:14 +0000</pubDate>
+      <description>Practice C17 linked lists, binary search trees, hash tables, sorting algorithms, and embedded stdint.h bitfields 100% offline on Android with AST Error Radar, 1-tap C formatter, and A4 PDF export.</description>
+    </item>
+    <item>
+      <title>C++20 Diagnostics, Auto-Formatter &amp; Visual Git IDE for Android | SuperCode</title>
+      <link>https://supercode-ide.github.io/cpp-debugging-cmake-git-workflow.html</link>
+      <guid isPermaLink="true">https://supercode-ide.github.io/cpp-debugging-cmake-git-workflow.html</guid>
+      <category>New Deep-Dive Guide</category>
+      <pubDate>Fri, 27 Nov 2026 16:52:14 +0000</pubDate>
+      <description>Debug and maintain real C++20 repositories on Android. Get 1:1 #line compiler diagnostics, offline AST std:: completion, 1-tap C++ formatter, Web Worker loop kill, and Visual Git Time Machine.</description>
+    </item>
+    <item>
+      <title>25 Offline Multi-File Java 17 Project Templates for Android | SuperCode</title>
+      <link>https://supercode-ide.github.io/java-25-project-templates-android.html</link>
+      <guid isPermaLink="true">https://supercode-ide.github.io/java-25-project-templates-android.html</guid>
+      <category>New Deep-Dive Guide</category>
+      <pubDate>Fri, 27 Nov 2026 16:52:14 +0000</pubDate>
+      <description>Explore 25 ready-to-run multi-file Java 17 starter projects offline on Android. Practice clean package architecture, OOP design patterns, SQLite JDBC DAOs, and DSA with instant ECJ + D8 execution.</description>
+    </item>
+    <item>
+      <title>Offline JSON Formatter, JS Regex Tester &amp; Fetch Studio for Android | SuperCode</title>
+      <link>https://supercode-ide.github.io/javascript-json-regex-formatter-android.html</link>
+      <guid isPermaLink="true">https://supercode-ide.github.io/javascript-json-regex-formatter-android.html</guid>
+      <category>New Deep-Dive Guide</category>
+      <pubDate>Fri, 27 Nov 2026 16:52:14 +0000</pubDate>
+      <description>Format and validate JSON/JSONC offline, debug ES2024 regular expressions with named capture groups, inspect console.table() outputs, and prototype REST fetch() scripts on Android.</description>
+    </item>
+    <item>
+      <title>HTML5 Canvas, WebGL, Media Export &amp; Offline Web App IDE for Android | SuperCode</title>
+      <link>https://supercode-ide.github.io/web-canvas-media-export-pwa-android.html</link>
+      <guid isPermaLink="true">https://supercode-ide.github.io/web-canvas-media-export-pwa-android.html</guid>
+      <category>New Deep-Dive Guide</category>
+      <pubDate>Fri, 27 Nov 2026 16:52:14 +0000</pubDate>
+      <description>Build HTML5 Canvas, WebGL, WebAudio, and IndexedDB web apps on Android. SuperCode adds native showSaveFilePicker/navigator.share polyfills, lossless WebM SeekHead repair, and PNG/MP3 MediaStore export.</description>
+    </item>
+    <item>
+      <title>Offline SQL Crypto UDFs, ICU Regex &amp; Multi-File ATTACH Scripts | SuperCode</title>
+      <link>https://supercode-ide.github.io/sql-crypto-regex-udf-scripts-android.html</link>
+      <guid isPermaLink="true">https://supercode-ide.github.io/sql-crypto-regex-udf-scripts-android.html</guid>
+      <category>New Deep-Dive Guide</category>
+      <pubDate>Fri, 27 Nov 2026 16:52:14 +0000</pubDate>
+      <description>Run hardware-backed MD5/SHA-256/HMAC SQL functions, ICU REGEXP_REPLACE/REGEXP_EXTRACT, multi-database ATTACH joins, and nested .read SQL scripts 100% offline on Android.</description>
+    </item>
+    <item>
+      <title>Lua 5.4 Crypto, Unicode Regex, HTTP &amp; File Automation on Android | SuperCode</title>
+      <link>https://supercode-ide.github.io/lua-android-crypto-regex-http-automation.html</link>
+      <guid isPermaLink="true">https://supercode-ide.github.io/lua-android-crypto-regex-http-automation.html</guid>
+      <category>New Deep-Dive Guide</category>
+      <pubDate>Fri, 27 Nov 2026 16:52:14 +0000</pubDate>
+      <description>Write fast Lua 5.4.7 automation scripts on Android with zero luarocks setup. Use BoringSSL crypto/sha2/base64, ICU Unicode regex, OkHttp socket.http (1MB OOM guard), lfs filesystem tools, and 1-tap Lua formatting.</description>
+    </item>
+    <item>
+      <title>Kotlin Collections, Sealed Classes &amp; DSA Practice App for Android | SuperCode</title>
+      <link>https://supercode-ide.github.io/kotlin-coroutines-collections-dsa-android.html</link>
+      <guid isPermaLink="true">https://supercode-ide.github.io/kotlin-coroutines-collections-dsa-android.html</guid>
+      <category>New Deep-Dive Guide</category>
+      <pubDate>Fri, 27 Nov 2026 16:52:14 +0000</pubDate>
+      <description>Practice Kotlin data classes, sealed interfaces, null-safety (?. ?:), collection pipelines, and LeetCode algorithms on Android with offline AST completion, 21-key Kotlin symbol bar, and 1-tap formatter.</description>
+    </item>
+    <item>
+      <title>Code Editor: SuperCode IDE — Offline Python, C, C++, Java, JS, SQL &amp; PHP IDE for Android</title>
+      <link>https://supercode-ide.github.io/</link>
+      <guid isPermaLink="true">https://supercode-ide.github.io/</guid>
+      <category>Core IDE Hub</category>
+      <pubDate>Fri, 27 Nov 2026 16:52:14 +0000</pubDate>
+      <description>Native offline code editor and full-stack mobile IDE for Android. Edit GB-scale files, run Python, C17, C++20, Java 17, JavaScript, Lua, Shell, SQL, and local PHP/WASM websites with visual Git and SFTP.</description>
+    </item>
+    <item>
+      <title>Code Editor for Android — AST Autocomplete, 30+ Formatters &amp; Error Radar | SuperCode</title>
+      <link>https://supercode-ide.github.io/code-editor.html</link>
+      <guid isPermaLink="true">https://supercode-ide.github.io/code-editor.html</guid>
+      <category>Core IDE Hub</category>
+      <pubDate>Fri, 27 Nov 2026 16:52:14 +0000</pubDate>
+      <description>Professional native Android code editor with offline AST smart completion, dual-mode syntax highlighting across 40+ file types, one-tap formatting, real-time Error Radar, holographic word/byte stats, 29-tool adaptive toolbar, and 8 studio themes.</description>
+    </item>
+    <item>
+      <title>Open Large Text &amp; GB Log Files on Android — Streaming Replace &amp; 34 Encodings | SuperCode</title>
+      <link>https://supercode-ide.github.io/large-file-editor.html</link>
+      <guid isPermaLink="true">https://supercode-ide.github.io/large-file-editor.html</guid>
+      <category>Core IDE Hub</category>
+      <pubDate>Fri, 27 Nov 2026 16:52:14 +0000</pubDate>
+      <description>Open multi-hundred-MB and GB log files, SQL dumps, and CSV datasets instantly on Android without freezing. Includes 10MB disk paging, global streaming regex replace, 15MB virtual clipboard, and 34 character encodings.</description>
+    </item>
+    <item>
+      <title>Python Coding App for Android — Offline Python IDE, PIP, NumPy &amp; Multi-File | SuperCode</title>
+      <link>https://supercode-ide.github.io/python-ide.html</link>
+      <guid isPermaLink="true">https://supercode-ide.github.io/python-ide.html</guid>
+      <category>Core IDE Hub</category>
+      <pubDate>Fri, 27 Nov 2026 16:52:14 +0000</pubDate>
+      <description>Free offline Python coding app and Python 3.11/3.12 IDE for Android. Run multi-file Python projects, install PIP &amp; offline .whl packages, use NumPy/Pandas/Matplotlib, interactive input(), and Visual Git.</description>
+    </item>
+    <item>
+      <title>C Coding App &amp; Offline C Compiler for Android — GNU C17, Pointers &amp; Multi-File | SuperCode</title>
+      <link>https://supercode-ide.github.io/c-compiler.html</link>
+      <guid isPermaLink="true">https://supercode-ide.github.io/c-compiler.html</guid>
+      <category>Core IDE Hub</category>
+      <pubDate>Fri, 27 Nov 2026 16:52:14 +0000</pubDate>
+      <description>Dedicated offline C17 compiler and C coding app for Android. Compile multi-file .c/.h and CMake/Makefile projects offline, test pointers and structs, use unbuffered scanf/fgets stdin, and POSIX headers.</description>
+    </item>
+    <item>
+      <title>C++ IDE &amp; Offline C++20 Coding App for Android — STL, 21 Templates &amp; Fast cin | SuperCode</title>
+      <link>https://supercode-ide.github.io/cpp-ide.html</link>
+      <guid isPermaLink="true">https://supercode-ide.github.io/cpp-ide.html</guid>
+      <category>Core IDE Hub</category>
+      <pubDate>Fri, 27 Nov 2026 16:52:14 +0000</pubDate>
+      <description>Compile and run modern C++20 offline on Android. Full STL containers and ranges, 21 multi-file C++ CMake project templates, AST std:: completion, 55:45 competitive coding std::cin console, and Visual Git.</description>
+    </item>
+    <item>
+      <title>Java IDE &amp; Offline Java 17 Coding App for Android — Records, OOP &amp; SQLite JDBC | SuperCode</title>
+      <link>https://supercode-ide.github.io/java-ide.html</link>
+      <guid isPermaLink="true">https://supercode-ide.github.io/java-ide.html</guid>
+      <category>Core IDE Hub</category>
+      <pubDate>Fri, 27 Nov 2026 16:52:14 +0000</pubDate>
+      <description>Compile and run Java 17 offline on Android — modern alternative to Java 11 apps. Supports records, sealed classes, Streams, multi-class OOP, 0ms bytecode cache, built-in SQLite JDBC, and custom .jar files.</description>
+    </item>
+    <item>
+      <title>JavaScript IDE &amp; Offline Node/ES2024 Coding App for Android — fs, Crypto &amp; ESM | SuperCode</title>
+      <link>https://supercode-ide.github.io/javascript-ide.html</link>
+      <guid isPermaLink="true">https://supercode-ide.github.io/javascript-ide.html</guid>
+      <category>Core IDE Hub</category>
+      <pubDate>Fri, 27 Nov 2026 16:52:14 +0000</pubDate>
+      <description>Run standalone ES2024 JavaScript and 29+ Node.js core modules (fs, path, crypto, stream, zlib) offline on Android. Supports ESM &amp; CommonJS, Web Crypto AES-GCM, &lt;1ms loop safety, and Cloud Node.js.</description>
+    </item>
+    <item>
+      <title>Lua IDE &amp; Offline Lua 5.4 Coding App for Android — Game Scripting, cjson &amp; SQLite | SuperCode</title>
+      <link>https://supercode-ide.github.io/lua-ide.html</link>
+      <guid isPermaLink="true">https://supercode-ide.github.io/lua-ide.html</guid>
+      <category>Core IDE Hub</category>
+      <pubDate>Fri, 27 Nov 2026 16:52:14 +0000</pubDate>
+      <description>Write and run native Lua 5.4.7 scripts offline on Android in microseconds. Includes 11+ built-in modules (cjson, lsqlite3, lfs, crypto, socket), metatables, coroutines, bitwise ops, and . vs : AST completion.</description>
+    </item>
+    <item>
+      <title>Shell Script Runner (.sh No Root) &amp; Kotlin Coding App for Android — Bash &amp; awk | SuperCode</title>
+      <link>https://supercode-ide.github.io/shell-ide.html</link>
+      <guid isPermaLink="true">https://supercode-ide.github.io/shell-ide.html</guid>
+      <category>Core IDE Hub</category>
+      <pubDate>Fri, 27 Nov 2026 16:52:14 +0000</pubDate>
+      <description>Run Linux .sh shell scripts without root and compile Kotlin (.kt/.kts) on Android. Execute awk, sed, grep, curl, and bc pipelines offline, burst to Ubuntu Bash 5.2, and deploy via SFTP &amp; Visual Git.</description>
+    </item>
+    <item>
+      <title>Web &amp; PHP 8.2 IDE for Android — Offline HTML, CSS, JS, PDO SQLite &amp; WASM Server | SuperCode</title>
+      <link>https://supercode-ide.github.io/web-ide.html</link>
+      <guid isPermaLink="true">https://supercode-ide.github.io/web-ide.html</guid>
+      <category>Core IDE Hub</category>
+      <pubDate>Fri, 27 Nov 2026 16:52:14 +0000</pubDate>
+      <description>Full-stack offline Web &amp; PHP 8.2 IDE for Android. Real local HTTP server for HTML5, CSS3, ES Modules, WebAssembly (.wasm), PHP $_SESSION + PDO SQLite databases, 3-Viewport DevTools REPL, and SFTP deploy.</description>
+    </item>
+    <item>
+      <title>SQL IDE, SQLite .db Viewer &amp; Offline SQL Practice App for Android — MySQL &amp; JSON | SuperCode</title>
+      <link>https://supercode-ide.github.io/sql-ide.html</link>
+      <guid isPermaLink="true">https://supercode-ide.github.io/sql-ide.html</guid>
+      <category>Core IDE Hub</category>
+      <pubDate>Fri, 27 Nov 2026 16:52:14 +0000</pubDate>
+      <description>Offline SQL IDE, .db/.sqlite database editor, and SQL practice app for Android. Run Window Functions, CTEs, FTS5 search, 50+ MySQL/Postgres functions, 9 output modes, CSV/JSON imports, and Cloud MySQL 8.0.</description>
+    </item>
+    <item>
+      <title>Visual Git Client for Android — Clone, Time Machine Diff &amp; Merge UI | SuperCode</title>
+      <link>https://supercode-ide.github.io/git-client.html</link>
+      <guid isPermaLink="true">https://supercode-ide.github.io/git-client.html</guid>
+      <category>Core IDE Hub</category>
+      <pubDate>Fri, 27 Nov 2026 16:52:14 +0000</pubDate>
+      <description>Complete visual Git client built into SuperCode IDE for Android. Clone GitHub/GitLab/Gitee repos via PAT, inspect color-coded commit diffs, switch branches, auto-stash on Pull, and resolve merge conflicts visually.</description>
+    </item>
+    <item>
+      <title>SFTP, FTPS &amp; FTP Code Editor for Android — SSH Key Vault &amp; Atomic Save | SuperCode</title>
+      <link>https://supercode-ide.github.io/sftp-client.html</link>
+      <guid isPermaLink="true">https://supercode-ide.github.io/sftp-client.html</guid>
+      <category>Core IDE Hub</category>
+      <pubDate>Fri, 27 Nov 2026 16:52:14 +0000</pubDate>
+      <description>Connect to SFTP, FTPS (TLS 1.3), and FTP servers directly in SuperCode IDE on Android. Authenticate with Ed25519/RSA/PEM SSH keys in an AES-256 vault, edit remote code with 3-phase atomic save, and resume interrupted transfers.</description>
+    </item>
+  </channel>
+</rss>

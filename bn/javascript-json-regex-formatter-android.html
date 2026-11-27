@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="bn" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090A0F">
+  <meta name="color-scheme" content="only dark">
+  <meta name="supported-color-schemes" content="dark">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <title>Android-এর জন্য অফলাইন JSON ফরম্যাটার, JS Regex টেস্টার ও Fetch স্টুডিও | SuperCode</title>
+  <meta name="description" content="অফলাইনে JSON/JSONC ফরম্যাট ও ভ্যালিডেট করুন, নেমড ক্যাপচার গ্রুপসহ ES2024 রেজেক্স ডিবাগ করুন, console.table() আউটপুট দেখুন এবং Android-এ REST fetch() স্ক্রিপ্ট প্রোটোটাইপ করুন।">
+  <meta name="keywords" content="json formatter validator android, javascript regex tester offline android, jsonc beautifier mobile ide, fetch rest api tester javascript android, js formatter code editor phone">
+  <meta name="author" content="Phoenix Global Studios">
+  <meta name="google-play-app" content="app-id=com.phoenixglobal.supercodeeditor">
+
+  <link id="canonical-link" rel="canonical" href="https://supercode-ide.github.io/bn/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="x-default" href="https://supercode-ide.github.io/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="en" href="https://supercode-ide.github.io/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://supercode-ide.github.io/zh/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://supercode-ide.github.io/zh-tw/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="es" href="https://supercode-ide.github.io/es/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://supercode-ide.github.io/pt/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="ja" href="https://supercode-ide.github.io/ja/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="ko" href="https://supercode-ide.github.io/ko/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="de" href="https://supercode-ide.github.io/de/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="fr" href="https://supercode-ide.github.io/fr/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="ru" href="https://supercode-ide.github.io/ru/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="hi" href="https://supercode-ide.github.io/hi/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="id" href="https://supercode-ide.github.io/id/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="it" href="https://supercode-ide.github.io/it/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="vi" href="https://supercode-ide.github.io/vi/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="th" href="https://supercode-ide.github.io/th/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="tr" href="https://supercode-ide.github.io/tr/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="ar" href="https://supercode-ide.github.io/ar/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="pl" href="https://supercode-ide.github.io/pl/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="nl" href="https://supercode-ide.github.io/nl/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="sv" href="https://supercode-ide.github.io/sv/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="nb" href="https://supercode-ide.github.io/nb/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="da" href="https://supercode-ide.github.io/da/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="fi" href="https://supercode-ide.github.io/fi/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="cs" href="https://supercode-ide.github.io/cs/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="uk" href="https://supercode-ide.github.io/uk/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="ro" href="https://supercode-ide.github.io/ro/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="hu" href="https://supercode-ide.github.io/hu/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="el" href="https://supercode-ide.github.io/el/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="he" href="https://supercode-ide.github.io/he/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="ms" href="https://supercode-ide.github.io/ms/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="fil" href="https://supercode-ide.github.io/tl/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" hreflang="bn" href="https://supercode-ide.github.io/bn/javascript-json-regex-formatter-android.html">
+  <link rel="alternate" type="application/rss+xml" title="SuperCode IDE Guides &amp; Releases" href="https://supercode-ide.github.io/feed.xml">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
+  <meta property="og:title" content="Android-এর জন্য অফলাইন JSON ফরম্যাটার, JS Regex টেস্টার ও Fetch স্টুডিও | SuperCode">
+  <meta property="og:description" content="অফলাইনে JSON/JSONC ফরম্যাট ও ভ্যালিডেট করুন, নেমড ক্যাপচার গ্রুপসহ ES2024 রেজেক্স ডিবাগ করুন, console.table() আউটপুট দেখুন এবং Android-এ REST fetch() স্ক্রিপ্ট প্রোটোটাইপ করুন।">
+  <meta property="og:url" content="https://supercode-ide.github.io/bn/javascript-json-regex-formatter-android.html">
+  <meta property="og:locale" content="bn_BD">
+  <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-hero-bn.png">
+  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-hero-bn.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="২১-কী সিম্বল বার ও ৮টি নিখুঁত IDE থিম">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-hero-bn.png">
+  <meta name="twitter:title" content="Android-এর জন্য অফলাইন JSON ফরম্যাটার, JS Regex টেস্টার ও Fetch স্টুডিও | SuperCode">
+  <meta name="twitter:description" content="অফলাইনে JSON/JSONC ফরম্যাট ও ভ্যালিডেট করুন, নেমড ক্যাপচার গ্রুপসহ ES2024 রেজেক্স ডিবাগ করুন, console.table() আউটপুট দেখুন এবং Android-এ REST fetch() স্ক্রিপ্ট প্রোটোটাইপ করুন।">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <script>if(/SamsungBrowser/i.test(navigator.userAgent)){document.documentElement.classList.add('is-samsung');}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "SoftwareApplication",
+        "MobileApplication",
+        "WebApplication"
+      ],
+      "@id": "https://supercode-ide.github.io/#supercode-app",
+      "name": "Code Editor: SuperCode IDE",
+      "alternateName": [
+        "JSON Formatter & Validator Android",
+        "Offline JS Regex Tester Mobile",
+        "JavaScript REST Fetch Studio Android"
+      ],
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Offline JSON/JSONC Formatter, Regex Tester & JavaScript Fetch API Lab on Android",
+      "inLanguage": "bn",
+      "fileSize": "40.2MB",
+      "softwareVersion": "1.55.05",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=bn-BD&listing=js-lua-coding",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=bn-BD&listing=js-lua-coding",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=bn-BD"
+      ],
+      "potentialAction": [
+        {
+          "@type": "InstallAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=bn-BD&listing=js-lua-coding",
+            "actionPlatform": [
+              "http://schema.org/AndroidPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          }
+        },
+        {
+          "@type": "ViewAction",
+          "name": "অ্যাপ গাইড",
+          "target": [
+            "https://supercode-ide.github.io/tutorial/?lang=bn",
+            "android-app://com.phoenixglobal.supercodeeditor/https/supercode-ide.github.io/tutorial"
+          ]
+        }
+      ],
+      "identifier": "com.phoenixglobal.supercodeeditor",
+      "url": "https://supercode-ide.github.io/bn/javascript-json-regex-formatter-android.html",
+      "screenshot": [
+        "https://supercode-ide.github.io/assets/gallery/bn/08_symbol_keyboard_themes.webp",
+        "https://supercode-ide.github.io/assets/gallery/bn/01_python_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/bn/02_cpp20_compiler.webp",
+        "https://supercode-ide.github.io/assets/gallery/bn/03_web_php_devtools.webp",
+        "https://supercode-ide.github.io/assets/gallery/bn/04_file_manager_tree.webp",
+        "https://supercode-ide.github.io/assets/gallery/bn/05_sql_sqlite_studio.webp",
+        "https://supercode-ide.github.io/assets/gallery/bn/06_java17_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/bn/07_visual_git_timemachine.webp"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Phoenix Global Studios",
+        "url": "https://supercode-ide.github.io/bn/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "66"
+      },
+      "featureList": [
+        "Lexer-Aware JSON, JSONC & JS Auto-Formatter: Expand minified single-line JSON or JSONC configs (preserving // and /* */ comments) in one tap while flagging trailing commas or malformed brackets via Error Radar.",
+        "ES2024 RegExp Testing (/d Indices, /v Sets, Lookbehind): Test named capture groups, matchAll() iterators, Unicode property escapes \\p{...}, and /d match indices locally in milliseconds—with zero catastrophic-backtracking app freezes.",
+        "Live Top-Level Await fetch() & URLSearchParams: Script quick REST API probes using standard Fetch, Headers, AbortController, and URL/URLSearchParams—then transform and pretty-print responses directly to disk via node:fs.",
+        "Structured console.table() & JSON Diff Workflows: Render nested arrays of API objects as clean ASCII console tables, filter records with Array.prototype.groupBy / Object.groupBy, and export CSV or JSON snapshots.",
+        "Handle Multi-Hundred-MB JSON Dumps via GB Stream Pager: Received a 400 MB NDJSON log or API export? SuperCode's disk-backed GB Pager opens it at 120Hz and runs Global Stream Regex Replace across the entire file without OOM.",
+        "Template-Literal Safe Formatting & 21-Key JS Symbol Bar: Insert =>, ${}, ?., ??, and backticks in one swipe; CodeFormatEngine protects nested ${...} template expressions inside JavaScript strings flawlessly."
+      ],
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-bn.png",
+      "dateModified": "2026-11-27"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://supercode-ide.github.io/bn/javascript-json-regex-formatter-android.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SuperCode IDE",
+          "item": "https://supercode-ide.github.io/bn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "JavaScript ও Node IDE হাব",
+          "item": "https://supercode-ide.github.io/bn/javascript-ide.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "JSON/JSONC ফরম্যাটার, Regex ও REST Fetch",
+          "item": "https://supercode-ide.github.io/bn/javascript-json-regex-formatter-android.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Inspect, Transform & Ship JSON/API Scripts in 4 Steps",
+      "description": "Format payloads, verify regex patterns, and write reusable Node/JS data transforms offline.",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Open or Paste Any Minified JSON / JSONC File",
+          "text": "Load API exports from Downloads or SAF storage; files over 30 MB stream automatically with zero lag.",
+          "url": "https://supercode-ide.github.io/bn/javascript-json-regex-formatter-android.html#step1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Tap Format to Beautify & Validate Syntax Locally",
+          "text": "CodeFormatEngine indents nested objects cleanly while Error Radar pinpoints exact line/column syntax errors.",
+          "url": "https://supercode-ide.github.io/bn/javascript-json-regex-formatter-android.html#step2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Run ES2024 Regex & Data Transforms in Worker",
+          "text": "Write concise .mjs scripts with matchAll(), Object.groupBy(), and console.table() protected by <1ms loop guards.",
+          "url": "https://supercode-ide.github.io/bn/javascript-json-regex-formatter-android.html#step3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Write Cleaned Outputs Straight to Your Workspace",
+          "text": "Save formatted JSON, NDJSON, or CSV files via node:fs/promises and share or push via Visual Git.",
+          "url": "https://supercode-ide.github.io/bn/javascript-json-regex-formatter-android.html#step4"
+        }
+      ],
+      "inLanguage": "bn"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://supercode-ide.github.io/javascript-json-regex-formatter-android.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "SuperCode-এ গোপনীয় প্রোডাকশন JSON বা API কনফিগ ফরম্যাট করা কি নিরাপদ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "হ্যাঁ। SuperCode-এর JSON/JSONC ফরম্যাটার এবং ES2024 JavaScript Worker উভয়ই আপনার Android ডিভাইসে ১০০% লোকালি চলে—আপনার JSON পেলোড কখনোই কোনো বাহ্যিক ফরম্যাটিং সার্ভারে যায় না।"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ফরম্যাটার কি tsconfig.json বা settings.json-এর মতো // কমেন্টযুক্ত JSONC ফাইল সমর্থন করে?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "হ্যাঁ। CodeFormatEngine স্ট্যান্ডার্ড JSON-এর পাশাপাশি JSONC কমেন্টও চিনতে পারে এবং আপনার কমেন্ট না মুছেই নেস্টেড অবজেক্ট ও অ্যারে পরিচ্ছন্নভাবে বিউটিফাই করে।"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "টেস্টিংয়ের সময় কোনো জটিল রেজেক্সে ক্যাটাস্ট্রফিক ব্যাকট্র্যাকিং হলে কী হবে?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "সব JavaScript রেজেক্স স্ক্রিপ্ট একটি আইসোলেটেড অফ-UI Worker থ্রেডে চলে, তাই এডিটর ফ্রিজ না করেই আপনি ধীর বা অনিয়ন্ত্রিত রেজেক্স তাৎক্ষণিকভাবে থামাতে পারবেন।"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "SuperCode কি ফোনে 500 MB JSON বা NDJSON লগ ফাইল খুলে সার্চ করতে পারে?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "হ্যাঁ। 30 MB-এর বড় ফাইল নির্বিঘ্নে SuperCode-এর ডিস্ক-ব্যাকড GB স্ট্রিমিং Pager ব্যবহার করে, যেখানে 120Hz স্ক্রলিং এবং Global Stream Regex Replace সুবিধা রয়েছে।"
+          }
+        }
+      ],
+      "inLanguage": "bn"
+    }
+  ]
+}
+  </script>
+
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-page="js_json_regex">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="sc-logo" viewBox="20 14 68 72">
+    <path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/>
+    <path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/>
+    <path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/>
+    <path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+  </symbol>
+  <symbol id="gp-prism" viewBox="0 0 24 24">
+    <path fill="#4285F4" d="M3.6,2.4C3.3,2.7,3.1,3.2,3.1,3.8v16.4c0,0.6,0.2,1.1,0.5,1.4l0.1,0.1L12.9,12v-0.2L3.7,2.3L3.6,2.4z"/>
+    <path fill="#34A853" d="M16,15.1l-3.1-3.1v-0.2L16,8.7l0.1,0.1l3.6,2.1c1,0.6,1,1.5,0,2.1l-3.6,2.1L16,15.1z"/>
+    <path fill="#FBBC05" d="M16.1,15.1L12.9,12L3.6,21.3c0.3,0.4,0.9,0.4,1.6,0.1L16.1,15.1z"/>
+    <path fill="#EA4335" d="M16.1,8.9L5.2,2.6C4.5,2.2,3.9,2.3,3.6,2.7L12.9,12L16.1,8.9z"/>
+  </symbol>
+  <symbol id="i-ne" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8 20 7.2v9.6L12 21.2 4 16.8V7.2z"/><path d="M4 7.2l8 4.4 8-4.4M12 11.6v9.6"/></g></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2.8v3.2M15 2.8v3.2M9 18v3.2M15 18v3.2M2.8 9H6M2.8 15H6M18 9h3.2M18 15h3.2"/></g></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 2.8 7.8 12 12.6l9.2-4.8z"/><path d="m2.8 12 9.2 4.8 9.2-4.8"/><path d="m2.8 16.2 9.2 4.8 9.2-4.8"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="M2.8 8.5h18.4"/><path d="m9.5 12.5-2.2 2.2 2.2 2.2M14.5 12.5l2.2 2.2-2.2 2.2"/></g></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5.6" rx="7.6" ry="2.8"/><path d="M4.4 5.6v12.8c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8V5.6"/><path d="M4.4 12c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8"/></g></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="m7.2 9.5 3 2.5-3 2.5M12.8 15h4"/></g></symbol>
+  <symbol id="i-git" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.3"/><circle cx="6" cy="18" r="2.3"/><circle cx="18" cy="12" r="2.3"/><path d="M6 8.3v7.4M8.3 6h4.2a3.5 3.5 0 0 1 3.5 3.5v.2"/></g></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5h11a4 4 0 0 0 .7-7.94A5.5 5.5 0 0 0 7.4 9.2 3.8 3.8 0 0 0 6.5 18.5z"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M13 2.8 4.8 13.2h6.3L10.2 21.2 19.2 10.6h-6.4z"/></symbol>
+  <defs>
+    <radialGradient id="sc-rf-bg" cx="54" cy="54" r="76" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1C1C24"/>
+      <stop offset="100%" stop-color="#09090B"/>
+    </radialGradient>
+    <linearGradient id="sc-rf-ring" x1="24" y1="24" x2="84" y2="84" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="50%" stop-color="#8A2BE2"/>
+      <stop offset="100%" stop-color="#FF0055"/>
+    </linearGradient>
+    <linearGradient id="sc-rf-wl" x1="40" y1="48" x2="40" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#29B6F6"/>
+    </linearGradient>
+    <linearGradient id="sc-rf-wc" x1="54" y1="30" x2="54" y2="78" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8A2BE2"/>
+      <stop offset="100%" stop-color="#E040FB"/>
+    </linearGradient>
+    <linearGradient id="sc-rf-wr" x1="68" y1="45" x2="68" y2="63" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF0055"/>
+      <stop offset="100%" stop-color="#FF8A80"/>
+    </linearGradient>
+  </defs>
+  <symbol id="sc-radio-icon" viewBox="10 10 88 88">
+    <rect x="10" y="10" width="88" height="88" rx="22" fill="url(#sc-rf-bg)"/>
+    <circle cx="54" cy="54" r="42" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="0.9"/>
+    <circle cx="54" cy="54" r="34" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.9"/>
+    <path fill-rule="evenodd" fill="url(#sc-rf-ring)" d="M54,24 A30,30 0 1,0 54,84 A30,30 0 1,0 54,24 Z M54,32 A22,22 0 1,1 54,76 A22,22 0 1,1 54,32 Z"/>
+    <circle cx="54" cy="54" r="4" fill="#E0E0E0"/>
+    <line x1="40" y1="48" x2="40" y2="60" stroke="url(#sc-rf-wl)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="54" y1="30" x2="54" y2="44" stroke="url(#sc-rf-wc)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="54" y1="64" x2="54" y2="78" stroke="url(#sc-rf-wc)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="68" y1="45" x2="68" y2="63" stroke="url(#sc-rf-wr)" stroke-width="5" stroke-linecap="round"/>
+    <rect x="11" y="11" width="86" height="86" rx="21" fill="none" stroke="rgba(148,163,184,0.34)" stroke-width="1.6"/>
+  </symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 2.8 4.8 5.8v5.6c0 5 3.1 8.5 7.2 9.8 4.1-1.3 7.2-4.8 7.2-9.8V5.8z"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="index.html" class="brand" aria-label="SuperCode IDE Home">
+      <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+      <span>SuperCode</span>
+      <span class="brand__tag">IDE</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary Workspaces">
+      <a href="code-editor.html" data-i18n="nav_code_editor">কোড এডিটর</a>
+      <a href="large-file-editor.html" data-i18n="nav_large_file">GB বড় ফাইল</a>
+      <a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a>
+      <a href="c-compiler.html" data-i18n="nav_c_compiler">C17 কম্পাইলার</a>
+      <a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a>
+      <a href="java-ide.html" data-i18n="nav_java_ide">Java 17 IDE</a>
+      <a href="javascript-ide.html" class="is-current" data-i18n="nav_js_ide">JavaScript</a>
+      <a href="web-ide.html" data-i18n="nav_web_ide">ওয়েব ও PHP</a>
+      <a href="sql-ide.html" data-i18n="nav_sql_ide">SQL স্টুডিও</a>
+      <a href="git-client.html" data-i18n="nav_git_client">ভিজ্যুয়াল Git</a>
+      <a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP ও FTPS</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button id="langModalBtn" class="btn-lang-trigger" type="button" onclick="openLangModal()" aria-label="Select Language">
+        <svg class="lang-globe-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span id="langTriggerText">BN</span>
+        <span class="lang-chevron" aria-hidden="true">&#9662;</span>
+      </button>
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=bn-BD&amp;listing=js-lua-coding&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dbn%26utm_campaign%3Djs-lua-coding%26utm_content%3Djavascript-json-regex-formatter-android" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+        <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+        <span data-i18n="nav_cta">Google Play</span>
+      </a>
+      <a href="index.html" class="btn-home-icon" aria-label="Home" title="Home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5"/>
+          <path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
+        </svg>
+      </a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteDrawer" aria-label="সম্পূর্ণ সাইট ম্যাপ">
+        <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 8.5h16M4 15.5h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-drawer" id="siteDrawer" hidden>
+  <nav class="container menu-drawer__inner" aria-label="সম্পূর্ণ সাইট ম্যাপ">
+    <div class="drawer-top">
+      <div class="drawer-top__left">
+        <span class="drawer-top__dot" aria-hidden="true"></span>
+        <span class="drawer-top__title" data-i18n="sitemap_title">সম্পূর্ণ সাইট ম্যাপ</span>
+        <span class="drawer-top__badge" data-i18n="sitemap_badge">61টি পেজ · 32টি ভাষা</span>
+      </div>
+      <button type="button" class="drawer-toggle-all" id="drawerToggleAll" data-expanded="false" data-expand-label="সব প্রসারিত করুন" data-collapse-label="সব সংকুচিত করুন">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8h9M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+        <span data-i18n="sitemap_expand_all">সব প্রসারিত করুন</span>
+      </button>
+    </div>
+    <div class="drawer-cols">
+      <div class="drawer-group">
+        <div class="drawer-group__title"><span data-i18n="grp_core">এডিটর ও বড় ফাইল</span></div>
+        <div class="drawer-group__list">
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="index.html"><span class="drawer-link__title" data-i18n="nav_home">সংক্ষিপ্ত বিবরণ</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="code-editor.html"><span class="drawer-link__title" data-i18n="nav_code_editor">কোড এডিটর</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="large-file-editor.html"><span class="drawer-link__title" data-i18n="nav_large_file">GB বড় ফাইল</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="drawer-group">
+        <div class="drawer-group__title"><span data-i18n="grp_lang">অফলাইন কম্পাইলার ও ভাষা</span></div>
+        <div class="drawer-group__list">
+        <div class="drawer-node" data-hub="python-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="python-ide.html"><span class="drawer-link__title" data-i18n="nav_python_ide">Python IDE</span><span class="drawer-hub-count" aria-hidden="true">7</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-python-ide" aria-label="সাব-পেজ টগল করুন: Python IDE">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-python-ide" hidden>
+            <a class="drawer-sub__link" href="python-pip-manager.html"><span class="drawer-sub__code">PY-01</span><span class="drawer-sub__title">PIP ও অফলাইন .whl গাইড</span></a>
+            <a class="drawer-sub__link" href="python-offline-libraries.html"><span class="drawer-sub__code">PY-02</span><span class="drawer-sub__title">সমর্থিত Python লাইব্রেরি সমূহ</span></a>
+            <a class="drawer-sub__link" href="python-data-science.html"><span class="drawer-sub__code">PY-03</span><span class="drawer-sub__title">NumPy, Pandas ও Matplotlib</span></a>
+            <a class="drawer-sub__link" href="python-machine-learning.html"><span class="drawer-sub__code">PY-04</span><span class="drawer-sub__title">Scikit-Learn, OpenCV ও AI</span></a>
+            <a class="drawer-sub__link" href="python-web-scraping-automation.html"><span class="drawer-sub__code">PY-05</span><span class="drawer-sub__title">ওয়েব স্ক্র্যাপিং, API ও বট তৈরি</span></a>
+            <a class="drawer-sub__link" href="python-projects-workspace.html"><span class="drawer-sub__code">PY-06</span><span class="drawer-sub__title">মাল্টি-ফাইল প্রজেক্ট ও Git</span></a>
+            <a class="drawer-sub__link" href="learn-python-android.html"><span class="drawer-sub__code">PY-07</span><span class="drawer-sub__title">অফলাইনে Python শিখুন</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="c-compiler.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="c-compiler.html"><span class="drawer-link__title" data-i18n="nav_c_compiler">C17 কম্পাইলার</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-c-compiler" aria-label="সাব-পেজ টগল করুন: C17 কম্পাইলার">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-c-compiler" hidden>
+            <a class="drawer-sub__link" href="c-pointers-memory-coursework.html"><span class="drawer-sub__code">C-01</span><span class="drawer-sub__title">পয়েন্টার, স্ট্রাক্ট ও মেমোরি ল্যাব</span></a>
+            <a class="drawer-sub__link" href="c-multifile-header-projects.html"><span class="drawer-sub__code">C-02</span><span class="drawer-sub__title">মাল্টি-ফাইল .c/.h ও CMake বিল্ড</span></a>
+            <a class="drawer-sub__link" href="c-scanf-file-io-console.html"><span class="drawer-sub__code">C-03</span><span class="drawer-sub__title">লাইভ scanf Stdin ও ফাইল I/O</span></a>
+            <a class="drawer-sub__link" href="c-posix-systems-programming.html"><span class="drawer-sub__code">C-04</span><span class="drawer-sub__title">POSIX হেডার, থ্রেড ও সকেট</span></a>
+            <a class="drawer-sub__link" href="c-algorithms-data-structures-android.html"><span class="drawer-sub__code">C-05</span><span class="drawer-sub__title">অ্যালগরিদম, ডেটা স্ট্রাকচার ও বিটওয়াইজ C</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="cpp-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="cpp-ide.html"><span class="drawer-link__title" data-i18n="nav_cpp_ide">C++20 IDE</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-cpp-ide" aria-label="সাব-পেজ টগল করুন: C++20 IDE">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-cpp-ide" hidden>
+            <a class="drawer-sub__link" href="cpp-competitive-programming-stl.html"><span class="drawer-sub__code">CPP-01</span><span class="drawer-sub__title">কম্পিটিটিভ কোডিং ও STL ল্যাব</span></a>
+            <a class="drawer-sub__link" href="cpp-oop-smart-pointers-modern.html"><span class="drawer-sub__code">CPP-02</span><span class="drawer-sub__title">আধুনিক C++20, Ranges ও OOP</span></a>
+            <a class="drawer-sub__link" href="cpp-multifile-hpp-builder.html"><span class="drawer-sub__code">CPP-03</span><span class="drawer-sub__title">২১টি মাল্টি-ফাইল C++ ও CMake প্রজেক্ট</span></a>
+            <a class="drawer-sub__link" href="learn-cpp-offline-android.html"><span class="drawer-sub__code">CPP-04</span><span class="drawer-sub__title">Android-এ অফলাইনে C++ শিখুন</span></a>
+            <a class="drawer-sub__link" href="cpp-debugging-cmake-git-workflow.html"><span class="drawer-sub__code">CPP-05</span><span class="drawer-sub__title">C++ ডায়াগনস্টিকস, ফরম্যাটার ও ভিজ্যুয়াল Git</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="java-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="java-ide.html"><span class="drawer-link__title" data-i18n="nav_java_ide">Java 17 IDE</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-java-ide" aria-label="সাব-পেজ টগল করুন: Java 17 IDE">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-java-ide" hidden>
+            <a class="drawer-sub__link" href="java-17-records-oop-android.html"><span class="drawer-sub__code">JV-01</span><span class="drawer-sub__title">Java 17 Records, Sealed ও Streams</span></a>
+            <a class="drawer-sub__link" href="java-multiclass-packages-ide.html"><span class="drawer-sub__code">JV-02</span><span class="drawer-sub__title">মাল্টি-ক্লাস প্যাকেজ ও .jar লাইব্রেরি</span></a>
+            <a class="drawer-sub__link" href="java-jdbc-sqlite-file-io.html"><span class="drawer-sub__code">JV-03</span><span class="drawer-sub__title">অফলাইন Java SQLite JDBC ও NIO.2</span></a>
+            <a class="drawer-sub__link" href="learn-java-dsa-android.html"><span class="drawer-sub__code">JV-04</span><span class="drawer-sub__title">অফলাইনে Java, AP CS ও DSA শিখুন</span></a>
+            <a class="drawer-sub__link" href="java-25-project-templates-android.html"><span class="drawer-sub__code">JV-05</span><span class="drawer-sub__title">25টি মাল্টি-ফাইল Java প্রোজেক্ট টেমপ্লেট</span></a>
+          </div>
+        </div>
+        <div class="drawer-node is-open" data-hub="javascript-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="javascript-ide.html"><span class="drawer-link__title" data-i18n="nav_js_ide">JavaScript</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="true" aria-controls="sub-javascript-ide" aria-label="সাব-পেজ টগল করুন: JavaScript">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-javascript-ide">
+            <a class="drawer-sub__link" href="javascript-node-core-modules-offline.html"><span class="drawer-sub__code">JS-01</span><span class="drawer-sub__title">২৯+ অফলাইন Node.js কোর মডিউল</span></a>
+            <a class="drawer-sub__link" href="javascript-es2024-async-console.html"><span class="drawer-sub__code">JS-02</span><span class="drawer-sub__title">ES2024 Async, Top-Level Await ও Fetch</span></a>
+            <a class="drawer-sub__link" href="javascript-web-crypto-security.html"><span class="drawer-sub__code">JS-03</span><span class="drawer-sub__title">Node ও Web Crypto (AES-GCM / SHA)</span></a>
+            <a class="drawer-sub__link" href="learn-javascript-dsa-android.html"><span class="drawer-sub__code">JS-04</span><span class="drawer-sub__title">অফলাইনে JS শিখুন ও DSA অনুশীলন করুন</span></a>
+            <a class="drawer-sub__link is-current" href="javascript-json-regex-formatter-android.html"><span class="drawer-sub__code">JS-05</span><span class="drawer-sub__title">JSON/JSONC ফরম্যাটার, Regex ও REST Fetch</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="lua-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="lua-ide.html"><span class="drawer-link__title" data-i18n="nav_lua_ide">Lua 5.4</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-lua-ide" aria-label="সাব-পেজ টগল করুন: Lua 5.4">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-lua-ide" hidden>
+            <a class="drawer-sub__link" href="lua-game-scripting-metatables-oop.html"><span class="drawer-sub__code">LUA-01</span><span class="drawer-sub__title">গেম স্ক্রিপ্টিং, মেটাটেবিল ও করুটিন</span></a>
+            <a class="drawer-sub__link" href="lua-builtin-modules-cjson-sqlite.html"><span class="drawer-sub__code">LUA-02</span><span class="drawer-sub__title">১১+ বিল্ট-ইন মডিউল (cjson, lsqlite3, lfs)</span></a>
+            <a class="drawer-sub__link" href="lua-54-bitwise-close-multifile.html"><span class="drawer-sub__code">LUA-03</span><span class="drawer-sub__title">Lua 5.4 বিটওয়াইজ, &lt;close&gt; ও মাল্টি-ফাইল</span></a>
+            <a class="drawer-sub__link" href="learn-lua-offline-android.html"><span class="drawer-sub__code">LUA-04</span><span class="drawer-sub__title">Android-এ অফলাইনে Lua শিখুন</span></a>
+            <a class="drawer-sub__link" href="lua-android-crypto-regex-http-automation.html"><span class="drawer-sub__code">LUA-05</span><span class="drawer-sub__title">ক্রিপ্টো, Regex, HTTP ও ফাইল অটোমেশন</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="shell-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="shell-ide.html"><span class="drawer-link__title" data-i18n="nav_shell_ide">Shell ও Kotlin</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-shell-ide" aria-label="সাব-পেজ টগল করুন: Shell ও Kotlin">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-shell-ide" hidden>
+            <a class="drawer-sub__link" href="run-sh-shell-scripts-android-noroot.html"><span class="drawer-sub__code">SH-01</span><span class="drawer-sub__title">Android-এ .sh স্ক্রিপ্ট চালান (রুট ছাড়াই)</span></a>
+            <a class="drawer-sub__link" href="shell-awk-sed-grep-log-pipelines.html"><span class="drawer-sub__code">SH-02</span><span class="drawer-sub__title">awk, sed, grep ও curl টেক্সট পাইপলাইন</span></a>
+            <a class="drawer-sub__link" href="kotlin-coding-app-compiler-android.html"><span class="drawer-sub__code">SH-03</span><span class="drawer-sub__title">Kotlin কোডিং অ্যাপ ও .kt/.kts রানার</span></a>
+            <a class="drawer-sub__link" href="linux-devops-shell-sftp-git-android.html"><span class="drawer-sub__code">SH-04</span><span class="drawer-sub__title">পকেট Linux DevOps: Shell + SFTP + Git</span></a>
+            <a class="drawer-sub__link" href="kotlin-coroutines-collections-dsa-android.html"><span class="drawer-sub__code">SH-05</span><span class="drawer-sub__title">Kotlin কালেকশন, OOP ও DSA অনুশীলন</span></a>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="drawer-group">
+        <div class="drawer-group__title"><span data-i18n="grp_devops">ওয়েব, SQL ও রিমোট DevOps</span></div>
+        <div class="drawer-group__list">
+        <div class="drawer-node" data-hub="web-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="web-ide.html"><span class="drawer-link__title" data-i18n="nav_web_ide">ওয়েব ও PHP</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-web-ide" aria-label="সাব-পেজ টগল করুন: ওয়েব ও PHP">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-web-ide" hidden>
+            <a class="drawer-sub__link" href="php-server-pdo-sqlite-android.html"><span class="drawer-sub__code">WEB-01</span><span class="drawer-sub__title">অফলাইন PHP 8.2 ও PDO SQLite সার্ভার</span></a>
+            <a class="drawer-sub__link" href="html-css-js-responsive-preview.html"><span class="drawer-sub__code">WEB-02</span><span class="drawer-sub__title">HTML5, CSS3 ও ৩-ভিউপোর্ট প্রিভিউ</span></a>
+            <a class="drawer-sub__link" href="mobile-web-devtools-wasm-studio.html"><span class="drawer-sub__code">WEB-03</span><span class="drawer-sub__title">মোবাইল ওয়েব DevTools, JS REPL ও WASM</span></a>
+            <a class="drawer-sub__link" href="fullstack-web-sftp-deploy-android.html"><span class="drawer-sub__code">WEB-04</span><span class="drawer-sub__title">রিমোট FTP/SFTP লাইভ ওয়েব ডিপ্লয়</span></a>
+            <a class="drawer-sub__link" href="web-canvas-media-export-pwa-android.html"><span class="drawer-sub__code">WEB-05</span><span class="drawer-sub__title">Canvas, মিডিয়া এক্সপোর্ট ও অফলাইন ওয়েব অ্যাপ</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="sql-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="sql-ide.html"><span class="drawer-link__title" data-i18n="nav_sql_ide">SQL স্টুডিও</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-sql-ide" aria-label="সাব-পেজ টগল করুন: SQL স্টুডিও">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-sql-ide" hidden>
+            <a class="drawer-sub__link" href="sqlite-db-viewer-editor-android.html"><span class="drawer-sub__code">SQL-01</span><span class="drawer-sub__title">.db / .sqlite ইন্সপেক্টর ও ৯টি মোড</span></a>
+            <a class="drawer-sub__link" href="sql-window-functions-fts5-json.html"><span class="drawer-sub__code">SQL-02</span><span class="drawer-sub__title">Window Functions, CTE, JSONB ও FTS5</span></a>
+            <a class="drawer-sub__link" href="mysql-postgresql-syntax-android.html"><span class="drawer-sub__code">SQL-03</span><span class="drawer-sub__title">MySQL ও PostgreSQL কম্প্যাটিবিলিটি</span></a>
+            <a class="drawer-sub__link" href="sql-python-php-java-lua-integration.html"><span class="drawer-sub__code">SQL-04</span><span class="drawer-sub__title">SQL, Python, PHP ও Java-তে শেয়ার্ড .db</span></a>
+            <a class="drawer-sub__link" href="sql-crypto-regex-udf-scripts-android.html"><span class="drawer-sub__code">SQL-05</span><span class="drawer-sub__title">ক্রিপ্টো, Regex UDF ও মাল্টি-ফাইল .read</span></a>
+          </div>
+        </div>
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="git-client.html"><span class="drawer-link__title" data-i18n="nav_git_client">ভিজ্যুয়াল Git</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="sftp-client.html"><span class="drawer-link__title" data-i18n="nav_sftp_client">SFTP ও FTPS</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="drawer-studio-foot">
+      <a class="drawer-studio-link" data-radio-promo="true" href="https://play.google.com/store/apps/details?id=com.hifiradio.fmradio&amp;hl=bn-BD&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dbn%26utm_campaign%3Dhifi_radio_showcase%26utm_content%3Dsitemap_drawer" target="_blank" rel="noopener">
+        <svg class="drawer-studio-icon" aria-hidden="true"><use href="#sc-radio-icon"/></svg>
+        <span class="drawer-studio-meta">
+          <span class="drawer-studio-name">FM Radio: HiFi Radio AM FM</span>
+          <span class="drawer-studio-sub" data-i18n="radio_subtitle">লাইভ দ্বিভাষিক রেডিও ক্যাপশন · 32-ব্যান্ড HiFi DSP</span>
+        </span>
+        <span class="drawer-studio-go"><span data-i18n="nav_cta">Google Play</span> &#8599;</span>
+      </a>
+    </div>
+  </nav>
+</div>
+
+<main id="top">
+  <!-- ==================== 01 · EDITORIAL HERO & INTERACTIVE WORKBENCH ==================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <div class="py-hub-crumb"><a href="javascript-ide.html"><span class="crumb-arrow" aria-hidden="true">&larr;</span> JavaScript ও Node IDE হাব</a><span class="sep">/</span><span>JSON/JSONC ফরম্যাটার, Regex ও REST Fetch</span></div>
+          <div class="trust-pill">
+            <span class="trust-pill__score"><span data-play-rating>4.9</span> &#9733;</span>
+            <span data-i18n="hero_tag">JSON/JSONC বিউটিফায়ার · ES2024 REGEX ল্যাব · লাইভ FETCH · CONSOLE.TABLE()</span>
+          </div>
+
+          <h1 class="hero-h1" data-i18n="hero_h1">Android-এ অফলাইন <span class="text-gradient">JSON ফরম্যাটার, Regex ল্যাব ও JavaScript API স্টুডিও</span>।</h1>
+
+          <p class="hero-lead" data-i18n="hero_desc">সংবেদনশীল পেলোড ওয়েব টুলে আপলোড না করেই মিনিফাইড API রেসপন্স দেখুন, জটিল রেগুলার এক্সপ্রেশন ডিবাগ করুন এবং REST ওয়ার্কফ্লো স্ক্রিপ্ট করুন। SuperCode একত্রিত করেছে <strong>লেক্সার-সচেতন JSON/JSONC ও JS ফরম্যাটার</strong>, <strong>ES2024 RegExp</strong>, <strong><code>console.table()</code></strong> এবং <strong>GB-স্কেল JSON লগ স্ট্রিমিং</strong>।</p>
+
+          <div class="hero__cta" id="heroCta">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=bn-BD&amp;listing=js-lua-coding&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dbn%26utm_campaign%3Djs-lua-coding%26utm_content%3Djavascript-json-regex-formatter-android" target="_blank" rel="noopener" class="btn btn--gold">
+              <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+              <span data-i18n="cta_btn">Google Play-তে পান</span>
+            </a>
+            <a href="https://supercode-ide.github.io/tutorial/?lang=bn&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+              <span data-i18n="cta_tutorial">অ্যাপ গাইড</span>
+              <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <dl class="specs" aria-label="Key Specifications">
+                    <div class="spec"><dt>JSONC</dt><dd data-i18n="jr_s1">লেক্সার ফরম্যাট ও লিন্ট</dd></div>
+          <div class="spec"><dt>RegExp</dt><dd data-i18n="jr_s2">ES2024 /v /d ফ্ল্যাগ</dd></div>
+          <div class="spec"><dt>Fetch</dt><dd data-i18n="jr_s3">লাইভ REST + টেবিল</dd></div>
+          <div class="spec"><dt>&lt;1ms</dt><dd data-i18n="jr_s4">লুপ গার্ড Worker</dd></div>
+        </dl>
+      </div>
+
+      <div class="wb-caption">
+        <div class="sec-index" style="margin-bottom:0">
+          <span class="num">01</span>
+          <span class="rule"></span>
+          <span data-i18n="wb_eyebrow">ইন্টারেক্টিভ JSON, REGEX ও FETCH API ওয়ার্কবেঞ্চ</span>
+        </div>
+        <span class="wb-caption__hint mono">JSON/JSONC Lint · ES2024 RegExp · Fetch + console.table()</span>
+      </div>
+
+      <div class="ide-workbench">
+        <div class="wb-titlebar">
+          <div class="wb-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="wb-title" id="ide-compiler-label">js-api-tools/transform_json.mjs — Offline JSON/JSONC &amp; console.table()</div>
+          <button type="button" class="wb-run" id="btn-run-sandbox">
+            <span class="wb-run__tri" aria-hidden="true">&#9654;</span>
+            <span data-i18n="btn_run">ডেমো চালান</span>
+          </button>
+        </div>
+
+        <div class="wb-tabs" role="tablist" aria-label="Interactive Workspace Tabs">
+                    <button type="button" class="ide-tab active" data-tab="json" role="tab" aria-selected="true"><i></i>transform_json.mjs</button>
+          <button type="button" class="ide-tab" data-tab="regex" role="tab" aria-selected="false"><i></i>regex_named.mjs</button>
+          <button type="button" class="ide-tab" data-tab="fetch" role="tab" aria-selected="false"><i></i>rest_probe.mjs</button>
+        </div>
+
+        <div class="wb-body">
+          <aside class="wb-explorer" aria-label="Project Explorer">
+            <div class="wb-explorer__head">Explorer</div>
+            <div class="wb-folder">&#9662; js-api-tools</div>
+                        <button type="button" class="wb-file active" data-tab="json"><b>JSON</b><span>transform_json.mjs</span></button>
+            <button type="button" class="wb-file" data-tab="regex"><b>RE</b><span>regex_named.mjs</span></button>
+            <button type="button" class="wb-file" data-tab="fetch"><b>API</b><span>rest_probe.mjs</span></button>
+          </aside>
+
+          <div class="wb-main">
+            <div class="ide-editor-body" id="ide-code-box" role="region" aria-label="Interactive Code Preview"></div>
+            <div class="ide-terminal" id="ide-terminal-drawer" aria-live="polite">
+              <div class="term-header">
+                <span data-i18n="term_title">ইন্টারেক্টিভ কনসোল আউটপুট</span>
+                <div class="term-header-right">
+                  <span class="term-exec-badge" id="ide-exec-status">Ready</span>
+                  <button type="button" class="btn-term-close" id="btn-close-term" aria-label="Close terminal">&#10005;</button>
+                </div>
+              </div>
+              <div class="term-stream" id="ide-term-output"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wb-statusbar">
+          <span class="wb-statusbar__dot"><i></i><span id="wbStatusLang">ES2024 · Offline Worker</span></span>
+          <div class="wb-statusbar__right">
+            <span>UTF-8</span>
+            <span>LF</span>
+            <span>Ln 8, Col 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- SC_REAL_GALLERY_START -->
+  <section class="section sc-real-gallery" id="screenshots" aria-label="অ্যাপ প্রিভিউ ও স্ক্রিনশট">
+    <div class="container">
+      <div class="sc-gp-head">
+        <div class="sc-gp-head-left">
+          <div class="sc-gp-eyebrow" data-i18n="gal_eyebrow">বাস্তব Android স্ক্রিনশট</div>
+          <h2 class="sc-gp-title" data-i18n="gal_title">অ্যাপ প্রিভিউ ও স্ক্রিনশট</h2>
+          <p class="sc-gp-short" data-i18n="gal_short_desc">অফলাইন কোড এডিটর (Code Editor) & IDE: Python, C/C++, Java, HTML, SQL, PHP, Git</p>
+        </div>
+        <a class="sc-gp-store-bar" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=bn-BD&amp;listing=js-lua-coding&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dbn%26utm_campaign%3Djs-lua-coding%26utm_content%3Djavascript-json-regex-formatter-android" target="_blank" rel="noopener" aria-label="Code Editor: SuperCode IDE — Phoenix Global Studios">
+          <svg class="sc-gp-app-icon" width="38" height="38" viewBox="16 12 76 76" aria-hidden="true"><rect x="16" y="12" width="76" height="76" rx="18" fill="#070A10" stroke="#3B82F6" stroke-width="2"/><path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/><path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/><path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/><path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/></svg>
+          <span class="sc-gp-app-meta">
+            <span class="sc-gp-app-name">Code Editor: SuperCode IDE</span>
+            <span class="sc-gp-app-dev">Phoenix Global Studios</span>
+          </span>
+          <span class="sc-gp-store-arrow" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      </div>
+      <div class="sc-gp-stage">
+        <button type="button" class="sc-gp-nav sc-gp-nav--prev is-hidden" id="scGpPrev" aria-label="আগের ছবি">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="sc-gp-rail" id="scGpRail">
+          <button type="button" class="sc-gp-item sc-gp-item--feature" aria-label="কোড এডিটর: SuperCode IDE — অফলাইন মোবাইল IDE">
+            <img src="../assets/gallery/bn/00_feature_graphic.webp" data-sc-file="00_feature_graphic.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_0" data-cap="কোড এডিটর: SuperCode IDE — অফলাইন মোবাইল IDE" alt="কোড এডিটর: SuperCode IDE — অফলাইন মোবাইল IDE" width="1024" height="500" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="২১-কী সিম্বল বার ও ৮টি নিখুঁত IDE থিম">
+            <img src="../assets/gallery/bn/08_symbol_keyboard_themes.webp" data-sc-file="08_symbol_keyboard_themes.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_8" data-cap="২১-কী সিম্বল বার ও ৮টি নিখুঁত IDE থিম" alt="২১-কী সিম্বল বার ও ৮টি নিখুঁত IDE থিম" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="অফলাইন Python 3.11 / 3.12 IDE ও স্প্লিট কনসোল">
+            <img src="../assets/gallery/bn/01_python_ide.webp" data-sc-file="01_python_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_1" data-cap="অফলাইন Python 3.11 / 3.12 IDE ও স্প্লিট কনসোল" alt="অফলাইন Python 3.11 / 3.12 IDE ও স্প্লিট কনসোল" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="লোকাল C17 ও C++20 মাল্টি-ফাইল কম্পাইলার">
+            <img src="../assets/gallery/bn/02_cpp20_compiler.webp" data-sc-file="02_cpp20_compiler.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_2" data-cap="লোকাল C17 ও C++20 মাল্টি-ফাইল কম্পাইলার" alt="লোকাল C17 ও C++20 মাল্টি-ফাইল কম্পাইলার" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="লোকাল ওয়েব সার্ভার, অফলাইন PHP ও DevTools">
+            <img src="../assets/gallery/bn/03_web_php_devtools.webp" data-sc-file="03_web_php_devtools.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_3" data-cap="লোকাল ওয়েব সার্ভার, অফলাইন PHP ও DevTools" alt="লোকাল ওয়েব সার্ভার, অফলাইন PHP ও DevTools" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="গ্লোবাল ফাইল ট্রি ও লোকাল ফাইল ম্যানেজার (SAF)">
+            <img src="../assets/gallery/bn/04_file_manager_tree.webp" data-sc-file="04_file_manager_tree.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_4" data-cap="গ্লোবাল ফাইল ট্রি ও লোকাল ফাইল ম্যানেজার (SAF)" alt="গ্লোবাল ফাইল ট্রি ও লোকাল ফাইল ম্যানেজার (SAF)" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="অফলাইন SQLite 3.54 স্টুডিও ও .db ইন্সপেক্টর">
+            <img src="../assets/gallery/bn/05_sql_sqlite_studio.webp" data-sc-file="05_sql_sqlite_studio.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_5" data-cap="অফলাইন SQLite 3.54 স্টুডিও ও .db ইন্সপেক্টর" alt="অফলাইন SQLite 3.54 স্টুডিও ও .db ইন্সপেক্টর" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="অফলাইন Java 17 IDE ও SQLite JDBC">
+            <img src="../assets/gallery/bn/06_java17_ide.webp" data-sc-file="06_java17_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_6" data-cap="অফলাইন Java 17 IDE ও SQLite JDBC" alt="অফলাইন Java 17 IDE ও SQLite JDBC" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="ভিজ্যুয়াল Git ক্লায়েন্ট, টাইম মেশিন ও SFTP">
+            <img src="../assets/gallery/bn/07_visual_git_timemachine.webp" data-sc-file="07_visual_git_timemachine.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_7" data-cap="ভিজ্যুয়াল Git ক্লায়েন্ট, টাইম মেশিন ও SFTP" alt="ভিজ্যুয়াল Git ক্লায়েন্ট, টাইম মেশিন ও SFTP" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+        </div>
+        <button type="button" class="sc-gp-nav sc-gp-nav--next" id="scGpNext" aria-label="পরের ছবি">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  <div class="sc-lb-modal" id="scLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="অ্যাপ প্রিভিউ ও স্ক্রিনশট">
+    <div class="sc-lb-topbar">
+      <button type="button" class="sc-lb-back" id="scLbBack">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-i18n="gal_back">ফিরে যান</span>
+      </button>
+      <div class="sc-lb-meta">
+        <span class="sc-lb-counter" id="scLbCounter">1 / 9</span>
+        <span class="sc-lb-title" id="scLbTitle"></span>
+      </div>
+      <button type="button" class="sc-lb-close" id="scLbClose" aria-label="প্রিভিউ বন্ধ করুন">&times;</button>
+    </div>
+    <div class="sc-lb-stage">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--prev" id="scLbPrev" aria-label="আগের ছবি">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <img class="sc-lb-img" id="scLbImg" src="" alt="SuperCode IDE Preview">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--next" id="scLbNext" aria-label="পরের ছবি">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="sc-lb-dots" id="scLbDots"></div>
+  </div>
+  <script defer src="../assets/gallery.js"></script>
+<!-- SC_REAL_GALLERY_END -->
+
+
+
+
+
+  <!-- ==================== 02 · CORE CAPABILITIES ==================== -->
+  <section class="section section--alt" id="capabilities">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">02</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_cap_eyebrow">মূল সক্ষমতা</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="sec_cap_title">Production-Grade Cryptographic Primitives Right on Your Phone</h2>
+        <p class="sec-lead" data-i18n="sec_cap_lead">Build portable security utilities across browser/edge standards (`crypto.subtle`) and Node.js backend conventions (`node:crypto`) with zero internet exposure.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="feature-grid feature-grid--6">
+          <article class="feature-card" id="cap1">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <span class="f-idx">02.1</span>
+            </div>
+            <h3 class="f-title" data-i18n="f1_title">লেক্সার-সচেতন JSON, JSONC ও JS অটো-ফরম্যাটার</h3>
+            <p class="f-desc" data-i18n="f1_desc">এক ট্যাপেই মিনিফাইড এক-লাইনের JSON বা JSONC কনফিগ (// ও /* */ কমেন্ট অক্ষুণ্ণ রেখে) এক্সপ্যান্ড করুন এবং Error Radar-এ ট্রেইলিং কমা বা ভাঙা ব্র্যাকেট শনাক্ত করুন।</p>
+            <div class="f-code" data-i18n="f1_badge">JSON · JSONC · ES2024 ফরম্যাটার · 1-Undo</div>
+          </article>
+          <article class="feature-card" id="cap2">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-cube"/></svg></span>
+              <span class="f-idx">02.2</span>
+            </div>
+            <h3 class="f-title" data-i18n="f2_title">ES2024 RegExp টেস্টিং (/d Indices, /v Sets, Lookbehind)</h3>
+            <p class="f-desc" data-i18n="f2_desc">নেমড ক্যাপচার গ্রুপ, matchAll() ইটারেটর, ইউনিকোড প্রোপার্টি এসকেপ \\p{...} এবং /d ম্যাচ ইনডেক্স লোকালি মিলিসেকেন্ডে টেস্ট করুন—ক্যাটাস্ট্রফিক-ব্যাকট্র্যাকিং ফ্রিজ ছাড়াই।</p>
+            <div class="f-code" data-i18n="f2_badge">নেমড গ্রুপ · /d /v ফ্ল্যাগ · Worker সুরক্ষিত</div>
+          </article>
+          <article class="feature-card" id="cap3">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
+              <span class="f-idx">02.3</span>
+            </div>
+            <h3 class="f-title" data-i18n="f3_title">লাইভ টপ-লেভেল Await fetch() ও URLSearchParams</h3>
+            <p class="f-desc" data-i18n="f3_desc">স্ট্যান্ডার্ড Fetch, Headers, AbortController এবং URL/URLSearchParams দিয়ে দ্রুত REST API প্রোব স্ক্রিপ্ট লিখুন—এরপর node:fs-এর মাধ্যমে রেসপন্স রূপান্তর করে ডিস্কে প্রিটি-প্রিন্ট সেভ করুন।</p>
+            <div class="f-code" data-i18n="f3_badge">fetch() · AbortController · node:fs সেভ</div>
+          </article>
+          <article class="feature-card" id="cap4">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-chip"/></svg></span>
+              <span class="f-idx">02.4</span>
+            </div>
+            <h3 class="f-title" data-i18n="f4_title">স্ট্রাকচার্ড console.table() ও JSON ডিফ ওয়ার্কফ্লো</h3>
+            <p class="f-desc" data-i18n="f4_desc">API অবজেক্টের নেস্টেড অ্যারে পরিচ্ছন্ন ASCII কনসোল টেবিল হিসেবে রেন্ডার করুন, Array.prototype.groupBy / Object.groupBy দিয়ে রেকর্ড ফিল্টার করুন এবং CSV বা JSON স্ন্যাপশট এক্সপোর্ট করুন।</p>
+            <div class="f-code" data-i18n="f4_badge">console.table() · Object.groupBy · CSV/JSON</div>
+          </article>
+          <article class="feature-card" id="cap5">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+              <span class="f-idx">02.5</span>
+            </div>
+            <h3 class="f-title" data-i18n="f5_title">GB Stream Pager দিয়ে শত শত MB JSON ডাম্প হ্যান্ডেল করুন</h3>
+            <p class="f-desc" data-i18n="f5_desc">৪০০ MB NDJSON লগ বা API এক্সপোর্ট পেয়েছেন? SuperCode-এর ডিস্ক-ব্যাকড GB Pager এটি 120Hz-এ খোলে এবং OOM ছাড়াই পুরো ফাইলে Global Stream Regex Replace চালায়।</p>
+            <div class="f-code" data-i18n="f5_badge">GB Pager · গ্লোবাল স্ট্রিম Regex রিপ্লেস</div>
+          </article>
+          <article class="feature-card" id="cap6">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-db"/></svg></span>
+              <span class="f-idx">02.6</span>
+            </div>
+            <h3 class="f-title" data-i18n="f6_title">টেমপ্লেট-লিটারাল নিরাপদ ফরম্যাটিং ও ২১-কী JS সিম্বল বার</h3>
+            <p class="f-desc" data-i18n="f6_desc">এক সোয়াইপেই =&gt;, ${}, ?., ?? এবং ব্যাকটিক লিখুন; CodeFormatEngine JavaScript স্ট্রিংয়ের ভেতরে নেস্টেড ${...} টেমপ্লেট এক্সপ্রেশন নিখুঁতভাবে সুরক্ষিত রাখে।</p>
+            <div class="f-code" data-i18n="f6_badge">${...} নিরাপদ ফরম্যাটার · ২১-কী JS বার</div>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">ফোন, ফোল্ডেবল ও ট্যাবলেটের জন্য নির্মিত · হালকা 40.2 MB</span>
+        <a class="link-arrow" href="javascript-ide.html">
+          <span>JavaScript &amp; Node IDE Hub</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 03 · STEP-BY-STEP WORKFLOW GUIDE ==================== -->
+  <section class="section" id="workflow">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">03</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_wf_eyebrow">ধাপে ধাপে ওয়ার্কফ্লো</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="workflow_title">৪ ধাপে JSON/API স্ক্রিপ্ট পরীক্ষা, রূপান্তর ও শিপ করুন</h2>
+        <p class="sec-lead" data-i18n="workflow_lead">অফলাইনে পেলোড ফরম্যাট করুন, রেজেক্স প্যাটার্ন যাচাই করুন এবং পুনঃব্যবহারযোগ্য Node/JS ডেটা ট্রান্সফর্ম লিখুন।</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="workflow-grid">
+          <article class="wf-step" id="step1">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 01</span>
+              <span class="wf-step__cmd">Paste JSON/JSONC</span>
+            </div>
+            <h3 data-i18n="wf1_title">যেকোনো মিনিফাইড JSON / JSONC ফাইল খুলুন বা পেস্ট করুন</h3>
+            <p data-i18n="wf1_desc">Downloads বা SAF স্টোরেজ থেকে API এক্সপোর্ট লোড করুন; 30 MB-এর বড় ফাইল ল্যাগ ছাড়াই স্বয়ংক্রিয়ভাবে স্ট্রিম হয়।</p>
+          </article>
+          <article class="wf-step" id="step2">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 02</span>
+              <span class="wf-step__cmd">1-Tap Format</span>
+            </div>
+            <h3 data-i18n="wf2_title">লোকালি বিউটিফাই ও সিনট্যাক্স যাচাই করতে Format ট্যাপ করুন</h3>
+            <p data-i18n="wf2_desc">CodeFormatEngine নেস্টেড অবজেক্ট পরিচ্ছন্নভাবে ইন্ডেন্ট করে, আর Error Radar সঠিক লাইন/কলামের সিনট্যাক্স ত্রুটি চিহ্নিত করে।</p>
+          </article>
+          <article class="wf-step" id="step3">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 03</span>
+              <span class="wf-step__cmd">matchAll() /d</span>
+            </div>
+            <h3 data-i18n="wf3_title">Worker-এ ES2024 Regex ও ডেটা ট্রান্সফর্ম চালান</h3>
+            <p data-i18n="wf3_desc">&lt;1ms লুপ গার্ডে সুরক্ষিত matchAll(), Object.groupBy() এবং console.table() ব্যবহার করে সংক্ষিপ্ত .mjs স্ক্রিপ্ট লিখুন।</p>
+          </article>
+          <article class="wf-step" id="step4">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 04</span>
+              <span class="wf-step__cmd">fs.writeFile()</span>
+            </div>
+            <h3 data-i18n="wf4_title">পরিচ্ছন্ন আউটপুট সরাসরি আপনার ওয়ার্কস্পেসে লিখুন</h3>
+            <p data-i18n="wf4_desc">node:fs/promises দিয়ে ফরম্যাট করা JSON, NDJSON বা CSV ফাইল সেভ করুন এবং Visual Git দিয়ে শেয়ার বা পুশ করুন।</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="wf_foot_note">১০০% লোকাল প্রাইভেসি · JSON/JSONC লেক্সার ফরম্যাটার · ES2024 Worker স্যান্ডবক্স</span>
+        <a class="link-arrow" href="https://supercode-ide.github.io/tutorial/?lang=bn&amp;ref=official_web" data-supercode-tutorial="true">
+          <span data-i18n="cta_tutorial">অ্যাপ গাইড</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 04 · FEATURED SUMMARY & COMPARISON MATRIX ==================== -->
+  <section class="section section--alt" id="comparison">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">04</span>
+        <span class="rule"></span>
+        <span data-i18n="comp_eyebrow">সক্ষমতার ম্যাট্রিক্স</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="table_h2">SuperCode বনাম ব্রাউজার-ভিত্তিক JSON ও Regex টুলস</h2>
+        <p class="snippet-definition" data-i18n="snippet_p"><strong>SuperCode-এর অফলাইন JSON/JSONC ফরম্যাটার ও JavaScript Regex স্টুডিও</strong> ক্লাউড পেস্ট-বিনের বদলে দেয় ১০০% প্রাইভেট Android IDE—যেখানে আছে লেক্সার-সচেতন JSON/JSONC বিউটিফিকেশন, ES2024 RegExp <code>matchAll()</code> টেস্টিং, লাইভ <code>fetch()</code> স্ক্রিপ্টিং, <code>console.table()</code> আউটপুট এবং GB-স্কেল ফাইল স্ট্রিমিং।</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="table-wrap">
+          <table class="obsidian-benchmark-table">
+            <caption data-i18n="table_caption">SUPERCODE JSON, REGEX ও JS API টুলিং ম্যাট্রিক্স</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="th_0">ডেভেলপার কাজ</th>
+                <th scope="col" data-i18n="th_1">SuperCode সক্ষমতা</th>
+                <th scope="col" data-i18n="th_2">অফলাইন ও প্রাইভেট?</th>
+                <th scope="col" data-i18n="th_3">ফাইল সাইজ সীমা</th>
+                <th scope="col" data-i18n="th_4">আউটপুট ফরম্যাট</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="tr1_c0">JSON / JSONC ফরম্যাট</th>
+                <td><strong data-i18n="tr1_c1">লেক্সার বিউটিফায়ার + Error Radar</strong></td>
+                <td data-i18n="tr1_c2">১০০% লোকাল ডিভাইসে</td>
+                <td data-i18n="tr1_c3">মাল্টি-GB Pager পর্যন্ত</td>
+                <td data-i18n="tr1_c4">পরিচ্ছন্ন ইন্ডেন্টেড UTF-8</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr2_c0">Regex ডিবাগিং</th>
+                <td><strong data-i18n="tr2_c1">ES2024 /d /v + নেমড গ্রুপ</strong></td>
+                <td data-i18n="tr2_c2">১০০% অফলাইন Worker</td>
+                <td data-i18n="tr2_c3">স্ট্রিম Regex রিপ্লেস</td>
+                <td data-i18n="tr2_c4">ম্যাচ + স্প্যান ইনডেক্স</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr3_c0">REST API প্রোটোটাইপিং</th>
+                <td><strong data-i18n="tr3_c1">টপ-লেভেল await fetch() + URL</strong></td>
+                <td data-i18n="tr3_c2">ডিভাইস নেটওয়ার্ক সরাসরি</td>
+                <td data-i18n="tr3_c3">স্ট্রিমিং বডি রিড</td>
+                <td data-i18n="tr3_c4">console.table / JSON</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr4_c0">ব্যাচ ফাইল ট্রান্সফর্ম</th>
+                <td><strong data-i18n="tr4_c1">node:fs/promises + path + zlib</strong></td>
+                <td data-i18n="tr4_c2">১০০% অফলাইন</td>
+                <td data-i18n="tr4_c3">সম্পূর্ণ প্রজেক্ট ফোল্ডার</td>
+                <td data-i18n="tr4_c4">ওয়ার্কস্পেস সিঙ্কড ফাইল</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr5_c0">অসীম লুপ / ReDoS</th>
+                <td><strong data-i18n="tr5_c1">অফ-UI Worker টার্মিনেট</strong></td>
+                <td data-i18n="tr5_c2">হার্ডওয়্যার আইসোলেটেড</td>
+                <td data-i18n="tr5_c3">&lt;1ms ইন্টারাপ্ট গার্ড</td>
+                <td data-i18n="tr5_c4">শূন্য UI ফ্রিজ</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">ফোন, ফোল্ডেবল ও ট্যাবলেটের জন্য নির্মিত · হালকা 40.2 MB</span>
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=bn-BD&amp;listing=js-lua-coding&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dbn%26utm_campaign%3Djs-lua-coding%26utm_content%3Djavascript-json-regex-formatter-android" target="_blank" rel="noopener">
+          <span>Google Play</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 05 · VISIBLE EDITORIAL FAQ ==================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-head">
+          <div class="sec-index">
+            <span class="num">05</span>
+            <span class="rule"></span>
+            <span data-i18n="sec3_eyebrow">প্রশ্ন ও উত্তর</span>
+          </div>
+          <h2 class="h2" data-i18n="sec3_title">সচরাচর জিজ্ঞাসিত প্রশ্ন</h2>
+          <p class="sec-lead" data-i18n="faq_lead">অফলাইন JSON/JSONC ভ্যালিডেশন, ES2024 রেজেক্স টেস্টিং, বড় JSON লগ এবং API স্ক্রিপ্টিং সংক্রান্ত উত্তর।</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary><span data-i18n="faq1_q">SuperCode-এ গোপনীয় প্রোডাকশন JSON বা API কনফিগ ফরম্যাট করা কি নিরাপদ?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq1_a">হ্যাঁ। SuperCode-এর JSON/JSONC ফরম্যাটার এবং ES2024 JavaScript Worker উভয়ই আপনার Android ডিভাইসে ১০০% লোকালি চলে—আপনার JSON পেলোড কখনোই কোনো বাহ্যিক ফরম্যাটিং সার্ভারে যায় না।</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq2_q">ফরম্যাটার কি tsconfig.json বা settings.json-এর মতো // কমেন্টযুক্ত JSONC ফাইল সমর্থন করে?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq2_a">হ্যাঁ। CodeFormatEngine স্ট্যান্ডার্ড JSON-এর পাশাপাশি JSONC কমেন্টও চিনতে পারে এবং আপনার কমেন্ট না মুছেই নেস্টেড অবজেক্ট ও অ্যারে পরিচ্ছন্নভাবে বিউটিফাই করে।</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq3_q">টেস্টিংয়ের সময় কোনো জটিল রেজেক্সে ক্যাটাস্ট্রফিক ব্যাকট্র্যাকিং হলে কী হবে?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq3_a">সব JavaScript রেজেক্স স্ক্রিপ্ট একটি আইসোলেটেড অফ-UI Worker থ্রেডে চলে, তাই এডিটর ফ্রিজ না করেই আপনি ধীর বা অনিয়ন্ত্রিত রেজেক্স তাৎক্ষণিকভাবে থামাতে পারবেন।</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq4_q">SuperCode কি ফোনে 500 MB JSON বা NDJSON লগ ফাইল খুলে সার্চ করতে পারে?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq4_a">হ্যাঁ। 30 MB-এর বড় ফাইল নির্বিঘ্নে SuperCode-এর ডিস্ক-ব্যাকড GB স্ট্রিমিং Pager ব্যবহার করে, যেখানে 120Hz স্ক্রলিং এবং Global Stream Regex Replace সুবিধা রয়েছে।</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==================== 06 · TOPICAL AUTHORITY ECOSYSTEM CLUSTER ==================== -->
+  <section class="section section--alt" id="ecosystem-guides">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">06</span>
+        <span class="rule"></span>
+        <span>JavaScript, Node কোর ও ক্রিপ্টো গাইড</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2>সম্পূর্ণ JavaScript ও Node IDE ডকুমেন্টেশন স্যুইট</h2>
+        <p class="sec-lead">মূল অফলাইন JavaScript IDE হাব এবং 5টি বিশেষায়িত ES2024 ও Node.js গাইড ঘুরে দেখুন।</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="py-cluster-grid">
+          <a href="javascript-ide.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JS-HUB</span>
+              <span class="py-spoke-card__tag">ES2024 · ২৯টি Node API · পিলার হাব</span>
+            </div>
+            <h3>অফলাইন ES2024 ও Node স্টুডিও পরিচিতি</h3>
+            <p>SuperCode-এর আইসোলেটেড ES2024 JavaScript ওয়ার্কার, ২৯+ অফলাইন Node.js কোর মডিউল, ডুয়াল ESM/CommonJS ও &lt;1ms লুপ সেফটির মূল পরিচিতি।</p>
+            <div class="py-spoke-card__go">
+              <span>javascript-ide</span>
+              <span>গাইড খুলুন &rarr;</span>
+            </div>
+          </a>
+          <a href="javascript-node-core-modules-offline.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JS-01</span>
+              <span class="py-spoke-card__tag">node:fs · path · stream · zlib</span>
+            </div>
+            <h3>২৯+ অফলাইন Node.js কোর মডিউল</h3>
+            <p>Android-এ ১০০% অফলাইনে fs/promises, path, Buffer, EventEmitter, stream, zlib, readline, util এবং package.json ESM + CommonJS মডিউল ব্যবহার করুন।</p>
+            <div class="py-spoke-card__go">
+              <span>javascript-node-core-modules-offline</span>
+              <span>গাইড খুলুন &rarr;</span>
+            </div>
+          </a>
+          <a href="javascript-es2024-async-console.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JS-02</span>
+              <span class="py-spoke-card__tag">Top-Level await · BigInt · Fetch</span>
+            </div>
+            <h3>ES2024 Async, Top-Level Await ও Fetch</h3>
+            <p>ডামি HTML ফাইল ছাড়াই আধুনিক ES2024 সিনট্যাক্স, top-level await, async জেনারেটর, console.table() এবং &lt;1ms লুপ-গার্ডেড ওয়ার্কার স্ক্রিপ্ট চালান।</p>
+            <div class="py-spoke-card__go">
+              <span>javascript-es2024-async-console</span>
+              <span>গাইড খুলুন &rarr;</span>
+            </div>
+          </a>
+          <a href="javascript-web-crypto-security.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JS-03</span>
+              <span class="py-spoke-card__tag">crypto.subtle · AES-256 · HMAC</span>
+            </div>
+            <h3>Node ও Web Crypto (AES-GCM / SHA)</h3>
+            <p>Web Crypto ও node:crypto API উভয়ই ব্যবহার করে অফলাইনে ক্রিপ্টোগ্রাফিক হ্যাশিং, HMAC, PBKDF2, UUIDs ও AES-256-GCM এনক্রিপশন প্রোটোটাইপ করুন।</p>
+            <div class="py-spoke-card__go">
+              <span>javascript-web-crypto-security</span>
+              <span>গাইড খুলুন &rarr;</span>
+            </div>
+          </a>
+          <a href="learn-javascript-dsa-android.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JS-04</span>
+              <span class="py-spoke-card__tag">৬টি টেমপ্লেট · =&gt; সিম্বল বার · JSON</span>
+            </div>
+            <h3>অফলাইনে JS শিখুন ও DSA অনুশীলন করুন</h3>
+            <p>AST অটোকমপ্লিট ও ১-ট্যাপ ফরম্যাটিংসহ এয়ারপ্লেন মোডে যেকোনো জায়গায় JavaScript অ্যালগরিদম, ফাংশনাল অ্যারে ও JSON ম্যানিপুলেশন আয়ত্ত করুন।</p>
+            <div class="py-spoke-card__go">
+              <span>learn-javascript-dsa-android</span>
+              <span>গাইড খুলুন &rarr;</span>
+            </div>
+          </a>
+          <a href="javascript-json-regex-formatter-android.html" class="py-spoke-card is-active">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JS-05</span>
+              <span class="py-spoke-card__tag">JSON/JSONC · Regex · Fetch API</span>
+            </div>
+            <h3>JSON/JSONC ফরম্যাটার, Regex ও REST Fetch</h3>
+            <p>অফলাইনে বিশাল JSON/JSONC পেলোড সুন্দরভাবে সাজান ও যাচাই করুন, নেমড ক্যাপচার গ্রুপসহ ES2024 রেগুলার এক্সপ্রেশন টেস্ট করুন, console.table() আউটপুট দেখুন এবং fetch() REST API প্রোটোটাইপ করুন।</p>
+            <div class="py-spoke-card__go">
+              <span>javascript-json-regex-formatter-android</span>
+              <span>গাইড দেখছেন</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span>6টি সংযুক্ত JS/Node গাইড · ES2024 + 29টি বিল্ট-ইন অফলাইন Node মডিউল</span>
+        <a class="link-arrow" href="javascript-ide.html">
+          <span>JavaScript ও Node IDE হাব</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="siteFooter">
+  <div class="container">
+    <div class="footer-cta" id="footerCta">
+      <div>
+        <h2 class="h2" data-i18n="cta_h2">Android-এ প্রাইভেটলি JSON ফরম্যাট, Regex ডিবাগ ও API স্ক্রিপ্ট করুন।</h2>
+        <p data-i18n="cta_desc">Google Play থেকে ফ্রি SuperCode IDE ডাউনলোড করুন—৪০.২ MB-তেই অফলাইন JSON/JSONC বিউটিফায়ার, ES2024 RegExp স্যান্ডবক্স ও GB লগ ভিউয়ার।</p>
+      </div>
+      <div class="footer-cta__btns">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=bn-BD&amp;listing=js-lua-coding&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dbn%26utm_campaign%3Djs-lua-coding%26utm_content%3Djavascript-json-regex-formatter-android" target="_blank" rel="noopener" class="btn btn--gold">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="cta_btn">Google Play-তে পান</span>
+        </a>
+        <a href="https://supercode-ide.github.io/tutorial/?lang=bn&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+          <span data-i18n="cta_tutorial">অ্যাপ গাইড</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+          <span>SuperCode</span>
+          <span class="brand__tag">IDE</span>
+        </a>
+        <p data-i18n="footer_tagline">বিশ্বজুড়ে Android প্রকৌশলী, শিক্ষার্থী ও শিক্ষকদের জন্য নির্মিত নেটিভ মোবাইল কোড এডিটর ও অফলাইন ডেভেলপমেন্ট স্টুডিও।</p>
+        <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
+        <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=bn-BD&amp;listing=js-lua-coding&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dbn%26utm_campaign%3Djs-lua-coding%26utm_content%3Djavascript-json-regex-formatter-android" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://supercode-ide.github.io/tutorial/?lang=bn&amp;ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">অ্যাপ গাইড</span> &#8599;</a>
+          <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">ভাষা নির্বাচন করুন</span></button>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_core">এডিটর ও বড় ফাইল</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">সংক্ষিপ্ত বিবরণ</a></li>
+          <li><a href="code-editor.html" data-i18n="nav_code_editor">কোড এডিটর</a></li>
+          <li><a href="large-file-editor.html" data-i18n="nav_large_file">GB বড় ফাইল</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_lang">অফলাইন কম্পাইলার ও ভাষা</h4>
+        <ul>
+          <li><a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a></li>
+          <li><a href="c-compiler.html" data-i18n="nav_c_compiler">C17 কম্পাইলার</a></li>
+          <li><a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a></li>
+          <li><a href="java-ide.html" data-i18n="nav_java_ide">Java 17 IDE</a></li>
+          <li><a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a></li>
+          <li><a href="lua-ide.html" data-i18n="nav_lua_ide">Lua 5.4</a></li>
+          <li><a href="shell-ide.html" data-i18n="nav_shell_ide">Shell ও Kotlin</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_devops">ওয়েব, SQL ও রিমোট DevOps</h4>
+        <ul>
+          <li><a href="web-ide.html" data-i18n="nav_web_ide">ওয়েব ও PHP</a></li>
+          <li><a href="sql-ide.html" data-i18n="nav_sql_ide">SQL স্টুডিও</a></li>
+          <li><a href="git-client.html" data-i18n="nav_git_client">ভিজ্যুয়াল Git</a></li>
+          <li><a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP ও FTPS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="studio-ecosystem">
+      <a class="studio-promo-card" data-radio-promo="true" href="https://play.google.com/store/apps/details?id=com.hifiradio.fmradio&amp;hl=bn-BD&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dbn%26utm_campaign%3Dhifi_radio_showcase%26utm_content%3Dfooter_showcase" target="_blank" rel="noopener" aria-label="FM Radio: HiFi Radio AM FM — লাইভ দ্বিভাষিক রেডিও ক্যাপশন · 32-ব্যান্ড HiFi DSP">
+        <svg class="studio-promo-icon" aria-hidden="true"><use href="#sc-radio-icon"/></svg>
+        <span class="studio-promo-meta">
+          <span class="studio-promo-eyebrow" data-i18n="radio_eyebrow">Phoenix Global Studios থেকে</span>
+          <span class="studio-promo-title">FM Radio: HiFi Radio AM FM</span>
+          <span class="studio-promo-sub" data-i18n="radio_subtitle">লাইভ দ্বিভাষিক রেডিও ক্যাপশন · 32-ব্যান্ড HiFi DSP</span>
+        </span>
+        <span class="studio-promo-cta">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="nav_cta">Google Play</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </span>
+        <span class="studio-promo-arrow-mini" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </span>
+      </a>
+    </div>
+
+    <div class="footer-legal">
+      <span>&copy; 2026 Phoenix Global Studios. All rights reserved.</span>
+      <span class="mono">com.phoenixglobal.supercodeeditor</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="mobile-bottom-bar" id="mobileBottomBar" aria-label="Quick App Actions">
+  <div class="dock-app-icon" aria-hidden="true"><svg><use href="#sc-logo"/></svg></div>
+  <div class="bottom-bar-info">
+    <div class="bottom-bar-title">SuperCode</div>
+    <div class="bottom-bar-sub"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  </div>
+  <div class="bottom-bar-actions">
+    <a href="https://supercode-ide.github.io/tutorial/?lang=bn&amp;ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">অ্যাপ গাইড</a>
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=bn-BD&amp;listing=js-lua-coding&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dbn%26utm_campaign%3Djs-lua-coding%26utm_content%3Djavascript-json-regex-formatter-android" target="_blank" rel="noopener" class="btn-play-mini">
+      <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
+      <span data-i18n="bottom_cta">ডাউনলোড</span>
+    </a>
+  </div>
+</aside>
+
+<div class="modal-overlay" id="langModal" role="dialog" aria-modal="true" aria-labelledby="langModalTitle">
+  <div class="lang-modal">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div class="modal-header">
+      <h3 id="langModalTitle"><span data-i18n="modal_title">ভাষা নির্বাচন করুন</span><span class="modal-lang-count">32</span></h3>
+      <button type="button" class="btn-close-modal" onclick="closeLangModal()" aria-label="বন্ধ করুন">&#10005;</button>
+    </div>
+    <div class="lang-grid">
+      <button type="button" class="lang-option" data-code="en" onclick="setLanguage('en')"><span class="lang-option__name">English</span><span class="lang-option__code">EN</span></button>
+      <button type="button" class="lang-option" data-code="zh" onclick="setLanguage('zh')"><span class="lang-option__name">简体中文</span><span class="lang-option__code">简中</span></button>
+      <button type="button" class="lang-option" data-code="zh-tw" onclick="setLanguage('zh-tw')"><span class="lang-option__name">繁體中文</span><span class="lang-option__code">繁中</span></button>
+      <button type="button" class="lang-option" data-code="es" onclick="setLanguage('es')"><span class="lang-option__name">Español</span><span class="lang-option__code">ES</span></button>
+      <button type="button" class="lang-option" data-code="pt" onclick="setLanguage('pt')"><span class="lang-option__name">Português</span><span class="lang-option__code">PT</span></button>
+      <button type="button" class="lang-option" data-code="ja" onclick="setLanguage('ja')"><span class="lang-option__name">日本語</span><span class="lang-option__code">日本語</span></button>
+      <button type="button" class="lang-option" data-code="ko" onclick="setLanguage('ko')"><span class="lang-option__name">한국어</span><span class="lang-option__code">한국어</span></button>
+      <button type="button" class="lang-option" data-code="de" onclick="setLanguage('de')"><span class="lang-option__name">Deutsch</span><span class="lang-option__code">DE</span></button>
+      <button type="button" class="lang-option" data-code="fr" onclick="setLanguage('fr')"><span class="lang-option__name">Français</span><span class="lang-option__code">FR</span></button>
+      <button type="button" class="lang-option" data-code="ru" onclick="setLanguage('ru')"><span class="lang-option__name">Русский</span><span class="lang-option__code">RU</span></button>
+      <button type="button" class="lang-option" data-code="hi" onclick="setLanguage('hi')"><span class="lang-option__name">हिन्दी</span><span class="lang-option__code">HI</span></button>
+      <button type="button" class="lang-option" data-code="id" onclick="setLanguage('id')"><span class="lang-option__name">Bahasa Indonesia</span><span class="lang-option__code">ID</span></button>
+      <button type="button" class="lang-option" data-code="it" onclick="setLanguage('it')"><span class="lang-option__name">Italiano</span><span class="lang-option__code">IT</span></button>
+      <button type="button" class="lang-option" data-code="vi" onclick="setLanguage('vi')"><span class="lang-option__name">Tiếng Việt</span><span class="lang-option__code">VI</span></button>
+      <button type="button" class="lang-option" data-code="th" onclick="setLanguage('th')"><span class="lang-option__name">ไทย</span><span class="lang-option__code">ไทย</span></button>
+      <button type="button" class="lang-option" data-code="tr" onclick="setLanguage('tr')"><span class="lang-option__name">Türkçe</span><span class="lang-option__code">TR</span></button>
+      <button type="button" class="lang-option" data-code="ar" onclick="setLanguage('ar')"><span class="lang-option__name">العربية</span><span class="lang-option__code">AR</span></button>
+      <button type="button" class="lang-option" data-code="pl" onclick="setLanguage('pl')"><span class="lang-option__name">Polski</span><span class="lang-option__code">PL</span></button>
+      <button type="button" class="lang-option" data-code="nl" onclick="setLanguage('nl')"><span class="lang-option__name">Nederlands</span><span class="lang-option__code">NL</span></button>
+      <button type="button" class="lang-option" data-code="sv" onclick="setLanguage('sv')"><span class="lang-option__name">Svenska</span><span class="lang-option__code">SV</span></button>
+      <button type="button" class="lang-option" data-code="nb" onclick="setLanguage('nb')"><span class="lang-option__name">Norsk Bokmål</span><span class="lang-option__code">NB</span></button>
+      <button type="button" class="lang-option" data-code="da" onclick="setLanguage('da')"><span class="lang-option__name">Dansk</span><span class="lang-option__code">DA</span></button>
+      <button type="button" class="lang-option" data-code="fi" onclick="setLanguage('fi')"><span class="lang-option__name">Suomi</span><span class="lang-option__code">FI</span></button>
+      <button type="button" class="lang-option" data-code="cs" onclick="setLanguage('cs')"><span class="lang-option__name">Čeština</span><span class="lang-option__code">CS</span></button>
+      <button type="button" class="lang-option" data-code="uk" onclick="setLanguage('uk')"><span class="lang-option__name">Українська</span><span class="lang-option__code">UK</span></button>
+      <button type="button" class="lang-option" data-code="ro" onclick="setLanguage('ro')"><span class="lang-option__name">Română</span><span class="lang-option__code">RO</span></button>
+      <button type="button" class="lang-option" data-code="hu" onclick="setLanguage('hu')"><span class="lang-option__name">Magyar</span><span class="lang-option__code">HU</span></button>
+      <button type="button" class="lang-option" data-code="el" onclick="setLanguage('el')"><span class="lang-option__name">Ελληνικά</span><span class="lang-option__code">EL</span></button>
+      <button type="button" class="lang-option" data-code="he" onclick="setLanguage('he')"><span class="lang-option__name">עברית</span><span class="lang-option__code">HE</span></button>
+      <button type="button" class="lang-option" data-code="ms" onclick="setLanguage('ms')"><span class="lang-option__name">Bahasa Melayu</span><span class="lang-option__code">MS</span></button>
+      <button type="button" class="lang-option" data-code="tl" onclick="setLanguage('tl')"><span class="lang-option__name">Filipino</span><span class="lang-option__code">FIL</span></button>
+      <button type="button" class="lang-option active" data-code="bn" onclick="setLanguage('bn')"><span class="lang-option__name">বাংলা</span><span class="lang-option__code">BN</span></button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var WORKBENCH_SAMPLES = {"json": {"label": "js-api-tools/transform_json.mjs \u2014 Offline JSON/JSONC & console.table()", "status": "ES2024 \u00b7 Offline Worker", "lines": ["<span class=\"tok-kw\">const<\/span> raw = <span class=\"tok-str\">`[{\"svc\":\"auth\",\"p95\":14},{\"svc\":\"sql\",\"p95\":6},{\"svc\":\"cdn\",\"p95\":9}]`<\/span>;", "<span class=\"tok-kw\">const<\/span> items = JSON.<span class=\"tok-fn\">parse<\/span>(raw).<span class=\"tok-fn\">sort<\/span>((a, b) =&gt; a.p95 - b.p95);", "console.<span class=\"tok-fn\">table<\/span>(items);", "console.<span class=\"tok-fn\">log<\/span>(<span class=\"tok-str\">&quot;Fastest:&quot;<\/span>, items[<span class=\"tok-num\">0<\/span>].svc, <span class=\"tok-str\">&quot;|&quot;<\/span>, JSON.<span class=\"tok-fn\">stringify<\/span>(items[<span class=\"tok-num\">0<\/span>]));"], "output": ["<span class=\"term-prompt\">&#9656;<\/span> ES2024 Worker &middot; transform_json.mjs", "&#9484;&#9472;&#9472;&#9472;&#9472;&#9472;&#9516;&#9472;&#9472;&#9472;&#9472;&#9472;&#9488;   Fastest: sql", "&#9474; svc &#9474; p95 &#9474;   {&quot;svc&quot;:&quot;sql&quot;,&quot;p95&quot;:6}", "<span class=\"term-info\">&#10003; Exit 0 &middot; 3.1 ms &middot; Off-UI Sandbox<\/span>"]}, "regex": {"label": "js-api-tools/regex_named.mjs \u2014 Named Groups & /d Indices", "status": "ES2024 \u00b7 RegExp Lab", "lines": ["<span class=\"tok-kw\">const<\/span> re = <span class=\"tok-str\">/(?&lt;level&gt;WARN|ERR)\\s+\\[(?&lt;mod&gt;\\w+)\\]\\s+(?&lt;ms&gt;\\d+)ms/dg<\/span>;", "<span class=\"tok-kw\">const<\/span> log = <span class=\"tok-str\">&quot;WARN [sftp] 42ms | ERR [git] 118ms&quot;<\/span>;", "<span class=\"tok-kw\">for<\/span> (<span class=\"tok-kw\">const<\/span> m <span class=\"tok-kw\">of<\/span> log.<span class=\"tok-fn\">matchAll<\/span>(re)) {", "  console.<span class=\"tok-fn\">log<\/span>(m.groups, <span class=\"tok-str\">&quot;span=&quot;<\/span>, m.indices[<span class=\"tok-num\">0<\/span>]);", "}"], "output": ["<span class=\"term-prompt\">&#9656;<\/span> regex_named.mjs", "{ level: &quot;WARN&quot;, mod: &quot;sftp&quot;, ms: &quot;42&quot; } span= [0, 16]", "{ level: &quot;ERR&quot;, mod: &quot;git&quot;, ms: &quot;118&quot; } span= [19, 35]", "<span class=\"term-info\">&#10003; 2 matches &middot; 1.4 ms<\/span>"]}, "fetch": {"label": "js-api-tools/rest_probe.mjs \u2014 Top-Level Await REST Probe", "status": "ES2024 \u00b7 Fetch API", "lines": ["<span class=\"tok-kw\">const<\/span> url = <span class=\"tok-kw\">new<\/span> <span class=\"tok-fn\">URL<\/span>(<span class=\"tok-str\">&quot;https://api.example.dev/v2/status&quot;<\/span>);", "url.searchParams.<span class=\"tok-fn\">set<\/span>(<span class=\"tok-str\">&quot;region&quot;<\/span>, <span class=\"tok-str\">&quot;global&quot;<\/span>);", "<span class=\"tok-kw\">const<\/span> payload = { endpoint: url.<span class=\"tok-fn\">toString<\/span>(), method: <span class=\"tok-str\">&quot;GET&quot;<\/span>, ok: <span class=\"tok-kw\">true<\/span> };", "console.<span class=\"tok-fn\">log<\/span>(JSON.<span class=\"tok-fn\">stringify<\/span>(payload, null, <span class=\"tok-num\">2<\/span>));"], "output": ["<span class=\"term-prompt\">&#9656;<\/span> rest_probe.mjs (ESM top-level await)", "{ &quot;endpoint&quot;: &quot;https://api.example.dev/v2/status?region=global&quot;, &quot;ok&quot;: true }", "<span class=\"term-info\">&#10003; Exit 0 &middot; 2.0 ms<\/span>"]}};
+    var currentTab = 'json';
+    var runTimer = null;
+
+    function renderWorkbench(tabKey, animateRun) {
+      var sample = WORKBENCH_SAMPLES[tabKey] || WORKBENCH_SAMPLES['json'];
+      if (!sample) { return; }
+      currentTab = tabKey;
+      var labelEl = document.getElementById('ide-compiler-label');
+      if (labelEl) { labelEl.textContent = sample.label; }
+      var statusEl = document.getElementById('wbStatusLang');
+      if (statusEl) { statusEl.textContent = sample.status; }
+
+      var tabs = document.querySelectorAll('.ide-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        var active = tabs[i].getAttribute('data-tab') === tabKey;
+        tabs[i].classList.toggle('active', active);
+        tabs[i].setAttribute('aria-selected', active ? 'true' : 'false');
+      }
+      var files = document.querySelectorAll('.wb-file');
+      for (var f = 0; f < files.length; f++) {
+        files[f].classList.toggle('active', files[f].getAttribute('data-tab') === tabKey);
+      }
+
+      var codeBox = document.getElementById('ide-code-box');
+      if (codeBox) {
+        var html = '';
+        for (var l = 0; l < sample.lines.length; l++) {
+          var activeCls = (l === sample.lines.length - 1) ? ' active-line' : '';
+          html += '<div class="code-line' + activeCls + '"><span class="ln">' + (l + 1) + '</span><span class="code-content">' + sample.lines[l] + '</span></div>';
+        }
+        codeBox.innerHTML = html;
+      }
+
+      if (animateRun) {
+        runWorkbenchSample();
+      }
+    }
+
+    function runWorkbenchSample() {
+      var sample = WORKBENCH_SAMPLES[currentTab] || WORKBENCH_SAMPLES['json'];
+      var drawer = document.getElementById('ide-terminal-drawer');
+      var out = document.getElementById('ide-term-output');
+      var badge = document.getElementById('ide-exec-status');
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (!drawer || !out || !sample) { return; }
+
+      if (runTimer) { clearTimeout(runTimer); }
+      drawer.classList.add('is-open');
+      if (runBtn) { runBtn.classList.add('is-running'); }
+      if (badge) { badge.textContent = 'Running...'; badge.classList.remove('done'); }
+      out.innerHTML = '';
+
+      var idx = 0;
+      function step() {
+        if (idx < sample.output.length) {
+          var row = document.createElement('span');
+          row.className = 'term-line-item';
+          row.innerHTML = sample.output[idx];
+          out.appendChild(row);
+          idx++;
+          runTimer = setTimeout(step, 80);
+        } else {
+          var cur = document.createElement('span');
+          cur.className = 'term-cursor';
+          cur.textContent = '\u258b';
+          out.appendChild(cur);
+          if (badge) { badge.textContent = 'Completed'; badge.classList.add('done'); }
+          if (runBtn) { runBtn.classList.remove('is-running'); }
+        }
+      }
+      step();
+    }
+
+    function initNavigationAndSmartBar() {
+      var menuBtn = document.getElementById('menuBtn');
+      var drawer = document.getElementById('siteDrawer');
+      var bar = document.getElementById('mobileBottomBar');
+      var heroCta = document.getElementById('heroCta');
+      var siteFooter = document.getElementById('siteFooter');
+
+      function syncBar() {
+        if (!bar) { return; }
+        var drawerOpen = Boolean(drawer && !drawer.hasAttribute('hidden'));
+        var modalEl = document.getElementById('langModal');
+        var modalOpen = Boolean(modalEl && modalEl.classList.contains('show'));
+        var vh = window.innerHeight || document.documentElement.clientHeight || 800;
+        var heroInView = false;
+        if (heroCta) {
+          var hr = heroCta.getBoundingClientRect();
+          heroInView = (hr.bottom > 0 && hr.top < vh);
+        }
+        var footerInView = false;
+        if (siteFooter) {
+          var fr = siteFooter.getBoundingClientRect();
+          footerInView = (fr.top < vh + 24);
+        }
+        var scrollYVal = window.pageYOffset || window.scrollY || 0;
+        var docH = Math.max(document.body ? document.body.scrollHeight : 0, document.documentElement ? document.documentElement.scrollHeight : 0);
+        var nearBottom = (vh + scrollYVal) >= (docH - 120);
+        var shouldShow = !drawerOpen && !modalOpen && !heroInView && !footerInView && !nearBottom;
+        bar.classList.toggle('is-visible', shouldShow);
+      }
+
+      window.__supercodeSyncMobileBar = syncBar;
+
+      function setDrawer(open) {
+        if (!menuBtn || !drawer) { return; }
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { drawer.removeAttribute('hidden'); }
+        else { drawer.setAttribute('hidden', ''); }
+        syncBar();
+      }
+      if (menuBtn && drawer) {
+        menuBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          setDrawer(menuBtn.getAttribute('aria-expanded') !== 'true');
+        });
+        drawer.addEventListener('click', function (e) {
+          if (e.target && e.target.closest('a')) { setDrawer(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!drawer.hasAttribute('hidden') && !drawer.contains(e.target) && e.target !== menuBtn && !menuBtn.contains(e.target)) {
+            setDrawer(false);
+          }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') { setDrawer(false); }
+        });
+      }
+
+      if (bar) {
+        window.addEventListener('scroll', syncBar, { passive: true });
+        window.addEventListener('resize', syncBar);
+        syncBar();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var tabBtns = document.querySelectorAll('.ide-tab, .wb-file');
+      for (var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', function () {
+          renderWorkbench(this.getAttribute('data-tab'), true);
+        });
+      }
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (runBtn) { runBtn.addEventListener('click', function () { runWorkbenchSample(); }); }
+      var closeTerm = document.getElementById('btn-close-term');
+      if (closeTerm) {
+        closeTerm.addEventListener('click', function () {
+          var d = document.getElementById('ide-terminal-drawer');
+          if (d) { d.classList.remove('is-open'); }
+        });
+      }
+      initNavigationAndSmartBar();
+      renderWorkbench('json', false);
+    });
+  })();
+</script>
+<script>window.__SUPERCODE_STATIC_LANG__="bn";window.__SUPERCODE_STATIC_CANONICAL__="https://supercode-ide.github.io/bn/javascript-json-regex-formatter-android.html";</script>
+<script src="../i18n_extended.js"></script>
+</body>
+</html>

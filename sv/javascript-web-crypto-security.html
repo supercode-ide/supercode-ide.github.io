@@ -48,6 +48,7 @@
   <link rel="alternate" hreflang="ms" href="https://supercode-ide.github.io/ms/javascript-web-crypto-security.html">
   <link rel="alternate" hreflang="fil" href="https://supercode-ide.github.io/tl/javascript-web-crypto-security.html">
   <link rel="alternate" hreflang="bn" href="https://supercode-ide.github.io/bn/javascript-web-crypto-security.html">
+  <link rel="alternate" type="application/rss+xml" title="SuperCode IDE Guides &amp; Releases" href="https://supercode-ide.github.io/feed.xml">
 
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
@@ -157,7 +158,8 @@
         "100% air-gapped local execution so developers never leak JWTs, API signing keys, or ciphertexts to web debuggers",
         "Direct integration with node:fs and Buffer for hashing, signing, and encrypting real Android workspace files"
       ],
-      "image": "https://supercode-ide.github.io/assets/media/og-hero-sv.png"
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-sv.png",
+      "dateModified": "2026-11-27"
     },
     {
       "@type": "BreadcrumbList",
@@ -194,30 +196,31 @@
           "position": 1,
           "name": "Choose node:crypto or Standard globalThis.crypto.subtle",
           "text": "Open a `.mjs` or `.js` file — both Node's synchronous/streaming crypto APIs and Promise-based Web Crypto are immediately available.",
-          "url": "https://supercode-ide.github.io/javascript-web-crypto-security.html#step1"
+          "url": "https://supercode-ide.github.io/sv/javascript-web-crypto-security.html#step1"
         },
         {
           "@type": "HowToStep",
           "position": 2,
           "name": "Generate CSPRNG Nonces & Derive Keys",
           "text": "Create cryptographic IVs, salts, or UUIDs and stretch passphrases into 32-byte AES-256 keys offline.",
-          "url": "https://supercode-ide.github.io/javascript-web-crypto-security.html#step2"
+          "url": "https://supercode-ide.github.io/sv/javascript-web-crypto-security.html#step2"
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "Run Encryption, Signing, or Constant-Time Verification",
           "text": "Tap Run ▶ to inspect hex/base64url outputs, authentication tags, and `timingSafeEqual` verification results in milliseconds.",
-          "url": "https://supercode-ide.github.io/javascript-web-crypto-security.html#step3"
+          "url": "https://supercode-ide.github.io/sv/javascript-web-crypto-security.html#step3"
         },
         {
           "@type": "HowToStep",
           "position": 4,
           "name": "Persist Checksums or Encrypted Artifacts to Folder",
           "text": "Save `.sha256` manifest files or encrypted payloads directly into your workspace for Git versioning or SFTP transfer.",
-          "url": "https://supercode-ide.github.io/javascript-web-crypto-security.html#step4"
+          "url": "https://supercode-ide.github.io/sv/javascript-web-crypto-security.html#step4"
         }
-      ]
+      ],
+      "inLanguage": "sv"
     },
     {
       "@type": "FAQPage",
@@ -255,7 +258,8 @@
             "text": "Aldrig. Alla `node:crypto`- och `crypto.subtle`-operationer körs 100 % lokalt på din Android-enhet och fungerar även när Wi-Fi och mobildata är helt avstängda."
           }
         }
-      ]
+      ],
+      "inLanguage": "sv"
     }
   ]
 }
@@ -381,7 +385,7 @@
       <div class="drawer-top__left">
         <span class="drawer-top__dot" aria-hidden="true"></span>
         <span class="drawer-top__title" data-i18n="sitemap_title">Fullständig webbplatskarta</span>
-        <span class="drawer-top__badge" data-i18n="sitemap_badge">53 sidor · 32 språk</span>
+        <span class="drawer-top__badge" data-i18n="sitemap_badge">61 sidor · 32 språk</span>
       </div>
       <button type="button" class="drawer-toggle-all" id="drawerToggleAll" data-expanded="false" data-expand-label="Expandera alla" data-collapse-label="Komprimera alla">
         <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8h9M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
@@ -431,7 +435,7 @@
         </div>
         <div class="drawer-node" data-hub="c-compiler.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="c-compiler.html"><span class="drawer-link__title" data-i18n="nav_c_compiler">C17-kompilator</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="c-compiler.html"><span class="drawer-link__title" data-i18n="nav_c_compiler">C17-kompilator</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-c-compiler" aria-label="Visa/dölj undersidor: C17-kompilator">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -441,11 +445,12 @@
             <a class="drawer-sub__link" href="c-multifile-header-projects.html"><span class="drawer-sub__code">C-02</span><span class="drawer-sub__title">Flerfilsbyggen med .c/.h och CMake</span></a>
             <a class="drawer-sub__link" href="c-scanf-file-io-console.html"><span class="drawer-sub__code">C-03</span><span class="drawer-sub__title">Live scanf-stdin och fil-I/O</span></a>
             <a class="drawer-sub__link" href="c-posix-systems-programming.html"><span class="drawer-sub__code">C-04</span><span class="drawer-sub__title">POSIX-headers, trådar och sockets</span></a>
+            <a class="drawer-sub__link" href="c-algorithms-data-structures-android.html"><span class="drawer-sub__code">C-05</span><span class="drawer-sub__title">Algoritmer, datastrukturer &amp; bitvis C</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="cpp-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="cpp-ide.html"><span class="drawer-link__title" data-i18n="nav_cpp_ide">C++20 IDE</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="cpp-ide.html"><span class="drawer-link__title" data-i18n="nav_cpp_ide">C++20 IDE</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-cpp-ide" aria-label="Visa/dölj undersidor: C++20 IDE">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -455,11 +460,12 @@
             <a class="drawer-sub__link" href="cpp-oop-smart-pointers-modern.html"><span class="drawer-sub__code">CPP-02</span><span class="drawer-sub__title">Modern C++20, Ranges och OOP</span></a>
             <a class="drawer-sub__link" href="cpp-multifile-hpp-builder.html"><span class="drawer-sub__code">CPP-03</span><span class="drawer-sub__title">21 flerfilsprojekt i C++ och CMake</span></a>
             <a class="drawer-sub__link" href="learn-cpp-offline-android.html"><span class="drawer-sub__code">CPP-04</span><span class="drawer-sub__title">Lär dig C++ offline på Android</span></a>
+            <a class="drawer-sub__link" href="cpp-debugging-cmake-git-workflow.html"><span class="drawer-sub__code">CPP-05</span><span class="drawer-sub__title">C++-diagnostik, formaterare &amp; visuell Git</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="java-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="java-ide.html"><span class="drawer-link__title" data-i18n="nav_java_ide">Java 17 IDE</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="java-ide.html"><span class="drawer-link__title" data-i18n="nav_java_ide">Java 17 IDE</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-java-ide" aria-label="Visa/dölj undersidor: Java 17 IDE">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -469,11 +475,12 @@
             <a class="drawer-sub__link" href="java-multiclass-packages-ide.html"><span class="drawer-sub__code">JV-02</span><span class="drawer-sub__title">Flerklasspaket och .jar-bibliotek</span></a>
             <a class="drawer-sub__link" href="java-jdbc-sqlite-file-io.html"><span class="drawer-sub__code">JV-03</span><span class="drawer-sub__title">Offline Java SQLite JDBC och NIO.2</span></a>
             <a class="drawer-sub__link" href="learn-java-dsa-android.html"><span class="drawer-sub__code">JV-04</span><span class="drawer-sub__title">Lär dig Java, AP CS och DSA offline</span></a>
+            <a class="drawer-sub__link" href="java-25-project-templates-android.html"><span class="drawer-sub__code">JV-05</span><span class="drawer-sub__title">25 flerfilsmallar för Java-projekt</span></a>
           </div>
         </div>
         <div class="drawer-node is-open" data-hub="javascript-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="javascript-ide.html"><span class="drawer-link__title" data-i18n="nav_js_ide">JavaScript</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="javascript-ide.html"><span class="drawer-link__title" data-i18n="nav_js_ide">JavaScript</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="true" aria-controls="sub-javascript-ide" aria-label="Visa/dölj undersidor: JavaScript">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -483,11 +490,12 @@
             <a class="drawer-sub__link" href="javascript-es2024-async-console.html"><span class="drawer-sub__code">JS-02</span><span class="drawer-sub__title">ES2024 Async, Top-Level Await och Fetch</span></a>
             <a class="drawer-sub__link is-current" href="javascript-web-crypto-security.html"><span class="drawer-sub__code">JS-03</span><span class="drawer-sub__title">Node och Web Crypto (AES-GCM / SHA)</span></a>
             <a class="drawer-sub__link" href="learn-javascript-dsa-android.html"><span class="drawer-sub__code">JS-04</span><span class="drawer-sub__title">Lär dig JS och öva DSA offline</span></a>
+            <a class="drawer-sub__link" href="javascript-json-regex-formatter-android.html"><span class="drawer-sub__code">JS-05</span><span class="drawer-sub__title">JSON/JSONC-formaterare, Regex &amp; REST Fetch</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="lua-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="lua-ide.html"><span class="drawer-link__title" data-i18n="nav_lua_ide">Lua 5.4</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="lua-ide.html"><span class="drawer-link__title" data-i18n="nav_lua_ide">Lua 5.4</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-lua-ide" aria-label="Visa/dölj undersidor: Lua 5.4">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -497,11 +505,12 @@
             <a class="drawer-sub__link" href="lua-builtin-modules-cjson-sqlite.html"><span class="drawer-sub__code">LUA-02</span><span class="drawer-sub__title">11+ inbyggda moduler (cjson, lsqlite3, lfs)</span></a>
             <a class="drawer-sub__link" href="lua-54-bitwise-close-multifile.html"><span class="drawer-sub__code">LUA-03</span><span class="drawer-sub__title">Lua 5.4 bitvis, &lt;close&gt; och flerfilsprojekt</span></a>
             <a class="drawer-sub__link" href="learn-lua-offline-android.html"><span class="drawer-sub__code">LUA-04</span><span class="drawer-sub__title">Lär dig Lua offline på Android</span></a>
+            <a class="drawer-sub__link" href="lua-android-crypto-regex-http-automation.html"><span class="drawer-sub__code">LUA-05</span><span class="drawer-sub__title">Krypto, regex, HTTP &amp; filautomatisering</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="shell-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="shell-ide.html"><span class="drawer-link__title" data-i18n="nav_shell_ide">Shell &amp; Kotlin</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="shell-ide.html"><span class="drawer-link__title" data-i18n="nav_shell_ide">Shell &amp; Kotlin</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-shell-ide" aria-label="Visa/dölj undersidor: Shell &amp; Kotlin">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -511,6 +520,7 @@
             <a class="drawer-sub__link" href="shell-awk-sed-grep-log-pipelines.html"><span class="drawer-sub__code">SH-02</span><span class="drawer-sub__title">Textpipelines med awk, sed, grep och curl</span></a>
             <a class="drawer-sub__link" href="kotlin-coding-app-compiler-android.html"><span class="drawer-sub__code">SH-03</span><span class="drawer-sub__title">Kotlin-kodapp och .kt/.kts-körare</span></a>
             <a class="drawer-sub__link" href="linux-devops-shell-sftp-git-android.html"><span class="drawer-sub__code">SH-04</span><span class="drawer-sub__title">Linux DevOps i fickan: Shell + SFTP + Git</span></a>
+            <a class="drawer-sub__link" href="kotlin-coroutines-collections-dsa-android.html"><span class="drawer-sub__code">SH-05</span><span class="drawer-sub__title">Kotlin-samlingar, OOP &amp; DSA-träning</span></a>
           </div>
         </div>
         </div>
@@ -520,7 +530,7 @@
         <div class="drawer-group__list">
         <div class="drawer-node" data-hub="web-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="web-ide.html"><span class="drawer-link__title" data-i18n="nav_web_ide">Webb &amp; PHP</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="web-ide.html"><span class="drawer-link__title" data-i18n="nav_web_ide">Webb &amp; PHP</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-web-ide" aria-label="Visa/dölj undersidor: Webb &amp; PHP">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -530,11 +540,12 @@
             <a class="drawer-sub__link" href="html-css-js-responsive-preview.html"><span class="drawer-sub__code">WEB-02</span><span class="drawer-sub__title">HTML5, CSS3 och förhandsgranskning i 3 vyer</span></a>
             <a class="drawer-sub__link" href="mobile-web-devtools-wasm-studio.html"><span class="drawer-sub__code">WEB-03</span><span class="drawer-sub__title">Mobila webb-DevTools, JS REPL och WASM</span></a>
             <a class="drawer-sub__link" href="fullstack-web-sftp-deploy-android.html"><span class="drawer-sub__code">WEB-04</span><span class="drawer-sub__title">Fjärrdistribution via FTP/SFTP live</span></a>
+            <a class="drawer-sub__link" href="web-canvas-media-export-pwa-android.html"><span class="drawer-sub__code">WEB-05</span><span class="drawer-sub__title">Canvas, mediaexport &amp; offline-webbappar</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="sql-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="sql-ide.html"><span class="drawer-link__title" data-i18n="nav_sql_ide">SQL Studio</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="sql-ide.html"><span class="drawer-link__title" data-i18n="nav_sql_ide">SQL Studio</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-sql-ide" aria-label="Visa/dölj undersidor: SQL Studio">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -544,6 +555,7 @@
             <a class="drawer-sub__link" href="sql-window-functions-fts5-json.html"><span class="drawer-sub__code">SQL-02</span><span class="drawer-sub__title">Fönsterfunktioner, CTE, JSONB och FTS5</span></a>
             <a class="drawer-sub__link" href="mysql-postgresql-syntax-android.html"><span class="drawer-sub__code">SQL-03</span><span class="drawer-sub__title">MySQL- och PostgreSQL-kompatibilitet</span></a>
             <a class="drawer-sub__link" href="sql-python-php-java-lua-integration.html"><span class="drawer-sub__code">SQL-04</span><span class="drawer-sub__title">Delad .db mellan SQL, Python, PHP och Java</span></a>
+            <a class="drawer-sub__link" href="sql-crypto-regex-udf-scripts-android.html"><span class="drawer-sub__code">SQL-05</span><span class="drawer-sub__title">Krypto, regex-UDF:er &amp; flerfils-.read</span></a>
           </div>
         </div>
         <div class="drawer-node">
@@ -1034,8 +1046,8 @@
       </div>
 
       <div class="sec-grid">
-        <h2>Komplett dokumentation för JavaScript och Node IDE</h2>
-        <p class="sec-lead">Utforska huvudnavet för offline JavaScript IDE och alla 4 specialiserade guider för ES2024 &amp; Node.js.</p>
+        <h2>Komplett dokumentationssvit för JavaScript &amp; Node IDE</h2>
+        <p class="sec-lead">Utforska huvudnavet för offline JavaScript IDE och alla 5 specialiserade guider för ES2024 &amp; Node.js.</p>
       </div>
 
       <div class="sec-body">
@@ -1100,11 +1112,23 @@
               <span>Öppna guide &rarr;</span>
             </div>
           </a>
+          <a href="javascript-json-regex-formatter-android.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JS-05</span>
+              <span class="py-spoke-card__tag">JSON/JSONC · Regex · Fetch API</span>
+            </div>
+            <h3>JSON/JSONC-formaterare, Regex &amp; REST Fetch</h3>
+            <p>Formatera och validera stora JSON/JSONC-data offline, testa reguljära ES2024-uttryck med namngivna fångstgrupper, granska console.table()-utdata och prototypa fetch() REST-API:er.</p>
+            <div class="py-spoke-card__go">
+              <span>javascript-json-regex-formatter-android</span>
+              <span>Öppna guide &rarr;</span>
+            </div>
+          </a>
         </div>
       </div>
 
       <div class="sec-foot">
-        <span>5 sammanlänkade JS/Node-guider · ES2024 + 29 inbyggda offline-Node-moduler</span>
+        <span>6 sammankopplade JS/Node-guider · ES2024 + 29 inbyggda offline Node-moduler</span>
         <a class="link-arrow" href="javascript-ide.html">
           <span>JavaScript &amp; Node IDE-nav</span>
           <svg aria-hidden="true"><use href="#i-arrow"/></svg>

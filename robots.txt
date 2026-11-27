@@ -1,4 +1,32 @@
+# SuperCode IDE Official Website — Search & AI Crawler Directives
+User-agent: Googlebot
+Allow: /
+Allow: /.well-known/
+Disallow: /index-blueprint.html
+
+User-agent: Googlebot-Image
+Allow: /
+Disallow: /index-blueprint.html
+
+User-agent: Bingbot
+Allow: /
+Disallow: /index-blueprint.html
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
 User-agent: *
 Allow: /
+Allow: /.well-known/
+Disallow: /index-blueprint.html
 
 Sitemap: https://supercode-ide.github.io/sitemap.xml

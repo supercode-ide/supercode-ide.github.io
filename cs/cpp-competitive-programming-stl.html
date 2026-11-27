@@ -48,6 +48,7 @@
   <link rel="alternate" hreflang="ms" href="https://supercode-ide.github.io/ms/cpp-competitive-programming-stl.html">
   <link rel="alternate" hreflang="fil" href="https://supercode-ide.github.io/tl/cpp-competitive-programming-stl.html">
   <link rel="alternate" hreflang="bn" href="https://supercode-ide.github.io/bn/cpp-competitive-programming-stl.html">
+  <link rel="alternate" type="application/rss+xml" title="SuperCode IDE Guides &amp; Releases" href="https://supercode-ide.github.io/feed.xml">
 
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
@@ -157,7 +158,8 @@
         "20-second idle-paused CPU circuit breaker stopping accidental infinite binary-search or DFS loops",
         "Seamless freopen(\"problem.in\", \"r\", stdin) and ifstream workspace mounting for USACO/IOI tasks"
       ],
-      "image": "https://supercode-ide.github.io/assets/media/og-hero-cs.png"
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-cs.png",
+      "dateModified": "2026-11-27"
     },
     {
       "@type": "BreadcrumbList",
@@ -194,30 +196,31 @@
           "position": 1,
           "name": "Open a Contest Template With C++20 Symbol Shortcuts",
           "text": "Start from a fast-I/O C++20 file and use the 21-key swipe-up bar (::, <<, >>, {}, [], &) plus AST std:: completion.",
-          "url": "https://supercode-ide.github.io/cpp-competitive-programming-stl.html#step1"
+          "url": "https://supercode-ide.github.io/cs/cpp-competitive-programming-stl.html#step1"
         },
         {
           "@type": "HowToStep",
           "position": 2,
           "name": "Compile Locally in Airplane Mode",
           "text": "Compile your single-file solution offline with zero server latency—even on subways, buses, or contest travel.",
-          "url": "https://supercode-ide.github.io/cpp-competitive-programming-stl.html#step2"
+          "url": "https://supercode-ide.github.io/cs/cpp-competitive-programming-stl.html#step2"
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "Feed Multi-Case Test Inputs Live",
           "text": "Paste Codeforces or AtCoder sample test cases into std::cin (or read from problem.in) and inspect immediate output.",
-          "url": "https://supercode-ide.github.io/cpp-competitive-programming-stl.html#step3"
+          "url": "https://supercode-ide.github.io/cs/cpp-competitive-programming-stl.html#step3"
         },
         {
           "@type": "HowToStep",
           "position": 4,
           "name": "Verify Time & Memory Before Judge Submission",
           "text": "Confirm Exit code 0, millisecond runtime, and KB/MB memory usage, then copy clean formatted code to submit.",
-          "url": "https://supercode-ide.github.io/cpp-competitive-programming-stl.html#step4"
+          "url": "https://supercode-ide.github.io/cs/cpp-competitive-programming-stl.html#step4"
         }
-      ]
+      ],
+      "inLanguage": "cs"
     },
     {
       "@type": "FAQPage",
@@ -255,7 +258,8 @@
             "text": "Ano. Každé spuštění zobrazí souhrnný odznak s návratovým kódem procesu, dobou běhu (`µs` nebo `ms`) a špičkovou spotřebou paměti (`KB` nebo `MB`)."
           }
         }
-      ]
+      ],
+      "inLanguage": "cs"
     }
   ]
 }
@@ -381,7 +385,7 @@
       <div class="drawer-top__left">
         <span class="drawer-top__dot" aria-hidden="true"></span>
         <span class="drawer-top__title" data-i18n="sitemap_title">Kompletní mapa webu</span>
-        <span class="drawer-top__badge" data-i18n="sitemap_badge">53 stránek · 32 jazyků</span>
+        <span class="drawer-top__badge" data-i18n="sitemap_badge">61 stránek · 32 jazyků</span>
       </div>
       <button type="button" class="drawer-toggle-all" id="drawerToggleAll" data-expanded="false" data-expand-label="Rozbalit vše" data-collapse-label="Sbalit vše">
         <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8h9M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
@@ -431,7 +435,7 @@
         </div>
         <div class="drawer-node" data-hub="c-compiler.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="c-compiler.html"><span class="drawer-link__title" data-i18n="nav_c_compiler">Kompilátor C17</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="c-compiler.html"><span class="drawer-link__title" data-i18n="nav_c_compiler">Kompilátor C17</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-c-compiler" aria-label="Přepnout podstránky: Kompilátor C17">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -441,11 +445,12 @@
             <a class="drawer-sub__link" href="c-multifile-header-projects.html"><span class="drawer-sub__code">C-02</span><span class="drawer-sub__title">Vícesouborové .c/.h a CMake buildy</span></a>
             <a class="drawer-sub__link" href="c-scanf-file-io-console.html"><span class="drawer-sub__code">C-03</span><span class="drawer-sub__title">Živý stdin pro scanf a souborové I/O</span></a>
             <a class="drawer-sub__link" href="c-posix-systems-programming.html"><span class="drawer-sub__code">C-04</span><span class="drawer-sub__title">POSIX hlavičky, vlákna a sockety</span></a>
+            <a class="drawer-sub__link" href="c-algorithms-data-structures-android.html"><span class="drawer-sub__code">C-05</span><span class="drawer-sub__title">Algoritmy, datové struktury a bitové operace v C</span></a>
           </div>
         </div>
         <div class="drawer-node is-open" data-hub="cpp-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="cpp-ide.html"><span class="drawer-link__title" data-i18n="nav_cpp_ide">C++20 IDE</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="cpp-ide.html"><span class="drawer-link__title" data-i18n="nav_cpp_ide">C++20 IDE</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="true" aria-controls="sub-cpp-ide" aria-label="Přepnout podstránky: C++20 IDE">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -455,11 +460,12 @@
             <a class="drawer-sub__link" href="cpp-oop-smart-pointers-modern.html"><span class="drawer-sub__code">CPP-02</span><span class="drawer-sub__title">Moderní C++20, Ranges a OOP</span></a>
             <a class="drawer-sub__link" href="cpp-multifile-hpp-builder.html"><span class="drawer-sub__code">CPP-03</span><span class="drawer-sub__title">21 vícesouborových C++ a CMake projektů</span></a>
             <a class="drawer-sub__link" href="learn-cpp-offline-android.html"><span class="drawer-sub__code">CPP-04</span><span class="drawer-sub__title">Naučte se C++ offline na Androidu</span></a>
+            <a class="drawer-sub__link" href="cpp-debugging-cmake-git-workflow.html"><span class="drawer-sub__code">CPP-05</span><span class="drawer-sub__title">C++ diagnostika, formátovač a vizuální Git</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="java-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="java-ide.html"><span class="drawer-link__title" data-i18n="nav_java_ide">Java 17 IDE</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="java-ide.html"><span class="drawer-link__title" data-i18n="nav_java_ide">Java 17 IDE</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-java-ide" aria-label="Přepnout podstránky: Java 17 IDE">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -469,11 +475,12 @@
             <a class="drawer-sub__link" href="java-multiclass-packages-ide.html"><span class="drawer-sub__code">JV-02</span><span class="drawer-sub__title">Více tříd v balíčcích a .jar knihovny</span></a>
             <a class="drawer-sub__link" href="java-jdbc-sqlite-file-io.html"><span class="drawer-sub__code">JV-03</span><span class="drawer-sub__title">Offline Java SQLite JDBC a NIO.2</span></a>
             <a class="drawer-sub__link" href="learn-java-dsa-android.html"><span class="drawer-sub__code">JV-04</span><span class="drawer-sub__title">Učte se Javu, AP CS a DSA offline</span></a>
+            <a class="drawer-sub__link" href="java-25-project-templates-android.html"><span class="drawer-sub__code">JV-05</span><span class="drawer-sub__title">25 vícesouborových šablon projektů Java</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="javascript-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="javascript-ide.html"><span class="drawer-link__title" data-i18n="nav_js_ide">JavaScript</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="javascript-ide.html"><span class="drawer-link__title" data-i18n="nav_js_ide">JavaScript</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-javascript-ide" aria-label="Přepnout podstránky: JavaScript">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -483,11 +490,12 @@
             <a class="drawer-sub__link" href="javascript-es2024-async-console.html"><span class="drawer-sub__code">JS-02</span><span class="drawer-sub__title">ES2024 Async, Top-Level Await a Fetch</span></a>
             <a class="drawer-sub__link" href="javascript-web-crypto-security.html"><span class="drawer-sub__code">JS-03</span><span class="drawer-sub__title">Node a Web Crypto (AES-GCM / SHA)</span></a>
             <a class="drawer-sub__link" href="learn-javascript-dsa-android.html"><span class="drawer-sub__code">JS-04</span><span class="drawer-sub__title">Učte se JS a procvičujte DSA offline</span></a>
+            <a class="drawer-sub__link" href="javascript-json-regex-formatter-android.html"><span class="drawer-sub__code">JS-05</span><span class="drawer-sub__title">Formátovač JSON/JSONC, Regex a REST Fetch</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="lua-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="lua-ide.html"><span class="drawer-link__title" data-i18n="nav_lua_ide">Lua 5.4</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="lua-ide.html"><span class="drawer-link__title" data-i18n="nav_lua_ide">Lua 5.4</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-lua-ide" aria-label="Přepnout podstránky: Lua 5.4">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -497,11 +505,12 @@
             <a class="drawer-sub__link" href="lua-builtin-modules-cjson-sqlite.html"><span class="drawer-sub__code">LUA-02</span><span class="drawer-sub__title">11+ vestavěných modulů (cjson, lsqlite3, lfs)</span></a>
             <a class="drawer-sub__link" href="lua-54-bitwise-close-multifile.html"><span class="drawer-sub__code">LUA-03</span><span class="drawer-sub__title">Lua 5.4 bitové operace, &lt;close&gt; a více souborů</span></a>
             <a class="drawer-sub__link" href="learn-lua-offline-android.html"><span class="drawer-sub__code">LUA-04</span><span class="drawer-sub__title">Naučte se Lua offline na Androidu</span></a>
+            <a class="drawer-sub__link" href="lua-android-crypto-regex-http-automation.html"><span class="drawer-sub__code">LUA-05</span><span class="drawer-sub__title">Krypto, Regex, HTTP a automatizace souborů</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="shell-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="shell-ide.html"><span class="drawer-link__title" data-i18n="nav_shell_ide">Shell a Kotlin</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="shell-ide.html"><span class="drawer-link__title" data-i18n="nav_shell_ide">Shell a Kotlin</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-shell-ide" aria-label="Přepnout podstránky: Shell a Kotlin">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -511,6 +520,7 @@
             <a class="drawer-sub__link" href="shell-awk-sed-grep-log-pipelines.html"><span class="drawer-sub__code">SH-02</span><span class="drawer-sub__title">Textové roury awk, sed, grep a curl</span></a>
             <a class="drawer-sub__link" href="kotlin-coding-app-compiler-android.html"><span class="drawer-sub__code">SH-03</span><span class="drawer-sub__title">Kotlin editor a spouštěč .kt/.kts</span></a>
             <a class="drawer-sub__link" href="linux-devops-shell-sftp-git-android.html"><span class="drawer-sub__code">SH-04</span><span class="drawer-sub__title">Kapesní Linux DevOps: Shell + SFTP + Git</span></a>
+            <a class="drawer-sub__link" href="kotlin-coroutines-collections-dsa-android.html"><span class="drawer-sub__code">SH-05</span><span class="drawer-sub__title">Kotlin kolekce, OOP a procvičování DSA</span></a>
           </div>
         </div>
         </div>
@@ -520,7 +530,7 @@
         <div class="drawer-group__list">
         <div class="drawer-node" data-hub="web-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="web-ide.html"><span class="drawer-link__title" data-i18n="nav_web_ide">Web a PHP</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="web-ide.html"><span class="drawer-link__title" data-i18n="nav_web_ide">Web a PHP</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-web-ide" aria-label="Přepnout podstránky: Web a PHP">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -530,11 +540,12 @@
             <a class="drawer-sub__link" href="html-css-js-responsive-preview.html"><span class="drawer-sub__code">WEB-02</span><span class="drawer-sub__title">HTML5, CSS3 a náhled ve 3 viewportech</span></a>
             <a class="drawer-sub__link" href="mobile-web-devtools-wasm-studio.html"><span class="drawer-sub__code">WEB-03</span><span class="drawer-sub__title">Mobilní webové DevTools, JS REPL a WASM</span></a>
             <a class="drawer-sub__link" href="fullstack-web-sftp-deploy-android.html"><span class="drawer-sub__code">WEB-04</span><span class="drawer-sub__title">Vzdálený živý FTP/SFTP webový deploy</span></a>
+            <a class="drawer-sub__link" href="web-canvas-media-export-pwa-android.html"><span class="drawer-sub__code">WEB-05</span><span class="drawer-sub__title">Canvas, export médií a offline webové aplikace</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="sql-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="sql-ide.html"><span class="drawer-link__title" data-i18n="nav_sql_ide">SQL Studio</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="sql-ide.html"><span class="drawer-link__title" data-i18n="nav_sql_ide">SQL Studio</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-sql-ide" aria-label="Přepnout podstránky: SQL Studio">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -544,6 +555,7 @@
             <a class="drawer-sub__link" href="sql-window-functions-fts5-json.html"><span class="drawer-sub__code">SQL-02</span><span class="drawer-sub__title">Okénkové funkce, CTE, JSONB a FTS5</span></a>
             <a class="drawer-sub__link" href="mysql-postgresql-syntax-android.html"><span class="drawer-sub__code">SQL-03</span><span class="drawer-sub__title">Kompatibilita s MySQL a PostgreSQL</span></a>
             <a class="drawer-sub__link" href="sql-python-php-java-lua-integration.html"><span class="drawer-sub__code">SQL-04</span><span class="drawer-sub__title">Sdílené .db napříč SQL, Pythonem, PHP a Javou</span></a>
+            <a class="drawer-sub__link" href="sql-crypto-regex-udf-scripts-android.html"><span class="drawer-sub__code">SQL-05</span><span class="drawer-sub__title">Kryptografické a Regex UDF funkce a vícesouborové .read</span></a>
           </div>
         </div>
         <div class="drawer-node">
@@ -1034,8 +1046,8 @@
       </div>
 
       <div class="sec-grid">
-        <h2>Kompletní dokumentace C++20 IDE</h2>
-        <p class="sec-lead">Přepínejte mezi hlavním centrem offline C++20 IDE a všemi 4 specializovanými průvodci pro vývoj v C++.</p>
+        <h2>Kompletní sada dokumentace C++20 IDE</h2>
+        <p class="sec-lead">Přepínejte mezi naším hlavním centrem offline C++20 IDE a všemi 5 specializovanými inženýrskými průvodci C++.</p>
       </div>
 
       <div class="sec-body">
@@ -1100,11 +1112,23 @@
               <span>Otevřít průvodce &rarr;</span>
             </div>
           </a>
+          <a href="cpp-debugging-cmake-git-workflow.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">CPP-05</span>
+              <span class="py-spoke-card__tag">Chyby #line · AST · Vizuální Git</span>
+            </div>
+            <h3>C++ diagnostika, formátovač a vizuální Git</h3>
+            <p>Laďte C++20 rychleji díky přesné diagnostice souborů a řádků #line 1, offline AST doplňování std::, formátování C++ jedním klepnutím, ukončení smyček Web Workeru a vizuálnímu Git Time Machine.</p>
+            <div class="py-spoke-card__go">
+              <span>cpp-debugging-cmake-git-workflow</span>
+              <span>Otevřít průvodce &rarr;</span>
+            </div>
+          </a>
         </div>
       </div>
 
       <div class="sec-foot">
-        <span>5 propojených průvodců pro C++20 · Plná STL · 21 vícesouborových šablon</span>
+        <span>6 propojených průvodců C++20 · Plná STL · 21 vícesouborových šablon projektů</span>
         <a class="link-arrow" href="cpp-ide.html">
           <span>Centrum kompilátoru C++20 a IDE</span>
           <svg aria-hidden="true"><use href="#i-arrow"/></svg>

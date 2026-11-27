@@ -48,6 +48,7 @@
   <link rel="alternate" hreflang="ms" href="https://supercode-ide.github.io/ms/lua-54-bitwise-close-multifile.html">
   <link rel="alternate" hreflang="fil" href="https://supercode-ide.github.io/tl/lua-54-bitwise-close-multifile.html">
   <link rel="alternate" hreflang="bn" href="https://supercode-ide.github.io/bn/lua-54-bitwise-close-multifile.html">
+  <link rel="alternate" type="application/rss+xml" title="SuperCode IDE Guides &amp; Releases" href="https://supercode-ide.github.io/feed.xml">
 
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
@@ -157,7 +158,8 @@
         "Zero-config multi-folder package.path resolution across root, src/, lib/, modules/, core/, and utils/",
         "Smart main.lua / init.lua entry arbitration when tapping Run inside a return M module file"
       ],
-      "image": "https://supercode-ide.github.io/assets/media/og-hero-tr.png"
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-tr.png",
+      "dateModified": "2026-11-27"
     },
     {
       "@type": "BreadcrumbList",
@@ -194,30 +196,31 @@
           "position": 1,
           "name": "Create Modular Directories (src/, lib/, core/)",
           "text": "Place your entry point in main.lua and organize reusable modules into src/, lib/, modules/, core/, or utils/ — zero LUA_PATH tweaking.",
-          "url": "https://supercode-ide.github.io/lua-54-bitwise-close-multifile.html#step1"
+          "url": "https://supercode-ide.github.io/tr/lua-54-bitwise-close-multifile.html#step1"
         },
         {
           "@type": "HowToStep",
           "position": 2,
           "name": "Author 64-Bit Bitwise, <const>, and <close> Code",
           "text": "Use modern //, >>, &, <const>, and <close> constructs with live Error Radar syntax checks and offline Lua formatting.",
-          "url": "https://supercode-ide.github.io/lua-54-bitwise-close-multifile.html#step2"
+          "url": "https://supercode-ide.github.io/tr/lua-54-bitwise-close-multifile.html#step2"
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "Execute From Either main.lua or a Submodule",
           "text": "Press Run even while editing a return M library file — entry arbitration runs main.lua automatically including unsaved edits.",
-          "url": "https://supercode-ide.github.io/lua-54-bitwise-close-multifile.html#step3"
+          "url": "https://supercode-ide.github.io/tr/lua-54-bitwise-close-multifile.html#step3"
         },
         {
           "@type": "HowToStep",
           "position": 4,
           "name": "Version & Publish Clean Lua Packages",
           "text": "Review diffs across your module tree in Visual Git and push directly to GitHub, GitLab, or a remote SFTP host.",
-          "url": "https://supercode-ide.github.io/lua-54-bitwise-close-multifile.html#step4"
+          "url": "https://supercode-ide.github.io/tr/lua-54-bitwise-close-multifile.html#step4"
         }
-      ]
+      ],
+      "inLanguage": "tr"
     },
     {
       "@type": "FAQPage",
@@ -255,7 +258,8 @@
             "text": "Evet. Standart masaüstü Lua 5.4.7 gibi, `<close>` ile işaretlenen her yerel değişken, blok normal çıksa da `error()` ile çözülse de metatablosunun `__close(self, err)` metametodunu deterministik olarak çağırır."
           }
         }
-      ]
+      ],
+      "inLanguage": "tr"
     }
   ]
 }
@@ -381,7 +385,7 @@
       <div class="drawer-top__left">
         <span class="drawer-top__dot" aria-hidden="true"></span>
         <span class="drawer-top__title" data-i18n="sitemap_title">Tam Site Haritası</span>
-        <span class="drawer-top__badge" data-i18n="sitemap_badge">53 Sayfa · 32 Dil</span>
+        <span class="drawer-top__badge" data-i18n="sitemap_badge">61 Sayfa · 32 Dil</span>
       </div>
       <button type="button" class="drawer-toggle-all" id="drawerToggleAll" data-expanded="false" data-expand-label="Tümünü Genişlet" data-collapse-label="Tümünü Daralt">
         <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8h9M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
@@ -431,7 +435,7 @@
         </div>
         <div class="drawer-node" data-hub="c-compiler.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="c-compiler.html"><span class="drawer-link__title" data-i18n="nav_c_compiler">C17 Derleyici</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="c-compiler.html"><span class="drawer-link__title" data-i18n="nav_c_compiler">C17 Derleyici</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-c-compiler" aria-label="Alt sayfaları aç/kapat: C17 Derleyici">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -441,11 +445,12 @@
             <a class="drawer-sub__link" href="c-multifile-header-projects.html"><span class="drawer-sub__code">C-02</span><span class="drawer-sub__title">Çok Dosyalı .c/.h ve CMake Derlemeleri</span></a>
             <a class="drawer-sub__link" href="c-scanf-file-io-console.html"><span class="drawer-sub__code">C-03</span><span class="drawer-sub__title">Canlı scanf Stdin ve Dosya G/Ç</span></a>
             <a class="drawer-sub__link" href="c-posix-systems-programming.html"><span class="drawer-sub__code">C-04</span><span class="drawer-sub__title">POSIX Başlıkları, İş Parçacıkları ve Soketler</span></a>
+            <a class="drawer-sub__link" href="c-algorithms-data-structures-android.html"><span class="drawer-sub__code">C-05</span><span class="drawer-sub__title">Algoritmalar, Veri Yapıları ve Bit Düzeyi C</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="cpp-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="cpp-ide.html"><span class="drawer-link__title" data-i18n="nav_cpp_ide">C++20 IDE</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="cpp-ide.html"><span class="drawer-link__title" data-i18n="nav_cpp_ide">C++20 IDE</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-cpp-ide" aria-label="Alt sayfaları aç/kapat: C++20 IDE">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -455,11 +460,12 @@
             <a class="drawer-sub__link" href="cpp-oop-smart-pointers-modern.html"><span class="drawer-sub__code">CPP-02</span><span class="drawer-sub__title">Modern C++20, Ranges ve OOP</span></a>
             <a class="drawer-sub__link" href="cpp-multifile-hpp-builder.html"><span class="drawer-sub__code">CPP-03</span><span class="drawer-sub__title">21 Çok Dosyalı C++ ve CMake Projesi</span></a>
             <a class="drawer-sub__link" href="learn-cpp-offline-android.html"><span class="drawer-sub__code">CPP-04</span><span class="drawer-sub__title">Android'de Çevrimdışı C++ Öğrenin</span></a>
+            <a class="drawer-sub__link" href="cpp-debugging-cmake-git-workflow.html"><span class="drawer-sub__code">CPP-05</span><span class="drawer-sub__title">C++ Tanılama, Biçimlendirici ve Görsel Git</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="java-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="java-ide.html"><span class="drawer-link__title" data-i18n="nav_java_ide">Java 17 IDE</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="java-ide.html"><span class="drawer-link__title" data-i18n="nav_java_ide">Java 17 IDE</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-java-ide" aria-label="Alt sayfaları aç/kapat: Java 17 IDE">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -469,11 +475,12 @@
             <a class="drawer-sub__link" href="java-multiclass-packages-ide.html"><span class="drawer-sub__code">JV-02</span><span class="drawer-sub__title">Çok Sınıflı Paketler ve .jar Kütüphaneleri</span></a>
             <a class="drawer-sub__link" href="java-jdbc-sqlite-file-io.html"><span class="drawer-sub__code">JV-03</span><span class="drawer-sub__title">Çevrimdışı Java SQLite JDBC ve NIO.2</span></a>
             <a class="drawer-sub__link" href="learn-java-dsa-android.html"><span class="drawer-sub__code">JV-04</span><span class="drawer-sub__title">Çevrimdışı Java, AP CS ve DSA Öğrenin</span></a>
+            <a class="drawer-sub__link" href="java-25-project-templates-android.html"><span class="drawer-sub__code">JV-05</span><span class="drawer-sub__title">25 Çoklu Dosyalı Java Proje Şablonu</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="javascript-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="javascript-ide.html"><span class="drawer-link__title" data-i18n="nav_js_ide">JavaScript</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="javascript-ide.html"><span class="drawer-link__title" data-i18n="nav_js_ide">JavaScript</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-javascript-ide" aria-label="Alt sayfaları aç/kapat: JavaScript">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -483,11 +490,12 @@
             <a class="drawer-sub__link" href="javascript-es2024-async-console.html"><span class="drawer-sub__code">JS-02</span><span class="drawer-sub__title">ES2024 Async, Top-Level Await ve Fetch</span></a>
             <a class="drawer-sub__link" href="javascript-web-crypto-security.html"><span class="drawer-sub__code">JS-03</span><span class="drawer-sub__title">Node ve Web Crypto (AES-GCM / SHA)</span></a>
             <a class="drawer-sub__link" href="learn-javascript-dsa-android.html"><span class="drawer-sub__code">JS-04</span><span class="drawer-sub__title">Çevrimdışı JS Öğrenin ve DSA Çalışın</span></a>
+            <a class="drawer-sub__link" href="javascript-json-regex-formatter-android.html"><span class="drawer-sub__code">JS-05</span><span class="drawer-sub__title">JSON/JSONC Biçimlendirici, Regex ve REST Fetch</span></a>
           </div>
         </div>
         <div class="drawer-node is-open" data-hub="lua-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="lua-ide.html"><span class="drawer-link__title" data-i18n="nav_lua_ide">Lua 5.4</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="lua-ide.html"><span class="drawer-link__title" data-i18n="nav_lua_ide">Lua 5.4</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="true" aria-controls="sub-lua-ide" aria-label="Alt sayfaları aç/kapat: Lua 5.4">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -497,11 +505,12 @@
             <a class="drawer-sub__link" href="lua-builtin-modules-cjson-sqlite.html"><span class="drawer-sub__code">LUA-02</span><span class="drawer-sub__title">11+ Yerleşik Modül (cjson, lsqlite3, lfs)</span></a>
             <a class="drawer-sub__link is-current" href="lua-54-bitwise-close-multifile.html"><span class="drawer-sub__code">LUA-03</span><span class="drawer-sub__title">Lua 5.4 Bit Düzeyi, &lt;close&gt; ve Çoklu Dosya</span></a>
             <a class="drawer-sub__link" href="learn-lua-offline-android.html"><span class="drawer-sub__code">LUA-04</span><span class="drawer-sub__title">Android'de Çevrimdışı Lua Öğrenin</span></a>
+            <a class="drawer-sub__link" href="lua-android-crypto-regex-http-automation.html"><span class="drawer-sub__code">LUA-05</span><span class="drawer-sub__title">Kripto, Regex, HTTP ve Dosya Otomasyonu</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="shell-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="shell-ide.html"><span class="drawer-link__title" data-i18n="nav_shell_ide">Shell ve Kotlin</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="shell-ide.html"><span class="drawer-link__title" data-i18n="nav_shell_ide">Shell ve Kotlin</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-shell-ide" aria-label="Alt sayfaları aç/kapat: Shell ve Kotlin">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -511,6 +520,7 @@
             <a class="drawer-sub__link" href="shell-awk-sed-grep-log-pipelines.html"><span class="drawer-sub__code">SH-02</span><span class="drawer-sub__title">awk, sed, grep ve curl Metin Ardışık Düzenleri</span></a>
             <a class="drawer-sub__link" href="kotlin-coding-app-compiler-android.html"><span class="drawer-sub__code">SH-03</span><span class="drawer-sub__title">Kotlin Kodlama Uygulaması ve .kt/.kts Çalıştırıcı</span></a>
             <a class="drawer-sub__link" href="linux-devops-shell-sftp-git-android.html"><span class="drawer-sub__code">SH-04</span><span class="drawer-sub__title">Cep Linux DevOps: Shell + SFTP + Git</span></a>
+            <a class="drawer-sub__link" href="kotlin-coroutines-collections-dsa-android.html"><span class="drawer-sub__code">SH-05</span><span class="drawer-sub__title">Kotlin Koleksiyonları, OOP ve DSA Pratiği</span></a>
           </div>
         </div>
         </div>
@@ -520,7 +530,7 @@
         <div class="drawer-group__list">
         <div class="drawer-node" data-hub="web-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="web-ide.html"><span class="drawer-link__title" data-i18n="nav_web_ide">Web ve PHP</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="web-ide.html"><span class="drawer-link__title" data-i18n="nav_web_ide">Web ve PHP</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-web-ide" aria-label="Alt sayfaları aç/kapat: Web ve PHP">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -530,11 +540,12 @@
             <a class="drawer-sub__link" href="html-css-js-responsive-preview.html"><span class="drawer-sub__code">WEB-02</span><span class="drawer-sub__title">HTML5, CSS3 ve 3 Görünümlü Önizleme</span></a>
             <a class="drawer-sub__link" href="mobile-web-devtools-wasm-studio.html"><span class="drawer-sub__code">WEB-03</span><span class="drawer-sub__title">Mobil Web DevTools, JS REPL ve WASM</span></a>
             <a class="drawer-sub__link" href="fullstack-web-sftp-deploy-android.html"><span class="drawer-sub__code">WEB-04</span><span class="drawer-sub__title">Uzak FTP/SFTP Canlı Web Dağıtımı</span></a>
+            <a class="drawer-sub__link" href="web-canvas-media-export-pwa-android.html"><span class="drawer-sub__code">WEB-05</span><span class="drawer-sub__title">Canvas, Medya Dışa Aktarma ve Çevrimdışı Web</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="sql-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="sql-ide.html"><span class="drawer-link__title" data-i18n="nav_sql_ide">SQL Studio</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="sql-ide.html"><span class="drawer-link__title" data-i18n="nav_sql_ide">SQL Studio</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-sql-ide" aria-label="Alt sayfaları aç/kapat: SQL Studio">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -544,6 +555,7 @@
             <a class="drawer-sub__link" href="sql-window-functions-fts5-json.html"><span class="drawer-sub__code">SQL-02</span><span class="drawer-sub__title">Pencere Fonksiyonları, CTE, JSONB ve FTS5</span></a>
             <a class="drawer-sub__link" href="mysql-postgresql-syntax-android.html"><span class="drawer-sub__code">SQL-03</span><span class="drawer-sub__title">MySQL ve PostgreSQL Uyumluluğu</span></a>
             <a class="drawer-sub__link" href="sql-python-php-java-lua-integration.html"><span class="drawer-sub__code">SQL-04</span><span class="drawer-sub__title">SQL, Python, PHP ve Java Arasında Ortak .db</span></a>
+            <a class="drawer-sub__link" href="sql-crypto-regex-udf-scripts-android.html"><span class="drawer-sub__code">SQL-05</span><span class="drawer-sub__title">Kripto, Regex UDF'leri ve Çoklu .read</span></a>
           </div>
         </div>
         <div class="drawer-node">
@@ -1034,8 +1046,8 @@
       </div>
 
       <div class="sec-grid">
-        <h2>Eksiksiz Lua 5.4.7 IDE Dokümantasyon Seti</h2>
-        <p class="sec-lead">Ana Çevrimdışı Lua 5.4 IDE merkezi ile 4 özel Lua betik rehberi arasında gezinin.</p>
+        <h2>Eksiksiz Lua 5.4.7 IDE Belge Seti</h2>
+        <p class="sec-lead">Ana Çevrimdışı Lua 5.4 IDE merkezi ile 5 özel Lua betik rehberi arasında gezinin.</p>
       </div>
 
       <div class="sec-body">
@@ -1100,11 +1112,23 @@
               <span>Rehberi Aç &rarr;</span>
             </div>
           </a>
+          <a href="lua-android-crypto-regex-http-automation.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">LUA-05</span>
+              <span class="py-spoke-card__tag">crypto · regex · socket.http · lfs</span>
+            </div>
+            <h3>Kripto, Regex, HTTP ve Dosya Otomasyonu</h3>
+            <p>BoringSSL crypto/sha2, ICU Unicode regex, OkHttp socket.http (1MB OOM koruması), lfs dosya sistemi işlemleri ve tek dokunuşla biçimlendirme destekli yerel Lua 5.4.7 ile Android görevlerini mikrosaniyeler içinde otomatikleştirin.</p>
+            <div class="py-spoke-card__go">
+              <span>lua-android-crypto-regex-http-automation</span>
+              <span>Rehberi Aç &rarr;</span>
+            </div>
+          </a>
         </div>
       </div>
 
       <div class="sec-foot">
-        <span>5 Bağlantılı Lua 5.4.7 Rehberi · Yerleşik cjson, lfs, lsqlite3, crypto ve socket</span>
+        <span>6 Bağlantılı Lua 5.4.7 Rehberi · Yerleşik cjson, lfs, lsqlite3, crypto ve socket</span>
         <a class="link-arrow" href="lua-ide.html">
           <span>Lua 5.4 IDE Merkezi</span>
           <svg aria-hidden="true"><use href="#i-arrow"/></svg>

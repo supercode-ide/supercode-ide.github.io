@@ -48,6 +48,7 @@
   <link rel="alternate" hreflang="ms" href="https://supercode-ide.github.io/ms/java-17-records-oop-android.html">
   <link rel="alternate" hreflang="fil" href="https://supercode-ide.github.io/tl/java-17-records-oop-android.html">
   <link rel="alternate" hreflang="bn" href="https://supercode-ide.github.io/bn/java-17-records-oop-android.html">
+  <link rel="alternate" type="application/rss+xml" title="SuperCode IDE Guides &amp; Releases" href="https://supercode-ide.github.io/feed.xml">
 
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
@@ -157,7 +158,8 @@
         "Direct upgrade over legacy mobile Java compilers stuck on Java 8 or Java 11 syntax restrictions",
         "Automatic Cloud Java 21+ routing for virtual threads (Thread.ofVirtual) and nested record deconstruction"
       ],
-      "image": "https://supercode-ide.github.io/assets/media/og-hero-zh-tw.png"
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-zh-tw.png",
+      "dateModified": "2026-11-27"
     },
     {
       "@type": "BreadcrumbList",
@@ -194,30 +196,31 @@
           "position": 1,
           "name": "Write Java 17 Records, Sealed Types, or Compact main()",
           "text": "Create a .java file using the 21-key Java symbol bar and offline AST completion for java.util, java.time, and java.util.stream.",
-          "url": "https://supercode-ide.github.io/java-17-records-oop-android.html#step1"
+          "url": "https://supercode-ide.github.io/zh-tw/java-17-records-oop-android.html#step1"
         },
         {
           "@type": "HowToStep",
           "position": 2,
           "name": "Auto-Format Braces & Verify Syntax Live",
           "text": "Tap Format to align switch arrows, records, and text blocks cleanly while Error Radar checks unclosed delimiters in real time.",
-          "url": "https://supercode-ide.github.io/java-17-records-oop-android.html#step2"
+          "url": "https://supercode-ide.github.io/zh-tw/java-17-records-oop-android.html#step2"
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "Compile Java 17 100% Offline in Milliseconds",
           "text": "On first run, SuperCode initializes the offline Java 17 SDK once; every build thereafter compiles locally on device with SHA-256 caching.",
-          "url": "https://supercode-ide.github.io/java-17-records-oop-android.html#step3"
+          "url": "https://supercode-ide.github.io/zh-tw/java-17-records-oop-android.html#step3"
         },
         {
           "@type": "HowToStep",
           "position": 4,
           "name": "Burst to Cloud Java 21+ Whenever Needed",
           "text": "Use Java 21+ virtual threads or // @cloud comments anytime to test newer JDK releases with clickable 1:1 editor stack traces.",
-          "url": "https://supercode-ide.github.io/java-17-records-oop-android.html#step4"
+          "url": "https://supercode-ide.github.io/zh-tw/java-17-records-oop-android.html#step4"
         }
-      ]
+      ],
+      "inLanguage": "zh-Hant"
     },
     {
       "@type": "FAQPage",
@@ -255,7 +258,8 @@
             "text": "只要寫入 `Thread.ofVirtual()` 或 `Executors.newVirtualThreadPerTaskExecutor()`（或在檔案頂端加上 `// @cloud`）並點擊執行，SuperCode 就會自動打包專案類別至雲端 Java 21+ 並將輸出即時串流回終端機。"
           }
         }
-      ]
+      ],
+      "inLanguage": "zh-Hant"
     }
   ]
 }
@@ -381,7 +385,7 @@
       <div class="drawer-top__left">
         <span class="drawer-top__dot" aria-hidden="true"></span>
         <span class="drawer-top__title" data-i18n="sitemap_title">完整網站地圖</span>
-        <span class="drawer-top__badge" data-i18n="sitemap_badge">53 個頁面 · 32 種語言</span>
+        <span class="drawer-top__badge" data-i18n="sitemap_badge">61 個頁面 · 32 種語言</span>
       </div>
       <button type="button" class="drawer-toggle-all" id="drawerToggleAll" data-expanded="false" data-expand-label="全部展開" data-collapse-label="全部收合">
         <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8h9M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
@@ -431,7 +435,7 @@
         </div>
         <div class="drawer-node" data-hub="c-compiler.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="c-compiler.html"><span class="drawer-link__title" data-i18n="nav_c_compiler">C17 編譯器</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="c-compiler.html"><span class="drawer-link__title" data-i18n="nav_c_compiler">C17 編譯器</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-c-compiler" aria-label="切換子頁面: C17 編譯器">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -441,11 +445,12 @@
             <a class="drawer-sub__link" href="c-multifile-header-projects.html"><span class="drawer-sub__code">C-02</span><span class="drawer-sub__title">多檔案 .c/.h 與 CMake 建置</span></a>
             <a class="drawer-sub__link" href="c-scanf-file-io-console.html"><span class="drawer-sub__code">C-03</span><span class="drawer-sub__title">即時 scanf 標準輸入與檔案 I/O</span></a>
             <a class="drawer-sub__link" href="c-posix-systems-programming.html"><span class="drawer-sub__code">C-04</span><span class="drawer-sub__title">POSIX 標頭檔、執行緒與 Socket</span></a>
+            <a class="drawer-sub__link" href="c-algorithms-data-structures-android.html"><span class="drawer-sub__code">C-05</span><span class="drawer-sub__title">C 語言演算法、資料結構與位元運算</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="cpp-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="cpp-ide.html"><span class="drawer-link__title" data-i18n="nav_cpp_ide">C++20 IDE</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="cpp-ide.html"><span class="drawer-link__title" data-i18n="nav_cpp_ide">C++20 IDE</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-cpp-ide" aria-label="切換子頁面: C++20 IDE">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -455,11 +460,12 @@
             <a class="drawer-sub__link" href="cpp-oop-smart-pointers-modern.html"><span class="drawer-sub__code">CPP-02</span><span class="drawer-sub__title">現代 C++20、Ranges 與物件導向</span></a>
             <a class="drawer-sub__link" href="cpp-multifile-hpp-builder.html"><span class="drawer-sub__code">CPP-03</span><span class="drawer-sub__title">21 個多檔案 C++ 與 CMake 專案</span></a>
             <a class="drawer-sub__link" href="learn-cpp-offline-android.html"><span class="drawer-sub__code">CPP-04</span><span class="drawer-sub__title">在 Android 上離線學習 C++</span></a>
+            <a class="drawer-sub__link" href="cpp-debugging-cmake-git-workflow.html"><span class="drawer-sub__code">CPP-05</span><span class="drawer-sub__title">C++ 錯誤診斷、格式化與視覺化 Git</span></a>
           </div>
         </div>
         <div class="drawer-node is-open" data-hub="java-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="java-ide.html"><span class="drawer-link__title" data-i18n="nav_java_ide">Java 17 IDE</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="java-ide.html"><span class="drawer-link__title" data-i18n="nav_java_ide">Java 17 IDE</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="true" aria-controls="sub-java-ide" aria-label="切換子頁面: Java 17 IDE">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -469,11 +475,12 @@
             <a class="drawer-sub__link" href="java-multiclass-packages-ide.html"><span class="drawer-sub__code">JV-02</span><span class="drawer-sub__title">多類別套件與 .jar 函式庫</span></a>
             <a class="drawer-sub__link" href="java-jdbc-sqlite-file-io.html"><span class="drawer-sub__code">JV-03</span><span class="drawer-sub__title">離線 Java SQLite JDBC 與 NIO.2</span></a>
             <a class="drawer-sub__link" href="learn-java-dsa-android.html"><span class="drawer-sub__code">JV-04</span><span class="drawer-sub__title">離線學習 Java、AP CS 與演算法</span></a>
+            <a class="drawer-sub__link" href="java-25-project-templates-android.html"><span class="drawer-sub__code">JV-05</span><span class="drawer-sub__title">25 個多檔案 Java 專案範本</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="javascript-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="javascript-ide.html"><span class="drawer-link__title" data-i18n="nav_js_ide">JavaScript</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="javascript-ide.html"><span class="drawer-link__title" data-i18n="nav_js_ide">JavaScript</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-javascript-ide" aria-label="切換子頁面: JavaScript">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -483,11 +490,12 @@
             <a class="drawer-sub__link" href="javascript-es2024-async-console.html"><span class="drawer-sub__code">JS-02</span><span class="drawer-sub__title">ES2024 非同步、頂層 Await 與 Fetch</span></a>
             <a class="drawer-sub__link" href="javascript-web-crypto-security.html"><span class="drawer-sub__code">JS-03</span><span class="drawer-sub__title">Node 與 Web Crypto (AES-GCM / SHA)</span></a>
             <a class="drawer-sub__link" href="learn-javascript-dsa-android.html"><span class="drawer-sub__code">JS-04</span><span class="drawer-sub__title">離線學習 JS 與練習演算法</span></a>
+            <a class="drawer-sub__link" href="javascript-json-regex-formatter-android.html"><span class="drawer-sub__code">JS-05</span><span class="drawer-sub__title">JSON/JSONC 格式化、Regex 與 REST Fetch</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="lua-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="lua-ide.html"><span class="drawer-link__title" data-i18n="nav_lua_ide">Lua 5.4</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="lua-ide.html"><span class="drawer-link__title" data-i18n="nav_lua_ide">Lua 5.4</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-lua-ide" aria-label="切換子頁面: Lua 5.4">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -497,11 +505,12 @@
             <a class="drawer-sub__link" href="lua-builtin-modules-cjson-sqlite.html"><span class="drawer-sub__code">LUA-02</span><span class="drawer-sub__title">11+ 內建模組 (cjson、lsqlite3、lfs)</span></a>
             <a class="drawer-sub__link" href="lua-54-bitwise-close-multifile.html"><span class="drawer-sub__code">LUA-03</span><span class="drawer-sub__title">Lua 5.4 位元運算、&lt;close&gt; 與多檔案</span></a>
             <a class="drawer-sub__link" href="learn-lua-offline-android.html"><span class="drawer-sub__code">LUA-04</span><span class="drawer-sub__title">在 Android 上離線學習 Lua</span></a>
+            <a class="drawer-sub__link" href="lua-android-crypto-regex-http-automation.html"><span class="drawer-sub__code">LUA-05</span><span class="drawer-sub__title">加密、正規、HTTP 與檔案自動化</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="shell-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="shell-ide.html"><span class="drawer-link__title" data-i18n="nav_shell_ide">Shell 與 Kotlin</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="shell-ide.html"><span class="drawer-link__title" data-i18n="nav_shell_ide">Shell 與 Kotlin</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-shell-ide" aria-label="切換子頁面: Shell 與 Kotlin">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -511,6 +520,7 @@
             <a class="drawer-sub__link" href="shell-awk-sed-grep-log-pipelines.html"><span class="drawer-sub__code">SH-02</span><span class="drawer-sub__title">awk、sed、grep 與 curl 文字處理管線</span></a>
             <a class="drawer-sub__link" href="kotlin-coding-app-compiler-android.html"><span class="drawer-sub__code">SH-03</span><span class="drawer-sub__title">Kotlin 開發 App 與 .kt/.kts 執行器</span></a>
             <a class="drawer-sub__link" href="linux-devops-shell-sftp-git-android.html"><span class="drawer-sub__code">SH-04</span><span class="drawer-sub__title">隨身 Linux DevOps：Shell + SFTP + Git</span></a>
+            <a class="drawer-sub__link" href="kotlin-coroutines-collections-dsa-android.html"><span class="drawer-sub__code">SH-05</span><span class="drawer-sub__title">Kotlin 集合、OOP 與資料結構演算法練習</span></a>
           </div>
         </div>
         </div>
@@ -520,7 +530,7 @@
         <div class="drawer-group__list">
         <div class="drawer-node" data-hub="web-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="web-ide.html"><span class="drawer-link__title" data-i18n="nav_web_ide">Web 與 PHP</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="web-ide.html"><span class="drawer-link__title" data-i18n="nav_web_ide">Web 與 PHP</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-web-ide" aria-label="切換子頁面: Web 與 PHP">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -530,11 +540,12 @@
             <a class="drawer-sub__link" href="html-css-js-responsive-preview.html"><span class="drawer-sub__code">WEB-02</span><span class="drawer-sub__title">HTML5、CSS3 與三視口即時預覽</span></a>
             <a class="drawer-sub__link" href="mobile-web-devtools-wasm-studio.html"><span class="drawer-sub__code">WEB-03</span><span class="drawer-sub__title">行動端網頁 DevTools、JS REPL 與 WASM</span></a>
             <a class="drawer-sub__link" href="fullstack-web-sftp-deploy-android.html"><span class="drawer-sub__code">WEB-04</span><span class="drawer-sub__title">遠端 FTP/SFTP 網頁即時部署</span></a>
+            <a class="drawer-sub__link" href="web-canvas-media-export-pwa-android.html"><span class="drawer-sub__code">WEB-05</span><span class="drawer-sub__title">Canvas、媒體匯出與離線網頁應用</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="sql-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="sql-ide.html"><span class="drawer-link__title" data-i18n="nav_sql_ide">SQL 工作室</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="sql-ide.html"><span class="drawer-link__title" data-i18n="nav_sql_ide">SQL 工作室</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-sql-ide" aria-label="切換子頁面: SQL 工作室">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -544,6 +555,7 @@
             <a class="drawer-sub__link" href="sql-window-functions-fts5-json.html"><span class="drawer-sub__code">SQL-02</span><span class="drawer-sub__title">視窗函式、CTE、JSONB 與 FTS5</span></a>
             <a class="drawer-sub__link" href="mysql-postgresql-syntax-android.html"><span class="drawer-sub__code">SQL-03</span><span class="drawer-sub__title">MySQL 與 PostgreSQL 相容性</span></a>
             <a class="drawer-sub__link" href="sql-python-php-java-lua-integration.html"><span class="drawer-sub__code">SQL-04</span><span class="drawer-sub__title">跨 SQL、Python、PHP 與 Java 共用 .db</span></a>
+            <a class="drawer-sub__link" href="sql-crypto-regex-udf-scripts-android.html"><span class="drawer-sub__code">SQL-05</span><span class="drawer-sub__title">加密、Regex UDF 與多檔案 .read</span></a>
           </div>
         </div>
         <div class="drawer-node">
@@ -1034,8 +1046,8 @@
       </div>
 
       <div class="sec-grid">
-        <h2>完整 Java 17 IDE 文件套件</h2>
-        <p class="sec-lead">在離線 Java 17 IDE 主中樞與全部 4 篇專業 Java 指南間無縫切換。</p>
+        <h2>完整 Java 17 IDE 技術文件總覽</h2>
+        <p class="sec-lead">在離線 Java 17 IDE 主頁面與 5 篇 Java 專題指南之間無縫切換。</p>
       </div>
 
       <div class="sec-body">
@@ -1100,11 +1112,23 @@
               <span>開啟指南 &rarr;</span>
             </div>
           </a>
+          <a href="java-25-project-templates-android.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JV-05</span>
+              <span class="py-spoke-card__tag">25 個多檔案專案 · OOP · ECJ + D8</span>
+            </div>
+            <h3>25 個多檔案 Java 專案範本</h3>
+            <p>離線啟動 25 個即開即用的多檔案 Java 17 工程與課程專案，完整內建套件階層、SQLite DAO、OOP 模式與 EOF 安全的 Scanner 範例。</p>
+            <div class="py-spoke-card__go">
+              <span>java-25-project-templates-android</span>
+              <span>開啟指南 &rarr;</span>
+            </div>
+          </a>
         </div>
       </div>
 
       <div class="sec-foot">
-        <span>5 篇互連 Java 17 指南 · Records 與 Sealed · 內建 SQLite JDBC</span>
+        <span>6 篇互連 Java 17 指南 · Records 與 Sealed · 內建 SQLite JDBC</span>
         <a class="link-arrow" href="java-ide.html">
           <span>Java 17 IDE 中樞</span>
           <svg aria-hidden="true"><use href="#i-arrow"/></svg>

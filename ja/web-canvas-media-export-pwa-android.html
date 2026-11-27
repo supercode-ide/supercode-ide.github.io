@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090A0F">
+  <meta name="color-scheme" content="only dark">
+  <meta name="supported-color-schemes" content="dark">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <title>Android向けHTML5 Canvas・WebGL・メディア出力 &amp; オフラインWebアプリIDE | SuperCode</title>
+  <meta name="description" content="AndroidでHTML5 Canvas、WebGL、WebAudio、IndexedDBアプリを開発。SuperCodeはネイティブshowSaveFilePicker/navigator.shareポリフィル、無劣化WebM SeekHead修復、PNG/MP3のMediaStore保存を提供します。">
+  <meta name="keywords" content="html5 canvas game ide android, export png webm mp3 webview android, offline pwa editor localStorage indexeddb phone, showSaveFilePicker android web ide, webgl html5 studio mobile">
+  <meta name="author" content="Phoenix Global Studios">
+  <meta name="google-play-app" content="app-id=com.phoenixglobal.supercodeeditor">
+
+  <link id="canonical-link" rel="canonical" href="https://supercode-ide.github.io/ja/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="x-default" href="https://supercode-ide.github.io/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="en" href="https://supercode-ide.github.io/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://supercode-ide.github.io/zh/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://supercode-ide.github.io/zh-tw/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="es" href="https://supercode-ide.github.io/es/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://supercode-ide.github.io/pt/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="ja" href="https://supercode-ide.github.io/ja/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="ko" href="https://supercode-ide.github.io/ko/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="de" href="https://supercode-ide.github.io/de/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="fr" href="https://supercode-ide.github.io/fr/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="ru" href="https://supercode-ide.github.io/ru/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="hi" href="https://supercode-ide.github.io/hi/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="id" href="https://supercode-ide.github.io/id/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="it" href="https://supercode-ide.github.io/it/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="vi" href="https://supercode-ide.github.io/vi/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="th" href="https://supercode-ide.github.io/th/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="tr" href="https://supercode-ide.github.io/tr/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="ar" href="https://supercode-ide.github.io/ar/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="pl" href="https://supercode-ide.github.io/pl/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="nl" href="https://supercode-ide.github.io/nl/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="sv" href="https://supercode-ide.github.io/sv/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="nb" href="https://supercode-ide.github.io/nb/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="da" href="https://supercode-ide.github.io/da/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="fi" href="https://supercode-ide.github.io/fi/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="cs" href="https://supercode-ide.github.io/cs/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="uk" href="https://supercode-ide.github.io/uk/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="ro" href="https://supercode-ide.github.io/ro/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="hu" href="https://supercode-ide.github.io/hu/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="el" href="https://supercode-ide.github.io/el/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="he" href="https://supercode-ide.github.io/he/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="ms" href="https://supercode-ide.github.io/ms/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="fil" href="https://supercode-ide.github.io/tl/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" hreflang="bn" href="https://supercode-ide.github.io/bn/web-canvas-media-export-pwa-android.html">
+  <link rel="alternate" type="application/rss+xml" title="SuperCode IDE Guides &amp; Releases" href="https://supercode-ide.github.io/feed.xml">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
+  <meta property="og:title" content="Android向けHTML5 Canvas・WebGL・メディア出力 &amp; オフラインWebアプリIDE | SuperCode">
+  <meta property="og:description" content="AndroidでHTML5 Canvas、WebGL、WebAudio、IndexedDBアプリを開発。SuperCodeはネイティブshowSaveFilePicker/navigator.shareポリフィル、無劣化WebM SeekHead修復、PNG/MP3のMediaStore保存を提供します。">
+  <meta property="og:url" content="https://supercode-ide.github.io/ja/web-canvas-media-export-pwa-android.html">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-hero-ja.png">
+  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-hero-ja.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ローカル Web・オフライン PHP サーバー＆DevTools">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-hero-ja.png">
+  <meta name="twitter:title" content="Android向けHTML5 Canvas・WebGL・メディア出力 &amp; オフラインWebアプリIDE | SuperCode">
+  <meta name="twitter:description" content="AndroidでHTML5 Canvas、WebGL、WebAudio、IndexedDBアプリを開発。SuperCodeはネイティブshowSaveFilePicker/navigator.shareポリフィル、無劣化WebM SeekHead修復、PNG/MP3のMediaStore保存を提供します。">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <script>if(/SamsungBrowser/i.test(navigator.userAgent)){document.documentElement.classList.add('is-samsung');}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "SoftwareApplication",
+        "MobileApplication",
+        "WebApplication"
+      ],
+      "@id": "https://supercode-ide.github.io/#supercode-app",
+      "name": "Code Editor: SuperCode IDE",
+      "alternateName": [
+        "HTML5 Canvas & WebGL IDE Android",
+        "Offline PWA & Media Export Web Studio",
+        "WebM MP3 Canvas Export Android IDE"
+      ],
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "HTML5 Canvas, WebGL, Media Export (PNG/WebM/MP3) & Offline Web App Studio on Android",
+      "inLanguage": "ja",
+      "fileSize": "40.2MB",
+      "softwareVersion": "1.55.05",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=ja-JP&listing=web-php-studio",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=ja-JP&listing=web-php-studio",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=ja-JP"
+      ],
+      "potentialAction": [
+        {
+          "@type": "InstallAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=ja-JP&listing=web-php-studio",
+            "actionPlatform": [
+              "http://schema.org/AndroidPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          }
+        },
+        {
+          "@type": "ViewAction",
+          "name": "入門ガイド",
+          "target": [
+            "https://supercode-ide.github.io/tutorial/?lang=ja",
+            "android-app://com.phoenixglobal.supercodeeditor/https/supercode-ide.github.io/tutorial"
+          ]
+        }
+      ],
+      "identifier": "com.phoenixglobal.supercodeeditor",
+      "url": "https://supercode-ide.github.io/ja/web-canvas-media-export-pwa-android.html",
+      "screenshot": [
+        "https://supercode-ide.github.io/assets/gallery/ja/03_web_php_devtools.webp",
+        "https://supercode-ide.github.io/assets/gallery/ja/01_python_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/ja/02_cpp20_compiler.webp",
+        "https://supercode-ide.github.io/assets/gallery/ja/04_file_manager_tree.webp",
+        "https://supercode-ide.github.io/assets/gallery/ja/05_sql_sqlite_studio.webp",
+        "https://supercode-ide.github.io/assets/gallery/ja/06_java17_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/ja/07_visual_git_timemachine.webp",
+        "https://supercode-ide.github.io/assets/gallery/ja/08_symbol_keyboard_themes.webp"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Phoenix Global Studios",
+        "url": "https://supercode-ide.github.io/ja/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "66"
+      },
+      "featureList": [
+        "Native showSaveFilePicker, showOpenFilePicker & Share API: Document-start JS injection bridges modern File System Access APIs, Blob/DataURL streaming, and navigator.share directly to Android's native storage and share sheet with zero race conditions.",
+        "Magic-Byte Sniffer & Atomic Android MediaStore Export: Inspects true binary file headers so PNGs, WebPs, MP4s, and MP3s never save with mismatched extensions—routing atomically via IS_PENDING locks into Pictures/, Movies/, Music/, or Download/SuperCode.",
+        "Lossless WebM EBML Duration & SeekHead Repair: Exports from HTML5 Canvas MediaRecorder often lack duration headers in Android galleries. SuperCode's pure-Kotlin EBML fixer injects SeekHead, Duration, and Cues with zero re-encoding.",
+        "Built-In Native Video-to-Audio Transcoder (MP3 + 6 Formats): Build local browser media utilities powered by SuperCode's zero-bloat Android MediaCodec + PureMp3Encoder bridge—converting MP4/MKV/WebM to high-SNR MP3 with ID3v2.4 tags offline.",
+        "Real Local HTTP Origin for IndexedDB, WebGL & HTTP 206: Because pages load from a genuine local HTTP server (not file://), ES Modules, localStorage, IndexedDB, WebGL shaders, web fonts (.woff2), and HTTP 206 video/audio seeking all work seamlessly.",
+        "HEIC Auto-Transcoding, EXIF Fix & Full-Page PNG Capture: Insert photos via zero-permission Camera FileProvider with automatic HEIC conversion and EXIF orientation fix, or capture crisp full-page PNG mockups up to 2560px."
+      ],
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-ja.png",
+      "dateModified": "2026-11-27"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://supercode-ide.github.io/ja/web-canvas-media-export-pwa-android.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SuperCode IDE",
+          "item": "https://supercode-ide.github.io/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Web・PHP 8.2 & WASM ハブ",
+          "item": "https://supercode-ide.github.io/ja/web-ide.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Canvas・メディア出力・オフライン Web アプリ",
+          "item": "https://supercode-ide.github.io/ja/web-canvas-media-export-pwa-android.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Build & Export Rich HTML5 Media Apps in 4 Steps",
+      "description": "Write standard modern Web APIs—SuperCode's WebMediaBridge handles Android storage and codecs cleanly.",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Build Canvas, WebGL or WebApp on Local HTTP",
+          "text": "Serve HTML5, CSS3, ES Modules, and assets on SuperCode's real local HTTP origin with full localStorage & IndexedDB.",
+          "url": "https://supercode-ide.github.io/ja/web-canvas-media-export-pwa-android.html#step1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Use Standard Blob, MediaRecorder or File Picker APIs",
+          "text": "Call showSaveFilePicker(), a[download], or navigator.share() just as you would in desktop Chrome.",
+          "url": "https://supercode-ide.github.io/ja/web-canvas-media-export-pwa-android.html#step2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Automatic Magic-Byte Verification & EBML Repair",
+          "text": "SuperCode validates binary signatures, fixes WebM duration/seek cues losslessly, and streams large buffers safely.",
+          "url": "https://supercode-ide.github.io/ja/web-canvas-media-export-pwa-android.html#step3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Save Atomically to Android Gallery or Downloads",
+          "text": "Exported PNGs, WebMs, MP3s, and JSON files appear immediately in system apps with zero half-written artifacts.",
+          "url": "https://supercode-ide.github.io/ja/web-canvas-media-export-pwa-android.html#step4"
+        }
+      ],
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://supercode-ide.github.io/web-canvas-media-export-pwa-android.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "SuperCodeのWebプレビューでBlobダウンロードやshowSaveFilePicker()は本当に動きますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。SuperCodeはdocument-start時に競合ゼロのWebMediaBridgeを注入し、Blob/DataURLダウンロード、showSaveFilePicker、showOpenFilePicker、navigator.shareをAndroidネイティブストレージへ橋渡しします。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "SuperCodeから出力したCanvas MediaRecorderのWebM動画が正しいシークバーで再生できるのはなぜですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SuperCodeはMediaStoreへの書き込み前にPure Kotlin製の無劣化EBML SeekHead・Duration・Cues修復パスを実行し、Chrome/WebViewで欠落しがちな再生時間メタデータを再エンコードなしで補完します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "SuperCodeでHTML5 Canvas 2DやWebGLのゲームをオフライン開発できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。ローカルHTTP配信によりES Modules、テクスチャ、音声アセット、HTTP 206シーク、localStorageのハイスコア保存、DevTools Consoleのエラー検査まで完全オフラインで動作します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Webアプリからエクスポートした画像・動画・音声ファイルはどこに保存されますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SuperCodeはマジックバイト判定で正確なファイル種別を確認し、Android MediaStoreを通じてPictures/SuperCode、Movies/SuperCode、Music/SuperCode、またはDownload/SuperCodeへアトミックに保存します。"
+          }
+        }
+      ],
+      "inLanguage": "ja"
+    }
+  ]
+}
+  </script>
+
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-page="web_media_pwa">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="sc-logo" viewBox="20 14 68 72">
+    <path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/>
+    <path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/>
+    <path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/>
+    <path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+  </symbol>
+  <symbol id="gp-prism" viewBox="0 0 24 24">
+    <path fill="#4285F4" d="M3.6,2.4C3.3,2.7,3.1,3.2,3.1,3.8v16.4c0,0.6,0.2,1.1,0.5,1.4l0.1,0.1L12.9,12v-0.2L3.7,2.3L3.6,2.4z"/>
+    <path fill="#34A853" d="M16,15.1l-3.1-3.1v-0.2L16,8.7l0.1,0.1l3.6,2.1c1,0.6,1,1.5,0,2.1l-3.6,2.1L16,15.1z"/>
+    <path fill="#FBBC05" d="M16.1,15.1L12.9,12L3.6,21.3c0.3,0.4,0.9,0.4,1.6,0.1L16.1,15.1z"/>
+    <path fill="#EA4335" d="M16.1,8.9L5.2,2.6C4.5,2.2,3.9,2.3,3.6,2.7L12.9,12L16.1,8.9z"/>
+  </symbol>
+  <symbol id="i-ne" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8 20 7.2v9.6L12 21.2 4 16.8V7.2z"/><path d="M4 7.2l8 4.4 8-4.4M12 11.6v9.6"/></g></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2.8v3.2M15 2.8v3.2M9 18v3.2M15 18v3.2M2.8 9H6M2.8 15H6M18 9h3.2M18 15h3.2"/></g></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 2.8 7.8 12 12.6l9.2-4.8z"/><path d="m2.8 12 9.2 4.8 9.2-4.8"/><path d="m2.8 16.2 9.2 4.8 9.2-4.8"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="M2.8 8.5h18.4"/><path d="m9.5 12.5-2.2 2.2 2.2 2.2M14.5 12.5l2.2 2.2-2.2 2.2"/></g></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5.6" rx="7.6" ry="2.8"/><path d="M4.4 5.6v12.8c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8V5.6"/><path d="M4.4 12c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8"/></g></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="m7.2 9.5 3 2.5-3 2.5M12.8 15h4"/></g></symbol>
+  <symbol id="i-git" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.3"/><circle cx="6" cy="18" r="2.3"/><circle cx="18" cy="12" r="2.3"/><path d="M6 8.3v7.4M8.3 6h4.2a3.5 3.5 0 0 1 3.5 3.5v.2"/></g></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5h11a4 4 0 0 0 .7-7.94A5.5 5.5 0 0 0 7.4 9.2 3.8 3.8 0 0 0 6.5 18.5z"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M13 2.8 4.8 13.2h6.3L10.2 21.2 19.2 10.6h-6.4z"/></symbol>
+  <defs>
+    <radialGradient id="sc-rf-bg" cx="54" cy="54" r="76" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1C1C24"/>
+      <stop offset="100%" stop-color="#09090B"/>
+    </radialGradient>
+    <linearGradient id="sc-rf-ring" x1="24" y1="24" x2="84" y2="84" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="50%" stop-color="#8A2BE2"/>
+      <stop offset="100%" stop-color="#FF0055"/>
+    </linearGradient>
+    <linearGradient id="sc-rf-wl" x1="40" y1="48" x2="40" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#29B6F6"/>
+    </linearGradient>
+    <linearGradient id="sc-rf-wc" x1="54" y1="30" x2="54" y2="78" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8A2BE2"/>
+      <stop offset="100%" stop-color="#E040FB"/>
+    </linearGradient>
+    <linearGradient id="sc-rf-wr" x1="68" y1="45" x2="68" y2="63" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF0055"/>
+      <stop offset="100%" stop-color="#FF8A80"/>
+    </linearGradient>
+  </defs>
+  <symbol id="sc-radio-icon" viewBox="10 10 88 88">
+    <rect x="10" y="10" width="88" height="88" rx="22" fill="url(#sc-rf-bg)"/>
+    <circle cx="54" cy="54" r="42" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="0.9"/>
+    <circle cx="54" cy="54" r="34" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.9"/>
+    <path fill-rule="evenodd" fill="url(#sc-rf-ring)" d="M54,24 A30,30 0 1,0 54,84 A30,30 0 1,0 54,24 Z M54,32 A22,22 0 1,1 54,76 A22,22 0 1,1 54,32 Z"/>
+    <circle cx="54" cy="54" r="4" fill="#E0E0E0"/>
+    <line x1="40" y1="48" x2="40" y2="60" stroke="url(#sc-rf-wl)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="54" y1="30" x2="54" y2="44" stroke="url(#sc-rf-wc)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="54" y1="64" x2="54" y2="78" stroke="url(#sc-rf-wc)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="68" y1="45" x2="68" y2="63" stroke="url(#sc-rf-wr)" stroke-width="5" stroke-linecap="round"/>
+    <rect x="11" y="11" width="86" height="86" rx="21" fill="none" stroke="rgba(148,163,184,0.34)" stroke-width="1.6"/>
+  </symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 2.8 4.8 5.8v5.6c0 5 3.1 8.5 7.2 9.8 4.1-1.3 7.2-4.8 7.2-9.8V5.8z"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="index.html" class="brand" aria-label="SuperCode IDE Home">
+      <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+      <span>SuperCode</span>
+      <span class="brand__tag">IDE</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary Workspaces">
+      <a href="code-editor.html" data-i18n="nav_code_editor">エディタ</a>
+      <a href="large-file-editor.html" data-i18n="nav_large_file">GB大容量</a>
+      <a href="python-ide.html" data-i18n="nav_python_ide">Python</a>
+      <a href="c-compiler.html" data-i18n="nav_c_compiler">C言語</a>
+      <a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20</a>
+      <a href="java-ide.html" data-i18n="nav_java_ide">Java 17</a>
+      <a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a>
+      <a href="web-ide.html" class="is-current" data-i18n="nav_web_ide">Web & PHP</a>
+      <a href="sql-ide.html" data-i18n="nav_sql_ide">SQL</a>
+      <a href="git-client.html" data-i18n="nav_git_client">Git管理</a>
+      <a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP & FTPS</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button id="langModalBtn" class="btn-lang-trigger" type="button" onclick="openLangModal()" aria-label="Select Language">
+        <svg class="lang-globe-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span id="langTriggerText">日本語</span>
+        <span class="lang-chevron" aria-hidden="true">&#9662;</span>
+      </button>
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=ja-JP&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dja%26utm_campaign%3Dweb-php-studio%26utm_content%3Dweb-canvas-media-export-pwa-android" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+        <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+        <span data-i18n="nav_cta">Google Play</span>
+      </a>
+      <a href="index.html" class="btn-home-icon" aria-label="Home" title="Home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5"/>
+          <path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
+        </svg>
+      </a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteDrawer" aria-label="全サイトマップ">
+        <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 8.5h16M4 15.5h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-drawer" id="siteDrawer" hidden>
+  <nav class="container menu-drawer__inner" aria-label="全サイトマップ">
+    <div class="drawer-top">
+      <div class="drawer-top__left">
+        <span class="drawer-top__dot" aria-hidden="true"></span>
+        <span class="drawer-top__title" data-i18n="sitemap_title">全サイトマップ</span>
+        <span class="drawer-top__badge" data-i18n="sitemap_badge">61 ページ · 32 言語</span>
+      </div>
+      <button type="button" class="drawer-toggle-all" id="drawerToggleAll" data-expanded="false" data-expand-label="すべて展開" data-collapse-label="すべて折りたたむ">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8h9M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+        <span data-i18n="sitemap_expand_all">すべて展開</span>
+      </button>
+    </div>
+    <div class="drawer-cols">
+      <div class="drawer-group">
+        <div class="drawer-group__title"><span data-i18n="grp_core">コアエディタ &amp; 大容量ファイル</span></div>
+        <div class="drawer-group__list">
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="index.html"><span class="drawer-link__title" data-i18n="nav_home">概要</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="code-editor.html"><span class="drawer-link__title" data-i18n="nav_code_editor">エディタ</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="large-file-editor.html"><span class="drawer-link__title" data-i18n="nav_large_file">GB大容量</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="drawer-group">
+        <div class="drawer-group__title"><span data-i18n="grp_lang">オフラインコンパイラ &amp; 言語</span></div>
+        <div class="drawer-group__list">
+        <div class="drawer-node" data-hub="python-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="python-ide.html"><span class="drawer-link__title" data-i18n="nav_python_ide">Python</span><span class="drawer-hub-count" aria-hidden="true">7</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-python-ide" aria-label="サブページを切り替え: Python">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-python-ide" hidden>
+            <a class="drawer-sub__link" href="python-pip-manager.html"><span class="drawer-sub__code">PY-01</span><span class="drawer-sub__title">PIP &amp; オフライン .whl ガイド</span></a>
+            <a class="drawer-sub__link" href="python-offline-libraries.html"><span class="drawer-sub__code">PY-02</span><span class="drawer-sub__title">対応 Python ライブラリ一覧</span></a>
+            <a class="drawer-sub__link" href="python-data-science.html"><span class="drawer-sub__code">PY-03</span><span class="drawer-sub__title">NumPy・Pandas &amp; Matplotlib</span></a>
+            <a class="drawer-sub__link" href="python-machine-learning.html"><span class="drawer-sub__code">PY-04</span><span class="drawer-sub__title">Scikit-Learn・OpenCV &amp; AI</span></a>
+            <a class="drawer-sub__link" href="python-web-scraping-automation.html"><span class="drawer-sub__code">PY-05</span><span class="drawer-sub__title">Web スクレイピング・API &amp; Bot 開発</span></a>
+            <a class="drawer-sub__link" href="python-projects-workspace.html"><span class="drawer-sub__code">PY-06</span><span class="drawer-sub__title">マルチファイルプロジェクト &amp; Git</span></a>
+            <a class="drawer-sub__link" href="learn-python-android.html"><span class="drawer-sub__code">PY-07</span><span class="drawer-sub__title">Python をオフラインで学習</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="c-compiler.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="c-compiler.html"><span class="drawer-link__title" data-i18n="nav_c_compiler">C言語</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-c-compiler" aria-label="サブページを切り替え: C言語">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-c-compiler" hidden>
+            <a class="drawer-sub__link" href="c-pointers-memory-coursework.html"><span class="drawer-sub__code">C-01</span><span class="drawer-sub__title">ポインタ・構造体・メモリ演習</span></a>
+            <a class="drawer-sub__link" href="c-multifile-header-projects.html"><span class="drawer-sub__code">C-02</span><span class="drawer-sub__title">マルチファイル .c/.h &amp; CMake ビルド</span></a>
+            <a class="drawer-sub__link" href="c-scanf-file-io-console.html"><span class="drawer-sub__code">C-03</span><span class="drawer-sub__title">対話型 scanf 標準入力 &amp; ファイル I/O</span></a>
+            <a class="drawer-sub__link" href="c-posix-systems-programming.html"><span class="drawer-sub__code">C-04</span><span class="drawer-sub__title">POSIX ヘッダ・スレッド・ソケット</span></a>
+            <a class="drawer-sub__link" href="c-algorithms-data-structures-android.html"><span class="drawer-sub__code">C-05</span><span class="drawer-sub__title">C言語アルゴリズム・データ構造・ビット演算</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="cpp-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="cpp-ide.html"><span class="drawer-link__title" data-i18n="nav_cpp_ide">C++20</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-cpp-ide" aria-label="サブページを切り替え: C++20">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-cpp-ide" hidden>
+            <a class="drawer-sub__link" href="cpp-competitive-programming-stl.html"><span class="drawer-sub__code">CPP-01</span><span class="drawer-sub__title">競技プログラミング &amp; STL ラボ</span></a>
+            <a class="drawer-sub__link" href="cpp-oop-smart-pointers-modern.html"><span class="drawer-sub__code">CPP-02</span><span class="drawer-sub__title">モダン C++20・Ranges &amp; OOP</span></a>
+            <a class="drawer-sub__link" href="cpp-multifile-hpp-builder.html"><span class="drawer-sub__code">CPP-03</span><span class="drawer-sub__title">21種のマルチファイル C++ &amp; CMake プロジェクト</span></a>
+            <a class="drawer-sub__link" href="learn-cpp-offline-android.html"><span class="drawer-sub__code">CPP-04</span><span class="drawer-sub__title">Android で C++ をオフライン学習</span></a>
+            <a class="drawer-sub__link" href="cpp-debugging-cmake-git-workflow.html"><span class="drawer-sub__code">CPP-05</span><span class="drawer-sub__title">C++ 診断・フォーマッタ・Visual Git</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="java-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="java-ide.html"><span class="drawer-link__title" data-i18n="nav_java_ide">Java 17</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-java-ide" aria-label="サブページを切り替え: Java 17">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-java-ide" hidden>
+            <a class="drawer-sub__link" href="java-17-records-oop-android.html"><span class="drawer-sub__code">JV-01</span><span class="drawer-sub__title">Java 17 Records・Sealed &amp; Streams</span></a>
+            <a class="drawer-sub__link" href="java-multiclass-packages-ide.html"><span class="drawer-sub__code">JV-02</span><span class="drawer-sub__title">マルチクラスパッケージ &amp; .jar ライブラリ</span></a>
+            <a class="drawer-sub__link" href="java-jdbc-sqlite-file-io.html"><span class="drawer-sub__code">JV-03</span><span class="drawer-sub__title">オフライン Java SQLite JDBC &amp; NIO.2</span></a>
+            <a class="drawer-sub__link" href="learn-java-dsa-android.html"><span class="drawer-sub__code">JV-04</span><span class="drawer-sub__title">Java・AP CS &amp; DSA をオフライン学習</span></a>
+            <a class="drawer-sub__link" href="java-25-project-templates-android.html"><span class="drawer-sub__code">JV-05</span><span class="drawer-sub__title">複数ファイル構成の Java テンプレート 25選</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="javascript-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="javascript-ide.html"><span class="drawer-link__title" data-i18n="nav_js_ide">JavaScript</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-javascript-ide" aria-label="サブページを切り替え: JavaScript">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-javascript-ide" hidden>
+            <a class="drawer-sub__link" href="javascript-node-core-modules-offline.html"><span class="drawer-sub__code">JS-01</span><span class="drawer-sub__title">29種以上のオフライン Node.js コアモジュール</span></a>
+            <a class="drawer-sub__link" href="javascript-es2024-async-console.html"><span class="drawer-sub__code">JS-02</span><span class="drawer-sub__title">ES2024 非同期・Top-Level Await &amp; Fetch</span></a>
+            <a class="drawer-sub__link" href="javascript-web-crypto-security.html"><span class="drawer-sub__code">JS-03</span><span class="drawer-sub__title">Node.js &amp; Web Crypto（AES-GCM / SHA）</span></a>
+            <a class="drawer-sub__link" href="learn-javascript-dsa-android.html"><span class="drawer-sub__code">JS-04</span><span class="drawer-sub__title">JS &amp; アルゴリズムをオフライン学習</span></a>
+            <a class="drawer-sub__link" href="javascript-json-regex-formatter-android.html"><span class="drawer-sub__code">JS-05</span><span class="drawer-sub__title">JSON/JSONC 整形・正規表現・REST Fetch</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="lua-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="lua-ide.html"><span class="drawer-link__title" data-i18n="nav_lua_ide">Lua 5.4</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-lua-ide" aria-label="サブページを切り替え: Lua 5.4">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-lua-ide" hidden>
+            <a class="drawer-sub__link" href="lua-game-scripting-metatables-oop.html"><span class="drawer-sub__code">LUA-01</span><span class="drawer-sub__title">ゲームスクリプト・メタテーブル &amp; コルーチン</span></a>
+            <a class="drawer-sub__link" href="lua-builtin-modules-cjson-sqlite.html"><span class="drawer-sub__code">LUA-02</span><span class="drawer-sub__title">11種以上の内蔵モジュール（cjson, lsqlite3, lfs）</span></a>
+            <a class="drawer-sub__link" href="lua-54-bitwise-close-multifile.html"><span class="drawer-sub__code">LUA-03</span><span class="drawer-sub__title">Lua 5.4 ビット演算・&lt;close&gt; &amp; マルチファイル</span></a>
+            <a class="drawer-sub__link" href="learn-lua-offline-android.html"><span class="drawer-sub__code">LUA-04</span><span class="drawer-sub__title">Android で Lua をオフライン学習</span></a>
+            <a class="drawer-sub__link" href="lua-android-crypto-regex-http-automation.html"><span class="drawer-sub__code">LUA-05</span><span class="drawer-sub__title">暗号・正規表現・HTTP・ファイル自動化</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="shell-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="shell-ide.html"><span class="drawer-link__title" data-i18n="nav_shell_ide">Shell &amp; Kotlin</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-shell-ide" aria-label="サブページを切り替え: Shell &amp; Kotlin">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-shell-ide" hidden>
+            <a class="drawer-sub__link" href="run-sh-shell-scripts-android-noroot.html"><span class="drawer-sub__code">SH-01</span><span class="drawer-sub__title">Android で .sh スクリプトを実行（Root 不要）</span></a>
+            <a class="drawer-sub__link" href="shell-awk-sed-grep-log-pipelines.html"><span class="drawer-sub__code">SH-02</span><span class="drawer-sub__title">awk・sed・grep &amp; curl テキストパイプライン</span></a>
+            <a class="drawer-sub__link" href="kotlin-coding-app-compiler-android.html"><span class="drawer-sub__code">SH-03</span><span class="drawer-sub__title">Kotlin コードエディタ &amp; .kt/.kts 実行環境</span></a>
+            <a class="drawer-sub__link" href="linux-devops-shell-sftp-git-android.html"><span class="drawer-sub__code">SH-04</span><span class="drawer-sub__title">ポケット Linux DevOps：Shell + SFTP + Git</span></a>
+            <a class="drawer-sub__link" href="kotlin-coroutines-collections-dsa-android.html"><span class="drawer-sub__code">SH-05</span><span class="drawer-sub__title">Kotlin コレクション・OOP・DSA 演習</span></a>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="drawer-group">
+        <div class="drawer-group__title"><span data-i18n="grp_devops">Web・SQL・リモート運用</span></div>
+        <div class="drawer-group__list">
+        <div class="drawer-node is-open" data-hub="web-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="web-ide.html"><span class="drawer-link__title" data-i18n="nav_web_ide">Web &amp; PHP</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="true" aria-controls="sub-web-ide" aria-label="サブページを切り替え: Web &amp; PHP">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-web-ide">
+            <a class="drawer-sub__link" href="php-server-pdo-sqlite-android.html"><span class="drawer-sub__code">WEB-01</span><span class="drawer-sub__title">オフライン PHP 8.2 &amp; PDO SQLite サーバー</span></a>
+            <a class="drawer-sub__link" href="html-css-js-responsive-preview.html"><span class="drawer-sub__code">WEB-02</span><span class="drawer-sub__title">HTML5・CSS3 &amp; 3画面レスポンシブプレビュー</span></a>
+            <a class="drawer-sub__link" href="mobile-web-devtools-wasm-studio.html"><span class="drawer-sub__code">WEB-03</span><span class="drawer-sub__title">モバイル Web DevTools・JS REPL &amp; WASM</span></a>
+            <a class="drawer-sub__link" href="fullstack-web-sftp-deploy-android.html"><span class="drawer-sub__code">WEB-04</span><span class="drawer-sub__title">リモート FTP/SFTP ライブ Web デプロイ</span></a>
+            <a class="drawer-sub__link is-current" href="web-canvas-media-export-pwa-android.html"><span class="drawer-sub__code">WEB-05</span><span class="drawer-sub__title">Canvas・メディア出力・オフライン Web アプリ</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="sql-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="sql-ide.html"><span class="drawer-link__title" data-i18n="nav_sql_ide">SQL</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-sql-ide" aria-label="サブページを切り替え: SQL">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-sql-ide" hidden>
+            <a class="drawer-sub__link" href="sqlite-db-viewer-editor-android.html"><span class="drawer-sub__code">SQL-01</span><span class="drawer-sub__title">.db / .sqlite インスペクタ &amp; 9つの出力モード</span></a>
+            <a class="drawer-sub__link" href="sql-window-functions-fts5-json.html"><span class="drawer-sub__code">SQL-02</span><span class="drawer-sub__title">ウィンドウ関数・CTE・JSONB &amp; FTS5</span></a>
+            <a class="drawer-sub__link" href="mysql-postgresql-syntax-android.html"><span class="drawer-sub__code">SQL-03</span><span class="drawer-sub__title">MySQL &amp; PostgreSQL 構文互換</span></a>
+            <a class="drawer-sub__link" href="sql-python-php-java-lua-integration.html"><span class="drawer-sub__code">SQL-04</span><span class="drawer-sub__title">SQL・Python・PHP・Java で .db を共有</span></a>
+            <a class="drawer-sub__link" href="sql-crypto-regex-udf-scripts-android.html"><span class="drawer-sub__code">SQL-05</span><span class="drawer-sub__title">暗号・正規表現 UDF と複数ファイル .read</span></a>
+          </div>
+        </div>
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="git-client.html"><span class="drawer-link__title" data-i18n="nav_git_client">Git管理</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="sftp-client.html"><span class="drawer-link__title" data-i18n="nav_sftp_client">SFTP &amp; FTPS</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="drawer-studio-foot">
+      <a class="drawer-studio-link" data-radio-promo="true" href="https://play.google.com/store/apps/details?id=com.hifiradio.fmradio&amp;hl=ja-JP&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dja%26utm_campaign%3Dhifi_radio_showcase%26utm_content%3Dsitemap_drawer" target="_blank" rel="noopener">
+        <svg class="drawer-studio-icon" aria-hidden="true"><use href="#sc-radio-icon"/></svg>
+        <span class="drawer-studio-meta">
+          <span class="drawer-studio-name">FM Radio: HiFi Radio AM FM</span>
+          <span class="drawer-studio-sub" data-i18n="radio_subtitle">リアルタイム2か国語ラジオ字幕 · 32バンド HiFi DSP</span>
+        </span>
+        <span class="drawer-studio-go"><span data-i18n="nav_cta">Google Play</span> &#8599;</span>
+      </a>
+    </div>
+  </nav>
+</div>
+
+<main id="top">
+  <!-- ==================== 01 · EDITORIAL HERO & INTERACTIVE WORKBENCH ==================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <div class="py-hub-crumb"><a href="web-ide.html"><span class="crumb-arrow" aria-hidden="true">&larr;</span> Web・PHP 8.2 &amp; WASM ハブ</a><span class="sep">/</span><span>Canvas・メディア出力・オフライン Web アプリ</span></div>
+          <div class="trust-pill">
+            <span class="trust-pill__score"><span data-play-rating>4.9</span> &#9733;</span>
+            <span data-i18n="hero_tag">HTML5 CANVAS &amp; WEBGL · WEBM/MP3出力 · FILE PICKERポリフィル · INDEXEDDB</span>
+          </div>
+
+          <h1 class="hero-h1" data-i18n="hero_h1">Android上で<span class="text-gradient">HTML5 Canvas・メディア出力 &amp; オフラインWebアプリ</span>を構築。</h1>
+
+          <p class="hero-lead" data-i18n="hero_desc">一般的なモバイルWebViewではダウンロードが失敗し、<code>showSaveFilePicker</code>も動かず、シークできないWebM動画が出力されがちです。SuperCodeの<strong>WebMediaBridgeエンジン</strong>は、本格的な<strong>File System Access &amp; Shareポリフィル</strong>、<strong>無劣化WebM EBML修復</strong>、<strong>ネイティブ動画→MP3変換</strong>、アトミックな<strong>Android MediaStore</strong>保存を実現します。</p>
+
+          <div class="hero__cta" id="heroCta">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=ja-JP&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dja%26utm_campaign%3Dweb-php-studio%26utm_content%3Dweb-canvas-media-export-pwa-android" target="_blank" rel="noopener" class="btn btn--gold">
+              <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+              <span data-i18n="cta_btn">Google Play で入手</span>
+            </a>
+            <a href="https://supercode-ide.github.io/tutorial/?lang=ja&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+              <span data-i18n="cta_tutorial">入門ガイド</span>
+              <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <dl class="specs" aria-label="Key Specifications">
+                    <div class="spec"><dt>Canvas</dt><dd data-i18n="wm_s1">2D · WebGL · Audio</dd></div>
+          <div class="spec"><dt>Media</dt><dd data-i18n="wm_s2">PNG · WebM · MP3</dd></div>
+          <div class="spec"><dt>Picker</dt><dd data-i18n="wm_s3">File &amp; Shareポリフィル</dd></div>
+          <div class="spec"><dt>Storage</dt><dd data-i18n="wm_s4">IndexedDB + Origin</dd></div>
+        </dl>
+      </div>
+
+      <div class="wb-caption">
+        <div class="sec-index" style="margin-bottom:0">
+          <span class="num">01</span>
+          <span class="rule"></span>
+          <span data-i18n="wb_eyebrow">対話型HTML5 CANVAS・WEBM &amp; MEDIA BRIDGEワークベンチ</span>
+        </div>
+        <span class="wb-caption__hint mono">HTML5 Canvas · showSaveFilePicker · WebM/MP3 MediaStore Export</span>
+      </div>
+
+      <div class="ide-workbench">
+        <div class="wb-titlebar">
+          <div class="wb-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="wb-title" id="ide-compiler-label">canvas-studio/visualizer.js — HTML5 Canvas + Native Media Export</div>
+          <button type="button" class="wb-run" id="btn-run-sandbox">
+            <span class="wb-run__tri" aria-hidden="true">&#9654;</span>
+            <span data-i18n="btn_run">デモを実行</span>
+          </button>
+        </div>
+
+        <div class="wb-tabs" role="tablist" aria-label="Interactive Workspace Tabs">
+                    <button type="button" class="ide-tab active" data-tab="canvas" role="tab" aria-selected="true"><i></i>visualizer.js</button>
+          <button type="button" class="ide-tab" data-tab="webm" role="tab" aria-selected="false"><i></i>recorder.js</button>
+          <button type="button" class="ide-tab" data-tab="idb" role="tab" aria-selected="false"><i></i>offline_store.js</button>
+        </div>
+
+        <div class="wb-body">
+          <aside class="wb-explorer" aria-label="Project Explorer">
+            <div class="wb-explorer__head">Explorer</div>
+            <div class="wb-folder">&#9662; canvas-studio</div>
+                        <button type="button" class="wb-file active" data-tab="canvas"><b>JS</b><span>visualizer.js</span></button>
+            <button type="button" class="wb-file" data-tab="webm"><b>VID</b><span>recorder.js</span></button>
+            <button type="button" class="wb-file" data-tab="idb"><b>DB</b><span>offline_store.js</span></button>
+          </aside>
+
+          <div class="wb-main">
+            <div class="ide-editor-body" id="ide-code-box" role="region" aria-label="Interactive Code Preview"></div>
+            <div class="ide-terminal" id="ide-terminal-drawer" aria-live="polite">
+              <div class="term-header">
+                <span data-i18n="term_title">インタラクティブ・コンソール出力</span>
+                <div class="term-header-right">
+                  <span class="term-exec-badge" id="ide-exec-status">Ready</span>
+                  <button type="button" class="btn-term-close" id="btn-close-term" aria-label="Close terminal">&#10005;</button>
+                </div>
+              </div>
+              <div class="term-stream" id="ide-term-output"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wb-statusbar">
+          <span class="wb-statusbar__dot"><i></i><span id="wbStatusLang">Local HTTP · MediaBridge</span></span>
+          <div class="wb-statusbar__right">
+            <span>UTF-8</span>
+            <span>LF</span>
+            <span>Ln 7, Col 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- SC_REAL_GALLERY_START -->
+  <section class="section sc-real-gallery" id="screenshots" aria-label="アプリ画面プレビューとスクリーンショット">
+    <div class="container">
+      <div class="sc-gp-head">
+        <div class="sc-gp-head-left">
+          <div class="sc-gp-eyebrow" data-i18n="gal_eyebrow">ANDROID 実機スクリーンショット</div>
+          <h2 class="sc-gp-title" data-i18n="gal_title">アプリ画面プレビュー</h2>
+          <p class="sc-gp-short" data-i18n="gal_short_desc">オフラインコードエディタ＆プログラミングIDE：Python/C/C++/Java/JS/HTML/SQL/PHPコンパイラ・Git/SFTP</p>
+        </div>
+        <a class="sc-gp-store-bar" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=ja-JP&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dja%26utm_campaign%3Dweb-php-studio%26utm_content%3Dweb-canvas-media-export-pwa-android" target="_blank" rel="noopener" aria-label="Code Editor: SuperCode IDE — Phoenix Global Studios">
+          <svg class="sc-gp-app-icon" width="38" height="38" viewBox="16 12 76 76" aria-hidden="true"><rect x="16" y="12" width="76" height="76" rx="18" fill="#070A10" stroke="#3B82F6" stroke-width="2"/><path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/><path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/><path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/><path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/></svg>
+          <span class="sc-gp-app-meta">
+            <span class="sc-gp-app-name">Code Editor: SuperCode IDE</span>
+            <span class="sc-gp-app-dev">Phoenix Global Studios</span>
+          </span>
+          <span class="sc-gp-store-arrow" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      </div>
+      <div class="sc-gp-stage">
+        <button type="button" class="sc-gp-nav sc-gp-nav--prev is-hidden" id="scGpPrev" aria-label="前の画像">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="sc-gp-rail" id="scGpRail">
+          <button type="button" class="sc-gp-item sc-gp-item--feature" aria-label="Code Editor: SuperCode IDE — オフライン移動 IDE">
+            <img src="../assets/gallery/ja/00_feature_graphic.webp" data-sc-file="00_feature_graphic.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_0" data-cap="Code Editor: SuperCode IDE — オフライン移動 IDE" alt="Code Editor: SuperCode IDE — オフライン移動 IDE" width="1024" height="500" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="ローカル Web・オフライン PHP サーバー＆DevTools">
+            <img src="../assets/gallery/ja/03_web_php_devtools.webp" data-sc-file="03_web_php_devtools.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_3" data-cap="ローカル Web・オフライン PHP サーバー＆DevTools" alt="ローカル Web・オフライン PHP サーバー＆DevTools" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="オフライン Python 3.11 / 3.12 IDE＆分割コンソール">
+            <img src="../assets/gallery/ja/01_python_ide.webp" data-sc-file="01_python_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_1" data-cap="オフライン Python 3.11 / 3.12 IDE＆分割コンソール" alt="オフライン Python 3.11 / 3.12 IDE＆分割コンソール" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="ローカル C17・C++20 複数ファイルコンパイラ">
+            <img src="../assets/gallery/ja/02_cpp20_compiler.webp" data-sc-file="02_cpp20_compiler.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_2" data-cap="ローカル C17・C++20 複数ファイルコンパイラ" alt="ローカル C17・C++20 複数ファイルコンパイラ" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="ローカルファイル管理＆階層プロジェクトツリー (SAF)">
+            <img src="../assets/gallery/ja/04_file_manager_tree.webp" data-sc-file="04_file_manager_tree.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_4" data-cap="ローカルファイル管理＆階層プロジェクトツリー (SAF)" alt="ローカルファイル管理＆階層プロジェクトツリー (SAF)" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="オフライン SQLite 3.54 スタジオ＆.db 閲覧">
+            <img src="../assets/gallery/ja/05_sql_sqlite_studio.webp" data-sc-file="05_sql_sqlite_studio.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_5" data-cap="オフライン SQLite 3.54 スタジオ＆.db 閲覧" alt="オフライン SQLite 3.54 スタジオ＆.db 閲覧" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="オフライン Java 17 IDE＆SQLite JDBC">
+            <img src="../assets/gallery/ja/06_java17_ide.webp" data-sc-file="06_java17_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_6" data-cap="オフライン Java 17 IDE＆SQLite JDBC" alt="オフライン Java 17 IDE＆SQLite JDBC" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="ビジュアル Git タイムマシン＆暗号化 SFTP">
+            <img src="../assets/gallery/ja/07_visual_git_timemachine.webp" data-sc-file="07_visual_git_timemachine.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_7" data-cap="ビジュアル Git タイムマシン＆暗号化 SFTP" alt="ビジュアル Git タイムマシン＆暗号化 SFTP" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="21 キー記号入力＆8 種の洗練 IDE テーマ">
+            <img src="../assets/gallery/ja/08_symbol_keyboard_themes.webp" data-sc-file="08_symbol_keyboard_themes.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_8" data-cap="21 キー記号入力＆8 種の洗練 IDE テーマ" alt="21 キー記号入力＆8 種の洗練 IDE テーマ" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+        </div>
+        <button type="button" class="sc-gp-nav sc-gp-nav--next" id="scGpNext" aria-label="次の画像">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  <div class="sc-lb-modal" id="scLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="アプリ画面プレビューとスクリーンショット">
+    <div class="sc-lb-topbar">
+      <button type="button" class="sc-lb-back" id="scLbBack">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-i18n="gal_back">ページに戻る</span>
+      </button>
+      <div class="sc-lb-meta">
+        <span class="sc-lb-counter" id="scLbCounter">1 / 9</span>
+        <span class="sc-lb-title" id="scLbTitle"></span>
+      </div>
+      <button type="button" class="sc-lb-close" id="scLbClose" aria-label="プレビューを閉じる">&times;</button>
+    </div>
+    <div class="sc-lb-stage">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--prev" id="scLbPrev" aria-label="前の画像">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <img class="sc-lb-img" id="scLbImg" src="" alt="SuperCode IDE Preview">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--next" id="scLbNext" aria-label="次の画像">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="sc-lb-dots" id="scLbDots"></div>
+  </div>
+  <script defer src="../assets/gallery.js"></script>
+<!-- SC_REAL_GALLERY_END -->
+
+
+
+
+
+  <!-- ==================== 02 · CORE CAPABILITIES ==================== -->
+  <section class="section section--alt" id="capabilities">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">02</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_cap_eyebrow">主要エンジニアリング機能</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="sec_cap_title">Desktop-Class Browser Diagnostics Without Plugging Into USB Debugging</h2>
+        <p class="sec-lead" data-i18n="sec_cap_lead">See every console warning, inspect circular JS state, measure API latency, and stream binary WebAssembly on your phone.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="feature-grid feature-grid--6">
+          <article class="feature-card" id="cap1">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-term"/></svg></span>
+              <span class="f-idx">02.1</span>
+            </div>
+            <h3 class="f-title" data-i18n="f1_title">ネイティブshowSaveFilePicker・showOpenFilePicker &amp; Share API</h3>
+            <p class="f-desc" data-i18n="f1_desc">document-start時のJSインジェクションにより、最新のFile System Access API、Blob/DataURLストリーミング、navigator.shareを競合状態なしでAndroid標準のストレージと共有シートへ直結します。</p>
+            <div class="f-code" data-i18n="f1_badge">showSaveFilePicker · Blobストリーミング · navigator.share</div>
+          </article>
+          <article class="feature-card" id="cap2">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-web"/></svg></span>
+              <span class="f-idx">02.2</span>
+            </div>
+            <h3 class="f-title" data-i18n="f2_title">マジックバイト判定 &amp; アトミックなAndroid MediaStore保存</h3>
+            <p class="f-desc" data-i18n="f2_desc">バイナリヘッダを実測してPNG、WebP、MP4、MP3の拡張子不一致を防止。IS_PENDINGロックを用いてPictures/、Movies/、Music/、Download/SuperCodeへ確実にアトミック保存します。</p>
+            <div class="f-code" data-i18n="f2_badge">マジックバイト判定 · アトミックMediaStore</div>
+          </article>
+          <article class="feature-card" id="cap3">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
+              <span class="f-idx">02.3</span>
+            </div>
+            <h3 class="f-title" data-i18n="f3_title">無劣化WebM EBML再生時間 &amp; SeekHead修復</h3>
+            <p class="f-desc" data-i18n="f3_desc">HTML5 CanvasのMediaRecorder出力はAndroidギャラリーで再生時間ヘッダが欠落しがちです。SuperCodeのPure Kotlin製EBML修復処理が再エンコードなしでSeekHead・Duration・Cuesを補完します。</p>
+            <div class="f-code" data-i18n="f3_badge">WebM SeekHead + Cues · スムーズシーク</div>
+          </article>
+          <article class="feature-card" id="cap4">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+              <span class="f-idx">02.4</span>
+            </div>
+            <h3 class="f-title" data-i18n="f4_title">ネイティブ動画→音声トランスコーダ内蔵（MP3 + 6形式）</h3>
+            <p class="f-desc" data-i18n="f4_desc">軽量なAndroid MediaCodec + PureMp3Encoderブリッジにより、MP4/MKV/WebMをID3v2.4タグ付き高SNR MP3へオフライン変換するローカルWebメディアユーティリティを構築できます。</p>
+            <div class="f-code" data-i18n="f4_badge">MediaCodec + PureMp3Encoder · ID3v2.4</div>
+          </article>
+          <article class="feature-card" id="cap5">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-chip"/></svg></span>
+              <span class="f-idx">02.5</span>
+            </div>
+            <h3 class="f-title" data-i18n="f5_title">IndexedDB・WebGL・HTTP 206対応の本物のローカルHTTPオリジン</h3>
+            <p class="f-desc" data-i18n="f5_desc">file://ではなく本物のローカルHTTPサーバーから配信するため、ES Modules、localStorage、IndexedDB、WebGLシェーダ、Webフォント（.woff2）、HTTP 206による動画・音声シークがすべてシームレスに動作します。</p>
+            <div class="f-code" data-i18n="f5_badge">ローカルHTTPオリジン · HTTP 206シーク対応</div>
+          </article>
+          <article class="feature-card" id="cap6">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <span class="f-idx">02.6</span>
+            </div>
+            <h3 class="f-title" data-i18n="f6_title">HEIC自動変換・EXIF補正 &amp; フルページPNGキャプチャ</h3>
+            <p class="f-desc" data-i18n="f6_desc">権限不要のカメラFileProvider経由でHEIC自動変換・EXIF向き補正付きの写真を挿入したり、最大2560pxの高精細なフルページPNGモックアップを撮影したりできます。</p>
+            <div class="f-code" data-i18n="f6_badge">EXIF自動補正 · 2560px PNGスクリーンショット</div>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">スマホ・折りたたみ・タブレット対応 · 軽量 40.2 MB</span>
+        <a class="link-arrow" href="web-ide.html">
+          <span>Web, PHP 8.2 &amp; WASM Hub</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 03 · STEP-BY-STEP WORKFLOW GUIDE ==================== -->
+  <section class="section" id="workflow">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">03</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_wf_eyebrow">実践ステップガイド</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="workflow_title">4ステップでリッチなHTML5メディアアプリを構築 &amp; エクスポート</h2>
+        <p class="sec-lead" data-i18n="workflow_lead">標準のモダンWeb APIを書くだけで、Androidのストレージやコーデック処理をSuperCodeのWebMediaBridgeがスマートに引き受けます。</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="workflow-grid">
+          <article class="wf-step" id="step1">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 01</span>
+              <span class="wf-step__cmd">Real HTTP Origin</span>
+            </div>
+            <h3 data-i18n="wf1_title">ローカルHTTP上でCanvas・WebGL・WebAppを構築</h3>
+            <p data-i18n="wf1_desc">localStorageとIndexedDBがフル機能するSuperCodeのローカルHTTPオリジン上でHTML5、CSS3、ES Modules、アセットを配信します。</p>
+          </article>
+          <article class="wf-step" id="step2">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 02</span>
+              <span class="wf-step__cmd">WebMediaBridge</span>
+            </div>
+            <h3 data-i18n="wf2_title">標準のBlob・MediaRecorder・File Picker APIを利用</h3>
+            <p data-i18n="wf2_desc">デスクトップ版Chromeと同じ感覚でshowSaveFilePicker()、a[download]、navigator.share()を呼び出せます。</p>
+          </article>
+          <article class="wf-step" id="step3">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 03</span>
+              <span class="wf-step__cmd">EBML SeekHead Fix</span>
+            </div>
+            <h3 data-i18n="wf3_title">自動マジックバイト検証 &amp; EBML修復</h3>
+            <p data-i18n="wf3_desc">SuperCodeがバイナリシグネチャを検証し、WebMの再生時間とシークCuesを無劣化で修復して大容量バッファも安全にストリーミングします。</p>
+          </article>
+          <article class="wf-step" id="step4">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 04</span>
+              <span class="wf-step__cmd">MediaStore Save</span>
+            </div>
+            <h3 data-i18n="wf4_title">Androidギャラリーまたはダウンロードへアトミック保存</h3>
+            <p data-i18n="wf4_desc">書き出されたPNG、WebM、MP3、JSONファイルは不完全な出力ファイルを残すことなく即座にシステムアプリへ反映されます。</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="wf_foot_note">WebMediaBridge V10 · 無劣化WebM修復 · ローカルHTTPオリジン</span>
+        <a class="link-arrow" href="https://supercode-ide.github.io/tutorial/?lang=ja&amp;ref=official_web" data-supercode-tutorial="true">
+          <span data-i18n="cta_tutorial">入門ガイド</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 04 · FEATURED SUMMARY & COMPARISON MATRIX ==================== -->
+  <section class="section section--alt" id="comparison">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">04</span>
+        <span class="rule"></span>
+        <span data-i18n="comp_eyebrow">機能比較マトリクス</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="table_h2">SuperCode Webスタジオ vs. 一般的なAndroid WebViewプレビューア</h2>
+        <p class="snippet-definition" data-i18n="snippet_p"><strong>SuperCodeのHTML5 Canvas &amp; WebMediaBridgeスタジオ</strong>は、本物のローカルHTTPオリジン、ネイティブ<code>showSaveFilePicker</code> / <code>navigator.share</code>ポリフィル、マジックバイト検証、無劣化WebM SeekHead/Cues修復、アトミックなMediaStore出力によってAndroidのWebプレビューを刷新します。</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="table-wrap">
+          <table class="obsidian-benchmark-table">
+            <caption data-i18n="table_caption">SUPERCODE WEBメディア・ストレージ &amp; エクスポート機能マトリクス</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="th_0">Web API / 機能</th>
+                <th scope="col" data-i18n="th_1">SuperCode Webスタジオ</th>
+                <th scope="col" data-i18n="th_2">一般的なfile://プレビュー</th>
+                <th scope="col" data-i18n="th_3">Android連携</th>
+                <th scope="col" data-i18n="th_4">最適な用途</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="tr1_c0">ファイル保存 &amp; 開く</th>
+                <td><strong data-i18n="tr1_c1">showSaveFilePicker + Blobストリーム</strong></td>
+                <td data-i18n="tr1_c2">動作しない / 無視される</td>
+                <td data-i18n="tr1_c3">アトミックMediaStore + SAF</td>
+                <td data-i18n="tr1_c4">Canvas / PDF / ツールアプリ</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr2_c0">Canvas動画エクスポート</th>
+                <td><strong data-i18n="tr2_c1">MediaRecorder + EBML Cues修復</strong></td>
+                <td data-i18n="tr2_c2">0:00固定でシーク不可</td>
+                <td data-i18n="tr2_c3">Movies/SuperCodeギャラリー</td>
+                <td data-i18n="tr2_c4">ジェネラティブアート &amp; デモ</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr3_c0">音声トランスコード</th>
+                <td><strong data-i18n="tr3_c1">ネイティブMediaCodec + MP3ブリッジ</strong></td>
+                <td data-i18n="tr3_c2">重いWASMが必要</td>
+                <td data-i18n="tr3_c3">Music/SuperCode + ID3v2.4</td>
+                <td data-i18n="tr3_c4">オフラインメディアツール</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr4_c0">ストレージ &amp; モジュール</th>
+                <td><strong data-i18n="tr4_c1">IndexedDB + localStorage + ESM</strong></td>
+                <td data-i18n="tr4_c2">CORS / nullオリジンで遮断</td>
+                <td data-i18n="tr4_c3">永続ローカルオリジン</td>
+                <td data-i18n="tr4_c4">オフラインファーストPWA</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr5_c0">動画・音声再生</th>
+                <td><strong data-i18n="tr5_c1">HTTP 206 Partial Content</strong></td>
+                <td data-i18n="tr5_c2">メディアをシーク不可</td>
+                <td data-i18n="tr5_c3">ゼロコピーバイトストリーミング</td>
+                <td data-i18n="tr5_c4">HTML5プレイヤー &amp; ゲーム</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">スマホ・折りたたみ・タブレット対応 · 軽量 40.2 MB</span>
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=ja-JP&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dja%26utm_campaign%3Dweb-php-studio%26utm_content%3Dweb-canvas-media-export-pwa-android" target="_blank" rel="noopener">
+          <span>Google Play</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 05 · VISIBLE EDITORIAL FAQ ==================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-head">
+          <div class="sec-index">
+            <span class="num">05</span>
+            <span class="rule"></span>
+            <span data-i18n="sec3_eyebrow">よくある質問</span>
+          </div>
+          <h2 class="h2" data-i18n="sec3_title">よくある質問 (FAQ)</h2>
+          <p class="sec-lead" data-i18n="faq_lead">AndroidでのHTML5 Canvas出力、WebM再生時間修復、File Pickerポリフィル、IndexedDBに関するFAQ。</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary><span data-i18n="faq1_q">SuperCodeのWebプレビューでBlobダウンロードやshowSaveFilePicker()は本当に動きますか？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq1_a">はい。SuperCodeはdocument-start時に競合ゼロのWebMediaBridgeを注入し、Blob/DataURLダウンロード、showSaveFilePicker、showOpenFilePicker、navigator.shareをAndroidネイティブストレージへ橋渡しします。</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq2_q">SuperCodeから出力したCanvas MediaRecorderのWebM動画が正しいシークバーで再生できるのはなぜですか？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq2_a">SuperCodeはMediaStoreへの書き込み前にPure Kotlin製の無劣化EBML SeekHead・Duration・Cues修復パスを実行し、Chrome/WebViewで欠落しがちな再生時間メタデータを再エンコードなしで補完します。</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq3_q">SuperCodeでHTML5 Canvas 2DやWebGLのゲームをオフライン開発できますか？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq3_a">はい。ローカルHTTP配信によりES Modules、テクスチャ、音声アセット、HTTP 206シーク、localStorageのハイスコア保存、DevTools Consoleのエラー検査まで完全オフラインで動作します。</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq4_q">Webアプリからエクスポートした画像・動画・音声ファイルはどこに保存されますか？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq4_a">SuperCodeはマジックバイト判定で正確なファイル種別を確認し、Android MediaStoreを通じてPictures/SuperCode、Movies/SuperCode、Music/SuperCode、またはDownload/SuperCodeへアトミックに保存します。</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==================== 06 · TOPICAL AUTHORITY ECOSYSTEM CLUSTER ==================== -->
+  <section class="section section--alt" id="ecosystem-guides">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">06</span>
+        <span class="rule"></span>
+        <span>フルスタック Web・PHP 8.2・DevTools ガイド</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2>フルスタック Web &amp; PHP ドキュメント一覧</h2>
+        <p class="sec-lead">メインの Web &amp; PHP スタジオハブと、Web 開発専門ガイド全5編を行き来できます。</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="py-cluster-grid">
+          <a href="web-ide.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">WEB-HUB</span>
+              <span class="py-spoke-card__tag">HTTP · PHP 8.2 · WASM · ハブページ</span>
+            </div>
+            <h3>フルスタック Web &amp; PHP スタジオ概要</h3>
+            <p>SuperCode IDE のローカル HTTP/1.1 サーバー、オフライン PHP 8.2 + PDO SQLite エンジン、WASM ストリーミング、3画面 DevTools の全体概要。</p>
+            <div class="py-spoke-card__go">
+              <span>web-ide</span>
+              <span>ガイドを開く &rarr;</span>
+            </div>
+          </a>
+          <a href="php-server-pdo-sqlite-android.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">WEB-01</span>
+              <span class="py-spoke-card__tag">PHP 8.2 · $_SESSION · PDO ACID</span>
+            </div>
+            <h3>オフライン PHP 8.2 &amp; PDO SQLite サーバー</h3>
+            <p>デーモン設定なしで、複数ファイルの PHP 8.2 フォーム、セッション、ファイルアップロード、password_hash()、JSON API、PDO('sqlite:...') DB をオフライン実行。</p>
+            <div class="py-spoke-card__go">
+              <span>php-server-pdo-sqlite-android</span>
+              <span>ガイドを開く &rarr;</span>
+            </div>
+          </a>
+          <a href="html-css-js-responsive-preview.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">WEB-02</span>
+              <span class="py-spoke-card__tag">モバイル / 768dp タブレット / デスクトップ</span>
+            </div>
+            <h3>HTML5・CSS3 &amp; 3画面レスポンシブプレビュー</h3>
+            <p>実ローカル HTTP サーバー上で HTML5、CSS3、ES Modules、WebGL を開発。モバイル／タブレット／デスクトップの即時切替やフルページ PNG 保存にも対応。</p>
+            <div class="py-spoke-card__go">
+              <span>html-css-js-responsive-preview</span>
+              <span>ガイドを開く &rarr;</span>
+            </div>
+          </a>
+          <a href="mobile-web-devtools-wasm-studio.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">WEB-03</span>
+              <span class="py-spoke-card__tag">通信モニタ · DOM REPL · .wasm</span>
+            </div>
+            <h3>モバイル Web DevTools・JS REPL &amp; WASM</h3>
+            <p>エラー・警告・HTTP 通信タイミングのデバッグ、ライブ JS REPL でのシリアライズ済み DOM ノード確認、バイナリ WASM (.wasm) のストリーミング実行に対応。</p>
+            <div class="py-spoke-card__go">
+              <span>mobile-web-devtools-wasm-studio</span>
+              <span>ガイドを開く &rarr;</span>
+            </div>
+          </a>
+          <a href="fullstack-web-sftp-deploy-android.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">WEB-04</span>
+              <span class="py-spoke-card__tag">SFTP/FTPS · Git Pages · ステージング</span>
+            </div>
+            <h3>リモート FTP/SFTP ライブ Web デプロイ</h3>
+            <p>リモートサイトをオンデマンドでローカルプレビューし、PHP/HTML の変更を安全にステージング。3フェーズのアトミック SFTP またはビジュアル Git で公開。</p>
+            <div class="py-spoke-card__go">
+              <span>fullstack-web-sftp-deploy-android</span>
+              <span>ガイドを開く &rarr;</span>
+            </div>
+          </a>
+          <a href="web-canvas-media-export-pwa-android.html" class="py-spoke-card is-active">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">WEB-05</span>
+              <span class="py-spoke-card__tag">Canvas · WebM/MP3 · ファイル選択</span>
+            </div>
+            <h3>Canvas・メディア出力・オフライン Web アプリ</h3>
+            <p>HTML5 Canvas、WebGL、オフライン IndexedDB 対応 Web アプリを構築。showSaveFilePicker、ロスレス WebM SeekHead 修復、PNG/MP3 MediaStore 出力、Share API 搭載。</p>
+            <div class="py-spoke-card__go">
+              <span>web-canvas-media-export-pwa-android</span>
+              <span>ガイド表示中</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span>6つの連携 Web &amp; PHP ガイド · 実ローカル HTTP + オフライン PHP 8.2 + PDO SQL</span>
+        <a class="link-arrow" href="web-ide.html">
+          <span>Web・PHP 8.2・WASM ハブ</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="siteFooter">
+  <div class="container">
+    <div class="footer-cta" id="footerCta">
+      <div>
+        <h2 class="h2" data-i18n="cta_h2">スマホ上でデスクトップ級のHTML5メディア &amp; Canvasアプリを開発。</h2>
+        <p data-i18n="cta_desc">Google PlayでSuperCode IDEを無料ダウンロード — ローカルHTTPサーバー、WebMediaBridge出力、PHP 8.2、DevToolsを40.2 MBに搭載。</p>
+      </div>
+      <div class="footer-cta__btns">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=ja-JP&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dja%26utm_campaign%3Dweb-php-studio%26utm_content%3Dweb-canvas-media-export-pwa-android" target="_blank" rel="noopener" class="btn btn--gold">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="cta_btn">Google Play で入手</span>
+        </a>
+        <a href="https://supercode-ide.github.io/tutorial/?lang=ja&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+          <span data-i18n="cta_tutorial">入門ガイド</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+          <span>SuperCode</span>
+          <span class="brand__tag">IDE</span>
+        </a>
+        <p data-i18n="footer_tagline">世界中の Android エンジニア、学生、学習者のために設計されたネイティブコードエディタ＆オフライン開発スタジオ。</p>
+        <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
+        <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=ja-JP&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dja%26utm_campaign%3Dweb-php-studio%26utm_content%3Dweb-canvas-media-export-pwa-android" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://supercode-ide.github.io/tutorial/?lang=ja&amp;ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">入門ガイド</span> &#8599;</a>
+          <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">言語を選択</span></button>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_core">コアエディタ & 大容量ファイル</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">概要</a></li>
+          <li><a href="code-editor.html" data-i18n="nav_code_editor">エディタ</a></li>
+          <li><a href="large-file-editor.html" data-i18n="nav_large_file">GB大容量</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_lang">オフラインコンパイラ & 言語</h4>
+        <ul>
+          <li><a href="python-ide.html" data-i18n="nav_python_ide">Python</a></li>
+          <li><a href="c-compiler.html" data-i18n="nav_c_compiler">C言語</a></li>
+          <li><a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20</a></li>
+          <li><a href="java-ide.html" data-i18n="nav_java_ide">Java 17</a></li>
+          <li><a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a></li>
+          <li><a href="lua-ide.html" data-i18n="nav_lua_ide">Lua 5.4</a></li>
+          <li><a href="shell-ide.html" data-i18n="nav_shell_ide">Shell & Kotlin</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_devops">Web・SQL・リモート運用</h4>
+        <ul>
+          <li><a href="web-ide.html" data-i18n="nav_web_ide">Web & PHP</a></li>
+          <li><a href="sql-ide.html" data-i18n="nav_sql_ide">SQL</a></li>
+          <li><a href="git-client.html" data-i18n="nav_git_client">Git管理</a></li>
+          <li><a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP & FTPS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="studio-ecosystem">
+      <a class="studio-promo-card" data-radio-promo="true" href="https://play.google.com/store/apps/details?id=com.hifiradio.fmradio&amp;hl=ja-JP&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dja%26utm_campaign%3Dhifi_radio_showcase%26utm_content%3Dfooter_showcase" target="_blank" rel="noopener" aria-label="FM Radio: HiFi Radio AM FM — リアルタイム2か国語ラジオ字幕 · 32バンド HiFi DSP">
+        <svg class="studio-promo-icon" aria-hidden="true"><use href="#sc-radio-icon"/></svg>
+        <span class="studio-promo-meta">
+          <span class="studio-promo-eyebrow" data-i18n="radio_eyebrow">PHOENIX GLOBAL STUDIOS の注目アプリ</span>
+          <span class="studio-promo-title">FM Radio: HiFi Radio AM FM</span>
+          <span class="studio-promo-sub" data-i18n="radio_subtitle">リアルタイム2か国語ラジオ字幕 · 32バンド HiFi DSP</span>
+        </span>
+        <span class="studio-promo-cta">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="nav_cta">Google Play</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </span>
+        <span class="studio-promo-arrow-mini" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </span>
+      </a>
+    </div>
+
+    <div class="footer-legal">
+      <span>&copy; 2026 Phoenix Global Studios. All rights reserved.</span>
+      <span class="mono">com.phoenixglobal.supercodeeditor</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="mobile-bottom-bar" id="mobileBottomBar" aria-label="Quick App Actions">
+  <div class="dock-app-icon" aria-hidden="true"><svg><use href="#sc-logo"/></svg></div>
+  <div class="bottom-bar-info">
+    <div class="bottom-bar-title">SuperCode</div>
+    <div class="bottom-bar-sub"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  </div>
+  <div class="bottom-bar-actions">
+    <a href="https://supercode-ide.github.io/tutorial/?lang=ja&amp;ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">入門ガイド</a>
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=ja-JP&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dja%26utm_campaign%3Dweb-php-studio%26utm_content%3Dweb-canvas-media-export-pwa-android" target="_blank" rel="noopener" class="btn-play-mini">
+      <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
+      <span data-i18n="bottom_cta">入手</span>
+    </a>
+  </div>
+</aside>
+
+<div class="modal-overlay" id="langModal" role="dialog" aria-modal="true" aria-labelledby="langModalTitle">
+  <div class="lang-modal">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div class="modal-header">
+      <h3 id="langModalTitle"><span data-i18n="modal_title">言語を選択</span><span class="modal-lang-count">32</span></h3>
+      <button type="button" class="btn-close-modal" onclick="closeLangModal()" aria-label="閉じる">&#10005;</button>
+    </div>
+    <div class="lang-grid">
+      <button type="button" class="lang-option" data-code="en" onclick="setLanguage('en')"><span class="lang-option__name">English</span><span class="lang-option__code">EN</span></button>
+      <button type="button" class="lang-option" data-code="zh" onclick="setLanguage('zh')"><span class="lang-option__name">简体中文</span><span class="lang-option__code">简中</span></button>
+      <button type="button" class="lang-option" data-code="zh-tw" onclick="setLanguage('zh-tw')"><span class="lang-option__name">繁體中文</span><span class="lang-option__code">繁中</span></button>
+      <button type="button" class="lang-option" data-code="es" onclick="setLanguage('es')"><span class="lang-option__name">Español</span><span class="lang-option__code">ES</span></button>
+      <button type="button" class="lang-option" data-code="pt" onclick="setLanguage('pt')"><span class="lang-option__name">Português</span><span class="lang-option__code">PT</span></button>
+      <button type="button" class="lang-option active" data-code="ja" onclick="setLanguage('ja')"><span class="lang-option__name">日本語</span><span class="lang-option__code">日本語</span></button>
+      <button type="button" class="lang-option" data-code="ko" onclick="setLanguage('ko')"><span class="lang-option__name">한국어</span><span class="lang-option__code">한국어</span></button>
+      <button type="button" class="lang-option" data-code="de" onclick="setLanguage('de')"><span class="lang-option__name">Deutsch</span><span class="lang-option__code">DE</span></button>
+      <button type="button" class="lang-option" data-code="fr" onclick="setLanguage('fr')"><span class="lang-option__name">Français</span><span class="lang-option__code">FR</span></button>
+      <button type="button" class="lang-option" data-code="ru" onclick="setLanguage('ru')"><span class="lang-option__name">Русский</span><span class="lang-option__code">RU</span></button>
+      <button type="button" class="lang-option" data-code="hi" onclick="setLanguage('hi')"><span class="lang-option__name">हिन्दी</span><span class="lang-option__code">HI</span></button>
+      <button type="button" class="lang-option" data-code="id" onclick="setLanguage('id')"><span class="lang-option__name">Bahasa Indonesia</span><span class="lang-option__code">ID</span></button>
+      <button type="button" class="lang-option" data-code="it" onclick="setLanguage('it')"><span class="lang-option__name">Italiano</span><span class="lang-option__code">IT</span></button>
+      <button type="button" class="lang-option" data-code="vi" onclick="setLanguage('vi')"><span class="lang-option__name">Tiếng Việt</span><span class="lang-option__code">VI</span></button>
+      <button type="button" class="lang-option" data-code="th" onclick="setLanguage('th')"><span class="lang-option__name">ไทย</span><span class="lang-option__code">ไทย</span></button>
+      <button type="button" class="lang-option" data-code="tr" onclick="setLanguage('tr')"><span class="lang-option__name">Türkçe</span><span class="lang-option__code">TR</span></button>
+      <button type="button" class="lang-option" data-code="ar" onclick="setLanguage('ar')"><span class="lang-option__name">العربية</span><span class="lang-option__code">AR</span></button>
+      <button type="button" class="lang-option" data-code="pl" onclick="setLanguage('pl')"><span class="lang-option__name">Polski</span><span class="lang-option__code">PL</span></button>
+      <button type="button" class="lang-option" data-code="nl" onclick="setLanguage('nl')"><span class="lang-option__name">Nederlands</span><span class="lang-option__code">NL</span></button>
+      <button type="button" class="lang-option" data-code="sv" onclick="setLanguage('sv')"><span class="lang-option__name">Svenska</span><span class="lang-option__code">SV</span></button>
+      <button type="button" class="lang-option" data-code="nb" onclick="setLanguage('nb')"><span class="lang-option__name">Norsk Bokmål</span><span class="lang-option__code">NB</span></button>
+      <button type="button" class="lang-option" data-code="da" onclick="setLanguage('da')"><span class="lang-option__name">Dansk</span><span class="lang-option__code">DA</span></button>
+      <button type="button" class="lang-option" data-code="fi" onclick="setLanguage('fi')"><span class="lang-option__name">Suomi</span><span class="lang-option__code">FI</span></button>
+      <button type="button" class="lang-option" data-code="cs" onclick="setLanguage('cs')"><span class="lang-option__name">Čeština</span><span class="lang-option__code">CS</span></button>
+      <button type="button" class="lang-option" data-code="uk" onclick="setLanguage('uk')"><span class="lang-option__name">Українська</span><span class="lang-option__code">UK</span></button>
+      <button type="button" class="lang-option" data-code="ro" onclick="setLanguage('ro')"><span class="lang-option__name">Română</span><span class="lang-option__code">RO</span></button>
+      <button type="button" class="lang-option" data-code="hu" onclick="setLanguage('hu')"><span class="lang-option__name">Magyar</span><span class="lang-option__code">HU</span></button>
+      <button type="button" class="lang-option" data-code="el" onclick="setLanguage('el')"><span class="lang-option__name">Ελληνικά</span><span class="lang-option__code">EL</span></button>
+      <button type="button" class="lang-option" data-code="he" onclick="setLanguage('he')"><span class="lang-option__name">עברית</span><span class="lang-option__code">HE</span></button>
+      <button type="button" class="lang-option" data-code="ms" onclick="setLanguage('ms')"><span class="lang-option__name">Bahasa Melayu</span><span class="lang-option__code">MS</span></button>
+      <button type="button" class="lang-option" data-code="tl" onclick="setLanguage('tl')"><span class="lang-option__name">Filipino</span><span class="lang-option__code">FIL</span></button>
+      <button type="button" class="lang-option" data-code="bn" onclick="setLanguage('bn')"><span class="lang-option__name">বাংলা</span><span class="lang-option__code">BN</span></button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var WORKBENCH_SAMPLES = {"canvas": {"label": "canvas-studio/visualizer.js \u2014 HTML5 Canvas + Native Media Export", "status": "Local HTTP \u00b7 MediaBridge", "lines": ["<span class=\"tok-kw\">const<\/span> cvs = document.<span class=\"tok-fn\">getElementById<\/span>(<span class=\"tok-str\">&quot;stage&quot;<\/span>);", "<span class=\"tok-kw\">const<\/span> ctx = cvs.<span class=\"tok-fn\">getContext<\/span>(<span class=\"tok-str\">&quot;2d&quot;<\/span>);", "ctx.fillStyle = <span class=\"tok-str\">&quot;#F5C451&quot;<\/span>; ctx.<span class=\"tok-fn\">fillRect<\/span>(<span class=\"tok-num\">24<\/span>, <span class=\"tok-num\">24<\/span>, <span class=\"tok-num\">180<\/span>, <span class=\"tok-num\">90<\/span>);", "<span class=\"tok-kw\">const<\/span> blob = <span class=\"tok-kw\">await new<\/span> Promise(r =&gt; cvs.<span class=\"tok-fn\">toBlob<\/span>(r, <span class=\"tok-str\">&quot;image/png&quot;<\/span>));", "<span class=\"tok-kw\">const<\/span> handle = <span class=\"tok-kw\">await<\/span> window.<span class=\"tok-fn\">showSaveFilePicker<\/span>({ suggestedName: <span class=\"tok-str\">&quot;render.png&quot;<\/span> });", "<span class=\"tok-kw\">const<\/span> w = <span class=\"tok-kw\">await<\/span> handle.<span class=\"tok-fn\">createWritable<\/span>(); <span class=\"tok-kw\">await<\/span> w.<span class=\"tok-fn\">write<\/span>(blob); <span class=\"tok-kw\">await<\/span> w.<span class=\"tok-fn\">close<\/span>();"], "output": ["<span class=\"term-prompt\">[WebMediaBridge]<\/span> Magic-Byte Sniffer verified PNG (89 50 4E 47)", "[MediaStore] Saved Pictures/SuperCode/render.png (IS_PENDING atomic)", "<span class=\"term-info\">&#10003; Visible in Android Gallery &middot; 0 KB Corruption<\/span>"]}, "webm": {"label": "canvas-studio/recorder.js \u2014 Lossless WebM SeekHead Repair", "status": "WebM \u00b7 EBML Cues Fix", "lines": ["<span class=\"tok-kw\">const<\/span> stream = cvs.<span class=\"tok-fn\">captureStream<\/span>(<span class=\"tok-num\">60<\/span>);", "<span class=\"tok-kw\">const<\/span> rec = <span class=\"tok-kw\">new<\/span> <span class=\"tok-fn\">MediaRecorder<\/span>(stream, { mimeType: <span class=\"tok-str\">&quot;video/webm&quot;<\/span> });", "<span class=\"tok-cmt\">// SuperCode repairs WebM Duration + SeekHead + Cues automatically<\/span>", "rec.ondataavailable = (e) =&gt; <span class=\"tok-fn\">exportRecording<\/span>(e.data, <span class=\"tok-str\">&quot;demo_60fps.webm&quot;<\/span>);"], "output": ["<span class=\"term-prompt\">[EBML Repair]<\/span> Injected SeekHead + Duration (6.40s) + Cues", "[MediaStore] Exported Movies/SuperCode/demo_60fps.webm", "<span class=\"term-info\">&#10003; Full Scrubbing Timeline Restored (Zero Re-Encode)<\/span>"]}, "idb": {"label": "canvas-studio/offline_store.js \u2014 Real HTTP Origin Storage", "status": "Real Origin \u00b7 IndexedDB", "lines": ["localStorage.<span class=\"tok-fn\">setItem<\/span>(<span class=\"tok-str\">&quot;studio_theme&quot;<\/span>, <span class=\"tok-str\">&quot;obsidian&quot;<\/span>);", "<span class=\"tok-kw\">const<\/span> req = indexedDB.<span class=\"tok-fn\">open<\/span>(<span class=\"tok-str\">&quot;SuperNotesDB&quot;<\/span>, <span class=\"tok-num\">1<\/span>);", "req.onsuccess = () =&gt; console.<span class=\"tok-fn\">log<\/span>(<span class=\"tok-str\">&quot;Origin:&quot;<\/span>, location.origin, <span class=\"tok-str\">&quot;DB ready&quot;<\/span>);"], "output": ["<span class=\"term-prompt\">[LocalServer]<\/span> Origin: http://127.0.0.1:local (Non-null origin)", "Origin: http://127.0.0.1 DB ready", "<span class=\"term-info\">&#10003; ES Modules &middot; localStorage &middot; IndexedDB Active<\/span>"]}};
+    var currentTab = 'canvas';
+    var runTimer = null;
+
+    function renderWorkbench(tabKey, animateRun) {
+      var sample = WORKBENCH_SAMPLES[tabKey] || WORKBENCH_SAMPLES['canvas'];
+      if (!sample) { return; }
+      currentTab = tabKey;
+      var labelEl = document.getElementById('ide-compiler-label');
+      if (labelEl) { labelEl.textContent = sample.label; }
+      var statusEl = document.getElementById('wbStatusLang');
+      if (statusEl) { statusEl.textContent = sample.status; }
+
+      var tabs = document.querySelectorAll('.ide-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        var active = tabs[i].getAttribute('data-tab') === tabKey;
+        tabs[i].classList.toggle('active', active);
+        tabs[i].setAttribute('aria-selected', active ? 'true' : 'false');
+      }
+      var files = document.querySelectorAll('.wb-file');
+      for (var f = 0; f < files.length; f++) {
+        files[f].classList.toggle('active', files[f].getAttribute('data-tab') === tabKey);
+      }
+
+      var codeBox = document.getElementById('ide-code-box');
+      if (codeBox) {
+        var html = '';
+        for (var l = 0; l < sample.lines.length; l++) {
+          var activeCls = (l === sample.lines.length - 1) ? ' active-line' : '';
+          html += '<div class="code-line' + activeCls + '"><span class="ln">' + (l + 1) + '</span><span class="code-content">' + sample.lines[l] + '</span></div>';
+        }
+        codeBox.innerHTML = html;
+      }
+
+      if (animateRun) {
+        runWorkbenchSample();
+      }
+    }
+
+    function runWorkbenchSample() {
+      var sample = WORKBENCH_SAMPLES[currentTab] || WORKBENCH_SAMPLES['canvas'];
+      var drawer = document.getElementById('ide-terminal-drawer');
+      var out = document.getElementById('ide-term-output');
+      var badge = document.getElementById('ide-exec-status');
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (!drawer || !out || !sample) { return; }
+
+      if (runTimer) { clearTimeout(runTimer); }
+      drawer.classList.add('is-open');
+      if (runBtn) { runBtn.classList.add('is-running'); }
+      if (badge) { badge.textContent = 'Running...'; badge.classList.remove('done'); }
+      out.innerHTML = '';
+
+      var idx = 0;
+      function step() {
+        if (idx < sample.output.length) {
+          var row = document.createElement('span');
+          row.className = 'term-line-item';
+          row.innerHTML = sample.output[idx];
+          out.appendChild(row);
+          idx++;
+          runTimer = setTimeout(step, 80);
+        } else {
+          var cur = document.createElement('span');
+          cur.className = 'term-cursor';
+          cur.textContent = '\u258b';
+          out.appendChild(cur);
+          if (badge) { badge.textContent = 'Completed'; badge.classList.add('done'); }
+          if (runBtn) { runBtn.classList.remove('is-running'); }
+        }
+      }
+      step();
+    }
+
+    function initNavigationAndSmartBar() {
+      var menuBtn = document.getElementById('menuBtn');
+      var drawer = document.getElementById('siteDrawer');
+      var bar = document.getElementById('mobileBottomBar');
+      var heroCta = document.getElementById('heroCta');
+      var siteFooter = document.getElementById('siteFooter');
+
+      function syncBar() {
+        if (!bar) { return; }
+        var drawerOpen = Boolean(drawer && !drawer.hasAttribute('hidden'));
+        var modalEl = document.getElementById('langModal');
+        var modalOpen = Boolean(modalEl && modalEl.classList.contains('show'));
+        var vh = window.innerHeight || document.documentElement.clientHeight || 800;
+        var heroInView = false;
+        if (heroCta) {
+          var hr = heroCta.getBoundingClientRect();
+          heroInView = (hr.bottom > 0 && hr.top < vh);
+        }
+        var footerInView = false;
+        if (siteFooter) {
+          var fr = siteFooter.getBoundingClientRect();
+          footerInView = (fr.top < vh + 24);
+        }
+        var scrollYVal = window.pageYOffset || window.scrollY || 0;
+        var docH = Math.max(document.body ? document.body.scrollHeight : 0, document.documentElement ? document.documentElement.scrollHeight : 0);
+        var nearBottom = (vh + scrollYVal) >= (docH - 120);
+        var shouldShow = !drawerOpen && !modalOpen && !heroInView && !footerInView && !nearBottom;
+        bar.classList.toggle('is-visible', shouldShow);
+      }
+
+      window.__supercodeSyncMobileBar = syncBar;
+
+      function setDrawer(open) {
+        if (!menuBtn || !drawer) { return; }
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { drawer.removeAttribute('hidden'); }
+        else { drawer.setAttribute('hidden', ''); }
+        syncBar();
+      }
+      if (menuBtn && drawer) {
+        menuBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          setDrawer(menuBtn.getAttribute('aria-expanded') !== 'true');
+        });
+        drawer.addEventListener('click', function (e) {
+          if (e.target && e.target.closest('a')) { setDrawer(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!drawer.hasAttribute('hidden') && !drawer.contains(e.target) && e.target !== menuBtn && !menuBtn.contains(e.target)) {
+            setDrawer(false);
+          }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') { setDrawer(false); }
+        });
+      }
+
+      if (bar) {
+        window.addEventListener('scroll', syncBar, { passive: true });
+        window.addEventListener('resize', syncBar);
+        syncBar();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var tabBtns = document.querySelectorAll('.ide-tab, .wb-file');
+      for (var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', function () {
+          renderWorkbench(this.getAttribute('data-tab'), true);
+        });
+      }
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (runBtn) { runBtn.addEventListener('click', function () { runWorkbenchSample(); }); }
+      var closeTerm = document.getElementById('btn-close-term');
+      if (closeTerm) {
+        closeTerm.addEventListener('click', function () {
+          var d = document.getElementById('ide-terminal-drawer');
+          if (d) { d.classList.remove('is-open'); }
+        });
+      }
+      initNavigationAndSmartBar();
+      renderWorkbench('canvas', false);
+    });
+  })();
+</script>
+<script>window.__SUPERCODE_STATIC_LANG__="ja";window.__SUPERCODE_STATIC_CANONICAL__="https://supercode-ide.github.io/ja/web-canvas-media-export-pwa-android.html";</script>
+<script src="../i18n_extended.js"></script>
+</body>
+</html>

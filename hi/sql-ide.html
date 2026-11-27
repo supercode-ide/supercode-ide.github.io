@@ -48,6 +48,7 @@
   <link rel="alternate" hreflang="ms" href="https://supercode-ide.github.io/ms/sql-ide.html">
   <link rel="alternate" hreflang="fil" href="https://supercode-ide.github.io/tl/sql-ide.html">
   <link rel="alternate" hreflang="bn" href="https://supercode-ide.github.io/bn/sql-ide.html">
+  <link rel="alternate" type="application/rss+xml" title="SuperCode IDE Guides &amp; Releases" href="https://supercode-ide.github.io/feed.xml">
 
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
@@ -157,7 +158,8 @@
         "RFC-4180 CSV, TSV & JSON array table importer plus multi-file .sql pipeline topological execution",
         "MySQL/PostgreSQL DDL compatibility locally plus Cloud MySQL 8.0 stored procedures & triggers"
       ],
-      "image": "https://supercode-ide.github.io/assets/media/og-hero-hi.png"
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-hi.png",
+      "dateModified": "2026-11-27"
     },
     {
       "@type": "BreadcrumbList",
@@ -188,30 +190,31 @@
           "position": 1,
           "name": "Open a .db Database or Create a .sql Script",
           "text": "Tap any local .db/.sqlite file to inspect its schema, or create a .sql script with offline AST SQL keyword/function completion and formatting.",
-          "url": "https://supercode-ide.github.io/sql-ide.html#step1"
+          "url": "https://supercode-ide.github.io/hi/sql-ide.html#step1"
         },
         {
           "@type": "HowToStep",
           "position": 2,
           "name": "Seed Tables or Import CSV & JSON Files",
           "text": "Load CSV, TSV, or JSON datasets from your project folder into typed relational tables in a single command.",
-          "url": "https://supercode-ide.github.io/sql-ide.html#step2"
+          "url": "https://supercode-ide.github.io/hi/sql-ide.html#step2"
         },
         {
           "@type": "HowToStep",
           "position": 3,
           "name": "Execute Multi-Statement Queries Offline",
           "text": "Inspect Unicode Box Grids, Markdown tables, or JSON output in the split-screen console, with live READ_STDIN() parameter prompts when needed.",
-          "url": "https://supercode-ide.github.io/sql-ide.html#step3"
+          "url": "https://supercode-ide.github.io/hi/sql-ide.html#step3"
         },
         {
           "@type": "HowToStep",
           "position": 4,
           "name": "Export Clean Reports & Sync .db to PHP/Java",
           "text": "Save updated .db files or .csv/.json reports straight to your project folder — ready to query from SuperCode's PHP PDO or Java JDBC workspaces!",
-          "url": "https://supercode-ide.github.io/sql-ide.html#step4"
+          "url": "https://supercode-ide.github.io/hi/sql-ide.html#step4"
         }
-      ]
+      ],
+      "inLanguage": "hi"
     },
     {
       "@type": "FAQPage",
@@ -249,7 +252,8 @@
             "text": "अपनी SELECT क्वेरी से पहले `.mode csv` (या `.mode markdown` / `.mode json`) और `.once output.csv` लिखें — SuperCode एक्सपोर्ट की गई फ़ाइल सीधे आपके प्रोजेक्ट फ़ोल्डर में सेव कर देगा।"
           }
         }
-      ]
+      ],
+      "inLanguage": "hi"
     }
   ]
 }
@@ -375,7 +379,7 @@
       <div class="drawer-top__left">
         <span class="drawer-top__dot" aria-hidden="true"></span>
         <span class="drawer-top__title" data-i18n="sitemap_title">पूरा साइट मैप</span>
-        <span class="drawer-top__badge" data-i18n="sitemap_badge">53 पेज · 32 भाषाएँ</span>
+        <span class="drawer-top__badge" data-i18n="sitemap_badge">61 पेजेस · 32 भाषाएं</span>
       </div>
       <button type="button" class="drawer-toggle-all" id="drawerToggleAll" data-expanded="false" data-expand-label="सभी खोलें" data-collapse-label="सभी समेटें">
         <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8h9M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
@@ -425,7 +429,7 @@
         </div>
         <div class="drawer-node" data-hub="c-compiler.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="c-compiler.html"><span class="drawer-link__title" data-i18n="nav_c_compiler">C कंपाइलर</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="c-compiler.html"><span class="drawer-link__title" data-i18n="nav_c_compiler">C कंपाइलर</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-c-compiler" aria-label="सब-पेज टॉगल करें: C कंपाइलर">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -435,11 +439,12 @@
             <a class="drawer-sub__link" href="c-multifile-header-projects.html"><span class="drawer-sub__code">C-02</span><span class="drawer-sub__title">मल्टी-फाइल .c/.h और CMake बिल्ड</span></a>
             <a class="drawer-sub__link" href="c-scanf-file-io-console.html"><span class="drawer-sub__code">C-03</span><span class="drawer-sub__title">लाइव scanf Stdin और फाइल I/O</span></a>
             <a class="drawer-sub__link" href="c-posix-systems-programming.html"><span class="drawer-sub__code">C-04</span><span class="drawer-sub__title">POSIX हेडर, थ्रेड्स और सॉकेट्स</span></a>
+            <a class="drawer-sub__link" href="c-algorithms-data-structures-android.html"><span class="drawer-sub__code">C-05</span><span class="drawer-sub__title">एल्गोरिदम, डेटा स्ट्रक्चर्स और Bitwise C</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="cpp-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="cpp-ide.html"><span class="drawer-link__title" data-i18n="nav_cpp_ide">C++20 IDE</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="cpp-ide.html"><span class="drawer-link__title" data-i18n="nav_cpp_ide">C++20 IDE</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-cpp-ide" aria-label="सब-पेज टॉगल करें: C++20 IDE">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -449,11 +454,12 @@
             <a class="drawer-sub__link" href="cpp-oop-smart-pointers-modern.html"><span class="drawer-sub__code">CPP-02</span><span class="drawer-sub__title">मॉडर्न C++20, Ranges और OOP</span></a>
             <a class="drawer-sub__link" href="cpp-multifile-hpp-builder.html"><span class="drawer-sub__code">CPP-03</span><span class="drawer-sub__title">21 मल्टी-फाइल C++ और CMake प्रोजेक्ट्स</span></a>
             <a class="drawer-sub__link" href="learn-cpp-offline-android.html"><span class="drawer-sub__code">CPP-04</span><span class="drawer-sub__title">Android पर ऑफलाइन C++ सीखें</span></a>
+            <a class="drawer-sub__link" href="cpp-debugging-cmake-git-workflow.html"><span class="drawer-sub__code">CPP-05</span><span class="drawer-sub__title">C++ डायग्नोस्टिक्स, फ़ॉर्मेटर और Visual Git</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="java-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="java-ide.html"><span class="drawer-link__title" data-i18n="nav_java_ide">Java 17</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="java-ide.html"><span class="drawer-link__title" data-i18n="nav_java_ide">Java 17</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-java-ide" aria-label="सब-पेज टॉगल करें: Java 17">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -463,11 +469,12 @@
             <a class="drawer-sub__link" href="java-multiclass-packages-ide.html"><span class="drawer-sub__code">JV-02</span><span class="drawer-sub__title">मल्टी-क्लास पैकेज और .jar लाइब्रेरीज़</span></a>
             <a class="drawer-sub__link" href="java-jdbc-sqlite-file-io.html"><span class="drawer-sub__code">JV-03</span><span class="drawer-sub__title">ऑफलाइन Java SQLite JDBC और NIO.2</span></a>
             <a class="drawer-sub__link" href="learn-java-dsa-android.html"><span class="drawer-sub__code">JV-04</span><span class="drawer-sub__title">ऑफलाइन Java, AP CS और DSA सीखें</span></a>
+            <a class="drawer-sub__link" href="java-25-project-templates-android.html"><span class="drawer-sub__code">JV-05</span><span class="drawer-sub__title">25 मल्टी-फ़ाइल Java प्रोजेक्ट टेम्प्लेट्स</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="javascript-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="javascript-ide.html"><span class="drawer-link__title" data-i18n="nav_js_ide">JavaScript</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="javascript-ide.html"><span class="drawer-link__title" data-i18n="nav_js_ide">JavaScript</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-javascript-ide" aria-label="सब-पेज टॉगल करें: JavaScript">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -477,11 +484,12 @@
             <a class="drawer-sub__link" href="javascript-es2024-async-console.html"><span class="drawer-sub__code">JS-02</span><span class="drawer-sub__title">ES2024 Async, Top-Level Await और Fetch</span></a>
             <a class="drawer-sub__link" href="javascript-web-crypto-security.html"><span class="drawer-sub__code">JS-03</span><span class="drawer-sub__title">Node और Web Crypto (AES-GCM / SHA)</span></a>
             <a class="drawer-sub__link" href="learn-javascript-dsa-android.html"><span class="drawer-sub__code">JS-04</span><span class="drawer-sub__title">ऑफलाइन JS सीखें और DSA प्रैक्टिस करें</span></a>
+            <a class="drawer-sub__link" href="javascript-json-regex-formatter-android.html"><span class="drawer-sub__code">JS-05</span><span class="drawer-sub__title">JSON/JSONC फ़ॉर्मेटर, Regex और REST Fetch</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="lua-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="lua-ide.html"><span class="drawer-link__title" data-i18n="nav_lua_ide">Lua 5.4</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="lua-ide.html"><span class="drawer-link__title" data-i18n="nav_lua_ide">Lua 5.4</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-lua-ide" aria-label="सब-पेज टॉगल करें: Lua 5.4">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -491,11 +499,12 @@
             <a class="drawer-sub__link" href="lua-builtin-modules-cjson-sqlite.html"><span class="drawer-sub__code">LUA-02</span><span class="drawer-sub__title">11+ बिल्ट-इन मॉड्यूल (cjson, lsqlite3, lfs)</span></a>
             <a class="drawer-sub__link" href="lua-54-bitwise-close-multifile.html"><span class="drawer-sub__code">LUA-03</span><span class="drawer-sub__title">Lua 5.4 बिटवाइज, &lt;close&gt; और मल्टी-फाइल</span></a>
             <a class="drawer-sub__link" href="learn-lua-offline-android.html"><span class="drawer-sub__code">LUA-04</span><span class="drawer-sub__title">Android पर ऑफलाइन Lua सीखें</span></a>
+            <a class="drawer-sub__link" href="lua-android-crypto-regex-http-automation.html"><span class="drawer-sub__code">LUA-05</span><span class="drawer-sub__title">क्रिप्टो, Regex, HTTP और फ़ाइल ऑटोमेशन</span></a>
           </div>
         </div>
         <div class="drawer-node" data-hub="shell-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="shell-ide.html"><span class="drawer-link__title" data-i18n="nav_shell_ide">Shell व Kotlin</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="shell-ide.html"><span class="drawer-link__title" data-i18n="nav_shell_ide">Shell व Kotlin</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-shell-ide" aria-label="सब-पेज टॉगल करें: Shell व Kotlin">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -505,6 +514,7 @@
             <a class="drawer-sub__link" href="shell-awk-sed-grep-log-pipelines.html"><span class="drawer-sub__code">SH-02</span><span class="drawer-sub__title">awk, sed, grep और curl टेक्स्ट पाइपलाइंस</span></a>
             <a class="drawer-sub__link" href="kotlin-coding-app-compiler-android.html"><span class="drawer-sub__code">SH-03</span><span class="drawer-sub__title">Kotlin कोडिंग ऐप और .kt/.kts रनर</span></a>
             <a class="drawer-sub__link" href="linux-devops-shell-sftp-git-android.html"><span class="drawer-sub__code">SH-04</span><span class="drawer-sub__title">पॉकेट Linux DevOps: Shell + SFTP + Git</span></a>
+            <a class="drawer-sub__link" href="kotlin-coroutines-collections-dsa-android.html"><span class="drawer-sub__code">SH-05</span><span class="drawer-sub__title">Kotlin कलेक्शंस, OOP और DSA प्रैक्टिस</span></a>
           </div>
         </div>
         </div>
@@ -514,7 +524,7 @@
         <div class="drawer-group__list">
         <div class="drawer-node" data-hub="web-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link" href="web-ide.html"><span class="drawer-link__title" data-i18n="nav_web_ide">Web व PHP</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link" href="web-ide.html"><span class="drawer-link__title" data-i18n="nav_web_ide">Web व PHP</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-web-ide" aria-label="सब-पेज टॉगल करें: Web व PHP">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -524,11 +534,12 @@
             <a class="drawer-sub__link" href="html-css-js-responsive-preview.html"><span class="drawer-sub__code">WEB-02</span><span class="drawer-sub__title">HTML5, CSS3 और 3-व्यूपोर्ट प्रिव्यू</span></a>
             <a class="drawer-sub__link" href="mobile-web-devtools-wasm-studio.html"><span class="drawer-sub__code">WEB-03</span><span class="drawer-sub__title">मोबाइल वेब DevTools, JS REPL और WASM</span></a>
             <a class="drawer-sub__link" href="fullstack-web-sftp-deploy-android.html"><span class="drawer-sub__code">WEB-04</span><span class="drawer-sub__title">रिमोट FTP/SFTP लाइव वेब डिप्लॉय</span></a>
+            <a class="drawer-sub__link" href="web-canvas-media-export-pwa-android.html"><span class="drawer-sub__code">WEB-05</span><span class="drawer-sub__title">Canvas, मीडिया एक्सपोर्ट और ऑफ़लाइन वेब ऐप्स</span></a>
           </div>
         </div>
         <div class="drawer-node is-open" data-hub="sql-ide.html">
           <div class="drawer-node__row">
-            <a class="menu-drawer__link is-current" href="sql-ide.html"><span class="drawer-link__title" data-i18n="nav_sql_ide">SQL स्टूडियो</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <a class="menu-drawer__link is-current" href="sql-ide.html"><span class="drawer-link__title" data-i18n="nav_sql_ide">SQL स्टूडियो</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
             <button type="button" class="drawer-expand-btn" aria-expanded="true" aria-controls="sub-sql-ide" aria-label="सब-पेज टॉगल करें: SQL स्टूडियो">
               <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
             </button>
@@ -538,6 +549,7 @@
             <a class="drawer-sub__link" href="sql-window-functions-fts5-json.html"><span class="drawer-sub__code">SQL-02</span><span class="drawer-sub__title">Window Functions, CTE, JSONB और FTS5</span></a>
             <a class="drawer-sub__link" href="mysql-postgresql-syntax-android.html"><span class="drawer-sub__code">SQL-03</span><span class="drawer-sub__title">MySQL और PostgreSQL कम्पैटिबिलिटी</span></a>
             <a class="drawer-sub__link" href="sql-python-php-java-lua-integration.html"><span class="drawer-sub__code">SQL-04</span><span class="drawer-sub__title">SQL, Python, PHP और Java में शेयर्ड .db</span></a>
+            <a class="drawer-sub__link" href="sql-crypto-regex-udf-scripts-android.html"><span class="drawer-sub__code">SQL-05</span><span class="drawer-sub__title">क्रिप्टो, Regex UDFs और मल्टी-फ़ाइल .read</span></a>
           </div>
         </div>
         <div class="drawer-node">
@@ -1021,8 +1033,8 @@
       </div>
 
       <div class="sec-grid">
-        <h2>4 गहन Android SQL और डेटाबेस गाइड देखें</h2>
-        <p class="sec-lead">बाइनरी .db/.sqlite इंस्पेक्शन, Window Functions और FTS5 सर्च, MySQL/PostgreSQL डायलेक्ट कम्पैटिबिलिटी और मल्टी-लैंग्वेज SQLite ऐप्स में महारत हासिल करें।</p>
+        <h2>5 डीप-डाइव Android SQL और डेटाबेस गाइड्स एक्सप्लोर करें</h2>
+        <p class="sec-lead">ऑफ़लाइन .db/.sqlite इंस्पेक्शन, विंडो फ़ंक्शंस और FTS5 सर्च, MySQL/PostgreSQL सिंटैक्स, पॉलीग्लॉट SQLite इंटीग्रेशन, और BoringSSL क्रिप्टो UDFs, ICU regex व मल्टी-फ़ाइल .read/ATTACH स्क्रिप्ट्स में महारत हासिल करें।</p>
       </div>
 
       <div class="sec-body">
@@ -1075,11 +1087,23 @@
               <span>गाइड खोलें &rarr;</span>
             </div>
           </a>
+          <a href="sql-crypto-regex-udf-scripts-android.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">SQL-05</span>
+              <span class="py-spoke-card__tag">SHA-256 · ICU रेजेक्स · ATTACH/.read</span>
+            </div>
+            <h3>क्रिप्टो, Regex UDFs और मल्टी-फ़ाइल .read</h3>
+            <p>Android पर 100% ऑफ़लाइन हार्डवेयर-बैक्ड SHA-256/HMAC क्रिप्टो UDFs, ICU REGEXP_REPLACE/REGEXP_EXTRACT, मल्टी-DB ATTACH DATABASE पाइपलाइन्स और नेस्टेड .read SQL स्क्रिप्ट्स चलाएं।</p>
+            <div class="py-spoke-card__go">
+              <span>sql-crypto-regex-udf-scripts-android</span>
+              <span>गाइड खोलें &rarr;</span>
+            </div>
+          </a>
         </div>
       </div>
 
       <div class="sec-foot">
-        <span>5 इंटरकनेक्टेड SQL गाइड्स · SQLite 3.54.1 + 50+ MySQL/Postgres फ़ंक्शंस</span>
+        <span>6 इंटरकनेक्टेड SQL गाइड्स · SQLite 3.54.1 + 50+ MySQL/Postgres फ़ंक्शंस</span>
         <a class="link-arrow" href="sql-ide.html">
           <span>SQL और SQLite स्टूडियो हब</span>
           <svg aria-hidden="true"><use href="#i-arrow"/></svg>

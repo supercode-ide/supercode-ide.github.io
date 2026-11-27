@@ -2311,6 +2311,10 @@
   html[dir="rtl"] .drawer-studio-name { direction: ltr; unicode-bidi: isolate; text-align: right; }
   html[dir="rtl"] .studio-promo-eyebrow,
   html[dir="rtl"] .drawer-group__title,
-  html[dir="rtl"] .footer-col h4 { letter-spacing: 0; font-family: var(--font-sans); }
+  html[dir="rtl"] .footer-col h4,
+  html[dir="rtl"] .sec-index,
+  html[dir="rtl"] .py-spoke-card__tag,
+  html[dir="rtl"] .py-spoke-card__go,
+  html[dir="rtl"] .drawer-top__badge { letter-spacing: 0; font-family: var(--font-sans); }
   html[dir="rtl"] .studio-promo-arrow-mini svg,
   html[dir="rtl"] .studio-promo-cta .icon-ne { transform: scaleX(-1); }

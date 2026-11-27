@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090A0F">
+  <meta name="color-scheme" content="only dark">
+  <meta name="supported-color-schemes" content="dark">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <title>Android 版 C 資料結構、演算法與位元運算編譯器 | SuperCode</title>
+  <meta name="description" content="在 Android 上 100% 離線練習 C17 鏈結串列、二元搜尋樹、雜湊表、排序演算法與嵌入式 stdint.h 位元欄位，內建 AST 錯誤雷達、一鍵 C 格式化與 A4 PDF 匯出。">
+  <meta name="keywords" content="c data structures algorithms android, linked list binary tree c compiler phone, embedded bitwise c17 ide android, c interview coding app offline, c formatter error radar android">
+  <meta name="author" content="Phoenix Global Studios">
+  <meta name="google-play-app" content="app-id=com.phoenixglobal.supercodeeditor">
+
+  <link id="canonical-link" rel="canonical" href="https://supercode-ide.github.io/zh-tw/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="x-default" href="https://supercode-ide.github.io/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="en" href="https://supercode-ide.github.io/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://supercode-ide.github.io/zh/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://supercode-ide.github.io/zh-tw/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="es" href="https://supercode-ide.github.io/es/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://supercode-ide.github.io/pt/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="ja" href="https://supercode-ide.github.io/ja/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="ko" href="https://supercode-ide.github.io/ko/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="de" href="https://supercode-ide.github.io/de/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="fr" href="https://supercode-ide.github.io/fr/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="ru" href="https://supercode-ide.github.io/ru/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="hi" href="https://supercode-ide.github.io/hi/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="id" href="https://supercode-ide.github.io/id/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="it" href="https://supercode-ide.github.io/it/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="vi" href="https://supercode-ide.github.io/vi/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="th" href="https://supercode-ide.github.io/th/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="tr" href="https://supercode-ide.github.io/tr/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="ar" href="https://supercode-ide.github.io/ar/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="pl" href="https://supercode-ide.github.io/pl/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="nl" href="https://supercode-ide.github.io/nl/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="sv" href="https://supercode-ide.github.io/sv/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="nb" href="https://supercode-ide.github.io/nb/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="da" href="https://supercode-ide.github.io/da/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="fi" href="https://supercode-ide.github.io/fi/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="cs" href="https://supercode-ide.github.io/cs/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="uk" href="https://supercode-ide.github.io/uk/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="ro" href="https://supercode-ide.github.io/ro/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="hu" href="https://supercode-ide.github.io/hu/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="el" href="https://supercode-ide.github.io/el/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="he" href="https://supercode-ide.github.io/he/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="ms" href="https://supercode-ide.github.io/ms/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="fil" href="https://supercode-ide.github.io/tl/c-algorithms-data-structures-android.html">
+  <link rel="alternate" hreflang="bn" href="https://supercode-ide.github.io/bn/c-algorithms-data-structures-android.html">
+  <link rel="alternate" type="application/rss+xml" title="SuperCode IDE Guides &amp; Releases" href="https://supercode-ide.github.io/feed.xml">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
+  <meta property="og:title" content="Android 版 C 資料結構、演算法與位元運算編譯器 | SuperCode">
+  <meta property="og:description" content="在 Android 上 100% 離線練習 C17 鏈結串列、二元搜尋樹、雜湊表、排序演算法與嵌入式 stdint.h 位元欄位，內建 AST 錯誤雷達、一鍵 C 格式化與 A4 PDF 匯出。">
+  <meta property="og:url" content="https://supercode-ide.github.io/zh-tw/c-algorithms-data-structures-android.html">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-hero-zh-tw.png">
+  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-hero-zh-tw.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="本機 C17 與 C++20 多檔編譯器">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-hero-zh-tw.png">
+  <meta name="twitter:title" content="Android 版 C 資料結構、演算法與位元運算編譯器 | SuperCode">
+  <meta name="twitter:description" content="在 Android 上 100% 離線練習 C17 鏈結串列、二元搜尋樹、雜湊表、排序演算法與嵌入式 stdint.h 位元欄位，內建 AST 錯誤雷達、一鍵 C 格式化與 A4 PDF 匯出。">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <script>if(/SamsungBrowser/i.test(navigator.userAgent)){document.documentElement.classList.add('is-samsung');}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "SoftwareApplication",
+        "MobileApplication",
+        "WebApplication"
+      ],
+      "@id": "https://supercode-ide.github.io/#supercode-app",
+      "name": "Code Editor: SuperCode IDE",
+      "alternateName": [
+        "C Data Structures App Android",
+        "Offline C Algorithms Compiler",
+        "Embedded C17 Bitwise Lab Mobile"
+      ],
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Offline C17 Data Structures, Algorithms & Embedded Bitwise Studio for Android",
+      "inLanguage": "zh-Hant",
+      "fileSize": "40.2MB",
+      "softwareVersion": "1.55.05",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=zh-TW&listing=c-cpp-compiler",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=zh-TW&listing=c-cpp-compiler",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=zh-TW"
+      ],
+      "potentialAction": [
+        {
+          "@type": "InstallAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=zh-TW&listing=c-cpp-compiler",
+            "actionPlatform": [
+              "http://schema.org/AndroidPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          }
+        },
+        {
+          "@type": "ViewAction",
+          "name": "使用指南",
+          "target": [
+            "https://supercode-ide.github.io/tutorial/?lang=zh-tw",
+            "android-app://com.phoenixglobal.supercodeeditor/https/supercode-ide.github.io/tutorial"
+          ]
+        }
+      ],
+      "identifier": "com.phoenixglobal.supercodeeditor",
+      "url": "https://supercode-ide.github.io/zh-tw/c-algorithms-data-structures-android.html",
+      "screenshot": [
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/02_cpp20_compiler.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/01_python_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/03_web_php_devtools.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/04_file_manager_tree.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/05_sql_sqlite_studio.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/06_java17_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/07_visual_git_timemachine.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/08_symbol_keyboard_themes.webp"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Phoenix Global Studios",
+        "url": "https://supercode-ide.github.io/zh-tw/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "66"
+      },
+      "featureList": [
+        "Linked Lists, Trees, Graphs & Heap Labs Offline: Build recursive structs, doubly linked lists, binary search trees, adjacency lists, and dynamic malloc/calloc/realloc buffers offline with instant execution metrics.",
+        "Embedded stdint.h, Bitfields & Endian Prototyping: Verify uint8_t/uint32_t bitmasks, shift registers, CRC checksums, and packed struct layouts using standard <stdint.h>, <stdbool.h>, and <inttypes.h> headers.",
+        "O(N) Lexer Preprocessor & #if 0 Dead-Branch Pruning: Keep alternate algorithm variants inside #if 0 / #ifdef TEST blocks cleanly—SuperCode's zero-backtrack C lexer evaluates conditional branches so inactive main() stubs never cause duplicate-symbol errors.",
+        "Web Worker Isolation & Instant Infinite-Loop Kill: Accidentally created a cycle in a linked list? SuperCode executes offline C binaries inside a dedicated Web Worker so tapping Stop terminates runaway loops instantaneously with zero UI freeze.",
+        "1-Tap C Lexer Formatter & 21-Key Pointer Symbol Bar: Type ->, *, &, <<, >>, and != effortlessly on touchscreens, then run SuperCode's lexer-aware C formatter to indent nested switch/else blocks cleanly with 1-tap Undo.",
+        "Syntax-Highlighted A4 PDF Export for Coursework: Turn completed Data Structures assignments into crisp, paginated A4 PDF source listings with line numbers directly from your Android phone or tablet."
+      ],
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-zh-tw.png",
+      "dateModified": "2026-11-27"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://supercode-ide.github.io/zh-tw/c-algorithms-data-structures-android.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SuperCode IDE",
+          "item": "https://supercode-ide.github.io/zh-tw/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "C 編譯器與 IDE 中心",
+          "item": "https://supercode-ide.github.io/zh-tw/c-compiler.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "C 語言演算法、資料結構與位元運算",
+          "item": "https://supercode-ide.github.io/zh-tw/c-algorithms-data-structures-android.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "From Algorithm Sketch to Graded C17 Lab in 4 Steps",
+      "description": "Prototype, benchmark, format, and export university C data-structures labs completely offline.",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Define Structs, Pointers & Modular Headers",
+          "text": "Split node definitions into tree.h and traversal algorithms into main.c—SuperCode resolves #include dependencies automatically.",
+          "url": "https://supercode-ide.github.io/zh-tw/c-algorithms-data-structures-android.html#step1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Auto-Format & Catch Syntax Errors Before Compiling",
+          "text": "Use the 21-key symbol bar for -> and bitwise operators, and let Error Radar pinpoint missing semicolons or mismatched braces.",
+          "url": "https://supercode-ide.github.io/zh-tw/c-algorithms-data-structures-android.html#step2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Run & Stress-Test Safely in Isolated Worker",
+          "text": "Execute edge cases with instant millisecond timing; terminate accidental pointer cycles cleanly without crashing the editor.",
+          "url": "https://supercode-ide.github.io/zh-tw/c-algorithms-data-structures-android.html#step3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Export Clean A4 PDF or Commit via Visual Git",
+          "text": "Export print-ready syntax-colored PDF homework or push your multi-file C lab repo to GitHub using built-in Visual Git.",
+          "url": "https://supercode-ide.github.io/zh-tw/c-algorithms-data-structures-android.html#step4"
+        }
+      ],
+      "inLanguage": "zh-Hant"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://supercode-ide.github.io/c-algorithms-data-structures-android.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "我可以在完全離線的情況下用 C 編譯遞迴結構、鏈結串列與二元樹嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以。SuperCode 的離線 GNU C17 工具鏈完整支援遞迴結構、malloc/calloc/realloc/free 堆積記憶體管理、函式指標與多檔案 .c/.h 標頭檔，完全無需網路連線。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "如果我的鏈結串列或 while 迴圈在手機上陷入無窮迴圈會怎樣？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "離線 C 程式都在獨立的非 UI Web Worker 中執行。編輯器介面維持 120Hz 流暢回應，點擊停止即可立即終止 Worker，絕不會發生 ANR 無回應或閃退。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "SuperCode 是否支援在同一個資料夾內用 #if 0 保留多個測試用 main() 區塊？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "支援。SuperCode 的 O(N) C/C++ 前置處理器語彙分析器會在連結前預先評估 #if 0 與 #if false 死分支，因此封存的測試區塊絕不會觸發重複 main() 定義錯誤。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "我可以直接在 Android 上把凌亂的 C 作業排版並匯出成 PDF 嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以。點擊格式化即可執行語彙感知 C 格式化工具（支援一鍵復原），接著就能匯出排版整潔、具語法上色與行號的 A4 PDF 準備繳交。"
+          }
+        }
+      ],
+      "inLanguage": "zh-Hant"
+    }
+  ]
+}
+  </script>
+
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-page="c_dsa_lab">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="sc-logo" viewBox="20 14 68 72">
+    <path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/>
+    <path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/>
+    <path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/>
+    <path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+  </symbol>
+  <symbol id="gp-prism" viewBox="0 0 24 24">
+    <path fill="#4285F4" d="M3.6,2.4C3.3,2.7,3.1,3.2,3.1,3.8v16.4c0,0.6,0.2,1.1,0.5,1.4l0.1,0.1L12.9,12v-0.2L3.7,2.3L3.6,2.4z"/>
+    <path fill="#34A853" d="M16,15.1l-3.1-3.1v-0.2L16,8.7l0.1,0.1l3.6,2.1c1,0.6,1,1.5,0,2.1l-3.6,2.1L16,15.1z"/>
+    <path fill="#FBBC05" d="M16.1,15.1L12.9,12L3.6,21.3c0.3,0.4,0.9,0.4,1.6,0.1L16.1,15.1z"/>
+    <path fill="#EA4335" d="M16.1,8.9L5.2,2.6C4.5,2.2,3.9,2.3,3.6,2.7L12.9,12L16.1,8.9z"/>
+  </symbol>
+  <symbol id="i-ne" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8 20 7.2v9.6L12 21.2 4 16.8V7.2z"/><path d="M4 7.2l8 4.4 8-4.4M12 11.6v9.6"/></g></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2.8v3.2M15 2.8v3.2M9 18v3.2M15 18v3.2M2.8 9H6M2.8 15H6M18 9h3.2M18 15h3.2"/></g></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 2.8 7.8 12 12.6l9.2-4.8z"/><path d="m2.8 12 9.2 4.8 9.2-4.8"/><path d="m2.8 16.2 9.2 4.8 9.2-4.8"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="M2.8 8.5h18.4"/><path d="m9.5 12.5-2.2 2.2 2.2 2.2M14.5 12.5l2.2 2.2-2.2 2.2"/></g></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5.6" rx="7.6" ry="2.8"/><path d="M4.4 5.6v12.8c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8V5.6"/><path d="M4.4 12c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8"/></g></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="m7.2 9.5 3 2.5-3 2.5M12.8 15h4"/></g></symbol>
+  <symbol id="i-git" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.3"/><circle cx="6" cy="18" r="2.3"/><circle cx="18" cy="12" r="2.3"/><path d="M6 8.3v7.4M8.3 6h4.2a3.5 3.5 0 0 1 3.5 3.5v.2"/></g></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5h11a4 4 0 0 0 .7-7.94A5.5 5.5 0 0 0 7.4 9.2 3.8 3.8 0 0 0 6.5 18.5z"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M13 2.8 4.8 13.2h6.3L10.2 21.2 19.2 10.6h-6.4z"/></symbol>
+  <defs>
+    <radialGradient id="sc-rf-bg" cx="54" cy="54" r="76" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1C1C24"/>
+      <stop offset="100%" stop-color="#09090B"/>
+    </radialGradient>
+    <linearGradient id="sc-rf-ring" x1="24" y1="24" x2="84" y2="84" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="50%" stop-color="#8A2BE2"/>
+      <stop offset="100%" stop-color="#FF0055"/>
+    </linearGradient>
+    <linearGradient id="sc-rf-wl" x1="40" y1="48" x2="40" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#29B6F6"/>
+    </linearGradient>
+    <linearGradient id="sc-rf-wc" x1="54" y1="30" x2="54" y2="78" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8A2BE2"/>
+      <stop offset="100%" stop-color="#E040FB"/>
+    </linearGradient>
+    <linearGradient id="sc-rf-wr" x1="68" y1="45" x2="68" y2="63" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF0055"/>
+      <stop offset="100%" stop-color="#FF8A80"/>
+    </linearGradient>
+  </defs>
+  <symbol id="sc-radio-icon" viewBox="10 10 88 88">
+    <rect x="10" y="10" width="88" height="88" rx="22" fill="url(#sc-rf-bg)"/>
+    <circle cx="54" cy="54" r="42" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="0.9"/>
+    <circle cx="54" cy="54" r="34" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.9"/>
+    <path fill-rule="evenodd" fill="url(#sc-rf-ring)" d="M54,24 A30,30 0 1,0 54,84 A30,30 0 1,0 54,24 Z M54,32 A22,22 0 1,1 54,76 A22,22 0 1,1 54,32 Z"/>
+    <circle cx="54" cy="54" r="4" fill="#E0E0E0"/>
+    <line x1="40" y1="48" x2="40" y2="60" stroke="url(#sc-rf-wl)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="54" y1="30" x2="54" y2="44" stroke="url(#sc-rf-wc)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="54" y1="64" x2="54" y2="78" stroke="url(#sc-rf-wc)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="68" y1="45" x2="68" y2="63" stroke="url(#sc-rf-wr)" stroke-width="5" stroke-linecap="round"/>
+    <rect x="11" y="11" width="86" height="86" rx="21" fill="none" stroke="rgba(148,163,184,0.34)" stroke-width="1.6"/>
+  </symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 2.8 4.8 5.8v5.6c0 5 3.1 8.5 7.2 9.8 4.1-1.3 7.2-4.8 7.2-9.8V5.8z"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="index.html" class="brand" aria-label="SuperCode IDE Home">
+      <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+      <span>SuperCode</span>
+      <span class="brand__tag">IDE</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary Workspaces">
+      <a href="code-editor.html" data-i18n="nav_code_editor">程式碼編輯器</a>
+      <a href="large-file-editor.html" data-i18n="nav_large_file">GB 級大檔案</a>
+      <a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a>
+      <a href="c-compiler.html" class="is-current" data-i18n="nav_c_compiler">C17 編譯器</a>
+      <a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a>
+      <a href="java-ide.html" data-i18n="nav_java_ide">Java 17 IDE</a>
+      <a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a>
+      <a href="web-ide.html" data-i18n="nav_web_ide">Web 與 PHP</a>
+      <a href="sql-ide.html" data-i18n="nav_sql_ide">SQL 工作室</a>
+      <a href="git-client.html" data-i18n="nav_git_client">視覺化 Git</a>
+      <a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP 與 FTPS</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button id="langModalBtn" class="btn-lang-trigger" type="button" onclick="openLangModal()" aria-label="Select Language">
+        <svg class="lang-globe-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span id="langTriggerText">繁中</span>
+        <span class="lang-chevron" aria-hidden="true">&#9662;</span>
+      </button>
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-TW&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh-tw%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dc-algorithms-data-structures-android" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+        <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+        <span data-i18n="nav_cta">Google Play</span>
+      </a>
+      <a href="index.html" class="btn-home-icon" aria-label="Home" title="Home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5"/>
+          <path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
+        </svg>
+      </a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteDrawer" aria-label="完整網站地圖">
+        <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 8.5h16M4 15.5h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-drawer" id="siteDrawer" hidden>
+  <nav class="container menu-drawer__inner" aria-label="完整網站地圖">
+    <div class="drawer-top">
+      <div class="drawer-top__left">
+        <span class="drawer-top__dot" aria-hidden="true"></span>
+        <span class="drawer-top__title" data-i18n="sitemap_title">完整網站地圖</span>
+        <span class="drawer-top__badge" data-i18n="sitemap_badge">61 個頁面 · 32 種語言</span>
+      </div>
+      <button type="button" class="drawer-toggle-all" id="drawerToggleAll" data-expanded="false" data-expand-label="全部展開" data-collapse-label="全部收合">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8h9M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+        <span data-i18n="sitemap_expand_all">全部展開</span>
+      </button>
+    </div>
+    <div class="drawer-cols">
+      <div class="drawer-group">
+        <div class="drawer-group__title"><span data-i18n="grp_core">編輯器與大檔案</span></div>
+        <div class="drawer-group__list">
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="index.html"><span class="drawer-link__title" data-i18n="nav_home">總覽</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="code-editor.html"><span class="drawer-link__title" data-i18n="nav_code_editor">程式碼編輯器</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="large-file-editor.html"><span class="drawer-link__title" data-i18n="nav_large_file">GB 級大檔案</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="drawer-group">
+        <div class="drawer-group__title"><span data-i18n="grp_lang">離線編譯器與語言</span></div>
+        <div class="drawer-group__list">
+        <div class="drawer-node" data-hub="python-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="python-ide.html"><span class="drawer-link__title" data-i18n="nav_python_ide">Python IDE</span><span class="drawer-hub-count" aria-hidden="true">7</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-python-ide" aria-label="切換子頁面: Python IDE">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-python-ide" hidden>
+            <a class="drawer-sub__link" href="python-pip-manager.html"><span class="drawer-sub__code">PY-01</span><span class="drawer-sub__title">PIP 與離線 .whl 安裝指南</span></a>
+            <a class="drawer-sub__link" href="python-offline-libraries.html"><span class="drawer-sub__code">PY-02</span><span class="drawer-sub__title">支援的 Python 函式庫</span></a>
+            <a class="drawer-sub__link" href="python-data-science.html"><span class="drawer-sub__code">PY-03</span><span class="drawer-sub__title">NumPy、Pandas 與 Matplotlib</span></a>
+            <a class="drawer-sub__link" href="python-machine-learning.html"><span class="drawer-sub__code">PY-04</span><span class="drawer-sub__title">Scikit-Learn、OpenCV 與 AI</span></a>
+            <a class="drawer-sub__link" href="python-web-scraping-automation.html"><span class="drawer-sub__code">PY-05</span><span class="drawer-sub__title">網頁爬蟲、API 與機器人</span></a>
+            <a class="drawer-sub__link" href="python-projects-workspace.html"><span class="drawer-sub__code">PY-06</span><span class="drawer-sub__title">多檔案專案與 Git</span></a>
+            <a class="drawer-sub__link" href="learn-python-android.html"><span class="drawer-sub__code">PY-07</span><span class="drawer-sub__title">離線學習 Python</span></a>
+          </div>
+        </div>
+        <div class="drawer-node is-open" data-hub="c-compiler.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="c-compiler.html"><span class="drawer-link__title" data-i18n="nav_c_compiler">C17 編譯器</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="true" aria-controls="sub-c-compiler" aria-label="切換子頁面: C17 編譯器">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-c-compiler">
+            <a class="drawer-sub__link" href="c-pointers-memory-coursework.html"><span class="drawer-sub__code">C-01</span><span class="drawer-sub__title">指標、結構體與記憶體實驗室</span></a>
+            <a class="drawer-sub__link" href="c-multifile-header-projects.html"><span class="drawer-sub__code">C-02</span><span class="drawer-sub__title">多檔案 .c/.h 與 CMake 建置</span></a>
+            <a class="drawer-sub__link" href="c-scanf-file-io-console.html"><span class="drawer-sub__code">C-03</span><span class="drawer-sub__title">即時 scanf 標準輸入與檔案 I/O</span></a>
+            <a class="drawer-sub__link" href="c-posix-systems-programming.html"><span class="drawer-sub__code">C-04</span><span class="drawer-sub__title">POSIX 標頭檔、執行緒與 Socket</span></a>
+            <a class="drawer-sub__link is-current" href="c-algorithms-data-structures-android.html"><span class="drawer-sub__code">C-05</span><span class="drawer-sub__title">C 語言演算法、資料結構與位元運算</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="cpp-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="cpp-ide.html"><span class="drawer-link__title" data-i18n="nav_cpp_ide">C++20 IDE</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-cpp-ide" aria-label="切換子頁面: C++20 IDE">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-cpp-ide" hidden>
+            <a class="drawer-sub__link" href="cpp-competitive-programming-stl.html"><span class="drawer-sub__code">CPP-01</span><span class="drawer-sub__title">演算法競程與 STL 實驗室</span></a>
+            <a class="drawer-sub__link" href="cpp-oop-smart-pointers-modern.html"><span class="drawer-sub__code">CPP-02</span><span class="drawer-sub__title">現代 C++20、Ranges 與物件導向</span></a>
+            <a class="drawer-sub__link" href="cpp-multifile-hpp-builder.html"><span class="drawer-sub__code">CPP-03</span><span class="drawer-sub__title">21 個多檔案 C++ 與 CMake 專案</span></a>
+            <a class="drawer-sub__link" href="learn-cpp-offline-android.html"><span class="drawer-sub__code">CPP-04</span><span class="drawer-sub__title">在 Android 上離線學習 C++</span></a>
+            <a class="drawer-sub__link" href="cpp-debugging-cmake-git-workflow.html"><span class="drawer-sub__code">CPP-05</span><span class="drawer-sub__title">C++ 錯誤診斷、格式化與視覺化 Git</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="java-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="java-ide.html"><span class="drawer-link__title" data-i18n="nav_java_ide">Java 17 IDE</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-java-ide" aria-label="切換子頁面: Java 17 IDE">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-java-ide" hidden>
+            <a class="drawer-sub__link" href="java-17-records-oop-android.html"><span class="drawer-sub__code">JV-01</span><span class="drawer-sub__title">Java 17 Records、Sealed 與 Streams</span></a>
+            <a class="drawer-sub__link" href="java-multiclass-packages-ide.html"><span class="drawer-sub__code">JV-02</span><span class="drawer-sub__title">多類別套件與 .jar 函式庫</span></a>
+            <a class="drawer-sub__link" href="java-jdbc-sqlite-file-io.html"><span class="drawer-sub__code">JV-03</span><span class="drawer-sub__title">離線 Java SQLite JDBC 與 NIO.2</span></a>
+            <a class="drawer-sub__link" href="learn-java-dsa-android.html"><span class="drawer-sub__code">JV-04</span><span class="drawer-sub__title">離線學習 Java、AP CS 與演算法</span></a>
+            <a class="drawer-sub__link" href="java-25-project-templates-android.html"><span class="drawer-sub__code">JV-05</span><span class="drawer-sub__title">25 個多檔案 Java 專案範本</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="javascript-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="javascript-ide.html"><span class="drawer-link__title" data-i18n="nav_js_ide">JavaScript</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-javascript-ide" aria-label="切換子頁面: JavaScript">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-javascript-ide" hidden>
+            <a class="drawer-sub__link" href="javascript-node-core-modules-offline.html"><span class="drawer-sub__code">JS-01</span><span class="drawer-sub__title">29+ 離線 Node.js 核心模組</span></a>
+            <a class="drawer-sub__link" href="javascript-es2024-async-console.html"><span class="drawer-sub__code">JS-02</span><span class="drawer-sub__title">ES2024 非同步、頂層 Await 與 Fetch</span></a>
+            <a class="drawer-sub__link" href="javascript-web-crypto-security.html"><span class="drawer-sub__code">JS-03</span><span class="drawer-sub__title">Node 與 Web Crypto (AES-GCM / SHA)</span></a>
+            <a class="drawer-sub__link" href="learn-javascript-dsa-android.html"><span class="drawer-sub__code">JS-04</span><span class="drawer-sub__title">離線學習 JS 與練習演算法</span></a>
+            <a class="drawer-sub__link" href="javascript-json-regex-formatter-android.html"><span class="drawer-sub__code">JS-05</span><span class="drawer-sub__title">JSON/JSONC 格式化、Regex 與 REST Fetch</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="lua-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="lua-ide.html"><span class="drawer-link__title" data-i18n="nav_lua_ide">Lua 5.4</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-lua-ide" aria-label="切換子頁面: Lua 5.4">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-lua-ide" hidden>
+            <a class="drawer-sub__link" href="lua-game-scripting-metatables-oop.html"><span class="drawer-sub__code">LUA-01</span><span class="drawer-sub__title">遊戲腳本、Metatable 與協程</span></a>
+            <a class="drawer-sub__link" href="lua-builtin-modules-cjson-sqlite.html"><span class="drawer-sub__code">LUA-02</span><span class="drawer-sub__title">11+ 內建模組 (cjson、lsqlite3、lfs)</span></a>
+            <a class="drawer-sub__link" href="lua-54-bitwise-close-multifile.html"><span class="drawer-sub__code">LUA-03</span><span class="drawer-sub__title">Lua 5.4 位元運算、&lt;close&gt; 與多檔案</span></a>
+            <a class="drawer-sub__link" href="learn-lua-offline-android.html"><span class="drawer-sub__code">LUA-04</span><span class="drawer-sub__title">在 Android 上離線學習 Lua</span></a>
+            <a class="drawer-sub__link" href="lua-android-crypto-regex-http-automation.html"><span class="drawer-sub__code">LUA-05</span><span class="drawer-sub__title">加密、正規、HTTP 與檔案自動化</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="shell-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="shell-ide.html"><span class="drawer-link__title" data-i18n="nav_shell_ide">Shell 與 Kotlin</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-shell-ide" aria-label="切換子頁面: Shell 與 Kotlin">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-shell-ide" hidden>
+            <a class="drawer-sub__link" href="run-sh-shell-scripts-android-noroot.html"><span class="drawer-sub__code">SH-01</span><span class="drawer-sub__title">在 Android 免 Root 執行 .sh 腳本</span></a>
+            <a class="drawer-sub__link" href="shell-awk-sed-grep-log-pipelines.html"><span class="drawer-sub__code">SH-02</span><span class="drawer-sub__title">awk、sed、grep 與 curl 文字處理管線</span></a>
+            <a class="drawer-sub__link" href="kotlin-coding-app-compiler-android.html"><span class="drawer-sub__code">SH-03</span><span class="drawer-sub__title">Kotlin 開發 App 與 .kt/.kts 執行器</span></a>
+            <a class="drawer-sub__link" href="linux-devops-shell-sftp-git-android.html"><span class="drawer-sub__code">SH-04</span><span class="drawer-sub__title">隨身 Linux DevOps：Shell + SFTP + Git</span></a>
+            <a class="drawer-sub__link" href="kotlin-coroutines-collections-dsa-android.html"><span class="drawer-sub__code">SH-05</span><span class="drawer-sub__title">Kotlin 集合、OOP 與資料結構演算法練習</span></a>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="drawer-group">
+        <div class="drawer-group__title"><span data-i18n="grp_devops">網頁、SQL 與遠端維運</span></div>
+        <div class="drawer-group__list">
+        <div class="drawer-node" data-hub="web-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="web-ide.html"><span class="drawer-link__title" data-i18n="nav_web_ide">Web 與 PHP</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-web-ide" aria-label="切換子頁面: Web 與 PHP">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-web-ide" hidden>
+            <a class="drawer-sub__link" href="php-server-pdo-sqlite-android.html"><span class="drawer-sub__code">WEB-01</span><span class="drawer-sub__title">離線 PHP 8.2 與 PDO SQLite 伺服器</span></a>
+            <a class="drawer-sub__link" href="html-css-js-responsive-preview.html"><span class="drawer-sub__code">WEB-02</span><span class="drawer-sub__title">HTML5、CSS3 與三視口即時預覽</span></a>
+            <a class="drawer-sub__link" href="mobile-web-devtools-wasm-studio.html"><span class="drawer-sub__code">WEB-03</span><span class="drawer-sub__title">行動端網頁 DevTools、JS REPL 與 WASM</span></a>
+            <a class="drawer-sub__link" href="fullstack-web-sftp-deploy-android.html"><span class="drawer-sub__code">WEB-04</span><span class="drawer-sub__title">遠端 FTP/SFTP 網頁即時部署</span></a>
+            <a class="drawer-sub__link" href="web-canvas-media-export-pwa-android.html"><span class="drawer-sub__code">WEB-05</span><span class="drawer-sub__title">Canvas、媒體匯出與離線網頁應用</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="sql-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="sql-ide.html"><span class="drawer-link__title" data-i18n="nav_sql_ide">SQL 工作室</span><span class="drawer-hub-count" aria-hidden="true">5</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-sql-ide" aria-label="切換子頁面: SQL 工作室">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-sql-ide" hidden>
+            <a class="drawer-sub__link" href="sqlite-db-viewer-editor-android.html"><span class="drawer-sub__code">SQL-01</span><span class="drawer-sub__title">.db / .sqlite 檢視器與 9 種模式</span></a>
+            <a class="drawer-sub__link" href="sql-window-functions-fts5-json.html"><span class="drawer-sub__code">SQL-02</span><span class="drawer-sub__title">視窗函式、CTE、JSONB 與 FTS5</span></a>
+            <a class="drawer-sub__link" href="mysql-postgresql-syntax-android.html"><span class="drawer-sub__code">SQL-03</span><span class="drawer-sub__title">MySQL 與 PostgreSQL 相容性</span></a>
+            <a class="drawer-sub__link" href="sql-python-php-java-lua-integration.html"><span class="drawer-sub__code">SQL-04</span><span class="drawer-sub__title">跨 SQL、Python、PHP 與 Java 共用 .db</span></a>
+            <a class="drawer-sub__link" href="sql-crypto-regex-udf-scripts-android.html"><span class="drawer-sub__code">SQL-05</span><span class="drawer-sub__title">加密、Regex UDF 與多檔案 .read</span></a>
+          </div>
+        </div>
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="git-client.html"><span class="drawer-link__title" data-i18n="nav_git_client">視覺化 Git</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="sftp-client.html"><span class="drawer-link__title" data-i18n="nav_sftp_client">SFTP 與 FTPS</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="drawer-studio-foot">
+      <a class="drawer-studio-link" data-radio-promo="true" href="https://play.google.com/store/apps/details?id=com.hifiradio.fmradio&amp;hl=zh-TW&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh-tw%26utm_campaign%3Dhifi_radio_showcase%26utm_content%3Dsitemap_drawer" target="_blank" rel="noopener">
+        <svg class="drawer-studio-icon" aria-hidden="true"><use href="#sc-radio-icon"/></svg>
+        <span class="drawer-studio-meta">
+          <span class="drawer-studio-name">FM Radio: HiFi Radio AM FM</span>
+          <span class="drawer-studio-sub" data-i18n="radio_subtitle">即時雙語電台字幕 · 32 段 HiFi DSP</span>
+        </span>
+        <span class="drawer-studio-go"><span data-i18n="nav_cta">Google Play</span> &#8599;</span>
+      </a>
+    </div>
+  </nav>
+</div>
+
+<main id="top">
+  <!-- ==================== 01 · EDITORIAL HERO & INTERACTIVE WORKBENCH ==================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <div class="py-hub-crumb"><a href="c-compiler.html"><span class="crumb-arrow" aria-hidden="true">&larr;</span> C 編譯器與 IDE 中心</a><span class="sep">/</span><span>C 語言演算法、資料結構與位元運算</span></div>
+          <div class="trust-pill">
+            <span class="trust-pill__score"><span data-play-rating>4.9</span> &#9733;</span>
+            <span data-i18n="hero_tag">離線 GNU C17 · DSA 實驗室 · 嵌入式位元運算 · AST 錯誤雷達</span>
+          </div>
+
+          <h1 class="hero-h1" data-i18n="hero_h1">在 Android 離線精通 <span class="text-gradient">C 資料結構、演算法 &amp; 位元邏輯</span>。</h1>
+
+          <p class="hero-lead" data-i18n="hero_desc">無需筆電，隨時隨地撰寫鏈結串列、AVL/BST 樹、圖論、雜湊表與嵌入式 <code>stdint.h</code> 暫存器遮罩。SuperCode 將專屬 <strong>GNU C17 離線編譯器</strong>結合 <strong>O(N) 前置處理器掃描</strong>、即時<strong>錯誤雷達</strong>、一鍵 C 語彙格式化與 <strong>A4 PDF 實驗匯出</strong>。</p>
+
+          <div class="hero__cta" id="heroCta">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-TW&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh-tw%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dc-algorithms-data-structures-android" target="_blank" rel="noopener" class="btn btn--gold">
+              <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+              <span data-i18n="cta_btn">前往 Google Play 下載</span>
+            </a>
+            <a href="https://supercode-ide.github.io/tutorial/?lang=zh-tw&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+              <span data-i18n="cta_tutorial">使用指南</span>
+              <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <dl class="specs" aria-label="Key Specifications">
+                    <div class="spec"><dt>GNU C17</dt><dd data-i18n="dsa_s1">純 ANSI &amp; stdint.h</dd></div>
+          <div class="spec"><dt>O(N)</dt><dd data-i18n="dsa_s2">#if 0 語彙剔除器</dd></div>
+          <div class="spec"><dt>1-Tap</dt><dd data-i18n="dsa_s3">C 語彙格式化工具</dd></div>
+          <div class="spec"><dt>A4 PDF</dt><dd data-i18n="dsa_s4">實驗報告匯出</dd></div>
+        </dl>
+      </div>
+
+      <div class="wb-caption">
+        <div class="sec-index" style="margin-bottom:0">
+          <span class="num">01</span>
+          <span class="rule"></span>
+          <span data-i18n="wb_eyebrow">互動式 C17 演算法 &amp; 位元欄位工作台</span>
+        </div>
+        <span class="wb-caption__hint mono">Linked List · Binary Tree · Bitfields &amp; QuickSort</span>
+      </div>
+
+      <div class="ide-workbench">
+        <div class="wb-titlebar">
+          <div class="wb-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="wb-title" id="ide-compiler-label">c-dsa-lab/bst_inorder.c — Offline GNU C17 Binary Search Tree</div>
+          <button type="button" class="wb-run" id="btn-run-sandbox">
+            <span class="wb-run__tri" aria-hidden="true">&#9654;</span>
+            <span data-i18n="btn_run">執行範例</span>
+          </button>
+        </div>
+
+        <div class="wb-tabs" role="tablist" aria-label="Interactive Workspace Tabs">
+                    <button type="button" class="ide-tab active" data-tab="bst" role="tab" aria-selected="true"><i></i>bst_inorder.c</button>
+          <button type="button" class="ide-tab" data-tab="bit" role="tab" aria-selected="false"><i></i>register_bits.c</button>
+          <button type="button" class="ide-tab" data-tab="qsort" role="tab" aria-selected="false"><i></i>quicksort_bench.c</button>
+        </div>
+
+        <div class="wb-body">
+          <aside class="wb-explorer" aria-label="Project Explorer">
+            <div class="wb-explorer__head">Explorer</div>
+            <div class="wb-folder">&#9662; c-dsa-lab</div>
+                        <button type="button" class="wb-file active" data-tab="bst"><b>C</b><span>bst_inorder.c</span></button>
+            <button type="button" class="wb-file" data-tab="bit"><b>BIT</b><span>register_bits.c</span></button>
+            <button type="button" class="wb-file" data-tab="qsort"><b>ALG</b><span>quicksort_bench.c</span></button>
+          </aside>
+
+          <div class="wb-main">
+            <div class="ide-editor-body" id="ide-code-box" role="region" aria-label="Interactive Code Preview"></div>
+            <div class="ide-terminal" id="ide-terminal-drawer" aria-live="polite">
+              <div class="term-header">
+                <span data-i18n="term_title">互動式終端機輸出</span>
+                <div class="term-header-right">
+                  <span class="term-exec-badge" id="ide-exec-status">Ready</span>
+                  <button type="button" class="btn-term-close" id="btn-close-term" aria-label="Close terminal">&#10005;</button>
+                </div>
+              </div>
+              <div class="term-stream" id="ide-term-output"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wb-statusbar">
+          <span class="wb-statusbar__dot"><i></i><span id="wbStatusLang">GNU C17 · Offline Ready</span></span>
+          <div class="wb-statusbar__right">
+            <span>UTF-8</span>
+            <span>LF</span>
+            <span>Ln 13, Col 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- SC_REAL_GALLERY_START -->
+  <section class="section sc-real-gallery" id="screenshots" aria-label="應用程式預覽與螢幕擷圖">
+    <div class="container">
+      <div class="sc-gp-head">
+        <div class="sc-gp-head-left">
+          <div class="sc-gp-eyebrow" data-i18n="gal_eyebrow">Android 實機擷圖</div>
+          <h2 class="sc-gp-title" data-i18n="gal_title">應用程式預覽與螢幕擷圖</h2>
+          <p class="sc-gp-short" data-i18n="gal_short_desc">離線程式碼編輯器與手機寫程式 IDE：Python、C/C++、Java、JS、HTML、SQL、PHP 編譯器，Git/SFTP</p>
+        </div>
+        <a class="sc-gp-store-bar" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-TW&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh-tw%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dc-algorithms-data-structures-android" target="_blank" rel="noopener" aria-label="Code Editor: SuperCode IDE — Phoenix Global Studios">
+          <svg class="sc-gp-app-icon" width="38" height="38" viewBox="16 12 76 76" aria-hidden="true"><rect x="16" y="12" width="76" height="76" rx="18" fill="#070A10" stroke="#3B82F6" stroke-width="2"/><path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/><path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/><path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/><path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/></svg>
+          <span class="sc-gp-app-meta">
+            <span class="sc-gp-app-name">Code Editor: SuperCode IDE</span>
+            <span class="sc-gp-app-dev">Phoenix Global Studios</span>
+          </span>
+          <span class="sc-gp-store-arrow" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      </div>
+      <div class="sc-gp-stage">
+        <button type="button" class="sc-gp-nav sc-gp-nav--prev is-hidden" id="scGpPrev" aria-label="上一張">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="sc-gp-rail" id="scGpRail">
+          <button type="button" class="sc-gp-item sc-gp-item--feature" aria-label="程式碼編輯器：SuperCode IDE — 離線行動 IDE">
+            <img src="../assets/gallery/zh-tw/00_feature_graphic.webp" data-sc-file="00_feature_graphic.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_0" data-cap="程式碼編輯器：SuperCode IDE — 離線行動 IDE" alt="程式碼編輯器：SuperCode IDE — 離線行動 IDE" width="1024" height="500" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="本機 C17 與 C++20 多檔編譯器">
+            <img src="../assets/gallery/zh-tw/02_cpp20_compiler.webp" data-sc-file="02_cpp20_compiler.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_2" data-cap="本機 C17 與 C++20 多檔編譯器" alt="本機 C17 與 C++20 多檔編譯器" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="離線 Python 3.11 / 3.12 IDE 與分割終端機">
+            <img src="../assets/gallery/zh-tw/01_python_ide.webp" data-sc-file="01_python_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_1" data-cap="離線 Python 3.11 / 3.12 IDE 與分割終端機" alt="離線 Python 3.11 / 3.12 IDE 與分割終端機" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="本機 Web 伺服器、離線 PHP 與 DevTools">
+            <img src="../assets/gallery/zh-tw/03_web_php_devtools.webp" data-sc-file="03_web_php_devtools.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_3" data-cap="本機 Web 伺服器、離線 PHP 與 DevTools" alt="本機 Web 伺服器、離線 PHP 與 DevTools" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="全域檔案樹與本機檔案管理員 (SAF)">
+            <img src="../assets/gallery/zh-tw/04_file_manager_tree.webp" data-sc-file="04_file_manager_tree.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_4" data-cap="全域檔案樹與本機檔案管理員 (SAF)" alt="全域檔案樹與本機檔案管理員 (SAF)" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="離線 SQLite 3.54 工作室與 .db 檢視器">
+            <img src="../assets/gallery/zh-tw/05_sql_sqlite_studio.webp" data-sc-file="05_sql_sqlite_studio.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_5" data-cap="離線 SQLite 3.54 工作室與 .db 檢視器" alt="離線 SQLite 3.54 工作室與 .db 檢視器" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="離線 Java 17 IDE 與 SQLite JDBC">
+            <img src="../assets/gallery/zh-tw/06_java17_ide.webp" data-sc-file="06_java17_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_6" data-cap="離線 Java 17 IDE 與 SQLite JDBC" alt="離線 Java 17 IDE 與 SQLite JDBC" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="視覺化 Git 用戶端、時光機與 SFTP">
+            <img src="../assets/gallery/zh-tw/07_visual_git_timemachine.webp" data-sc-file="07_visual_git_timemachine.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_7" data-cap="視覺化 Git 用戶端、時光機與 SFTP" alt="視覺化 Git 用戶端、時光機與 SFTP" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="21 鍵符號列與 8 款匠心 IDE 主題">
+            <img src="../assets/gallery/zh-tw/08_symbol_keyboard_themes.webp" data-sc-file="08_symbol_keyboard_themes.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_8" data-cap="21 鍵符號列與 8 款匠心 IDE 主題" alt="21 鍵符號列與 8 款匠心 IDE 主題" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+        </div>
+        <button type="button" class="sc-gp-nav sc-gp-nav--next" id="scGpNext" aria-label="下一張">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  <div class="sc-lb-modal" id="scLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="應用程式預覽與螢幕擷圖">
+    <div class="sc-lb-topbar">
+      <button type="button" class="sc-lb-back" id="scLbBack">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-i18n="gal_back">返回</span>
+      </button>
+      <div class="sc-lb-meta">
+        <span class="sc-lb-counter" id="scLbCounter">1 / 9</span>
+        <span class="sc-lb-title" id="scLbTitle"></span>
+      </div>
+      <button type="button" class="sc-lb-close" id="scLbClose" aria-label="關閉預覽">&times;</button>
+    </div>
+    <div class="sc-lb-stage">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--prev" id="scLbPrev" aria-label="上一張">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <img class="sc-lb-img" id="scLbImg" src="" alt="SuperCode IDE Preview">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--next" id="scLbNext" aria-label="下一張">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="sc-lb-dots" id="scLbDots"></div>
+  </div>
+  <script defer src="../assets/gallery.js"></script>
+<!-- SC_REAL_GALLERY_END -->
+
+
+
+
+
+  <!-- ==================== 02 · CORE CAPABILITIES ==================== -->
+  <section class="section section--alt" id="capabilities">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">02</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_cap_eyebrow">核心能力</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="sec_cap_title">Bridge Offline Systems Headers With Full Linux Concurrency &amp; IPC</h2>
+        <p class="sec-lead" data-i18n="sec_cap_lead">SuperCode inspects your project's `#include` directives and system calls so OS labs work cleanly without manual cross-compilation setup.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="feature-grid feature-grid--6">
+          <article class="feature-card" id="cap1">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-chip"/></svg></span>
+              <span class="f-idx">02.1</span>
+            </div>
+            <h3 class="f-title" data-i18n="f1_title">離線實作鏈結串列、樹、圖論 &amp; 堆積實驗</h3>
+            <p class="f-desc" data-i18n="f1_desc">離線建構遞迴結構、雙向鏈結串列、二元搜尋樹、相鄰串列及 malloc/calloc/realloc 動態緩衝區，並即時掌握執行效能指標。</p>
+            <div class="f-code" data-i18n="f1_badge">malloc · calloc · realloc · 遞迴結構</div>
+          </article>
+          <article class="feature-card" id="cap2">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
+              <span class="f-idx">02.2</span>
+            </div>
+            <h3 class="f-title" data-i18n="f2_title">嵌入式 stdint.h、位元欄位 &amp; 位元組序原型驗證</h3>
+            <p class="f-desc" data-i18n="f2_desc">使用標準 &lt;stdint.h&gt;、&lt;stdbool.h&gt; 與 &lt;inttypes.h&gt; 標頭檔，驗證 uint8_t/uint32_t 位元遮罩、移位暫存器、CRC 校驗碼及緊湊結構配置。</p>
+            <div class="f-code" data-i18n="f2_badge">stdint.h · 位元遮罩 · 緊湊結構</div>
+          </article>
+          <article class="feature-card" id="cap3">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-cloud"/></svg></span>
+              <span class="f-idx">02.3</span>
+            </div>
+            <h3 class="f-title" data-i18n="f3_title">O(N) 語彙前置處理器 &amp; #if 0 死分支裁剪</h3>
+            <p class="f-desc" data-i18n="f3_desc">將備選演算法版本整潔保留於 #if 0 / #ifdef TEST 區塊中——SuperCode 零回溯 C 語彙分析器會預先評估條件分支，確保停用的 main() 存根絕不引發重複符號錯誤。</p>
+            <div class="f-code" data-i18n="f3_badge">#if 0 裁剪 · 多版本測試</div>
+          </article>
+          <article class="feature-card" id="cap4">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+              <span class="f-idx">02.4</span>
+            </div>
+            <h3 class="f-title" data-i18n="f4_title">Web Worker 隔離執行 &amp; 無窮迴圈即時終止</h3>
+            <p class="f-desc" data-i18n="f4_desc">不小心在鏈結串列寫出環狀迴圈？SuperCode 在獨立 Web Worker 中執行離線 C 二進位檔，點擊停止即可毫秒級終止失控迴圈，介面完全不卡頓。</p>
+            <div class="f-code" data-i18n="f4_badge">專屬 Worker · 零 ANR · 即時停止</div>
+          </article>
+          <article class="feature-card" id="cap5">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-term"/></svg></span>
+              <span class="f-idx">02.5</span>
+            </div>
+            <h3 class="f-title" data-i18n="f5_title">一鍵 C 語彙格式化 &amp; 21 鍵指標符號列</h3>
+            <p class="f-desc" data-i18n="f5_desc">在觸控螢幕輕鬆輸入 -&gt;、*、&amp;、&lt;&lt;、&gt;&gt; 與 !=，再透過語彙感知 C 格式化工具整齊縮排巢狀 switch/else 區塊，並支援一鍵復原。</p>
+            <div class="f-code" data-i18n="f5_badge">21 鍵 C 符號列 · 語彙格式化 · 一鍵復原</div>
+          </article>
+          <article class="feature-card" id="cap6">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-web"/></svg></span>
+              <span class="f-idx">02.6</span>
+            </div>
+            <h3 class="f-title" data-i18n="f6_title">支援作業繳交的語法上色 A4 PDF 匯出</h3>
+            <p class="f-desc" data-i18n="f6_desc">直接從 Android 手機或平板將完成的資料結構作業，轉換為排版精美、附帶行號的分頁 A4 PDF 原始碼清單。</p>
+            <div class="f-code" data-i18n="f6_badge">A4 PDF 列印 · 行號標示 · 離線就緒</div>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">專為手機、摺疊機與平板打造 · 輕量 40.2 MB</span>
+        <a class="link-arrow" href="c-compiler.html">
+          <span>C Compiler &amp; IDE Hub</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 03 · STEP-BY-STEP WORKFLOW GUIDE ==================== -->
+  <section class="section" id="workflow">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">03</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_wf_eyebrow">逐步操作流程</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="workflow_title">4 步驟從演算法草稿完成評分級 C17 實驗</h2>
+        <p class="sec-lead" data-i18n="workflow_lead">完全離線完成大學 C 語言資料結構實驗的原型設計、效能測試、格式化與匯出。</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="workflow-grid">
+          <article class="wf-step" id="step1">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 01</span>
+              <span class="wf-step__cmd">struct Node *</span>
+            </div>
+            <h3 data-i18n="wf1_title">定義結構、指標 &amp; 模組化標頭檔</h3>
+            <p data-i18n="wf1_desc">將節點定義拆至 tree.h，走訪演算法寫於 main.c——SuperCode 會自動解析 #include 相依性。</p>
+          </article>
+          <article class="wf-step" id="step2">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 02</span>
+              <span class="wf-step__cmd">CodeFormatEngine</span>
+            </div>
+            <h3 data-i18n="wf2_title">編譯前自動格式化 &amp; 攔截語法錯誤</h3>
+            <p data-i18n="wf2_desc">透過 21 鍵符號列快速輸入 -&gt; 與位元運算子，並讓錯誤雷達精準定位遺漏的分號或未成對大括號。</p>
+          </article>
+          <article class="wf-step" id="step3">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 03</span>
+              <span class="wf-step__cmd">Error Radar</span>
+            </div>
+            <h3 data-i18n="wf3_title">於隔離 Worker 中安全執行 &amp; 壓力測試</h3>
+            <p data-i18n="wf3_desc">以即時毫秒級計時測試極端案例；遇到誤寫的指標迴圈也能乾淨終止，絕不閃退編輯器。</p>
+          </article>
+          <article class="wf-step" id="step4">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 04</span>
+              <span class="wf-step__cmd">Export A4 PDF</span>
+            </div>
+            <h3 data-i18n="wf4_title">匯出整潔 A4 PDF 或透過視覺化 Git 提交</h3>
+            <p data-i18n="wf4_desc">匯出可立即列印的語法上色 PDF 作業，或使用內建視覺化 Git 將多檔案 C 實驗專案推送至 GitHub。</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="wf_foot_note">純 GNU C17 · 專屬 Worker 防護 · 一鍵格式化 &amp; A4 PDF 匯出</span>
+        <a class="link-arrow" href="https://supercode-ide.github.io/tutorial/?lang=zh-tw&amp;ref=official_web" data-supercode-tutorial="true">
+          <span data-i18n="cta_tutorial">使用指南</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 04 · FEATURED SUMMARY & COMPARISON MATRIX ==================== -->
+  <section class="section section--alt" id="comparison">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">04</span>
+        <span class="rule"></span>
+        <span data-i18n="comp_eyebrow">功能矩陣</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="table_h2">C17 演算法 &amp; 嵌入式能力矩陣</h2>
+        <p class="snippet-definition" data-i18n="snippet_p"><strong>SuperCode 離線 C17 DSA &amp; 位元運算工作室</strong>讓資工學生與嵌入式開發者在 Android 上離線撰寫、測試並格式化重度使用指標的資料結構（鏈結串列、BST、堆積、雜湊表）與固定寬度 <code>stdint.h</code> 位元邏輯，兼具 Web Worker 迴圈防護與 A4 PDF 匯出。</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="table-wrap">
+          <table class="obsidian-benchmark-table">
+            <caption data-i18n="table_caption">SUPERCODE C17 資料結構 &amp; 嵌入式功能一覽</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="th_0">C 工程領域</th>
+                <th scope="col" data-i18n="th_1">核心語言特性</th>
+                <th scope="col" data-i18n="th_2">離線支援度</th>
+                <th scope="col" data-i18n="th_3">防護 &amp; 工具鏈</th>
+                <th scope="col" data-i18n="th_4">最佳應用情境</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="tr1_c0">指標資料結構</th>
+                <td><strong data-i18n="tr1_c1">鏈結串列、BST/AVL、字典樹、圖論</strong></td>
+                <td data-i18n="tr1_c2">100% 離線 C17</td>
+                <td data-i18n="tr1_c3">Worker 迴圈終止</td>
+                <td data-i18n="tr1_c4">資工 / DSA 課程實驗</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr2_c0">排序 &amp; 搜尋</th>
+                <td><strong data-i18n="tr2_c1">qsort、bsearch、函式指標</strong></td>
+                <td data-i18n="tr2_c2">100% 離線 C17</td>
+                <td data-i18n="tr2_c3">毫秒級計時指標</td>
+                <td data-i18n="tr2_c4">演算法效能基準測試</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr3_c0">嵌入式位元運算 C</th>
+                <td><strong data-i18n="tr3_c1">stdint.h、位元欄位、遮罩、CRC</strong></td>
+                <td data-i18n="tr3_c2">100% 離線 C17</td>
+                <td data-i18n="tr3_c3">21 鍵 &lt;&lt;/&gt;&gt;/&amp; 符號列</td>
+                <td data-i18n="tr3_c4">韌體邏輯預演</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr4_c0">條件編譯建置</th>
+                <td><strong data-i18n="tr4_c1">#if 0 / #ifdef 分支裁剪</strong></td>
+                <td data-i18n="tr4_c2">O(N) C 語彙分析器</td>
+                <td data-i18n="tr4_c3">零誤報 main() 衝突</td>
+                <td data-i18n="tr4_c4">多解法並存測試</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr5_c0">程式碼品質 &amp; 繳交</th>
+                <td><strong data-i18n="tr5_c1">AST 錯誤雷達 + C 格式化工具</strong></td>
+                <td data-i18n="tr5_c2">100% 離線執行</td>
+                <td data-i18n="tr5_c3">A4 PDF + 視覺化 Git</td>
+                <td data-i18n="tr5_c4">大學作業評分繳交</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">專為手機、摺疊機與平板打造 · 輕量 40.2 MB</span>
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-TW&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh-tw%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dc-algorithms-data-structures-android" target="_blank" rel="noopener">
+          <span>Google Play</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 05 · VISIBLE EDITORIAL FAQ ==================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-head">
+          <div class="sec-index">
+            <span class="num">05</span>
+            <span class="rule"></span>
+            <span data-i18n="sec3_eyebrow">常見問答</span>
+          </div>
+          <h2 class="h2" data-i18n="sec3_title">常見問題</h2>
+          <p class="sec-lead" data-i18n="faq_lead">解答關於 C17 資料結構、指標環狀迴圈防護、嵌入式 stdint.h 標頭檔與作業匯出的常見問題。</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary><span data-i18n="faq1_q">我可以在完全離線的情況下用 C 編譯遞迴結構、鏈結串列與二元樹嗎？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq1_a">可以。SuperCode 的離線 GNU C17 工具鏈完整支援遞迴結構、malloc/calloc/realloc/free 堆積記憶體管理、函式指標與多檔案 .c/.h 標頭檔，完全無需網路連線。</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq2_q">如果我的鏈結串列或 while 迴圈在手機上陷入無窮迴圈會怎樣？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq2_a">離線 C 程式都在獨立的非 UI Web Worker 中執行。編輯器介面維持 120Hz 流暢回應，點擊停止即可立即終止 Worker，絕不會發生 ANR 無回應或閃退。</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq3_q">SuperCode 是否支援在同一個資料夾內用 #if 0 保留多個測試用 main() 區塊？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq3_a">支援。SuperCode 的 O(N) C/C++ 前置處理器語彙分析器會在連結前預先評估 #if 0 與 #if false 死分支，因此封存的測試區塊絕不會觸發重複 main() 定義錯誤。</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq4_q">我可以直接在 Android 上把凌亂的 C 作業排版並匯出成 PDF 嗎？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq4_a">可以。點擊格式化即可執行語彙感知 C 格式化工具（支援一鍵復原），接著就能匯出排版整潔、具語法上色與行號的 A4 PDF 準備繳交。</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==================== 06 · TOPICAL AUTHORITY ECOSYSTEM CLUSTER ==================== -->
+  <section class="section section--alt" id="ecosystem-guides">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">06</span>
+        <span class="rule"></span>
+        <span>C 程式設計與 GNU C17 指南</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2>完整 C17 編譯器技術文件總覽</h2>
+        <p class="sec-lead">在離線 C17 編譯器主頁面與 5 篇 Android C 語言專題指南之間自由切換。</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="py-cluster-grid">
+          <a href="c-compiler.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">C-HUB</span>
+              <span class="py-spoke-card__tag">GNU C17 · -lm · 核心總覽</span>
+            </div>
+            <h3>離線 GNU C17 編譯器總覽</h3>
+            <p>SuperCode 專用離線 GNU C17 編譯器總覽，涵蓋自動 .c/.h 連結、無緩衝 scanf 標準輸入與系統開發工作區。</p>
+            <div class="py-spoke-card__go">
+              <span>c-compiler</span>
+              <span>開啟指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="c-pointers-memory-coursework.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">C-01</span>
+              <span class="py-spoke-card__tag">指標 · malloc/free · CS101</span>
+            </div>
+            <h3>指標、結構體與記憶體實驗室</h3>
+            <p>無需過時的 Turbo C 替代方案，離線學習 ANSI/ISO C17 指標、結構體、動態堆積配置與位元運算。</p>
+            <div class="py-spoke-card__go">
+              <span>c-pointers-memory-coursework</span>
+              <span>開啟指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="c-multifile-header-projects.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">C-02</span>
+              <span class="py-spoke-card__tag">自動 .c/.h · Makefile · CMake</span>
+            </div>
+            <h3>多檔案 .c/.h 與 CMake 建置</h3>
+            <p>自動編譯高達 350 個檔案的多檔案 C 專案，支援解析 CMakeLists.txt、Makefile 與 #include 相依圖並具增量快取。</p>
+            <div class="py-spoke-card__go">
+              <span>c-multifile-header-projects</span>
+              <span>開啟指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="c-scanf-file-io-console.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">C-03</span>
+              <span class="py-spoke-card__tag">無緩衝 scanf · fopen · @args</span>
+            </div>
+            <h3>即時 scanf 標準輸入與檔案 I/O</h3>
+            <p>執行互動式 scanf/fgets 迴圈，具備自動 stdout 提示重新整理、// @args 命令列參數與工作區 fopen/fwrite 檔案同步。</p>
+            <div class="py-spoke-card__go">
+              <span>c-scanf-file-io-console</span>
+              <span>開啟指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="c-posix-systems-programming.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">C-04</span>
+              <span class="py-spoke-card__tag">unistd.h · pthread · sys/socket</span>
+            </div>
+            <h3>POSIX 標頭檔、執行緒與 Socket</h3>
+            <p>離線使用 POSIX 標頭檔（unistd.h、fcntl.h、dirent.h、regex.h、stdatomic.h），並無縫銜接雲端 C -pthread 與 Socket 建置。</p>
+            <div class="py-spoke-card__go">
+              <span>c-posix-systems-programming</span>
+              <span>開啟指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="c-algorithms-data-structures-android.html" class="py-spoke-card is-active">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">C-05</span>
+              <span class="py-spoke-card__tag">鏈結串列 · 樹狀結構 · 位元欄</span>
+            </div>
+            <h3>C 語言演算法、資料結構與位元運算</h3>
+            <p>在 GNU C17 中離線實作鏈結串列、二元搜尋樹、雜湊表、排序演算法與嵌入式 stdint.h 位元欄，搭配 AST 錯誤雷達與 A4 PDF 匯出。</p>
+            <div class="py-spoke-card__go">
+              <span>c-algorithms-data-structures-android</span>
+              <span>檢視指南中</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span>6 篇互連 C17 工程指南 · 純淨 GNU C17 (-std=gnu17) + POSIX</span>
+        <a class="link-arrow" href="c-compiler.html">
+          <span>C 編譯器與 IDE 中樞</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="siteFooter">
+  <div class="container">
+    <div class="footer-cta" id="footerCta">
+      <div>
+        <h2 class="h2" data-i18n="cta_h2">隨時隨地離線建置 &amp; 實測 C17 資料結構。</h2>
+        <p data-i18n="cta_desc">前往 Google Play 免費下載 SuperCode IDE——40.2 MB 即可擁有 GNU C17、AST 錯誤雷達、Web Worker 防護與 A4 PDF 匯出。</p>
+      </div>
+      <div class="footer-cta__btns">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-TW&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh-tw%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dc-algorithms-data-structures-android" target="_blank" rel="noopener" class="btn btn--gold">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="cta_btn">前往 Google Play 下載</span>
+        </a>
+        <a href="https://supercode-ide.github.io/tutorial/?lang=zh-tw&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+          <span data-i18n="cta_tutorial">使用指南</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+          <span>SuperCode</span>
+          <span class="brand__tag">IDE</span>
+        </a>
+        <p data-i18n="footer_tagline">專為全球 Android 工程師、學生與教育工作者打造的原生行動程式碼編輯器與離線開發工作室。</p>
+        <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
+        <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-TW&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh-tw%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dc-algorithms-data-structures-android" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://supercode-ide.github.io/tutorial/?lang=zh-tw&amp;ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">使用指南</span> &#8599;</a>
+          <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">選擇語言</span></button>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_core">編輯器與大檔案</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">總覽</a></li>
+          <li><a href="code-editor.html" data-i18n="nav_code_editor">程式碼編輯器</a></li>
+          <li><a href="large-file-editor.html" data-i18n="nav_large_file">GB 級大檔案</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_lang">離線編譯器與語言</h4>
+        <ul>
+          <li><a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a></li>
+          <li><a href="c-compiler.html" data-i18n="nav_c_compiler">C17 編譯器</a></li>
+          <li><a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a></li>
+          <li><a href="java-ide.html" data-i18n="nav_java_ide">Java 17 IDE</a></li>
+          <li><a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a></li>
+          <li><a href="lua-ide.html" data-i18n="nav_lua_ide">Lua 5.4</a></li>
+          <li><a href="shell-ide.html" data-i18n="nav_shell_ide">Shell 與 Kotlin</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_devops">網頁、SQL 與遠端維運</h4>
+        <ul>
+          <li><a href="web-ide.html" data-i18n="nav_web_ide">Web 與 PHP</a></li>
+          <li><a href="sql-ide.html" data-i18n="nav_sql_ide">SQL 工作室</a></li>
+          <li><a href="git-client.html" data-i18n="nav_git_client">視覺化 Git</a></li>
+          <li><a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP 與 FTPS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="studio-ecosystem">
+      <a class="studio-promo-card" data-radio-promo="true" href="https://play.google.com/store/apps/details?id=com.hifiradio.fmradio&amp;hl=zh-TW&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh-tw%26utm_campaign%3Dhifi_radio_showcase%26utm_content%3Dfooter_showcase" target="_blank" rel="noopener" aria-label="FM Radio: HiFi Radio AM FM — 即時雙語電台字幕 · 32 段 HiFi DSP">
+        <svg class="studio-promo-icon" aria-hidden="true"><use href="#sc-radio-icon"/></svg>
+        <span class="studio-promo-meta">
+          <span class="studio-promo-eyebrow" data-i18n="radio_eyebrow">PHOENIX GLOBAL STUDIOS 旗下作品</span>
+          <span class="studio-promo-title">FM Radio: HiFi Radio AM FM</span>
+          <span class="studio-promo-sub" data-i18n="radio_subtitle">即時雙語電台字幕 · 32 段 HiFi DSP</span>
+        </span>
+        <span class="studio-promo-cta">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="nav_cta">Google Play</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </span>
+        <span class="studio-promo-arrow-mini" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </span>
+      </a>
+    </div>
+
+    <div class="footer-legal">
+      <span>&copy; 2026 Phoenix Global Studios. All rights reserved.</span>
+      <span class="mono">com.phoenixglobal.supercodeeditor</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="mobile-bottom-bar" id="mobileBottomBar" aria-label="Quick App Actions">
+  <div class="dock-app-icon" aria-hidden="true"><svg><use href="#sc-logo"/></svg></div>
+  <div class="bottom-bar-info">
+    <div class="bottom-bar-title">SuperCode</div>
+    <div class="bottom-bar-sub"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  </div>
+  <div class="bottom-bar-actions">
+    <a href="https://supercode-ide.github.io/tutorial/?lang=zh-tw&amp;ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">使用指南</a>
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-TW&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh-tw%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dc-algorithms-data-structures-android" target="_blank" rel="noopener" class="btn-play-mini">
+      <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
+      <span data-i18n="bottom_cta">下載</span>
+    </a>
+  </div>
+</aside>
+
+<div class="modal-overlay" id="langModal" role="dialog" aria-modal="true" aria-labelledby="langModalTitle">
+  <div class="lang-modal">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div class="modal-header">
+      <h3 id="langModalTitle"><span data-i18n="modal_title">選擇語言</span><span class="modal-lang-count">32</span></h3>
+      <button type="button" class="btn-close-modal" onclick="closeLangModal()" aria-label="關閉">&#10005;</button>
+    </div>
+    <div class="lang-grid">
+      <button type="button" class="lang-option" data-code="en" onclick="setLanguage('en')"><span class="lang-option__name">English</span><span class="lang-option__code">EN</span></button>
+      <button type="button" class="lang-option" data-code="zh" onclick="setLanguage('zh')"><span class="lang-option__name">简体中文</span><span class="lang-option__code">简中</span></button>
+      <button type="button" class="lang-option active" data-code="zh-tw" onclick="setLanguage('zh-tw')"><span class="lang-option__name">繁體中文</span><span class="lang-option__code">繁中</span></button>
+      <button type="button" class="lang-option" data-code="es" onclick="setLanguage('es')"><span class="lang-option__name">Español</span><span class="lang-option__code">ES</span></button>
+      <button type="button" class="lang-option" data-code="pt" onclick="setLanguage('pt')"><span class="lang-option__name">Português</span><span class="lang-option__code">PT</span></button>
+      <button type="button" class="lang-option" data-code="ja" onclick="setLanguage('ja')"><span class="lang-option__name">日本語</span><span class="lang-option__code">日本語</span></button>
+      <button type="button" class="lang-option" data-code="ko" onclick="setLanguage('ko')"><span class="lang-option__name">한국어</span><span class="lang-option__code">한국어</span></button>
+      <button type="button" class="lang-option" data-code="de" onclick="setLanguage('de')"><span class="lang-option__name">Deutsch</span><span class="lang-option__code">DE</span></button>
+      <button type="button" class="lang-option" data-code="fr" onclick="setLanguage('fr')"><span class="lang-option__name">Français</span><span class="lang-option__code">FR</span></button>
+      <button type="button" class="lang-option" data-code="ru" onclick="setLanguage('ru')"><span class="lang-option__name">Русский</span><span class="lang-option__code">RU</span></button>
+      <button type="button" class="lang-option" data-code="hi" onclick="setLanguage('hi')"><span class="lang-option__name">हिन्दी</span><span class="lang-option__code">HI</span></button>
+      <button type="button" class="lang-option" data-code="id" onclick="setLanguage('id')"><span class="lang-option__name">Bahasa Indonesia</span><span class="lang-option__code">ID</span></button>
+      <button type="button" class="lang-option" data-code="it" onclick="setLanguage('it')"><span class="lang-option__name">Italiano</span><span class="lang-option__code">IT</span></button>
+      <button type="button" class="lang-option" data-code="vi" onclick="setLanguage('vi')"><span class="lang-option__name">Tiếng Việt</span><span class="lang-option__code">VI</span></button>
+      <button type="button" class="lang-option" data-code="th" onclick="setLanguage('th')"><span class="lang-option__name">ไทย</span><span class="lang-option__code">ไทย</span></button>
+      <button type="button" class="lang-option" data-code="tr" onclick="setLanguage('tr')"><span class="lang-option__name">Türkçe</span><span class="lang-option__code">TR</span></button>
+      <button type="button" class="lang-option" data-code="ar" onclick="setLanguage('ar')"><span class="lang-option__name">العربية</span><span class="lang-option__code">AR</span></button>
+      <button type="button" class="lang-option" data-code="pl" onclick="setLanguage('pl')"><span class="lang-option__name">Polski</span><span class="lang-option__code">PL</span></button>
+      <button type="button" class="lang-option" data-code="nl" onclick="setLanguage('nl')"><span class="lang-option__name">Nederlands</span><span class="lang-option__code">NL</span></button>
+      <button type="button" class="lang-option" data-code="sv" onclick="setLanguage('sv')"><span class="lang-option__name">Svenska</span><span class="lang-option__code">SV</span></button>
+      <button type="button" class="lang-option" data-code="nb" onclick="setLanguage('nb')"><span class="lang-option__name">Norsk Bokmål</span><span class="lang-option__code">NB</span></button>
+      <button type="button" class="lang-option" data-code="da" onclick="setLanguage('da')"><span class="lang-option__name">Dansk</span><span class="lang-option__code">DA</span></button>
+      <button type="button" class="lang-option" data-code="fi" onclick="setLanguage('fi')"><span class="lang-option__name">Suomi</span><span class="lang-option__code">FI</span></button>
+      <button type="button" class="lang-option" data-code="cs" onclick="setLanguage('cs')"><span class="lang-option__name">Čeština</span><span class="lang-option__code">CS</span></button>
+      <button type="button" class="lang-option" data-code="uk" onclick="setLanguage('uk')"><span class="lang-option__name">Українська</span><span class="lang-option__code">UK</span></button>
+      <button type="button" class="lang-option" data-code="ro" onclick="setLanguage('ro')"><span class="lang-option__name">Română</span><span class="lang-option__code">RO</span></button>
+      <button type="button" class="lang-option" data-code="hu" onclick="setLanguage('hu')"><span class="lang-option__name">Magyar</span><span class="lang-option__code">HU</span></button>
+      <button type="button" class="lang-option" data-code="el" onclick="setLanguage('el')"><span class="lang-option__name">Ελληνικά</span><span class="lang-option__code">EL</span></button>
+      <button type="button" class="lang-option" data-code="he" onclick="setLanguage('he')"><span class="lang-option__name">עברית</span><span class="lang-option__code">HE</span></button>
+      <button type="button" class="lang-option" data-code="ms" onclick="setLanguage('ms')"><span class="lang-option__name">Bahasa Melayu</span><span class="lang-option__code">MS</span></button>
+      <button type="button" class="lang-option" data-code="tl" onclick="setLanguage('tl')"><span class="lang-option__name">Filipino</span><span class="lang-option__code">FIL</span></button>
+      <button type="button" class="lang-option" data-code="bn" onclick="setLanguage('bn')"><span class="lang-option__name">বাংলা</span><span class="lang-option__code">BN</span></button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var WORKBENCH_SAMPLES = {"bst": {"label": "c-dsa-lab/bst_inorder.c \u2014 Offline GNU C17 Binary Search Tree", "status": "GNU C17 \u00b7 Offline Ready", "lines": ["<span class=\"tok-kw\">#include<\/span> <span class=\"tok-str\">&lt;stdio.h&gt;<\/span>", "<span class=\"tok-kw\">#include<\/span> <span class=\"tok-str\">&lt;stdlib.h&gt;<\/span>", "<span class=\"tok-kw\">typedef struct<\/span> Node { <span class=\"tok-kw\">int<\/span> v; <span class=\"tok-kw\">struct<\/span> Node *l, *r; } Node;", "Node* <span class=\"tok-fn\">ins<\/span>(Node* n, <span class=\"tok-kw\">int<\/span> v) {", "  <span class=\"tok-kw\">if<\/span> (!n) { Node* x = <span class=\"tok-fn\">calloc<\/span>(<span class=\"tok-num\">1<\/span>, <span class=\"tok-kw\">sizeof<\/span>(Node)); x-&gt;v = v; <span class=\"tok-kw\">return<\/span> x; }", "  <span class=\"tok-kw\">if<\/span> (v &lt; n-&gt;v) n-&gt;l = <span class=\"tok-fn\">ins<\/span>(n-&gt;l, v); <span class=\"tok-kw\">else<\/span> n-&gt;r = <span class=\"tok-fn\">ins<\/span>(n-&gt;r, v);", "  <span class=\"tok-kw\">return<\/span> n;", "}", "<span class=\"tok-kw\">void<\/span> <span class=\"tok-fn\">walk<\/span>(Node* n) { <span class=\"tok-kw\">if<\/span> (n) { <span class=\"tok-fn\">walk<\/span>(n-&gt;l); <span class=\"tok-fn\">printf<\/span>(<span class=\"tok-str\">&quot;%d &quot;<\/span>, n-&gt;v); <span class=\"tok-fn\">walk<\/span>(n-&gt;r); } }", "<span class=\"tok-kw\">int<\/span> <span class=\"tok-fn\">main<\/span>(<span class=\"tok-kw\">void<\/span>) { Node* r = NULL; <span class=\"tok-kw\">int<\/span> a[] = {<span class=\"tok-num\">42<\/span>,<span class=\"tok-num\">17<\/span>,<span class=\"tok-num\">88<\/span>,<span class=\"tok-num\">9<\/span>,<span class=\"tok-num\">23<\/span>}; <span class=\"tok-kw\">for<\/span>(<span class=\"tok-kw\">int<\/span> i=<span class=\"tok-num\">0<\/span>;i&lt;<span class=\"tok-num\">5<\/span>;i++) r=<span class=\"tok-fn\">ins<\/span>(r,a[i]); <span class=\"tok-fn\">walk<\/span>(r); }"], "output": ["<span class=\"term-prompt\">&#9656;<\/span> cc -std=gnu17 bst_inorder.c -lm", "9 17 23 42 88 ", "<span class=\"term-info\">&#10003; Exit 0 &middot; 1.6 ms &middot; Zero Memory Leaks<\/span>"]}, "bit": {"label": "c-dsa-lab/register_bits.c \u2014 Embedded stdint.h Bitfields", "status": "C17 \u00b7 Bitwise Lab", "lines": ["<span class=\"tok-kw\">#include<\/span> <span class=\"tok-str\">&lt;stdio.h&gt;<\/span>", "<span class=\"tok-kw\">#include<\/span> <span class=\"tok-str\">&lt;stdint.h&gt;<\/span>", "<span class=\"tok-kw\">int<\/span> <span class=\"tok-fn\">main<\/span>(<span class=\"tok-kw\">void<\/span>) {", "  <span class=\"tok-kw\">uint32_t<\/span> reg = (<span class=\"tok-num\">0xA5u<\/span> &lt;&lt; <span class=\"tok-num\">8<\/span>) | (<span class=\"tok-num\">1u<\/span> &lt;&lt; <span class=\"tok-num\">3<\/span>) | <span class=\"tok-num\">0x3u<\/span>;", "  <span class=\"tok-fn\">printf<\/span>(<span class=\"tok-str\">&quot;REG=0x%04X MODE=%u IRQ=%u\\n&quot;<\/span>, reg, reg &amp; <span class=\"tok-num\">7u<\/span>, (reg &gt;&gt; <span class=\"tok-num\">3<\/span>) &amp; <span class=\"tok-num\">1u<\/span>);", "  <span class=\"tok-kw\">return<\/span> <span class=\"tok-num\">0<\/span>;", "}"], "output": ["<span class=\"term-prompt\">&#9656;<\/span> cc -std=gnu17 register_bits.c", "REG=0xA50B MODE=3 IRQ=1", "<span class=\"term-info\">&#10003; Exit 0 &middot; 1.2 ms &middot; Web Worker Isolated<\/span>"]}, "qsort": {"label": "c-dsa-lab/quicksort_bench.c \u2014 Function Pointer Comparator", "status": "C17 \u00b7 stdlib qsort", "lines": ["<span class=\"tok-kw\">#include<\/span> <span class=\"tok-str\">&lt;stdio.h&gt;<\/span>", "<span class=\"tok-kw\">#include<\/span> <span class=\"tok-str\">&lt;stdlib.h&gt;<\/span>", "<span class=\"tok-kw\">static int<\/span> <span class=\"tok-fn\">cmp<\/span>(<span class=\"tok-kw\">const void<\/span>* a, <span class=\"tok-kw\">const void<\/span>* b) { <span class=\"tok-kw\">return<\/span> *(<span class=\"tok-kw\">const int<\/span>*)a - *(<span class=\"tok-kw\">const int<\/span>*)b; }", "<span class=\"tok-kw\">int<\/span> <span class=\"tok-fn\">main<\/span>(<span class=\"tok-kw\">void<\/span>) {", "  <span class=\"tok-kw\">int<\/span> arr[] = {<span class=\"tok-num\">64<\/span>, <span class=\"tok-num\">12<\/span>, <span class=\"tok-num\">91<\/span>, <span class=\"tok-num\">5<\/span>, <span class=\"tok-num\">38<\/span>};", "  <span class=\"tok-fn\">qsort<\/span>(arr, <span class=\"tok-num\">5<\/span>, <span class=\"tok-kw\">sizeof<\/span>(<span class=\"tok-kw\">int<\/span>), cmp);", "  <span class=\"tok-fn\">printf<\/span>(<span class=\"tok-str\">&quot;Min=%d Median=%d Max=%d\\n&quot;<\/span>, arr[<span class=\"tok-num\">0<\/span>], arr[<span class=\"tok-num\">2<\/span>], arr[<span class=\"tok-num\">4<\/span>]);", "}"], "output": ["<span class=\"term-prompt\">&#9656;<\/span> cc -std=gnu17 quicksort_bench.c", "Min=5 Median=38 Max=91", "<span class=\"term-info\">&#10003; Exit 0 &middot; 1.3 ms<\/span>"]}};
+    var currentTab = 'bst';
+    var runTimer = null;
+
+    function renderWorkbench(tabKey, animateRun) {
+      var sample = WORKBENCH_SAMPLES[tabKey] || WORKBENCH_SAMPLES['bst'];
+      if (!sample) { return; }
+      currentTab = tabKey;
+      var labelEl = document.getElementById('ide-compiler-label');
+      if (labelEl) { labelEl.textContent = sample.label; }
+      var statusEl = document.getElementById('wbStatusLang');
+      if (statusEl) { statusEl.textContent = sample.status; }
+
+      var tabs = document.querySelectorAll('.ide-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        var active = tabs[i].getAttribute('data-tab') === tabKey;
+        tabs[i].classList.toggle('active', active);
+        tabs[i].setAttribute('aria-selected', active ? 'true' : 'false');
+      }
+      var files = document.querySelectorAll('.wb-file');
+      for (var f = 0; f < files.length; f++) {
+        files[f].classList.toggle('active', files[f].getAttribute('data-tab') === tabKey);
+      }
+
+      var codeBox = document.getElementById('ide-code-box');
+      if (codeBox) {
+        var html = '';
+        for (var l = 0; l < sample.lines.length; l++) {
+          var activeCls = (l === sample.lines.length - 1) ? ' active-line' : '';
+          html += '<div class="code-line' + activeCls + '"><span class="ln">' + (l + 1) + '</span><span class="code-content">' + sample.lines[l] + '</span></div>';
+        }
+        codeBox.innerHTML = html;
+      }
+
+      if (animateRun) {
+        runWorkbenchSample();
+      }
+    }
+
+    function runWorkbenchSample() {
+      var sample = WORKBENCH_SAMPLES[currentTab] || WORKBENCH_SAMPLES['bst'];
+      var drawer = document.getElementById('ide-terminal-drawer');
+      var out = document.getElementById('ide-term-output');
+      var badge = document.getElementById('ide-exec-status');
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (!drawer || !out || !sample) { return; }
+
+      if (runTimer) { clearTimeout(runTimer); }
+      drawer.classList.add('is-open');
+      if (runBtn) { runBtn.classList.add('is-running'); }
+      if (badge) { badge.textContent = 'Running...'; badge.classList.remove('done'); }
+      out.innerHTML = '';
+
+      var idx = 0;
+      function step() {
+        if (idx < sample.output.length) {
+          var row = document.createElement('span');
+          row.className = 'term-line-item';
+          row.innerHTML = sample.output[idx];
+          out.appendChild(row);
+          idx++;
+          runTimer = setTimeout(step, 80);
+        } else {
+          var cur = document.createElement('span');
+          cur.className = 'term-cursor';
+          cur.textContent = '\u258b';
+          out.appendChild(cur);
+          if (badge) { badge.textContent = 'Completed'; badge.classList.add('done'); }
+          if (runBtn) { runBtn.classList.remove('is-running'); }
+        }
+      }
+      step();
+    }
+
+    function initNavigationAndSmartBar() {
+      var menuBtn = document.getElementById('menuBtn');
+      var drawer = document.getElementById('siteDrawer');
+      var bar = document.getElementById('mobileBottomBar');
+      var heroCta = document.getElementById('heroCta');
+      var siteFooter = document.getElementById('siteFooter');
+
+      function syncBar() {
+        if (!bar) { return; }
+        var drawerOpen = Boolean(drawer && !drawer.hasAttribute('hidden'));
+        var modalEl = document.getElementById('langModal');
+        var modalOpen = Boolean(modalEl && modalEl.classList.contains('show'));
+        var vh = window.innerHeight || document.documentElement.clientHeight || 800;
+        var heroInView = false;
+        if (heroCta) {
+          var hr = heroCta.getBoundingClientRect();
+          heroInView = (hr.bottom > 0 && hr.top < vh);
+        }
+        var footerInView = false;
+        if (siteFooter) {
+          var fr = siteFooter.getBoundingClientRect();
+          footerInView = (fr.top < vh + 24);
+        }
+        var scrollYVal = window.pageYOffset || window.scrollY || 0;
+        var docH = Math.max(document.body ? document.body.scrollHeight : 0, document.documentElement ? document.documentElement.scrollHeight : 0);
+        var nearBottom = (vh + scrollYVal) >= (docH - 120);
+        var shouldShow = !drawerOpen && !modalOpen && !heroInView && !footerInView && !nearBottom;
+        bar.classList.toggle('is-visible', shouldShow);
+      }
+
+      window.__supercodeSyncMobileBar = syncBar;
+
+      function setDrawer(open) {
+        if (!menuBtn || !drawer) { return; }
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { drawer.removeAttribute('hidden'); }
+        else { drawer.setAttribute('hidden', ''); }
+        syncBar();
+      }
+      if (menuBtn && drawer) {
+        menuBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          setDrawer(menuBtn.getAttribute('aria-expanded') !== 'true');
+        });
+        drawer.addEventListener('click', function (e) {
+          if (e.target && e.target.closest('a')) { setDrawer(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!drawer.hasAttribute('hidden') && !drawer.contains(e.target) && e.target !== menuBtn && !menuBtn.contains(e.target)) {
+            setDrawer(false);
+          }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') { setDrawer(false); }
+        });
+      }
+
+      if (bar) {
+        window.addEventListener('scroll', syncBar, { passive: true });
+        window.addEventListener('resize', syncBar);
+        syncBar();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var tabBtns = document.querySelectorAll('.ide-tab, .wb-file');
+      for (var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', function () {
+          renderWorkbench(this.getAttribute('data-tab'), true);
+        });
+      }
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (runBtn) { runBtn.addEventListener('click', function () { runWorkbenchSample(); }); }
+      var closeTerm = document.getElementById('btn-close-term');
+      if (closeTerm) {
+        closeTerm.addEventListener('click', function () {
+          var d = document.getElementById('ide-terminal-drawer');
+          if (d) { d.classList.remove('is-open'); }
+        });
+      }
+      initNavigationAndSmartBar();
+      renderWorkbench('bst', false);
+    });
+  })();
+</script>
+<script>window.__SUPERCODE_STATIC_LANG__="zh-tw";window.__SUPERCODE_STATIC_CANONICAL__="https://supercode-ide.github.io/zh-tw/c-algorithms-data-structures-android.html";</script>
+<script src="../i18n_extended.js"></script>
+</body>
+</html>
