@@ -289,6 +289,41 @@
   <symbol id="i-git" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.3"/><circle cx="6" cy="18" r="2.3"/><circle cx="18" cy="12" r="2.3"/><path d="M6 8.3v7.4M8.3 6h4.2a3.5 3.5 0 0 1 3.5 3.5v.2"/></g></symbol>
   <symbol id="i-cloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5h11a4 4 0 0 0 .7-7.94A5.5 5.5 0 0 0 7.4 9.2 3.8 3.8 0 0 0 6.5 18.5z"/></g></symbol>
   <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M13 2.8 4.8 13.2h6.3L10.2 21.2 19.2 10.6h-6.4z"/></symbol>
+  <defs>
+    <radialGradient id="sc-rf-bg" cx="54" cy="54" r="76" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1C1C24"/>
+      <stop offset="100%" stop-color="#09090B"/>
+    </radialGradient>
+    <linearGradient id="sc-rf-ring" x1="24" y1="24" x2="84" y2="84" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="50%" stop-color="#8A2BE2"/>
+      <stop offset="100%" stop-color="#FF0055"/>
+    </linearGradient>
+    <linearGradient id="sc-rf-wl" x1="40" y1="48" x2="40" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#29B6F6"/>
+    </linearGradient>
+    <linearGradient id="sc-rf-wc" x1="54" y1="30" x2="54" y2="78" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8A2BE2"/>
+      <stop offset="100%" stop-color="#E040FB"/>
+    </linearGradient>
+    <linearGradient id="sc-rf-wr" x1="68" y1="45" x2="68" y2="63" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF0055"/>
+      <stop offset="100%" stop-color="#FF8A80"/>
+    </linearGradient>
+  </defs>
+  <symbol id="sc-radio-icon" viewBox="10 10 88 88">
+    <rect x="10" y="10" width="88" height="88" rx="22" fill="url(#sc-rf-bg)"/>
+    <circle cx="54" cy="54" r="42" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="0.9"/>
+    <circle cx="54" cy="54" r="34" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.9"/>
+    <path fill-rule="evenodd" fill="url(#sc-rf-ring)" d="M54,24 A30,30 0 1,0 54,84 A30,30 0 1,0 54,24 Z M54,32 A22,22 0 1,1 54,76 A22,22 0 1,1 54,32 Z"/>
+    <circle cx="54" cy="54" r="4" fill="#E0E0E0"/>
+    <line x1="40" y1="48" x2="40" y2="60" stroke="url(#sc-rf-wl)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="54" y1="30" x2="54" y2="44" stroke="url(#sc-rf-wc)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="54" y1="64" x2="54" y2="78" stroke="url(#sc-rf-wc)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="68" y1="45" x2="68" y2="63" stroke="url(#sc-rf-wr)" stroke-width="5" stroke-linecap="round"/>
+    <rect x="11" y="11" width="86" height="86" rx="21" fill="none" stroke="rgba(148,163,184,0.34)" stroke-width="1.6"/>
+  </symbol>
   <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 2.8 4.8 5.8v5.6c0 5 3.1 8.5 7.2 9.8 4.1-1.3 7.2-4.8 7.2-9.8V5.8z"/></symbol>
 </svg>
 
@@ -332,7 +367,7 @@
           <path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
         </svg>
       </a>
-      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteDrawer" aria-label="All Pages Directory">
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteDrawer" aria-label="전체 사이트맵">
         <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 8.5h16M4 15.5h16"/></svg>
         <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
       </button>
@@ -341,35 +376,198 @@
 </header>
 
 <div class="menu-drawer" id="siteDrawer" hidden>
-  <nav class="container menu-drawer__inner" aria-label="All SuperCode Pages">
-    <div class="drawer-group">
-      <div class="drawer-group__title" data-i18n="grp_core">코어 에디터 & 대용량 파일</div>
-      <div class="drawer-group__list">
-        <a class="menu-drawer__link" href="index.html"><span data-i18n="nav_home">전체 개요</span><span class="mono">01</span></a>
-        <a class="menu-drawer__link" href="code-editor.html"><span data-i18n="nav_code_editor">코드 에디터</span><span class="mono">02</span></a>
-        <a class="menu-drawer__link" href="large-file-editor.html"><span data-i18n="nav_large_file">GB 대용량</span><span class="mono">03</span></a>
+  <nav class="container menu-drawer__inner" aria-label="전체 사이트맵">
+    <div class="drawer-top">
+      <div class="drawer-top__left">
+        <span class="drawer-top__dot" aria-hidden="true"></span>
+        <span class="drawer-top__title" data-i18n="sitemap_title">전체 사이트맵</span>
+        <span class="drawer-top__badge" data-i18n="sitemap_badge">53개 페이지 · 32개 언어</span>
+      </div>
+      <button type="button" class="drawer-toggle-all" id="drawerToggleAll" data-expanded="false" data-expand-label="모두 펼치기" data-collapse-label="모두 접기">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8h9M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+        <span data-i18n="sitemap_expand_all">모두 펼치기</span>
+      </button>
+    </div>
+    <div class="drawer-cols">
+      <div class="drawer-group">
+        <div class="drawer-group__title"><span data-i18n="grp_core">코어 에디터 &amp; 대용량 파일</span></div>
+        <div class="drawer-group__list">
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="index.html"><span class="drawer-link__title" data-i18n="nav_home">전체 개요</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="code-editor.html"><span class="drawer-link__title" data-i18n="nav_code_editor">코드 에디터</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="large-file-editor.html"><span class="drawer-link__title" data-i18n="nav_large_file">GB 대용량</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="drawer-group">
+        <div class="drawer-group__title"><span data-i18n="grp_lang">오프라인 컴파일러 &amp; 언어</span></div>
+        <div class="drawer-group__list">
+        <div class="drawer-node" data-hub="python-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="python-ide.html"><span class="drawer-link__title" data-i18n="nav_python_ide">Python IDE</span><span class="drawer-hub-count" aria-hidden="true">7</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-python-ide" aria-label="하위 페이지 전환: Python IDE">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-python-ide" hidden>
+            <a class="drawer-sub__link" href="python-pip-manager.html"><span class="drawer-sub__code">PY-01</span><span class="drawer-sub__title">PIP &amp; 오프라인 .whl 가이드</span></a>
+            <a class="drawer-sub__link" href="python-offline-libraries.html"><span class="drawer-sub__code">PY-02</span><span class="drawer-sub__title">지원 Python 라이브러리 목록</span></a>
+            <a class="drawer-sub__link" href="python-data-science.html"><span class="drawer-sub__code">PY-03</span><span class="drawer-sub__title">NumPy, Pandas &amp; Matplotlib</span></a>
+            <a class="drawer-sub__link" href="python-machine-learning.html"><span class="drawer-sub__code">PY-04</span><span class="drawer-sub__title">Scikit-Learn, OpenCV &amp; AI</span></a>
+            <a class="drawer-sub__link" href="python-web-scraping-automation.html"><span class="drawer-sub__code">PY-05</span><span class="drawer-sub__title">웹 스크래핑, API &amp; 봇 개발</span></a>
+            <a class="drawer-sub__link" href="python-projects-workspace.html"><span class="drawer-sub__code">PY-06</span><span class="drawer-sub__title">다중 파일 프로젝트 &amp; Git</span></a>
+            <a class="drawer-sub__link" href="learn-python-android.html"><span class="drawer-sub__code">PY-07</span><span class="drawer-sub__title">오프라인 Python 학습</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="c-compiler.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="c-compiler.html"><span class="drawer-link__title" data-i18n="nav_c_compiler">C 컴파일러</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-c-compiler" aria-label="하위 페이지 전환: C 컴파일러">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-c-compiler" hidden>
+            <a class="drawer-sub__link" href="c-pointers-memory-coursework.html"><span class="drawer-sub__code">C-01</span><span class="drawer-sub__title">포인터, 구조체 &amp; 메모리 실습</span></a>
+            <a class="drawer-sub__link" href="c-multifile-header-projects.html"><span class="drawer-sub__code">C-02</span><span class="drawer-sub__title">다중 파일 .c/.h &amp; CMake 빌드</span></a>
+            <a class="drawer-sub__link" href="c-scanf-file-io-console.html"><span class="drawer-sub__code">C-03</span><span class="drawer-sub__title">실시간 scanf 표준 입력 &amp; 파일 I/O</span></a>
+            <a class="drawer-sub__link" href="c-posix-systems-programming.html"><span class="drawer-sub__code">C-04</span><span class="drawer-sub__title">POSIX 헤더, 스레드 &amp; 소켓</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="cpp-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="cpp-ide.html"><span class="drawer-link__title" data-i18n="nav_cpp_ide">C++20 IDE</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-cpp-ide" aria-label="하위 페이지 전환: C++20 IDE">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-cpp-ide" hidden>
+            <a class="drawer-sub__link" href="cpp-competitive-programming-stl.html"><span class="drawer-sub__code">CPP-01</span><span class="drawer-sub__title">알고리즘 코딩 테스트 &amp; STL 실습</span></a>
+            <a class="drawer-sub__link" href="cpp-oop-smart-pointers-modern.html"><span class="drawer-sub__code">CPP-02</span><span class="drawer-sub__title">모던 C++20, Ranges &amp; OOP</span></a>
+            <a class="drawer-sub__link" href="cpp-multifile-hpp-builder.html"><span class="drawer-sub__code">CPP-03</span><span class="drawer-sub__title">21개 다중 파일 C++ &amp; CMake 프로젝트</span></a>
+            <a class="drawer-sub__link" href="learn-cpp-offline-android.html"><span class="drawer-sub__code">CPP-04</span><span class="drawer-sub__title">Android에서 오프라인으로 C++ 배우기</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="java-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="java-ide.html"><span class="drawer-link__title" data-i18n="nav_java_ide">Java 17</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-java-ide" aria-label="하위 페이지 전환: Java 17">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-java-ide" hidden>
+            <a class="drawer-sub__link" href="java-17-records-oop-android.html"><span class="drawer-sub__code">JV-01</span><span class="drawer-sub__title">Java 17 Records, Sealed &amp; Streams</span></a>
+            <a class="drawer-sub__link" href="java-multiclass-packages-ide.html"><span class="drawer-sub__code">JV-02</span><span class="drawer-sub__title">다중 클래스 패키지 &amp; .jar 라이브러리</span></a>
+            <a class="drawer-sub__link" href="java-jdbc-sqlite-file-io.html"><span class="drawer-sub__code">JV-03</span><span class="drawer-sub__title">오프라인 Java SQLite JDBC &amp; NIO.2</span></a>
+            <a class="drawer-sub__link" href="learn-java-dsa-android.html"><span class="drawer-sub__code">JV-04</span><span class="drawer-sub__title">오프라인 Java, AP CS &amp; 자료구조·알고리즘 학습</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="javascript-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="javascript-ide.html"><span class="drawer-link__title" data-i18n="nav_js_ide">JavaScript</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-javascript-ide" aria-label="하위 페이지 전환: JavaScript">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-javascript-ide" hidden>
+            <a class="drawer-sub__link" href="javascript-node-core-modules-offline.html"><span class="drawer-sub__code">JS-01</span><span class="drawer-sub__title">29개 이상 오프라인 Node.js 코어 모듈</span></a>
+            <a class="drawer-sub__link" href="javascript-es2024-async-console.html"><span class="drawer-sub__code">JS-02</span><span class="drawer-sub__title">ES2024 비동기, Top-Level Await &amp; Fetch</span></a>
+            <a class="drawer-sub__link" href="javascript-web-crypto-security.html"><span class="drawer-sub__code">JS-03</span><span class="drawer-sub__title">Node &amp; Web Crypto (AES-GCM / SHA)</span></a>
+            <a class="drawer-sub__link" href="learn-javascript-dsa-android.html"><span class="drawer-sub__code">JS-04</span><span class="drawer-sub__title">오프라인 JS 학습 &amp; 자료구조·알고리즘 연습</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="lua-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="lua-ide.html"><span class="drawer-link__title" data-i18n="nav_lua_ide">Lua 5.4</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-lua-ide" aria-label="하위 페이지 전환: Lua 5.4">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-lua-ide" hidden>
+            <a class="drawer-sub__link" href="lua-game-scripting-metatables-oop.html"><span class="drawer-sub__code">LUA-01</span><span class="drawer-sub__title">게임 스크립팅, 메타테이블 &amp; 코루틴</span></a>
+            <a class="drawer-sub__link" href="lua-builtin-modules-cjson-sqlite.html"><span class="drawer-sub__code">LUA-02</span><span class="drawer-sub__title">11개+ 내장 모듈 (cjson, lsqlite3, lfs)</span></a>
+            <a class="drawer-sub__link" href="lua-54-bitwise-close-multifile.html"><span class="drawer-sub__code">LUA-03</span><span class="drawer-sub__title">Lua 5.4 비트 연산, &lt;close&gt; &amp; 다중 파일</span></a>
+            <a class="drawer-sub__link" href="learn-lua-offline-android.html"><span class="drawer-sub__code">LUA-04</span><span class="drawer-sub__title">Android에서 오프라인으로 Lua 배우기</span></a>
+          </div>
+        </div>
+        <div class="drawer-node is-open" data-hub="shell-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="shell-ide.html"><span class="drawer-link__title" data-i18n="nav_shell_ide">Shell &amp; Kotlin</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="true" aria-controls="sub-shell-ide" aria-label="하위 페이지 전환: Shell &amp; Kotlin">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-shell-ide">
+            <a class="drawer-sub__link" href="run-sh-shell-scripts-android-noroot.html"><span class="drawer-sub__code">SH-01</span><span class="drawer-sub__title">Android에서 .sh 스크립트 실행 (루트 불필요)</span></a>
+            <a class="drawer-sub__link" href="shell-awk-sed-grep-log-pipelines.html"><span class="drawer-sub__code">SH-02</span><span class="drawer-sub__title">awk, sed, grep &amp; curl 텍스트 파이프라인</span></a>
+            <a class="drawer-sub__link" href="kotlin-coding-app-compiler-android.html"><span class="drawer-sub__code">SH-03</span><span class="drawer-sub__title">Kotlin 코딩 앱 &amp; .kt/.kts 실행기</span></a>
+            <a class="drawer-sub__link is-current" href="linux-devops-shell-sftp-git-android.html"><span class="drawer-sub__code">SH-04</span><span class="drawer-sub__title">모바일 Linux DevOps: Shell + SFTP + Git</span></a>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="drawer-group">
+        <div class="drawer-group__title"><span data-i18n="grp_devops">웹 · SQL · 원격 DevOps</span></div>
+        <div class="drawer-group__list">
+        <div class="drawer-node" data-hub="web-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="web-ide.html"><span class="drawer-link__title" data-i18n="nav_web_ide">Web &amp; PHP</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-web-ide" aria-label="하위 페이지 전환: Web &amp; PHP">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-web-ide" hidden>
+            <a class="drawer-sub__link" href="php-server-pdo-sqlite-android.html"><span class="drawer-sub__code">WEB-01</span><span class="drawer-sub__title">오프라인 PHP 8.2 &amp; PDO SQLite 서버</span></a>
+            <a class="drawer-sub__link" href="html-css-js-responsive-preview.html"><span class="drawer-sub__code">WEB-02</span><span class="drawer-sub__title">HTML5, CSS3 &amp; 3종 뷰포트 미리보기</span></a>
+            <a class="drawer-sub__link" href="mobile-web-devtools-wasm-studio.html"><span class="drawer-sub__code">WEB-03</span><span class="drawer-sub__title">모바일 웹 DevTools, JS REPL &amp; WASM</span></a>
+            <a class="drawer-sub__link" href="fullstack-web-sftp-deploy-android.html"><span class="drawer-sub__code">WEB-04</span><span class="drawer-sub__title">원격 FTP/SFTP 실시간 웹 배포</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="sql-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="sql-ide.html"><span class="drawer-link__title" data-i18n="nav_sql_ide">SQL 스튜디오</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-sql-ide" aria-label="하위 페이지 전환: SQL 스튜디오">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-sql-ide" hidden>
+            <a class="drawer-sub__link" href="sqlite-db-viewer-editor-android.html"><span class="drawer-sub__code">SQL-01</span><span class="drawer-sub__title">.db / .sqlite 인스펙터 &amp; 9가지 모드</span></a>
+            <a class="drawer-sub__link" href="sql-window-functions-fts5-json.html"><span class="drawer-sub__code">SQL-02</span><span class="drawer-sub__title">윈도우 함수, CTE, JSONB &amp; FTS5</span></a>
+            <a class="drawer-sub__link" href="mysql-postgresql-syntax-android.html"><span class="drawer-sub__code">SQL-03</span><span class="drawer-sub__title">MySQL &amp; PostgreSQL 문법 호환성</span></a>
+            <a class="drawer-sub__link" href="sql-python-php-java-lua-integration.html"><span class="drawer-sub__code">SQL-04</span><span class="drawer-sub__title">SQL, Python, PHP &amp; Java 간 .db 공유</span></a>
+          </div>
+        </div>
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="git-client.html"><span class="drawer-link__title" data-i18n="nav_git_client">비주얼 Git</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="sftp-client.html"><span class="drawer-link__title" data-i18n="nav_sftp_client">SFTP &amp; FTPS</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        </div>
       </div>
     </div>
-    <div class="drawer-group">
-      <div class="drawer-group__title" data-i18n="grp_lang">오프라인 컴파일러 & 언어</div>
-      <div class="drawer-group__list">
-        <a class="menu-drawer__link" href="python-ide.html"><span data-i18n="nav_python_ide">Python IDE</span><span class="mono">04</span></a>
-        <a class="menu-drawer__link" href="c-compiler.html"><span data-i18n="nav_c_compiler">C 컴파일러</span><span class="mono">05</span></a>
-        <a class="menu-drawer__link" href="cpp-ide.html"><span data-i18n="nav_cpp_ide">C++20 IDE</span><span class="mono">06</span></a>
-        <a class="menu-drawer__link" href="java-ide.html"><span data-i18n="nav_java_ide">Java 17</span><span class="mono">07</span></a>
-        <a class="menu-drawer__link" href="javascript-ide.html"><span data-i18n="nav_js_ide">JavaScript</span><span class="mono">08</span></a>
-        <a class="menu-drawer__link" href="lua-ide.html"><span data-i18n="nav_lua_ide">Lua 5.4</span><span class="mono">09</span></a>
-        <a class="menu-drawer__link is-current" href="shell-ide.html"><span data-i18n="nav_shell_ide">Shell & Kotlin</span><span class="mono">10</span></a>
-      </div>
-    </div>
-    <div class="drawer-group">
-      <div class="drawer-group__title" data-i18n="grp_devops">웹 · SQL · 원격 DevOps</div>
-      <div class="drawer-group__list">
-        <a class="menu-drawer__link" href="web-ide.html"><span data-i18n="nav_web_ide">Web & PHP</span><span class="mono">11</span></a>
-        <a class="menu-drawer__link" href="sql-ide.html"><span data-i18n="nav_sql_ide">SQL 스튜디오</span><span class="mono">12</span></a>
-        <a class="menu-drawer__link" href="git-client.html"><span data-i18n="nav_git_client">비주얼 Git</span><span class="mono">13</span></a>
-        <a class="menu-drawer__link" href="sftp-client.html"><span data-i18n="nav_sftp_client">SFTP & FTPS</span><span class="mono">14</span></a>
-      </div>
+    <div class="drawer-studio-foot">
+      <a class="drawer-studio-link" data-radio-promo="true" href="https://play.google.com/store/apps/details?id=com.hifiradio.fmradio&amp;hl=ko-KR&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dko%26utm_campaign%3Dhifi_radio_showcase%26utm_content%3Dsitemap_drawer" target="_blank" rel="noopener">
+        <svg class="drawer-studio-icon" aria-hidden="true"><use href="#sc-radio-icon"/></svg>
+        <span class="drawer-studio-meta">
+          <span class="drawer-studio-name">FM Radio: HiFi Radio AM FM</span>
+          <span class="drawer-studio-sub" data-i18n="radio_subtitle">실시간 라디오 이중 자막 · 32밴드 HiFi DSP</span>
+        </span>
+        <span class="drawer-studio-go"><span data-i18n="nav_cta">Google Play</span> &#8599;</span>
+      </a>
     </div>
   </nav>
 </div>
@@ -982,6 +1180,25 @@
           <li><a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP & FTPS</a></li>
         </ul>
       </div>
+    </div>
+
+    <div class="studio-ecosystem">
+      <a class="studio-promo-card" data-radio-promo="true" href="https://play.google.com/store/apps/details?id=com.hifiradio.fmradio&amp;hl=ko-KR&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dko%26utm_campaign%3Dhifi_radio_showcase%26utm_content%3Dfooter_showcase" target="_blank" rel="noopener" aria-label="FM Radio: HiFi Radio AM FM — 실시간 라디오 이중 자막 · 32밴드 HiFi DSP">
+        <svg class="studio-promo-icon" aria-hidden="true"><use href="#sc-radio-icon"/></svg>
+        <span class="studio-promo-meta">
+          <span class="studio-promo-eyebrow" data-i18n="radio_eyebrow">Phoenix Global Studios 추천 앱</span>
+          <span class="studio-promo-title">FM Radio: HiFi Radio AM FM</span>
+          <span class="studio-promo-sub" data-i18n="radio_subtitle">실시간 라디오 이중 자막 · 32밴드 HiFi DSP</span>
+        </span>
+        <span class="studio-promo-cta">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="nav_cta">Google Play</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </span>
+        <span class="studio-promo-arrow-mini" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </span>
+      </a>
     </div>
 
     <div class="footer-legal">

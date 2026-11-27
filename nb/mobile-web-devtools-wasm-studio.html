@@ -289,6 +289,41 @@
   <symbol id="i-git" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.3"/><circle cx="6" cy="18" r="2.3"/><circle cx="18" cy="12" r="2.3"/><path d="M6 8.3v7.4M8.3 6h4.2a3.5 3.5 0 0 1 3.5 3.5v.2"/></g></symbol>
   <symbol id="i-cloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5h11a4 4 0 0 0 .7-7.94A5.5 5.5 0 0 0 7.4 9.2 3.8 3.8 0 0 0 6.5 18.5z"/></g></symbol>
   <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M13 2.8 4.8 13.2h6.3L10.2 21.2 19.2 10.6h-6.4z"/></symbol>
+  <defs>
+    <radialGradient id="sc-rf-bg" cx="54" cy="54" r="76" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1C1C24"/>
+      <stop offset="100%" stop-color="#09090B"/>
+    </radialGradient>
+    <linearGradient id="sc-rf-ring" x1="24" y1="24" x2="84" y2="84" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="50%" stop-color="#8A2BE2"/>
+      <stop offset="100%" stop-color="#FF0055"/>
+    </linearGradient>
+    <linearGradient id="sc-rf-wl" x1="40" y1="48" x2="40" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#29B6F6"/>
+    </linearGradient>
+    <linearGradient id="sc-rf-wc" x1="54" y1="30" x2="54" y2="78" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8A2BE2"/>
+      <stop offset="100%" stop-color="#E040FB"/>
+    </linearGradient>
+    <linearGradient id="sc-rf-wr" x1="68" y1="45" x2="68" y2="63" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF0055"/>
+      <stop offset="100%" stop-color="#FF8A80"/>
+    </linearGradient>
+  </defs>
+  <symbol id="sc-radio-icon" viewBox="10 10 88 88">
+    <rect x="10" y="10" width="88" height="88" rx="22" fill="url(#sc-rf-bg)"/>
+    <circle cx="54" cy="54" r="42" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="0.9"/>
+    <circle cx="54" cy="54" r="34" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.9"/>
+    <path fill-rule="evenodd" fill="url(#sc-rf-ring)" d="M54,24 A30,30 0 1,0 54,84 A30,30 0 1,0 54,24 Z M54,32 A22,22 0 1,1 54,76 A22,22 0 1,1 54,32 Z"/>
+    <circle cx="54" cy="54" r="4" fill="#E0E0E0"/>
+    <line x1="40" y1="48" x2="40" y2="60" stroke="url(#sc-rf-wl)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="54" y1="30" x2="54" y2="44" stroke="url(#sc-rf-wc)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="54" y1="64" x2="54" y2="78" stroke="url(#sc-rf-wc)" stroke-width="5" stroke-linecap="round"/>
+    <line x1="68" y1="45" x2="68" y2="63" stroke="url(#sc-rf-wr)" stroke-width="5" stroke-linecap="round"/>
+    <rect x="11" y="11" width="86" height="86" rx="21" fill="none" stroke="rgba(148,163,184,0.34)" stroke-width="1.6"/>
+  </symbol>
   <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 2.8 4.8 5.8v5.6c0 5 3.1 8.5 7.2 9.8 4.1-1.3 7.2-4.8 7.2-9.8V5.8z"/></symbol>
 </svg>
 
@@ -332,7 +367,7 @@
           <path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
         </svg>
       </a>
-      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteDrawer" aria-label="All Pages Directory">
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteDrawer" aria-label="Fullstendig nettstedskart">
         <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 8.5h16M4 15.5h16"/></svg>
         <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
       </button>
@@ -341,35 +376,198 @@
 </header>
 
 <div class="menu-drawer" id="siteDrawer" hidden>
-  <nav class="container menu-drawer__inner" aria-label="All SuperCode Pages">
-    <div class="drawer-group">
-      <div class="drawer-group__title" data-i18n="grp_core">Editor og store filer</div>
-      <div class="drawer-group__list">
-        <a class="menu-drawer__link" href="index.html"><span data-i18n="nav_home">Oversikt</span><span class="mono">01</span></a>
-        <a class="menu-drawer__link" href="code-editor.html"><span data-i18n="nav_code_editor">Kodeeditor</span><span class="mono">02</span></a>
-        <a class="menu-drawer__link" href="large-file-editor.html"><span data-i18n="nav_large_file">Store filer i GB</span><span class="mono">03</span></a>
+  <nav class="container menu-drawer__inner" aria-label="Fullstendig nettstedskart">
+    <div class="drawer-top">
+      <div class="drawer-top__left">
+        <span class="drawer-top__dot" aria-hidden="true"></span>
+        <span class="drawer-top__title" data-i18n="sitemap_title">Fullstendig nettstedskart</span>
+        <span class="drawer-top__badge" data-i18n="sitemap_badge">53 sider · 32 språk</span>
+      </div>
+      <button type="button" class="drawer-toggle-all" id="drawerToggleAll" data-expanded="false" data-expand-label="Utvid alle" data-collapse-label="Skjul alle">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8h9M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+        <span data-i18n="sitemap_expand_all">Utvid alle</span>
+      </button>
+    </div>
+    <div class="drawer-cols">
+      <div class="drawer-group">
+        <div class="drawer-group__title"><span data-i18n="grp_core">Editor og store filer</span></div>
+        <div class="drawer-group__list">
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="index.html"><span class="drawer-link__title" data-i18n="nav_home">Oversikt</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="code-editor.html"><span class="drawer-link__title" data-i18n="nav_code_editor">Kodeeditor</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="large-file-editor.html"><span class="drawer-link__title" data-i18n="nav_large_file">Store filer i GB</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="drawer-group">
+        <div class="drawer-group__title"><span data-i18n="grp_lang">Frakoblede kompilatorer og språk</span></div>
+        <div class="drawer-group__list">
+        <div class="drawer-node" data-hub="python-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="python-ide.html"><span class="drawer-link__title" data-i18n="nav_python_ide">Python IDE</span><span class="drawer-hub-count" aria-hidden="true">7</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-python-ide" aria-label="Vis/skjul undersider: Python IDE">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-python-ide" hidden>
+            <a class="drawer-sub__link" href="python-pip-manager.html"><span class="drawer-sub__code">PY-01</span><span class="drawer-sub__title">Veiledning for PIP og offline .whl</span></a>
+            <a class="drawer-sub__link" href="python-offline-libraries.html"><span class="drawer-sub__code">PY-02</span><span class="drawer-sub__title">Støttede Python-biblioteker</span></a>
+            <a class="drawer-sub__link" href="python-data-science.html"><span class="drawer-sub__code">PY-03</span><span class="drawer-sub__title">NumPy, Pandas og Matplotlib</span></a>
+            <a class="drawer-sub__link" href="python-machine-learning.html"><span class="drawer-sub__code">PY-04</span><span class="drawer-sub__title">Scikit-Learn, OpenCV og AI</span></a>
+            <a class="drawer-sub__link" href="python-web-scraping-automation.html"><span class="drawer-sub__code">PY-05</span><span class="drawer-sub__title">Nettskraping, API-er og boter</span></a>
+            <a class="drawer-sub__link" href="python-projects-workspace.html"><span class="drawer-sub__code">PY-06</span><span class="drawer-sub__title">Flerfilsprosjekter og Git</span></a>
+            <a class="drawer-sub__link" href="learn-python-android.html"><span class="drawer-sub__code">PY-07</span><span class="drawer-sub__title">Lær Python offline</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="c-compiler.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="c-compiler.html"><span class="drawer-link__title" data-i18n="nav_c_compiler">C17-kompilator</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-c-compiler" aria-label="Vis/skjul undersider: C17-kompilator">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-c-compiler" hidden>
+            <a class="drawer-sub__link" href="c-pointers-memory-coursework.html"><span class="drawer-sub__code">C-01</span><span class="drawer-sub__title">Pekere, structs og minnelab</span></a>
+            <a class="drawer-sub__link" href="c-multifile-header-projects.html"><span class="drawer-sub__code">C-02</span><span class="drawer-sub__title">Flerfils .c/.h- og CMake-bygg</span></a>
+            <a class="drawer-sub__link" href="c-scanf-file-io-console.html"><span class="drawer-sub__code">C-03</span><span class="drawer-sub__title">Direkte scanf-stdin og fil-I/O</span></a>
+            <a class="drawer-sub__link" href="c-posix-systems-programming.html"><span class="drawer-sub__code">C-04</span><span class="drawer-sub__title">POSIX-headere, tråder og sockets</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="cpp-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="cpp-ide.html"><span class="drawer-link__title" data-i18n="nav_cpp_ide">C++20 IDE</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-cpp-ide" aria-label="Vis/skjul undersider: C++20 IDE">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-cpp-ide" hidden>
+            <a class="drawer-sub__link" href="cpp-competitive-programming-stl.html"><span class="drawer-sub__code">CPP-01</span><span class="drawer-sub__title">Konkurranseprogrammering og STL-lab</span></a>
+            <a class="drawer-sub__link" href="cpp-oop-smart-pointers-modern.html"><span class="drawer-sub__code">CPP-02</span><span class="drawer-sub__title">Moderne C++20, Ranges og OOP</span></a>
+            <a class="drawer-sub__link" href="cpp-multifile-hpp-builder.html"><span class="drawer-sub__code">CPP-03</span><span class="drawer-sub__title">21 flerfils C++- og CMake-prosjekter</span></a>
+            <a class="drawer-sub__link" href="learn-cpp-offline-android.html"><span class="drawer-sub__code">CPP-04</span><span class="drawer-sub__title">Lær C++ offline på Android</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="java-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="java-ide.html"><span class="drawer-link__title" data-i18n="nav_java_ide">Java 17 IDE</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-java-ide" aria-label="Vis/skjul undersider: Java 17 IDE">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-java-ide" hidden>
+            <a class="drawer-sub__link" href="java-17-records-oop-android.html"><span class="drawer-sub__code">JV-01</span><span class="drawer-sub__title">Java 17 Records, Sealed og Streams</span></a>
+            <a class="drawer-sub__link" href="java-multiclass-packages-ide.html"><span class="drawer-sub__code">JV-02</span><span class="drawer-sub__title">Flerklassepakker og .jar-biblioteker</span></a>
+            <a class="drawer-sub__link" href="java-jdbc-sqlite-file-io.html"><span class="drawer-sub__code">JV-03</span><span class="drawer-sub__title">Offline Java SQLite JDBC og NIO.2</span></a>
+            <a class="drawer-sub__link" href="learn-java-dsa-android.html"><span class="drawer-sub__code">JV-04</span><span class="drawer-sub__title">Lær Java, AP CS og DSA offline</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="javascript-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="javascript-ide.html"><span class="drawer-link__title" data-i18n="nav_js_ide">JavaScript</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-javascript-ide" aria-label="Vis/skjul undersider: JavaScript">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-javascript-ide" hidden>
+            <a class="drawer-sub__link" href="javascript-node-core-modules-offline.html"><span class="drawer-sub__code">JS-01</span><span class="drawer-sub__title">29+ offline Node.js-kjernemoduler</span></a>
+            <a class="drawer-sub__link" href="javascript-es2024-async-console.html"><span class="drawer-sub__code">JS-02</span><span class="drawer-sub__title">ES2024 Async, Top-Level Await og Fetch</span></a>
+            <a class="drawer-sub__link" href="javascript-web-crypto-security.html"><span class="drawer-sub__code">JS-03</span><span class="drawer-sub__title">Node og Web Crypto (AES-GCM / SHA)</span></a>
+            <a class="drawer-sub__link" href="learn-javascript-dsa-android.html"><span class="drawer-sub__code">JS-04</span><span class="drawer-sub__title">Lær JS og øv på DSA offline</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="lua-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="lua-ide.html"><span class="drawer-link__title" data-i18n="nav_lua_ide">Lua 5.4</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-lua-ide" aria-label="Vis/skjul undersider: Lua 5.4">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-lua-ide" hidden>
+            <a class="drawer-sub__link" href="lua-game-scripting-metatables-oop.html"><span class="drawer-sub__code">LUA-01</span><span class="drawer-sub__title">Spillskripting, metatabeller og korutiner</span></a>
+            <a class="drawer-sub__link" href="lua-builtin-modules-cjson-sqlite.html"><span class="drawer-sub__code">LUA-02</span><span class="drawer-sub__title">11+ innebygde moduler (cjson, lsqlite3, lfs)</span></a>
+            <a class="drawer-sub__link" href="lua-54-bitwise-close-multifile.html"><span class="drawer-sub__code">LUA-03</span><span class="drawer-sub__title">Lua 5.4 bitvis, &lt;close&gt; og flerfil</span></a>
+            <a class="drawer-sub__link" href="learn-lua-offline-android.html"><span class="drawer-sub__code">LUA-04</span><span class="drawer-sub__title">Lær Lua offline på Android</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="shell-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="shell-ide.html"><span class="drawer-link__title" data-i18n="nav_shell_ide">Shell og Kotlin</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-shell-ide" aria-label="Vis/skjul undersider: Shell og Kotlin">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-shell-ide" hidden>
+            <a class="drawer-sub__link" href="run-sh-shell-scripts-android-noroot.html"><span class="drawer-sub__code">SH-01</span><span class="drawer-sub__title">Kjør .sh-skript på Android (uten root)</span></a>
+            <a class="drawer-sub__link" href="shell-awk-sed-grep-log-pipelines.html"><span class="drawer-sub__code">SH-02</span><span class="drawer-sub__title">awk-, sed-, grep- og curl-tekstrørledninger</span></a>
+            <a class="drawer-sub__link" href="kotlin-coding-app-compiler-android.html"><span class="drawer-sub__code">SH-03</span><span class="drawer-sub__title">Kotlin-kodeapp og .kt/.kts-kjører</span></a>
+            <a class="drawer-sub__link" href="linux-devops-shell-sftp-git-android.html"><span class="drawer-sub__code">SH-04</span><span class="drawer-sub__title">Linux DevOps i lomma: Shell + SFTP + Git</span></a>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="drawer-group">
+        <div class="drawer-group__title"><span data-i18n="grp_devops">Web, SQL og ekstern DevOps</span></div>
+        <div class="drawer-group__list">
+        <div class="drawer-node is-open" data-hub="web-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="web-ide.html"><span class="drawer-link__title" data-i18n="nav_web_ide">Web og PHP</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="true" aria-controls="sub-web-ide" aria-label="Vis/skjul undersider: Web og PHP">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-web-ide">
+            <a class="drawer-sub__link" href="php-server-pdo-sqlite-android.html"><span class="drawer-sub__code">WEB-01</span><span class="drawer-sub__title">Offline PHP 8.2 og PDO SQLite-server</span></a>
+            <a class="drawer-sub__link" href="html-css-js-responsive-preview.html"><span class="drawer-sub__code">WEB-02</span><span class="drawer-sub__title">HTML5, CSS3 og 3-visnings forhåndsvisning</span></a>
+            <a class="drawer-sub__link is-current" href="mobile-web-devtools-wasm-studio.html"><span class="drawer-sub__code">WEB-03</span><span class="drawer-sub__title">Mobil Web DevTools, JS REPL og WASM</span></a>
+            <a class="drawer-sub__link" href="fullstack-web-sftp-deploy-android.html"><span class="drawer-sub__code">WEB-04</span><span class="drawer-sub__title">Ekstern FTP/SFTP live webpublisering</span></a>
+          </div>
+        </div>
+        <div class="drawer-node" data-hub="sql-ide.html">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="sql-ide.html"><span class="drawer-link__title" data-i18n="nav_sql_ide">SQL Studio</span><span class="drawer-hub-count" aria-hidden="true">4</span></a>
+            <button type="button" class="drawer-expand-btn" aria-expanded="false" aria-controls="sub-sql-ide" aria-label="Vis/skjul undersider: SQL Studio">
+              <svg class="drawer-plus-svg" viewBox="0 0 16 16" aria-hidden="true"><path class="plus-h" d="M3.5 8h9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/><path class="plus-v" d="M8 3.5v9" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+          <div class="drawer-sub" id="sub-sql-ide" hidden>
+            <a class="drawer-sub__link" href="sqlite-db-viewer-editor-android.html"><span class="drawer-sub__code">SQL-01</span><span class="drawer-sub__title">.db / .sqlite-inspektør og 9 moduser</span></a>
+            <a class="drawer-sub__link" href="sql-window-functions-fts5-json.html"><span class="drawer-sub__code">SQL-02</span><span class="drawer-sub__title">Vindusfunksjoner, CTE, JSONB og FTS5</span></a>
+            <a class="drawer-sub__link" href="mysql-postgresql-syntax-android.html"><span class="drawer-sub__code">SQL-03</span><span class="drawer-sub__title">MySQL- og PostgreSQL-kompatibilitet</span></a>
+            <a class="drawer-sub__link" href="sql-python-php-java-lua-integration.html"><span class="drawer-sub__code">SQL-04</span><span class="drawer-sub__title">Delt .db på tvers av SQL, Python, PHP og Java</span></a>
+          </div>
+        </div>
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="git-client.html"><span class="drawer-link__title" data-i18n="nav_git_client">Visuell Git</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        <div class="drawer-node">
+          <div class="drawer-node__row">
+            <a class="menu-drawer__link" href="sftp-client.html"><span class="drawer-link__title" data-i18n="nav_sftp_client">SFTP og FTPS</span><svg class="drawer-link__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+        </div>
       </div>
     </div>
-    <div class="drawer-group">
-      <div class="drawer-group__title" data-i18n="grp_lang">Frakoblede kompilatorer og språk</div>
-      <div class="drawer-group__list">
-        <a class="menu-drawer__link" href="python-ide.html"><span data-i18n="nav_python_ide">Python IDE</span><span class="mono">04</span></a>
-        <a class="menu-drawer__link" href="c-compiler.html"><span data-i18n="nav_c_compiler">C17-kompilator</span><span class="mono">05</span></a>
-        <a class="menu-drawer__link" href="cpp-ide.html"><span data-i18n="nav_cpp_ide">C++20 IDE</span><span class="mono">06</span></a>
-        <a class="menu-drawer__link" href="java-ide.html"><span data-i18n="nav_java_ide">Java 17 IDE</span><span class="mono">07</span></a>
-        <a class="menu-drawer__link" href="javascript-ide.html"><span data-i18n="nav_js_ide">JavaScript</span><span class="mono">08</span></a>
-        <a class="menu-drawer__link" href="lua-ide.html"><span data-i18n="nav_lua_ide">Lua 5.4</span><span class="mono">09</span></a>
-        <a class="menu-drawer__link" href="shell-ide.html"><span data-i18n="nav_shell_ide">Shell og Kotlin</span><span class="mono">10</span></a>
-      </div>
-    </div>
-    <div class="drawer-group">
-      <div class="drawer-group__title" data-i18n="grp_devops">Web, SQL og ekstern DevOps</div>
-      <div class="drawer-group__list">
-        <a class="menu-drawer__link is-current" href="web-ide.html"><span data-i18n="nav_web_ide">Web og PHP</span><span class="mono">11</span></a>
-        <a class="menu-drawer__link" href="sql-ide.html"><span data-i18n="nav_sql_ide">SQL Studio</span><span class="mono">12</span></a>
-        <a class="menu-drawer__link" href="git-client.html"><span data-i18n="nav_git_client">Visuell Git</span><span class="mono">13</span></a>
-        <a class="menu-drawer__link" href="sftp-client.html"><span data-i18n="nav_sftp_client">SFTP og FTPS</span><span class="mono">14</span></a>
-      </div>
+    <div class="drawer-studio-foot">
+      <a class="drawer-studio-link" data-radio-promo="true" href="https://play.google.com/store/apps/details?id=com.hifiradio.fmradio&amp;hl=no-NO&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dnb%26utm_campaign%3Dhifi_radio_showcase%26utm_content%3Dsitemap_drawer" target="_blank" rel="noopener">
+        <svg class="drawer-studio-icon" aria-hidden="true"><use href="#sc-radio-icon"/></svg>
+        <span class="drawer-studio-meta">
+          <span class="drawer-studio-name">FM Radio: HiFi Radio AM FM</span>
+          <span class="drawer-studio-sub" data-i18n="radio_subtitle">Tospråklig radioteksting i sanntid · 32-bånds HiFi DSP</span>
+        </span>
+        <span class="drawer-studio-go"><span data-i18n="nav_cta">Google Play</span> &#8599;</span>
+      </a>
     </div>
   </nav>
 </div>
@@ -982,6 +1180,25 @@
           <li><a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP og FTPS</a></li>
         </ul>
       </div>
+    </div>
+
+    <div class="studio-ecosystem">
+      <a class="studio-promo-card" data-radio-promo="true" href="https://play.google.com/store/apps/details?id=com.hifiradio.fmradio&amp;hl=no-NO&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dnb%26utm_campaign%3Dhifi_radio_showcase%26utm_content%3Dfooter_showcase" target="_blank" rel="noopener" aria-label="FM Radio: HiFi Radio AM FM — Tospråklig radioteksting i sanntid · 32-bånds HiFi DSP">
+        <svg class="studio-promo-icon" aria-hidden="true"><use href="#sc-radio-icon"/></svg>
+        <span class="studio-promo-meta">
+          <span class="studio-promo-eyebrow" data-i18n="radio_eyebrow">FRA PHOENIX GLOBAL STUDIOS</span>
+          <span class="studio-promo-title">FM Radio: HiFi Radio AM FM</span>
+          <span class="studio-promo-sub" data-i18n="radio_subtitle">Tospråklig radioteksting i sanntid · 32-bånds HiFi DSP</span>
+        </span>
+        <span class="studio-promo-cta">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="nav_cta">Google Play</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </span>
+        <span class="studio-promo-arrow-mini" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </span>
+      </a>
     </div>
 
     <div class="footer-legal">

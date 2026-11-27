@@ -83,3 +83,6 @@
 - [awk, sed, grep & curl Pipelines](https://supercode-ide.github.io/shell-awk-sed-grep-log-pipelines.html): Run offline awk, sed, grep, sort, uniq, bc -l, curl, tar/gzip, and sha256sum text pipelines over real files on Android — plus seamless Cloud Ubuntu GNU Bash 5.2 for declare -A and jq.
 - [Kotlin Coding App & .kt/.kts Runner](https://supercode-ide.github.io/kotlin-coding-app-compiler-android.html): Write, format, and compile Kotlin (.kt and .kts) on your Android phone or tablet. Features offline AST completion, a 21-key -> / ?: / ?. symbol bar, 1-tap Kotlin formatter, multiline stdin, and fast execution.
 - [Pocket Linux DevOps: Shell + SFTP + Git](https://supercode-ide.github.io/linux-devops-shell-sftp-git-android.html): Handle on-call Linux sysadmin & DevOps tasks from Android. Test .sh pipelines locally, inspect multi-GB server logs, commit via Visual Git, and edit remote scripts over SFTP preserving POSIX 0755 permissions.
+
+## Sister Flagship App by Phoenix Global Studios
+- [FM Radio: HiFi Radio AM FM](https://play.google.com/store/apps/details?id=com.hifiradio.fmradio): Live bilingual radio captions & 32-Band HiFi DSP audio studio for Android by Phoenix Global Studios (`com.hifiradio.fmradio`).
