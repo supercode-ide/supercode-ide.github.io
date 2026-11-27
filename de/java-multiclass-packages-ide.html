@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090A0F">
+  <meta name="color-scheme" content="only dark">
+  <meta name="supported-color-schemes" content="dark">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <title>Mehrere Java-Klassen &amp; .jar-Bibliotheken auf Android kompilieren — Offline-Paket-IDE | SuperCode</title>
+  <meta name="description" content="Baue Multi-Klassen- und Multi-Paket-Java-17-Projekte offline auf Android. Scanne bis zu 500 .java-Dateien, lade eigene libs/*.jar-Bibliotheken (bis 30 MB), bündle resources/ und starte per SHA-256-Cache in ~0ms neu.">
+  <meta name="keywords" content="compile multiple java classes on android, add jar library java ide android, multi package java ide mobile, fast offline java compiler, src main java android ide, java gson jar offline android">
+  <meta name="author" content="Phoenix Global Studios">
+  <meta name="google-play-app" content="app-id=com.phoenixglobal.supercodeeditor">
+
+  <link id="canonical-link" rel="canonical" href="https://supercode-ide.github.io/de/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="x-default" href="https://supercode-ide.github.io/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="en" href="https://supercode-ide.github.io/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://supercode-ide.github.io/zh/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://supercode-ide.github.io/zh-tw/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="es" href="https://supercode-ide.github.io/es/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://supercode-ide.github.io/pt/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="ja" href="https://supercode-ide.github.io/ja/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="ko" href="https://supercode-ide.github.io/ko/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="de" href="https://supercode-ide.github.io/de/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="fr" href="https://supercode-ide.github.io/fr/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="ru" href="https://supercode-ide.github.io/ru/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="hi" href="https://supercode-ide.github.io/hi/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="id" href="https://supercode-ide.github.io/id/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="it" href="https://supercode-ide.github.io/it/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="vi" href="https://supercode-ide.github.io/vi/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="th" href="https://supercode-ide.github.io/th/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="tr" href="https://supercode-ide.github.io/tr/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="ar" href="https://supercode-ide.github.io/ar/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="pl" href="https://supercode-ide.github.io/pl/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="nl" href="https://supercode-ide.github.io/nl/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="sv" href="https://supercode-ide.github.io/sv/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="nb" href="https://supercode-ide.github.io/nb/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="da" href="https://supercode-ide.github.io/da/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="fi" href="https://supercode-ide.github.io/fi/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="cs" href="https://supercode-ide.github.io/cs/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="uk" href="https://supercode-ide.github.io/uk/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="ro" href="https://supercode-ide.github.io/ro/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="hu" href="https://supercode-ide.github.io/hu/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="el" href="https://supercode-ide.github.io/el/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="he" href="https://supercode-ide.github.io/he/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="ms" href="https://supercode-ide.github.io/ms/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="fil" href="https://supercode-ide.github.io/tl/java-multiclass-packages-ide.html">
+  <link rel="alternate" hreflang="bn" href="https://supercode-ide.github.io/bn/java-multiclass-packages-ide.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
+  <meta property="og:title" content="Mehrere Java-Klassen &amp; .jar-Bibliotheken auf Android kompilieren — Offline-Paket-IDE | SuperCode">
+  <meta property="og:description" content="Baue Multi-Klassen- und Multi-Paket-Java-17-Projekte offline auf Android. Scanne bis zu 500 .java-Dateien, lade eigene libs/*.jar-Bibliotheken (bis 30 MB), bündle resources/ und starte per SHA-256-Cache in ~0ms neu.">
+  <meta property="og:url" content="https://supercode-ide.github.io/de/java-multiclass-packages-ide.html">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-hero-de.png">
+  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-hero-de.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Offline Java 17 IDE &amp; SQLite JDBC">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-hero-de.png">
+  <meta name="twitter:title" content="Mehrere Java-Klassen &amp; .jar-Bibliotheken auf Android kompilieren — Offline-Paket-IDE | SuperCode">
+  <meta name="twitter:description" content="Baue Multi-Klassen- und Multi-Paket-Java-17-Projekte offline auf Android. Scanne bis zu 500 .java-Dateien, lade eigene libs/*.jar-Bibliotheken (bis 30 MB), bündle resources/ und starte per SHA-256-Cache in ~0ms neu.">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <script>if(/SamsungBrowser/i.test(navigator.userAgent)){document.documentElement.classList.add('is-samsung');}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "SoftwareApplication",
+        "MobileApplication",
+        "WebApplication"
+      ],
+      "@id": "https://supercode-ide.github.io/#supercode-app",
+      "name": "Code Editor: SuperCode IDE",
+      "alternateName": [
+        "Multi-Class Java IDE Android",
+        "Run JAR Library Java Android",
+        "Offline Java Package Builder"
+      ],
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Android Multi-Class Java IDE with Custom .jar Classpath & 0ms Bytecode Cache",
+      "inLanguage": "de",
+      "fileSize": "40.2MB",
+      "softwareVersion": "1.55.05",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=de-DE&listing=java-ide",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=de-DE&listing=java-ide",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=de-DE"
+      ],
+      "potentialAction": [
+        {
+          "@type": "InstallAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=de-DE&listing=java-ide",
+            "actionPlatform": [
+              "http://schema.org/AndroidPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          }
+        },
+        {
+          "@type": "ViewAction",
+          "name": "App-Guide",
+          "target": [
+            "https://supercode-ide.github.io/tutorial/?lang=de",
+            "android-app://com.phoenixglobal.supercodeeditor/https/supercode-ide.github.io/tutorial"
+          ]
+        }
+      ],
+      "identifier": "com.phoenixglobal.supercodeeditor",
+      "url": "https://supercode-ide.github.io/de/java-multiclass-packages-ide.html",
+      "screenshot": [
+        "https://supercode-ide.github.io/assets/gallery/de/06_java17_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/de/01_python_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/de/02_cpp20_compiler.webp",
+        "https://supercode-ide.github.io/assets/gallery/de/03_web_php_devtools.webp",
+        "https://supercode-ide.github.io/assets/gallery/de/04_file_manager_tree.webp",
+        "https://supercode-ide.github.io/assets/gallery/de/05_sql_sqlite_studio.webp",
+        "https://supercode-ide.github.io/assets/gallery/de/07_visual_git_timemachine.webp",
+        "https://supercode-ide.github.io/assets/gallery/de/08_symbol_keyboard_themes.webp"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Phoenix Global Studios",
+        "url": "https://supercode-ide.github.io/de/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "66"
+      },
+      "featureList": [
+        "Automatic workspace discovery of up to 500 .java source files (up to 12 MB) across src/main/java and nested packages",
+        "Zero-config third-party .jar library loader scanning project libs/ and lib/ directories up to 30 MB",
+        "Classpath resource packaging for resources/ and src/main/resources/ via Class.getResourceAsStream()",
+        "Smart main() entry-class arbitrator when pressing Run from an interface, record, enum, or service tab",
+        "SHA-256 transitive closure cache delivering near-0ms instant ⚡ Cache re-runs on unchanged sources",
+        "Live overlay of unsaved open editor tabs during multi-file compilation plus built-in Visual Git"
+      ],
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-de.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://supercode-ide.github.io/de/java-multiclass-packages-ide.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SuperCode IDE",
+          "item": "https://supercode-ide.github.io/de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Java 17 IDE-Hub",
+          "item": "https://supercode-ide.github.io/de/java-ide.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Multi-Class-Pakete & .jar-Libs",
+          "item": "https://supercode-ide.github.io/de/java-multiclass-packages-ide.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Structure Multi-Package & .jar Projects on Android",
+      "description": "Set up a clean multi-package OOP workspace with third-party .jar libraries in four steps.",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Create Package Folders or Clone a Git Repo",
+          "text": "Create nested package directories in Explorer (or clone an existing university/GitHub Java repo via SuperCode's Visual Git client).",
+          "url": "https://supercode-ide.github.io/java-multiclass-packages-ide.html#step1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Drop Optional Third-Party .jar Files Into libs/",
+          "text": "Copy any compatible pure-Java .jar archives into libs/ or lib/ and place static config files inside resources/.",
+          "url": "https://supercode-ide.github.io/java-multiclass-packages-ide.html#step2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Press Run Without Leaving Your Helper Class",
+          "text": "Tap Run ▶ even while viewing a model or interface tab — SuperCode arbitrates main() and compiles the entire package tree offline.",
+          "url": "https://supercode-ide.github.io/java-multiclass-packages-ide.html#step3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Test Edge Cases Instantly With 0ms Cached Builds",
+          "text": "Re-run with new Scanner inputs or CLI arguments instantaneously thanks to SHA-256 bytecode closure caching.",
+          "url": "https://supercode-ide.github.io/java-multiclass-packages-ide.html#step4"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://supercode-ide.github.io/java-multiclass-packages-ide.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wie füge ich eine externe `.jar`-Bibliothek wie Gson oder Commons Lang in SuperCode hinzu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Erstelle einen Ordner namens `libs` (oder `lib`) im Wurzelverzeichnis deines Java-Projekts und kopiere deine `.jar`-Datei hinein. SuperCode fügt alle `.jar`-Archive in `libs/` (bis zu 30 MB) automatisch dem Compile- und Runtime-Classpath hinzu — ganz ohne Build-Skripte."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was passiert, wenn ich Run drücke, während ich eine Java-Klasse ohne `main()` bearbeite?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SuperCodes Entry-Point-Arbitrator scannt die kompilierten Klassen deines Projekts, wählt automatisch die primäre Einstiegsklasse mit `main()` aus und startet sie — so musst du nicht ständig zwischen Tabs wechseln."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Muss ich `src/main/java` verwenden oder funktionieren auch einfache Ordner mit mehreren Dateien?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Beides funktioniert nahtlos! Du kannst zwei `.java`-Dateien ohne `package`-Anweisung nebeneinander in einen einfachen Ordner legen, `com.example.*`-Unterordner direkt anlegen oder eine vollständige `src/main/java` + `resources/` + `libs/`-Struktur nutzen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche `.jar`-Dateien funktionieren offline auf Android?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jede standardmäßige reine Java-`.jar`-Bibliothek für Java 8, 11 oder 17 (wie `gson`, `org.json`, `commons-lang3`, `commons-csv` oder Uni-Bewertungsbibliotheken) funktioniert zu 100 % offline. Desktop-GUI-JARs, die AWT/Swing-Fenster voraussetzen, sind nicht für mobile Konsolen gedacht."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-page="jv_multiclass">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="sc-logo" viewBox="20 14 68 72">
+    <path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/>
+    <path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/>
+    <path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/>
+    <path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+  </symbol>
+  <symbol id="gp-prism" viewBox="0 0 24 24">
+    <path fill="#4285F4" d="M3.6,2.4C3.3,2.7,3.1,3.2,3.1,3.8v16.4c0,0.6,0.2,1.1,0.5,1.4l0.1,0.1L12.9,12v-0.2L3.7,2.3L3.6,2.4z"/>
+    <path fill="#34A853" d="M16,15.1l-3.1-3.1v-0.2L16,8.7l0.1,0.1l3.6,2.1c1,0.6,1,1.5,0,2.1l-3.6,2.1L16,15.1z"/>
+    <path fill="#FBBC05" d="M16.1,15.1L12.9,12L3.6,21.3c0.3,0.4,0.9,0.4,1.6,0.1L16.1,15.1z"/>
+    <path fill="#EA4335" d="M16.1,8.9L5.2,2.6C4.5,2.2,3.9,2.3,3.6,2.7L12.9,12L16.1,8.9z"/>
+  </symbol>
+  <symbol id="i-ne" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8 20 7.2v9.6L12 21.2 4 16.8V7.2z"/><path d="M4 7.2l8 4.4 8-4.4M12 11.6v9.6"/></g></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2.8v3.2M15 2.8v3.2M9 18v3.2M15 18v3.2M2.8 9H6M2.8 15H6M18 9h3.2M18 15h3.2"/></g></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 2.8 7.8 12 12.6l9.2-4.8z"/><path d="m2.8 12 9.2 4.8 9.2-4.8"/><path d="m2.8 16.2 9.2 4.8 9.2-4.8"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="M2.8 8.5h18.4"/><path d="m9.5 12.5-2.2 2.2 2.2 2.2M14.5 12.5l2.2 2.2-2.2 2.2"/></g></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5.6" rx="7.6" ry="2.8"/><path d="M4.4 5.6v12.8c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8V5.6"/><path d="M4.4 12c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8"/></g></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="m7.2 9.5 3 2.5-3 2.5M12.8 15h4"/></g></symbol>
+  <symbol id="i-git" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.3"/><circle cx="6" cy="18" r="2.3"/><circle cx="18" cy="12" r="2.3"/><path d="M6 8.3v7.4M8.3 6h4.2a3.5 3.5 0 0 1 3.5 3.5v.2"/></g></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5h11a4 4 0 0 0 .7-7.94A5.5 5.5 0 0 0 7.4 9.2 3.8 3.8 0 0 0 6.5 18.5z"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M13 2.8 4.8 13.2h6.3L10.2 21.2 19.2 10.6h-6.4z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 2.8 4.8 5.8v5.6c0 5 3.1 8.5 7.2 9.8 4.1-1.3 7.2-4.8 7.2-9.8V5.8z"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="index.html" class="brand" aria-label="SuperCode IDE Home">
+      <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+      <span>SuperCode</span>
+      <span class="brand__tag">IDE</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary Workspaces">
+      <a href="code-editor.html" data-i18n="nav_code_editor">Code-Editor</a>
+      <a href="large-file-editor.html" data-i18n="nav_large_file">GB-Dateien</a>
+      <a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a>
+      <a href="c-compiler.html" data-i18n="nav_c_compiler">C-Compiler</a>
+      <a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a>
+      <a href="java-ide.html" class="is-current" data-i18n="nav_java_ide">Java 17</a>
+      <a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a>
+      <a href="web-ide.html" data-i18n="nav_web_ide">Web & PHP</a>
+      <a href="sql-ide.html" data-i18n="nav_sql_ide">SQL-Studio</a>
+      <a href="git-client.html" data-i18n="nav_git_client">Visual Git</a>
+      <a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP & FTPS</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button id="langModalBtn" class="btn-lang-trigger" type="button" onclick="openLangModal()" aria-label="Select Language">
+        <svg class="lang-globe-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span id="langTriggerText">DE</span>
+        <span class="lang-chevron" aria-hidden="true">&#9662;</span>
+      </button>
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=de-DE&amp;listing=java-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dde%26utm_campaign%3Djava-ide%26utm_content%3Djava-multiclass-packages-ide" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+        <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+        <span data-i18n="nav_cta">Google Play</span>
+      </a>
+      <a href="index.html" class="btn-home-icon" aria-label="Home" title="Home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5"/>
+          <path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
+        </svg>
+      </a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteDrawer" aria-label="All Pages Directory">
+        <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 8.5h16M4 15.5h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-drawer" id="siteDrawer" hidden>
+  <nav class="container menu-drawer__inner" aria-label="All SuperCode Pages">
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_core">Editor & Große Dateien</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="index.html"><span data-i18n="nav_home">Übersicht</span><span class="mono">01</span></a>
+        <a class="menu-drawer__link" href="code-editor.html"><span data-i18n="nav_code_editor">Code-Editor</span><span class="mono">02</span></a>
+        <a class="menu-drawer__link" href="large-file-editor.html"><span data-i18n="nav_large_file">GB-Dateien</span><span class="mono">03</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_lang">Offline-Compiler & Sprachen</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="python-ide.html"><span data-i18n="nav_python_ide">Python IDE</span><span class="mono">04</span></a>
+        <a class="menu-drawer__link" href="c-compiler.html"><span data-i18n="nav_c_compiler">C-Compiler</span><span class="mono">05</span></a>
+        <a class="menu-drawer__link" href="cpp-ide.html"><span data-i18n="nav_cpp_ide">C++20 IDE</span><span class="mono">06</span></a>
+        <a class="menu-drawer__link is-current" href="java-ide.html"><span data-i18n="nav_java_ide">Java 17</span><span class="mono">07</span></a>
+        <a class="menu-drawer__link" href="javascript-ide.html"><span data-i18n="nav_js_ide">JavaScript</span><span class="mono">08</span></a>
+        <a class="menu-drawer__link" href="lua-ide.html"><span data-i18n="nav_lua_ide">Lua 5.4</span><span class="mono">09</span></a>
+        <a class="menu-drawer__link" href="shell-ide.html"><span data-i18n="nav_shell_ide">Shell & Kotlin</span><span class="mono">10</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_devops">Web, SQL & Remote-DevOps</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="web-ide.html"><span data-i18n="nav_web_ide">Web & PHP</span><span class="mono">11</span></a>
+        <a class="menu-drawer__link" href="sql-ide.html"><span data-i18n="nav_sql_ide">SQL-Studio</span><span class="mono">12</span></a>
+        <a class="menu-drawer__link" href="git-client.html"><span data-i18n="nav_git_client">Visual Git</span><span class="mono">13</span></a>
+        <a class="menu-drawer__link" href="sftp-client.html"><span data-i18n="nav_sftp_client">SFTP & FTPS</span><span class="mono">14</span></a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<main id="top">
+  <!-- ==================== 01 · EDITORIAL HERO & INTERACTIVE WORKBENCH ==================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <div class="py-hub-crumb"><a href="java-ide.html"><span class="crumb-arrow" aria-hidden="true">&larr;</span> Java 17 IDE-Hub</a><span class="sep">/</span><span>Multi-Class-Pakete &amp; .jar-Libs</span></div>
+          <div class="trust-pill">
+            <span class="trust-pill__score"><span data-play-rating>4.9</span> &#9733;</span>
+            <span data-i18n="hero_tag">500 .JAVA-DATEIEN &#183; LIBS/*.JAR &#183; SMARTES MAIN() &#183; &#9889; 0MS CACHE</span>
+          </div>
+
+          <h1 class="hero-h1" data-i18n="hero_h1">Baue <span class="text-gradient">Multi-Klassen-Java-Pakete &amp; eigene .jar-Projekte</span> offline auf Android.</h1>
+
+          <p class="hero-lead" data-i18n="hero_desc">Echte objektorientierte Software passt nicht in eine einzige <code>Main.java</code>. SuperCode kompiliert bis zu <strong>500 <code>.java</code>-Klassen über verschachtelte Pakete</strong>, bindet externe <strong><code>libs/*.jar</code>-Bibliotheken</strong> automatisch ein, löst <strong><code>getResourceAsStream()</code></strong>-Assets auf und startet unveränderte Builds in <strong>nahezu <code>0ms</code></strong> neu.</p>
+
+          <div class="hero__cta" id="heroCta">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=de-DE&amp;listing=java-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dde%26utm_campaign%3Djava-ide%26utm_content%3Djava-multiclass-packages-ide" target="_blank" rel="noopener" class="btn btn--gold">
+              <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+              <span data-i18n="cta_btn">Bei Google Play</span>
+            </a>
+            <a href="https://supercode-ide.github.io/tutorial/?lang=de&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+              <span data-i18n="cta_tutorial">App-Guide</span>
+              <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <dl class="specs" aria-label="Key Specifications">
+          <div class="spec"><dt>500</dt><dd data-i18n="jvm_s1">Max. .java-Dateien</dd></div>
+          <div class="spec"><dt>30<small>MB</small></dt><dd data-i18n="jvm_s2">libs/*.jar-Loader</dd></div>
+          <div class="spec"><dt>~0<small>ms</small></dt><dd data-i18n="jvm_s3">SHA-256 &#9889; Cache</dd></div>
+          <div class="spec"><dt>Auto</dt><dd data-i18n="jvm_s4">main()-Auswahl</dd></div>
+        </dl>
+      </div>
+
+      <div class="wb-caption">
+        <div class="sec-index" style="margin-bottom:0">
+          <span class="num">01</span>
+          <span class="rule"></span>
+          <span data-i18n="wb_eyebrow">MULTI-PAKET OOP &amp; EIGENER .JAR-CLASSPATH WORKBENCH</span>
+        </div>
+        <span class="wb-caption__hint mono">src/main/java &#183; libs/*.jar &#183; Smart main() Resolution &#183; &#9889; 0ms Cache</span>
+      </div>
+
+      <div class="ide-workbench">
+        <div class="wb-titlebar">
+          <div class="wb-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="wb-title" id="ide-compiler-label">src/main/java/com/acme/MainApp.java &#8212; Multi-Package + &#9889; 0ms Cache</div>
+          <button type="button" class="wb-run" id="btn-run-sandbox">
+            <span class="wb-run__tri" aria-hidden="true">&#9654;</span>
+            <span data-i18n="btn_run">Demo starten</span>
+          </button>
+        </div>
+
+        <div class="wb-tabs" role="tablist" aria-label="Interactive Workspace Tabs">
+          <button type="button" class="ide-tab active" data-tab="app" role="tab" aria-selected="true"><i></i>MainApp.java</button>
+          <button type="button" class="ide-tab" data-tab="svc" role="tab" aria-selected="false"><i></i>TaxCalculator.java</button>
+          <button type="button" class="ide-tab" data-tab="jar" role="tab" aria-selected="false"><i></i>GsonResourceDemo.java</button>
+        </div>
+
+        <div class="wb-body">
+          <aside class="wb-explorer" aria-label="Project Explorer">
+            <div class="wb-explorer__head">Explorer</div>
+            <div class="wb-folder">&#9662; billing-engine-oop</div>
+            <button type="button" class="wb-file active" data-tab="app"><b>MAIN</b><span>MainApp.java</span></button>
+            <button type="button" class="wb-file" data-tab="svc"><b>PKG</b><span>TaxCalculator.java</span></button>
+            <button type="button" class="wb-file" data-tab="jar"><b>JAR</b><span>GsonResourceDemo.java</span></button>
+          </aside>
+
+          <div class="wb-main">
+            <div class="ide-editor-body" id="ide-code-box" role="region" aria-label="Interactive Code Preview"></div>
+            <div class="ide-terminal" id="ide-terminal-drawer" aria-live="polite">
+              <div class="term-header">
+                <span data-i18n="term_title">Interaktive Konsolenausgabe</span>
+                <div class="term-header-right">
+                  <span class="term-exec-badge" id="ide-exec-status">Ready</span>
+                  <button type="button" class="btn-term-close" id="btn-close-term" aria-label="Close terminal">&#10005;</button>
+                </div>
+              </div>
+              <div class="term-stream" id="ide-term-output"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wb-statusbar">
+          <span class="wb-statusbar__dot"><i></i><span id="wbStatusLang">&#9889; Cache Hit &#183; 0ms Compile</span></span>
+          <div class="wb-statusbar__right">
+            <span>UTF-8</span>
+            <span>LF</span>
+            <span>Ln 11, Col 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- SC_REAL_GALLERY_START -->
+  <section class="section sc-real-gallery" id="screenshots" aria-label="App-Vorschau und Screenshots">
+    <div class="container">
+      <div class="sc-gp-head">
+        <div class="sc-gp-head-left">
+          <div class="sc-gp-eyebrow" data-i18n="gal_eyebrow">ECHTE ANDROID-AUFNAHMEN</div>
+          <h2 class="sc-gp-title" data-i18n="gal_title">App-Vorschau & Screenshots</h2>
+          <p class="sc-gp-short" data-i18n="gal_short_desc">Offline Code-Editor & IDE: Python, C/C++, Java, JS, HTML, SQL, PHP Compiler, Git</p>
+        </div>
+        <a class="sc-gp-store-bar" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=de-DE&amp;listing=java-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dde%26utm_campaign%3Djava-ide%26utm_content%3Djava-multiclass-packages-ide" target="_blank" rel="noopener" aria-label="Code Editor: SuperCode IDE — Phoenix Global Studios">
+          <svg class="sc-gp-app-icon" width="38" height="38" viewBox="16 12 76 76" aria-hidden="true"><rect x="16" y="12" width="76" height="76" rx="18" fill="#070A10" stroke="#3B82F6" stroke-width="2"/><path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/><path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/><path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/><path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/></svg>
+          <span class="sc-gp-app-meta">
+            <span class="sc-gp-app-name">Code Editor: SuperCode IDE</span>
+            <span class="sc-gp-app-dev">Phoenix Global Studios</span>
+          </span>
+          <span class="sc-gp-store-arrow" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      </div>
+      <div class="sc-gp-stage">
+        <button type="button" class="sc-gp-nav sc-gp-nav--prev is-hidden" id="scGpPrev" aria-label="Vorheriges Bild">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="sc-gp-rail" id="scGpRail">
+          <button type="button" class="sc-gp-item sc-gp-item--feature" aria-label="Code Editor: SuperCode IDE — Offline-IDE für Android">
+            <img src="../assets/gallery/de/00_feature_graphic.webp" data-sc-file="00_feature_graphic.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_0" data-cap="Code Editor: SuperCode IDE — Offline-IDE für Android" alt="Code Editor: SuperCode IDE — Offline-IDE für Android" width="1024" height="500" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Offline Java 17 IDE &amp; SQLite JDBC">
+            <img src="../assets/gallery/de/06_java17_ide.webp" data-sc-file="06_java17_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_6" data-cap="Offline Java 17 IDE &amp; SQLite JDBC" alt="Offline Java 17 IDE &amp; SQLite JDBC" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Offline Python 3.11 / 3.12 IDE &amp; Split-Konsole">
+            <img src="../assets/gallery/de/01_python_ide.webp" data-sc-file="01_python_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_1" data-cap="Offline Python 3.11 / 3.12 IDE &amp; Split-Konsole" alt="Offline Python 3.11 / 3.12 IDE &amp; Split-Konsole" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Lokaler C17 &amp; C++20 Mehrdatei-Compiler">
+            <img src="../assets/gallery/de/02_cpp20_compiler.webp" data-sc-file="02_cpp20_compiler.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_2" data-cap="Lokaler C17 &amp; C++20 Mehrdatei-Compiler" alt="Lokaler C17 &amp; C++20 Mehrdatei-Compiler" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Lokaler Web- &amp; Offline-PHP-Server + DevTools">
+            <img src="../assets/gallery/de/03_web_php_devtools.webp" data-sc-file="03_web_php_devtools.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_3" data-cap="Lokaler Web- &amp; Offline-PHP-Server + DevTools" alt="Lokaler Web- &amp; Offline-PHP-Server + DevTools" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Lokaler Dateimanager &amp; Projekt-Dateibaum (SAF)">
+            <img src="../assets/gallery/de/04_file_manager_tree.webp" data-sc-file="04_file_manager_tree.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_4" data-cap="Lokaler Dateimanager &amp; Projekt-Dateibaum (SAF)" alt="Lokaler Dateimanager &amp; Projekt-Dateibaum (SAF)" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Offline SQLite 3.54 Studio &amp; .db-Inspektor">
+            <img src="../assets/gallery/de/05_sql_sqlite_studio.webp" data-sc-file="05_sql_sqlite_studio.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_5" data-cap="Offline SQLite 3.54 Studio &amp; .db-Inspektor" alt="Offline SQLite 3.54 Studio &amp; .db-Inspektor" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Visueller Git-Client, Verlauf &amp; SFTP/FTPS">
+            <img src="../assets/gallery/de/07_visual_git_timemachine.webp" data-sc-file="07_visual_git_timemachine.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_7" data-cap="Visueller Git-Client, Verlauf &amp; SFTP/FTPS" alt="Visueller Git-Client, Verlauf &amp; SFTP/FTPS" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="21-Tasten-Symbole &amp; 8 Design-IDE-Themes">
+            <img src="../assets/gallery/de/08_symbol_keyboard_themes.webp" data-sc-file="08_symbol_keyboard_themes.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_8" data-cap="21-Tasten-Symbole &amp; 8 Design-IDE-Themes" alt="21-Tasten-Symbole &amp; 8 Design-IDE-Themes" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+        </div>
+        <button type="button" class="sc-gp-nav sc-gp-nav--next" id="scGpNext" aria-label="Nächstes Bild">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  <div class="sc-lb-modal" id="scLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="App-Vorschau und Screenshots">
+    <div class="sc-lb-topbar">
+      <button type="button" class="sc-lb-back" id="scLbBack">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-i18n="gal_back">Zurück</span>
+      </button>
+      <div class="sc-lb-meta">
+        <span class="sc-lb-counter" id="scLbCounter">1 / 9</span>
+        <span class="sc-lb-title" id="scLbTitle"></span>
+      </div>
+      <button type="button" class="sc-lb-close" id="scLbClose" aria-label="Vorschau schließen">&times;</button>
+    </div>
+    <div class="sc-lb-stage">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--prev" id="scLbPrev" aria-label="Vorheriges Bild">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <img class="sc-lb-img" id="scLbImg" src="" alt="SuperCode IDE Preview">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--next" id="scLbNext" aria-label="Nächstes Bild">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="sc-lb-dots" id="scLbDots"></div>
+  </div>
+  <script defer src="../assets/gallery.js"></script>
+<!-- SC_REAL_GALLERY_END -->
+
+
+
+
+
+  <!-- ==================== 02 · CORE CAPABILITIES ==================== -->
+  <section class="section section--alt" id="capabilities">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">02</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_cap_eyebrow">KERNFUNKTIONEN</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="sec_cap_title">Java-Paketarchitektur auf Desktop-Niveau ohne lange Gradle-Wartezeiten</h2>
+        <p class="sec-lead" data-i18n="sec_cap_lead">Strukturiere saubere Domain-, Service- und Repository-Pakete auf Android &#8212; ohne 4-minütige Gradle-Syncs oder manuelle `javac -cp`-Flags.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="feature-grid feature-grid--6">
+          <article class="feature-card" id="cap1">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+              <span class="f-idx">02.1</span>
+            </div>
+            <h3 class="f-title" data-i18n="f1_title">Scannt bis zu 500 .java-Dateien über verschachtelte Pakete</h3>
+            <p class="f-desc" data-i18n="f1_desc">Organisiere Projekte nach Standard-Maven/Gradle-Struktur (src/main/java/com/company/...) oder flachen Unterordnern. SuperCode scannt bis zu 500 .java-Dateien (12 MB Quellcode-Budget) und kompiliert paketübergreifende Imports in einem Durchgang.</p>
+            <div class="f-code" data-i18n="f1_badge">src/main/java &#183; Verschachtelte Pakete &#183; 500 Dateien / 12 MB</div>
+          </article>
+          <article class="feature-card" id="cap2">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-cube"/></svg></span>
+              <span class="f-idx">02.2</span>
+            </div>
+            <h3 class="f-title" data-i18n="f2_title">Zero-Config libs/*.jar &amp; lib/*.jar Classpath-Loader</h3>
+            <p class="f-desc" data-i18n="f2_desc">Du brauchst Gson, Apache Commons, org.json oder eine Kursbibliothek deiner Uni? Lege reine Java-.jar-Dateien (bis 30 MB gesamt) in deinen Projektordner libs/ oder lib/ und importiere ihre Pakete sofort offline.</p>
+            <div class="f-code" data-i18n="f2_badge">libs/*.jar &#183; lib/*.jar &#183; Bis zu 30 MB Classpath</div>
+          </article>
+          <article class="feature-card" id="cap3">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
+              <span class="f-idx">02.3</span>
+            </div>
+            <h3 class="f-title" data-i18n="f3_title">SHA-256 Closure-Cache für sofortige Neustarts in ~0ms</h3>
+            <p class="f-desc" data-i18n="f3_desc">SuperCode berechnet einen kryptografischen SHA-256-Hash über alle beteiligten .java-Quellen, offenen Tab-Puffer und .jar-Dateien. Erneute Tests mit anderen Konsoleneingaben treffen den &#9889; Cache in ~0ms ohne Neukompilierung.</p>
+            <div class="f-code" data-i18n="f3_badge">SHA-256 Closure-Hash &#183; &#9889; Cache-Badge &#183; Sofortstart</div>
+          </article>
+          <article class="feature-card" id="cap4">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-chip"/></svg></span>
+              <span class="f-idx">02.4</span>
+            </div>
+            <h3 class="f-title" data-i18n="f4_title">Smarte main()-Ermittlung aus jedem geöffneten Tab</h3>
+            <p class="f-desc" data-i18n="f4_desc">Du bearbeitest gerade ein InvoiceRepository-Interface oder eine TaxCalculator-Hilfsklasse? Tippe direkt auf Run &#9654; &#8212; SuperCode analysiert den Paketgraphen, findet die main()-Einstiegsklasse und übernimmt ungespeicherte Tab-Änderungen automatisch.</p>
+            <div class="f-code" data-i18n="f4_badge">Start aus jedem Tab &#183; Ungespeicherter Puffer-Overlay</div>
+          </article>
+          <article class="feature-card" id="cap5">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-db"/></svg></span>
+              <span class="f-idx">02.5</span>
+            </div>
+            <h3 class="f-title" data-i18n="f5_title">Automatisches Bündeln von resources/ Classpath-Assets</h3>
+            <p class="f-desc" data-i18n="f5_desc">Lege .properties-, .json-, .csv-, .xml- oder .txt-Vorlagen in resources/ oder src/main/resources/ ab. Deine Klassen laden sie sauber über Class.getResourceAsStream() oder ClassLoader.getResource() wie am Desktop.</p>
+            <div class="f-code" data-i18n="f5_badge">resources/ &#183; src/main/resources/ &#183; getResourceAsStream</div>
+          </article>
+          <article class="feature-card" id="cap6">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-web"/></svg></span>
+              <span class="f-idx">02.6</span>
+            </div>
+            <h3 class="f-title" data-i18n="f6_title">50k-Knoten-Fuzzy-Suche, AST-Vervollständigung &amp; Visual Git</h3>
+            <p class="f-desc" data-i18n="f6_desc">Springe in Millisekunden per CamelCase-Fuzzy-Suche zwischen Dutzenden Java-Klassen (z. B. findet 'ICR' InvoiceController.java), refaktoriere mit AST-Vervollständigung und committe Meilensteine über das integrierte Visual Git.</p>
+            <div class="f-code" data-i18n="f6_badge">CamelCase-Dateisprung &#183; AST-Member-Hinweise &#183; Visual Git</div>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">Für Smartphones, Foldables & Tablets · Leichtgewichtige 40,2 MB</span>
+        <a class="link-arrow" href="java-ide.html">
+          <span>Java 17 IDE Hub</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 03 · STEP-BY-STEP WORKFLOW GUIDE ==================== -->
+  <section class="section" id="workflow">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">03</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_wf_eyebrow">SCHRITT-FÜR-SCHRITT-ANLEITUNG</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="workflow_title">So strukturierst du Multi-Paket- &amp; .jar-Projekte auf Android</h2>
+        <p class="sec-lead" data-i18n="workflow_lead">Richte in vier Schritten einen sauberen Multi-Paket-OOP-Workspace mit externen .jar-Bibliotheken ein.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="workflow-grid">
+          <article class="wf-step" id="step1">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 01</span>
+              <span class="wf-step__cmd">src/main/java/...</span>
+            </div>
+            <h3 data-i18n="wf1_title">Paketordner anlegen oder Git-Repo klonen</h3>
+            <p data-i18n="wf1_desc">Erstelle verschachtelte Paketverzeichnisse im Explorer (oder klone ein bestehendes Uni-/GitHub-Java-Repo über SuperCodes Visual Git-Client).</p>
+          </article>
+          <article class="wf-step" id="step2">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 02</span>
+              <span class="wf-step__cmd">libs/gson.jar</span>
+            </div>
+            <h3 data-i18n="wf2_title">Optionale .jar-Bibliotheken in libs/ ablegen</h3>
+            <p data-i18n="wf2_desc">Kopiere kompatible reine Java-.jar-Archive in libs/ oder lib/ und lege statische Konfigurationsdateien in resources/ ab.</p>
+          </article>
+          <article class="wf-step" id="step3">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 03</span>
+              <span class="wf-step__cmd">Run &#9654; From Any Class</span>
+            </div>
+            <h3 data-i18n="wf3_title">Starten, ohne die Hilfsklasse zu verlassen</h3>
+            <p data-i18n="wf3_desc">Tippe auf Run &#9654;, auch wenn du ein Model oder Interface ansiehst &#8212; SuperCode wählt main() automatisch aus und kompiliert den gesamten Paketbaum offline.</p>
+          </article>
+          <article class="wf-step" id="step4">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 04</span>
+              <span class="wf-step__cmd">&#9889; Cache Re-Run</span>
+            </div>
+            <h3 data-i18n="wf4_title">Grenzfälle sofort mit 0ms Cache-Builds testen</h3>
+            <p data-i18n="wf4_desc">Starte sofort mit neuen Scanner-Eingaben oder CLI-Argumenten neu &#8212; dank SHA-256 Bytecode-Closure-Caching.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="wf_foot_note">Bis zu 500 .java-Quellen (12 MB) &#183; 30 MB eigenes .jar-Budget &#183; Sync ungespeicherter Tab-Puffer</span>
+        <a class="link-arrow" href="https://supercode-ide.github.io/tutorial/?lang=de&amp;ref=official_web" data-supercode-tutorial="true">
+          <span data-i18n="cta_tutorial">App-Guide</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 04 · FEATURED SUMMARY & COMPARISON MATRIX ==================== -->
+  <section class="section section--alt" id="comparison">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">04</span>
+        <span class="rule"></span>
+        <span data-i18n="comp_eyebrow">FUNKTIONSVERGLEICH</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="table_h2">Multi-Datei- &amp; .jar-Java-Projektunterstützung im Vergleich</h2>
+        <p class="snippet-definition" data-i18n="snippet_p"><strong>SuperCode Multi-Class Java IDE</strong> baut echte Multi-Paket-Java-17-Projekte offline auf Android ohne Gradle-Overhead. Es scannt bis zu 500 Quelldateien über verschachtelte Pakete, lädt automatisch eigene .jar-Bibliotheken aus libs/, wählt main()-Einstiegsklassen intelligent aus und cached kompilierte Closures per SHA-256 für Neustarts in ~0ms.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="table-wrap">
+          <table class="obsidian-benchmark-table">
+            <caption data-i18n="table_caption">ANDROID MULTI-CLASS JAVA- &amp; JAR-BUILD-FUNKTIONEN</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="th_0">Projektfunktion</th>
+                <th scope="col" data-i18n="th_1">SuperCode Java 17 IDE</th>
+                <th scope="col" data-i18n="th_2">Einfache Java-Mobile-Apps</th>
+                <th scope="col" data-i18n="th_3">Online-Paste-Compiler</th>
+                <th scope="col" data-i18n="th_4">Schwere Gradle-Mobile-Ports</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="tr1_c0">Multi-Paket-Umfang</th>
+                <td><strong data-i18n="tr1_c1">Bis zu 500 .java-Dateien über src/main/java</strong></td>
+                <td data-i18n="tr1_c2">Einzelner Ordner oder manuelle Liste</td>
+                <td data-i18n="tr1_c3">1 Datei (nur Main.java)</td>
+                <td data-i18n="tr1_c4">Hoher RAM- &amp; Speicherverbrauch</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr2_c0">Eigene .jar-Bibliotheken</th>
+                <td><strong data-i18n="tr2_c1">Lädt libs/*.jar &amp; lib/*.jar automatisch (30 MB)</strong></td>
+                <td data-i18n="tr2_c2">Nicht unterstützt oder Paywall</td>
+                <td data-i18n="tr2_c3">Kein eigener .jar-Upload</td>
+                <td data-i18n="tr2_c4">Erfordert Online-Maven-Sync</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr3_c0">Einstiegspunkt-UX</th>
+                <td><strong data-i18n="tr3_c1">Smarte main()-Auswahl aus jedem Tab</strong></td>
+                <td data-i18n="tr3_c2">Scheitert bei aktivem Hilfs-Tab</td>
+                <td data-i18n="tr3_c3">Fester Main-Klassenname</td>
+                <td data-i18n="tr3_c4">Manuelle Run-XML-Konfig</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr4_c0">Classpath-Ressourcen</th>
+                <td><strong data-i18n="tr4_c1">Mountet resources/ für getResourceAsStream</strong></td>
+                <td data-i18n="tr4_c2">Fehlender Classpath-Root</td>
+                <td data-i18n="tr4_c3">Nicht unterstützt</td>
+                <td data-i18n="tr4_c4">Unterstützt</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr5_c0">Unveränderter Neustart</th>
+                <td><strong data-i18n="tr5_c1">Nahezu 0ms SHA-256 &#9889; Cache-Hit</strong></td>
+                <td data-i18n="tr5_c2">Volle Neukompilierung bei jedem Tipp</td>
+                <td data-i18n="tr5_c3">Netzwerk-Warteschlange bei jedem Tipp</td>
+                <td data-i18n="tr5_c4">Träger inkrementeller Daemon</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">Für Smartphones, Foldables & Tablets · Leichtgewichtige 40,2 MB</span>
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=de-DE&amp;listing=java-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dde%26utm_campaign%3Djava-ide%26utm_content%3Djava-multiclass-packages-ide" target="_blank" rel="noopener">
+          <span>Google Play</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 05 · VISIBLE EDITORIAL FAQ ==================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-head">
+          <div class="sec-index">
+            <span class="num">05</span>
+            <span class="rule"></span>
+            <span data-i18n="sec3_eyebrow">FRAGEN & ANTWORTEN</span>
+          </div>
+          <h2 class="h2" data-i18n="sec3_title">Häufig gestellte Fragen (FAQ)</h2>
+          <p class="sec-lead" data-i18n="faq_lead">Häufige Fragen zu Multi-Paket-Strukturen, externen .jar-Bibliotheken und der main()-Auflösung.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary><span data-i18n="faq1_q">Wie füge ich eine externe `.jar`-Bibliothek wie Gson oder Commons Lang in SuperCode hinzu?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq1_a">Erstelle einen Ordner namens `libs` (oder `lib`) im Wurzelverzeichnis deines Java-Projekts und kopiere deine `.jar`-Datei hinein. SuperCode fügt alle `.jar`-Archive in `libs/` (bis zu 30 MB) automatisch dem Compile- und Runtime-Classpath hinzu &#8212; ganz ohne Build-Skripte.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq2_q">Was passiert, wenn ich Run drücke, während ich eine Java-Klasse ohne `main()` bearbeite?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq2_a">SuperCodes Entry-Point-Arbitrator scannt die kompilierten Klassen deines Projekts, wählt automatisch die primäre Einstiegsklasse mit `main()` aus und startet sie &#8212; so musst du nicht ständig zwischen Tabs wechseln.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq3_q">Muss ich `src/main/java` verwenden oder funktionieren auch einfache Ordner mit mehreren Dateien?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq3_a">Beides funktioniert nahtlos! Du kannst zwei `.java`-Dateien ohne `package`-Anweisung nebeneinander in einen einfachen Ordner legen, `com.example.*`-Unterordner direkt anlegen oder eine vollständige `src/main/java` + `resources/` + `libs/`-Struktur nutzen.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq4_q">Welche `.jar`-Dateien funktionieren offline auf Android?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq4_a">Jede standardmäßige reine Java-`.jar`-Bibliothek für Java 8, 11 oder 17 (wie `gson`, `org.json`, `commons-lang3`, `commons-csv` oder Uni-Bewertungsbibliotheken) funktioniert zu 100 % offline. Desktop-GUI-JARs, die AWT/Swing-Fenster voraussetzen, sind nicht für mobile Konsolen gedacht.</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==================== 06 · TOPICAL AUTHORITY ECOSYSTEM CLUSTER ==================== -->
+  <section class="section section--alt" id="ecosystem-guides">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">06</span>
+        <span class="rule"></span>
+        <span>JAVA 17, OOP &amp; JDBC-GUIDES</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2>Vollständige Dokumentation zur Java 17-IDE</h2>
+        <p class="sec-lead">Wechsle nahtlos zwischen dem Offline-Java 17-IDE-Hub und allen 4 spezialisierten Java-Guides.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="py-cluster-grid">
+          <a href="java-ide.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JV-HUB</span>
+              <span class="py-spoke-card__tag">Java 17 · 0ms Cache · Pillar Hub</span>
+            </div>
+            <h3>Offline-Java-17-IDE im Überblick</h3>
+            <p>Gesamtüberblick über den Offline-Java-17-Compiler von SuperCode, Multi-Package-OOP-Builder, 0ms-Bytecode-Cache und integriertes SQLite JDBC.</p>
+            <div class="py-spoke-card__go">
+              <span>java-ide</span>
+              <span>Guide öffnen &rarr;</span>
+            </div>
+          </a>
+          <a href="java-17-records-oop-android.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JV-01</span>
+              <span class="py-spoke-card__tag">Java 17 + Cloud Java 21+</span>
+            </div>
+            <h3>Java 17 Records, Sealed &amp; Streams</h3>
+            <p>Kompiliere moderne Java 17 Records, Sealed-Hierarchien, switch -&gt; Ausdrücke, Textblöcke und Streams offline – plus Cloud Java 21+ Virtual Threads.</p>
+            <div class="py-spoke-card__go">
+              <span>java-17-records-oop-android</span>
+              <span>Guide öffnen &rarr;</span>
+            </div>
+          </a>
+          <a href="java-multiclass-packages-ide.html" class="py-spoke-card is-active">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JV-02</span>
+              <span class="py-spoke-card__tag">500 Dateien · libs/*.jar · 0ms Cache</span>
+            </div>
+            <h3>Multi-Class-Packages &amp; .jar-Libs</h3>
+            <p>Erstelle Multi-Package-src/main/java-Architekturen, lade eigene .jar-Bibliotheken automatisch aus libs/ und starte unveränderte Klassen in ~0ms neu.</p>
+            <div class="py-spoke-card__go">
+              <span>java-multiclass-packages-ide</span>
+              <span>Guide-Ansicht</span>
+            </div>
+          </a>
+          <a href="java-jdbc-sqlite-file-io.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JV-03</span>
+              <span class="py-spoke-card__tag">jdbc:sqlite · HttpClient · Files</span>
+            </div>
+            <h3>Offline-Java-SQLite-JDBC &amp; NIO.2</h3>
+            <p>Frage persistente SQLite-.db-Dateien direkt aus Java über integriertes org.sqlite.JDBC ohne Maven/Gradle-Setup ab – inklusive NIO.2-Datei-Sync.</p>
+            <div class="py-spoke-card__go">
+              <span>java-jdbc-sqlite-file-io</span>
+              <span>Guide öffnen &rarr;</span>
+            </div>
+          </a>
+          <a href="learn-java-dsa-android.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JV-04</span>
+              <span class="py-spoke-card__tag">Kompaktes void main() · Scanner</span>
+            </div>
+            <h3>Java, AP CS &amp; DSA offline lernen</h3>
+            <p>Ideal für AP Computer Science A und DSA-Interviews: kompaktes void main(), Live-Scanner(System.in), 8 Java-Vorlagen und A4-PDF-Export.</p>
+            <div class="py-spoke-card__go">
+              <span>learn-java-dsa-android</span>
+              <span>Guide öffnen &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span>5 vernetzte Java 17-Guides · Records &amp; Sealed · Integriertes SQLite-JDBC</span>
+        <a class="link-arrow" href="java-ide.html">
+          <span>Java 17-IDE-Hub</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="siteFooter">
+  <div class="container">
+    <div class="footer-cta" id="footerCta">
+      <div>
+        <h2 class="h2" data-i18n="cta_h2">Baue echte Multi-Paket-Java-Projekte auf deinem Smartphone.</h2>
+        <p data-i18n="cta_desc">Hol dir SuperCode IDE kostenlos bei Google Play &#8212; 500-Dateien-Java-17-Builds, libs/*.jar-Support und 0ms Cache-Starts.</p>
+      </div>
+      <div class="footer-cta__btns">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=de-DE&amp;listing=java-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dde%26utm_campaign%3Djava-ide%26utm_content%3Djava-multiclass-packages-ide" target="_blank" rel="noopener" class="btn btn--gold">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="cta_btn">Bei Google Play</span>
+        </a>
+        <a href="https://supercode-ide.github.io/tutorial/?lang=de&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+          <span data-i18n="cta_tutorial">App-Guide</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+          <span>SuperCode</span>
+          <span class="brand__tag">IDE</span>
+        </a>
+        <p data-i18n="footer_tagline">Nativer mobiler Code-Editor und Offline-Entwicklungsstudio für Android-Entwickler, Studierende und Lehrende weltweit.</p>
+        <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
+        <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=de-DE&amp;listing=java-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dde%26utm_campaign%3Djava-ide%26utm_content%3Djava-multiclass-packages-ide" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://supercode-ide.github.io/tutorial/?lang=de&amp;ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">App-Guide</span> &#8599;</a>
+          <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">Sprache wählen</span></button>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_core">Editor & Große Dateien</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Übersicht</a></li>
+          <li><a href="code-editor.html" data-i18n="nav_code_editor">Code-Editor</a></li>
+          <li><a href="large-file-editor.html" data-i18n="nav_large_file">GB-Dateien</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_lang">Offline-Compiler & Sprachen</h4>
+        <ul>
+          <li><a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a></li>
+          <li><a href="c-compiler.html" data-i18n="nav_c_compiler">C-Compiler</a></li>
+          <li><a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a></li>
+          <li><a href="java-ide.html" data-i18n="nav_java_ide">Java 17</a></li>
+          <li><a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a></li>
+          <li><a href="lua-ide.html" data-i18n="nav_lua_ide">Lua 5.4</a></li>
+          <li><a href="shell-ide.html" data-i18n="nav_shell_ide">Shell & Kotlin</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_devops">Web, SQL & Remote-DevOps</h4>
+        <ul>
+          <li><a href="web-ide.html" data-i18n="nav_web_ide">Web & PHP</a></li>
+          <li><a href="sql-ide.html" data-i18n="nav_sql_ide">SQL-Studio</a></li>
+          <li><a href="git-client.html" data-i18n="nav_git_client">Visual Git</a></li>
+          <li><a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP & FTPS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <span>&copy; 2026 Phoenix Global Studios. All rights reserved.</span>
+      <span class="mono">com.phoenixglobal.supercodeeditor</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="mobile-bottom-bar" id="mobileBottomBar" aria-label="Quick App Actions">
+  <div class="dock-app-icon" aria-hidden="true"><svg><use href="#sc-logo"/></svg></div>
+  <div class="bottom-bar-info">
+    <div class="bottom-bar-title">SuperCode</div>
+    <div class="bottom-bar-sub"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  </div>
+  <div class="bottom-bar-actions">
+    <a href="https://supercode-ide.github.io/tutorial/?lang=de&amp;ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">App-Guide</a>
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=de-DE&amp;listing=java-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dde%26utm_campaign%3Djava-ide%26utm_content%3Djava-multiclass-packages-ide" target="_blank" rel="noopener" class="btn-play-mini">
+      <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
+      <span data-i18n="bottom_cta">Laden</span>
+    </a>
+  </div>
+</aside>
+
+<div class="modal-overlay" id="langModal" role="dialog" aria-modal="true" aria-labelledby="langModalTitle">
+  <div class="lang-modal">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div class="modal-header">
+      <h3 id="langModalTitle"><span data-i18n="modal_title">Sprache wählen</span><span class="modal-lang-count">32</span></h3>
+      <button type="button" class="btn-close-modal" onclick="closeLangModal()" aria-label="Schließen">&#10005;</button>
+    </div>
+    <div class="lang-grid">
+      <button type="button" class="lang-option" data-code="en" onclick="setLanguage('en')"><span class="lang-option__name">English</span><span class="lang-option__code">EN</span></button>
+      <button type="button" class="lang-option" data-code="zh" onclick="setLanguage('zh')"><span class="lang-option__name">简体中文</span><span class="lang-option__code">简中</span></button>
+      <button type="button" class="lang-option" data-code="zh-tw" onclick="setLanguage('zh-tw')"><span class="lang-option__name">繁體中文</span><span class="lang-option__code">繁中</span></button>
+      <button type="button" class="lang-option" data-code="es" onclick="setLanguage('es')"><span class="lang-option__name">Español</span><span class="lang-option__code">ES</span></button>
+      <button type="button" class="lang-option" data-code="pt" onclick="setLanguage('pt')"><span class="lang-option__name">Português</span><span class="lang-option__code">PT</span></button>
+      <button type="button" class="lang-option" data-code="ja" onclick="setLanguage('ja')"><span class="lang-option__name">日本語</span><span class="lang-option__code">日本語</span></button>
+      <button type="button" class="lang-option" data-code="ko" onclick="setLanguage('ko')"><span class="lang-option__name">한국어</span><span class="lang-option__code">한국어</span></button>
+      <button type="button" class="lang-option active" data-code="de" onclick="setLanguage('de')"><span class="lang-option__name">Deutsch</span><span class="lang-option__code">DE</span></button>
+      <button type="button" class="lang-option" data-code="fr" onclick="setLanguage('fr')"><span class="lang-option__name">Français</span><span class="lang-option__code">FR</span></button>
+      <button type="button" class="lang-option" data-code="ru" onclick="setLanguage('ru')"><span class="lang-option__name">Русский</span><span class="lang-option__code">RU</span></button>
+      <button type="button" class="lang-option" data-code="hi" onclick="setLanguage('hi')"><span class="lang-option__name">हिन्दी</span><span class="lang-option__code">HI</span></button>
+      <button type="button" class="lang-option" data-code="id" onclick="setLanguage('id')"><span class="lang-option__name">Bahasa Indonesia</span><span class="lang-option__code">ID</span></button>
+      <button type="button" class="lang-option" data-code="it" onclick="setLanguage('it')"><span class="lang-option__name">Italiano</span><span class="lang-option__code">IT</span></button>
+      <button type="button" class="lang-option" data-code="vi" onclick="setLanguage('vi')"><span class="lang-option__name">Tiếng Việt</span><span class="lang-option__code">VI</span></button>
+      <button type="button" class="lang-option" data-code="th" onclick="setLanguage('th')"><span class="lang-option__name">ไทย</span><span class="lang-option__code">ไทย</span></button>
+      <button type="button" class="lang-option" data-code="tr" onclick="setLanguage('tr')"><span class="lang-option__name">Türkçe</span><span class="lang-option__code">TR</span></button>
+      <button type="button" class="lang-option" data-code="ar" onclick="setLanguage('ar')"><span class="lang-option__name">العربية</span><span class="lang-option__code">AR</span></button>
+      <button type="button" class="lang-option" data-code="pl" onclick="setLanguage('pl')"><span class="lang-option__name">Polski</span><span class="lang-option__code">PL</span></button>
+      <button type="button" class="lang-option" data-code="nl" onclick="setLanguage('nl')"><span class="lang-option__name">Nederlands</span><span class="lang-option__code">NL</span></button>
+      <button type="button" class="lang-option" data-code="sv" onclick="setLanguage('sv')"><span class="lang-option__name">Svenska</span><span class="lang-option__code">SV</span></button>
+      <button type="button" class="lang-option" data-code="nb" onclick="setLanguage('nb')"><span class="lang-option__name">Norsk Bokmål</span><span class="lang-option__code">NB</span></button>
+      <button type="button" class="lang-option" data-code="da" onclick="setLanguage('da')"><span class="lang-option__name">Dansk</span><span class="lang-option__code">DA</span></button>
+      <button type="button" class="lang-option" data-code="fi" onclick="setLanguage('fi')"><span class="lang-option__name">Suomi</span><span class="lang-option__code">FI</span></button>
+      <button type="button" class="lang-option" data-code="cs" onclick="setLanguage('cs')"><span class="lang-option__name">Čeština</span><span class="lang-option__code">CS</span></button>
+      <button type="button" class="lang-option" data-code="uk" onclick="setLanguage('uk')"><span class="lang-option__name">Українська</span><span class="lang-option__code">UK</span></button>
+      <button type="button" class="lang-option" data-code="ro" onclick="setLanguage('ro')"><span class="lang-option__name">Română</span><span class="lang-option__code">RO</span></button>
+      <button type="button" class="lang-option" data-code="hu" onclick="setLanguage('hu')"><span class="lang-option__name">Magyar</span><span class="lang-option__code">HU</span></button>
+      <button type="button" class="lang-option" data-code="el" onclick="setLanguage('el')"><span class="lang-option__name">Ελληνικά</span><span class="lang-option__code">EL</span></button>
+      <button type="button" class="lang-option" data-code="he" onclick="setLanguage('he')"><span class="lang-option__name">עברית</span><span class="lang-option__code">HE</span></button>
+      <button type="button" class="lang-option" data-code="ms" onclick="setLanguage('ms')"><span class="lang-option__name">Bahasa Melayu</span><span class="lang-option__code">MS</span></button>
+      <button type="button" class="lang-option" data-code="tl" onclick="setLanguage('tl')"><span class="lang-option__name">Filipino</span><span class="lang-option__code">FIL</span></button>
+      <button type="button" class="lang-option" data-code="bn" onclick="setLanguage('bn')"><span class="lang-option__name">বাংলা</span><span class="lang-option__code">BN</span></button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var WORKBENCH_SAMPLES = {"app": {"label": "src/main/java/com/acme/MainApp.java \u2014 Multi-Package + \u26a1 0ms Cache", "status": "\u26a1 Cache Hit \u00b7 0ms Compile", "lines": ["<span class=\"tok-kw\">package<\/span> com.acme;", "<span class=\"tok-kw\">import<\/span> com.acme.domain.Invoice;", "<span class=\"tok-kw\">import<\/span> com.acme.service.TaxCalculator;", "", "<span class=\"tok-kw\">public class<\/span> <span class=\"tok-fn\">MainApp<\/span> {", "    <span class=\"tok-kw\">public static void<\/span> <span class=\"tok-fn\">main<\/span>(String[] args) {", "        Invoice inv = <span class=\"tok-kw\">new<\/span> <span class=\"tok-fn\">Invoice<\/span>(<span class=\"tok-str\">&quot;INV-2026-09&quot;<\/span>, <span class=\"tok-num\">420.00<\/span>);", "        <span class=\"tok-kw\">double<\/span> grandTotal = TaxCalculator.<span class=\"tok-fn\">withVat<\/span>(inv.<span class=\"tok-fn\">subtotal<\/span>(), <span class=\"tok-num\">0.08<\/span>);", "        System.out.<span class=\"tok-fn\">printf<\/span>(<span class=\"tok-str\">&quot;%s -&gt; Total: $%.2f%n&quot;<\/span>, inv.<span class=\"tok-fn\">code<\/span>(), grandTotal);", "    }", "}"], "output": ["<span class=\"term-prompt\">[Java 17 Builder]<\/span> Scanned src/main/java (3 packages \u00b7 14 .java files)", "<span class=\"term-info\">\u26a1 Cache<\/span> SHA-256 closure unchanged -&gt; skipped compilation (0ms)", "INV-2026-09 -> Total: $453.60"]}, "svc": {"label": "src/main/java/com/acme/service/TaxCalculator.java \u2014 Smart main() Arbitration", "status": "Entry Arbitrated -> MainApp", "lines": ["<span class=\"tok-kw\">package<\/span> com.acme.service;", "", "<span class=\"tok-cmt\">// Press Run \u25b6 directly inside this helper tab \u2014 no manual run-config needed!<\/span>", "<span class=\"tok-kw\">public final class<\/span> <span class=\"tok-fn\">TaxCalculator<\/span> {", "    <span class=\"tok-kw\">private<\/span> <span class=\"tok-fn\">TaxCalculator<\/span>() {}", "    <span class=\"tok-kw\">public static double<\/span> <span class=\"tok-fn\">withVat<\/span>(<span class=\"tok-kw\">double<\/span> amount, <span class=\"tok-kw\">double<\/span> rate) {", "        <span class=\"tok-kw\">return<\/span> Math.<span class=\"tok-fn\">round<\/span>(amount * (<span class=\"tok-num\">1.0<\/span> + rate) * <span class=\"tok-num\">100.0<\/span>) / <span class=\"tok-num\">100.0<\/span>;", "    }", "}"], "output": ["<span class=\"term-prompt\">[Entry Arbitrator]<\/span> TaxCalculator has no main() -&gt; resolved com.acme.MainApp.main()", "INV-2026-09 -> Total: $453.60", "<span class=\"term-info\">\u2713 Unsaved edits in open tabs merged automatically before build<\/span>"]}, "jar": {"label": "src/main/java/com/acme/GsonResourceDemo.java \u2014 libs/*.jar + resources/", "status": "libs/gson-2.11.0.jar Loaded", "lines": ["<span class=\"tok-cmt\">// Auto-loads libs/*.jar (up to 30 MB) &amp; resources/ onto classpath<\/span>", "<span class=\"tok-kw\">import<\/span> com.google.gson.Gson;", "<span class=\"tok-kw\">import<\/span> java.io.InputStream;", "<span class=\"tok-kw\">import<\/span> java.nio.charset.StandardCharsets;", "", "<span class=\"tok-kw\">public class<\/span> <span class=\"tok-fn\">GsonResourceDemo<\/span> {", "    <span class=\"tok-kw\">record<\/span> <span class=\"tok-fn\">AppCfg<\/span>(String env, <span class=\"tok-kw\">int<\/span> maxPool) {}", "    <span class=\"tok-kw\">public static void<\/span> <span class=\"tok-fn\">main<\/span>(String[] args) <span class=\"tok-kw\">throws<\/span> Exception {", "        <span class=\"tok-kw\">try<\/span> (InputStream in = GsonResourceDemo.<span class=\"tok-fn\">class<\/span>.<span class=\"tok-fn\">getResourceAsStream<\/span>(<span class=\"tok-str\">&quot;/config.json&quot;<\/span>)) {", "            String raw = <span class=\"tok-kw\">new<\/span> <span class=\"tok-fn\">String<\/span>(in.<span class=\"tok-fn\">readAllBytes<\/span>(), StandardCharsets.UTF_8);", "            AppCfg cfg = <span class=\"tok-kw\">new<\/span> <span class=\"tok-fn\">Gson<\/span>().<span class=\"tok-fn\">fromJson<\/span>(raw, AppCfg.<span class=\"tok-fn\">class<\/span>);", "            System.out.<span class=\"tok-fn\">println<\/span>(<span class=\"tok-str\">&quot;Loaded via Gson: &quot;<\/span> + cfg);", "        }", "    }", "}"], "output": ["<span class=\"term-prompt\">[Classpath]<\/span> Mounted libs/gson-2.11.0.jar (298 KB) + resources/config.json", "Loaded via Gson: AppCfg[env=production, maxPool=16]", "<span class=\"term-info\">[Zero Maven/Gradle XML required \u00b7 Offline .jar classpath verified]<\/span>"]}};
+    var currentTab = 'app';
+    var runTimer = null;
+
+    function renderWorkbench(tabKey, animateRun) {
+      var sample = WORKBENCH_SAMPLES[tabKey] || WORKBENCH_SAMPLES['app'];
+      if (!sample) { return; }
+      currentTab = tabKey;
+      var labelEl = document.getElementById('ide-compiler-label');
+      if (labelEl) { labelEl.textContent = sample.label; }
+      var statusEl = document.getElementById('wbStatusLang');
+      if (statusEl) { statusEl.textContent = sample.status; }
+
+      var tabs = document.querySelectorAll('.ide-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        var active = tabs[i].getAttribute('data-tab') === tabKey;
+        tabs[i].classList.toggle('active', active);
+        tabs[i].setAttribute('aria-selected', active ? 'true' : 'false');
+      }
+      var files = document.querySelectorAll('.wb-file');
+      for (var f = 0; f < files.length; f++) {
+        files[f].classList.toggle('active', files[f].getAttribute('data-tab') === tabKey);
+      }
+
+      var codeBox = document.getElementById('ide-code-box');
+      if (codeBox) {
+        var html = '';
+        for (var l = 0; l < sample.lines.length; l++) {
+          var activeCls = (l === sample.lines.length - 1) ? ' active-line' : '';
+          html += '<div class="code-line' + activeCls + '"><span class="ln">' + (l + 1) + '</span><span class="code-content">' + sample.lines[l] + '</span></div>';
+        }
+        codeBox.innerHTML = html;
+      }
+
+      if (animateRun) {
+        runWorkbenchSample();
+      }
+    }
+
+    function runWorkbenchSample() {
+      var sample = WORKBENCH_SAMPLES[currentTab] || WORKBENCH_SAMPLES['app'];
+      var drawer = document.getElementById('ide-terminal-drawer');
+      var out = document.getElementById('ide-term-output');
+      var badge = document.getElementById('ide-exec-status');
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (!drawer || !out || !sample) { return; }
+
+      if (runTimer) { clearTimeout(runTimer); }
+      drawer.classList.add('is-open');
+      if (runBtn) { runBtn.classList.add('is-running'); }
+      if (badge) { badge.textContent = 'Running...'; badge.classList.remove('done'); }
+      out.innerHTML = '';
+
+      var idx = 0;
+      function step() {
+        if (idx < sample.output.length) {
+          var row = document.createElement('span');
+          row.className = 'term-line-item';
+          row.innerHTML = sample.output[idx];
+          out.appendChild(row);
+          idx++;
+          runTimer = setTimeout(step, 80);
+        } else {
+          var cur = document.createElement('span');
+          cur.className = 'term-cursor';
+          cur.textContent = '\u258b';
+          out.appendChild(cur);
+          if (badge) { badge.textContent = 'Completed'; badge.classList.add('done'); }
+          if (runBtn) { runBtn.classList.remove('is-running'); }
+        }
+      }
+      step();
+    }
+
+    function initNavigationAndSmartBar() {
+      var menuBtn = document.getElementById('menuBtn');
+      var drawer = document.getElementById('siteDrawer');
+      var bar = document.getElementById('mobileBottomBar');
+      var heroCta = document.getElementById('heroCta');
+      var siteFooter = document.getElementById('siteFooter');
+
+      function syncBar() {
+        if (!bar) { return; }
+        var drawerOpen = Boolean(drawer && !drawer.hasAttribute('hidden'));
+        var modalEl = document.getElementById('langModal');
+        var modalOpen = Boolean(modalEl && modalEl.classList.contains('show'));
+        var vh = window.innerHeight || document.documentElement.clientHeight || 800;
+        var heroInView = false;
+        if (heroCta) {
+          var hr = heroCta.getBoundingClientRect();
+          heroInView = (hr.bottom > 0 && hr.top < vh);
+        }
+        var footerInView = false;
+        if (siteFooter) {
+          var fr = siteFooter.getBoundingClientRect();
+          footerInView = (fr.top < vh + 24);
+        }
+        var scrollYVal = window.pageYOffset || window.scrollY || 0;
+        var docH = Math.max(document.body ? document.body.scrollHeight : 0, document.documentElement ? document.documentElement.scrollHeight : 0);
+        var nearBottom = (vh + scrollYVal) >= (docH - 120);
+        var shouldShow = !drawerOpen && !modalOpen && !heroInView && !footerInView && !nearBottom;
+        bar.classList.toggle('is-visible', shouldShow);
+      }
+
+      window.__supercodeSyncMobileBar = syncBar;
+
+      function setDrawer(open) {
+        if (!menuBtn || !drawer) { return; }
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { drawer.removeAttribute('hidden'); }
+        else { drawer.setAttribute('hidden', ''); }
+        syncBar();
+      }
+      if (menuBtn && drawer) {
+        menuBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          setDrawer(menuBtn.getAttribute('aria-expanded') !== 'true');
+        });
+        drawer.addEventListener('click', function (e) {
+          if (e.target && e.target.closest('a')) { setDrawer(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!drawer.hasAttribute('hidden') && !drawer.contains(e.target) && e.target !== menuBtn && !menuBtn.contains(e.target)) {
+            setDrawer(false);
+          }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') { setDrawer(false); }
+        });
+      }
+
+      if (bar) {
+        window.addEventListener('scroll', syncBar, { passive: true });
+        window.addEventListener('resize', syncBar);
+        syncBar();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var tabBtns = document.querySelectorAll('.ide-tab, .wb-file');
+      for (var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', function () {
+          renderWorkbench(this.getAttribute('data-tab'), true);
+        });
+      }
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (runBtn) { runBtn.addEventListener('click', function () { runWorkbenchSample(); }); }
+      var closeTerm = document.getElementById('btn-close-term');
+      if (closeTerm) {
+        closeTerm.addEventListener('click', function () {
+          var d = document.getElementById('ide-terminal-drawer');
+          if (d) { d.classList.remove('is-open'); }
+        });
+      }
+      initNavigationAndSmartBar();
+      renderWorkbench('app', false);
+    });
+  })();
+</script>
+<script>window.__SUPERCODE_STATIC_LANG__="de";window.__SUPERCODE_STATIC_CANONICAL__="https://supercode-ide.github.io/de/java-multiclass-packages-ide.html";</script>
+<script src="../i18n_extended.js"></script>
+</body>
+</html>

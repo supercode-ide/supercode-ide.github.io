@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="cs" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090A0F">
+  <meta name="color-scheme" content="only dark">
+  <meta name="supported-color-schemes" content="dark">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <title>Úpravy a nasazování živých webů z Androidu — lokální staging na SFTP, FTPS a Git | SuperCode</title>
+  <meta name="description" content="Spravujte a nasazujte produkční weby v HTML, CSS, JS, WASM a PHP ze svého telefonu Android. Prohlížejte si vzdálené karty SFTP/FTPS lokálně na vyžádání, ukládejte pomocí 3fázových atomických transakcí nebo pushujte na GitHub Pages.">
+  <meta name="keywords" content="edit website from android phone sftp ftp, deploy html php site from android, github pages git web editor android, sftp live web preview android, ftps cpanel editor android, hotfix production website phone">
+  <meta name="author" content="Phoenix Global Studios">
+  <meta name="google-play-app" content="app-id=com.phoenixglobal.supercodeeditor">
+
+  <link id="canonical-link" rel="canonical" href="https://supercode-ide.github.io/cs/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="x-default" href="https://supercode-ide.github.io/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="en" href="https://supercode-ide.github.io/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://supercode-ide.github.io/zh/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://supercode-ide.github.io/zh-tw/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="es" href="https://supercode-ide.github.io/es/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://supercode-ide.github.io/pt/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="ja" href="https://supercode-ide.github.io/ja/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="ko" href="https://supercode-ide.github.io/ko/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="de" href="https://supercode-ide.github.io/de/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="fr" href="https://supercode-ide.github.io/fr/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="ru" href="https://supercode-ide.github.io/ru/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="hi" href="https://supercode-ide.github.io/hi/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="id" href="https://supercode-ide.github.io/id/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="it" href="https://supercode-ide.github.io/it/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="vi" href="https://supercode-ide.github.io/vi/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="th" href="https://supercode-ide.github.io/th/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="tr" href="https://supercode-ide.github.io/tr/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="ar" href="https://supercode-ide.github.io/ar/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="pl" href="https://supercode-ide.github.io/pl/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="nl" href="https://supercode-ide.github.io/nl/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="sv" href="https://supercode-ide.github.io/sv/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="nb" href="https://supercode-ide.github.io/nb/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="da" href="https://supercode-ide.github.io/da/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="fi" href="https://supercode-ide.github.io/fi/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="cs" href="https://supercode-ide.github.io/cs/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="uk" href="https://supercode-ide.github.io/uk/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="ro" href="https://supercode-ide.github.io/ro/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="hu" href="https://supercode-ide.github.io/hu/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="el" href="https://supercode-ide.github.io/el/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="he" href="https://supercode-ide.github.io/he/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="ms" href="https://supercode-ide.github.io/ms/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="fil" href="https://supercode-ide.github.io/tl/fullstack-web-sftp-deploy-android.html">
+  <link rel="alternate" hreflang="bn" href="https://supercode-ide.github.io/bn/fullstack-web-sftp-deploy-android.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
+  <meta property="og:title" content="Úpravy a nasazování živých webů z Androidu — lokální staging na SFTP, FTPS a Git | SuperCode">
+  <meta property="og:description" content="Spravujte a nasazujte produkční weby v HTML, CSS, JS, WASM a PHP ze svého telefonu Android. Prohlížejte si vzdálené karty SFTP/FTPS lokálně na vyžádání, ukládejte pomocí 3fázových atomických transakcí nebo pushujte na GitHub Pages.">
+  <meta property="og:url" content="https://supercode-ide.github.io/cs/fullstack-web-sftp-deploy-android.html">
+  <meta property="og:locale" content="cs_CZ">
+  <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-hero-cs.png">
+  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-hero-cs.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Lokální webový server, offline PHP a DevTools">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-hero-cs.png">
+  <meta name="twitter:title" content="Úpravy a nasazování živých webů z Androidu — lokální staging na SFTP, FTPS a Git | SuperCode">
+  <meta name="twitter:description" content="Spravujte a nasazujte produkční weby v HTML, CSS, JS, WASM a PHP ze svého telefonu Android. Prohlížejte si vzdálené karty SFTP/FTPS lokálně na vyžádání, ukládejte pomocí 3fázových atomických transakcí nebo pushujte na GitHub Pages.">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <script>if(/SamsungBrowser/i.test(navigator.userAgent)){document.documentElement.classList.add('is-samsung');}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "SoftwareApplication",
+        "MobileApplication",
+        "WebApplication"
+      ],
+      "@id": "https://supercode-ide.github.io/#supercode-app",
+      "name": "Code Editor: SuperCode IDE",
+      "alternateName": [
+        "Edit Live Website From Android SFTP",
+        "Mobile PHP & HTML SFTP Deployment IDE",
+        "GitHub Pages Web Editor Android"
+      ],
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Remote SFTP, FTPS & Visual Git Website Staging and Deployment IDE for Android",
+      "inLanguage": "cs",
+      "fileSize": "40.2MB",
+      "softwareVersion": "1.55.05",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=cs-CZ&listing=web-php-studio",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=cs-CZ&listing=web-php-studio",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=cs-CZ"
+      ],
+      "potentialAction": [
+        {
+          "@type": "InstallAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=cs-CZ&listing=web-php-studio",
+            "actionPlatform": [
+              "http://schema.org/AndroidPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          }
+        },
+        {
+          "@type": "ViewAction",
+          "name": "Průvodce aplikací",
+          "target": [
+            "https://supercode-ide.github.io/tutorial/?lang=cs",
+            "android-app://com.phoenixglobal.supercodeeditor/https/supercode-ide.github.io/tutorial"
+          ]
+        }
+      ],
+      "identifier": "com.phoenixglobal.supercodeeditor",
+      "url": "https://supercode-ide.github.io/cs/fullstack-web-sftp-deploy-android.html",
+      "screenshot": [
+        "https://supercode-ide.github.io/assets/gallery/cs/03_web_php_devtools.webp",
+        "https://supercode-ide.github.io/assets/gallery/cs/01_python_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/cs/02_cpp20_compiler.webp",
+        "https://supercode-ide.github.io/assets/gallery/cs/04_file_manager_tree.webp",
+        "https://supercode-ide.github.io/assets/gallery/cs/05_sql_sqlite_studio.webp",
+        "https://supercode-ide.github.io/assets/gallery/cs/06_java17_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/cs/07_visual_git_timemachine.webp",
+        "https://supercode-ide.github.io/assets/gallery/cs/08_symbol_keyboard_themes.webp"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Phoenix Global Studios",
+        "url": "https://supercode-ide.github.io/cs/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "66"
+      },
+      "featureList": [
+        "Direct remote server mounting over SFTP (AES-256 SSH keys in Android KeyStore), explicit/implicit FTPS (TLS 1.3), and FTP",
+        "1-tap local preview of remote HTML and PHP tabs with automatic on-demand fetching of relative CSS, JS, fonts, and images",
+        "3-phase atomic remote file save (.tmp upload -> byte verification -> atomic rename) preventing corrupted live production pages",
+        "Full offline localhost HTTP + PHP 8.2 + SQLite local staging before pushing verified updates to your production VPS",
+        "Built-in Visual Git client with color unified diffs and 1-tap push to GitHub Pages, Cloudflare Pages, Vercel, or Netlify",
+        "Concurrent directory upload/download queues with automatic interrupted-transfer resume for media and dist/ bundles"
+      ],
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-cs.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://supercode-ide.github.io/cs/fullstack-web-sftp-deploy-android.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SuperCode IDE",
+          "item": "https://supercode-ide.github.io/cs/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Web, PHP 8.2 a WASM centrum",
+          "item": "https://supercode-ide.github.io/cs/web-ide.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Web deploy přes SFTP, FTPS a Git",
+          "item": "https://supercode-ide.github.io/cs/fullstack-web-sftp-deploy-android.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Preview, Safely Edit & Publish a Live Site From Android",
+      "description": "Two clean deployment pipelines — direct SFTP/FTPS for PHP/VPS hosts, or Visual Git for Pages.",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Mount Your Web Host or Clone Your Git Repo",
+          "text": "Add your VPS/cPanel host in the SFTP/FTPS manager (with encrypted SSH key or password) or clone your GitHub Pages repository.",
+          "url": "https://supercode-ide.github.io/fullstack-web-sftp-deploy-android.html#step1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Preview Remote or Staged Pages Across 3 Viewports",
+          "text": "Edit HTML, CSS, JS, or PHP with AST completion and tap Run ▶ to inspect Mobile/Tablet/Desktop rendering and DevTools logs before publishing.",
+          "url": "https://supercode-ide.github.io/fullstack-web-sftp-deploy-android.html#step2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Verify Changes With Unified Diff or Atomic Upload",
+          "text": "Save remote SFTP/FTPS tabs via 3-phase atomic rename so live visitors never hit a partial file, or inspect color Git diffs.",
+          "url": "https://supercode-ide.github.io/fullstack-web-sftp-deploy-android.html#step3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Push to Production & Confirm Network Status",
+          "text": "Push commits to trigger GitHub/Cloudflare Pages or sync asset folders concurrently to your production server.",
+          "url": "https://supercode-ide.github.io/fullstack-web-sftp-deploy-android.html#step4"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://supercode-ide.github.io/fullstack-web-sftp-deploy-android.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Jak funguje náhled vzdálené stránky přes SFTP nebo FTP bez stahování celého serveru?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Když klepnete na Spustit u otevřené vzdálené karty `.html` nebo `.php`, SuperCode ji vykreslí v lokálním náhledovém serveru a automaticky na vyžádání stáhne ze vzdáleného serveru jen odkazované relativní soubory CSS, JS, fonty a obrázky."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Co se stane, když telefon ztratí mobilní signál přesně při ukládání vzdáleného souboru `index.php`?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Váš živý produkční soubor zůstane nedotčený! 3fázové atomické ukládání v SuperCode zapíše nejprve do dočasného souboru, ověří 100% shodu nahraného počtu bajtů a teprve potom provede atomické přejmenování na straně serveru."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Podporuje SuperCode jak sdílený webhosting cPanel/Plesk, tak linuxové SSH VPS servery?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ano. Použijte SFTP (s heslem nebo privátními klíči Ed25519/RSA) pro cloudové VPS instance jako DigitalOcean, AWS Lightsail, Hetzner nebo Linode a FTPS (TLS 1.3) či FTP pro cPanel a sdílený hosting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mohu zdarma vytvořit a publikovat statický web v HTML/CSS/JS nebo WASM na GitHub Pages?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ano. Napište a otestujte web offline na lokálním HTTP serveru SuperCode, poté změny commitněte a pushněte přímo do svého repozitáře GitHub Pages pomocí vestavěného vizuálního Git klienta."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-page="web_sftp_deploy">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="sc-logo" viewBox="20 14 68 72">
+    <path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/>
+    <path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/>
+    <path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/>
+    <path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+  </symbol>
+  <symbol id="gp-prism" viewBox="0 0 24 24">
+    <path fill="#4285F4" d="M3.6,2.4C3.3,2.7,3.1,3.2,3.1,3.8v16.4c0,0.6,0.2,1.1,0.5,1.4l0.1,0.1L12.9,12v-0.2L3.7,2.3L3.6,2.4z"/>
+    <path fill="#34A853" d="M16,15.1l-3.1-3.1v-0.2L16,8.7l0.1,0.1l3.6,2.1c1,0.6,1,1.5,0,2.1l-3.6,2.1L16,15.1z"/>
+    <path fill="#FBBC05" d="M16.1,15.1L12.9,12L3.6,21.3c0.3,0.4,0.9,0.4,1.6,0.1L16.1,15.1z"/>
+    <path fill="#EA4335" d="M16.1,8.9L5.2,2.6C4.5,2.2,3.9,2.3,3.6,2.7L12.9,12L16.1,8.9z"/>
+  </symbol>
+  <symbol id="i-ne" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8 20 7.2v9.6L12 21.2 4 16.8V7.2z"/><path d="M4 7.2l8 4.4 8-4.4M12 11.6v9.6"/></g></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2.8v3.2M15 2.8v3.2M9 18v3.2M15 18v3.2M2.8 9H6M2.8 15H6M18 9h3.2M18 15h3.2"/></g></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 2.8 7.8 12 12.6l9.2-4.8z"/><path d="m2.8 12 9.2 4.8 9.2-4.8"/><path d="m2.8 16.2 9.2 4.8 9.2-4.8"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="M2.8 8.5h18.4"/><path d="m9.5 12.5-2.2 2.2 2.2 2.2M14.5 12.5l2.2 2.2-2.2 2.2"/></g></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5.6" rx="7.6" ry="2.8"/><path d="M4.4 5.6v12.8c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8V5.6"/><path d="M4.4 12c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8"/></g></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="m7.2 9.5 3 2.5-3 2.5M12.8 15h4"/></g></symbol>
+  <symbol id="i-git" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.3"/><circle cx="6" cy="18" r="2.3"/><circle cx="18" cy="12" r="2.3"/><path d="M6 8.3v7.4M8.3 6h4.2a3.5 3.5 0 0 1 3.5 3.5v.2"/></g></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5h11a4 4 0 0 0 .7-7.94A5.5 5.5 0 0 0 7.4 9.2 3.8 3.8 0 0 0 6.5 18.5z"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M13 2.8 4.8 13.2h6.3L10.2 21.2 19.2 10.6h-6.4z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 2.8 4.8 5.8v5.6c0 5 3.1 8.5 7.2 9.8 4.1-1.3 7.2-4.8 7.2-9.8V5.8z"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="index.html" class="brand" aria-label="SuperCode IDE Home">
+      <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+      <span>SuperCode</span>
+      <span class="brand__tag">IDE</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary Workspaces">
+      <a href="code-editor.html" data-i18n="nav_code_editor">Editor kódu</a>
+      <a href="large-file-editor.html" data-i18n="nav_large_file">Velké soubory (GB)</a>
+      <a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a>
+      <a href="c-compiler.html" data-i18n="nav_c_compiler">Kompilátor C17</a>
+      <a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a>
+      <a href="java-ide.html" data-i18n="nav_java_ide">Java 17 IDE</a>
+      <a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a>
+      <a href="web-ide.html" class="is-current" data-i18n="nav_web_ide">Web a PHP</a>
+      <a href="sql-ide.html" data-i18n="nav_sql_ide">SQL Studio</a>
+      <a href="git-client.html" data-i18n="nav_git_client">Vizuální Git</a>
+      <a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP a FTPS</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button id="langModalBtn" class="btn-lang-trigger" type="button" onclick="openLangModal()" aria-label="Select Language">
+        <svg class="lang-globe-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span id="langTriggerText">CS</span>
+        <span class="lang-chevron" aria-hidden="true">&#9662;</span>
+      </button>
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=cs-CZ&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dcs%26utm_campaign%3Dweb-php-studio%26utm_content%3Dfullstack-web-sftp-deploy-android" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+        <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+        <span data-i18n="nav_cta">Google Play</span>
+      </a>
+      <a href="index.html" class="btn-home-icon" aria-label="Home" title="Home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5"/>
+          <path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
+        </svg>
+      </a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteDrawer" aria-label="All Pages Directory">
+        <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 8.5h16M4 15.5h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-drawer" id="siteDrawer" hidden>
+  <nav class="container menu-drawer__inner" aria-label="All SuperCode Pages">
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_core">Editor a velké soubory</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="index.html"><span data-i18n="nav_home">Přehled</span><span class="mono">01</span></a>
+        <a class="menu-drawer__link" href="code-editor.html"><span data-i18n="nav_code_editor">Editor kódu</span><span class="mono">02</span></a>
+        <a class="menu-drawer__link" href="large-file-editor.html"><span data-i18n="nav_large_file">Velké soubory (GB)</span><span class="mono">03</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_lang">Offline kompilátory a jazyky</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="python-ide.html"><span data-i18n="nav_python_ide">Python IDE</span><span class="mono">04</span></a>
+        <a class="menu-drawer__link" href="c-compiler.html"><span data-i18n="nav_c_compiler">Kompilátor C17</span><span class="mono">05</span></a>
+        <a class="menu-drawer__link" href="cpp-ide.html"><span data-i18n="nav_cpp_ide">C++20 IDE</span><span class="mono">06</span></a>
+        <a class="menu-drawer__link" href="java-ide.html"><span data-i18n="nav_java_ide">Java 17 IDE</span><span class="mono">07</span></a>
+        <a class="menu-drawer__link" href="javascript-ide.html"><span data-i18n="nav_js_ide">JavaScript</span><span class="mono">08</span></a>
+        <a class="menu-drawer__link" href="lua-ide.html"><span data-i18n="nav_lua_ide">Lua 5.4</span><span class="mono">09</span></a>
+        <a class="menu-drawer__link" href="shell-ide.html"><span data-i18n="nav_shell_ide">Shell a Kotlin</span><span class="mono">10</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_devops">Web, SQL a vzdálený DevOps</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link is-current" href="web-ide.html"><span data-i18n="nav_web_ide">Web a PHP</span><span class="mono">11</span></a>
+        <a class="menu-drawer__link" href="sql-ide.html"><span data-i18n="nav_sql_ide">SQL Studio</span><span class="mono">12</span></a>
+        <a class="menu-drawer__link" href="git-client.html"><span data-i18n="nav_git_client">Vizuální Git</span><span class="mono">13</span></a>
+        <a class="menu-drawer__link" href="sftp-client.html"><span data-i18n="nav_sftp_client">SFTP a FTPS</span><span class="mono">14</span></a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<main id="top">
+  <!-- ==================== 01 · EDITORIAL HERO & INTERACTIVE WORKBENCH ==================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <div class="py-hub-crumb"><a href="web-ide.html"><span class="crumb-arrow" aria-hidden="true">&larr;</span> Web, PHP 8.2 a WASM centrum</a><span class="sep">/</span><span>Web deploy přes SFTP, FTPS a Git</span></div>
+          <div class="trust-pill">
+            <span class="trust-pill__score"><span data-play-rating>4.9</span> &#9733;</span>
+            <span data-i18n="hero_tag">SFTP (SSH KLÍČE) &#183; FTPS (TLS 1.3) &#183; VZDÁLENÝ NÁHLED NA VYŽÁDÁNÍ &#183; VIZUÁLNÍ GIT</span>
+          </div>
+
+          <h1 class="hero-h1" data-i18n="hero_h1">Otestujte lokálně a poté <span class="text-gradient">upravujte a nasazujte živé weby</span> přes SFTP, FTPS a Git.</h1>
+
+          <p class="hero-lead" data-i18n="hero_desc">Ať už řešíte naléhavý produkční hotfix v PHP z vlaku nebo publikujete statické portfolio na GitHub Pages, SuperCode přímo propojuje <strong>lokální HTTP/PHP staging</strong> s <strong>SFTP přes SSH klíče, FTPS s TLS 1.3 a vizuálním Git</strong> &#8212; včetně <strong>vzdáleného náhledu stránek na vyžádání</strong> a <strong>3fázového atomického ukládání na server</strong>.</p>
+
+          <div class="hero__cta" id="heroCta">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=cs-CZ&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dcs%26utm_campaign%3Dweb-php-studio%26utm_content%3Dfullstack-web-sftp-deploy-android" target="_blank" rel="noopener" class="btn btn--gold">
+              <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+              <span data-i18n="cta_btn">Stáhnout na Google Play</span>
+            </a>
+            <a href="https://supercode-ide.github.io/tutorial/?lang=cs&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+              <span data-i18n="cta_tutorial">Průvodce aplikací</span>
+              <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <dl class="specs" aria-label="Key Specifications">
+          <div class="spec"><dt>SFTP</dt><dd data-i18n="dep_s1">Klíče Ed25519 / RSA</dd></div>
+          <div class="spec"><dt>TLS 1.3</dt><dd data-i18n="dep_s2">Explicitní/implicitní FTPS</dd></div>
+          <div class="spec"><dt>3-Phase</dt><dd data-i18n="dep_s3">Atomické vzdálené uložení</dd></div>
+          <div class="spec"><dt>Git</dt><dd data-i18n="dep_s4">Push na GitHub Pages</dd></div>
+        </dl>
+      </div>
+
+      <div class="wb-caption">
+        <div class="sec-index" style="margin-bottom:0">
+          <span class="num">01</span>
+          <span class="rule"></span>
+          <span data-i18n="wb_eyebrow">ŽIVÝ VZDÁLENÝ NÁHLED SFTP, ATOMICKÉ UKLÁDÁNÍ A WORKBENCH PRO GIT PAGES</span>
+        </div>
+        <span class="wb-caption__hint mono">SFTP Remote Preview &#183; 3-Phase Atomic Save &#183; FTPS TLS 1.3 &#183; GitHub Pages</span>
+      </div>
+
+      <div class="ide-workbench">
+        <div class="wb-titlebar">
+          <div class="wb-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="wb-title" id="ide-compiler-label">sftp://prod-vps/var/www/site/pricing.php &#8212; Remote Preview &amp; Atomic Save</div>
+          <button type="button" class="wb-run" id="btn-run-sandbox">
+            <span class="wb-run__tri" aria-hidden="true">&#9654;</span>
+            <span data-i18n="btn_run">Spustit demo</span>
+          </button>
+        </div>
+
+        <div class="wb-tabs" role="tablist" aria-label="Interactive Workspace Tabs">
+          <button type="button" class="ide-tab active" data-tab="sftp_live" role="tab" aria-selected="true"><i></i>pricing.php</button>
+          <button type="button" class="ide-tab" data-tab="ftps_sync" role="tab" aria-selected="false"><i></i>bundle_sync.js</button>
+          <button type="button" class="ide-tab" data-tab="git_pages" role="tab" aria-selected="false"><i></i>deploy_pages.html</button>
+        </div>
+
+        <div class="wb-body">
+          <aside class="wb-explorer" aria-label="Project Explorer">
+            <div class="wb-explorer__head">Explorer</div>
+            <div class="wb-folder">&#9662; fullstack-sftp-deploy</div>
+            <button type="button" class="wb-file active" data-tab="sftp_live"><b>SFTP</b><span>pricing.php</span></button>
+            <button type="button" class="wb-file" data-tab="ftps_sync"><b>FTPS</b><span>bundle_sync.js</span></button>
+            <button type="button" class="wb-file" data-tab="git_pages"><b>GIT</b><span>deploy_pages.html</span></button>
+          </aside>
+
+          <div class="wb-main">
+            <div class="ide-editor-body" id="ide-code-box" role="region" aria-label="Interactive Code Preview"></div>
+            <div class="ide-terminal" id="ide-terminal-drawer" aria-live="polite">
+              <div class="term-header">
+                <span data-i18n="term_title">Interaktivní výstup konzole</span>
+                <div class="term-header-right">
+                  <span class="term-exec-badge" id="ide-exec-status">Ready</span>
+                  <button type="button" class="btn-term-close" id="btn-close-term" aria-label="Close terminal">&#10005;</button>
+                </div>
+              </div>
+              <div class="term-stream" id="ide-term-output"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wb-statusbar">
+          <span class="wb-statusbar__dot"><i></i><span id="wbStatusLang">SFTP (SSH Key) &#183; 3-Phase Atomic Save</span></span>
+          <div class="wb-statusbar__right">
+            <span>UTF-8</span>
+            <span>LF</span>
+            <span>Ln 7, Col 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- SC_REAL_GALLERY_START -->
+  <section class="section sc-real-gallery" id="screenshots" aria-label="Náhled aplikace a snímky obrazovky">
+    <div class="container">
+      <div class="sc-gp-head">
+        <div class="sc-gp-head-left">
+          <div class="sc-gp-eyebrow" data-i18n="gal_eyebrow">REÁLNÉ SNÍMKY Z ANDROIDU</div>
+          <h2 class="sc-gp-title" data-i18n="gal_title">Náhled aplikace a snímky obrazovky</h2>
+          <p class="sc-gp-short" data-i18n="gal_short_desc">Offline editor kódu a IDE: kompilátor Python, C/C++, Java, HTML, SQL, PHP a Git</p>
+        </div>
+        <a class="sc-gp-store-bar" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=cs-CZ&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dcs%26utm_campaign%3Dweb-php-studio%26utm_content%3Dfullstack-web-sftp-deploy-android" target="_blank" rel="noopener" aria-label="Code Editor: SuperCode IDE — Phoenix Global Studios">
+          <svg class="sc-gp-app-icon" width="38" height="38" viewBox="16 12 76 76" aria-hidden="true"><rect x="16" y="12" width="76" height="76" rx="18" fill="#070A10" stroke="#3B82F6" stroke-width="2"/><path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/><path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/><path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/><path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/></svg>
+          <span class="sc-gp-app-meta">
+            <span class="sc-gp-app-name">Code Editor: SuperCode IDE</span>
+            <span class="sc-gp-app-dev">Phoenix Global Studios</span>
+          </span>
+          <span class="sc-gp-store-arrow" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      </div>
+      <div class="sc-gp-stage">
+        <button type="button" class="sc-gp-nav sc-gp-nav--prev is-hidden" id="scGpPrev" aria-label="Předchozí obrázek">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="sc-gp-rail" id="scGpRail">
+          <button type="button" class="sc-gp-item sc-gp-item--feature" aria-label="Editor kódu: SuperCode IDE — Offline mobilní IDE">
+            <img src="../assets/gallery/cs/00_feature_graphic.webp" data-sc-file="00_feature_graphic.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_0" data-cap="Editor kódu: SuperCode IDE — Offline mobilní IDE" alt="Editor kódu: SuperCode IDE — Offline mobilní IDE" width="1024" height="500" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Lokální webový server, offline PHP a DevTools">
+            <img src="../assets/gallery/cs/03_web_php_devtools.webp" data-sc-file="03_web_php_devtools.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_3" data-cap="Lokální webový server, offline PHP a DevTools" alt="Lokální webový server, offline PHP a DevTools" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Offline Python 3.11 / 3.12 IDE a dělená konzole">
+            <img src="../assets/gallery/cs/01_python_ide.webp" data-sc-file="01_python_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_1" data-cap="Offline Python 3.11 / 3.12 IDE a dělená konzole" alt="Offline Python 3.11 / 3.12 IDE a dělená konzole" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Lokální vícesouborový kompilátor C17 a C++20">
+            <img src="../assets/gallery/cs/02_cpp20_compiler.webp" data-sc-file="02_cpp20_compiler.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_2" data-cap="Lokální vícesouborový kompilátor C17 a C++20" alt="Lokální vícesouborový kompilátor C17 a C++20" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Globální strom souborů a lokální správce souborů (SAF)">
+            <img src="../assets/gallery/cs/04_file_manager_tree.webp" data-sc-file="04_file_manager_tree.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_4" data-cap="Globální strom souborů a lokální správce souborů (SAF)" alt="Globální strom souborů a lokální správce souborů (SAF)" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Offline SQLite 3.54 Studio a inspektor .db">
+            <img src="../assets/gallery/cs/05_sql_sqlite_studio.webp" data-sc-file="05_sql_sqlite_studio.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_5" data-cap="Offline SQLite 3.54 Studio a inspektor .db" alt="Offline SQLite 3.54 Studio a inspektor .db" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Offline Java 17 IDE a SQLite JDBC">
+            <img src="../assets/gallery/cs/06_java17_ide.webp" data-sc-file="06_java17_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_6" data-cap="Offline Java 17 IDE a SQLite JDBC" alt="Offline Java 17 IDE a SQLite JDBC" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Vizuální Git klient, Stroj času a SFTP">
+            <img src="../assets/gallery/cs/07_visual_git_timemachine.webp" data-sc-file="07_visual_git_timemachine.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_7" data-cap="Vizuální Git klient, Stroj času a SFTP" alt="Vizuální Git klient, Stroj času a SFTP" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Lišta 21 symbolů a 8 vyladěných motivů IDE">
+            <img src="../assets/gallery/cs/08_symbol_keyboard_themes.webp" data-sc-file="08_symbol_keyboard_themes.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_8" data-cap="Lišta 21 symbolů a 8 vyladěných motivů IDE" alt="Lišta 21 symbolů a 8 vyladěných motivů IDE" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+        </div>
+        <button type="button" class="sc-gp-nav sc-gp-nav--next" id="scGpNext" aria-label="Další obrázek">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  <div class="sc-lb-modal" id="scLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Náhled aplikace a snímky obrazovky">
+    <div class="sc-lb-topbar">
+      <button type="button" class="sc-lb-back" id="scLbBack">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-i18n="gal_back">Zpět</span>
+      </button>
+      <div class="sc-lb-meta">
+        <span class="sc-lb-counter" id="scLbCounter">1 / 9</span>
+        <span class="sc-lb-title" id="scLbTitle"></span>
+      </div>
+      <button type="button" class="sc-lb-close" id="scLbClose" aria-label="Zavřít náhled">&times;</button>
+    </div>
+    <div class="sc-lb-stage">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--prev" id="scLbPrev" aria-label="Předchozí obrázek">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <img class="sc-lb-img" id="scLbImg" src="" alt="SuperCode IDE Preview">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--next" id="scLbNext" aria-label="Další obrázek">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="sc-lb-dots" id="scLbDots"></div>
+  </div>
+  <script defer src="../assets/gallery.js"></script>
+<!-- SC_REAL_GALLERY_END -->
+
+
+
+
+
+  <!-- ==================== 02 · CORE CAPABILITIES ==================== -->
+  <section class="section section--alt" id="capabilities">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">02</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_cap_eyebrow">KLÍČOVÉ SCHOPNOSTI</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="sec_cap_title">Bezpečné produkční webové operace navržené pro mobilní sítě</h2>
+        <p class="sec-lead" data-i18n="sec_cap_lead">Zkontrolujte náhled před přepsáním, přestůjte výpadky mobilního signálu bez úhony a spravujte VPS i statické hostingy z jednoho prostoru.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="feature-grid feature-grid--6">
+          <article class="feature-card" id="cap1">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-cloud"/></svg></span>
+              <span class="f-idx">02.1</span>
+            </div>
+            <h3 class="f-title" data-i18n="f1_title">Připojení Linux VPS a sdílených hostingů přes SFTP, FTPS a FTP</h3>
+            <p class="f-desc" data-i18n="f1_desc">Připojte se přímo k serverům Nginx/Apache VPS přes SFTP s hardwarově chráněnými klíči SSH (Ed25519, RSA, ECDSA) nebo k hostingům cPanel/Plesk přes explicitní/implicitní FTPS (TLS 1.3) a standardní FTP.</p>
+            <div class="f-code" data-i18n="f1_badge">SFTP &#183; FTPS (TLS 1.3) &#183; Trezor Android KeyStore</div>
+          </article>
+          <article class="feature-card" id="cap2">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-web"/></svg></span>
+              <span class="f-idx">02.2</span>
+            </div>
+            <h3 class="f-title" data-i18n="f2_title">Lokální náhled vzdálených karet HTML a PHP na 1 klepnutí</h3>
+            <p class="f-desc" data-i18n="f2_desc">Otevřete vzdálený soubor .html nebo .php ze stromu serveru a klepněte na Spustit &#9654;. SuperCode vykreslí stránku lokálně a transparentně na vyžádání stáhne z vašeho serveru související styly, skripty a obrázky.</p>
+            <div class="f-code" data-i18n="f2_badge">Testujte vzdálené úpravy lokálně &#183; Stažení aktiv na vyžádání</div>
+          </article>
+          <article class="feature-card" id="cap3">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <span class="f-idx">02.3</span>
+            </div>
+            <h3 class="f-title" data-i18n="f3_title">3fázové atomické ukládání brání poškození živých stránek</h3>
+            <p class="f-desc" data-i18n="f3_desc">Přímé přepsání živého index.php na kolísavé mobilní Wi-Fi může zanechat neúplný soubor a způsobit výpadek HTTP 500. SuperCode nahraje dočasný sesterský soubor, ověří přesný počet bajtů a teprve pak jej atomicky přejmenuje.</p>
+            <div class="f-code" data-i18n="f3_badge">Žádné napůl zapsané produkční soubory &#183; Bezpečné na 4G/5G</div>
+          </article>
+          <article class="feature-card" id="cap4">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+              <span class="f-idx">02.4</span>
+            </div>
+            <h3 class="f-title" data-i18n="f4_title">Plně offline PHP 8.2 a lokální staging pro 3 viewporty</h3>
+            <p class="f-desc" data-i18n="f4_desc">Naklonujte nebo stáhněte složku webu do telefonu, vyvíjejte routy PHP 8.2 + PDO SQLite a rozložení CSS Grid napříč viewporty Mobil/Tablet/Desktop v režimu Letadlo a pak nahrajte ověřené změny.</p>
+            <div class="f-code" data-i18n="f4_badge">Workflow Offline staging -&gt; Produkční synchronizace</div>
+          </article>
+          <article class="feature-card" id="cap5">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-git"/></svg></span>
+              <span class="f-idx">02.5</span>
+            </div>
+            <h3 class="f-title" data-i18n="f5_title">Vizuální Git klient pro GitHub, Cloudflare a Netlify Pages</h3>
+            <p class="f-desc" data-i18n="f5_desc">Nasazujete JAMstack, statické HTML5 nebo aplikace WASM? Zkontrolujte barevné sjednocené diffy řádek po řádku, selektivně připravte soubory (stage), commitněte a pushněte přímo na GitHub, GitLab či Bitbucket pro spuštění CI/CD buildů Pages.</p>
+            <div class="f-code" data-i18n="f5_badge">Barevný Unified Diff &#183; HTTPS PAT &#183; Git Push na 1 klepnutí</div>
+          </article>
+          <article class="feature-card" id="cap6">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
+              <span class="f-idx">02.6</span>
+            </div>
+            <h3 class="f-title" data-i18n="f6_title">Souběžné přenosy složek a navázání přerušeného přenosu</h3>
+            <p class="f-desc" data-i18n="f6_desc">Publikujte celé adresáře dist/, assets/ nebo media rychle díky frontám s více spojeními, živým přehledem propustnosti, úpravou vzdálených oprávnění chmod a automatickým navázáním přerušených přenosů.</p>
+            <div class="f-code" data-i18n="f6_badge">Fronta paralelního nahrávání &#183; Navázání &#183; Vzdálené chmod</div>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">Navrženo pro telefony, skládací zařízení a tablety · Lehkých 40,2 MB</span>
+        <a class="link-arrow" href="web-ide.html">
+          <span>Web, PHP 8.2 &amp; WASM Hub</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 03 · STEP-BY-STEP WORKFLOW GUIDE ==================== -->
+  <section class="section" id="workflow">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">03</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_wf_eyebrow">PRACOVNÍ POSTUP KROK ZA KROKEM</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="workflow_title">Jak otestovat, bezpečně upravit a publikovat živý web z Androidu</h2>
+        <p class="sec-lead" data-i18n="workflow_lead">Dva čisté nasazovací postupy &#8212; přímé SFTP/FTPS pro PHP/VPS hostingy nebo vizuální Git pro Pages.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="workflow-grid">
+          <article class="wf-step" id="step1">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 01</span>
+              <span class="wf-step__cmd">SFTP / Git -&gt; Connect</span>
+            </div>
+            <h3 data-i18n="wf1_title">Připojte webhosting nebo naklonujte Git repozitář</h3>
+            <p data-i18n="wf1_desc">Přidejte svůj VPS/cPanel server do správce SFTP/FTPS (se šifrovaným klíčem SSH nebo heslem) nebo naklonujte repozitář GitHub Pages.</p>
+          </article>
+          <article class="wf-step" id="step2">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 02</span>
+              <span class="wf-step__cmd">Edit + Run &#9654; Preview</span>
+            </div>
+            <h3 data-i18n="wf2_title">Zobrazte vzdálené či lokální stránky napříč 3 viewporty</h3>
+            <p data-i18n="wf2_desc">Upravujte HTML, CSS, JS nebo PHP s AST doplňováním a klepnutím na Spustit &#9654; zkontrolujte vykreslení Mobil/Tablet/Desktop i logy DevTools před publikováním.</p>
+          </article>
+          <article class="wf-step" id="step3">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 03</span>
+              <span class="wf-step__cmd">Save (Atomic) / Diff</span>
+            </div>
+            <h3 data-i18n="wf3_title">Ověřte změny přes Unified Diff nebo atomické nahrání</h3>
+            <p data-i18n="wf3_desc">Ukládejte vzdálené karty SFTP/FTPS pomocí 3fázového atomického přejmenování, aby návštěvníci nikdy nenarazili na neúplný soubor, nebo zkontrolujte barevné Git diffy.</p>
+          </article>
+          <article class="wf-step" id="step4">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 04</span>
+              <span class="wf-step__cmd">Verify Live / Push</span>
+            </div>
+            <h3 data-i18n="wf4_title">Odešlete do produkce a potvrďte stav sítě</h3>
+            <p data-i18n="wf4_desc">Pushněte commity pro spuštění GitHub/Cloudflare Pages nebo souběžně synchronizujte složky s aktivy na produkční server.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="wf_foot_note">Hardwarově chráněné šifrování údajů &#183; Podporuje SFTP, explicitní/implicitní FTPS (TLS 1.3), FTP a Git HTTPS</span>
+        <a class="link-arrow" href="https://supercode-ide.github.io/tutorial/?lang=cs&amp;ref=official_web" data-supercode-tutorial="true">
+          <span data-i18n="cta_tutorial">Průvodce aplikací</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 04 · FEATURED SUMMARY & COMPARISON MATRIX ==================== -->
+  <section class="section section--alt" id="comparison">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">04</span>
+        <span class="rule"></span>
+        <span data-i18n="comp_eyebrow">MATICE FUNKCÍ</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="table_h2">SuperCode Full-Stack Deploy vs. samostatné FTP aplikace a webové panely</h2>
+        <p class="snippet-definition" data-i18n="snippet_p"><strong>SuperCode Full-Stack Web SFTP &amp; Git Studio</strong> umožňuje vývojářům testovat, prohlížet a nasazovat produkční weby přímo z Androidu. Připojte vzdálené servery přes SFTP s SSH klíči nebo FTPS s TLS 1.3, prohlížejte si vzdálené stránky HTML a PHP lokálně na vyžádání, ukládejte změny přes 3fázové atomické transakce nebo pushujte statické buildy na GitHub Pages.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="table-wrap">
+          <table class="obsidian-benchmark-table">
+            <caption data-i18n="table_caption">SROVNÁNÍ MOBILNÍ SPRÁVY A NASAZOVÁNÍ WEBŮ</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="th_0">Požadavek nasazení</th>
+                <th scope="col" data-i18n="th_1">SuperCode Web + SFTP + Git</th>
+                <th scope="col" data-i18n="th_2">Samostatné FTP aplikace pro Android</th>
+                <th scope="col" data-i18n="th_3">cPanel UI v mobilním prohlížeči</th>
+                <th scope="col" data-i18n="th_4">Pouze desktop / notebook</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="tr1_c0">Vzdálený náhled webu</th>
+                <td><strong data-i18n="tr1_c1">Lokální spuštění na 1 klepnutí + stažení aktiv na vyžádání</strong></td>
+                <td data-i18n="tr1_c2">Nutné ručně stáhnout celý web</td>
+                <td data-i18n="tr1_c3">Bez lokálního staging náhledu</td>
+                <td data-i18n="tr1_c4">Ruční SSH tunel / synchronizace</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr2_c0">Ukládání odolné vůči výpadkům</th>
+                <td><strong data-i18n="tr2_c1">3fázové atomické nahrání + ověření + přejmenování</strong></td>
+                <td data-i18n="tr2_c2">Přímý přepis riskuje oříznutí souboru</td>
+                <td data-i18n="tr2_c3">Vypršení relace smaže úpravy</td>
+                <td data-i18n="tr2_c4">Závisí na editoru</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr3_c0">Backendový staging PHP</th>
+                <td><strong data-i18n="tr3_c1">100% offline PHP 8.2 + PDO SQLite</strong></td>
+                <td data-i18n="tr3_c2">Pouze prohlížeč prostého textu</td>
+                <td data-i18n="tr3_c3">Upravuje přímo živou produkci</td>
+                <td data-i18n="tr3_c4">Vyžaduje lokální stack</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr4_c0">Git a statický hosting</th>
+                <td><strong data-i18n="tr4_c1">Vestavěný vizuální Git + barevný Unified Diff</strong></td>
+                <td data-i18n="tr4_c2">Neobsahuje Git klienta</td>
+                <td data-i18n="tr4_c3">Bez workflow pro Git diff</td>
+                <td data-i18n="tr4_c4">Plnohodnotný Git</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr5_c0">Protokoly a zabezpečení</th>
+                <td><strong data-i18n="tr5_c1">SFTP (SSH klíče) + FTPS TLS 1.3 + KeyStore</strong></td>
+                <td data-i18n="tr5_c2">Často chybí TLS 1.3 nebo DevTools</td>
+                <td data-i18n="tr5_c3">Pouze autentizace cookie prohlížeče</td>
+                <td data-i18n="tr5_c4">Plné SSH</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">Navrženo pro telefony, skládací zařízení a tablety · Lehkých 40,2 MB</span>
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=cs-CZ&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dcs%26utm_campaign%3Dweb-php-studio%26utm_content%3Dfullstack-web-sftp-deploy-android" target="_blank" rel="noopener">
+          <span>Google Play</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 05 · VISIBLE EDITORIAL FAQ ==================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-head">
+          <div class="sec-index">
+            <span class="num">05</span>
+            <span class="rule"></span>
+            <span data-i18n="sec3_eyebrow">OTÁZKY A ODPOVĚDI</span>
+          </div>
+          <h2 class="h2" data-i18n="sec3_title">Často kladené otázky</h2>
+          <p class="sec-lead" data-i18n="faq_lead">Časté dotazy k úpravám vzdálených webů přes SFTP/FTPS, předcházení poškozeným nahráním a pushování na GitHub Pages.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary><span data-i18n="faq1_q">Jak funguje náhled vzdálené stránky přes SFTP nebo FTP bez stahování celého serveru?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq1_a">Když klepnete na Spustit u otevřené vzdálené karty `.html` nebo `.php`, SuperCode ji vykreslí v lokálním náhledovém serveru a automaticky na vyžádání stáhne ze vzdáleného serveru jen odkazované relativní soubory CSS, JS, fonty a obrázky.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq2_q">Co se stane, když telefon ztratí mobilní signál přesně při ukládání vzdáleného souboru `index.php`?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq2_a">Váš živý produkční soubor zůstane nedotčený! 3fázové atomické ukládání v SuperCode zapíše nejprve do dočasného souboru, ověří 100% shodu nahraného počtu bajtů a teprve potom provede atomické přejmenování na straně serveru.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq3_q">Podporuje SuperCode jak sdílený webhosting cPanel/Plesk, tak linuxové SSH VPS servery?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq3_a">Ano. Použijte SFTP (s heslem nebo privátními klíči Ed25519/RSA) pro cloudové VPS instance jako DigitalOcean, AWS Lightsail, Hetzner nebo Linode a FTPS (TLS 1.3) či FTP pro cPanel a sdílený hosting.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq4_q">Mohu zdarma vytvořit a publikovat statický web v HTML/CSS/JS nebo WASM na GitHub Pages?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq4_a">Ano. Napište a otestujte web offline na lokálním HTTP serveru SuperCode, poté změny commitněte a pushněte přímo do svého repozitáře GitHub Pages pomocí vestavěného vizuálního Git klienta.</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==================== 06 · TOPICAL AUTHORITY ECOSYSTEM CLUSTER ==================== -->
+  <section class="section section--alt" id="ecosystem-guides">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">06</span>
+        <span class="rule"></span>
+        <span>PRŮVODCI PRO FULL-STACK WEB, PHP 8.2 A DEVTOOLS</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2>Kompletní dokumentace Full-Stack Web a PHP</h2>
+        <p class="sec-lead">Přecházejte mezi hlavním centrem Web &amp; PHP Studio a všemi 4 specializovanými průvodci pro vývoj webu.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="py-cluster-grid">
+          <a href="web-ide.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">WEB-HUB</span>
+              <span class="py-spoke-card__tag">HTTP · PHP 8.2 · WASM · Hlavní přehled</span>
+            </div>
+            <h3>Přehled Full-Stack Web a PHP Studia</h3>
+            <p>Hlavní přehled lokálního HTTP/1.1 serveru v SuperCode, offline enginu PHP 8.2 + PDO SQLite, streamování WASM a DevTools se 3 viewporty.</p>
+            <div class="py-spoke-card__go">
+              <span>web-ide</span>
+              <span>Otevřít průvodce &rarr;</span>
+            </div>
+          </a>
+          <a href="php-server-pdo-sqlite-android.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">WEB-01</span>
+              <span class="py-spoke-card__tag">PHP 8.2 · $_SESSION · PDO ACID</span>
+            </div>
+            <h3>Offline server PHP 8.2 a PDO SQLite</h3>
+            <p>Spouštějte vícesouborové PHP 8.2 formuláře, relace, nahrávání souborů, password_hash(), JSON API a databáze PDO('sqlite:...') offline bez nastavování démona.</p>
+            <div class="py-spoke-card__go">
+              <span>php-server-pdo-sqlite-android</span>
+              <span>Otevřít průvodce &rarr;</span>
+            </div>
+          </a>
+          <a href="html-css-js-responsive-preview.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">WEB-02</span>
+              <span class="py-spoke-card__tag">Mobil / Tablet 768dp / Desktop</span>
+            </div>
+            <h3>HTML5, CSS3 a náhled ve 3 viewportech</h3>
+            <p>Tvořte HTML5, CSS3, ES moduly a WebGL přes reálný lokální HTTP server s okamžitým přepínáním Mobil/Tablet/Desktop a snímkem celé stránky do PNG.</p>
+            <div class="py-spoke-card__go">
+              <span>html-css-js-responsive-preview</span>
+              <span>Otevřít průvodce &rarr;</span>
+            </div>
+          </a>
+          <a href="mobile-web-devtools-wasm-studio.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">WEB-03</span>
+              <span class="py-spoke-card__tag">Síťový monitor · DOM REPL · .wasm</span>
+            </div>
+            <h3>Mobilní webové DevTools, JS REPL a WASM</h3>
+            <p>Laďte chyby, varování a časy HTTP požadavků, zkoumejte serializované DOM uzly v živém JS REPL a streamujte binární WASM (.wasm).</p>
+            <div class="py-spoke-card__go">
+              <span>mobile-web-devtools-wasm-studio</span>
+              <span>Otevřít průvodce &rarr;</span>
+            </div>
+          </a>
+          <a href="fullstack-web-sftp-deploy-android.html" class="py-spoke-card is-active">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">WEB-04</span>
+              <span class="py-spoke-card__tag">SFTP/FTPS · Git Pages · Staging</span>
+            </div>
+            <h3>Vzdálený živý FTP/SFTP webový deploy</h3>
+            <p>Prohlížejte vzdálené weby lokálně na vyžádání, bezpečně připravujte změny v PHP/HTML a publikujte přes 3fázové atomické SFTP nebo vizuální Git.</p>
+            <div class="py-spoke-card__go">
+              <span>fullstack-web-sftp-deploy-android</span>
+              <span>Prohlížení průvodce</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span>5 propojených průvodců pro web a PHP · Reálný lokální HTTP + offline PHP 8.2 + PDO SQL</span>
+        <a class="link-arrow" href="web-ide.html">
+          <span>Centrum pro web, PHP 8.2 a WASM</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="siteFooter">
+  <div class="container">
+    <div class="footer-cta" id="footerCta">
+      <div>
+        <h2 class="h2" data-i18n="cta_h2">Spravujte a nasazujte živé weby s jistotou přímo z kapsy.</h2>
+        <p data-i18n="cta_desc">Stáhněte si SuperCode IDE zdarma na Google Play &#8212; sjednocený staging pro Web a PHP, atomické SFTP/FTPS a vizuální Git.</p>
+      </div>
+      <div class="footer-cta__btns">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=cs-CZ&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dcs%26utm_campaign%3Dweb-php-studio%26utm_content%3Dfullstack-web-sftp-deploy-android" target="_blank" rel="noopener" class="btn btn--gold">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="cta_btn">Stáhnout na Google Play</span>
+        </a>
+        <a href="https://supercode-ide.github.io/tutorial/?lang=cs&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+          <span data-i18n="cta_tutorial">Průvodce aplikací</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+          <span>SuperCode</span>
+          <span class="brand__tag">IDE</span>
+        </a>
+        <p data-i18n="footer_tagline">Nativní mobilní editor kódu a offline vývojářské studio vytvořené pro inženýry, studenty a učitele na Androidu po celém světě.</p>
+        <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
+        <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=cs-CZ&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dcs%26utm_campaign%3Dweb-php-studio%26utm_content%3Dfullstack-web-sftp-deploy-android" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://supercode-ide.github.io/tutorial/?lang=cs&amp;ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">Průvodce aplikací</span> &#8599;</a>
+          <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">Vybrat jazyk</span></button>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_core">Editor a velké soubory</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Přehled</a></li>
+          <li><a href="code-editor.html" data-i18n="nav_code_editor">Editor kódu</a></li>
+          <li><a href="large-file-editor.html" data-i18n="nav_large_file">Velké soubory (GB)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_lang">Offline kompilátory a jazyky</h4>
+        <ul>
+          <li><a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a></li>
+          <li><a href="c-compiler.html" data-i18n="nav_c_compiler">Kompilátor C17</a></li>
+          <li><a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a></li>
+          <li><a href="java-ide.html" data-i18n="nav_java_ide">Java 17 IDE</a></li>
+          <li><a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a></li>
+          <li><a href="lua-ide.html" data-i18n="nav_lua_ide">Lua 5.4</a></li>
+          <li><a href="shell-ide.html" data-i18n="nav_shell_ide">Shell a Kotlin</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_devops">Web, SQL a vzdálený DevOps</h4>
+        <ul>
+          <li><a href="web-ide.html" data-i18n="nav_web_ide">Web a PHP</a></li>
+          <li><a href="sql-ide.html" data-i18n="nav_sql_ide">SQL Studio</a></li>
+          <li><a href="git-client.html" data-i18n="nav_git_client">Vizuální Git</a></li>
+          <li><a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP a FTPS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <span>&copy; 2026 Phoenix Global Studios. All rights reserved.</span>
+      <span class="mono">com.phoenixglobal.supercodeeditor</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="mobile-bottom-bar" id="mobileBottomBar" aria-label="Quick App Actions">
+  <div class="dock-app-icon" aria-hidden="true"><svg><use href="#sc-logo"/></svg></div>
+  <div class="bottom-bar-info">
+    <div class="bottom-bar-title">SuperCode</div>
+    <div class="bottom-bar-sub"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  </div>
+  <div class="bottom-bar-actions">
+    <a href="https://supercode-ide.github.io/tutorial/?lang=cs&amp;ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">Průvodce</a>
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=cs-CZ&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dcs%26utm_campaign%3Dweb-php-studio%26utm_content%3Dfullstack-web-sftp-deploy-android" target="_blank" rel="noopener" class="btn-play-mini">
+      <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
+      <span data-i18n="bottom_cta">Získat</span>
+    </a>
+  </div>
+</aside>
+
+<div class="modal-overlay" id="langModal" role="dialog" aria-modal="true" aria-labelledby="langModalTitle">
+  <div class="lang-modal">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div class="modal-header">
+      <h3 id="langModalTitle"><span data-i18n="modal_title">Vybrat jazyk</span><span class="modal-lang-count">32</span></h3>
+      <button type="button" class="btn-close-modal" onclick="closeLangModal()" aria-label="Zavřít">&#10005;</button>
+    </div>
+    <div class="lang-grid">
+      <button type="button" class="lang-option" data-code="en" onclick="setLanguage('en')"><span class="lang-option__name">English</span><span class="lang-option__code">EN</span></button>
+      <button type="button" class="lang-option" data-code="zh" onclick="setLanguage('zh')"><span class="lang-option__name">简体中文</span><span class="lang-option__code">简中</span></button>
+      <button type="button" class="lang-option" data-code="zh-tw" onclick="setLanguage('zh-tw')"><span class="lang-option__name">繁體中文</span><span class="lang-option__code">繁中</span></button>
+      <button type="button" class="lang-option" data-code="es" onclick="setLanguage('es')"><span class="lang-option__name">Español</span><span class="lang-option__code">ES</span></button>
+      <button type="button" class="lang-option" data-code="pt" onclick="setLanguage('pt')"><span class="lang-option__name">Português</span><span class="lang-option__code">PT</span></button>
+      <button type="button" class="lang-option" data-code="ja" onclick="setLanguage('ja')"><span class="lang-option__name">日本語</span><span class="lang-option__code">日本語</span></button>
+      <button type="button" class="lang-option" data-code="ko" onclick="setLanguage('ko')"><span class="lang-option__name">한국어</span><span class="lang-option__code">한국어</span></button>
+      <button type="button" class="lang-option" data-code="de" onclick="setLanguage('de')"><span class="lang-option__name">Deutsch</span><span class="lang-option__code">DE</span></button>
+      <button type="button" class="lang-option" data-code="fr" onclick="setLanguage('fr')"><span class="lang-option__name">Français</span><span class="lang-option__code">FR</span></button>
+      <button type="button" class="lang-option" data-code="ru" onclick="setLanguage('ru')"><span class="lang-option__name">Русский</span><span class="lang-option__code">RU</span></button>
+      <button type="button" class="lang-option" data-code="hi" onclick="setLanguage('hi')"><span class="lang-option__name">हिन्दी</span><span class="lang-option__code">HI</span></button>
+      <button type="button" class="lang-option" data-code="id" onclick="setLanguage('id')"><span class="lang-option__name">Bahasa Indonesia</span><span class="lang-option__code">ID</span></button>
+      <button type="button" class="lang-option" data-code="it" onclick="setLanguage('it')"><span class="lang-option__name">Italiano</span><span class="lang-option__code">IT</span></button>
+      <button type="button" class="lang-option" data-code="vi" onclick="setLanguage('vi')"><span class="lang-option__name">Tiếng Việt</span><span class="lang-option__code">VI</span></button>
+      <button type="button" class="lang-option" data-code="th" onclick="setLanguage('th')"><span class="lang-option__name">ไทย</span><span class="lang-option__code">ไทย</span></button>
+      <button type="button" class="lang-option" data-code="tr" onclick="setLanguage('tr')"><span class="lang-option__name">Türkçe</span><span class="lang-option__code">TR</span></button>
+      <button type="button" class="lang-option" data-code="ar" onclick="setLanguage('ar')"><span class="lang-option__name">العربية</span><span class="lang-option__code">AR</span></button>
+      <button type="button" class="lang-option" data-code="pl" onclick="setLanguage('pl')"><span class="lang-option__name">Polski</span><span class="lang-option__code">PL</span></button>
+      <button type="button" class="lang-option" data-code="nl" onclick="setLanguage('nl')"><span class="lang-option__name">Nederlands</span><span class="lang-option__code">NL</span></button>
+      <button type="button" class="lang-option" data-code="sv" onclick="setLanguage('sv')"><span class="lang-option__name">Svenska</span><span class="lang-option__code">SV</span></button>
+      <button type="button" class="lang-option" data-code="nb" onclick="setLanguage('nb')"><span class="lang-option__name">Norsk Bokmål</span><span class="lang-option__code">NB</span></button>
+      <button type="button" class="lang-option" data-code="da" onclick="setLanguage('da')"><span class="lang-option__name">Dansk</span><span class="lang-option__code">DA</span></button>
+      <button type="button" class="lang-option" data-code="fi" onclick="setLanguage('fi')"><span class="lang-option__name">Suomi</span><span class="lang-option__code">FI</span></button>
+      <button type="button" class="lang-option active" data-code="cs" onclick="setLanguage('cs')"><span class="lang-option__name">Čeština</span><span class="lang-option__code">CS</span></button>
+      <button type="button" class="lang-option" data-code="uk" onclick="setLanguage('uk')"><span class="lang-option__name">Українська</span><span class="lang-option__code">UK</span></button>
+      <button type="button" class="lang-option" data-code="ro" onclick="setLanguage('ro')"><span class="lang-option__name">Română</span><span class="lang-option__code">RO</span></button>
+      <button type="button" class="lang-option" data-code="hu" onclick="setLanguage('hu')"><span class="lang-option__name">Magyar</span><span class="lang-option__code">HU</span></button>
+      <button type="button" class="lang-option" data-code="el" onclick="setLanguage('el')"><span class="lang-option__name">Ελληνικά</span><span class="lang-option__code">EL</span></button>
+      <button type="button" class="lang-option" data-code="he" onclick="setLanguage('he')"><span class="lang-option__name">עברית</span><span class="lang-option__code">HE</span></button>
+      <button type="button" class="lang-option" data-code="ms" onclick="setLanguage('ms')"><span class="lang-option__name">Bahasa Melayu</span><span class="lang-option__code">MS</span></button>
+      <button type="button" class="lang-option" data-code="tl" onclick="setLanguage('tl')"><span class="lang-option__name">Filipino</span><span class="lang-option__code">FIL</span></button>
+      <button type="button" class="lang-option" data-code="bn" onclick="setLanguage('bn')"><span class="lang-option__name">বাংলা</span><span class="lang-option__code">BN</span></button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var WORKBENCH_SAMPLES = {"sftp_live": {"label": "sftp://prod-vps/var/www/site/pricing.php \u2014 Remote Preview & Atomic Save", "status": "SFTP (SSH Key) \u00b7 3-Phase Atomic Save", "lines": ["<span class=\"tok-kw\">&lt;?php<\/span>", "<span class=\"tok-cmt\">// Mounted via Ed25519 SSH key \u2014 tap Run to preview locally before saving<\/span>", "$promo = [", "    <span class=\"tok-str\">&#39;headline&#39;<\/span> =&gt; <span class=\"tok-str\">&#39;Autumn Launch \u2014 30% Off Annual Plans&#39;<\/span>,", "    <span class=\"tok-str\">&#39;cta&#39;<\/span>      =&gt; <span class=\"tok-str\">&#39;Start 14-Day Trial&#39;<\/span>,", "];", "<span class=\"tok-kw\">require<\/span> __DIR__ . <span class=\"tok-str\">&#39;/views/pricing_card.php&#39;<\/span>;"], "output": ["<span class=\"term-prompt\">[Remote Preview]<\/span> Staged pricing.php + fetched 4 relative CSS/SVG assets on demand", "<span class=\"term-prompt\">[Atomic Save]<\/span> Uploaded .pricing.php.tmp (4,128 B) &rarr; verified &rarr; POSIX rename OK", "<span class=\"term-info\">&#10003; Zero half-written PHP files even on unstable mobile 4G/5G connections<\/span>"]}, "ftps_sync": {"label": "ftps://cpanel-host/public_html/assets/bundle_sync.js \u2014 TLS 1.3 Host", "status": "FTPS (TLS 1.3) \u00b7 Concurrent Queue", "lines": ["<span class=\"tok-cmt\">// Explicit/Implicit FTPS TLS 1.3 for cPanel, Plesk &amp; shared web hosts<\/span>", "<span class=\"tok-kw\">export function<\/span> <span class=\"tok-fn\">mountBanner<\/span>(targetSelector) {", "  <span class=\"tok-kw\">const<\/span> el = document.<span class=\"tok-fn\">querySelector<\/span>(targetSelector);", "  <span class=\"tok-kw\">if<\/span> (el) el.dataset.deployedFrom = <span class=\"tok-str\">&#39;SuperCode-Android&#39;<\/span>;", "}"], "output": ["<span class=\"term-prompt\">[FTPS TLS 1.3]<\/span> Connected to public_html/assets (cipher: TLS_AES_256_GCM_SHA384)", "Synced 6 changed files (bundle_sync.js, main.css, hero.webp) in 410 ms", "<span class=\"term-info\">&#10003; Resumable transfers + chmod permissions inspector built in<\/span>"]}, "git_pages": {"label": "docs/index.html \u2014 Visual Git Push to GitHub Pages / Cloudflare Pages", "status": "Visual Git \u00b7 origin/main Push", "lines": ["<span class=\"tok-cmt\">&lt;!-- Static HTML5 + WASM portfolio deployed straight to GitHub Pages --&gt;<\/span>", "<span class=\"tok-kw\">&lt;section<\/span> class=<span class=\"tok-str\">&quot;hero&quot;<\/span><span class=\"tok-kw\">&gt;<\/span>", "  <span class=\"tok-kw\">&lt;h1&gt;<\/span>Interactive Raymarcher (<span class=\"tok-kw\">&lt;code&gt;<\/span>WASM<span class=\"tok-kw\">&lt;/code&gt;<\/span>)<span class=\"tok-kw\">&lt;/h1&gt;<\/span>", "  <span class=\"tok-kw\">&lt;canvas<\/span> id=<span class=\"tok-str\">&quot;gl-canvas&quot;<\/span> width=<span class=\"tok-str\">&quot;960&quot;<\/span> height=<span class=\"tok-str\">&quot;540&quot;<\/span><span class=\"tok-kw\">&gt;&lt;/canvas&gt;<\/span>", "<span class=\"tok-kw\">&lt;/section&gt;<\/span>"], "output": ["<span class=\"term-prompt\">[Visual Git]<\/span> Staged 3 files (+84 / -12 lines reviewed in Color Unified Diff)", "Committed a81f4c9: &quot;feat: responsive tablet nav + WASM shader canvas&quot;", "<span class=\"term-info\">&#10003; Pushed to origin/main &rarr; GitHub Pages live deployment triggered<\/span>"]}};
+    var currentTab = 'sftp_live';
+    var runTimer = null;
+
+    function renderWorkbench(tabKey, animateRun) {
+      var sample = WORKBENCH_SAMPLES[tabKey] || WORKBENCH_SAMPLES['sftp_live'];
+      if (!sample) { return; }
+      currentTab = tabKey;
+      var labelEl = document.getElementById('ide-compiler-label');
+      if (labelEl) { labelEl.textContent = sample.label; }
+      var statusEl = document.getElementById('wbStatusLang');
+      if (statusEl) { statusEl.textContent = sample.status; }
+
+      var tabs = document.querySelectorAll('.ide-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        var active = tabs[i].getAttribute('data-tab') === tabKey;
+        tabs[i].classList.toggle('active', active);
+        tabs[i].setAttribute('aria-selected', active ? 'true' : 'false');
+      }
+      var files = document.querySelectorAll('.wb-file');
+      for (var f = 0; f < files.length; f++) {
+        files[f].classList.toggle('active', files[f].getAttribute('data-tab') === tabKey);
+      }
+
+      var codeBox = document.getElementById('ide-code-box');
+      if (codeBox) {
+        var html = '';
+        for (var l = 0; l < sample.lines.length; l++) {
+          var activeCls = (l === sample.lines.length - 1) ? ' active-line' : '';
+          html += '<div class="code-line' + activeCls + '"><span class="ln">' + (l + 1) + '</span><span class="code-content">' + sample.lines[l] + '</span></div>';
+        }
+        codeBox.innerHTML = html;
+      }
+
+      if (animateRun) {
+        runWorkbenchSample();
+      }
+    }
+
+    function runWorkbenchSample() {
+      var sample = WORKBENCH_SAMPLES[currentTab] || WORKBENCH_SAMPLES['sftp_live'];
+      var drawer = document.getElementById('ide-terminal-drawer');
+      var out = document.getElementById('ide-term-output');
+      var badge = document.getElementById('ide-exec-status');
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (!drawer || !out || !sample) { return; }
+
+      if (runTimer) { clearTimeout(runTimer); }
+      drawer.classList.add('is-open');
+      if (runBtn) { runBtn.classList.add('is-running'); }
+      if (badge) { badge.textContent = 'Running...'; badge.classList.remove('done'); }
+      out.innerHTML = '';
+
+      var idx = 0;
+      function step() {
+        if (idx < sample.output.length) {
+          var row = document.createElement('span');
+          row.className = 'term-line-item';
+          row.innerHTML = sample.output[idx];
+          out.appendChild(row);
+          idx++;
+          runTimer = setTimeout(step, 80);
+        } else {
+          var cur = document.createElement('span');
+          cur.className = 'term-cursor';
+          cur.textContent = '\u258b';
+          out.appendChild(cur);
+          if (badge) { badge.textContent = 'Completed'; badge.classList.add('done'); }
+          if (runBtn) { runBtn.classList.remove('is-running'); }
+        }
+      }
+      step();
+    }
+
+    function initNavigationAndSmartBar() {
+      var menuBtn = document.getElementById('menuBtn');
+      var drawer = document.getElementById('siteDrawer');
+      var bar = document.getElementById('mobileBottomBar');
+      var heroCta = document.getElementById('heroCta');
+      var siteFooter = document.getElementById('siteFooter');
+
+      function syncBar() {
+        if (!bar) { return; }
+        var drawerOpen = Boolean(drawer && !drawer.hasAttribute('hidden'));
+        var modalEl = document.getElementById('langModal');
+        var modalOpen = Boolean(modalEl && modalEl.classList.contains('show'));
+        var vh = window.innerHeight || document.documentElement.clientHeight || 800;
+        var heroInView = false;
+        if (heroCta) {
+          var hr = heroCta.getBoundingClientRect();
+          heroInView = (hr.bottom > 0 && hr.top < vh);
+        }
+        var footerInView = false;
+        if (siteFooter) {
+          var fr = siteFooter.getBoundingClientRect();
+          footerInView = (fr.top < vh + 24);
+        }
+        var scrollYVal = window.pageYOffset || window.scrollY || 0;
+        var docH = Math.max(document.body ? document.body.scrollHeight : 0, document.documentElement ? document.documentElement.scrollHeight : 0);
+        var nearBottom = (vh + scrollYVal) >= (docH - 120);
+        var shouldShow = !drawerOpen && !modalOpen && !heroInView && !footerInView && !nearBottom;
+        bar.classList.toggle('is-visible', shouldShow);
+      }
+
+      window.__supercodeSyncMobileBar = syncBar;
+
+      function setDrawer(open) {
+        if (!menuBtn || !drawer) { return; }
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { drawer.removeAttribute('hidden'); }
+        else { drawer.setAttribute('hidden', ''); }
+        syncBar();
+      }
+      if (menuBtn && drawer) {
+        menuBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          setDrawer(menuBtn.getAttribute('aria-expanded') !== 'true');
+        });
+        drawer.addEventListener('click', function (e) {
+          if (e.target && e.target.closest('a')) { setDrawer(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!drawer.hasAttribute('hidden') && !drawer.contains(e.target) && e.target !== menuBtn && !menuBtn.contains(e.target)) {
+            setDrawer(false);
+          }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') { setDrawer(false); }
+        });
+      }
+
+      if (bar) {
+        window.addEventListener('scroll', syncBar, { passive: true });
+        window.addEventListener('resize', syncBar);
+        syncBar();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var tabBtns = document.querySelectorAll('.ide-tab, .wb-file');
+      for (var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', function () {
+          renderWorkbench(this.getAttribute('data-tab'), true);
+        });
+      }
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (runBtn) { runBtn.addEventListener('click', function () { runWorkbenchSample(); }); }
+      var closeTerm = document.getElementById('btn-close-term');
+      if (closeTerm) {
+        closeTerm.addEventListener('click', function () {
+          var d = document.getElementById('ide-terminal-drawer');
+          if (d) { d.classList.remove('is-open'); }
+        });
+      }
+      initNavigationAndSmartBar();
+      renderWorkbench('sftp_live', false);
+    });
+  })();
+</script>
+<script>window.__SUPERCODE_STATIC_LANG__="cs";window.__SUPERCODE_STATIC_CANONICAL__="https://supercode-ide.github.io/cs/fullstack-web-sftp-deploy-android.html";</script>
+<script src="../i18n_extended.js"></script>
+</body>
+</html>

@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090A0F">
+  <meta name="color-scheme" content="only dark">
+  <meta name="supported-color-schemes" content="dark">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <title>零基础与学生专属 Python 编程应用 — Android 离线学 Python | SuperCode</title>
+  <meta name="description" content="免登录在 Android 上离线练习与学习 Python。SuperCode 内置 8 个可运行 Python 模板、交互式 input() 控制台、21 键 Python 符号栏、错误雷达及 PIP/NumPy 支持。">
+  <meta name="keywords" content="python coding app, python coding app for beginners, learn python offline android, practice python on phone, python compiler for students android, free python app without internet">
+  <meta name="author" content="Phoenix Global Studios">
+  <meta name="google-play-app" content="app-id=com.phoenixglobal.supercodeeditor">
+
+  <link id="canonical-link" rel="canonical" href="https://supercode-ide.github.io/zh/learn-python-android.html">
+  <link rel="alternate" hreflang="x-default" href="https://supercode-ide.github.io/learn-python-android.html">
+  <link rel="alternate" hreflang="en" href="https://supercode-ide.github.io/learn-python-android.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://supercode-ide.github.io/zh/learn-python-android.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://supercode-ide.github.io/zh-tw/learn-python-android.html">
+  <link rel="alternate" hreflang="es" href="https://supercode-ide.github.io/es/learn-python-android.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://supercode-ide.github.io/pt/learn-python-android.html">
+  <link rel="alternate" hreflang="ja" href="https://supercode-ide.github.io/ja/learn-python-android.html">
+  <link rel="alternate" hreflang="ko" href="https://supercode-ide.github.io/ko/learn-python-android.html">
+  <link rel="alternate" hreflang="de" href="https://supercode-ide.github.io/de/learn-python-android.html">
+  <link rel="alternate" hreflang="fr" href="https://supercode-ide.github.io/fr/learn-python-android.html">
+  <link rel="alternate" hreflang="ru" href="https://supercode-ide.github.io/ru/learn-python-android.html">
+  <link rel="alternate" hreflang="hi" href="https://supercode-ide.github.io/hi/learn-python-android.html">
+  <link rel="alternate" hreflang="id" href="https://supercode-ide.github.io/id/learn-python-android.html">
+  <link rel="alternate" hreflang="it" href="https://supercode-ide.github.io/it/learn-python-android.html">
+  <link rel="alternate" hreflang="vi" href="https://supercode-ide.github.io/vi/learn-python-android.html">
+  <link rel="alternate" hreflang="th" href="https://supercode-ide.github.io/th/learn-python-android.html">
+  <link rel="alternate" hreflang="tr" href="https://supercode-ide.github.io/tr/learn-python-android.html">
+  <link rel="alternate" hreflang="ar" href="https://supercode-ide.github.io/ar/learn-python-android.html">
+  <link rel="alternate" hreflang="pl" href="https://supercode-ide.github.io/pl/learn-python-android.html">
+  <link rel="alternate" hreflang="nl" href="https://supercode-ide.github.io/nl/learn-python-android.html">
+  <link rel="alternate" hreflang="sv" href="https://supercode-ide.github.io/sv/learn-python-android.html">
+  <link rel="alternate" hreflang="nb" href="https://supercode-ide.github.io/nb/learn-python-android.html">
+  <link rel="alternate" hreflang="da" href="https://supercode-ide.github.io/da/learn-python-android.html">
+  <link rel="alternate" hreflang="fi" href="https://supercode-ide.github.io/fi/learn-python-android.html">
+  <link rel="alternate" hreflang="cs" href="https://supercode-ide.github.io/cs/learn-python-android.html">
+  <link rel="alternate" hreflang="uk" href="https://supercode-ide.github.io/uk/learn-python-android.html">
+  <link rel="alternate" hreflang="ro" href="https://supercode-ide.github.io/ro/learn-python-android.html">
+  <link rel="alternate" hreflang="hu" href="https://supercode-ide.github.io/hu/learn-python-android.html">
+  <link rel="alternate" hreflang="el" href="https://supercode-ide.github.io/el/learn-python-android.html">
+  <link rel="alternate" hreflang="he" href="https://supercode-ide.github.io/he/learn-python-android.html">
+  <link rel="alternate" hreflang="ms" href="https://supercode-ide.github.io/ms/learn-python-android.html">
+  <link rel="alternate" hreflang="fil" href="https://supercode-ide.github.io/tl/learn-python-android.html">
+  <link rel="alternate" hreflang="bn" href="https://supercode-ide.github.io/bn/learn-python-android.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
+  <meta property="og:title" content="零基础与学生专属 Python 编程应用 — Android 离线学 Python | SuperCode">
+  <meta property="og:description" content="免登录在 Android 上离线练习与学习 Python。SuperCode 内置 8 个可运行 Python 模板、交互式 input() 控制台、21 键 Python 符号栏、错误雷达及 PIP/NumPy 支持。">
+  <meta property="og:url" content="https://supercode-ide.github.io/zh/learn-python-android.html">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-hero-zh.png">
+  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-hero-zh.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="离线 Python 3.11 / 3.12 IDE 与分屏终端">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-hero-zh.png">
+  <meta name="twitter:title" content="零基础与学生专属 Python 编程应用 — Android 离线学 Python | SuperCode">
+  <meta name="twitter:description" content="免登录在 Android 上离线练习与学习 Python。SuperCode 内置 8 个可运行 Python 模板、交互式 input() 控制台、21 键 Python 符号栏、错误雷达及 PIP/NumPy 支持。">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <script>if(/SamsungBrowser/i.test(navigator.userAgent)){document.documentElement.classList.add('is-samsung');}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "SoftwareApplication",
+        "MobileApplication",
+        "WebApplication"
+      ],
+      "@id": "https://supercode-ide.github.io/#supercode-app",
+      "name": "Code Editor: SuperCode IDE",
+      "alternateName": [
+        "Learn Python Offline App Android",
+        "Python Coding Practice App",
+        "Student Python Compiler Android"
+      ],
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Free Offline Python Coding App for Beginners & CS Students on Android",
+      "inLanguage": "zh-Hans",
+      "fileSize": "40.2MB",
+      "softwareVersion": "1.55.05",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=zh-CN&listing=python-ide",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=zh-CN&listing=python-ide",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=zh-CN"
+      ],
+      "potentialAction": [
+        {
+          "@type": "InstallAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=zh-CN&listing=python-ide",
+            "actionPlatform": [
+              "http://schema.org/AndroidPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          }
+        },
+        {
+          "@type": "ViewAction",
+          "name": "新手引导",
+          "target": [
+            "https://supercode-ide.github.io/tutorial/?lang=zh",
+            "android-app://com.phoenixglobal.supercodeeditor/https/supercode-ide.github.io/tutorial"
+          ]
+        }
+      ],
+      "identifier": "com.phoenixglobal.supercodeeditor",
+      "url": "https://supercode-ide.github.io/zh/learn-python-android.html",
+      "screenshot": [
+        "https://supercode-ide.github.io/assets/gallery/zh/01_python_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh/02_cpp20_compiler.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh/03_web_php_devtools.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh/04_file_manager_tree.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh/05_sql_sqlite_studio.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh/06_java17_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh/07_visual_git_timemachine.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh/08_symbol_keyboard_themes.webp"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Phoenix Global Studios",
+        "url": "https://supercode-ide.github.io/zh/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "66"
+      },
+      "featureList": [
+        "100% offline Python coding practice in airplane mode — zero mandatory sign-up or login wall",
+        "8 built-in runnable Python starter templates covering I/O, loops, OOP classes, algorithms, JSON/CSV & files",
+        "21-key swipe-up Python symbol bar (:, ->, (), [], {}, =, _, INDENT) eliminating painful mobile keyboard switching",
+        "Real-time Error Radar catching missing colons, unmatched parentheses & TabError indentation bugs as you type",
+        "Live interactive input() console for practicing user-prompt programs, quizzes, and competitive coding",
+        "Grows with your CS degree: includes C17, C++20, Java 17, JavaScript, SQL, HTML/CSS/PHP & Git in one 40.2 MB app"
+      ],
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-zh.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://supercode-ide.github.io/zh/learn-python-android.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SuperCode IDE",
+          "item": "https://supercode-ide.github.io/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Python 编程应用中心",
+          "item": "https://supercode-ide.github.io/zh/python-ide.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "离线学习 Python",
+          "item": "https://supercode-ide.github.io/zh/learn-python-android.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Start Writing Python on Your Phone in 60 Seconds",
+      "description": "Zero configuration — install, pick a template or blank file, and run.",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Create a `.py` Script or Load a Built-In Example",
+          "text": "Install SuperCode from Google Play, create `hello.py`, or open the Examples menu to load one of 8 runnable Python templates.",
+          "url": "https://supercode-ide.github.io/learn-python-android.html#step1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Type Effortlessly With Smart Indent & Autocomplete",
+          "text": "Use the 21-key symbol bar for `:`, `()`, and `Tab`, while offline AST suggestions help you discover Python methods as you type.",
+          "url": "https://supercode-ide.github.io/learn-python-android.html#step2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Run Offline & Answer Interactive input() Prompts",
+          "text": "Tap Run ▶ to see output in milliseconds, enter live test inputs in the docked console, and inspect clear line-by-line error messages.",
+          "url": "https://supercode-ide.github.io/learn-python-android.html#step3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Level Up to PIP Libraries, Data Science & GitHub",
+          "text": "As your skills grow, install PyPI packages, plot Matplotlib graphs, export A4 PDF homework, or push your portfolio to GitHub.",
+          "url": "https://supercode-ide.github.io/learn-python-android.html#step4"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://supercode-ide.github.io/learn-python-android.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "纯零基础在手机上学 Python，SuperCode 好上手吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "非常好上手。无需配置编译器、环境变量或注册账号—只要新建一个 `.py` 文件（或选用内置 8 个 Python 示例之一），点一下运行即可。错误雷达和一键 PEP 8 格式化还能帮新手第一时间纠正拼写和缩进错误。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "可以离线刷 LeetCode 和数据结构算法题吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以。`collections`、`heapq`、`bisect`、`itertools`、`functools`、`math`、`typing` 等标准算法模块全部 100% 离线运行，并实时显示毫秒级耗时与内存占用数据。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "教室里学生没有 Wi-Fi，老师能用 SuperCode 开展课堂教学吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "完全可以。核心 Python 3.11 运行时开箱即离线，离线 `.whl` 安装包也可在无网环境下本地分发，学生完成后还能直接将作业导出为带语法高亮的 A4 PDF 上交。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "白天光线强时，SuperCode 除了深色模式还支持浅色模式吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "支持—SuperCode 内置 8 套光学护眼主题（涵盖清爽浅色主题与低眩光深色主题），并支持自由缩放编辑器和控制台字号。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-page="py_learn">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="sc-logo" viewBox="20 14 68 72">
+    <path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/>
+    <path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/>
+    <path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/>
+    <path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+  </symbol>
+  <symbol id="gp-prism" viewBox="0 0 24 24">
+    <path fill="#4285F4" d="M3.6,2.4C3.3,2.7,3.1,3.2,3.1,3.8v16.4c0,0.6,0.2,1.1,0.5,1.4l0.1,0.1L12.9,12v-0.2L3.7,2.3L3.6,2.4z"/>
+    <path fill="#34A853" d="M16,15.1l-3.1-3.1v-0.2L16,8.7l0.1,0.1l3.6,2.1c1,0.6,1,1.5,0,2.1l-3.6,2.1L16,15.1z"/>
+    <path fill="#FBBC05" d="M16.1,15.1L12.9,12L3.6,21.3c0.3,0.4,0.9,0.4,1.6,0.1L16.1,15.1z"/>
+    <path fill="#EA4335" d="M16.1,8.9L5.2,2.6C4.5,2.2,3.9,2.3,3.6,2.7L12.9,12L16.1,8.9z"/>
+  </symbol>
+  <symbol id="i-ne" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8 20 7.2v9.6L12 21.2 4 16.8V7.2z"/><path d="M4 7.2l8 4.4 8-4.4M12 11.6v9.6"/></g></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2.8v3.2M15 2.8v3.2M9 18v3.2M15 18v3.2M2.8 9H6M2.8 15H6M18 9h3.2M18 15h3.2"/></g></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 2.8 7.8 12 12.6l9.2-4.8z"/><path d="m2.8 12 9.2 4.8 9.2-4.8"/><path d="m2.8 16.2 9.2 4.8 9.2-4.8"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="M2.8 8.5h18.4"/><path d="m9.5 12.5-2.2 2.2 2.2 2.2M14.5 12.5l2.2 2.2-2.2 2.2"/></g></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5.6" rx="7.6" ry="2.8"/><path d="M4.4 5.6v12.8c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8V5.6"/><path d="M4.4 12c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8"/></g></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="m7.2 9.5 3 2.5-3 2.5M12.8 15h4"/></g></symbol>
+  <symbol id="i-git" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.3"/><circle cx="6" cy="18" r="2.3"/><circle cx="18" cy="12" r="2.3"/><path d="M6 8.3v7.4M8.3 6h4.2a3.5 3.5 0 0 1 3.5 3.5v.2"/></g></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5h11a4 4 0 0 0 .7-7.94A5.5 5.5 0 0 0 7.4 9.2 3.8 3.8 0 0 0 6.5 18.5z"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M13 2.8 4.8 13.2h6.3L10.2 21.2 19.2 10.6h-6.4z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 2.8 4.8 5.8v5.6c0 5 3.1 8.5 7.2 9.8 4.1-1.3 7.2-4.8 7.2-9.8V5.8z"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="index.html" class="brand" aria-label="SuperCode IDE Home">
+      <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+      <span>SuperCode</span>
+      <span class="brand__tag">IDE</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary Workspaces">
+      <a href="code-editor.html" data-i18n="nav_code_editor">代码编辑器</a>
+      <a href="large-file-editor.html" data-i18n="nav_large_file">GB 大文件</a>
+      <a href="python-ide.html" class="is-current" data-i18n="nav_python_ide">Python IDE</a>
+      <a href="c-compiler.html" data-i18n="nav_c_compiler">C 语言编译</a>
+      <a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a>
+      <a href="java-ide.html" data-i18n="nav_java_ide">Java 17</a>
+      <a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a>
+      <a href="web-ide.html" data-i18n="nav_web_ide">Web & PHP</a>
+      <a href="sql-ide.html" data-i18n="nav_sql_ide">SQL 数据库</a>
+      <a href="git-client.html" data-i18n="nav_git_client">可视化 Git</a>
+      <a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP & FTPS</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button id="langModalBtn" class="btn-lang-trigger" type="button" onclick="openLangModal()" aria-label="Select Language">
+        <svg class="lang-globe-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span id="langTriggerText">简中</span>
+        <span class="lang-chevron" aria-hidden="true">&#9662;</span>
+      </button>
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-CN&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh%26utm_campaign%3Dpython-ide%26utm_content%3Dlearn-python-android" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+        <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+        <span data-i18n="nav_cta">Google Play</span>
+      </a>
+      <a href="index.html" class="btn-home-icon" aria-label="Home" title="Home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5"/>
+          <path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
+        </svg>
+      </a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteDrawer" aria-label="All Pages Directory">
+        <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 8.5h16M4 15.5h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-drawer" id="siteDrawer" hidden>
+  <nav class="container menu-drawer__inner" aria-label="All SuperCode Pages">
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_core">核心编辑器与巨型文件</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="index.html"><span data-i18n="nav_home">总览首页</span><span class="mono">01</span></a>
+        <a class="menu-drawer__link" href="code-editor.html"><span data-i18n="nav_code_editor">代码编辑器</span><span class="mono">02</span></a>
+        <a class="menu-drawer__link" href="large-file-editor.html"><span data-i18n="nav_large_file">GB 大文件</span><span class="mono">03</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_lang">离线编译器与脚本语言</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link is-current" href="python-ide.html"><span data-i18n="nav_python_ide">Python IDE</span><span class="mono">04</span></a>
+        <a class="menu-drawer__link" href="c-compiler.html"><span data-i18n="nav_c_compiler">C 语言编译</span><span class="mono">05</span></a>
+        <a class="menu-drawer__link" href="cpp-ide.html"><span data-i18n="nav_cpp_ide">C++20 IDE</span><span class="mono">06</span></a>
+        <a class="menu-drawer__link" href="java-ide.html"><span data-i18n="nav_java_ide">Java 17</span><span class="mono">07</span></a>
+        <a class="menu-drawer__link" href="javascript-ide.html"><span data-i18n="nav_js_ide">JavaScript</span><span class="mono">08</span></a>
+        <a class="menu-drawer__link" href="lua-ide.html"><span data-i18n="nav_lua_ide">Lua 5.4</span><span class="mono">09</span></a>
+        <a class="menu-drawer__link" href="shell-ide.html"><span data-i18n="nav_shell_ide">Shell & Kotlin</span><span class="mono">10</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_devops">全栈 Web · 数据库 · 远程运维</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="web-ide.html"><span data-i18n="nav_web_ide">Web & PHP</span><span class="mono">11</span></a>
+        <a class="menu-drawer__link" href="sql-ide.html"><span data-i18n="nav_sql_ide">SQL 数据库</span><span class="mono">12</span></a>
+        <a class="menu-drawer__link" href="git-client.html"><span data-i18n="nav_git_client">可视化 Git</span><span class="mono">13</span></a>
+        <a class="menu-drawer__link" href="sftp-client.html"><span data-i18n="nav_sftp_client">SFTP & FTPS</span><span class="mono">14</span></a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<main id="top">
+  <!-- ==================== 01 · EDITORIAL HERO & INTERACTIVE WORKBENCH ==================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <div class="py-hub-crumb"><a href="python-ide.html"><span class="crumb-arrow" aria-hidden="true">&larr;</span> Python 编程应用中心</a><span class="sep">/</span><span>离线学习 Python</span></div>
+          <div class="trust-pill">
+            <span class="trust-pill__score"><span data-play-rating>4.9</span> &#9733;</span>
+            <span data-i18n="hero_tag">免登录门槛 &#183; 100% 飞行模式可用 &#183; 8 个入门模板</span>
+          </div>
+
+          <h1 class="hero-h1" data-i18n="hero_h1">随时随地学习与实战的 <span class="text-gradient">Python 编程应用</span>。</h1>
+
+          <p class="hero-lead" data-i18n="hero_desc">别再只刷选择题卡片了&#8212;在手机上直接编写并运行<strong>真正的 Python 3 代码</strong>。SuperCode 毫秒级启动，<strong>无需注册登录</strong>、<strong>100% 离线运行</strong>，内置 <strong>8 个可运行入门模板</strong>、<strong>21 键 Python 符号栏</strong>与实时<strong>错误雷达</strong>反馈。</p>
+
+          <div class="hero__cta" id="heroCta">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-CN&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh%26utm_campaign%3Dpython-ide%26utm_content%3Dlearn-python-android" target="_blank" rel="noopener" class="btn btn--gold">
+              <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+              <span data-i18n="cta_btn">Google Play 获取</span>
+            </a>
+            <a href="https://supercode-ide.github.io/tutorial/?lang=zh&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+              <span data-i18n="cta_tutorial">新手引导</span>
+              <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <dl class="specs" aria-label="Key Specifications">
+          <div class="spec"><dt>0<small>Login</small></dt><dd data-i18n="ln_s1">毫秒离线启动</dd></div>
+          <div class="spec"><dt>8</dt><dd data-i18n="ln_s2">可运行模板</dd></div>
+          <div class="spec"><dt>21<small>Keys</small></dt><dd data-i18n="ln_s3">上滑符号栏</dd></div>
+          <div class="spec"><dt>10+</dt><dd data-i18n="ln_s4">一站覆盖多门 CS 语言</dd></div>
+        </dl>
+      </div>
+
+      <div class="wb-caption">
+        <div class="sec-index" style="margin-bottom:0">
+          <span class="num">01</span>
+          <span class="rule"></span>
+          <span data-i18n="wb_eyebrow">零基础到 CS101 交互式 PYTHON 实战工作台</span>
+        </div>
+        <span class="wb-caption__hint mono">Live input() &#183; Algorithms &amp; DSA &#183; OOP Dataclasses &#183; Offline</span>
+      </div>
+
+      <div class="ide-workbench">
+        <div class="wb-titlebar">
+          <div class="wb-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="wb-title" id="ide-compiler-label">learn-python-101/01_interactive_input.py &#8212; Live input() Practice</div>
+          <button type="button" class="wb-run" id="btn-run-sandbox">
+            <span class="wb-run__tri" aria-hidden="true">&#9654;</span>
+            <span data-i18n="btn_run">运行示例</span>
+          </button>
+        </div>
+
+        <div class="wb-tabs" role="tablist" aria-label="Interactive Workspace Tabs">
+          <button type="button" class="ide-tab active" data-tab="io" role="tab" aria-selected="true"><i></i>01_interactive_input.py</button>
+          <button type="button" class="ide-tab" data-tab="algo" role="tab" aria-selected="false"><i></i>02_algorithms.py</button>
+          <button type="button" class="ide-tab" data-tab="oop" role="tab" aria-selected="false"><i></i>03_oop_gradebook.py</button>
+        </div>
+
+        <div class="wb-body">
+          <aside class="wb-explorer" aria-label="Project Explorer">
+            <div class="wb-explorer__head">Explorer</div>
+            <div class="wb-folder">&#9662; learn-python-101</div>
+            <button type="button" class="wb-file active" data-tab="io"><b>101</b><span>01_interactive_input.py</span></button>
+            <button type="button" class="wb-file" data-tab="algo"><b>DSA</b><span>02_algorithms.py</span></button>
+            <button type="button" class="wb-file" data-tab="oop"><b>OOP</b><span>03_oop_gradebook.py</span></button>
+          </aside>
+
+          <div class="wb-main">
+            <div class="ide-editor-body" id="ide-code-box" role="region" aria-label="Interactive Code Preview"></div>
+            <div class="ide-terminal" id="ide-terminal-drawer" aria-live="polite">
+              <div class="term-header">
+                <span data-i18n="term_title">交互式控制台输出</span>
+                <div class="term-header-right">
+                  <span class="term-exec-badge" id="ide-exec-status">Ready</span>
+                  <button type="button" class="btn-term-close" id="btn-close-term" aria-label="Close terminal">&#10005;</button>
+                </div>
+              </div>
+              <div class="term-stream" id="ide-term-output"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wb-statusbar">
+          <span class="wb-statusbar__dot"><i></i><span id="wbStatusLang">Beginner Friendly &#183; Offline</span></span>
+          <div class="wb-statusbar__right">
+            <span>UTF-8</span>
+            <span>LF</span>
+            <span>Ln 5, Col 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- SC_REAL_GALLERY_START -->
+  <section class="section sc-real-gallery" id="screenshots" aria-label="应用预览与真机截屏">
+    <div class="container">
+      <div class="sc-gp-head">
+        <div class="sc-gp-head-left">
+          <div class="sc-gp-eyebrow" data-i18n="gal_eyebrow">安卓真机实拍预览</div>
+          <h2 class="sc-gp-title" data-i18n="gal_title">应用界面与实拍截屏</h2>
+          <p class="sc-gp-short" data-i18n="gal_short_desc">离线代码编辑器与手机编程软件：Python、C/C++、Java、JS、HTML、SQL、PHP 编译器，Git/SFTP</p>
+        </div>
+        <a class="sc-gp-store-bar" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-CN&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh%26utm_campaign%3Dpython-ide%26utm_content%3Dlearn-python-android" target="_blank" rel="noopener" aria-label="Code Editor: SuperCode IDE — Phoenix Global Studios">
+          <svg class="sc-gp-app-icon" width="38" height="38" viewBox="16 12 76 76" aria-hidden="true"><rect x="16" y="12" width="76" height="76" rx="18" fill="#070A10" stroke="#3B82F6" stroke-width="2"/><path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/><path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/><path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/><path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/></svg>
+          <span class="sc-gp-app-meta">
+            <span class="sc-gp-app-name">Code Editor: SuperCode IDE</span>
+            <span class="sc-gp-app-dev">Phoenix Global Studios</span>
+          </span>
+          <span class="sc-gp-store-arrow" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      </div>
+      <div class="sc-gp-stage">
+        <button type="button" class="sc-gp-nav sc-gp-nav--prev is-hidden" id="scGpPrev" aria-label="上一张">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="sc-gp-rail" id="scGpRail">
+          <button type="button" class="sc-gp-item sc-gp-item--feature" aria-label="Code Editor: SuperCode IDE — 安卓离线移动 IDE">
+            <img src="../assets/gallery/zh/00_feature_graphic.webp" data-sc-file="00_feature_graphic.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_0" data-cap="Code Editor: SuperCode IDE — 安卓离线移动 IDE" alt="Code Editor: SuperCode IDE — 安卓离线移动 IDE" width="1024" height="500" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="离线 Python 3.11 / 3.12 IDE 与分屏终端">
+            <img src="../assets/gallery/zh/01_python_ide.webp" data-sc-file="01_python_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_1" data-cap="离线 Python 3.11 / 3.12 IDE 与分屏终端" alt="离线 Python 3.11 / 3.12 IDE 与分屏终端" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="本地 C17 与 C++20 多文件编译器">
+            <img src="../assets/gallery/zh/02_cpp20_compiler.webp" data-sc-file="02_cpp20_compiler.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_2" data-cap="本地 C17 与 C++20 多文件编译器" alt="本地 C17 与 C++20 多文件编译器" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="本地 Web 与离线 PHP 服务器 + DevTools">
+            <img src="../assets/gallery/zh/03_web_php_devtools.webp" data-sc-file="03_web_php_devtools.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_3" data-cap="本地 Web 与离线 PHP 服务器 + DevTools" alt="本地 Web 与离线 PHP 服务器 + DevTools" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="全局工程文件树与本地文件管理器 (SAF)">
+            <img src="../assets/gallery/zh/04_file_manager_tree.webp" data-sc-file="04_file_manager_tree.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_4" data-cap="全局工程文件树与本地文件管理器 (SAF)" alt="全局工程文件树与本地文件管理器 (SAF)" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="离线 SQLite 3.54 数据库与 .db 检视器">
+            <img src="../assets/gallery/zh/05_sql_sqlite_studio.webp" data-sc-file="05_sql_sqlite_studio.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_5" data-cap="离线 SQLite 3.54 数据库与 .db 检视器" alt="离线 SQLite 3.54 数据库与 .db 检视器" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="离线 Java 17 IDE 与 SQLite JDBC">
+            <img src="../assets/gallery/zh/06_java17_ide.webp" data-sc-file="06_java17_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_6" data-cap="离线 Java 17 IDE 与 SQLite JDBC" alt="离线 Java 17 IDE 与 SQLite JDBC" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="可视化 Git 时光机与加密 SFTP/FTPS">
+            <img src="../assets/gallery/zh/07_visual_git_timemachine.webp" data-sc-file="07_visual_git_timemachine.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_7" data-cap="可视化 Git 时光机与加密 SFTP/FTPS" alt="可视化 Git 时光机与加密 SFTP/FTPS" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="21 键符号编程键盘与 8 套精雕 IDE 主题">
+            <img src="../assets/gallery/zh/08_symbol_keyboard_themes.webp" data-sc-file="08_symbol_keyboard_themes.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_8" data-cap="21 键符号编程键盘与 8 套精雕 IDE 主题" alt="21 键符号编程键盘与 8 套精雕 IDE 主题" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+        </div>
+        <button type="button" class="sc-gp-nav sc-gp-nav--next" id="scGpNext" aria-label="下一张">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  <div class="sc-lb-modal" id="scLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="应用预览与真机截屏">
+    <div class="sc-lb-topbar">
+      <button type="button" class="sc-lb-back" id="scLbBack">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-i18n="gal_back">返回页面</span>
+      </button>
+      <div class="sc-lb-meta">
+        <span class="sc-lb-counter" id="scLbCounter">1 / 9</span>
+        <span class="sc-lb-title" id="scLbTitle"></span>
+      </div>
+      <button type="button" class="sc-lb-close" id="scLbClose" aria-label="关闭全屏预览">&times;</button>
+    </div>
+    <div class="sc-lb-stage">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--prev" id="scLbPrev" aria-label="上一张">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <img class="sc-lb-img" id="scLbImg" src="" alt="SuperCode IDE Preview">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--next" id="scLbNext" aria-label="下一张">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="sc-lb-dots" id="scLbDots"></div>
+  </div>
+  <script defer src="../assets/gallery.js"></script>
+<!-- SC_REAL_GALLERY_END -->
+
+
+
+
+
+  <!-- ==================== 02 · CORE CAPABILITIES ==================== -->
+  <section class="section section--alt" id="capabilities">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">02</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_cap_eyebrow">核心工程能力</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="sec_cap_title">为什么学生和自学者更偏爱真实写代码，而不是玩具式刷题应用</h2>
+        <p class="sec-lead" data-i18n="sec_cap_lead">手机屏幕上写 Python 的各种痛点，我们已在原生 UI 层逐一解决。</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="feature-grid feature-grid--6">
+          <article class="feature-card" id="cap1">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
+              <span class="f-idx">02.1</span>
+            </div>
+            <h3 class="f-title" data-i18n="f1_title">100% 飞行模式离线练习，零账号门槛</h3>
+            <p class="f-desc" data-i18n="f1_desc">无论在地铁、公交、偏远校园还是航班上，打开应用即可运行 Python。无强制邮箱注册、无云端排队转圈，也不消耗任何移动流量。</p>
+            <div class="f-code" data-i18n="f1_badge">随时随地离线运行 &#183; 极速冷启动</div>
+          </article>
+          <article class="feature-card" id="cap2">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+              <span class="f-idx">02.2</span>
+            </div>
+            <h3 class="f-title" data-i18n="f2_title">21 键上滑式 Python 符号栏</h3>
+            <p class="f-desc" data-i18n="f2_desc">普通手机输入法把 `:`、`_`、`[]`、`{}`、`=` 和 `Tab` 藏在三层菜单后。SuperCode 的人体工学符号条将 4 空格智能缩进、冒号、括号、引号及方向光标键直接置于键盘上方。</p>
+            <div class="f-code" data-i18n="f2_badge">点按 + 上滑输入副符号 &#183; 4 空格智能缩进</div>
+          </article>
+          <article class="feature-card" id="cap3">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <span class="f-idx">02.3</span>
+            </div>
+            <h3 class="f-title" data-i18n="f3_title">实时错误雷达，提前揪出新手拼写失误</h3>
+            <p class="f-desc" data-i18n="f3_desc">在 `if` 或 `def` 后忘了写冒号 `:`？混用空格和制表符导致 `TabError`？漏写了闭合括号 `(`？无需等到点击运行，错误雷达会精准高亮出错行，一键 PEP 8 格式化更能瞬间理顺缩进。</p>
+            <div class="f-code" data-i18n="f3_badge">漏冒号预警 &#183; TabError 防护 &#183; 一键 PEP 8</div>
+          </article>
+          <article class="feature-card" id="cap4">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-term"/></svg></span>
+              <span class="f-idx">02.4</span>
+            </div>
+            <h3 class="f-title" data-i18n="f4_title">内置 8 个 Python 模板与交互式 input()</h3>
+            <p class="f-desc" data-i18n="f4_desc">从工具栏直接加载开箱即用的示例，直观掌握变量、`input()` 输入提示、函数、`@dataclass` 面向对象、文件读写与常见算法&#8212;修改代码后即可秒级重跑。</p>
+            <div class="f-code" data-i18n="f4_badge">8 个精选示例 &#183; 实时多轮 input() 交互</div>
+          </article>
+          <article class="feature-card" id="cap5">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-cube"/></svg></span>
+              <span class="f-idx">02.5</span>
+            </div>
+            <h3 class="f-title" data-i18n="f5_title">原生导出 A4 PDF 代码，轻松提交作业</h3>
+            <p class="f-desc" data-i18n="f5_desc">需要向高校实验课或作业系统提交排版规范的源码？直接从编辑器菜单将任意 Python 脚本导出为带语法高亮与行号的清晰 A4 PDF。</p>
+            <div class="f-code" data-i18n="f5_badge">语法高亮 A4 PDF 导出 &#183; 课堂作业直出</div>
+          </article>
+          <article class="feature-card" id="cap6">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-chip"/></svg></span>
+              <span class="f-idx">02.6</span>
+            </div>
+            <h3 class="f-title" data-i18n="f6_title">仅 40.2 MB，一款应用覆盖全套 CS 课程</h3>
+            <p class="f-desc" data-i18n="f6_desc">今天从 Python 入门起步，后续还能无缝进阶 C17 指针、C++20 STL 数据结构、Java 17 面向对象、SQL 数据库、HTML/CSS/JS/PHP Web 实验、Linux Shell 与 Git，不必同时装七个应用。</p>
+            <div class="f-code" data-i18n="f6_badge">Python + C17 + C++20 + Java 17 + SQL + Web + Git</div>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">适配手机、折叠屏与平板 · 轻量 40.2 MB</span>
+        <a class="link-arrow" href="python-ide.html">
+          <span>Python Coding App Hub</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 03 · STEP-BY-STEP WORKFLOW GUIDE ==================== -->
+  <section class="section" id="workflow">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">03</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_wf_eyebrow">分步实操使用方法</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="workflow_title">60 秒在手机上开启 Python 编程之旅</h2>
+        <p class="sec-lead" data-i18n="workflow_lead">零配置上手&#8212;安装、选模板或新建空白文件，直接运行。</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="workflow-grid">
+          <article class="wf-step" id="step1">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 01</span>
+              <span class="wf-step__cmd">New File -&gt; hello.py</span>
+            </div>
+            <h3 data-i18n="wf1_title">新建 `.py` 脚本或加载内置示例</h3>
+            <p data-i18n="wf1_desc">从 Google Play 安装 SuperCode，创建 `hello.py`，或打开示例菜单加载 8 个可运行 Python 模板之一。</p>
+          </article>
+          <article class="wf-step" id="step2">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 02</span>
+              <span class="wf-step__cmd">21-Key Bar + AST</span>
+            </div>
+            <h3 data-i18n="wf2_title">智能缩进与代码补全，输入行云流水</h3>
+            <p data-i18n="wf2_desc">用 21 键符号栏快速输入 `:`、`()` 和 `Tab`，同时离线 AST 智能提示会在输入时实时推荐 Python 方法。</p>
+          </article>
+          <article class="wf-step" id="step3">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 03</span>
+              <span class="wf-step__cmd">Toolbar -&gt; Run &#9654;</span>
+            </div>
+            <h3 data-i18n="wf3_title">离线运行并实时响应 input() 交互输入</h3>
+            <p data-i18n="wf3_desc">点击运行 &#9654; 毫秒级查看输出，在底部控制台实时输入测试数据，并查看清晰的逐行报错信息。</p>
+          </article>
+          <article class="wf-step" id="step4">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 04</span>
+              <span class="wf-step__cmd">PIP / PDF / Git</span>
+            </div>
+            <h3 data-i18n="wf4_title">进阶 PIP 第三方库、数据科学与 GitHub</h3>
+            <p data-i18n="wf4_desc">随着水平提升，可安装 PyPI 扩展包、绘制 Matplotlib 图表、导出 A4 PDF 作业，或将作品集直接推送至 GitHub。</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="wf_foot_note">8 款护眼主题（深色与浅色） &#183; 32 种界面本地化语言</span>
+        <a class="link-arrow" href="https://supercode-ide.github.io/tutorial/?lang=zh&amp;ref=official_web" data-supercode-tutorial="true">
+          <span data-i18n="cta_tutorial">新手引导</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 04 · FEATURED SUMMARY & COMPARISON MATRIX ==================== -->
+  <section class="section section--alt" id="comparison">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">04</span>
+        <span class="rule"></span>
+        <span data-i18n="comp_eyebrow">横向能力对比矩阵</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="table_h2">SuperCode 对比闯关刷题应用与网页在线编译器</h2>
+        <p class="snippet-definition" data-i18n="snippet_p"><strong>SuperCode</strong> 是一款专为 Android 零基础初学者、在校学生及自学者打造的免费离线 Python 编程应用。不同于选择题刷题软件或强依赖网络的网页编译器，它提供真实的离线 Python 3.11/3.12 运行时、实时 `input()` 控制台、21 键编程符号栏、错误雷达及原生 A4 PDF 作业导出。</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="table-wrap">
+          <table class="obsidian-benchmark-table">
+            <caption data-i18n="table_caption">ANDROID 端 PYTHON 学习应用横向对比</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="th_0">学习需求</th>
+                <th scope="col" data-i18n="th_1">SuperCode 编程应用</th>
+                <th scope="col" data-i18n="th_2">游戏化刷题应用</th>
+                <th scope="col" data-i18n="th_3">网页在线编译器</th>
+                <th scope="col" data-i18n="th_4">仅限桌面 PC</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="tr1_c0">真实代码执行</th>
+                <td><strong data-i18n="tr1_c1">完整离线 Python 3.11/3.12 + 多文件支持</strong></td>
+                <td data-i18n="tr1_c2">填空式点选答题</td>
+                <td data-i18n="tr1_c3">单文件在线输入框</td>
+                <td data-i18n="tr1_c4">完整支持</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr2_c0">无 Wi-Fi 环境下可用</th>
+                <td><strong data-i18n="tr2_c1">100% 离线（地铁、公交、教室）</strong></td>
+                <td data-i18n="tr2_c2">需订阅或联网</td>
+                <td data-i18n="tr2_c3">离线无法运行</td>
+                <td data-i18n="tr2_c4">可离线</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr3_c0">移动端输入效率</th>
+                <td><strong data-i18n="tr3_c1">21 键上滑栏 + AST 补全 + 一键 PEP 8</strong></td>
+                <td data-i18n="tr3_c2">极少手动输入</td>
+                <td data-i18n="tr3_c3">手机默认输入法</td>
+                <td data-i18n="tr3_c4">物理实体键盘</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr4_c0">进阶上限</th>
+                <td><strong data-i18n="tr4_c1">支持 PIP、NumPy、Pandas、OpenCV、SQL 与 Git</strong></td>
+                <td data-i18n="tr4_c2">学完基础即遇瓶颈</td>
+                <td data-i18n="tr4_c3">无本地文件树与 Git</td>
+                <td data-i18n="tr4_c4">完整支持</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr5_c0">计算机专业语言覆盖</th>
+                <td><strong data-i18n="tr5_c1">内置 C、C++、Java 17、JS、PHP 与 SQL</strong></td>
+                <td data-i18n="tr5_c2">需另购分科课程</td>
+                <td data-i18n="tr5_c3">依赖多个浏览器标签页</td>
+                <td data-i18n="tr5_c4">需安装多款笨重 IDE</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">适配手机、折叠屏与平板 · 轻量 40.2 MB</span>
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-CN&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh%26utm_campaign%3Dpython-ide%26utm_content%3Dlearn-python-android" target="_blank" rel="noopener">
+          <span>Google Play</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 05 · VISIBLE EDITORIAL FAQ ==================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-head">
+          <div class="sec-index">
+            <span class="num">05</span>
+            <span class="rule"></span>
+            <span data-i18n="sec3_eyebrow">常见问答</span>
+          </div>
+          <h2 class="h2" data-i18n="sec3_title">常见问题解答 (FAQ)</h2>
+          <p class="sec-lead" data-i18n="faq_lead">初学者、计算机专业学生与一线教师最关心的问题解答。</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary><span data-i18n="faq1_q">纯零基础在手机上学 Python，SuperCode 好上手吗？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq1_a">非常好上手。无需配置编译器、环境变量或注册账号&#8212;只要新建一个 `.py` 文件（或选用内置 8 个 Python 示例之一），点一下运行即可。错误雷达和一键 PEP 8 格式化还能帮新手第一时间纠正拼写和缩进错误。</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq2_q">可以离线刷 LeetCode 和数据结构算法题吗？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq2_a">可以。`collections`、`heapq`、`bisect`、`itertools`、`functools`、`math`、`typing` 等标准算法模块全部 100% 离线运行，并实时显示毫秒级耗时与内存占用数据。</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq3_q">教室里学生没有 Wi-Fi，老师能用 SuperCode 开展课堂教学吗？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq3_a">完全可以。核心 Python 3.11 运行时开箱即离线，离线 `.whl` 安装包也可在无网环境下本地分发，学生完成后还能直接将作业导出为带语法高亮的 A4 PDF 上交。</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq4_q">白天光线强时，SuperCode 除了深色模式还支持浅色模式吗？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq4_a">支持&#8212;SuperCode 内置 8 套光学护眼主题（涵盖清爽浅色主题与低眩光深色主题），并支持自由缩放编辑器和控制台字号。</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==================== 06 · TOPICAL AUTHORITY ECOSYSTEM CLUSTER ==================== -->
+  <section class="section section--alt" id="ecosystem-guides">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">06</span>
+        <span class="rule"></span>
+        <span>Python 编程应用生态与指南</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2>完整 Python 编程应用文档套件</h2>
+        <p class="sec-lead">在 Python 编程应用主中心与全部 7 篇 Android Python 工程专项指南间直接跳转。</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="py-cluster-grid">
+          <a href="python-ide.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-HUB</span>
+              <span class="py-spoke-card__tag">Python 3.11/3.12 · 核心总览</span>
+            </div>
+            <h3>Python 编程应用与 IDE 总览</h3>
+            <p>全面介绍 SuperCode 离线 Python 3.11 与 3.12 运行时、交互式 input() 控制台、PEP 8 工具及多语言工作台。</p>
+            <div class="py-spoke-card__go">
+              <span>python-ide</span>
+              <span>打开指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="python-pip-manager.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-01</span>
+              <span class="py-spoke-card__tag">PIP · .whl · requirements.txt</span>
+            </div>
+            <h3>PIP 与离线 .whl 安装指南</h3>
+            <p>安装 PyPI 第三方包、自动映射 35+ 模块别名、批量执行 requirements.txt，或从下载目录导入离线 .whl 安装包。</p>
+            <div class="py-spoke-card__go">
+              <span>python-pip-manager</span>
+              <span>打开指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="python-offline-libraries.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-02</span>
+              <span class="py-spoke-card__tag">250+ 标准库 · PyPI · 科学计算</span>
+            </div>
+            <h3>支持的 Python 扩展库目录</h3>
+            <p>涵盖 200+ Python 3.11 标准库模块、纯 Python PyPI wheel 包、60+ 科学计算包及云端机器学习的完整兼容目录。</p>
+            <div class="py-spoke-card__go">
+              <span>python-offline-libraries</span>
+              <span>打开指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="python-data-science.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-03</span>
+              <span class="py-spoke-card__tag">NumPy · Pandas · Polars · DuckDB</span>
+            </div>
+            <h3>NumPy、Pandas 与 Matplotlib</h3>
+            <p>运行本地缓存的科学计算 Python 3.12，分析 CSV/Parquet/SQLite 数据集，并将 Matplotlib 与 Seaborn 图表自动保存至目录。</p>
+            <div class="py-spoke-card__go">
+              <span>python-data-science</span>
+              <span>打开指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="python-machine-learning.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-04</span>
+              <span class="py-spoke-card__tag">sklearn · XGBoost · cv2 · PyTorch</span>
+            </div>
+            <h3>Scikit-Learn、OpenCV 与 AI</h3>
+            <p>离线训练 Scikit-Learn 和 XGBoost 模型，使用 OpenCV 与 Pillow 处理图像，并将重型 PyTorch/TensorFlow 任务分流云端，享受 1:1 堆栈回溯。</p>
+            <div class="py-spoke-card__go">
+              <span>python-machine-learning</span>
+              <span>打开指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="python-web-scraping-automation.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-05</span>
+              <span class="py-spoke-card__tag">Requests · BS4 · Flask · Telebot</span>
+            </div>
+            <h3>网页爬虫、API 与自动化机器人</h3>
+            <p>在 Android 上构建 BeautifulSoup 爬虫、Pydantic REST 客户端、Flask 微应用、Telegram 机器人及 python-docx/SQLite 自动化脚本。</p>
+            <div class="py-spoke-card__go">
+              <span>python-web-scraping-automation</span>
+              <span>打开指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="python-projects-workspace.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-06</span>
+              <span class="py-spoke-card__tag">入口路由 · PEP 8 · Git/SFTP</span>
+            </div>
+            <h3>多文件项目与 Git 协作</h3>
+            <p>掌握多目录 Python 项目管理、智能 main.py 入口仲裁、实时交互式 input()、PEP 8 格式化、AST 补全及可视化 Git。</p>
+            <div class="py-spoke-card__go">
+              <span>python-projects-workspace</span>
+              <span>打开指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="learn-python-android.html" class="py-spoke-card is-active">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-07</span>
+              <span class="py-spoke-card__tag">免登录 · 8 个模板 · CS101</span>
+            </div>
+            <h3>离线学习 Python</h3>
+            <p>内置 8 个可运行入门模板、21 键 Python 符号栏及实时语法错误雷达，飞行模式下也能随时练习 Python。</p>
+            <div class="py-spoke-card__go">
+              <span>learn-python-android</span>
+              <span>正在查看指南</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span>8 篇互联 Android Python 指南 · 离线 Python 3.11 与科学计算版 3.12</span>
+        <a class="link-arrow" href="python-ide.html">
+          <span>Python 编程应用中心</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="siteFooter">
+  <div class="container">
+    <div class="footer-cta" id="footerCta">
+      <div>
+        <h2 class="h2" data-i18n="cta_h2">今天就开始你的离线 Python 编程之旅。</h2>
+        <p data-i18n="cta_desc">前往 Google Play 免费下载 SuperCode IDE &#8212; 零登录门槛，内置 8 套 Python 入门模板。</p>
+      </div>
+      <div class="footer-cta__btns">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-CN&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh%26utm_campaign%3Dpython-ide%26utm_content%3Dlearn-python-android" target="_blank" rel="noopener" class="btn btn--gold">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="cta_btn">Google Play 获取</span>
+        </a>
+        <a href="https://supercode-ide.github.io/tutorial/?lang=zh&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+          <span data-i18n="cta_tutorial">新手引导</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+          <span>SuperCode</span>
+          <span class="brand__tag">IDE</span>
+        </a>
+        <p data-i18n="footer_tagline">为全球 Android 工程师、高校学子与教育者匠心打造的原生移动代码编辑器与全栈离线开发工作室。</p>
+        <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
+        <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-CN&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh%26utm_campaign%3Dpython-ide%26utm_content%3Dlearn-python-android" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://supercode-ide.github.io/tutorial/?lang=zh&amp;ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">新手引导</span> &#8599;</a>
+          <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">选择语言</span></button>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_core">核心编辑器与巨型文件</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">总览首页</a></li>
+          <li><a href="code-editor.html" data-i18n="nav_code_editor">代码编辑器</a></li>
+          <li><a href="large-file-editor.html" data-i18n="nav_large_file">GB 大文件</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_lang">离线编译器与脚本语言</h4>
+        <ul>
+          <li><a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a></li>
+          <li><a href="c-compiler.html" data-i18n="nav_c_compiler">C 语言编译</a></li>
+          <li><a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a></li>
+          <li><a href="java-ide.html" data-i18n="nav_java_ide">Java 17</a></li>
+          <li><a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a></li>
+          <li><a href="lua-ide.html" data-i18n="nav_lua_ide">Lua 5.4</a></li>
+          <li><a href="shell-ide.html" data-i18n="nav_shell_ide">Shell & Kotlin</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_devops">全栈 Web · 数据库 · 远程运维</h4>
+        <ul>
+          <li><a href="web-ide.html" data-i18n="nav_web_ide">Web & PHP</a></li>
+          <li><a href="sql-ide.html" data-i18n="nav_sql_ide">SQL 数据库</a></li>
+          <li><a href="git-client.html" data-i18n="nav_git_client">可视化 Git</a></li>
+          <li><a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP & FTPS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <span>&copy; 2026 Phoenix Global Studios. All rights reserved.</span>
+      <span class="mono">com.phoenixglobal.supercodeeditor</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="mobile-bottom-bar" id="mobileBottomBar" aria-label="Quick App Actions">
+  <div class="dock-app-icon" aria-hidden="true"><svg><use href="#sc-logo"/></svg></div>
+  <div class="bottom-bar-info">
+    <div class="bottom-bar-title">SuperCode</div>
+    <div class="bottom-bar-sub"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  </div>
+  <div class="bottom-bar-actions">
+    <a href="https://supercode-ide.github.io/tutorial/?lang=zh&amp;ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">新手引导</a>
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-CN&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh%26utm_campaign%3Dpython-ide%26utm_content%3Dlearn-python-android" target="_blank" rel="noopener" class="btn-play-mini">
+      <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
+      <span data-i18n="bottom_cta">获取</span>
+    </a>
+  </div>
+</aside>
+
+<div class="modal-overlay" id="langModal" role="dialog" aria-modal="true" aria-labelledby="langModalTitle">
+  <div class="lang-modal">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div class="modal-header">
+      <h3 id="langModalTitle"><span data-i18n="modal_title">选择语言</span><span class="modal-lang-count">32</span></h3>
+      <button type="button" class="btn-close-modal" onclick="closeLangModal()" aria-label="关闭">&#10005;</button>
+    </div>
+    <div class="lang-grid">
+      <button type="button" class="lang-option" data-code="en" onclick="setLanguage('en')"><span class="lang-option__name">English</span><span class="lang-option__code">EN</span></button>
+      <button type="button" class="lang-option active" data-code="zh" onclick="setLanguage('zh')"><span class="lang-option__name">简体中文</span><span class="lang-option__code">简中</span></button>
+      <button type="button" class="lang-option" data-code="zh-tw" onclick="setLanguage('zh-tw')"><span class="lang-option__name">繁體中文</span><span class="lang-option__code">繁中</span></button>
+      <button type="button" class="lang-option" data-code="es" onclick="setLanguage('es')"><span class="lang-option__name">Español</span><span class="lang-option__code">ES</span></button>
+      <button type="button" class="lang-option" data-code="pt" onclick="setLanguage('pt')"><span class="lang-option__name">Português</span><span class="lang-option__code">PT</span></button>
+      <button type="button" class="lang-option" data-code="ja" onclick="setLanguage('ja')"><span class="lang-option__name">日本語</span><span class="lang-option__code">日本語</span></button>
+      <button type="button" class="lang-option" data-code="ko" onclick="setLanguage('ko')"><span class="lang-option__name">한국어</span><span class="lang-option__code">한국어</span></button>
+      <button type="button" class="lang-option" data-code="de" onclick="setLanguage('de')"><span class="lang-option__name">Deutsch</span><span class="lang-option__code">DE</span></button>
+      <button type="button" class="lang-option" data-code="fr" onclick="setLanguage('fr')"><span class="lang-option__name">Français</span><span class="lang-option__code">FR</span></button>
+      <button type="button" class="lang-option" data-code="ru" onclick="setLanguage('ru')"><span class="lang-option__name">Русский</span><span class="lang-option__code">RU</span></button>
+      <button type="button" class="lang-option" data-code="hi" onclick="setLanguage('hi')"><span class="lang-option__name">हिन्दी</span><span class="lang-option__code">HI</span></button>
+      <button type="button" class="lang-option" data-code="id" onclick="setLanguage('id')"><span class="lang-option__name">Bahasa Indonesia</span><span class="lang-option__code">ID</span></button>
+      <button type="button" class="lang-option" data-code="it" onclick="setLanguage('it')"><span class="lang-option__name">Italiano</span><span class="lang-option__code">IT</span></button>
+      <button type="button" class="lang-option" data-code="vi" onclick="setLanguage('vi')"><span class="lang-option__name">Tiếng Việt</span><span class="lang-option__code">VI</span></button>
+      <button type="button" class="lang-option" data-code="th" onclick="setLanguage('th')"><span class="lang-option__name">ไทย</span><span class="lang-option__code">ไทย</span></button>
+      <button type="button" class="lang-option" data-code="tr" onclick="setLanguage('tr')"><span class="lang-option__name">Türkçe</span><span class="lang-option__code">TR</span></button>
+      <button type="button" class="lang-option" data-code="ar" onclick="setLanguage('ar')"><span class="lang-option__name">العربية</span><span class="lang-option__code">AR</span></button>
+      <button type="button" class="lang-option" data-code="pl" onclick="setLanguage('pl')"><span class="lang-option__name">Polski</span><span class="lang-option__code">PL</span></button>
+      <button type="button" class="lang-option" data-code="nl" onclick="setLanguage('nl')"><span class="lang-option__name">Nederlands</span><span class="lang-option__code">NL</span></button>
+      <button type="button" class="lang-option" data-code="sv" onclick="setLanguage('sv')"><span class="lang-option__name">Svenska</span><span class="lang-option__code">SV</span></button>
+      <button type="button" class="lang-option" data-code="nb" onclick="setLanguage('nb')"><span class="lang-option__name">Norsk Bokmål</span><span class="lang-option__code">NB</span></button>
+      <button type="button" class="lang-option" data-code="da" onclick="setLanguage('da')"><span class="lang-option__name">Dansk</span><span class="lang-option__code">DA</span></button>
+      <button type="button" class="lang-option" data-code="fi" onclick="setLanguage('fi')"><span class="lang-option__name">Suomi</span><span class="lang-option__code">FI</span></button>
+      <button type="button" class="lang-option" data-code="cs" onclick="setLanguage('cs')"><span class="lang-option__name">Čeština</span><span class="lang-option__code">CS</span></button>
+      <button type="button" class="lang-option" data-code="uk" onclick="setLanguage('uk')"><span class="lang-option__name">Українська</span><span class="lang-option__code">UK</span></button>
+      <button type="button" class="lang-option" data-code="ro" onclick="setLanguage('ro')"><span class="lang-option__name">Română</span><span class="lang-option__code">RO</span></button>
+      <button type="button" class="lang-option" data-code="hu" onclick="setLanguage('hu')"><span class="lang-option__name">Magyar</span><span class="lang-option__code">HU</span></button>
+      <button type="button" class="lang-option" data-code="el" onclick="setLanguage('el')"><span class="lang-option__name">Ελληνικά</span><span class="lang-option__code">EL</span></button>
+      <button type="button" class="lang-option" data-code="he" onclick="setLanguage('he')"><span class="lang-option__name">עברית</span><span class="lang-option__code">HE</span></button>
+      <button type="button" class="lang-option" data-code="ms" onclick="setLanguage('ms')"><span class="lang-option__name">Bahasa Melayu</span><span class="lang-option__code">MS</span></button>
+      <button type="button" class="lang-option" data-code="tl" onclick="setLanguage('tl')"><span class="lang-option__name">Filipino</span><span class="lang-option__code">FIL</span></button>
+      <button type="button" class="lang-option" data-code="bn" onclick="setLanguage('bn')"><span class="lang-option__name">বাংলা</span><span class="lang-option__code">BN</span></button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var WORKBENCH_SAMPLES = {"io": {"label": "learn-python-101/01_interactive_input.py \u2014 Live input() Practice", "status": "Beginner Friendly \u00b7 Offline", "lines": ["<span class=\"tok-cmt\"># Zero login required \u2014 works 100% in airplane mode!<\/span>", "name = <span class=\"tok-fn\">input<\/span>(<span class=\"tok-str\">&quot;Enter student name: &quot;<\/span>)", "score = <span class=\"tok-fn\">int<\/span>(<span class=\"tok-fn\">input<\/span>(<span class=\"tok-str\">&quot;Quiz score (0-100): &quot;<\/span>))", "grade = <span class=\"tok-str\">&quot;A&quot;<\/span> <span class=\"tok-kw\">if<\/span> score >= <span class=\"tok-num\">90<\/span> <span class=\"tok-kw\">else<\/span> <span class=\"tok-str\">&quot;B&quot;<\/span>", "<span class=\"tok-fn\">print<\/span>(f<span class=\"tok-str\">&quot;Welcome {name}! Final Grade: {grade}&quot;<\/span>)"], "output": ["Enter student name: Alex", "Quiz score (0-100): 95", "Welcome Alex! Final Grade: A", "<span class=\"term-info\">[Live Stdin Console \u00b7 Supports sequential input() loops]<\/span>"]}, "algo": {"label": "learn-python-101/02_algorithms.py \u2014 Algorithms & Interview Prep", "status": "DSA \u00b7 heapq \u00b7 bisect", "lines": ["<span class=\"tok-kw\">import<\/span> bisect, heapq", "", "nums = [<span class=\"tok-num\">4<\/span>, <span class=\"tok-num\">12<\/span>, <span class=\"tok-num\">7<\/span>, <span class=\"tok-num\">29<\/span>, <span class=\"tok-num\">19<\/span>, <span class=\"tok-num\">3<\/span>]", "top3 = heapq.<span class=\"tok-fn\">nlargest<\/span>(<span class=\"tok-num\">3<\/span>, nums)", "ordered = <span class=\"tok-fn\">sorted<\/span>(nums)", "idx = bisect.<span class=\"tok-fn\">bisect_left<\/span>(ordered, <span class=\"tok-num\">12<\/span>)", "<span class=\"tok-fn\">print<\/span>(<span class=\"tok-str\">&quot;Top 3:&quot;<\/span>, top3, <span class=\"tok-str\">&quot;| Index of 12:&quot;<\/span>, idx)"], "output": ["<span class=\"term-prompt\">$<\/span> python3 02_algorithms.py", "Top 3: [29, 19, 12] | Index of 12: 3", "<span class=\"term-info\">[Practice LeetCode, AP CS & university labs anywhere offline]<\/span>"]}, "oop": {"label": "learn-python-101/03_oop_gradebook.py \u2014 Classes & CSV File I/O", "status": "Dataclasses \u00b7 File Sync", "lines": ["<span class=\"tok-kw\">from<\/span> dataclasses <span class=\"tok-kw\">import<\/span> dataclass", "<span class=\"tok-kw\">from<\/span> statistics <span class=\"tok-kw\">import<\/span> mean", "", "@dataclass", "<span class=\"tok-kw\">class<\/span> <span class=\"tok-fn\">Course<\/span>:", "    title: <span class=\"tok-fn\">str<\/span>; scores: <span class=\"tok-fn\">list<\/span>[<span class=\"tok-fn\">int<\/span>]", "    <span class=\"tok-kw\">def<\/span> <span class=\"tok-fn\">avg<\/span>(self) -> <span class=\"tok-fn\">float<\/span>: <span class=\"tok-kw\">return<\/span> <span class=\"tok-fn\">round<\/span>(<span class=\"tok-fn\">mean<\/span>(self.scores), <span class=\"tok-num\">1<\/span>)", "", "<span class=\"tok-fn\">print<\/span>(<span class=\"tok-fn\">Course<\/span>(<span class=\"tok-str\">&quot;CS101 Python&quot;<\/span>, [<span class=\"tok-num\">92<\/span>, <span class=\"tok-num\">88<\/span>, <span class=\"tok-num\">96<\/span>]).<span class=\"tok-fn\">avg<\/span>())"], "output": ["92.0", "<span class=\"term-info\">[8 runnable Python starter templates built right into the toolbar]<\/span>"]}};
+    var currentTab = 'io';
+    var runTimer = null;
+
+    function renderWorkbench(tabKey, animateRun) {
+      var sample = WORKBENCH_SAMPLES[tabKey] || WORKBENCH_SAMPLES['io'];
+      if (!sample) { return; }
+      currentTab = tabKey;
+      var labelEl = document.getElementById('ide-compiler-label');
+      if (labelEl) { labelEl.textContent = sample.label; }
+      var statusEl = document.getElementById('wbStatusLang');
+      if (statusEl) { statusEl.textContent = sample.status; }
+
+      var tabs = document.querySelectorAll('.ide-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        var active = tabs[i].getAttribute('data-tab') === tabKey;
+        tabs[i].classList.toggle('active', active);
+        tabs[i].setAttribute('aria-selected', active ? 'true' : 'false');
+      }
+      var files = document.querySelectorAll('.wb-file');
+      for (var f = 0; f < files.length; f++) {
+        files[f].classList.toggle('active', files[f].getAttribute('data-tab') === tabKey);
+      }
+
+      var codeBox = document.getElementById('ide-code-box');
+      if (codeBox) {
+        var html = '';
+        for (var l = 0; l < sample.lines.length; l++) {
+          var activeCls = (l === sample.lines.length - 1) ? ' active-line' : '';
+          html += '<div class="code-line' + activeCls + '"><span class="ln">' + (l + 1) + '</span><span class="code-content">' + sample.lines[l] + '</span></div>';
+        }
+        codeBox.innerHTML = html;
+      }
+
+      if (animateRun) {
+        runWorkbenchSample();
+      }
+    }
+
+    function runWorkbenchSample() {
+      var sample = WORKBENCH_SAMPLES[currentTab] || WORKBENCH_SAMPLES['io'];
+      var drawer = document.getElementById('ide-terminal-drawer');
+      var out = document.getElementById('ide-term-output');
+      var badge = document.getElementById('ide-exec-status');
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (!drawer || !out || !sample) { return; }
+
+      if (runTimer) { clearTimeout(runTimer); }
+      drawer.classList.add('is-open');
+      if (runBtn) { runBtn.classList.add('is-running'); }
+      if (badge) { badge.textContent = 'Running...'; badge.classList.remove('done'); }
+      out.innerHTML = '';
+
+      var idx = 0;
+      function step() {
+        if (idx < sample.output.length) {
+          var row = document.createElement('span');
+          row.className = 'term-line-item';
+          row.innerHTML = sample.output[idx];
+          out.appendChild(row);
+          idx++;
+          runTimer = setTimeout(step, 80);
+        } else {
+          var cur = document.createElement('span');
+          cur.className = 'term-cursor';
+          cur.textContent = '\u258b';
+          out.appendChild(cur);
+          if (badge) { badge.textContent = 'Completed'; badge.classList.add('done'); }
+          if (runBtn) { runBtn.classList.remove('is-running'); }
+        }
+      }
+      step();
+    }
+
+    function initNavigationAndSmartBar() {
+      var menuBtn = document.getElementById('menuBtn');
+      var drawer = document.getElementById('siteDrawer');
+      var bar = document.getElementById('mobileBottomBar');
+      var heroCta = document.getElementById('heroCta');
+      var siteFooter = document.getElementById('siteFooter');
+
+      function syncBar() {
+        if (!bar) { return; }
+        var drawerOpen = Boolean(drawer && !drawer.hasAttribute('hidden'));
+        var modalEl = document.getElementById('langModal');
+        var modalOpen = Boolean(modalEl && modalEl.classList.contains('show'));
+        var vh = window.innerHeight || document.documentElement.clientHeight || 800;
+        var heroInView = false;
+        if (heroCta) {
+          var hr = heroCta.getBoundingClientRect();
+          heroInView = (hr.bottom > 0 && hr.top < vh);
+        }
+        var footerInView = false;
+        if (siteFooter) {
+          var fr = siteFooter.getBoundingClientRect();
+          footerInView = (fr.top < vh + 24);
+        }
+        var scrollYVal = window.pageYOffset || window.scrollY || 0;
+        var docH = Math.max(document.body ? document.body.scrollHeight : 0, document.documentElement ? document.documentElement.scrollHeight : 0);
+        var nearBottom = (vh + scrollYVal) >= (docH - 120);
+        var shouldShow = !drawerOpen && !modalOpen && !heroInView && !footerInView && !nearBottom;
+        bar.classList.toggle('is-visible', shouldShow);
+      }
+
+      window.__supercodeSyncMobileBar = syncBar;
+
+      function setDrawer(open) {
+        if (!menuBtn || !drawer) { return; }
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { drawer.removeAttribute('hidden'); }
+        else { drawer.setAttribute('hidden', ''); }
+        syncBar();
+      }
+      if (menuBtn && drawer) {
+        menuBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          setDrawer(menuBtn.getAttribute('aria-expanded') !== 'true');
+        });
+        drawer.addEventListener('click', function (e) {
+          if (e.target && e.target.closest('a')) { setDrawer(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!drawer.hasAttribute('hidden') && !drawer.contains(e.target) && e.target !== menuBtn && !menuBtn.contains(e.target)) {
+            setDrawer(false);
+          }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') { setDrawer(false); }
+        });
+      }
+
+      if (bar) {
+        window.addEventListener('scroll', syncBar, { passive: true });
+        window.addEventListener('resize', syncBar);
+        syncBar();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var tabBtns = document.querySelectorAll('.ide-tab, .wb-file');
+      for (var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', function () {
+          renderWorkbench(this.getAttribute('data-tab'), true);
+        });
+      }
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (runBtn) { runBtn.addEventListener('click', function () { runWorkbenchSample(); }); }
+      var closeTerm = document.getElementById('btn-close-term');
+      if (closeTerm) {
+        closeTerm.addEventListener('click', function () {
+          var d = document.getElementById('ide-terminal-drawer');
+          if (d) { d.classList.remove('is-open'); }
+        });
+      }
+      initNavigationAndSmartBar();
+      renderWorkbench('io', false);
+    });
+  })();
+</script>
+<script>window.__SUPERCODE_STATIC_LANG__="zh";window.__SUPERCODE_STATIC_CANONICAL__="https://supercode-ide.github.io/zh/learn-python-android.html";</script>
+<script src="../i18n_extended.js"></script>
+</body>
+</html>

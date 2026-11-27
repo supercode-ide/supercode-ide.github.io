@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="ms" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090A0F">
+  <meta name="color-scheme" content="only dark">
+  <meta name="supported-color-schemes" content="dark">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <title>JavaScript Web Crypto &amp; node:crypto di Android — AES-GCM, SHA-512 &amp; HMAC Luar Talian | SuperCode</title>
+  <meta name="description" content="Prototaip dan audit kriptografi secara luar talian dalam JavaScript di Android. Gunakan W3C crypto.subtle dan node:crypto untuk penyulitan AES-256-GCM, hash SHA-256/512, HMAC JWT masa malar, PBKDF2 dan UUID.">
+  <meta name="keywords" content="javascript web crypto subtle android, node crypto aes 256 sha256 mobile, jwt hmac hash generator javascript app, offline aes gcm javascript android, pbkdf2 timingSafeEqual nodejs mobile">
+  <meta name="author" content="Phoenix Global Studios">
+  <meta name="google-play-app" content="app-id=com.phoenixglobal.supercodeeditor">
+
+  <link id="canonical-link" rel="canonical" href="https://supercode-ide.github.io/ms/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="x-default" href="https://supercode-ide.github.io/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="en" href="https://supercode-ide.github.io/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://supercode-ide.github.io/zh/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://supercode-ide.github.io/zh-tw/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="es" href="https://supercode-ide.github.io/es/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://supercode-ide.github.io/pt/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="ja" href="https://supercode-ide.github.io/ja/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="ko" href="https://supercode-ide.github.io/ko/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="de" href="https://supercode-ide.github.io/de/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="fr" href="https://supercode-ide.github.io/fr/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="ru" href="https://supercode-ide.github.io/ru/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="hi" href="https://supercode-ide.github.io/hi/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="id" href="https://supercode-ide.github.io/id/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="it" href="https://supercode-ide.github.io/it/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="vi" href="https://supercode-ide.github.io/vi/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="th" href="https://supercode-ide.github.io/th/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="tr" href="https://supercode-ide.github.io/tr/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="ar" href="https://supercode-ide.github.io/ar/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="pl" href="https://supercode-ide.github.io/pl/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="nl" href="https://supercode-ide.github.io/nl/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="sv" href="https://supercode-ide.github.io/sv/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="nb" href="https://supercode-ide.github.io/nb/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="da" href="https://supercode-ide.github.io/da/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="fi" href="https://supercode-ide.github.io/fi/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="cs" href="https://supercode-ide.github.io/cs/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="uk" href="https://supercode-ide.github.io/uk/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="ro" href="https://supercode-ide.github.io/ro/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="hu" href="https://supercode-ide.github.io/hu/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="el" href="https://supercode-ide.github.io/el/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="he" href="https://supercode-ide.github.io/he/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="ms" href="https://supercode-ide.github.io/ms/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="fil" href="https://supercode-ide.github.io/tl/javascript-web-crypto-security.html">
+  <link rel="alternate" hreflang="bn" href="https://supercode-ide.github.io/bn/javascript-web-crypto-security.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
+  <meta property="og:title" content="JavaScript Web Crypto &amp; node:crypto di Android — AES-GCM, SHA-512 &amp; HMAC Luar Talian | SuperCode">
+  <meta property="og:description" content="Prototaip dan audit kriptografi secara luar talian dalam JavaScript di Android. Gunakan W3C crypto.subtle dan node:crypto untuk penyulitan AES-256-GCM, hash SHA-256/512, HMAC JWT masa malar, PBKDF2 dan UUID.">
+  <meta property="og:url" content="https://supercode-ide.github.io/ms/javascript-web-crypto-security.html">
+  <meta property="og:locale" content="ms_MY">
+  <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-hero-ms.png">
+  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-hero-ms.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Pelayan Web Tempatan, PHP Luar Talian &amp; DevTools">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-hero-ms.png">
+  <meta name="twitter:title" content="JavaScript Web Crypto &amp; node:crypto di Android — AES-GCM, SHA-512 &amp; HMAC Luar Talian | SuperCode">
+  <meta name="twitter:description" content="Prototaip dan audit kriptografi secara luar talian dalam JavaScript di Android. Gunakan W3C crypto.subtle dan node:crypto untuk penyulitan AES-256-GCM, hash SHA-256/512, HMAC JWT masa malar, PBKDF2 dan UUID.">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <script>if(/SamsungBrowser/i.test(navigator.userAgent)){document.documentElement.classList.add('is-samsung');}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "SoftwareApplication",
+        "MobileApplication",
+        "WebApplication"
+      ],
+      "@id": "https://supercode-ide.github.io/#supercode-app",
+      "name": "Code Editor: SuperCode IDE",
+      "alternateName": [
+        "JavaScript Web Crypto Android",
+        "Node Crypto AES-256 Mobile App",
+        "Offline JWT HMAC Tester JS"
+      ],
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Offline JavaScript Web Crypto & node:crypto Security Sandbox for Android",
+      "inLanguage": "ms",
+      "fileSize": "40.2MB",
+      "softwareVersion": "1.55.05",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=ms&listing=web-php-studio",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=ms&listing=web-php-studio",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=ms"
+      ],
+      "potentialAction": [
+        {
+          "@type": "InstallAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=ms&listing=web-php-studio",
+            "actionPlatform": [
+              "http://schema.org/AndroidPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          }
+        },
+        {
+          "@type": "ViewAction",
+          "name": "Panduan Aplikasi",
+          "target": [
+            "https://supercode-ide.github.io/tutorial/?lang=ms",
+            "android-app://com.phoenixglobal.supercodeeditor/https/supercode-ide.github.io/tutorial"
+          ]
+        }
+      ],
+      "identifier": "com.phoenixglobal.supercodeeditor",
+      "url": "https://supercode-ide.github.io/ms/javascript-web-crypto-security.html",
+      "screenshot": [
+        "https://supercode-ide.github.io/assets/gallery/ms/03_web_php_devtools.webp",
+        "https://supercode-ide.github.io/assets/gallery/ms/01_python_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/ms/02_cpp20_compiler.webp",
+        "https://supercode-ide.github.io/assets/gallery/ms/04_file_manager_tree.webp",
+        "https://supercode-ide.github.io/assets/gallery/ms/05_sql_sqlite_studio.webp",
+        "https://supercode-ide.github.io/assets/gallery/ms/06_java17_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/ms/07_visual_git_timemachine.webp",
+        "https://supercode-ide.github.io/assets/gallery/ms/08_symbol_keyboard_themes.webp"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Phoenix Global Studios",
+        "url": "https://supercode-ide.github.io/ms/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "66"
+      },
+      "featureList": [
+        "Dual cryptographic APIs offline: W3C Web Crypto (crypto.subtle / webcrypto) and Node.js node:crypto",
+        "Authenticated symmetric encryption & decryption via AES-128/192/256-GCM, AES-CBC, and AES-CTR with auth tags",
+        "Fast SHA-256, SHA-384, SHA-512, and MD5 hashing plus HMAC signing and constant-time timingSafeEqual()",
+        "Password-based key derivation (PBKDF2 / pbkdf2Sync) and CSPRNG entropy (randomBytes, getRandomValues, randomUUID)",
+        "100% air-gapped local execution so developers never leak JWTs, API signing keys, or ciphertexts to web debuggers",
+        "Direct integration with node:fs and Buffer for hashing, signing, and encrypting real Android workspace files"
+      ],
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-ms.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://supercode-ide.github.io/ms/javascript-web-crypto-security.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SuperCode IDE",
+          "item": "https://supercode-ide.github.io/ms/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Hab IDE JavaScript & Node",
+          "item": "https://supercode-ide.github.io/ms/javascript-ide.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Web Crypto & node:crypto",
+          "item": "https://supercode-ide.github.io/ms/javascript-web-crypto-security.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Prototype & Verify Cryptography Offline in SuperCode",
+      "description": "Verify hashes, HMAC signatures, and AES-GCM payloads locally in four clean steps.",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Choose node:crypto or Standard globalThis.crypto.subtle",
+          "text": "Open a `.mjs` or `.js` file — both Node's synchronous/streaming crypto APIs and Promise-based Web Crypto are immediately available.",
+          "url": "https://supercode-ide.github.io/javascript-web-crypto-security.html#step1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Generate CSPRNG Nonces & Derive Keys",
+          "text": "Create cryptographic IVs, salts, or UUIDs and stretch passphrases into 32-byte AES-256 keys offline.",
+          "url": "https://supercode-ide.github.io/javascript-web-crypto-security.html#step2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Run Encryption, Signing, or Constant-Time Verification",
+          "text": "Tap Run ▶ to inspect hex/base64url outputs, authentication tags, and `timingSafeEqual` verification results in milliseconds.",
+          "url": "https://supercode-ide.github.io/javascript-web-crypto-security.html#step3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Persist Checksums or Encrypted Artifacts to Folder",
+          "text": "Save `.sha256` manifest files or encrypted payloads directly into your workspace for Git versioning or SFTP transfer.",
+          "url": "https://supercode-ide.github.io/javascript-web-crypto-security.html#step4"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://supercode-ide.github.io/javascript-web-crypto-security.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Mengapakah `crypto.subtle` berfungsi luar talian dalam SuperCode sedangkan ia kerap gagal dalam aplikasi WebView Android asas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pelayar menyekat `window.crypto.subtle` pada halaman `file://` yang tidak selamat. Pekerja JavaScript kendiri SuperCode mendedahkan kedua-dua `globalThis.crypto.subtle` (`crypto.webcrypto`) dan `node:crypto` secara asli luar talian tanpa geseran konteks selamat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mod sifer AES dan algoritma ringkasan apakah yang disokong secara luar talian?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Anda boleh menjalankan `aes-128`, `aes-192` dan `aes-256` merentas mod `GCM` (dengan tag pengesahan 16-bait), `CBC` dan `CTR`, di samping hash serta HMAC `SHA-1`, `SHA-256`, `SHA-384`, `SHA-512` dan `MD5`."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Adakah `Buffer.toString('base64url')` berfungsi untuk membina dan mengesahkan JWT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ya! Pelaksanaan `Buffer` SuperCode menyokong pengekodan dan penyahkodan `utf8`, `hex`, `base64` serta RFC 4648 `base64url` secara sedia ada — menjadikan skrip JWT dan OAuth PKCE `S256` tanpa kebergantungan mudah ditulis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Adakah sebarang kunci atau muatan dihantar melalui rangkaian semasa menjalankan `node:crypto`?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tidak sama sekali. Semua operasi `node:crypto` dan `crypto.subtle` dilaksanakan 100% secara setempat pada peranti Android anda dan berfungsi walaupun Wi-Fi dan data mudah alih dimatikan sepenuhnya."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-page="js_crypto_sec">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="sc-logo" viewBox="20 14 68 72">
+    <path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/>
+    <path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/>
+    <path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/>
+    <path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+  </symbol>
+  <symbol id="gp-prism" viewBox="0 0 24 24">
+    <path fill="#4285F4" d="M3.6,2.4C3.3,2.7,3.1,3.2,3.1,3.8v16.4c0,0.6,0.2,1.1,0.5,1.4l0.1,0.1L12.9,12v-0.2L3.7,2.3L3.6,2.4z"/>
+    <path fill="#34A853" d="M16,15.1l-3.1-3.1v-0.2L16,8.7l0.1,0.1l3.6,2.1c1,0.6,1,1.5,0,2.1l-3.6,2.1L16,15.1z"/>
+    <path fill="#FBBC05" d="M16.1,15.1L12.9,12L3.6,21.3c0.3,0.4,0.9,0.4,1.6,0.1L16.1,15.1z"/>
+    <path fill="#EA4335" d="M16.1,8.9L5.2,2.6C4.5,2.2,3.9,2.3,3.6,2.7L12.9,12L16.1,8.9z"/>
+  </symbol>
+  <symbol id="i-ne" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8 20 7.2v9.6L12 21.2 4 16.8V7.2z"/><path d="M4 7.2l8 4.4 8-4.4M12 11.6v9.6"/></g></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2.8v3.2M15 2.8v3.2M9 18v3.2M15 18v3.2M2.8 9H6M2.8 15H6M18 9h3.2M18 15h3.2"/></g></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 2.8 7.8 12 12.6l9.2-4.8z"/><path d="m2.8 12 9.2 4.8 9.2-4.8"/><path d="m2.8 16.2 9.2 4.8 9.2-4.8"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="M2.8 8.5h18.4"/><path d="m9.5 12.5-2.2 2.2 2.2 2.2M14.5 12.5l2.2 2.2-2.2 2.2"/></g></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5.6" rx="7.6" ry="2.8"/><path d="M4.4 5.6v12.8c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8V5.6"/><path d="M4.4 12c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8"/></g></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="m7.2 9.5 3 2.5-3 2.5M12.8 15h4"/></g></symbol>
+  <symbol id="i-git" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.3"/><circle cx="6" cy="18" r="2.3"/><circle cx="18" cy="12" r="2.3"/><path d="M6 8.3v7.4M8.3 6h4.2a3.5 3.5 0 0 1 3.5 3.5v.2"/></g></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5h11a4 4 0 0 0 .7-7.94A5.5 5.5 0 0 0 7.4 9.2 3.8 3.8 0 0 0 6.5 18.5z"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M13 2.8 4.8 13.2h6.3L10.2 21.2 19.2 10.6h-6.4z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 2.8 4.8 5.8v5.6c0 5 3.1 8.5 7.2 9.8 4.1-1.3 7.2-4.8 7.2-9.8V5.8z"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="index.html" class="brand" aria-label="SuperCode IDE Home">
+      <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+      <span>SuperCode</span>
+      <span class="brand__tag">IDE</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary Workspaces">
+      <a href="code-editor.html" data-i18n="nav_code_editor">Editor Kod</a>
+      <a href="large-file-editor.html" data-i18n="nav_large_file">Fail Besar GB</a>
+      <a href="python-ide.html" data-i18n="nav_python_ide">IDE Python</a>
+      <a href="c-compiler.html" data-i18n="nav_c_compiler">Pengkompil C17</a>
+      <a href="cpp-ide.html" data-i18n="nav_cpp_ide">IDE C++20</a>
+      <a href="java-ide.html" data-i18n="nav_java_ide">IDE Java 17</a>
+      <a href="javascript-ide.html" class="is-current" data-i18n="nav_js_ide">JavaScript</a>
+      <a href="web-ide.html" data-i18n="nav_web_ide">Web & PHP</a>
+      <a href="sql-ide.html" data-i18n="nav_sql_ide">Studio SQL</a>
+      <a href="git-client.html" data-i18n="nav_git_client">Git Visual</a>
+      <a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP & FTPS</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button id="langModalBtn" class="btn-lang-trigger" type="button" onclick="openLangModal()" aria-label="Select Language">
+        <svg class="lang-globe-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span id="langTriggerText">MS</span>
+        <span class="lang-chevron" aria-hidden="true">&#9662;</span>
+      </button>
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=ms&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dms%26utm_campaign%3Dweb-php-studio%26utm_content%3Djavascript-web-crypto-security" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+        <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+        <span data-i18n="nav_cta">Google Play</span>
+      </a>
+      <a href="index.html" class="btn-home-icon" aria-label="Home" title="Home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5"/>
+          <path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
+        </svg>
+      </a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteDrawer" aria-label="All Pages Directory">
+        <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 8.5h16M4 15.5h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-drawer" id="siteDrawer" hidden>
+  <nav class="container menu-drawer__inner" aria-label="All SuperCode Pages">
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_core">Editor & Fail Besar</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="index.html"><span data-i18n="nav_home">Ringkasan</span><span class="mono">01</span></a>
+        <a class="menu-drawer__link" href="code-editor.html"><span data-i18n="nav_code_editor">Editor Kod</span><span class="mono">02</span></a>
+        <a class="menu-drawer__link" href="large-file-editor.html"><span data-i18n="nav_large_file">Fail Besar GB</span><span class="mono">03</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_lang">Pengkompil & Bahasa Luar Talian</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="python-ide.html"><span data-i18n="nav_python_ide">IDE Python</span><span class="mono">04</span></a>
+        <a class="menu-drawer__link" href="c-compiler.html"><span data-i18n="nav_c_compiler">Pengkompil C17</span><span class="mono">05</span></a>
+        <a class="menu-drawer__link" href="cpp-ide.html"><span data-i18n="nav_cpp_ide">IDE C++20</span><span class="mono">06</span></a>
+        <a class="menu-drawer__link" href="java-ide.html"><span data-i18n="nav_java_ide">IDE Java 17</span><span class="mono">07</span></a>
+        <a class="menu-drawer__link is-current" href="javascript-ide.html"><span data-i18n="nav_js_ide">JavaScript</span><span class="mono">08</span></a>
+        <a class="menu-drawer__link" href="lua-ide.html"><span data-i18n="nav_lua_ide">Lua 5.4</span><span class="mono">09</span></a>
+        <a class="menu-drawer__link" href="shell-ide.html"><span data-i18n="nav_shell_ide">Shell & Kotlin</span><span class="mono">10</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_devops">Web, SQL & DevOps Jarak Jauh</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="web-ide.html"><span data-i18n="nav_web_ide">Web & PHP</span><span class="mono">11</span></a>
+        <a class="menu-drawer__link" href="sql-ide.html"><span data-i18n="nav_sql_ide">Studio SQL</span><span class="mono">12</span></a>
+        <a class="menu-drawer__link" href="git-client.html"><span data-i18n="nav_git_client">Git Visual</span><span class="mono">13</span></a>
+        <a class="menu-drawer__link" href="sftp-client.html"><span data-i18n="nav_sftp_client">SFTP & FTPS</span><span class="mono">14</span></a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<main id="top">
+  <!-- ==================== 01 · EDITORIAL HERO & INTERACTIVE WORKBENCH ==================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <div class="py-hub-crumb"><a href="javascript-ide.html"><span class="crumb-arrow" aria-hidden="true">&larr;</span> Hab IDE JavaScript &amp; Node</a><span class="sep">/</span><span>Web Crypto &amp; node:crypto</span></div>
+          <div class="trust-pill">
+            <span class="trust-pill__score"><span data-play-rating>4.9</span> &#9733;</span>
+            <span data-i18n="hero_tag">CRYPTO.SUBTLE + NODE:CRYPTO LUAR TALIAN &#183; AES-256-GCM &#183; SHA-512</span>
+          </div>
+
+          <h1 class="hero-h1" data-i18n="hero_h1">Sandbox <span class="text-gradient">JavaScript Web Crypto &amp; <code>node:crypto</code></span> Terasing di Android.</h1>
+
+          <p class="hero-lead" data-i18n="hero_desc">Jangan sekali-kali tampal token JWT aktif, rahsia tandatangan webhook atau vektor ujian penyulitan ke dalam alat web yang tidak dipercayai. SuperCode menjalankan kedua-dua <strong>W3C <code>crypto.subtle</code></strong> dan <strong><code>node:crypto</code> 100% luar talian</strong> &#8212; menyokong <strong>AES-256-GCM</strong>, <strong>SHA-256/512</strong>, <strong>PBKDF2</strong> dan <strong><code>timingSafeEqual</code></strong>.</p>
+
+          <div class="hero__cta" id="heroCta">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=ms&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dms%26utm_campaign%3Dweb-php-studio%26utm_content%3Djavascript-web-crypto-security" target="_blank" rel="noopener" class="btn btn--gold">
+              <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+              <span data-i18n="cta_btn">Dapatkan di Google Play</span>
+            </a>
+            <a href="https://supercode-ide.github.io/tutorial/?lang=ms&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+              <span data-i18n="cta_tutorial">Panduan Aplikasi</span>
+              <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <dl class="specs" aria-label="Key Specifications">
+          <div class="spec"><dt>AES-256</dt><dd data-i18n="jsc_s1">GCM &#183; CBC &#183; CTR</dd></div>
+          <div class="spec"><dt>SHA-512</dt><dd data-i18n="jsc_s2">Hash &amp; HMAC</dd></div>
+          <div class="spec"><dt>PBKDF2</dt><dd data-i18n="jsc_s3">Terbitan Kunci</dd></div>
+          <div class="spec"><dt>Dual</dt><dd data-i18n="jsc_s4">Subtle + node:crypto</dd></div>
+        </dl>
+      </div>
+
+      <div class="wb-caption">
+        <div class="sec-index" style="margin-bottom:0">
+          <span class="num">01</span>
+          <span class="rule"></span>
+          <span data-i18n="wb_eyebrow">MEJA KERJA NODE:CRYPTO &amp; W3C SUBTLECRYPTO LUAR TALIAN</span>
+        </div>
+        <span class="wb-caption__hint mono">AES-256-GCM AuthTag &#183; PBKDF2 &#183; HMAC timingSafeEqual &#183; crypto.subtle</span>
+      </div>
+
+      <div class="ide-workbench">
+        <div class="wb-titlebar">
+          <div class="wb-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="wb-title" id="ide-compiler-label">js-crypto-sandbox/aes_gcm_vault.mjs &#8212; AES-256-GCM + PBKDF2 Offline</div>
+          <button type="button" class="wb-run" id="btn-run-sandbox">
+            <span class="wb-run__tri" aria-hidden="true">&#9654;</span>
+            <span data-i18n="btn_run">Jalankan Demo</span>
+          </button>
+        </div>
+
+        <div class="wb-tabs" role="tablist" aria-label="Interactive Workspace Tabs">
+          <button type="button" class="ide-tab active" data-tab="aes" role="tab" aria-selected="true"><i></i>aes_gcm_vault.mjs</button>
+          <button type="button" class="ide-tab" data-tab="hmac" role="tab" aria-selected="false"><i></i>jwt_hmac_verify.js</button>
+          <button type="button" class="ide-tab" data-tab="subtle" role="tab" aria-selected="false"><i></i>webcrypto_subtle.mjs</button>
+        </div>
+
+        <div class="wb-body">
+          <aside class="wb-explorer" aria-label="Project Explorer">
+            <div class="wb-explorer__head">Explorer</div>
+            <div class="wb-folder">&#9662; js-crypto-sandbox</div>
+            <button type="button" class="wb-file active" data-tab="aes"><b>AES</b><span>aes_gcm_vault.mjs</span></button>
+            <button type="button" class="wb-file" data-tab="hmac"><b>HMAC</b><span>jwt_hmac_verify.js</span></button>
+            <button type="button" class="wb-file" data-tab="subtle"><b>W3C</b><span>webcrypto_subtle.mjs</span></button>
+          </aside>
+
+          <div class="wb-main">
+            <div class="ide-editor-body" id="ide-code-box" role="region" aria-label="Interactive Code Preview"></div>
+            <div class="ide-terminal" id="ide-terminal-drawer" aria-live="polite">
+              <div class="term-header">
+                <span data-i18n="term_title">Output Konsol Interaktif</span>
+                <div class="term-header-right">
+                  <span class="term-exec-badge" id="ide-exec-status">Ready</span>
+                  <button type="button" class="btn-term-close" id="btn-close-term" aria-label="Close terminal">&#10005;</button>
+                </div>
+              </div>
+              <div class="term-stream" id="ide-term-output"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wb-statusbar">
+          <span class="wb-statusbar__dot"><i></i><span id="wbStatusLang">node:crypto &#183; AES-256-GCM</span></span>
+          <div class="wb-statusbar__right">
+            <span>UTF-8</span>
+            <span>LF</span>
+            <span>Ln 8, Col 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- SC_REAL_GALLERY_START -->
+  <section class="section sc-real-gallery" id="screenshots" aria-label="Pratonton Aplikasi dan Tangkapan Skrin">
+    <div class="container">
+      <div class="sc-gp-head">
+        <div class="sc-gp-head-left">
+          <div class="sc-gp-eyebrow" data-i18n="gal_eyebrow">TANGKAPAN SKRIN ANDROID SEBENAR</div>
+          <h2 class="sc-gp-title" data-i18n="gal_title">Pratonton & Tangkapan Skrin</h2>
+          <p class="sc-gp-short" data-i18n="gal_short_desc">Editor kod & IDE luar talian: Python, C/C++, Java, HTML, SQL, PHP kompiler & Git</p>
+        </div>
+        <a class="sc-gp-store-bar" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=ms&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dms%26utm_campaign%3Dweb-php-studio%26utm_content%3Djavascript-web-crypto-security" target="_blank" rel="noopener" aria-label="Code Editor: SuperCode IDE — Phoenix Global Studios">
+          <svg class="sc-gp-app-icon" width="38" height="38" viewBox="16 12 76 76" aria-hidden="true"><rect x="16" y="12" width="76" height="76" rx="18" fill="#070A10" stroke="#3B82F6" stroke-width="2"/><path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/><path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/><path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/><path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/></svg>
+          <span class="sc-gp-app-meta">
+            <span class="sc-gp-app-name">Code Editor: SuperCode IDE</span>
+            <span class="sc-gp-app-dev">Phoenix Global Studios</span>
+          </span>
+          <span class="sc-gp-store-arrow" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      </div>
+      <div class="sc-gp-stage">
+        <button type="button" class="sc-gp-nav sc-gp-nav--prev is-hidden" id="scGpPrev" aria-label="Gambar sebelumnya">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="sc-gp-rail" id="scGpRail">
+          <button type="button" class="sc-gp-item sc-gp-item--feature" aria-label="Editor Kod: SuperCode IDE — IDE Mudah Alih Luar Talian">
+            <img src="../assets/gallery/ms/00_feature_graphic.webp" data-sc-file="00_feature_graphic.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_0" data-cap="Editor Kod: SuperCode IDE — IDE Mudah Alih Luar Talian" alt="Editor Kod: SuperCode IDE — IDE Mudah Alih Luar Talian" width="1024" height="500" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Pelayan Web Tempatan, PHP Luar Talian &amp; DevTools">
+            <img src="../assets/gallery/ms/03_web_php_devtools.webp" data-sc-file="03_web_php_devtools.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_3" data-cap="Pelayan Web Tempatan, PHP Luar Talian &amp; DevTools" alt="Pelayan Web Tempatan, PHP Luar Talian &amp; DevTools" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="IDE Python 3.11 / 3.12 Luar Talian &amp; Konsol Belah">
+            <img src="../assets/gallery/ms/01_python_ide.webp" data-sc-file="01_python_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_1" data-cap="IDE Python 3.11 / 3.12 Luar Talian &amp; Konsol Belah" alt="IDE Python 3.11 / 3.12 Luar Talian &amp; Konsol Belah" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Pengkompil Pelbagai Fail C17 &amp; C++20 Tempatan">
+            <img src="../assets/gallery/ms/02_cpp20_compiler.webp" data-sc-file="02_cpp20_compiler.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_2" data-cap="Pengkompil Pelbagai Fail C17 &amp; C++20 Tempatan" alt="Pengkompil Pelbagai Fail C17 &amp; C++20 Tempatan" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Pepohon Fail Global &amp; Pengurus Fail Tempatan (SAF)">
+            <img src="../assets/gallery/ms/04_file_manager_tree.webp" data-sc-file="04_file_manager_tree.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_4" data-cap="Pepohon Fail Global &amp; Pengurus Fail Tempatan (SAF)" alt="Pepohon Fail Global &amp; Pengurus Fail Tempatan (SAF)" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Studio SQLite 3.54 Luar Talian &amp; Pemeriksa .db">
+            <img src="../assets/gallery/ms/05_sql_sqlite_studio.webp" data-sc-file="05_sql_sqlite_studio.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_5" data-cap="Studio SQLite 3.54 Luar Talian &amp; Pemeriksa .db" alt="Studio SQLite 3.54 Luar Talian &amp; Pemeriksa .db" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="IDE Java 17 Luar Talian &amp; SQLite JDBC">
+            <img src="../assets/gallery/ms/06_java17_ide.webp" data-sc-file="06_java17_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_6" data-cap="IDE Java 17 Luar Talian &amp; SQLite JDBC" alt="IDE Java 17 Luar Talian &amp; SQLite JDBC" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Klien Git Visual, Mesin Masa &amp; SFTP">
+            <img src="../assets/gallery/ms/07_visual_git_timemachine.webp" data-sc-file="07_visual_git_timemachine.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_7" data-cap="Klien Git Visual, Mesin Masa &amp; SFTP" alt="Klien Git Visual, Mesin Masa &amp; SFTP" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Bar Simbol 21-Kekunci &amp; 8 Tema IDE Terpilih">
+            <img src="../assets/gallery/ms/08_symbol_keyboard_themes.webp" data-sc-file="08_symbol_keyboard_themes.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_8" data-cap="Bar Simbol 21-Kekunci &amp; 8 Tema IDE Terpilih" alt="Bar Simbol 21-Kekunci &amp; 8 Tema IDE Terpilih" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+        </div>
+        <button type="button" class="sc-gp-nav sc-gp-nav--next" id="scGpNext" aria-label="Gambar seterusnya">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  <div class="sc-lb-modal" id="scLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Pratonton Aplikasi dan Tangkapan Skrin">
+    <div class="sc-lb-topbar">
+      <button type="button" class="sc-lb-back" id="scLbBack">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-i18n="gal_back">Kembali</span>
+      </button>
+      <div class="sc-lb-meta">
+        <span class="sc-lb-counter" id="scLbCounter">1 / 9</span>
+        <span class="sc-lb-title" id="scLbTitle"></span>
+      </div>
+      <button type="button" class="sc-lb-close" id="scLbClose" aria-label="Tutup pratonton">&times;</button>
+    </div>
+    <div class="sc-lb-stage">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--prev" id="scLbPrev" aria-label="Gambar sebelumnya">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <img class="sc-lb-img" id="scLbImg" src="" alt="SuperCode IDE Preview">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--next" id="scLbNext" aria-label="Gambar seterusnya">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="sc-lb-dots" id="scLbDots"></div>
+  </div>
+  <script defer src="../assets/gallery.js"></script>
+<!-- SC_REAL_GALLERY_END -->
+
+
+
+
+
+  <!-- ==================== 02 · CORE CAPABILITIES ==================== -->
+  <section class="section section--alt" id="capabilities">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">02</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_cap_eyebrow">KEUPAYAAN TERAS</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="sec_cap_title">Primitif Kriptografi Gred Pengeluaran Terus di Telefon Anda</h2>
+        <p class="sec-lead" data-i18n="sec_cap_lead">Bina utiliti keselamatan mudah alih merentas piawaian pelayar/pinggir (`crypto.subtle`) dan konvensyen backend Node.js (`node:crypto`) tanpa pendedahan internet.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="feature-grid feature-grid--6">
+          <article class="feature-card" id="cap1">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <span class="f-idx">02.1</span>
+            </div>
+            <h3 class="f-title" data-i18n="f1_title">Kedua-dua W3C crypto.subtle &amp; Node.js node:crypto Terbina Dalam</h3>
+            <p class="f-desc" data-i18n="f1_desc">Tulis modul keselamatan merentas masa jalan menggunakan `globalThis.crypto.subtle` (`crypto.webcrypto`) di samping panggilan backend Node klasik (`import crypto from 'node:crypto'`) &#8212; tiada himpunan polifil atau pemasangan npm luaran diperlukan.</p>
+            <div class="f-code" data-i18n="f1_badge">crypto.subtle &#183; crypto.webcrypto &#183; node:crypto</div>
+          </article>
+          <article class="feature-card" id="cap2">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-cube"/></svg></span>
+              <span class="f-idx">02.2</span>
+            </div>
+            <h3 class="f-title" data-i18n="f2_title">Penyulitan Disahkan AES-128/192/256 (GCM, CBC, CTR)</h3>
+            <p class="f-desc" data-i18n="f2_desc">Sulit dan nyahsulit muatan secara luar talian dengan `createCipheriv` / `createDecipheriv` atau `crypto.subtle.encrypt` / `decrypt`. Sokongan penuh `getAuthTag()` dan `setAuthTag()` membolehkan anda mengesahkan integriti teks tersulit AEAD dengan tepat.</p>
+            <div class="f-code" data-i18n="f2_badge">aes-256-gcm &#183; aes-256-cbc &#183; aes-256-ctr &#183; AuthTag</div>
+          </article>
+          <article class="feature-card" id="cap3">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
+              <span class="f-idx">02.3</span>
+            </div>
+            <h3 class="f-title" data-i18n="f3_title">Ringkasan SHA-256/512, Webhook HMAC &amp; timingSafeEqual</h3>
+            <p class="f-desc" data-i18n="f3_desc">Sahkan pengepala webhook HMAC-SHA256 gaya GitHub/Stripe, bina pengesah JWT HS256/HS512 tanpa kebergantungan dengan Buffer `base64url`, dan cegah serangan saluran sisi masa menggunakan `crypto.timingSafeEqual(a, b)`.</p>
+            <div class="f-code" data-i18n="f3_badge">createHash &#183; createHmac &#183; base64url &#183; timingSafeEqual</div>
+          </article>
+          <article class="feature-card" id="cap4">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-chip"/></svg></span>
+              <span class="f-idx">02.4</span>
+            </div>
+            <h3 class="f-title" data-i18n="f4_title">Regangan Kunci PBKDF2 &amp; Kerawakan CSPRNG</h3>
+            <p class="f-desc" data-i18n="f4_desc">Terbitkan kunci 256-bit yang kukuh daripada frasa laluan menggunakan `pbkdf2`, `pbkdf2Sync` atau `subtle.deriveBits`, dan jana salt, nonce IV serta pengecam v4 yang selamat secara kriptografi melalui `randomBytes()`, `getRandomValues()` dan `randomUUID()`.</p>
+            <div class="f-code" data-i18n="f4_badge">pbkdf2Sync &#183; randomBytes &#183; getRandomValues &#183; randomUUID</div>
+          </article>
+          <article class="feature-card" id="cap5">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+              <span class="f-idx">02.5</span>
+            </div>
+            <h3 class="f-title" data-i18n="f5_title">Audit Terasing 100% untuk Token &amp; Muatan Sensitif</h3>
+            <p class="f-desc" data-i18n="f5_desc">Sedang memeriksa token pembawa, cabaran kod `S256` PKCE OAuth atau blob konfigurasi tersulit semasa insiden? Hidupkan mod pesawat dan audit semuanya secara setempat pada peranti Android anda tanpa kebocoran telemetri.</p>
+            <div class="f-code" data-i18n="f5_badge">Tiada Kebocoran Rangkaian &#183; PKCE S256 &#183; Audit JWT</div>
+          </article>
+          <article class="feature-card" id="cap6">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-db"/></svg></span>
+              <span class="f-idx">02.6</span>
+            </div>
+            <h3 class="f-title" data-i18n="f6_title">Skrip Checksum Fail &amp; Sandaran Tersulit Dengan node:fs</h3>
+            <p class="f-desc" data-i18n="f6_desc">Gandingkan `node:crypto` terus dengan `node:fs` dan `node:zlib` untuk menjana manifes integriti SHA-256 merentas folder ruang kerja atau menyulitkan petikan JSON/SQLite setempat sebelum muat naik SFTP.</p>
+            <div class="f-code" data-i18n="f6_badge">Checksum SHA-256 Fail &#183; Skrip Bilik Kebal Tersulit</div>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">Dibina untuk Telefon, Peranti Lipat & Tablet · Ringan 40.2 MB</span>
+        <a class="link-arrow" href="javascript-ide.html">
+          <span>JavaScript &amp; Node IDE Hub</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 03 · STEP-BY-STEP WORKFLOW GUIDE ==================== -->
+  <section class="section" id="workflow">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">03</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_wf_eyebrow">ALIRAN KERJA LANGKAH DEMI LANGKAH</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="workflow_title">Cara Memprototaip &amp; Mengesahkan Kriptografi Secara Luar Talian dalam SuperCode</h2>
+        <p class="sec-lead" data-i18n="workflow_lead">Sahkan hash, tandatangan HMAC dan muatan AES-GCM secara setempat dalam empat langkah mudah.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="workflow-grid">
+          <article class="wf-step" id="step1">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 01</span>
+              <span class="wf-step__cmd">import crypto from 'node:crypto'</span>
+            </div>
+            <h3 data-i18n="wf1_title">Pilih node:crypto atau globalThis.crypto.subtle Piawai</h3>
+            <p data-i18n="wf1_desc">Buka fail `.mjs` atau `.js` &#8212; kedua-dua API kripto segerak/penstriman Node dan Web Crypto berasaskan Promise tersedia serta-merta.</p>
+          </article>
+          <article class="wf-step" id="step2">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 02</span>
+              <span class="wf-step__cmd">pbkdf2Sync + randomBytes(12)</span>
+            </div>
+            <h3 data-i18n="wf2_title">Jana Nonce CSPRNG &amp; Terbitkan Kunci</h3>
+            <p data-i18n="wf2_desc">Cipta IV kriptografi, salt atau UUID dan regangkan frasa laluan menjadi kunci AES-256 32-bait secara luar talian.</p>
+          </article>
+          <article class="wf-step" id="step3">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 03</span>
+              <span class="wf-step__cmd">createCipheriv / createHmac</span>
+            </div>
+            <h3 data-i18n="wf3_title">Jalankan Penyulitan, Tandatangan atau Pengesahan Masa Malar</h3>
+            <p data-i18n="wf3_desc">Ketik Jalankan &#9654; untuk memeriksa output hex/base64url, tag pengesahan dan keputusan pengesahan `timingSafeEqual` dalam beberapa milisaat.</p>
+          </article>
+          <article class="wf-step" id="step4">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 04</span>
+              <span class="wf-step__cmd">fs.writeFileSync</span>
+            </div>
+            <h3 data-i18n="wf4_title">Simpan Checksum atau Artifak Tersulit ke Folder</h3>
+            <p data-i18n="wf4_desc">Simpan fail manifes `.sha256` atau muatan tersulit terus ke ruang kerja anda untuk pemversian Git atau pemindahan SFTP.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="wf_foot_note">100% Pelaksanaan Kriptografi pada Peranti &#183; Tiada Kebergantungan npm Luaran Diperlukan</span>
+        <a class="link-arrow" href="https://supercode-ide.github.io/tutorial/?lang=ms&amp;ref=official_web" data-supercode-tutorial="true">
+          <span data-i18n="cta_tutorial">Panduan Aplikasi</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 04 · FEATURED SUMMARY & COMPARISON MATRIX ==================== -->
+  <section class="section section--alt" id="comparison">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">04</span>
+        <span class="rule"></span>
+        <span data-i18n="comp_eyebrow">MATRIKS KEUPAYAAN</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="table_h2">Kripto JS Luar Talian SuperCode lwn. Penyahpepijat Token/Hash Dalam Talian</h2>
+        <p class="snippet-definition" data-i18n="snippet_p"><strong>Kotak Pasir Kripto JavaScript SuperCode</strong> menyediakan kedua-dua W3C Web Crypto (crypto.subtle) dan Node.js node:crypto secara luar talian di Android. Jurutera keselamatan dan pembangun backend boleh menguji penyulitan disahkan AES-256-GCM, hash fail SHA-256 dan SHA-512, pengesahan JWT HMAC masa malar, terbitan kunci PBKDF2 dan penjanaan UUID kriptografi sepenuhnya terasing pada peranti.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="table-wrap">
+          <table class="obsidian-benchmark-table">
+            <caption data-i18n="table_caption">PERBANDINGAN KRIPTOGRAFI JAVASCRIPT MUDAH ALIH &amp; KOTAK PASIR KESELAMATAN</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="th_0">Keupayaan Keselamatan</th>
+                <th scope="col" data-i18n="th_1">Studio Kripto JS SuperCode</th>
+                <th scope="col" data-i18n="th_2">Laman Web JWT / Hash Dalam Talian</th>
+                <th scope="col" data-i18n="th_3">Aplikasi JS WebView Asas</th>
+                <th scope="col" data-i18n="th_4">CLI Node Desktop</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="tr1_c0">Privasi Rahsia</th>
+                <td><strong data-i18n="tr1_c1">100% Luar Talian Terasing di Telefon Anda</strong></td>
+                <td data-i18n="tr1_c2">Risiko pendedahan pelayar/rangkaian</td>
+                <td data-i18n="tr1_c3">Asalan HTTP WebView tidak selamat</td>
+                <td data-i18n="tr1_c4">100% Setempat</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr2_c0">API Kripto Node</th>
+                <td><strong data-i18n="tr2_c1">node:crypto Terbina Dalam (Cipheriv, HMAC, PBKDF2)</strong></td>
+                <td data-i18n="tr2_c2">Tidak boleh diprogramkan</td>
+                <td data-i18n="tr2_c3">Tiada (`require` gagal)</td>
+                <td data-i18n="tr2_c4">Terbina dalam</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr3_c0">W3C Web Crypto</th>
+                <td><strong data-i18n="tr3_c1">crypto.subtle + randomUUID Penuh Luar Talian</strong></td>
+                <td data-i18n="tr3_c2">Bergantung pada pelayar</td>
+                <td data-i18n="tr3_c3">Kerap dilumpuhkan pada file://</td>
+                <td data-i18n="tr3_c4">Terbina dalam (Node 19+)</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr4_c0">Pengekodan Perduaan</th>
+                <td><strong data-i18n="tr4_c1">Buffer Penuh (hex, base64, base64url, utf8)</strong></td>
+                <td data-i18n="tr4_c2">Penukaran salin-tampal manual</td>
+                <td data-i18n="tr4_c3">Hanya `atob`/`btoa` yang kekok</td>
+                <td data-i18n="tr4_c4">Buffer Penuh</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr5_c0">Hash Fail Ruang Kerja</th>
+                <td><strong data-i18n="tr5_c1">Hash &amp; Sulitkan Fail Folder Setempat Sebenar</strong></td>
+                <td data-i18n="tr5_c2">Muat naik fail ke pihak ketiga</td>
+                <td data-i18n="tr5_c3">Tiada akses fail setempat</td>
+                <td data-i18n="tr5_c4">Penuh</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">Dibina untuk Telefon, Peranti Lipat & Tablet · Ringan 40.2 MB</span>
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=ms&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dms%26utm_campaign%3Dweb-php-studio%26utm_content%3Djavascript-web-crypto-security" target="_blank" rel="noopener">
+          <span>Google Play</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 05 · VISIBLE EDITORIAL FAQ ==================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-head">
+          <div class="sec-index">
+            <span class="num">05</span>
+            <span class="rule"></span>
+            <span data-i18n="sec3_eyebrow">SOALAN & JAWAPAN</span>
+          </div>
+          <h2 class="h2" data-i18n="sec3_title">Soalan Lazim</h2>
+          <p class="sec-lead" data-i18n="faq_lead">Jawapan mengenai Web Crypto luar talian, sifer `node:crypto`, pengesahan JWT dan keselamatan rahsia.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary><span data-i18n="faq1_q">Mengapakah `crypto.subtle` berfungsi luar talian dalam SuperCode sedangkan ia kerap gagal dalam aplikasi WebView Android asas?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq1_a">Pelayar menyekat `window.crypto.subtle` pada halaman `file://` yang tidak selamat. Pekerja JavaScript kendiri SuperCode mendedahkan kedua-dua `globalThis.crypto.subtle` (`crypto.webcrypto`) dan `node:crypto` secara asli luar talian tanpa geseran konteks selamat.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq2_q">Mod sifer AES dan algoritma ringkasan apakah yang disokong secara luar talian?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq2_a">Anda boleh menjalankan `aes-128`, `aes-192` dan `aes-256` merentas mod `GCM` (dengan tag pengesahan 16-bait), `CBC` dan `CTR`, di samping hash serta HMAC `SHA-1`, `SHA-256`, `SHA-384`, `SHA-512` dan `MD5`.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq3_q">Adakah `Buffer.toString('base64url')` berfungsi untuk membina dan mengesahkan JWT?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq3_a">Ya! Pelaksanaan `Buffer` SuperCode menyokong pengekodan dan penyahkodan `utf8`, `hex`, `base64` serta RFC 4648 `base64url` secara sedia ada &#8212; menjadikan skrip JWT dan OAuth PKCE `S256` tanpa kebergantungan mudah ditulis.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq4_q">Adakah sebarang kunci atau muatan dihantar melalui rangkaian semasa menjalankan `node:crypto`?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq4_a">Tidak sama sekali. Semua operasi `node:crypto` dan `crypto.subtle` dilaksanakan 100% secara setempat pada peranti Android anda dan berfungsi walaupun Wi-Fi dan data mudah alih dimatikan sepenuhnya.</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==================== 06 · TOPICAL AUTHORITY ECOSYSTEM CLUSTER ==================== -->
+  <section class="section section--alt" id="ecosystem-guides">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">06</span>
+        <span class="rule"></span>
+        <span>PANDUAN JAVASCRIPT, TERAS NODE &amp; KRIPTO</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2>Suite Dokumentasi IDE JavaScript &amp; Node Lengkap</h2>
+        <p class="sec-lead">Terokai hab utama IDE JavaScript Luar Talian dan kesemua 4 panduan khusus ES2024 &amp; Node.js.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="py-cluster-grid">
+          <a href="javascript-ide.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JS-HUB</span>
+              <span class="py-spoke-card__tag">ES2024 · 29 API Node · Hab Utama</span>
+            </div>
+            <h3>Gambaran Keseluruhan Studio ES2024 &amp; Node Luar Talian</h3>
+            <p>Gambaran utama pekerja JavaScript ES2024 terasing SuperCode, 29+ modul teras Node.js luar talian, dwi ESM/CommonJS dan keselamatan gelung &lt;1ms.</p>
+            <div class="py-spoke-card__go">
+              <span>javascript-ide</span>
+              <span>Buka Panduan &rarr;</span>
+            </div>
+          </a>
+          <a href="javascript-node-core-modules-offline.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JS-01</span>
+              <span class="py-spoke-card__tag">node:fs · path · stream · zlib</span>
+            </div>
+            <h3>29+ Modul Teras Node.js Luar Talian</h3>
+            <p>Gunakan modul fs/promises, path, Buffer, EventEmitter, stream, zlib, readline, util dan package.json ESM + CommonJS 100% luar talian di Android.</p>
+            <div class="py-spoke-card__go">
+              <span>javascript-node-core-modules-offline</span>
+              <span>Buka Panduan &rarr;</span>
+            </div>
+          </a>
+          <a href="javascript-es2024-async-console.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JS-02</span>
+              <span class="py-spoke-card__tag">await Peringkat Atas · BigInt · Fetch</span>
+            </div>
+            <h3>ES2024 Tak Segerak, Top-Level Await &amp; Fetch</h3>
+            <p>Jalankan sintaks ES2024 moden, await peringkat atas, penjana tak segerak, console.table() dan skrip pekerja berkawal gelung &lt;1ms tanpa fail HTML palsu.</p>
+            <div class="py-spoke-card__go">
+              <span>javascript-es2024-async-console</span>
+              <span>Buka Panduan &rarr;</span>
+            </div>
+          </a>
+          <a href="javascript-web-crypto-security.html" class="py-spoke-card is-active">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JS-03</span>
+              <span class="py-spoke-card__tag">crypto.subtle · AES-256 · HMAC</span>
+            </div>
+            <h3>Kripto Node &amp; Web (AES-GCM / SHA)</h3>
+            <p>Prototaipkan pencincangan kriptografi, HMAC, PBKDF2, UUID dan penyulitan AES-256-GCM secara luar talian menggunakan kedua-dua API Web Crypto dan node:crypto.</p>
+            <div class="py-spoke-card__go">
+              <span>javascript-web-crypto-security</span>
+              <span>Melihat Panduan</span>
+            </div>
+          </a>
+          <a href="learn-javascript-dsa-android.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JS-04</span>
+              <span class="py-spoke-card__tag">6 Templat · Bar Simbol =&gt; · JSON</span>
+            </div>
+            <h3>Belajar JS &amp; Berlatih DSA Luar Talian</h3>
+            <p>Kuasa algoritma JavaScript, tatasusunan fungsian dan manipulasi JSON di mana-mana dalam mod pesawat dengan autopelengkapan AST serta pemformatan 1 ketik.</p>
+            <div class="py-spoke-card__go">
+              <span>learn-javascript-dsa-android</span>
+              <span>Buka Panduan &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span>5 Panduan JS/Node Saling Berkaitan · ES2024 + 29 Modul Node Luar Talian Binaan Dalam</span>
+        <a class="link-arrow" href="javascript-ide.html">
+          <span>Hab IDE JavaScript &amp; Node</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="siteFooter">
+  <div class="container">
+    <div class="footer-cta" id="footerCta">
+      <div>
+        <h2 class="h2" data-i18n="cta_h2">Uji &amp; Audit Kriptografi JavaScript 100% Luar Talian.</h2>
+        <p data-i18n="cta_desc">Muat turun SuperCode IDE percuma di Google Play &#8212; dwi Web Crypto &amp; node:crypto, AES-256-GCM dan keselamatan terasing.</p>
+      </div>
+      <div class="footer-cta__btns">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=ms&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dms%26utm_campaign%3Dweb-php-studio%26utm_content%3Djavascript-web-crypto-security" target="_blank" rel="noopener" class="btn btn--gold">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="cta_btn">Dapatkan di Google Play</span>
+        </a>
+        <a href="https://supercode-ide.github.io/tutorial/?lang=ms&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+          <span data-i18n="cta_tutorial">Panduan Aplikasi</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+          <span>SuperCode</span>
+          <span class="brand__tag">IDE</span>
+        </a>
+        <p data-i18n="footer_tagline">Editor kod mudah alih asli dan studio pembangunan luar talian yang direka untuk jurutera, pelajar, dan pendidik Android di seluruh dunia.</p>
+        <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
+        <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=ms&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dms%26utm_campaign%3Dweb-php-studio%26utm_content%3Djavascript-web-crypto-security" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://supercode-ide.github.io/tutorial/?lang=ms&amp;ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">Panduan Aplikasi</span> &#8599;</a>
+          <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">Pilih Bahasa</span></button>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_core">Editor & Fail Besar</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Ringkasan</a></li>
+          <li><a href="code-editor.html" data-i18n="nav_code_editor">Editor Kod</a></li>
+          <li><a href="large-file-editor.html" data-i18n="nav_large_file">Fail Besar GB</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_lang">Pengkompil & Bahasa Luar Talian</h4>
+        <ul>
+          <li><a href="python-ide.html" data-i18n="nav_python_ide">IDE Python</a></li>
+          <li><a href="c-compiler.html" data-i18n="nav_c_compiler">Pengkompil C17</a></li>
+          <li><a href="cpp-ide.html" data-i18n="nav_cpp_ide">IDE C++20</a></li>
+          <li><a href="java-ide.html" data-i18n="nav_java_ide">IDE Java 17</a></li>
+          <li><a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a></li>
+          <li><a href="lua-ide.html" data-i18n="nav_lua_ide">Lua 5.4</a></li>
+          <li><a href="shell-ide.html" data-i18n="nav_shell_ide">Shell & Kotlin</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_devops">Web, SQL & DevOps Jarak Jauh</h4>
+        <ul>
+          <li><a href="web-ide.html" data-i18n="nav_web_ide">Web & PHP</a></li>
+          <li><a href="sql-ide.html" data-i18n="nav_sql_ide">Studio SQL</a></li>
+          <li><a href="git-client.html" data-i18n="nav_git_client">Git Visual</a></li>
+          <li><a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP & FTPS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <span>&copy; 2026 Phoenix Global Studios. All rights reserved.</span>
+      <span class="mono">com.phoenixglobal.supercodeeditor</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="mobile-bottom-bar" id="mobileBottomBar" aria-label="Quick App Actions">
+  <div class="dock-app-icon" aria-hidden="true"><svg><use href="#sc-logo"/></svg></div>
+  <div class="bottom-bar-info">
+    <div class="bottom-bar-title">SuperCode</div>
+    <div class="bottom-bar-sub"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  </div>
+  <div class="bottom-bar-actions">
+    <a href="https://supercode-ide.github.io/tutorial/?lang=ms&amp;ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">Panduan Aplikasi</a>
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=ms&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dms%26utm_campaign%3Dweb-php-studio%26utm_content%3Djavascript-web-crypto-security" target="_blank" rel="noopener" class="btn-play-mini">
+      <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
+      <span data-i18n="bottom_cta">Dapatkan</span>
+    </a>
+  </div>
+</aside>
+
+<div class="modal-overlay" id="langModal" role="dialog" aria-modal="true" aria-labelledby="langModalTitle">
+  <div class="lang-modal">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div class="modal-header">
+      <h3 id="langModalTitle"><span data-i18n="modal_title">Pilih Bahasa</span><span class="modal-lang-count">32</span></h3>
+      <button type="button" class="btn-close-modal" onclick="closeLangModal()" aria-label="Tutup">&#10005;</button>
+    </div>
+    <div class="lang-grid">
+      <button type="button" class="lang-option" data-code="en" onclick="setLanguage('en')"><span class="lang-option__name">English</span><span class="lang-option__code">EN</span></button>
+      <button type="button" class="lang-option" data-code="zh" onclick="setLanguage('zh')"><span class="lang-option__name">简体中文</span><span class="lang-option__code">简中</span></button>
+      <button type="button" class="lang-option" data-code="zh-tw" onclick="setLanguage('zh-tw')"><span class="lang-option__name">繁體中文</span><span class="lang-option__code">繁中</span></button>
+      <button type="button" class="lang-option" data-code="es" onclick="setLanguage('es')"><span class="lang-option__name">Español</span><span class="lang-option__code">ES</span></button>
+      <button type="button" class="lang-option" data-code="pt" onclick="setLanguage('pt')"><span class="lang-option__name">Português</span><span class="lang-option__code">PT</span></button>
+      <button type="button" class="lang-option" data-code="ja" onclick="setLanguage('ja')"><span class="lang-option__name">日本語</span><span class="lang-option__code">日本語</span></button>
+      <button type="button" class="lang-option" data-code="ko" onclick="setLanguage('ko')"><span class="lang-option__name">한국어</span><span class="lang-option__code">한국어</span></button>
+      <button type="button" class="lang-option" data-code="de" onclick="setLanguage('de')"><span class="lang-option__name">Deutsch</span><span class="lang-option__code">DE</span></button>
+      <button type="button" class="lang-option" data-code="fr" onclick="setLanguage('fr')"><span class="lang-option__name">Français</span><span class="lang-option__code">FR</span></button>
+      <button type="button" class="lang-option" data-code="ru" onclick="setLanguage('ru')"><span class="lang-option__name">Русский</span><span class="lang-option__code">RU</span></button>
+      <button type="button" class="lang-option" data-code="hi" onclick="setLanguage('hi')"><span class="lang-option__name">हिन्दी</span><span class="lang-option__code">HI</span></button>
+      <button type="button" class="lang-option" data-code="id" onclick="setLanguage('id')"><span class="lang-option__name">Bahasa Indonesia</span><span class="lang-option__code">ID</span></button>
+      <button type="button" class="lang-option" data-code="it" onclick="setLanguage('it')"><span class="lang-option__name">Italiano</span><span class="lang-option__code">IT</span></button>
+      <button type="button" class="lang-option" data-code="vi" onclick="setLanguage('vi')"><span class="lang-option__name">Tiếng Việt</span><span class="lang-option__code">VI</span></button>
+      <button type="button" class="lang-option" data-code="th" onclick="setLanguage('th')"><span class="lang-option__name">ไทย</span><span class="lang-option__code">ไทย</span></button>
+      <button type="button" class="lang-option" data-code="tr" onclick="setLanguage('tr')"><span class="lang-option__name">Türkçe</span><span class="lang-option__code">TR</span></button>
+      <button type="button" class="lang-option" data-code="ar" onclick="setLanguage('ar')"><span class="lang-option__name">العربية</span><span class="lang-option__code">AR</span></button>
+      <button type="button" class="lang-option" data-code="pl" onclick="setLanguage('pl')"><span class="lang-option__name">Polski</span><span class="lang-option__code">PL</span></button>
+      <button type="button" class="lang-option" data-code="nl" onclick="setLanguage('nl')"><span class="lang-option__name">Nederlands</span><span class="lang-option__code">NL</span></button>
+      <button type="button" class="lang-option" data-code="sv" onclick="setLanguage('sv')"><span class="lang-option__name">Svenska</span><span class="lang-option__code">SV</span></button>
+      <button type="button" class="lang-option" data-code="nb" onclick="setLanguage('nb')"><span class="lang-option__name">Norsk Bokmål</span><span class="lang-option__code">NB</span></button>
+      <button type="button" class="lang-option" data-code="da" onclick="setLanguage('da')"><span class="lang-option__name">Dansk</span><span class="lang-option__code">DA</span></button>
+      <button type="button" class="lang-option" data-code="fi" onclick="setLanguage('fi')"><span class="lang-option__name">Suomi</span><span class="lang-option__code">FI</span></button>
+      <button type="button" class="lang-option" data-code="cs" onclick="setLanguage('cs')"><span class="lang-option__name">Čeština</span><span class="lang-option__code">CS</span></button>
+      <button type="button" class="lang-option" data-code="uk" onclick="setLanguage('uk')"><span class="lang-option__name">Українська</span><span class="lang-option__code">UK</span></button>
+      <button type="button" class="lang-option" data-code="ro" onclick="setLanguage('ro')"><span class="lang-option__name">Română</span><span class="lang-option__code">RO</span></button>
+      <button type="button" class="lang-option" data-code="hu" onclick="setLanguage('hu')"><span class="lang-option__name">Magyar</span><span class="lang-option__code">HU</span></button>
+      <button type="button" class="lang-option" data-code="el" onclick="setLanguage('el')"><span class="lang-option__name">Ελληνικά</span><span class="lang-option__code">EL</span></button>
+      <button type="button" class="lang-option" data-code="he" onclick="setLanguage('he')"><span class="lang-option__name">עברית</span><span class="lang-option__code">HE</span></button>
+      <button type="button" class="lang-option active" data-code="ms" onclick="setLanguage('ms')"><span class="lang-option__name">Bahasa Melayu</span><span class="lang-option__code">MS</span></button>
+      <button type="button" class="lang-option" data-code="tl" onclick="setLanguage('tl')"><span class="lang-option__name">Filipino</span><span class="lang-option__code">FIL</span></button>
+      <button type="button" class="lang-option" data-code="bn" onclick="setLanguage('bn')"><span class="lang-option__name">বাংলা</span><span class="lang-option__code">BN</span></button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var WORKBENCH_SAMPLES = {"aes": {"label": "js-crypto-sandbox/aes_gcm_vault.mjs \u2014 AES-256-GCM + PBKDF2 Offline", "status": "node:crypto \u00b7 AES-256-GCM", "lines": ["<span class=\"tok-kw\">import<\/span> crypto <span class=\"tok-kw\">from<\/span> <span class=\"tok-str\">&quot;node:crypto&quot;<\/span>;", "", "<span class=\"tok-kw\">const<\/span> key = crypto.<span class=\"tok-fn\">pbkdf2Sync<\/span>(<span class=\"tok-str\">&quot;passphrase-99&quot;<\/span>, <span class=\"tok-str\">&quot;salt-v3&quot;<\/span>, <span class=\"tok-num\">100000<\/span>, <span class=\"tok-num\">32<\/span>, <span class=\"tok-str\">&quot;sha256&quot;<\/span>);", "<span class=\"tok-kw\">const<\/span> iv = crypto.<span class=\"tok-fn\">randomBytes<\/span>(<span class=\"tok-num\">12<\/span>);", "<span class=\"tok-kw\">const<\/span> cipher = crypto.<span class=\"tok-fn\">createCipheriv<\/span>(<span class=\"tok-str\">&quot;aes-256-gcm&quot;<\/span>, key, iv);", "<span class=\"tok-kw\">const<\/span> enc = Buffer.<span class=\"tok-fn\">concat<\/span>([cipher.<span class=\"tok-fn\">update<\/span>(<span class=\"tok-str\">&quot;API_SECRET_42&quot;<\/span>, <span class=\"tok-str\">&quot;utf8&quot;<\/span>), cipher.<span class=\"tok-fn\">final<\/span>()]);", "<span class=\"tok-kw\">const<\/span> tag = cipher.<span class=\"tok-fn\">getAuthTag<\/span>();", "console.<span class=\"tok-fn\">log<\/span>(<span class=\"tok-str\">&quot;Ciphertext hex:&quot;<\/span>, enc.<span class=\"tok-fn\">toString<\/span>(<span class=\"tok-str\">&quot;hex&quot;<\/span>), <span class=\"tok-str\">&quot;| TagB:&quot;<\/span>, tag.length);"], "output": ["<span class=\"term-prompt\">$<\/span> node aes_gcm_vault.mjs", "Ciphertext hex: 7b4e91c02f18a43e89b211c50a | TagB: 16", "<span class=\"term-info\">[100% air-gapped AES-256-GCM authenticated encryption &amp; PBKDF2 on device]<\/span>"]}, "hmac": {"label": "js-crypto-sandbox/jwt_hmac_verify.js \u2014 HMAC-SHA256 & timingSafeEqual", "status": "Constant-Time HMAC Guard", "lines": ["<span class=\"tok-kw\">const<\/span> crypto = <span class=\"tok-fn\">require<\/span>(<span class=\"tok-str\">&quot;node:crypto&quot;<\/span>);", "", "<span class=\"tok-kw\">const<\/span> body = JSON.<span class=\"tok-fn\">stringify<\/span>({ sub: <span class=\"tok-str\">&quot;u_104&quot;<\/span>, role: <span class=\"tok-str\">&quot;admin&quot;<\/span> });", "<span class=\"tok-kw\">const<\/span> payload = Buffer.<span class=\"tok-fn\">from<\/span>(body).<span class=\"tok-fn\">toString<\/span>(<span class=\"tok-str\">&quot;base64url&quot;<\/span>);", "<span class=\"tok-kw\">const<\/span> sigA = crypto.<span class=\"tok-fn\">createHmac<\/span>(<span class=\"tok-str\">&quot;sha256&quot;<\/span>, <span class=\"tok-str\">&quot;k_live_secret&quot;<\/span>).<span class=\"tok-fn\">update<\/span>(payload).<span class=\"tok-fn\">digest<\/span>();", "<span class=\"tok-kw\">const<\/span> sigB = Buffer.<span class=\"tok-fn\">from<\/span>(sigA);", "<span class=\"tok-kw\">const<\/span> valid = sigA.length === sigB.length &amp;&amp; crypto.<span class=\"tok-fn\">timingSafeEqual<\/span>(sigA, sigB);", "console.<span class=\"tok-fn\">log<\/span>(<span class=\"tok-str\">&quot;JWT segment:&quot;<\/span>, payload, <span class=\"tok-str\">&quot;| Verified:&quot;<\/span>, valid);"], "output": ["JWT segment: eyJzdWIiOiJ1XzEwNCIsInJvbGUiOiJhZG1pbiJ9 | Verified: true", "<span class=\"term-info\">[Audit webhook signatures &amp; JWT HMACs locally without pasting secrets online]<\/span>"]}, "subtle": {"label": "js-crypto-sandbox/webcrypto_subtle.mjs \u2014 W3C crypto.subtle & randomUUID", "status": "Web Crypto \u00b7 SHA-512", "lines": ["<span class=\"tok-kw\">const<\/span> id = crypto.<span class=\"tok-fn\">randomUUID<\/span>();", "<span class=\"tok-kw\">const<\/span> bytes = <span class=\"tok-kw\">new<\/span> <span class=\"tok-fn\">TextEncoder<\/span>().<span class=\"tok-fn\">encode<\/span>(<span class=\"tok-str\">&quot;supercode-offline-audit&quot;<\/span>);", "<span class=\"tok-kw\">const<\/span> digestBuf = <span class=\"tok-kw\">await<\/span> crypto.subtle.<span class=\"tok-fn\">digest<\/span>(<span class=\"tok-str\">&quot;SHA-512&quot;<\/span>, bytes);", "<span class=\"tok-kw\">const<\/span> hex = Buffer.<span class=\"tok-fn\">from<\/span>(digestBuf).<span class=\"tok-fn\">toString<\/span>(<span class=\"tok-str\">&quot;hex&quot;<\/span>).<span class=\"tok-fn\">slice<\/span>(<span class=\"tok-num\">0<\/span>, <span class=\"tok-num\">24<\/span>);", "console.<span class=\"tok-fn\">log<\/span>(<span class=\"tok-str\">&quot;UUID:&quot;<\/span>, id);", "console.<span class=\"tok-fn\">log<\/span>(<span class=\"tok-str\">&quot;SHA-512[:24]:&quot;<\/span>, hex);"], "output": ["UUID: 3f9a61e0-8c14-4b72-9d31-52c8e0f19a44", "SHA-512[:24]: a4f0917e62bc381d5c09ab12", "<span class=\"term-info\">\u2713 Supports both globalThis.crypto.subtle and node:crypto in one workspace<\/span>"]}};
+    var currentTab = 'aes';
+    var runTimer = null;
+
+    function renderWorkbench(tabKey, animateRun) {
+      var sample = WORKBENCH_SAMPLES[tabKey] || WORKBENCH_SAMPLES['aes'];
+      if (!sample) { return; }
+      currentTab = tabKey;
+      var labelEl = document.getElementById('ide-compiler-label');
+      if (labelEl) { labelEl.textContent = sample.label; }
+      var statusEl = document.getElementById('wbStatusLang');
+      if (statusEl) { statusEl.textContent = sample.status; }
+
+      var tabs = document.querySelectorAll('.ide-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        var active = tabs[i].getAttribute('data-tab') === tabKey;
+        tabs[i].classList.toggle('active', active);
+        tabs[i].setAttribute('aria-selected', active ? 'true' : 'false');
+      }
+      var files = document.querySelectorAll('.wb-file');
+      for (var f = 0; f < files.length; f++) {
+        files[f].classList.toggle('active', files[f].getAttribute('data-tab') === tabKey);
+      }
+
+      var codeBox = document.getElementById('ide-code-box');
+      if (codeBox) {
+        var html = '';
+        for (var l = 0; l < sample.lines.length; l++) {
+          var activeCls = (l === sample.lines.length - 1) ? ' active-line' : '';
+          html += '<div class="code-line' + activeCls + '"><span class="ln">' + (l + 1) + '</span><span class="code-content">' + sample.lines[l] + '</span></div>';
+        }
+        codeBox.innerHTML = html;
+      }
+
+      if (animateRun) {
+        runWorkbenchSample();
+      }
+    }
+
+    function runWorkbenchSample() {
+      var sample = WORKBENCH_SAMPLES[currentTab] || WORKBENCH_SAMPLES['aes'];
+      var drawer = document.getElementById('ide-terminal-drawer');
+      var out = document.getElementById('ide-term-output');
+      var badge = document.getElementById('ide-exec-status');
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (!drawer || !out || !sample) { return; }
+
+      if (runTimer) { clearTimeout(runTimer); }
+      drawer.classList.add('is-open');
+      if (runBtn) { runBtn.classList.add('is-running'); }
+      if (badge) { badge.textContent = 'Running...'; badge.classList.remove('done'); }
+      out.innerHTML = '';
+
+      var idx = 0;
+      function step() {
+        if (idx < sample.output.length) {
+          var row = document.createElement('span');
+          row.className = 'term-line-item';
+          row.innerHTML = sample.output[idx];
+          out.appendChild(row);
+          idx++;
+          runTimer = setTimeout(step, 80);
+        } else {
+          var cur = document.createElement('span');
+          cur.className = 'term-cursor';
+          cur.textContent = '\u258b';
+          out.appendChild(cur);
+          if (badge) { badge.textContent = 'Completed'; badge.classList.add('done'); }
+          if (runBtn) { runBtn.classList.remove('is-running'); }
+        }
+      }
+      step();
+    }
+
+    function initNavigationAndSmartBar() {
+      var menuBtn = document.getElementById('menuBtn');
+      var drawer = document.getElementById('siteDrawer');
+      var bar = document.getElementById('mobileBottomBar');
+      var heroCta = document.getElementById('heroCta');
+      var siteFooter = document.getElementById('siteFooter');
+
+      function syncBar() {
+        if (!bar) { return; }
+        var drawerOpen = Boolean(drawer && !drawer.hasAttribute('hidden'));
+        var modalEl = document.getElementById('langModal');
+        var modalOpen = Boolean(modalEl && modalEl.classList.contains('show'));
+        var vh = window.innerHeight || document.documentElement.clientHeight || 800;
+        var heroInView = false;
+        if (heroCta) {
+          var hr = heroCta.getBoundingClientRect();
+          heroInView = (hr.bottom > 0 && hr.top < vh);
+        }
+        var footerInView = false;
+        if (siteFooter) {
+          var fr = siteFooter.getBoundingClientRect();
+          footerInView = (fr.top < vh + 24);
+        }
+        var scrollYVal = window.pageYOffset || window.scrollY || 0;
+        var docH = Math.max(document.body ? document.body.scrollHeight : 0, document.documentElement ? document.documentElement.scrollHeight : 0);
+        var nearBottom = (vh + scrollYVal) >= (docH - 120);
+        var shouldShow = !drawerOpen && !modalOpen && !heroInView && !footerInView && !nearBottom;
+        bar.classList.toggle('is-visible', shouldShow);
+      }
+
+      window.__supercodeSyncMobileBar = syncBar;
+
+      function setDrawer(open) {
+        if (!menuBtn || !drawer) { return; }
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { drawer.removeAttribute('hidden'); }
+        else { drawer.setAttribute('hidden', ''); }
+        syncBar();
+      }
+      if (menuBtn && drawer) {
+        menuBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          setDrawer(menuBtn.getAttribute('aria-expanded') !== 'true');
+        });
+        drawer.addEventListener('click', function (e) {
+          if (e.target && e.target.closest('a')) { setDrawer(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!drawer.hasAttribute('hidden') && !drawer.contains(e.target) && e.target !== menuBtn && !menuBtn.contains(e.target)) {
+            setDrawer(false);
+          }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') { setDrawer(false); }
+        });
+      }
+
+      if (bar) {
+        window.addEventListener('scroll', syncBar, { passive: true });
+        window.addEventListener('resize', syncBar);
+        syncBar();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var tabBtns = document.querySelectorAll('.ide-tab, .wb-file');
+      for (var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', function () {
+          renderWorkbench(this.getAttribute('data-tab'), true);
+        });
+      }
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (runBtn) { runBtn.addEventListener('click', function () { runWorkbenchSample(); }); }
+      var closeTerm = document.getElementById('btn-close-term');
+      if (closeTerm) {
+        closeTerm.addEventListener('click', function () {
+          var d = document.getElementById('ide-terminal-drawer');
+          if (d) { d.classList.remove('is-open'); }
+        });
+      }
+      initNavigationAndSmartBar();
+      renderWorkbench('aes', false);
+    });
+  })();
+</script>
+<script>window.__SUPERCODE_STATIC_LANG__="ms";window.__SUPERCODE_STATIC_CANONICAL__="https://supercode-ide.github.io/ms/javascript-web-crypto-security.html";</script>
+<script src="../i18n_extended.js"></script>
+</body>
+</html>

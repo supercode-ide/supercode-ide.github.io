@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090A0F">
+  <meta name="color-scheme" content="only dark">
+  <meta name="supported-color-schemes" content="dark">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <title>在 Android 離線學 C++ — 適合初學者與資工系的免費 C++20 寫碼 App | SuperCode</title>
+  <meta name="description" content="免註冊即可在 Android 離線學習與練習 C++20。內含 8 個單檔 + 21 套多檔 C++ 範本、21 鍵 C++ 符號列 (::, -&gt;, &lt;&lt;, &gt;&gt;)、錯誤雷達、一鍵格式化與 A4 PDF 匯出。">
+  <meta name="keywords" content="learn c++ offline app android, c++ coding app for beginners, practice c++ data structures on phone, free c++ compiler for students android, c++ homework pdf app">
+  <meta name="author" content="Phoenix Global Studios">
+  <meta name="google-play-app" content="app-id=com.phoenixglobal.supercodeeditor">
+
+  <link id="canonical-link" rel="canonical" href="https://supercode-ide.github.io/zh-tw/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="x-default" href="https://supercode-ide.github.io/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="en" href="https://supercode-ide.github.io/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://supercode-ide.github.io/zh/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://supercode-ide.github.io/zh-tw/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="es" href="https://supercode-ide.github.io/es/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://supercode-ide.github.io/pt/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="ja" href="https://supercode-ide.github.io/ja/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="ko" href="https://supercode-ide.github.io/ko/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="de" href="https://supercode-ide.github.io/de/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="fr" href="https://supercode-ide.github.io/fr/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="ru" href="https://supercode-ide.github.io/ru/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="hi" href="https://supercode-ide.github.io/hi/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="id" href="https://supercode-ide.github.io/id/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="it" href="https://supercode-ide.github.io/it/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="vi" href="https://supercode-ide.github.io/vi/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="th" href="https://supercode-ide.github.io/th/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="tr" href="https://supercode-ide.github.io/tr/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="ar" href="https://supercode-ide.github.io/ar/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="pl" href="https://supercode-ide.github.io/pl/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="nl" href="https://supercode-ide.github.io/nl/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="sv" href="https://supercode-ide.github.io/sv/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="nb" href="https://supercode-ide.github.io/nb/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="da" href="https://supercode-ide.github.io/da/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="fi" href="https://supercode-ide.github.io/fi/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="cs" href="https://supercode-ide.github.io/cs/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="uk" href="https://supercode-ide.github.io/uk/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="ro" href="https://supercode-ide.github.io/ro/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="hu" href="https://supercode-ide.github.io/hu/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="el" href="https://supercode-ide.github.io/el/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="he" href="https://supercode-ide.github.io/he/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="ms" href="https://supercode-ide.github.io/ms/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="fil" href="https://supercode-ide.github.io/tl/learn-cpp-offline-android.html">
+  <link rel="alternate" hreflang="bn" href="https://supercode-ide.github.io/bn/learn-cpp-offline-android.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
+  <meta property="og:title" content="在 Android 離線學 C++ — 適合初學者與資工系的免費 C++20 寫碼 App | SuperCode">
+  <meta property="og:description" content="免註冊即可在 Android 離線學習與練習 C++20。內含 8 個單檔 + 21 套多檔 C++ 範本、21 鍵 C++ 符號列 (::, -&gt;, &lt;&lt;, &gt;&gt;)、錯誤雷達、一鍵格式化與 A4 PDF 匯出。">
+  <meta property="og:url" content="https://supercode-ide.github.io/zh-tw/learn-cpp-offline-android.html">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-hero-zh-tw.png">
+  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-hero-zh-tw.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="本機 C17 與 C++20 多檔編譯器">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-hero-zh-tw.png">
+  <meta name="twitter:title" content="在 Android 離線學 C++ — 適合初學者與資工系的免費 C++20 寫碼 App | SuperCode">
+  <meta name="twitter:description" content="免註冊即可在 Android 離線學習與練習 C++20。內含 8 個單檔 + 21 套多檔 C++ 範本、21 鍵 C++ 符號列 (::, -&gt;, &lt;&lt;, &gt;&gt;)、錯誤雷達、一鍵格式化與 A4 PDF 匯出。">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <script>if(/SamsungBrowser/i.test(navigator.userAgent)){document.documentElement.classList.add('is-samsung');}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "SoftwareApplication",
+        "MobileApplication",
+        "WebApplication"
+      ],
+      "@id": "https://supercode-ide.github.io/#supercode-app",
+      "name": "Code Editor: SuperCode IDE",
+      "alternateName": [
+        "Learn C++ Offline App Android",
+        "C++ Coding App for Beginners",
+        "Practice C++ Data Structures on Phone"
+      ],
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Free Offline C++20 Coding App for Beginners, Students & CS Majors on Android",
+      "inLanguage": "zh-Hant",
+      "fileSize": "40.2MB",
+      "softwareVersion": "1.55.05",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=zh-TW&listing=c-cpp-compiler",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=zh-TW&listing=c-cpp-compiler",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=zh-TW"
+      ],
+      "potentialAction": [
+        {
+          "@type": "InstallAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=zh-TW&listing=c-cpp-compiler",
+            "actionPlatform": [
+              "http://schema.org/AndroidPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          }
+        },
+        {
+          "@type": "ViewAction",
+          "name": "使用指南",
+          "target": [
+            "https://supercode-ide.github.io/tutorial/?lang=zh-tw",
+            "android-app://com.phoenixglobal.supercodeeditor/https/supercode-ide.github.io/tutorial"
+          ]
+        }
+      ],
+      "identifier": "com.phoenixglobal.supercodeeditor",
+      "url": "https://supercode-ide.github.io/zh-tw/learn-cpp-offline-android.html",
+      "screenshot": [
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/02_cpp20_compiler.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/01_python_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/03_web_php_devtools.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/04_file_manager_tree.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/05_sql_sqlite_studio.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/06_java17_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/07_visual_git_timemachine.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/08_symbol_keyboard_themes.webp"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Phoenix Global Studios",
+        "url": "https://supercode-ide.github.io/zh-tw/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "66"
+      },
+      "featureList": [
+        "Zero login wall and 100% airplane-mode C++20 compilation for commutes, classrooms, and dorms",
+        "29 built-in runnable examples: 8 single-file C++ snippets plus 21 multi-file OOP/CMake starter projects",
+        "21-key swipe-up C++ symbol bar (::, ->, <<, >>, {}, [], ;, #include) tailored for touchscreen typing",
+        "Real-time syntax Error Radar plus clickable compiler line diagnostics for fast beginner debugging",
+        "1-tap offline C++ code formatter with single-step Undo to keep loops and classes cleanly indented",
+        "Native syntax-highlighted A4 PDF homework export for high-school AP/IB and university CS labs"
+      ],
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-zh-tw.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://supercode-ide.github.io/zh-tw/learn-cpp-offline-android.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SuperCode IDE",
+          "item": "https://supercode-ide.github.io/zh-tw/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "C++20 編譯器與 IDE 中心",
+          "item": "https://supercode-ide.github.io/zh-tw/cpp-ide.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "離線學習 C++",
+          "item": "https://supercode-ide.github.io/zh-tw/learn-cpp-offline-android.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Your First 5 Minutes Learning C++ in SuperCode",
+      "description": "No paths, compilers, or environment variables to configure—just open and code.",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Pick One of 8 Snippets or 21 Starter Projects",
+          "text": "Open a working C++ example or create main.cpp inside any local folder—zero login required.",
+          "url": "https://supercode-ide.github.io/learn-cpp-offline-android.html#step1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Write Code Comfortably With the 21-Key C++ Bar",
+          "text": "Insert std::cout <<, std::cin >>, braces, and semicolons rapidly while Error Radar watches for typos.",
+          "url": "https://supercode-ide.github.io/learn-cpp-offline-android.html#step2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Test Live std::cin Input Offline",
+          "text": "Enter numbers and strings interactively in the console and see unbuffered prompts and outputs immediately.",
+          "url": "https://supercode-ide.github.io/learn-cpp-offline-android.html#step3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Format Indentation & Share A4 PDF Lab Work",
+          "text": "Beautify your C++ code in one tap and export a syntax-highlighted A4 PDF for your instructor or LMS.",
+          "url": "https://supercode-ide.github.io/learn-cpp-offline-android.html#step4"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://supercode-ide.github.io/learn-cpp-offline-android.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "在 SuperCode 開始學 C++ 需要筆電或寫程式經驗嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "完全不需要筆電或任何環境設定經驗。SuperCode 會自動配置整套 C++20 編譯器—只要輕觸 8 個初學者 C++ 範例之一、按下執行，就能一步步修改程式碼並實驗結果。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "我可以用手機練習大學資料結構（鏈結串列、樹、圖、雜湊表）嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以！無論是手刻原始指標/類別資料結構（鏈結串列、二元搜尋樹、堆積、字典樹），或是完整的 C++20 STL 容器（`vector`、`stack`、`queue`、`unordered_map`、`priority_queue`），都能 100% 離線執行。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "如何將 `.cpp` 作業繳交到 Canvas、Blackboard 或 Google Classroom？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "你可以直接從 Android 專案資料夾分享 `.cpp`/`.hpp` 檔案、透過視覺化 Git 推送至 GitHub，或輕觸「匯出 PDF」產生整潔且具語法高亮的 A4 PDF 文件。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "我也能在同一款 App 執行 C、Python、Java 與 SQL 來應付其他資工系課程嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以。SuperCode 在僅 40.2 MB 的輕巧 Android 工作坊中，內建 C17、C++20、Python 3.11/3.12、Java 17、JavaScript、Lua 5.4、PHP/Web 與 SQLite 的專屬離線環境。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-page="cpp_learn">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="sc-logo" viewBox="20 14 68 72">
+    <path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/>
+    <path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/>
+    <path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/>
+    <path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+  </symbol>
+  <symbol id="gp-prism" viewBox="0 0 24 24">
+    <path fill="#4285F4" d="M3.6,2.4C3.3,2.7,3.1,3.2,3.1,3.8v16.4c0,0.6,0.2,1.1,0.5,1.4l0.1,0.1L12.9,12v-0.2L3.7,2.3L3.6,2.4z"/>
+    <path fill="#34A853" d="M16,15.1l-3.1-3.1v-0.2L16,8.7l0.1,0.1l3.6,2.1c1,0.6,1,1.5,0,2.1l-3.6,2.1L16,15.1z"/>
+    <path fill="#FBBC05" d="M16.1,15.1L12.9,12L3.6,21.3c0.3,0.4,0.9,0.4,1.6,0.1L16.1,15.1z"/>
+    <path fill="#EA4335" d="M16.1,8.9L5.2,2.6C4.5,2.2,3.9,2.3,3.6,2.7L12.9,12L16.1,8.9z"/>
+  </symbol>
+  <symbol id="i-ne" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8 20 7.2v9.6L12 21.2 4 16.8V7.2z"/><path d="M4 7.2l8 4.4 8-4.4M12 11.6v9.6"/></g></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2.8v3.2M15 2.8v3.2M9 18v3.2M15 18v3.2M2.8 9H6M2.8 15H6M18 9h3.2M18 15h3.2"/></g></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 2.8 7.8 12 12.6l9.2-4.8z"/><path d="m2.8 12 9.2 4.8 9.2-4.8"/><path d="m2.8 16.2 9.2 4.8 9.2-4.8"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="M2.8 8.5h18.4"/><path d="m9.5 12.5-2.2 2.2 2.2 2.2M14.5 12.5l2.2 2.2-2.2 2.2"/></g></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5.6" rx="7.6" ry="2.8"/><path d="M4.4 5.6v12.8c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8V5.6"/><path d="M4.4 12c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8"/></g></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="m7.2 9.5 3 2.5-3 2.5M12.8 15h4"/></g></symbol>
+  <symbol id="i-git" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.3"/><circle cx="6" cy="18" r="2.3"/><circle cx="18" cy="12" r="2.3"/><path d="M6 8.3v7.4M8.3 6h4.2a3.5 3.5 0 0 1 3.5 3.5v.2"/></g></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5h11a4 4 0 0 0 .7-7.94A5.5 5.5 0 0 0 7.4 9.2 3.8 3.8 0 0 0 6.5 18.5z"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M13 2.8 4.8 13.2h6.3L10.2 21.2 19.2 10.6h-6.4z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 2.8 4.8 5.8v5.6c0 5 3.1 8.5 7.2 9.8 4.1-1.3 7.2-4.8 7.2-9.8V5.8z"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="index.html" class="brand" aria-label="SuperCode IDE Home">
+      <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+      <span>SuperCode</span>
+      <span class="brand__tag">IDE</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary Workspaces">
+      <a href="code-editor.html" data-i18n="nav_code_editor">程式碼編輯器</a>
+      <a href="large-file-editor.html" data-i18n="nav_large_file">GB 級大檔案</a>
+      <a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a>
+      <a href="c-compiler.html" data-i18n="nav_c_compiler">C17 編譯器</a>
+      <a href="cpp-ide.html" class="is-current" data-i18n="nav_cpp_ide">C++20 IDE</a>
+      <a href="java-ide.html" data-i18n="nav_java_ide">Java 17 IDE</a>
+      <a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a>
+      <a href="web-ide.html" data-i18n="nav_web_ide">Web 與 PHP</a>
+      <a href="sql-ide.html" data-i18n="nav_sql_ide">SQL 工作室</a>
+      <a href="git-client.html" data-i18n="nav_git_client">視覺化 Git</a>
+      <a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP 與 FTPS</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button id="langModalBtn" class="btn-lang-trigger" type="button" onclick="openLangModal()" aria-label="Select Language">
+        <svg class="lang-globe-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span id="langTriggerText">繁中</span>
+        <span class="lang-chevron" aria-hidden="true">&#9662;</span>
+      </button>
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-TW&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh-tw%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dlearn-cpp-offline-android" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+        <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+        <span data-i18n="nav_cta">Google Play</span>
+      </a>
+      <a href="index.html" class="btn-home-icon" aria-label="Home" title="Home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5"/>
+          <path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
+        </svg>
+      </a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteDrawer" aria-label="All Pages Directory">
+        <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 8.5h16M4 15.5h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-drawer" id="siteDrawer" hidden>
+  <nav class="container menu-drawer__inner" aria-label="All SuperCode Pages">
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_core">編輯器與大檔案</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="index.html"><span data-i18n="nav_home">總覽</span><span class="mono">01</span></a>
+        <a class="menu-drawer__link" href="code-editor.html"><span data-i18n="nav_code_editor">程式碼編輯器</span><span class="mono">02</span></a>
+        <a class="menu-drawer__link" href="large-file-editor.html"><span data-i18n="nav_large_file">GB 級大檔案</span><span class="mono">03</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_lang">離線編譯器與語言</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="python-ide.html"><span data-i18n="nav_python_ide">Python IDE</span><span class="mono">04</span></a>
+        <a class="menu-drawer__link" href="c-compiler.html"><span data-i18n="nav_c_compiler">C17 編譯器</span><span class="mono">05</span></a>
+        <a class="menu-drawer__link is-current" href="cpp-ide.html"><span data-i18n="nav_cpp_ide">C++20 IDE</span><span class="mono">06</span></a>
+        <a class="menu-drawer__link" href="java-ide.html"><span data-i18n="nav_java_ide">Java 17 IDE</span><span class="mono">07</span></a>
+        <a class="menu-drawer__link" href="javascript-ide.html"><span data-i18n="nav_js_ide">JavaScript</span><span class="mono">08</span></a>
+        <a class="menu-drawer__link" href="lua-ide.html"><span data-i18n="nav_lua_ide">Lua 5.4</span><span class="mono">09</span></a>
+        <a class="menu-drawer__link" href="shell-ide.html"><span data-i18n="nav_shell_ide">Shell 與 Kotlin</span><span class="mono">10</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_devops">網頁、SQL 與遠端維運</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="web-ide.html"><span data-i18n="nav_web_ide">Web 與 PHP</span><span class="mono">11</span></a>
+        <a class="menu-drawer__link" href="sql-ide.html"><span data-i18n="nav_sql_ide">SQL 工作室</span><span class="mono">12</span></a>
+        <a class="menu-drawer__link" href="git-client.html"><span data-i18n="nav_git_client">視覺化 Git</span><span class="mono">13</span></a>
+        <a class="menu-drawer__link" href="sftp-client.html"><span data-i18n="nav_sftp_client">SFTP 與 FTPS</span><span class="mono">14</span></a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<main id="top">
+  <!-- ==================== 01 · EDITORIAL HERO & INTERACTIVE WORKBENCH ==================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <div class="py-hub-crumb"><a href="cpp-ide.html"><span class="crumb-arrow" aria-hidden="true">&larr;</span> C++20 編譯器與 IDE 中心</a><span class="sep">/</span><span>離線學習 C++</span></div>
+          <div class="trust-pill">
+            <span class="trust-pill__score"><span data-play-rating>4.9</span> &#9733;</span>
+            <span data-i18n="hero_tag">免登入 &#183; 100% 飛航模式 C++20 &#183; 29 套入門範本</span>
+          </div>
+
+          <h1 class="hero-h1" data-i18n="hero_h1">在 Android <span class="text-gradient">離線學習與練習 C++</span> &#8212; 零設定即寫即跑。</h1>
+
+          <p class="hero-lead" data-i18n="hero_desc">告別選擇題遊戲化玩具與帳號付費牆。使用 <strong>29 套可執行入門範本</strong>、<strong>21 鍵 C++ 符號列 (<code>::</code>、<code>-&gt;</code>、<code>&lt;&lt;</code>、<code>&gt;&gt;</code>)</strong>、<strong>錯誤雷達</strong>與 <strong>A4 PDF 作業匯出</strong>，<strong>100% 離線</strong>撰寫、編譯與除錯真正的 <strong>C++20 程式</strong>。</p>
+
+          <div class="hero__cta" id="heroCta">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-TW&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh-tw%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dlearn-cpp-offline-android" target="_blank" rel="noopener" class="btn btn--gold">
+              <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+              <span data-i18n="cta_btn">前往 Google Play 下載</span>
+            </a>
+            <a href="https://supercode-ide.github.io/tutorial/?lang=zh-tw&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+              <span data-i18n="cta_tutorial">使用指南</span>
+              <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <dl class="specs" aria-label="Key Specifications">
+          <div class="spec"><dt>0</dt><dd data-i18n="cpp4_s1">免登入免 Wi-Fi</dd></div>
+          <div class="spec"><dt>29</dt><dd data-i18n="cpp4_s2">8 範例 + 21 專案</dd></div>
+          <div class="spec"><dt>21-Key</dt><dd data-i18n="cpp4_s3">:: -&gt; &lt;&lt; &gt;&gt; {} 符號列</dd></div>
+          <div class="spec"><dt>A4</dt><dd data-i18n="cpp4_s4">PDF 實驗匯出</dd></div>
+        </dl>
+      </div>
+
+      <div class="wb-caption">
+        <div class="sec-index" style="margin-bottom:0">
+          <span class="num">01</span>
+          <span class="rule"></span>
+          <span data-i18n="wb_eyebrow">從入門到資工專業的離線 C++20 學習工作台</span>
+        </div>
+        <span class="wb-caption__hint mono">Live std::cin &#183; Classes &amp; OOP &#183; Data Structures &#183; A4 PDF Export</span>
+      </div>
+
+      <div class="ide-workbench">
+        <div class="wb-titlebar">
+          <div class="wb-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="wb-title" id="ide-compiler-label">learn-cpp-cs101/01_hello_cin.cpp &#8212; Zero-Login Airplane-Mode C++</div>
+          <button type="button" class="wb-run" id="btn-run-sandbox">
+            <span class="wb-run__tri" aria-hidden="true">&#9654;</span>
+            <span data-i18n="btn_run">執行範例</span>
+          </button>
+        </div>
+
+        <div class="wb-tabs" role="tablist" aria-label="Interactive Workspace Tabs">
+          <button type="button" class="ide-tab active" data-tab="basics" role="tab" aria-selected="true"><i></i>01_hello_cin.cpp</button>
+          <button type="button" class="ide-tab" data-tab="oop" role="tab" aria-selected="false"><i></i>02_oop_class.cpp</button>
+          <button type="button" class="ide-tab" data-tab="dsa" role="tab" aria-selected="false"><i></i>03_bst_homework.cpp</button>
+        </div>
+
+        <div class="wb-body">
+          <aside class="wb-explorer" aria-label="Project Explorer">
+            <div class="wb-explorer__head">Explorer</div>
+            <div class="wb-folder">&#9662; learn-cpp-cs101</div>
+            <button type="button" class="wb-file active" data-tab="basics"><b>101</b><span>01_hello_cin.cpp</span></button>
+            <button type="button" class="wb-file" data-tab="oop"><b>OOP</b><span>02_oop_class.cpp</span></button>
+            <button type="button" class="wb-file" data-tab="dsa"><b>DSA</b><span>03_bst_homework.cpp</span></button>
+          </aside>
+
+          <div class="wb-main">
+            <div class="ide-editor-body" id="ide-code-box" role="region" aria-label="Interactive Code Preview"></div>
+            <div class="ide-terminal" id="ide-terminal-drawer" aria-live="polite">
+              <div class="term-header">
+                <span data-i18n="term_title">互動式終端機輸出</span>
+                <div class="term-header-right">
+                  <span class="term-exec-badge" id="ide-exec-status">Ready</span>
+                  <button type="button" class="btn-term-close" id="btn-close-term" aria-label="Close terminal">&#10005;</button>
+                </div>
+              </div>
+              <div class="term-stream" id="ide-term-output"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wb-statusbar">
+          <span class="wb-statusbar__dot"><i></i><span id="wbStatusLang">100% Offline &#183; Zero Login</span></span>
+          <div class="wb-statusbar__right">
+            <span>UTF-8</span>
+            <span>LF</span>
+            <span>Ln 10, Col 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- SC_REAL_GALLERY_START -->
+  <section class="section sc-real-gallery" id="screenshots" aria-label="應用程式預覽與螢幕擷圖">
+    <div class="container">
+      <div class="sc-gp-head">
+        <div class="sc-gp-head-left">
+          <div class="sc-gp-eyebrow" data-i18n="gal_eyebrow">Android 實機擷圖</div>
+          <h2 class="sc-gp-title" data-i18n="gal_title">應用程式預覽與螢幕擷圖</h2>
+          <p class="sc-gp-short" data-i18n="gal_short_desc">離線程式碼編輯器與手機寫程式 IDE：Python、C/C++、Java、JS、HTML、SQL、PHP 編譯器，Git/SFTP</p>
+        </div>
+        <a class="sc-gp-store-bar" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-TW&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh-tw%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dlearn-cpp-offline-android" target="_blank" rel="noopener" aria-label="Code Editor: SuperCode IDE — Phoenix Global Studios">
+          <svg class="sc-gp-app-icon" width="38" height="38" viewBox="16 12 76 76" aria-hidden="true"><rect x="16" y="12" width="76" height="76" rx="18" fill="#070A10" stroke="#3B82F6" stroke-width="2"/><path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/><path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/><path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/><path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/></svg>
+          <span class="sc-gp-app-meta">
+            <span class="sc-gp-app-name">Code Editor: SuperCode IDE</span>
+            <span class="sc-gp-app-dev">Phoenix Global Studios</span>
+          </span>
+          <span class="sc-gp-store-arrow" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      </div>
+      <div class="sc-gp-stage">
+        <button type="button" class="sc-gp-nav sc-gp-nav--prev is-hidden" id="scGpPrev" aria-label="上一張">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="sc-gp-rail" id="scGpRail">
+          <button type="button" class="sc-gp-item sc-gp-item--feature" aria-label="程式碼編輯器：SuperCode IDE — 離線行動 IDE">
+            <img src="../assets/gallery/zh-tw/00_feature_graphic.webp" data-sc-file="00_feature_graphic.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_0" data-cap="程式碼編輯器：SuperCode IDE — 離線行動 IDE" alt="程式碼編輯器：SuperCode IDE — 離線行動 IDE" width="1024" height="500" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="本機 C17 與 C++20 多檔編譯器">
+            <img src="../assets/gallery/zh-tw/02_cpp20_compiler.webp" data-sc-file="02_cpp20_compiler.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_2" data-cap="本機 C17 與 C++20 多檔編譯器" alt="本機 C17 與 C++20 多檔編譯器" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="離線 Python 3.11 / 3.12 IDE 與分割終端機">
+            <img src="../assets/gallery/zh-tw/01_python_ide.webp" data-sc-file="01_python_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_1" data-cap="離線 Python 3.11 / 3.12 IDE 與分割終端機" alt="離線 Python 3.11 / 3.12 IDE 與分割終端機" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="本機 Web 伺服器、離線 PHP 與 DevTools">
+            <img src="../assets/gallery/zh-tw/03_web_php_devtools.webp" data-sc-file="03_web_php_devtools.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_3" data-cap="本機 Web 伺服器、離線 PHP 與 DevTools" alt="本機 Web 伺服器、離線 PHP 與 DevTools" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="全域檔案樹與本機檔案管理員 (SAF)">
+            <img src="../assets/gallery/zh-tw/04_file_manager_tree.webp" data-sc-file="04_file_manager_tree.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_4" data-cap="全域檔案樹與本機檔案管理員 (SAF)" alt="全域檔案樹與本機檔案管理員 (SAF)" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="離線 SQLite 3.54 工作室與 .db 檢視器">
+            <img src="../assets/gallery/zh-tw/05_sql_sqlite_studio.webp" data-sc-file="05_sql_sqlite_studio.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_5" data-cap="離線 SQLite 3.54 工作室與 .db 檢視器" alt="離線 SQLite 3.54 工作室與 .db 檢視器" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="離線 Java 17 IDE 與 SQLite JDBC">
+            <img src="../assets/gallery/zh-tw/06_java17_ide.webp" data-sc-file="06_java17_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_6" data-cap="離線 Java 17 IDE 與 SQLite JDBC" alt="離線 Java 17 IDE 與 SQLite JDBC" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="視覺化 Git 用戶端、時光機與 SFTP">
+            <img src="../assets/gallery/zh-tw/07_visual_git_timemachine.webp" data-sc-file="07_visual_git_timemachine.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_7" data-cap="視覺化 Git 用戶端、時光機與 SFTP" alt="視覺化 Git 用戶端、時光機與 SFTP" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="21 鍵符號列與 8 款匠心 IDE 主題">
+            <img src="../assets/gallery/zh-tw/08_symbol_keyboard_themes.webp" data-sc-file="08_symbol_keyboard_themes.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_8" data-cap="21 鍵符號列與 8 款匠心 IDE 主題" alt="21 鍵符號列與 8 款匠心 IDE 主題" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+        </div>
+        <button type="button" class="sc-gp-nav sc-gp-nav--next" id="scGpNext" aria-label="下一張">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  <div class="sc-lb-modal" id="scLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="應用程式預覽與螢幕擷圖">
+    <div class="sc-lb-topbar">
+      <button type="button" class="sc-lb-back" id="scLbBack">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-i18n="gal_back">返回</span>
+      </button>
+      <div class="sc-lb-meta">
+        <span class="sc-lb-counter" id="scLbCounter">1 / 9</span>
+        <span class="sc-lb-title" id="scLbTitle"></span>
+      </div>
+      <button type="button" class="sc-lb-close" id="scLbClose" aria-label="關閉預覽">&times;</button>
+    </div>
+    <div class="sc-lb-stage">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--prev" id="scLbPrev" aria-label="上一張">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <img class="sc-lb-img" id="scLbImg" src="" alt="SuperCode IDE Preview">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--next" id="scLbNext" aria-label="下一張">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="sc-lb-dots" id="scLbDots"></div>
+  </div>
+  <script defer src="../assets/gallery.js"></script>
+<!-- SC_REAL_GALLERY_END -->
+
+
+
+
+
+  <!-- ==================== 02 · CORE CAPABILITIES ==================== -->
+  <section class="section section--alt" id="capabilities">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">02</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_cap_eyebrow">核心能力</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="sec_cap_title">專為手機鍵盤設計，學 C++ 不再卡關打字速度</h2>
+        <p class="sec-lead" data-i18n="sec_cap_lead">從你的第一行 `std::cout &lt;&lt; "Hello!"` 一路進階到物件導向類別、二元搜尋樹與 GitHub 作品集。</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="feature-grid feature-grid--6">
+          <article class="feature-card" id="cap1">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
+              <span class="f-idx">02.1</span>
+            </div>
+            <h3 class="f-title" data-i18n="f1_title">免註冊登入，真正的飛航模式離線編譯</h3>
+            <p class="f-desc" data-i18n="f1_desc">下載一次離線 C++20 工具鏈後，無論在公車、捷運、飛機或沒有 Wi-Fi 的校舍都能隨時練習。無強制帳號註冊，也沒有每次執行倒數限時。</p>
+            <div class="f-code" data-i18n="f1_badge">100% 離線 C++20 &#183; 零帳號門檻</div>
+          </article>
+          <article class="feature-card" id="cap2">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-cube"/></svg></span>
+              <span class="f-idx">02.2</span>
+            </div>
+            <h3 class="f-title" data-i18n="f2_title">8 個單檔範例 + 21 套多檔入門專案</h3>
+            <p class="f-desc" data-i18n="f2_desc">先從 8 個單檔 C++ 範例（I/O、vector、排序、OOP 類別、遞迴）起步，隨著大學課程推進，再自然銜接至 21 套多檔 .cpp/.h CMake 專案。</p>
+            <div class="f-code" data-i18n="f2_badge">內建共 29 套可執行 C++ 範本</div>
+          </article>
+          <article class="feature-card" id="cap3">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-code"/></svg></span>
+              <span class="f-idx">02.3</span>
+            </div>
+            <h3 class="f-title" data-i18n="f3_title">21 鍵上滑式 C++ 專屬符號列</h3>
+            <p class="f-desc" data-i18n="f3_desc">一般手機鍵盤把 ::、&lt;&lt;、&gt;&gt;、-&gt;、{} 與 ; 藏在三層深處。SuperCode 直接在鍵盤上方停靠專屬 C++ 上滑符號列，串流運算子與大括號一觸即得。</p>
+            <div class="f-code" data-i18n="f3_badge">:: &#183; -&gt; &#183; &lt;&lt; &#183; &gt;&gt; &#183; {} &#183; [] &#183; ; &#183; #include</div>
+          </article>
+          <article class="feature-card" id="cap4">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <span class="f-idx">02.4</span>
+            </div>
+            <h3 class="f-title" data-i18n="f4_title">即時錯誤雷達與可點擊行號診斷</h3>
+            <p class="f-desc" data-i18n="f4_desc">類別右大括號後忘了加分號，或小括號不對稱？錯誤雷達會在你輸入時即時標註結構性語法失誤，編譯訊息也能直接跳轉至精確行號。</p>
+            <div class="f-code" data-i18n="f4_badge">即時語法守護 &#183; 友善初學者行號跳轉</div>
+          </article>
+          <article class="feature-card" id="cap5">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+              <span class="f-idx">02.5</span>
+            </div>
+            <h3 class="f-title" data-i18n="f5_title">一鍵離線格式化與 8 款護眼主題</h3>
+            <p class="f-desc" data-i18n="f5_desc">輕觸格式化即可搭配原子復原功能，瞬間整理巢狀迴圈、switch 區塊與類別縮排。8 款工作坊主題（清爽淺色與低眩光深色模式）讓你日夜學習都舒適。</p>
+            <div class="f-code" data-i18n="f5_badge">一鍵 C++ 格式化 &#183; 8 款淺色與深色主題</div>
+          </article>
+          <article class="feature-card" id="cap6">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-web"/></svg></span>
+              <span class="f-idx">02.6</span>
+            </div>
+            <h3 class="f-title" data-i18n="f6_title">原生 A4 PDF 作業匯出與多語言銜接成長</h3>
+            <p class="f-desc" data-i18n="f6_desc">將完成的 C++ 作業匯出為整潔且具語法高亮的 A4 PDF 繳交給學校&#8212;當資工系課程接著教到 C17、Python、Java 17、SQL 與 Git 時，也能繼續用同一款 App 無縫銜接。</p>
+            <div class="f-code" data-i18n="f6_badge">A4 PDF 匯出 &#183; 同時支援 C17、Python、Java 與 SQL</div>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">專為手機、摺疊機與平板打造 · 輕量 40.2 MB</span>
+        <a class="link-arrow" href="cpp-ide.html">
+          <span>C++20 Compiler &amp; IDE Hub</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 03 · STEP-BY-STEP WORKFLOW GUIDE ==================== -->
+  <section class="section" id="workflow">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">03</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_wf_eyebrow">逐步操作流程</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="workflow_title">使用 SuperCode 學習 C++ 的前 5 分鐘</h2>
+        <p class="sec-lead" data-i18n="workflow_lead">無需設定路徑、編譯器或環境變數&#8212;打開就能寫程式。</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="workflow-grid">
+          <article class="wf-step" id="step1">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 01</span>
+              <span class="wf-step__cmd">Templates -&gt; C++</span>
+            </div>
+            <h3 data-i18n="wf1_title">挑選 8 個範例或 21 套入門專案之一</h3>
+            <p data-i18n="wf1_desc">開啟可執行的 C++ 範例，或在任何本地資料夾建立 main.cpp&#8212;完全免登入。</p>
+          </article>
+          <article class="wf-step" id="step2">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 02</span>
+              <span class="wf-step__cmd">Swipe-Up &lt;&lt; &gt;&gt; ::</span>
+            </div>
+            <h3 data-i18n="wf2_title">用 21 鍵 C++ 符號列順暢寫碼</h3>
+            <p data-i18n="wf2_desc">快速輸入 std::cout &lt;&lt;、std::cin &gt;&gt;、大括號與分號，同時由錯誤雷達幫你把關手誤。</p>
+          </article>
+          <article class="wf-step" id="step3">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 03</span>
+              <span class="wf-step__cmd">Tap Run &#9654;</span>
+            </div>
+            <h3 data-i18n="wf3_title">離線測試即時 std::cin 互動輸入</h3>
+            <p data-i18n="wf3_desc">在終端機互動輸入數字與字串，立即檢視無緩衝提示與即時輸出結果。</p>
+          </article>
+          <article class="wf-step" id="step4">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 04</span>
+              <span class="wf-step__cmd">Format -&gt; Export PDF</span>
+            </div>
+            <h3 data-i18n="wf4_title">整理縮排並分享 A4 PDF 實驗作業</h3>
+            <p data-i18n="wf4_desc">一鍵美化 C++ 程式碼，並匯出語法高亮 A4 PDF 繳交給授課教師或教學平台。</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="wf_foot_note">40.2 MB 輕巧體積 &#183; 32 國本地化介面語言 &#183; 手機與平板皆適用</span>
+        <a class="link-arrow" href="https://supercode-ide.github.io/tutorial/?lang=zh-tw&amp;ref=official_web" data-supercode-tutorial="true">
+          <span data-i18n="cta_tutorial">使用指南</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 04 · FEATURED SUMMARY & COMPARISON MATRIX ==================== -->
+  <section class="section section--alt" id="comparison">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">04</span>
+        <span class="rule"></span>
+        <span data-i18n="comp_eyebrow">功能矩陣</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="table_h2">SuperCode 與遊戲化測驗 App 及線上 C++ 編譯器比較</h2>
+        <p class="snippet-definition" data-i18n="snippet_p"><strong>SuperCode</strong> 是一款專為 Android 初學者、高中生與資工系學生打造的免費離線 C++20 寫碼 App。無登入牆限制，提供飛航模式編譯、29 套可執行的單檔與多檔 C++ 範本、21 鍵 C++ 符號列、錯誤雷達、一鍵格式化以及 A4 PDF 作業匯出。</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="table-wrap">
+          <table class="obsidian-benchmark-table">
+            <caption data-i18n="table_caption">在 Android 學習 C++：學生愛用 App 比較</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="th_0">學習需求</th>
+                <th scope="col" data-i18n="th_1">SuperCode C++20 App</th>
+                <th scope="col" data-i18n="th_2">遊戲化測驗 App</th>
+                <th scope="col" data-i18n="th_3">瀏覽器線上 IDE</th>
+                <th scope="col" data-i18n="th_4">僅限筆電環境</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="tr1_c0">真實 C++20 執行能力</th>
+                <td><strong data-i18n="tr1_c1">完整離線 GNU C++20 + STL + 多檔專案</strong></td>
+                <td data-i18n="tr1_c2">僅限填空式測驗題</td>
+                <td data-i18n="tr1_c3">單檔網頁執行框</td>
+                <td data-i18n="tr1_c4">完整支援</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr2_c0">飛航模式學習</th>
+                <td><strong data-i18n="tr2_c1">一次性安裝工具鏈後 100% 離線</strong></td>
+                <td data-i18n="tr2_c2">常需訂閱或連網</td>
+                <td data-i18n="tr2_c3">無 Wi-Fi 即無法使用</td>
+                <td data-i18n="tr2_c4">可離線</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr3_c0">觸控螢幕輸入體驗</th>
+                <td><strong data-i18n="tr3_c1">21 鍵 C++ 符號列 (`:: -&gt; &lt;&lt; &gt;&gt;`) + AST</strong></td>
+                <td data-i18n="tr3_c2">極少實際打字寫碼</td>
+                <td data-i18n="tr3_c3">擁擠的預設虛擬鍵盤</td>
+                <td data-i18n="tr3_c4">實體鍵盤</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr4_c0">課程進階銜接</th>
+                <td><strong data-i18n="tr4_c1">8 範例 -&gt; 21 套 CMake 專案 -&gt; Git</strong></td>
+                <td data-i18n="tr4_c2">學完基礎即遇瓶頸</td>
+                <td data-i18n="tr4_c3">無本地資料夾或 Git</td>
+                <td data-i18n="tr4_c4">完整支援</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr5_c0">實驗報告匯出</th>
+                <td><strong data-i18n="tr5_c1">內建語法高亮 A4 PDF 匯出</strong></td>
+                <td data-i18n="tr5_c2">不支援</td>
+                <td data-i18n="tr5_c3">需手動複製貼上</td>
+                <td data-i18n="tr5_c4">需透過列印對話框</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">專為手機、摺疊機與平板打造 · 輕量 40.2 MB</span>
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-TW&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh-tw%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dlearn-cpp-offline-android" target="_blank" rel="noopener">
+          <span>Google Play</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 05 · VISIBLE EDITORIAL FAQ ==================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-head">
+          <div class="sec-index">
+            <span class="num">05</span>
+            <span class="rule"></span>
+            <span data-i18n="sec3_eyebrow">常見問答</span>
+          </div>
+          <h2 class="h2" data-i18n="sec3_title">常見問題</h2>
+          <p class="sec-lead" data-i18n="faq_lead">來自初學者、資工系大一生與程式設計教師的常見問題。</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary><span data-i18n="faq1_q">在 SuperCode 開始學 C++ 需要筆電或寫程式經驗嗎？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq1_a">完全不需要筆電或任何環境設定經驗。SuperCode 會自動配置整套 C++20 編譯器&#8212;只要輕觸 8 個初學者 C++ 範例之一、按下執行，就能一步步修改程式碼並實驗結果。</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq2_q">我可以用手機練習大學資料結構（鏈結串列、樹、圖、雜湊表）嗎？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq2_a">可以！無論是手刻原始指標/類別資料結構（鏈結串列、二元搜尋樹、堆積、字典樹），或是完整的 C++20 STL 容器（`vector`、`stack`、`queue`、`unordered_map`、`priority_queue`），都能 100% 離線執行。</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq3_q">如何將 `.cpp` 作業繳交到 Canvas、Blackboard 或 Google Classroom？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq3_a">你可以直接從 Android 專案資料夾分享 `.cpp`/`.hpp` 檔案、透過視覺化 Git 推送至 GitHub，或輕觸「匯出 PDF」產生整潔且具語法高亮的 A4 PDF 文件。</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq4_q">我也能在同一款 App 執行 C、Python、Java 與 SQL 來應付其他資工系課程嗎？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq4_a">可以。SuperCode 在僅 40.2 MB 的輕巧 Android 工作坊中，內建 C17、C++20、Python 3.11/3.12、Java 17、JavaScript、Lua 5.4、PHP/Web 與 SQLite 的專屬離線環境。</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==================== 06 · TOPICAL AUTHORITY ECOSYSTEM CLUSTER ==================== -->
+  <section class="section section--alt" id="ecosystem-guides">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">06</span>
+        <span class="rule"></span>
+        <span>C++20、STL 與演算法競賽指南</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2>完整 C++20 IDE 文件套件</h2>
+        <p class="sec-lead">快速切換離線 C++20 IDE 主中樞與全部 4 篇專業 C++ 工程指南。</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="py-cluster-grid">
+          <a href="cpp-ide.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">CPP-HUB</span>
+              <span class="py-spoke-card__tag">GNU C++20 · STL · 核心總覽</span>
+            </div>
+            <h3>離線 C++20 與 STL IDE 總覽</h3>
+            <p>SuperCode 離線 GNU C++20 編譯器總覽，提供完整 STL 容器、AST std:: 自動補全與 55:45 雙窗格終端機。</p>
+            <div class="py-spoke-card__go">
+              <span>cpp-ide</span>
+              <span>開啟指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="cpp-competitive-programming-stl.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">CPP-01</span>
+              <span class="py-spoke-card__tag">Codeforces · LeetCode · 高速 cin</span>
+            </div>
+            <h3>演算法競程與 STL 實驗室</h3>
+            <p>使用 GNU C++20 離線練習圖論、動態規劃與優先佇列題目，支援 55:45 橫向分割 I/O、[EOF] 控制與微秒/KB 效能遙測。</p>
+            <div class="py-spoke-card__go">
+              <span>cpp-competitive-programming-stl</span>
+              <span>開啟指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="cpp-oop-smart-pointers-modern.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">CPP-02</span>
+              <span class="py-spoke-card__tag">std::ranges · Concepts · 智慧指標</span>
+            </div>
+            <h3>現代 C++20、Ranges 與物件導向</h3>
+            <p>離線撰寫現代 C++20 程式碼，支援 &lt;ranges&gt;、&lt;concepts&gt;、&lt;format&gt;、&lt;span&gt;、unique_ptr/shared_ptr、optional/variant 及雲端 -pthread。</p>
+            <div class="py-spoke-card__go">
+              <span>cpp-oop-smart-pointers-modern</span>
+              <span>開啟指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="cpp-multifile-hpp-builder.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">CPP-03</span>
+              <span class="py-spoke-card__tag">21 個專案範本 · .cpp/.hpp</span>
+            </div>
+            <h3>21 個多檔案 C++ 與 CMake 專案</h3>
+            <p>一鍵啟動 21 個內建多檔案 .cpp/.h + CMakeLists.txt 範本，支援標頭檔至 main() 智慧仲裁與逐檔目的檔快取。</p>
+            <div class="py-spoke-card__go">
+              <span>cpp-multifile-hpp-builder</span>
+              <span>開啟指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="learn-cpp-offline-android.html" class="py-spoke-card is-active">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">CPP-04</span>
+              <span class="py-spoke-card__tag">8 個範例 · 21 鍵符號列 · PDF</span>
+            </div>
+            <h3>在 Android 上離線學習 C++</h3>
+            <p>無需網路隨時練習 C++ 基礎，內建 8 個入門範例、AST -&gt;/:: 自動補全、一鍵格式化與 A4 PDF 匯出。</p>
+            <div class="py-spoke-card__go">
+              <span>learn-cpp-offline-android</span>
+              <span>檢視指南中</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span>5 篇互連 C++20 指南 · 完整 STL · 21 套多檔案專案範本</span>
+        <a class="link-arrow" href="cpp-ide.html">
+          <span>C++20 編譯器與 IDE 中樞</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="siteFooter">
+  <div class="container">
+    <div class="footer-cta" id="footerCta">
+      <div>
+        <h2 class="h2" data-i18n="cta_h2">今天就開始離線撰寫真正的 C++20。</h2>
+        <p data-i18n="cta_desc">前往 Google Play 免費下載 SuperCode IDE &#8212; 免註冊、29 套 C++ 入門範本與 A4 PDF 匯出。</p>
+      </div>
+      <div class="footer-cta__btns">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-TW&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh-tw%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dlearn-cpp-offline-android" target="_blank" rel="noopener" class="btn btn--gold">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="cta_btn">前往 Google Play 下載</span>
+        </a>
+        <a href="https://supercode-ide.github.io/tutorial/?lang=zh-tw&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+          <span data-i18n="cta_tutorial">使用指南</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+          <span>SuperCode</span>
+          <span class="brand__tag">IDE</span>
+        </a>
+        <p data-i18n="footer_tagline">專為全球 Android 工程師、學生與教育工作者打造的原生行動程式碼編輯器與離線開發工作室。</p>
+        <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
+        <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-TW&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh-tw%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dlearn-cpp-offline-android" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://supercode-ide.github.io/tutorial/?lang=zh-tw&amp;ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">使用指南</span> &#8599;</a>
+          <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">選擇語言</span></button>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_core">編輯器與大檔案</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">總覽</a></li>
+          <li><a href="code-editor.html" data-i18n="nav_code_editor">程式碼編輯器</a></li>
+          <li><a href="large-file-editor.html" data-i18n="nav_large_file">GB 級大檔案</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_lang">離線編譯器與語言</h4>
+        <ul>
+          <li><a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a></li>
+          <li><a href="c-compiler.html" data-i18n="nav_c_compiler">C17 編譯器</a></li>
+          <li><a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a></li>
+          <li><a href="java-ide.html" data-i18n="nav_java_ide">Java 17 IDE</a></li>
+          <li><a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a></li>
+          <li><a href="lua-ide.html" data-i18n="nav_lua_ide">Lua 5.4</a></li>
+          <li><a href="shell-ide.html" data-i18n="nav_shell_ide">Shell 與 Kotlin</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_devops">網頁、SQL 與遠端維運</h4>
+        <ul>
+          <li><a href="web-ide.html" data-i18n="nav_web_ide">Web 與 PHP</a></li>
+          <li><a href="sql-ide.html" data-i18n="nav_sql_ide">SQL 工作室</a></li>
+          <li><a href="git-client.html" data-i18n="nav_git_client">視覺化 Git</a></li>
+          <li><a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP 與 FTPS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <span>&copy; 2026 Phoenix Global Studios. All rights reserved.</span>
+      <span class="mono">com.phoenixglobal.supercodeeditor</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="mobile-bottom-bar" id="mobileBottomBar" aria-label="Quick App Actions">
+  <div class="dock-app-icon" aria-hidden="true"><svg><use href="#sc-logo"/></svg></div>
+  <div class="bottom-bar-info">
+    <div class="bottom-bar-title">SuperCode</div>
+    <div class="bottom-bar-sub"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  </div>
+  <div class="bottom-bar-actions">
+    <a href="https://supercode-ide.github.io/tutorial/?lang=zh-tw&amp;ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">使用指南</a>
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-TW&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh-tw%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dlearn-cpp-offline-android" target="_blank" rel="noopener" class="btn-play-mini">
+      <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
+      <span data-i18n="bottom_cta">下載</span>
+    </a>
+  </div>
+</aside>
+
+<div class="modal-overlay" id="langModal" role="dialog" aria-modal="true" aria-labelledby="langModalTitle">
+  <div class="lang-modal">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div class="modal-header">
+      <h3 id="langModalTitle"><span data-i18n="modal_title">選擇語言</span><span class="modal-lang-count">32</span></h3>
+      <button type="button" class="btn-close-modal" onclick="closeLangModal()" aria-label="關閉">&#10005;</button>
+    </div>
+    <div class="lang-grid">
+      <button type="button" class="lang-option" data-code="en" onclick="setLanguage('en')"><span class="lang-option__name">English</span><span class="lang-option__code">EN</span></button>
+      <button type="button" class="lang-option" data-code="zh" onclick="setLanguage('zh')"><span class="lang-option__name">简体中文</span><span class="lang-option__code">简中</span></button>
+      <button type="button" class="lang-option active" data-code="zh-tw" onclick="setLanguage('zh-tw')"><span class="lang-option__name">繁體中文</span><span class="lang-option__code">繁中</span></button>
+      <button type="button" class="lang-option" data-code="es" onclick="setLanguage('es')"><span class="lang-option__name">Español</span><span class="lang-option__code">ES</span></button>
+      <button type="button" class="lang-option" data-code="pt" onclick="setLanguage('pt')"><span class="lang-option__name">Português</span><span class="lang-option__code">PT</span></button>
+      <button type="button" class="lang-option" data-code="ja" onclick="setLanguage('ja')"><span class="lang-option__name">日本語</span><span class="lang-option__code">日本語</span></button>
+      <button type="button" class="lang-option" data-code="ko" onclick="setLanguage('ko')"><span class="lang-option__name">한국어</span><span class="lang-option__code">한국어</span></button>
+      <button type="button" class="lang-option" data-code="de" onclick="setLanguage('de')"><span class="lang-option__name">Deutsch</span><span class="lang-option__code">DE</span></button>
+      <button type="button" class="lang-option" data-code="fr" onclick="setLanguage('fr')"><span class="lang-option__name">Français</span><span class="lang-option__code">FR</span></button>
+      <button type="button" class="lang-option" data-code="ru" onclick="setLanguage('ru')"><span class="lang-option__name">Русский</span><span class="lang-option__code">RU</span></button>
+      <button type="button" class="lang-option" data-code="hi" onclick="setLanguage('hi')"><span class="lang-option__name">हिन्दी</span><span class="lang-option__code">HI</span></button>
+      <button type="button" class="lang-option" data-code="id" onclick="setLanguage('id')"><span class="lang-option__name">Bahasa Indonesia</span><span class="lang-option__code">ID</span></button>
+      <button type="button" class="lang-option" data-code="it" onclick="setLanguage('it')"><span class="lang-option__name">Italiano</span><span class="lang-option__code">IT</span></button>
+      <button type="button" class="lang-option" data-code="vi" onclick="setLanguage('vi')"><span class="lang-option__name">Tiếng Việt</span><span class="lang-option__code">VI</span></button>
+      <button type="button" class="lang-option" data-code="th" onclick="setLanguage('th')"><span class="lang-option__name">ไทย</span><span class="lang-option__code">ไทย</span></button>
+      <button type="button" class="lang-option" data-code="tr" onclick="setLanguage('tr')"><span class="lang-option__name">Türkçe</span><span class="lang-option__code">TR</span></button>
+      <button type="button" class="lang-option" data-code="ar" onclick="setLanguage('ar')"><span class="lang-option__name">العربية</span><span class="lang-option__code">AR</span></button>
+      <button type="button" class="lang-option" data-code="pl" onclick="setLanguage('pl')"><span class="lang-option__name">Polski</span><span class="lang-option__code">PL</span></button>
+      <button type="button" class="lang-option" data-code="nl" onclick="setLanguage('nl')"><span class="lang-option__name">Nederlands</span><span class="lang-option__code">NL</span></button>
+      <button type="button" class="lang-option" data-code="sv" onclick="setLanguage('sv')"><span class="lang-option__name">Svenska</span><span class="lang-option__code">SV</span></button>
+      <button type="button" class="lang-option" data-code="nb" onclick="setLanguage('nb')"><span class="lang-option__name">Norsk Bokmål</span><span class="lang-option__code">NB</span></button>
+      <button type="button" class="lang-option" data-code="da" onclick="setLanguage('da')"><span class="lang-option__name">Dansk</span><span class="lang-option__code">DA</span></button>
+      <button type="button" class="lang-option" data-code="fi" onclick="setLanguage('fi')"><span class="lang-option__name">Suomi</span><span class="lang-option__code">FI</span></button>
+      <button type="button" class="lang-option" data-code="cs" onclick="setLanguage('cs')"><span class="lang-option__name">Čeština</span><span class="lang-option__code">CS</span></button>
+      <button type="button" class="lang-option" data-code="uk" onclick="setLanguage('uk')"><span class="lang-option__name">Українська</span><span class="lang-option__code">UK</span></button>
+      <button type="button" class="lang-option" data-code="ro" onclick="setLanguage('ro')"><span class="lang-option__name">Română</span><span class="lang-option__code">RO</span></button>
+      <button type="button" class="lang-option" data-code="hu" onclick="setLanguage('hu')"><span class="lang-option__name">Magyar</span><span class="lang-option__code">HU</span></button>
+      <button type="button" class="lang-option" data-code="el" onclick="setLanguage('el')"><span class="lang-option__name">Ελληνικά</span><span class="lang-option__code">EL</span></button>
+      <button type="button" class="lang-option" data-code="he" onclick="setLanguage('he')"><span class="lang-option__name">עברית</span><span class="lang-option__code">HE</span></button>
+      <button type="button" class="lang-option" data-code="ms" onclick="setLanguage('ms')"><span class="lang-option__name">Bahasa Melayu</span><span class="lang-option__code">MS</span></button>
+      <button type="button" class="lang-option" data-code="tl" onclick="setLanguage('tl')"><span class="lang-option__name">Filipino</span><span class="lang-option__code">FIL</span></button>
+      <button type="button" class="lang-option" data-code="bn" onclick="setLanguage('bn')"><span class="lang-option__name">বাংলা</span><span class="lang-option__code">BN</span></button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var WORKBENCH_SAMPLES = {"basics": {"label": "learn-cpp-cs101/01_hello_cin.cpp \u2014 Zero-Login Airplane-Mode C++", "status": "100% Offline \u00b7 Zero Login", "lines": ["<span class=\"tok-cmt\">// Works immediately in airplane mode \u2014 no account wall!<\/span>", "<span class=\"tok-kw\">#include<\/span> <span class=\"tok-str\">&lt;iostream&gt;<\/span>", "<span class=\"tok-kw\">#include<\/span> <span class=\"tok-str\">&lt;string&gt;<\/span>", "", "<span class=\"tok-kw\">int<\/span> <span class=\"tok-fn\">main<\/span>() {", "    std::cout &lt;&lt; <span class=\"tok-str\">&quot;Enter student name &amp; quiz score: &quot;<\/span>;", "    std::string name; <span class=\"tok-kw\">int<\/span> score = <span class=\"tok-num\">0<\/span>;", "    std::cin &gt;&gt; name &gt;&gt; score;", "    std::cout &lt;&lt; <span class=\"tok-str\">&quot;Welcome, &quot;<\/span> &lt;&lt; name &lt;&lt; <span class=\"tok-str\">&quot;! Pass=&quot;<\/span> &lt;&lt; (score &gt;= <span class=\"tok-num\">60<\/span>) &lt;&lt; <span class=\"tok-str\">&quot;\\n&quot;<\/span>;", "}"], "output": ["Enter student name &amp; quiz score: Maya 96", "Welcome, Maya! Pass=1", "<span class=\"term-info\">\u2713 21-key C++ bar (:: -&gt; &lt;&lt; &gt;&gt; {} ;) speeds up mobile typing<\/span>"]}, "oop": {"label": "learn-cpp-cs101/02_oop_class.cpp \u2014 Classes, Constructors & Encapsulation", "status": "Error Radar \u00b7 1-Tap Formatter", "lines": ["<span class=\"tok-kw\">#include<\/span> <span class=\"tok-str\">&lt;iostream&gt;<\/span>", "<span class=\"tok-kw\">#include<\/span> <span class=\"tok-str\">&lt;string&gt;<\/span>", "", "<span class=\"tok-kw\">class<\/span> <span class=\"tok-fn\">StudentCard<\/span> {", "    std::string major_; <span class=\"tok-kw\">int<\/span> credits_;", "<span class=\"tok-kw\">public<\/span>:", "    <span class=\"tok-fn\">StudentCard<\/span>(std::string m, <span class=\"tok-kw\">int<\/span> c) : major_(m), credits_(c) {}", "    <span class=\"tok-kw\">void<\/span> <span class=\"tok-fn\">summary<\/span>() <span class=\"tok-kw\">const<\/span> { std::cout &lt;&lt; major_ &lt;&lt; <span class=\"tok-str\">&quot;: &quot;<\/span> &lt;&lt; credits_ &lt;&lt; <span class=\"tok-str\">&quot; cr\\n&quot;<\/span>; }", "};", "<span class=\"tok-kw\">int<\/span> <span class=\"tok-fn\">main<\/span>() { <span class=\"tok-fn\">StudentCard<\/span>(<span class=\"tok-str\">&quot;CS102&quot;<\/span>, <span class=\"tok-num\">18<\/span>).<span class=\"tok-fn\">summary<\/span>(); }"], "output": ["<span class=\"term-prompt\">\u25b8<\/span> GNU C++20 \u00b7 02_oop_class.cpp", "CS102: 18 cr", "<span class=\"term-info\">\u2713 8 single-file snippets + 21 multi-file starter projects built in<\/span>"]}, "dsa": {"label": "learn-cpp-cs101/03_bst_homework.cpp \u2014 Data Structures & A4 PDF Export", "status": "Native A4 PDF Homework Export", "lines": ["<span class=\"tok-kw\">#include<\/span> <span class=\"tok-str\">&lt;algorithm&gt;<\/span>", "<span class=\"tok-kw\">#include<\/span> <span class=\"tok-str\">&lt;iostream&gt;<\/span>", "<span class=\"tok-kw\">#include<\/span> <span class=\"tok-str\">&lt;vector&gt;<\/span>", "", "<span class=\"tok-kw\">int<\/span> <span class=\"tok-fn\">main<\/span>() {", "    std::vector&lt;<span class=\"tok-kw\">int<\/span>&gt; keys = {<span class=\"tok-num\">42<\/span>, <span class=\"tok-num\">15<\/span>, <span class=\"tok-num\">88<\/span>, <span class=\"tok-num\">23<\/span>, <span class=\"tok-num\">7<\/span>};", "    std::ranges::<span class=\"tok-fn\">sort<\/span>(keys);", "    <span class=\"tok-kw\">bool<\/span> found = std::ranges::<span class=\"tok-fn\">binary_search<\/span>(keys, <span class=\"tok-num\">23<\/span>);", "    std::cout &lt;&lt; <span class=\"tok-str\">&quot;Sorted min=&quot;<\/span> &lt;&lt; keys.<span class=\"tok-fn\">front<\/span>() &lt;&lt; <span class=\"tok-str\">&quot; | found(23)=&quot;<\/span> &lt;&lt; found &lt;&lt; <span class=\"tok-str\">&quot;\\n&quot;<\/span>;", "}"], "output": ["Sorted min=7 | found(23)=1", "<span class=\"term-info\">[Export PDF] Ready to generate syntax-highlighted A4 lab report<\/span>"]}};
+    var currentTab = 'basics';
+    var runTimer = null;
+
+    function renderWorkbench(tabKey, animateRun) {
+      var sample = WORKBENCH_SAMPLES[tabKey] || WORKBENCH_SAMPLES['basics'];
+      if (!sample) { return; }
+      currentTab = tabKey;
+      var labelEl = document.getElementById('ide-compiler-label');
+      if (labelEl) { labelEl.textContent = sample.label; }
+      var statusEl = document.getElementById('wbStatusLang');
+      if (statusEl) { statusEl.textContent = sample.status; }
+
+      var tabs = document.querySelectorAll('.ide-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        var active = tabs[i].getAttribute('data-tab') === tabKey;
+        tabs[i].classList.toggle('active', active);
+        tabs[i].setAttribute('aria-selected', active ? 'true' : 'false');
+      }
+      var files = document.querySelectorAll('.wb-file');
+      for (var f = 0; f < files.length; f++) {
+        files[f].classList.toggle('active', files[f].getAttribute('data-tab') === tabKey);
+      }
+
+      var codeBox = document.getElementById('ide-code-box');
+      if (codeBox) {
+        var html = '';
+        for (var l = 0; l < sample.lines.length; l++) {
+          var activeCls = (l === sample.lines.length - 1) ? ' active-line' : '';
+          html += '<div class="code-line' + activeCls + '"><span class="ln">' + (l + 1) + '</span><span class="code-content">' + sample.lines[l] + '</span></div>';
+        }
+        codeBox.innerHTML = html;
+      }
+
+      if (animateRun) {
+        runWorkbenchSample();
+      }
+    }
+
+    function runWorkbenchSample() {
+      var sample = WORKBENCH_SAMPLES[currentTab] || WORKBENCH_SAMPLES['basics'];
+      var drawer = document.getElementById('ide-terminal-drawer');
+      var out = document.getElementById('ide-term-output');
+      var badge = document.getElementById('ide-exec-status');
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (!drawer || !out || !sample) { return; }
+
+      if (runTimer) { clearTimeout(runTimer); }
+      drawer.classList.add('is-open');
+      if (runBtn) { runBtn.classList.add('is-running'); }
+      if (badge) { badge.textContent = 'Running...'; badge.classList.remove('done'); }
+      out.innerHTML = '';
+
+      var idx = 0;
+      function step() {
+        if (idx < sample.output.length) {
+          var row = document.createElement('span');
+          row.className = 'term-line-item';
+          row.innerHTML = sample.output[idx];
+          out.appendChild(row);
+          idx++;
+          runTimer = setTimeout(step, 80);
+        } else {
+          var cur = document.createElement('span');
+          cur.className = 'term-cursor';
+          cur.textContent = '\u258b';
+          out.appendChild(cur);
+          if (badge) { badge.textContent = 'Completed'; badge.classList.add('done'); }
+          if (runBtn) { runBtn.classList.remove('is-running'); }
+        }
+      }
+      step();
+    }
+
+    function initNavigationAndSmartBar() {
+      var menuBtn = document.getElementById('menuBtn');
+      var drawer = document.getElementById('siteDrawer');
+      var bar = document.getElementById('mobileBottomBar');
+      var heroCta = document.getElementById('heroCta');
+      var siteFooter = document.getElementById('siteFooter');
+
+      function syncBar() {
+        if (!bar) { return; }
+        var drawerOpen = Boolean(drawer && !drawer.hasAttribute('hidden'));
+        var modalEl = document.getElementById('langModal');
+        var modalOpen = Boolean(modalEl && modalEl.classList.contains('show'));
+        var vh = window.innerHeight || document.documentElement.clientHeight || 800;
+        var heroInView = false;
+        if (heroCta) {
+          var hr = heroCta.getBoundingClientRect();
+          heroInView = (hr.bottom > 0 && hr.top < vh);
+        }
+        var footerInView = false;
+        if (siteFooter) {
+          var fr = siteFooter.getBoundingClientRect();
+          footerInView = (fr.top < vh + 24);
+        }
+        var scrollYVal = window.pageYOffset || window.scrollY || 0;
+        var docH = Math.max(document.body ? document.body.scrollHeight : 0, document.documentElement ? document.documentElement.scrollHeight : 0);
+        var nearBottom = (vh + scrollYVal) >= (docH - 120);
+        var shouldShow = !drawerOpen && !modalOpen && !heroInView && !footerInView && !nearBottom;
+        bar.classList.toggle('is-visible', shouldShow);
+      }
+
+      window.__supercodeSyncMobileBar = syncBar;
+
+      function setDrawer(open) {
+        if (!menuBtn || !drawer) { return; }
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { drawer.removeAttribute('hidden'); }
+        else { drawer.setAttribute('hidden', ''); }
+        syncBar();
+      }
+      if (menuBtn && drawer) {
+        menuBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          setDrawer(menuBtn.getAttribute('aria-expanded') !== 'true');
+        });
+        drawer.addEventListener('click', function (e) {
+          if (e.target && e.target.closest('a')) { setDrawer(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!drawer.hasAttribute('hidden') && !drawer.contains(e.target) && e.target !== menuBtn && !menuBtn.contains(e.target)) {
+            setDrawer(false);
+          }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') { setDrawer(false); }
+        });
+      }
+
+      if (bar) {
+        window.addEventListener('scroll', syncBar, { passive: true });
+        window.addEventListener('resize', syncBar);
+        syncBar();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var tabBtns = document.querySelectorAll('.ide-tab, .wb-file');
+      for (var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', function () {
+          renderWorkbench(this.getAttribute('data-tab'), true);
+        });
+      }
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (runBtn) { runBtn.addEventListener('click', function () { runWorkbenchSample(); }); }
+      var closeTerm = document.getElementById('btn-close-term');
+      if (closeTerm) {
+        closeTerm.addEventListener('click', function () {
+          var d = document.getElementById('ide-terminal-drawer');
+          if (d) { d.classList.remove('is-open'); }
+        });
+      }
+      initNavigationAndSmartBar();
+      renderWorkbench('basics', false);
+    });
+  })();
+</script>
+<script>window.__SUPERCODE_STATIC_LANG__="zh-tw";window.__SUPERCODE_STATIC_CANONICAL__="https://supercode-ide.github.io/zh-tw/learn-cpp-offline-android.html";</script>
+<script src="../i18n_extended.js"></script>
+</body>
+</html>

@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="ro" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090A0F">
+  <meta name="color-scheme" content="only dark">
+  <meta name="supported-color-schemes" content="dark">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <title>IDE SQL, vizualizator SQLite .db și aplicație offline de exersat SQL pe Android — MySQL &amp; JSON | SuperCode</title>
+  <meta name="description" content="IDE SQL offline, editor de baze de date .db/.sqlite și aplicație de exersat SQL pentru Android. Rulează Window Functions, CTE-uri, căutare FTS5, 50+ funcții MySQL/Postgres, 9 moduri de afișare, importuri CSV/JSON și Cloud MySQL 8.0.">
+  <meta name="keywords" content="sql ide for android, sqlite editor android, open db file on android, sql practice app offline android, mysql query runner android, window functions cte sqlite mobile, csv json to sqlite android">
+  <meta name="author" content="Phoenix Global Studios">
+  <meta name="google-play-app" content="app-id=com.phoenixglobal.supercodeeditor">
+
+  <link id="canonical-link" rel="canonical" href="https://supercode-ide.github.io/ro/sql-ide.html">
+  <link rel="alternate" hreflang="x-default" href="https://supercode-ide.github.io/sql-ide.html">
+  <link rel="alternate" hreflang="en" href="https://supercode-ide.github.io/sql-ide.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://supercode-ide.github.io/zh/sql-ide.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://supercode-ide.github.io/zh-tw/sql-ide.html">
+  <link rel="alternate" hreflang="es" href="https://supercode-ide.github.io/es/sql-ide.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://supercode-ide.github.io/pt/sql-ide.html">
+  <link rel="alternate" hreflang="ja" href="https://supercode-ide.github.io/ja/sql-ide.html">
+  <link rel="alternate" hreflang="ko" href="https://supercode-ide.github.io/ko/sql-ide.html">
+  <link rel="alternate" hreflang="de" href="https://supercode-ide.github.io/de/sql-ide.html">
+  <link rel="alternate" hreflang="fr" href="https://supercode-ide.github.io/fr/sql-ide.html">
+  <link rel="alternate" hreflang="ru" href="https://supercode-ide.github.io/ru/sql-ide.html">
+  <link rel="alternate" hreflang="hi" href="https://supercode-ide.github.io/hi/sql-ide.html">
+  <link rel="alternate" hreflang="id" href="https://supercode-ide.github.io/id/sql-ide.html">
+  <link rel="alternate" hreflang="it" href="https://supercode-ide.github.io/it/sql-ide.html">
+  <link rel="alternate" hreflang="vi" href="https://supercode-ide.github.io/vi/sql-ide.html">
+  <link rel="alternate" hreflang="th" href="https://supercode-ide.github.io/th/sql-ide.html">
+  <link rel="alternate" hreflang="tr" href="https://supercode-ide.github.io/tr/sql-ide.html">
+  <link rel="alternate" hreflang="ar" href="https://supercode-ide.github.io/ar/sql-ide.html">
+  <link rel="alternate" hreflang="pl" href="https://supercode-ide.github.io/pl/sql-ide.html">
+  <link rel="alternate" hreflang="nl" href="https://supercode-ide.github.io/nl/sql-ide.html">
+  <link rel="alternate" hreflang="sv" href="https://supercode-ide.github.io/sv/sql-ide.html">
+  <link rel="alternate" hreflang="nb" href="https://supercode-ide.github.io/nb/sql-ide.html">
+  <link rel="alternate" hreflang="da" href="https://supercode-ide.github.io/da/sql-ide.html">
+  <link rel="alternate" hreflang="fi" href="https://supercode-ide.github.io/fi/sql-ide.html">
+  <link rel="alternate" hreflang="cs" href="https://supercode-ide.github.io/cs/sql-ide.html">
+  <link rel="alternate" hreflang="uk" href="https://supercode-ide.github.io/uk/sql-ide.html">
+  <link rel="alternate" hreflang="ro" href="https://supercode-ide.github.io/ro/sql-ide.html">
+  <link rel="alternate" hreflang="hu" href="https://supercode-ide.github.io/hu/sql-ide.html">
+  <link rel="alternate" hreflang="el" href="https://supercode-ide.github.io/el/sql-ide.html">
+  <link rel="alternate" hreflang="he" href="https://supercode-ide.github.io/he/sql-ide.html">
+  <link rel="alternate" hreflang="ms" href="https://supercode-ide.github.io/ms/sql-ide.html">
+  <link rel="alternate" hreflang="fil" href="https://supercode-ide.github.io/tl/sql-ide.html">
+  <link rel="alternate" hreflang="bn" href="https://supercode-ide.github.io/bn/sql-ide.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
+  <meta property="og:title" content="IDE SQL, vizualizator SQLite .db și aplicație offline de exersat SQL pe Android — MySQL &amp; JSON | SuperCode">
+  <meta property="og:description" content="IDE SQL offline, editor de baze de date .db/.sqlite și aplicație de exersat SQL pentru Android. Rulează Window Functions, CTE-uri, căutare FTS5, 50+ funcții MySQL/Postgres, 9 moduri de afișare, importuri CSV/JSON și Cloud MySQL 8.0.">
+  <meta property="og:url" content="https://supercode-ide.github.io/ro/sql-ide.html">
+  <meta property="og:locale" content="ro_RO">
+  <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-hero-ro.png">
+  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-hero-ro.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Studio SQLite 3.54 offline și inspector .db">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-hero-ro.png">
+  <meta name="twitter:title" content="IDE SQL, vizualizator SQLite .db și aplicație offline de exersat SQL pe Android — MySQL &amp; JSON | SuperCode">
+  <meta name="twitter:description" content="IDE SQL offline, editor de baze de date .db/.sqlite și aplicație de exersat SQL pentru Android. Rulează Window Functions, CTE-uri, căutare FTS5, 50+ funcții MySQL/Postgres, 9 moduri de afișare, importuri CSV/JSON și Cloud MySQL 8.0.">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <script>if(/SamsungBrowser/i.test(navigator.userAgent)){document.documentElement.classList.add('is-samsung');}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "SoftwareApplication",
+        "MobileApplication",
+        "WebApplication"
+      ],
+      "@id": "https://supercode-ide.github.io/#supercode-app",
+      "name": "Code Editor: SuperCode IDE",
+      "alternateName": [
+        "SQL IDE for Android",
+        "Offline SQLite Viewer & Editor",
+        "Mobile SQL Practice App"
+      ],
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Offline SQL IDE, SQLite Database Viewer & MySQL Runner for Android",
+      "inLanguage": "ro",
+      "fileSize": "40.2MB",
+      "softwareVersion": "1.55.05",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=ro&listing=sql-sqlite-studio",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=ro&listing=sql-sqlite-studio",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=ro"
+      ],
+      "potentialAction": [
+        {
+          "@type": "InstallAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=ro&listing=sql-sqlite-studio",
+            "actionPlatform": [
+              "http://schema.org/AndroidPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          }
+        },
+        {
+          "@type": "ViewAction",
+          "name": "Ghid aplicație",
+          "target": [
+            "https://supercode-ide.github.io/tutorial/?lang=ro",
+            "android-app://com.phoenixglobal.supercodeeditor/https/supercode-ide.github.io/tutorial"
+          ]
+        }
+      ],
+      "identifier": "com.phoenixglobal.supercodeeditor",
+      "url": "https://supercode-ide.github.io/ro/sql-ide.html",
+      "screenshot": [
+        "https://supercode-ide.github.io/assets/gallery/ro/05_sql_sqlite_studio.webp",
+        "https://supercode-ide.github.io/assets/gallery/ro/01_python_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/ro/02_cpp20_compiler.webp",
+        "https://supercode-ide.github.io/assets/gallery/ro/03_web_php_devtools.webp",
+        "https://supercode-ide.github.io/assets/gallery/ro/04_file_manager_tree.webp",
+        "https://supercode-ide.github.io/assets/gallery/ro/06_java17_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/ro/07_visual_git_timemachine.webp",
+        "https://supercode-ide.github.io/assets/gallery/ro/08_symbol_keyboard_themes.webp"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Phoenix Global Studios",
+        "url": "https://supercode-ide.github.io/ro/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "66"
+      },
+      "featureList": [
+        "100% offline modern SQL engine with Window Functions, Recursive CTEs, RETURNING, UPSERT & STRICT tables",
+        "Native JSON / JSONB path operators (->, ->>), Full-Text Search (BM25) & 60+ built-in crypto/regex/math functions",
+        "9 instant result & export modes: Unicode Box Grid, Table, Markdown, CSV, TSV, JSON, Line, List & INSERT",
+        "One-tap binary .db / .sqlite / .sqlite3 database file inspector & automatic workspace DB mounting",
+        "RFC-4180 CSV, TSV & JSON array table importer plus multi-file .sql pipeline topological execution",
+        "MySQL/PostgreSQL DDL compatibility locally plus Cloud MySQL 8.0 stored procedures & triggers"
+      ],
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-ro.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://supercode-ide.github.io/ro/sql-ide.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SuperCode IDE",
+          "item": "https://supercode-ide.github.io/ro/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Hub Studio SQL & SQLite",
+          "item": "https://supercode-ide.github.io/ro/sql-ide.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Query Databases & Import Datasets in SuperCode",
+      "description": "Clean, script-driven database workflows that persist directly in your Android workspace.",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Open a .db Database or Create a .sql Script",
+          "text": "Tap any local .db/.sqlite file to inspect its schema, or create a .sql script with offline AST SQL keyword/function completion and formatting.",
+          "url": "https://supercode-ide.github.io/sql-ide.html#step1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Seed Tables or Import CSV & JSON Files",
+          "text": "Load CSV, TSV, or JSON datasets from your project folder into typed relational tables in a single command.",
+          "url": "https://supercode-ide.github.io/sql-ide.html#step2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Execute Multi-Statement Queries Offline",
+          "text": "Inspect Unicode Box Grids, Markdown tables, or JSON output in the split-screen console, with live READ_STDIN() parameter prompts when needed.",
+          "url": "https://supercode-ide.github.io/sql-ide.html#step3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Export Clean Reports & Sync .db to PHP/Java",
+          "text": "Save updated .db files or .csv/.json reports straight to your project folder — ready to query from SuperCode's PHP PDO or Java JDBC workspaces!",
+          "url": "https://supercode-ide.github.io/sql-ide.html#step4"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://supercode-ide.github.io/sql-ide.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Pot exersa interogări SQL offline fără să configurez un server de baze de date?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da! Creează orice fișier .sql și apasă Rulează pentru a executa interogări multi-instrucțiune CREATE, INSERT, JOIN, CTE și Window Function 100% offline, cu tabele formatate în Unicode Box Grid."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Poate SuperCode să deschidă fișiere .db și .sqlite existente de pe telefon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da. Atingerea sau rularea unui fișier .db, .sqlite, .sqlite3 sau .db3 inspectează toate tabelele, vizualizările, indecșii și schemele, iar orice script .sql din același folder de proiect poate interoga direct acea bază de date."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Suportă sintaxă MySQL precum AUTO_INCREMENT, SHOW TABLES, DESCRIBE sau proceduri stocate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Comenzile și DDL-urile uzuale MySQL/PostgreSQL (AUTO_INCREMENT, ENUM, SHOW TABLES, DESCRIBE, ILIKE) rulează local offline, în timp ce procedurile stocate și trigger-ele specifice MySQL 8.0 sunt rutate automat către Cloud MySQL 8.0."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cum export rezultatele interogărilor SQL în CSV, Markdown sau JSON?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Adaugă `.mode csv` (sau `.mode markdown` / `.mode json`) și `.once output.csv` înaintea interogării SELECT — SuperCode scrie fișierul exportat direct în folderul proiectului tău."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-page="sql_ide">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="sc-logo" viewBox="20 14 68 72">
+    <path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/>
+    <path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/>
+    <path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/>
+    <path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+  </symbol>
+  <symbol id="gp-prism" viewBox="0 0 24 24">
+    <path fill="#4285F4" d="M3.6,2.4C3.3,2.7,3.1,3.2,3.1,3.8v16.4c0,0.6,0.2,1.1,0.5,1.4l0.1,0.1L12.9,12v-0.2L3.7,2.3L3.6,2.4z"/>
+    <path fill="#34A853" d="M16,15.1l-3.1-3.1v-0.2L16,8.7l0.1,0.1l3.6,2.1c1,0.6,1,1.5,0,2.1l-3.6,2.1L16,15.1z"/>
+    <path fill="#FBBC05" d="M16.1,15.1L12.9,12L3.6,21.3c0.3,0.4,0.9,0.4,1.6,0.1L16.1,15.1z"/>
+    <path fill="#EA4335" d="M16.1,8.9L5.2,2.6C4.5,2.2,3.9,2.3,3.6,2.7L12.9,12L16.1,8.9z"/>
+  </symbol>
+  <symbol id="i-ne" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8 20 7.2v9.6L12 21.2 4 16.8V7.2z"/><path d="M4 7.2l8 4.4 8-4.4M12 11.6v9.6"/></g></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2.8v3.2M15 2.8v3.2M9 18v3.2M15 18v3.2M2.8 9H6M2.8 15H6M18 9h3.2M18 15h3.2"/></g></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 2.8 7.8 12 12.6l9.2-4.8z"/><path d="m2.8 12 9.2 4.8 9.2-4.8"/><path d="m2.8 16.2 9.2 4.8 9.2-4.8"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="M2.8 8.5h18.4"/><path d="m9.5 12.5-2.2 2.2 2.2 2.2M14.5 12.5l2.2 2.2-2.2 2.2"/></g></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5.6" rx="7.6" ry="2.8"/><path d="M4.4 5.6v12.8c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8V5.6"/><path d="M4.4 12c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8"/></g></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="m7.2 9.5 3 2.5-3 2.5M12.8 15h4"/></g></symbol>
+  <symbol id="i-git" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.3"/><circle cx="6" cy="18" r="2.3"/><circle cx="18" cy="12" r="2.3"/><path d="M6 8.3v7.4M8.3 6h4.2a3.5 3.5 0 0 1 3.5 3.5v.2"/></g></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5h11a4 4 0 0 0 .7-7.94A5.5 5.5 0 0 0 7.4 9.2 3.8 3.8 0 0 0 6.5 18.5z"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M13 2.8 4.8 13.2h6.3L10.2 21.2 19.2 10.6h-6.4z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 2.8 4.8 5.8v5.6c0 5 3.1 8.5 7.2 9.8 4.1-1.3 7.2-4.8 7.2-9.8V5.8z"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="index.html" class="brand" aria-label="SuperCode IDE Home">
+      <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+      <span>SuperCode</span>
+      <span class="brand__tag">IDE</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary Workspaces">
+      <a href="code-editor.html" data-i18n="nav_code_editor">Editor de cod</a>
+      <a href="large-file-editor.html" data-i18n="nav_large_file">Fișiere mari (GB)</a>
+      <a href="python-ide.html" data-i18n="nav_python_ide">IDE Python</a>
+      <a href="c-compiler.html" data-i18n="nav_c_compiler">Compilator C17</a>
+      <a href="cpp-ide.html" data-i18n="nav_cpp_ide">IDE C++20</a>
+      <a href="java-ide.html" data-i18n="nav_java_ide">IDE Java 17</a>
+      <a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a>
+      <a href="web-ide.html" data-i18n="nav_web_ide">Web și PHP</a>
+      <a href="sql-ide.html" class="is-current" data-i18n="nav_sql_ide">Studio SQL</a>
+      <a href="git-client.html" data-i18n="nav_git_client">Git vizual</a>
+      <a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP și FTPS</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button id="langModalBtn" class="btn-lang-trigger" type="button" onclick="openLangModal()" aria-label="Select Language">
+        <svg class="lang-globe-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span id="langTriggerText">RO</span>
+        <span class="lang-chevron" aria-hidden="true">&#9662;</span>
+      </button>
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=ro&amp;listing=sql-sqlite-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dro%26utm_campaign%3Dsql-sqlite-studio%26utm_content%3Dsql-ide" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+        <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+        <span data-i18n="nav_cta">Google Play</span>
+      </a>
+      <a href="index.html" class="btn-home-icon" aria-label="Home" title="Home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5"/>
+          <path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
+        </svg>
+      </a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteDrawer" aria-label="All Pages Directory">
+        <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 8.5h16M4 15.5h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-drawer" id="siteDrawer" hidden>
+  <nav class="container menu-drawer__inner" aria-label="All SuperCode Pages">
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_core">Editor și fișiere mari</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="index.html"><span data-i18n="nav_home">Prezentare</span><span class="mono">01</span></a>
+        <a class="menu-drawer__link" href="code-editor.html"><span data-i18n="nav_code_editor">Editor de cod</span><span class="mono">02</span></a>
+        <a class="menu-drawer__link" href="large-file-editor.html"><span data-i18n="nav_large_file">Fișiere mari (GB)</span><span class="mono">03</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_lang">Compilatoare offline și limbaje</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="python-ide.html"><span data-i18n="nav_python_ide">IDE Python</span><span class="mono">04</span></a>
+        <a class="menu-drawer__link" href="c-compiler.html"><span data-i18n="nav_c_compiler">Compilator C17</span><span class="mono">05</span></a>
+        <a class="menu-drawer__link" href="cpp-ide.html"><span data-i18n="nav_cpp_ide">IDE C++20</span><span class="mono">06</span></a>
+        <a class="menu-drawer__link" href="java-ide.html"><span data-i18n="nav_java_ide">IDE Java 17</span><span class="mono">07</span></a>
+        <a class="menu-drawer__link" href="javascript-ide.html"><span data-i18n="nav_js_ide">JavaScript</span><span class="mono">08</span></a>
+        <a class="menu-drawer__link" href="lua-ide.html"><span data-i18n="nav_lua_ide">Lua 5.4</span><span class="mono">09</span></a>
+        <a class="menu-drawer__link" href="shell-ide.html"><span data-i18n="nav_shell_ide">Shell și Kotlin</span><span class="mono">10</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_devops">Web, SQL și DevOps la distanță</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="web-ide.html"><span data-i18n="nav_web_ide">Web și PHP</span><span class="mono">11</span></a>
+        <a class="menu-drawer__link is-current" href="sql-ide.html"><span data-i18n="nav_sql_ide">Studio SQL</span><span class="mono">12</span></a>
+        <a class="menu-drawer__link" href="git-client.html"><span data-i18n="nav_git_client">Git vizual</span><span class="mono">13</span></a>
+        <a class="menu-drawer__link" href="sftp-client.html"><span data-i18n="nav_sftp_client">SFTP și FTPS</span><span class="mono">14</span></a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<main id="top">
+  <!-- ==================== 01 · EDITORIAL HERO & INTERACTIVE WORKBENCH ==================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <div class="trust-pill">
+            <span class="trust-pill__score"><span data-play-rating>4.9</span> &#9733;</span>
+            <span data-i18n="hero_tag">IDE SQL OFFLINE DEDICAT &amp; EXPLORATOR .DB</span>
+          </div>
+
+          <h1 class="hero-h1" data-i18n="hero_h1">Rulează <span class="text-gradient">SQL modern &amp; inspectează baze de date .db</span> offline pe Android.</h1>
+
+          <p class="hero-lead" data-i18n="hero_desc">Creat special pentru ingineri de baze de date, analiști de date și cei care învață SQL. Execută offline <strong>funcții fereastră, CTE-uri, JSONB &amp; căutare full-text</strong> în <strong>9 moduri de afișare formatate</strong>, inspectează binar <strong>fișiere <code>.db/.sqlite</code></strong> dintr-o atingere și importă <strong>seturi de date CSV/JSON</strong>.</p>
+
+          <div class="hero__cta" id="heroCta">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=ro&amp;listing=sql-sqlite-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dro%26utm_campaign%3Dsql-sqlite-studio%26utm_content%3Dsql-ide" target="_blank" rel="noopener" class="btn btn--gold">
+              <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+              <span data-i18n="cta_btn">Descarcă de pe Google Play</span>
+            </a>
+            <a href="https://supercode-ide.github.io/tutorial/?lang=ro&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+              <span data-i18n="cta_tutorial">Ghid aplicație</span>
+              <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <dl class="specs" aria-label="Key Specifications">
+          <div class="spec"><dt>9<small>Modes</small></dt><dd data-i18n="sql_spec1">Box / MD / CSV / JSON</dd></div>
+          <div class="spec"><dt>.db</dt><dd data-i18n="sql_spec2">Inspector DB 1-Tap</dd></div>
+          <div class="spec"><dt>60+</dt><dd data-i18n="sql_spec3">Crypto/Regex/Statistici</dd></div>
+          <div class="spec"><dt>MySQL<small>8</small></dt><dd data-i18n="sql_spec4">Proceduri în cloud</dd></div>
+        </dl>
+      </div>
+
+      <div class="wb-caption">
+        <div class="sec-index" style="margin-bottom:0">
+          <span class="num">01</span>
+          <span class="rule"></span>
+          <span data-i18n="wb_eyebrow">BANC DE LUCRU INTERACTIV SQL OFFLINE &amp; BAZE DE DATE</span>
+        </div>
+        <span class="wb-caption__hint mono">Window Functions &#183; JSON &amp; Full-Text Search &#183; .db Explorer &#183; CSV/JSON Import</span>
+      </div>
+
+      <div class="ide-workbench">
+        <div class="wb-titlebar">
+          <div class="wb-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="wb-title" id="ide-compiler-label">sql-database-studio/analytics.sql &#8212; Window Functions &amp; CTEs</div>
+          <button type="button" class="wb-run" id="btn-run-sandbox">
+            <span class="wb-run__tri" aria-hidden="true">&#9654;</span>
+            <span data-i18n="btn_run">Rulează demo</span>
+          </button>
+        </div>
+
+        <div class="wb-tabs" role="tablist" aria-label="Interactive Workspace Tabs">
+          <button type="button" class="ide-tab active" data-tab="sql_win" role="tab" aria-selected="true"><i></i>analytics.sql</button>
+          <button type="button" class="ide-tab" data-tab="sql_json" role="tab" aria-selected="false"><i></i>json_fts.sql</button>
+          <button type="button" class="ide-tab" data-tab="sql_db" role="tab" aria-selected="false"><i></i>import_csv.sql</button>
+        </div>
+
+        <div class="wb-body">
+          <aside class="wb-explorer" aria-label="Project Explorer">
+            <div class="wb-explorer__head">Explorer</div>
+            <div class="wb-folder">&#9662; sql-database-studio</div>
+            <button type="button" class="wb-file active" data-tab="sql_win"><b>SQL</b><span>analytics.sql</span></button>
+            <button type="button" class="wb-file" data-tab="sql_json"><b>JSON</b><span>json_fts.sql</span></button>
+            <button type="button" class="wb-file" data-tab="sql_db"><b>.DB</b><span>import_csv.sql</span></button>
+          </aside>
+
+          <div class="wb-main">
+            <div class="ide-editor-body" id="ide-code-box" role="region" aria-label="Interactive Code Preview"></div>
+            <div class="ide-terminal" id="ide-terminal-drawer" aria-live="polite">
+              <div class="term-header">
+                <span data-i18n="term_title">Consolă interactivă</span>
+                <div class="term-header-right">
+                  <span class="term-exec-badge" id="ide-exec-status">Ready</span>
+                  <button type="button" class="btn-term-close" id="btn-close-term" aria-label="Close terminal">&#10005;</button>
+                </div>
+              </div>
+              <div class="term-stream" id="ide-term-output"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wb-statusbar">
+          <span class="wb-statusbar__dot"><i></i><span id="wbStatusLang">SQL Studio &#183; 9 Output Modes</span></span>
+          <div class="wb-statusbar__right">
+            <span>UTF-8</span>
+            <span>LF</span>
+            <span>Ln 4, Col 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- SC_REAL_GALLERY_START -->
+  <section class="section sc-real-gallery" id="screenshots" aria-label="Previzualizare aplicație și capturi de ecran">
+    <div class="container">
+      <div class="sc-gp-head">
+        <div class="sc-gp-head-left">
+          <div class="sc-gp-eyebrow" data-i18n="gal_eyebrow">CAPTURI REALE ANDROID</div>
+          <h2 class="sc-gp-title" data-i18n="gal_title">Previzualizare și capturi</h2>
+          <p class="sc-gp-short" data-i18n="gal_short_desc">Editor de cod & IDE offline: compilator Python, C/C++, Java, HTML, SQL, PHP, Git</p>
+        </div>
+        <a class="sc-gp-store-bar" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=ro&amp;listing=sql-sqlite-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dro%26utm_campaign%3Dsql-sqlite-studio%26utm_content%3Dsql-ide" target="_blank" rel="noopener" aria-label="Code Editor: SuperCode IDE — Phoenix Global Studios">
+          <svg class="sc-gp-app-icon" width="38" height="38" viewBox="16 12 76 76" aria-hidden="true"><rect x="16" y="12" width="76" height="76" rx="18" fill="#070A10" stroke="#3B82F6" stroke-width="2"/><path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/><path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/><path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/><path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/></svg>
+          <span class="sc-gp-app-meta">
+            <span class="sc-gp-app-name">Code Editor: SuperCode IDE</span>
+            <span class="sc-gp-app-dev">Phoenix Global Studios</span>
+          </span>
+          <span class="sc-gp-store-arrow" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      </div>
+      <div class="sc-gp-stage">
+        <button type="button" class="sc-gp-nav sc-gp-nav--prev is-hidden" id="scGpPrev" aria-label="Imaginea anterioară">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="sc-gp-rail" id="scGpRail">
+          <button type="button" class="sc-gp-item sc-gp-item--feature" aria-label="Editor de cod: SuperCode IDE — IDE mobil offline">
+            <img src="../assets/gallery/ro/00_feature_graphic.webp" data-sc-file="00_feature_graphic.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_0" data-cap="Editor de cod: SuperCode IDE — IDE mobil offline" alt="Editor de cod: SuperCode IDE — IDE mobil offline" width="1024" height="500" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Studio SQLite 3.54 offline și inspector .db">
+            <img src="../assets/gallery/ro/05_sql_sqlite_studio.webp" data-sc-file="05_sql_sqlite_studio.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_5" data-cap="Studio SQLite 3.54 offline și inspector .db" alt="Studio SQLite 3.54 offline și inspector .db" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="IDE Python 3.11 / 3.12 offline și consolă divizată">
+            <img src="../assets/gallery/ro/01_python_ide.webp" data-sc-file="01_python_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_1" data-cap="IDE Python 3.11 / 3.12 offline și consolă divizată" alt="IDE Python 3.11 / 3.12 offline și consolă divizată" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Compilator local multi-fișier C17 și C++20">
+            <img src="../assets/gallery/ro/02_cpp20_compiler.webp" data-sc-file="02_cpp20_compiler.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_2" data-cap="Compilator local multi-fișier C17 și C++20" alt="Compilator local multi-fișier C17 și C++20" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Server web local, PHP offline și DevTools">
+            <img src="../assets/gallery/ro/03_web_php_devtools.webp" data-sc-file="03_web_php_devtools.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_3" data-cap="Server web local, PHP offline și DevTools" alt="Server web local, PHP offline și DevTools" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Arbore global de fișiere și manager local (SAF)">
+            <img src="../assets/gallery/ro/04_file_manager_tree.webp" data-sc-file="04_file_manager_tree.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_4" data-cap="Arbore global de fișiere și manager local (SAF)" alt="Arbore global de fișiere și manager local (SAF)" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="IDE Java 17 offline și SQLite JDBC">
+            <img src="../assets/gallery/ro/06_java17_ide.webp" data-sc-file="06_java17_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_6" data-cap="IDE Java 17 offline și SQLite JDBC" alt="IDE Java 17 offline și SQLite JDBC" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Client Git vizual, Time Machine și SFTP">
+            <img src="../assets/gallery/ro/07_visual_git_timemachine.webp" data-sc-file="07_visual_git_timemachine.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_7" data-cap="Client Git vizual, Time Machine și SFTP" alt="Client Git vizual, Time Machine și SFTP" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Bară cu 21 de simboluri și 8 teme IDE dedicate">
+            <img src="../assets/gallery/ro/08_symbol_keyboard_themes.webp" data-sc-file="08_symbol_keyboard_themes.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_8" data-cap="Bară cu 21 de simboluri și 8 teme IDE dedicate" alt="Bară cu 21 de simboluri și 8 teme IDE dedicate" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+        </div>
+        <button type="button" class="sc-gp-nav sc-gp-nav--next" id="scGpNext" aria-label="Imaginea următoare">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  <div class="sc-lb-modal" id="scLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Previzualizare aplicație și capturi de ecran">
+    <div class="sc-lb-topbar">
+      <button type="button" class="sc-lb-back" id="scLbBack">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-i18n="gal_back">Înapoi</span>
+      </button>
+      <div class="sc-lb-meta">
+        <span class="sc-lb-counter" id="scLbCounter">1 / 9</span>
+        <span class="sc-lb-title" id="scLbTitle"></span>
+      </div>
+      <button type="button" class="sc-lb-close" id="scLbClose" aria-label="Închide previzualizarea">&times;</button>
+    </div>
+    <div class="sc-lb-stage">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--prev" id="scLbPrev" aria-label="Imaginea anterioară">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <img class="sc-lb-img" id="scLbImg" src="" alt="SuperCode IDE Preview">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--next" id="scLbNext" aria-label="Imaginea următoare">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="sc-lb-dots" id="scLbDots"></div>
+  </div>
+  <script defer src="../assets/gallery.js"></script>
+<!-- SC_REAL_GALLERY_END -->
+
+
+
+
+
+  <!-- ==================== 02 · CORE CAPABILITIES ==================== -->
+  <section class="section section--alt" id="capabilities">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">02</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_cap_eyebrow">CAPABILITĂȚI DE BAZĂ</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="sec_cap_title">Analitică SQL la nivel desktop, inspecție de fișiere &amp; flexibilitate de dialect</h2>
+        <p class="sec-lead" data-i18n="sec_cap_lead">Interoghează sandbox-uri în memorie sau fișiere de baze de date persistente multi-tabel cu aliniere tabulară precisă.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="feature-grid feature-grid--6">
+          <article class="feature-card" id="cap1">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-db"/></svg></span>
+              <span class="f-idx">02.1</span>
+            </div>
+            <h3 class="f-title" data-i18n="f1_title">SQL offline modern: Window Functions, CTE-uri &amp; JSONB</h3>
+            <p class="f-desc" data-i18n="f1_desc">Suportă ROW_NUMBER/RANK/DENSE_RANK/LAG/LEAD OVER(...), WITH RECURSIVE CTEs, RETURNING, UPSERT, interogări de căi JSON -&gt; și -&gt;&gt;, json_each() și căutare full-text BM25 100% offline.</p>
+            <div class="f-code" data-i18n="f1_badge">Window Functions · CTE-uri recursive · JSONB &amp; FTS</div>
+          </article>
+          <article class="feature-card" id="cap2">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+              <span class="f-idx">02.2</span>
+            </div>
+            <h3 class="f-title" data-i18n="f2_title">9 moduri de randare a rezultatelor &amp; fluxuri de export</h3>
+            <p class="f-desc" data-i18n="f2_desc">Vizualizează rezultatele implicit în grile Unicode Box aliniate CJK (┌──┬──┐) sau comută prin .mode la table, markdown, csv, tsv, json, line, list ori instrucțiuni SQL insert — și exportă direct prin .once.</p>
+            <div class="f-code" data-i18n="f2_badge">box · markdown · csv · json · table · insert</div>
+          </article>
+          <article class="feature-card" id="cap3">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-cube"/></svg></span>
+              <span class="f-idx">02.3</span>
+            </div>
+            <h3 class="f-title" data-i18n="f3_title">Inspector .db / .sqlite dintr-o atingere &amp; montare automată</h3>
+            <p class="f-desc" data-i18n="f3_desc">Deschide orice fișier .db, .sqlite, .sqlite3 sau .db3 pentru a inspecta imediat metadatele paginilor, tabelele, vizualizările, indecșii și schemele CREATE complete. Interogările din același folder montează automat baza de date existentă!</p>
+            <div class="f-code" data-i18n="f3_badge">Deschidere directă .db / .sqlite3 · ATTACH DATABASE</div>
+          </article>
+          <article class="feature-card" id="cap4">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
+              <span class="f-idx">02.4</span>
+            </div>
+            <h3 class="f-title" data-i18n="f4_title">Import CSV / TSV / JSON &amp; 60+ funcții analitice</h3>
+            <p class="f-desc" data-i18n="f4_desc">Importă fișiere CSV, TSV și matrice de obiecte JSON direct în tabele tipizate automat (.import --csv / --json) și folosește peste 60 de funcții integrate: SHA256, REGEXP_EXTRACT, MEDIAN, STDDEV, PERCENTILE și UUID.</p>
+            <div class="f-code" data-i18n="f4_badge">.import CSV/JSON · SHA256 · REGEXP · MEDIAN/STDDEV</div>
+          </article>
+          <article class="feature-card" id="cap5">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-term"/></svg></span>
+              <span class="f-idx">02.5</span>
+            </div>
+            <h3 class="f-title" data-i18n="f5_title">Compatibilitate de sintaxă MySQL / PostgreSQL &amp; READ_STDIN()</h3>
+            <p class="f-desc" data-i18n="f5_desc">Scrie local interogări uzuale AUTO_INCREMENT, SERIAL, ENUM, SHOW TABLES, DESCRIBE și ILIKE fără rescrieri obositoare și solicită valori interactive din consolă în SQL prin READ_STDIN().</p>
+            <div class="f-code" data-i18n="f5_badge">SHOW TABLES / DESCRIBE · READ_STDIN() interactiv</div>
+          </article>
+          <article class="feature-card" id="cap6">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-cloud"/></svg></span>
+              <span class="f-idx">02.6</span>
+            </div>
+            <h3 class="f-title" data-i18n="f6_title">Fluxuri SQL multi-fișier &amp; Cloud MySQL 8.0</h3>
+            <p class="f-desc" data-i18n="f6_desc">Înlănțuie automat 01_schema.sql -&gt; 02_seed.sql -&gt; 03_report.sql sau rulează proceduri stocate MySQL 8.0 (DELIMITER, CREATE PROCEDURE, CALL, JSON_TABLE) pe clusterul Cloud MySQL.</p>
+            <div class="f-code" data-i18n="f6_badge">Rulare topologică multi-fișier · Cloud MySQL 8.0</div>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">Creat pentru telefoane, pliabile și tablete · Doar 40.2 MB</span>
+        <a class="link-arrow" href="index.html">
+          <span data-i18n="nav_home">Prezentare</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 03 · STEP-BY-STEP WORKFLOW GUIDE ==================== -->
+  <section class="section" id="workflow">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">03</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_wf_eyebrow">FLUX DE LUCRU PAS CU PAS</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="workflow_title">Cum interoghezi baze de date și imporți seturi de date în SuperCode</h2>
+        <p class="sec-lead" data-i18n="workflow_lead">Fluxuri de lucru curate, bazate pe scripturi, care persistă direct în spațiul tău de lucru Android.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="workflow-grid">
+          <article class="wf-step" id="step1">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 01</span>
+              <span class="wf-step__cmd">query.sql or app.db</span>
+            </div>
+            <h3 data-i18n="wf1_title">Deschide o bază de date .db sau creează un script .sql</h3>
+            <p data-i18n="wf1_desc">Atinge orice fișier local .db/.sqlite pentru a-i inspecta schema sau creează un script .sql cu completare AST offline pentru cuvinte-cheie/funcții SQL și formatare.</p>
+          </article>
+          <article class="wf-step" id="step2">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 02</span>
+              <span class="wf-step__cmd">.import --csv / --json</span>
+            </div>
+            <h3 data-i18n="wf2_title">Populează tabele sau importă fișiere CSV &amp; JSON</h3>
+            <p data-i18n="wf2_desc">Încarcă seturi de date CSV, TSV sau JSON din folderul proiectului în tabele relaționale tipizate printr-o singură comandă.</p>
+          </article>
+          <article class="wf-step" id="step3">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 03</span>
+              <span class="wf-step__cmd">Run &#9654; (.mode box)</span>
+            </div>
+            <h3 data-i18n="wf3_title">Execută offline interogări multi-instrucțiune</h3>
+            <p data-i18n="wf3_desc">Inspectează grile Unicode Box, tabele Markdown sau ieșire JSON în consola cu ecran divizat, cu solicitări live READ_STDIN() pentru parametri când este nevoie.</p>
+          </article>
+          <article class="wf-step" id="step4">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 04</span>
+              <span class="wf-step__cmd">.save / .once report.csv</span>
+            </div>
+            <h3 data-i18n="wf4_title">Exportă rapoarte curate &amp; sincronizează .db cu PHP/Java</h3>
+            <p data-i18n="wf4_desc">Salvează fișiere .db actualizate sau rapoarte .csv/.json direct în folderul proiectului — gata de interogat din spațiile de lucru PHP PDO sau Java JDBC din SuperCode!</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="wf_foot_note">6 exemple SQL integrate · Interoperabilitate directă cu PHP PDO &amp; Java 17 JDBC</span>
+        <a class="link-arrow" href="https://supercode-ide.github.io/tutorial/?lang=ro&amp;ref=official_web" data-supercode-tutorial="true">
+          <span data-i18n="cta_tutorial">Ghid aplicație</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 04 · FEATURED SUMMARY & COMPARISON MATRIX ==================== -->
+  <section class="section section--alt" id="comparison">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">04</span>
+        <span class="rule"></span>
+        <span data-i18n="comp_eyebrow">MATRICE DE CAPABILITĂȚI</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="table_h2">SuperCode SQL IDE vs. vizualizatoare mobile de baze de date</h2>
+        <p class="snippet-definition" data-i18n="snippet_p"><strong>SuperCode SQL IDE</strong> este un executor de interogări SQL offline și explorator de baze de date dedicat pentru Android. Suportă funcții fereastră, CTE-uri recursive, căi JSONB, căutare full-text, peste 60 de funcții statistice și regex, 9 formate de ieșire (Box, Markdown, CSV, JSON), inspecție .db/.sqlite dintr-o atingere, importuri CSV/JSON și Cloud MySQL 8.0.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="table-wrap">
+          <table class="obsidian-benchmark-table">
+            <caption data-i18n="table_caption">COMPARAȚIE IDE SQL &amp; VIZUALIZATOR BAZE DE DATE PE ANDROID</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="th_0">Capabilitate SQL</th>
+                <th scope="col" data-i18n="th_1">SuperCode SQL Studio</th>
+                <th scope="col" data-i18n="th_2">Vizualizatoare simple de tabele .db</th>
+                <th scope="col" data-i18n="th_3">Sandbox-uri SQL online</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="tr1_c0">Motor SQL offline</th>
+                <td><strong data-i18n="tr1_c1">Window Functions + CTE-uri + JSONB + FTS offline</strong></td>
+                <td data-i18n="tr1_c2">Doar SELECT de bază / navigare GUI</td>
+                <td data-i18n="tr1_c3">Necesită internet</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr2_c0">Moduri de afișare &amp; export</th>
+                <td><strong data-i18n="tr2_c1">9 moduri (Box, Markdown, CSV, JSON, INSERT...)</strong></td>
+                <td data-i18n="tr2_c2">Doar grilă GUI fixă</td>
+                <td data-i18n="tr2_c3">Doar tabel HTML web</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr3_c0">Import date &amp; sincronizare</th>
+                <td><strong data-i18n="tr3_c1">Import CSV, TSV &amp; matrice JSON + sincronizare spațiu de lucru</strong></td>
+                <td data-i18n="tr3_c2">Funcție pro cu plată sau absentă</td>
+                <td data-i18n="tr3_c3">Lipire manuală INSERT</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr4_c0">Compatibilitate MySQL</th>
+                <td><strong data-i18n="tr4_c1">Compatibilitate DDL locală + proceduri Cloud MySQL 8.0</strong></td>
+                <td data-i18n="tr4_c2">Doar sintaxă strictă SQLite</td>
+                <td data-i18n="tr4_c3">Sesiune efemeră</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr5_c0">Integrare full-stack</th>
+                <td><strong data-i18n="tr5_c1">Partajează fișiere .db cu PHP PDO local &amp; Java JDBC</strong></td>
+                <td data-i18n="tr5_c2">Aplicație izolată de vizualizare</td>
+                <td data-i18n="tr5_c3">Filă de browser izolată</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">Creat pentru telefoane, pliabile și tablete · Doar 40.2 MB</span>
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=ro&amp;listing=sql-sqlite-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dro%26utm_campaign%3Dsql-sqlite-studio%26utm_content%3Dsql-ide" target="_blank" rel="noopener">
+          <span>Google Play</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 05 · VISIBLE EDITORIAL FAQ ==================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-head">
+          <div class="sec-index">
+            <span class="num">05</span>
+            <span class="rule"></span>
+            <span data-i18n="sec3_eyebrow">ÎNTREBĂRI ȘI RĂSPUNSURI</span>
+          </div>
+          <h2 class="h2" data-i18n="sec3_title">Întrebări frecvente</h2>
+          <p class="sec-lead" data-i18n="faq_lead">Răspunsuri despre exersarea SQL offline, deschiderea fișierelor .db/.sqlite, importuri CSV/JSON și sintaxa MySQL.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary><span data-i18n="faq1_q">Pot exersa interogări SQL offline fără să configurez un server de baze de date?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq1_a">Da! Creează orice fișier .sql și apasă Rulează pentru a executa interogări multi-instrucțiune CREATE, INSERT, JOIN, CTE și Window Function 100% offline, cu tabele formatate în Unicode Box Grid.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq2_q">Poate SuperCode să deschidă fișiere .db și .sqlite existente de pe telefon?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq2_a">Da. Atingerea sau rularea unui fișier .db, .sqlite, .sqlite3 sau .db3 inspectează toate tabelele, vizualizările, indecșii și schemele, iar orice script .sql din același folder de proiect poate interoga direct acea bază de date.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq3_q">Suportă sintaxă MySQL precum AUTO_INCREMENT, SHOW TABLES, DESCRIBE sau proceduri stocate?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq3_a">Comenzile și DDL-urile uzuale MySQL/PostgreSQL (AUTO_INCREMENT, ENUM, SHOW TABLES, DESCRIBE, ILIKE) rulează local offline, în timp ce procedurile stocate și trigger-ele specifice MySQL 8.0 sunt rutate automat către Cloud MySQL 8.0.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq4_q">Cum export rezultatele interogărilor SQL în CSV, Markdown sau JSON?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq4_a">Adaugă `.mode csv` (sau `.mode markdown` / `.mode json`) și `.once output.csv` înaintea interogării SELECT — SuperCode scrie fișierul exportat direct în folderul proiectului tău.</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==================== 06 · TOPICAL AUTHORITY ECOSYSTEM CLUSTER ==================== -->
+  <section class="section section--alt" id="ecosystem-guides">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">06</span>
+        <span class="rule"></span>
+        <span>GHIDURI PRACTICĂ SQL, VIZUALIZATOR .DB &amp; ANALITICĂ</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2>Explorează 4 ghiduri detaliate SQL &amp; baze de date pe Android</h2>
+        <p class="sec-lead">Stăpânește inspectarea fișierelor binare .db/.sqlite, Window Functions și căutarea FTS5, compatibilitatea cu dialectele MySQL/PostgreSQL și aplicațiile SQLite multi-limbaj.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="py-cluster-grid">
+          <a href="sqlite-db-viewer-editor-android.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">SQL-01</span>
+              <span class="py-spoke-card__tag">Box · Markdown · CSV · JSON</span>
+            </div>
+            <h3>Inspector .db / .sqlite și 9 moduri</h3>
+            <p>Deschide fișiere binare .db, .sqlite și .sqlite3 dintr-o atingere, importă automat seturi de date CSV/TSV/JSON și exportă interogări în 9 stiluri .mode formatate.</p>
+            <div class="py-spoke-card__go">
+              <span>sqlite-db-viewer-editor-android</span>
+              <span>Deschide ghidul &rarr;</span>
+            </div>
+          </a>
+          <a href="sql-window-functions-fts5-json.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">SQL-02</span>
+              <span class="py-spoke-card__tag">OVER() · CTE recursiv · BM25</span>
+            </div>
+            <h3>Funcții Window, CTE, JSONB &amp; FTS5</h3>
+            <p>Exersează SQL analitic modern offline: ferestre LAG/DENSE_RANK, CTE-uri recursive, căi JSONB -&gt;&gt;, căutare BM25 FTS5 și MEDIAN/STDDEV.</p>
+            <div class="py-spoke-card__go">
+              <span>sql-window-functions-fts5-json</span>
+              <span>Deschide ghidul &rarr;</span>
+            </div>
+          </a>
+          <a href="mysql-postgresql-syntax-android.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">SQL-03</span>
+              <span class="py-spoke-card__tag">SHOW TABLES · AUTO_INCREMENT · 8.0</span>
+            </div>
+            <h3>Compatibilitate MySQL &amp; PostgreSQL</h3>
+            <p>Rulează offline DDL uzual MySQL/Postgres (SHOW TABLES, DESCRIBE, SERIAL, ILIKE, SHA256, REGEXP), plus proceduri stocate Cloud MySQL 8.0.</p>
+            <div class="py-spoke-card__go">
+              <span>mysql-postgresql-syntax-android</span>
+              <span>Deschide ghidul &rarr;</span>
+            </div>
+          </a>
+          <a href="sql-python-php-java-lua-integration.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">SQL-04</span>
+              <span class="py-spoke-card__tag">Python sqlite3 · PHP PDO · JDBC</span>
+            </div>
+            <h3>.db partajat între SQL, Python, PHP &amp; Java</h3>
+            <p>Proiectează scheme în SQL Studio, apoi interoghează exact același fișier .db local din Python sqlite3, PHP 8.2 PDO, Java 17 JDBC și Lua lsqlite3!</p>
+            <div class="py-spoke-card__go">
+              <span>sql-python-php-java-lua-integration</span>
+              <span>Deschide ghidul &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span>5 ghiduri SQL interconectate · SQLite 3.54.1 + peste 50 de funcții MySQL/Postgres</span>
+        <a class="link-arrow" href="sql-ide.html">
+          <span>Hub SQL &amp; SQLite Studio</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="siteFooter">
+  <div class="container">
+    <div class="footer-cta" id="footerCta">
+      <div>
+        <h2 class="h2" data-i18n="cta_h2">Stăpânește SQL și gestionează baze de date offline pe Android.</h2>
+        <p data-i18n="cta_desc">Instalează SuperCode IDE de pe Google Play pentru un executor SQL offline complet, explorator .db și studio de date CSV/JSON.</p>
+      </div>
+      <div class="footer-cta__btns">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=ro&amp;listing=sql-sqlite-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dro%26utm_campaign%3Dsql-sqlite-studio%26utm_content%3Dsql-ide" target="_blank" rel="noopener" class="btn btn--gold">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="cta_btn">Descarcă de pe Google Play</span>
+        </a>
+        <a href="https://supercode-ide.github.io/tutorial/?lang=ro&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+          <span data-i18n="cta_tutorial">Ghid aplicație</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+          <span>SuperCode</span>
+          <span class="brand__tag">IDE</span>
+        </a>
+        <p data-i18n="footer_tagline">Editor de cod mobil nativ și studio de dezvoltare offline, creat pentru ingineri Android, studenți și profesori din întreaga lume.</p>
+        <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
+        <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=ro&amp;listing=sql-sqlite-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dro%26utm_campaign%3Dsql-sqlite-studio%26utm_content%3Dsql-ide" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://supercode-ide.github.io/tutorial/?lang=ro&amp;ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">Ghid aplicație</span> &#8599;</a>
+          <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">Selectează limba</span></button>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_core">Editor și fișiere mari</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Prezentare</a></li>
+          <li><a href="code-editor.html" data-i18n="nav_code_editor">Editor de cod</a></li>
+          <li><a href="large-file-editor.html" data-i18n="nav_large_file">Fișiere mari (GB)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_lang">Compilatoare offline și limbaje</h4>
+        <ul>
+          <li><a href="python-ide.html" data-i18n="nav_python_ide">IDE Python</a></li>
+          <li><a href="c-compiler.html" data-i18n="nav_c_compiler">Compilator C17</a></li>
+          <li><a href="cpp-ide.html" data-i18n="nav_cpp_ide">IDE C++20</a></li>
+          <li><a href="java-ide.html" data-i18n="nav_java_ide">IDE Java 17</a></li>
+          <li><a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a></li>
+          <li><a href="lua-ide.html" data-i18n="nav_lua_ide">Lua 5.4</a></li>
+          <li><a href="shell-ide.html" data-i18n="nav_shell_ide">Shell și Kotlin</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_devops">Web, SQL și DevOps la distanță</h4>
+        <ul>
+          <li><a href="web-ide.html" data-i18n="nav_web_ide">Web și PHP</a></li>
+          <li><a href="sql-ide.html" class="is-current" data-i18n="nav_sql_ide">Studio SQL</a></li>
+          <li><a href="git-client.html" data-i18n="nav_git_client">Git vizual</a></li>
+          <li><a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP și FTPS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <span>&copy; 2026 Phoenix Global Studios. All rights reserved.</span>
+      <span class="mono">com.phoenixglobal.supercodeeditor</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="mobile-bottom-bar" id="mobileBottomBar" aria-label="Quick App Actions">
+  <div class="dock-app-icon" aria-hidden="true"><svg><use href="#sc-logo"/></svg></div>
+  <div class="bottom-bar-info">
+    <div class="bottom-bar-title">SuperCode</div>
+    <div class="bottom-bar-sub"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  </div>
+  <div class="bottom-bar-actions">
+    <a href="https://supercode-ide.github.io/tutorial/?lang=ro&amp;ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">Ghid aplicație</a>
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=ro&amp;listing=sql-sqlite-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dro%26utm_campaign%3Dsql-sqlite-studio%26utm_content%3Dsql-ide" target="_blank" rel="noopener" class="btn-play-mini">
+      <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
+      <span data-i18n="bottom_cta">Descarcă</span>
+    </a>
+  </div>
+</aside>
+
+<div class="modal-overlay" id="langModal" role="dialog" aria-modal="true" aria-labelledby="langModalTitle">
+  <div class="lang-modal">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div class="modal-header">
+      <h3 id="langModalTitle"><span data-i18n="modal_title">Selectează limba</span><span class="modal-lang-count">32</span></h3>
+      <button type="button" class="btn-close-modal" onclick="closeLangModal()" aria-label="Închide">&#10005;</button>
+    </div>
+    <div class="lang-grid">
+      <button type="button" class="lang-option" data-code="en" onclick="setLanguage('en')"><span class="lang-option__name">English</span><span class="lang-option__code">EN</span></button>
+      <button type="button" class="lang-option" data-code="zh" onclick="setLanguage('zh')"><span class="lang-option__name">简体中文</span><span class="lang-option__code">简中</span></button>
+      <button type="button" class="lang-option" data-code="zh-tw" onclick="setLanguage('zh-tw')"><span class="lang-option__name">繁體中文</span><span class="lang-option__code">繁中</span></button>
+      <button type="button" class="lang-option" data-code="es" onclick="setLanguage('es')"><span class="lang-option__name">Español</span><span class="lang-option__code">ES</span></button>
+      <button type="button" class="lang-option" data-code="pt" onclick="setLanguage('pt')"><span class="lang-option__name">Português</span><span class="lang-option__code">PT</span></button>
+      <button type="button" class="lang-option" data-code="ja" onclick="setLanguage('ja')"><span class="lang-option__name">日本語</span><span class="lang-option__code">日本語</span></button>
+      <button type="button" class="lang-option" data-code="ko" onclick="setLanguage('ko')"><span class="lang-option__name">한국어</span><span class="lang-option__code">한국어</span></button>
+      <button type="button" class="lang-option" data-code="de" onclick="setLanguage('de')"><span class="lang-option__name">Deutsch</span><span class="lang-option__code">DE</span></button>
+      <button type="button" class="lang-option" data-code="fr" onclick="setLanguage('fr')"><span class="lang-option__name">Français</span><span class="lang-option__code">FR</span></button>
+      <button type="button" class="lang-option" data-code="ru" onclick="setLanguage('ru')"><span class="lang-option__name">Русский</span><span class="lang-option__code">RU</span></button>
+      <button type="button" class="lang-option" data-code="hi" onclick="setLanguage('hi')"><span class="lang-option__name">हिन्दी</span><span class="lang-option__code">HI</span></button>
+      <button type="button" class="lang-option" data-code="id" onclick="setLanguage('id')"><span class="lang-option__name">Bahasa Indonesia</span><span class="lang-option__code">ID</span></button>
+      <button type="button" class="lang-option" data-code="it" onclick="setLanguage('it')"><span class="lang-option__name">Italiano</span><span class="lang-option__code">IT</span></button>
+      <button type="button" class="lang-option" data-code="vi" onclick="setLanguage('vi')"><span class="lang-option__name">Tiếng Việt</span><span class="lang-option__code">VI</span></button>
+      <button type="button" class="lang-option" data-code="th" onclick="setLanguage('th')"><span class="lang-option__name">ไทย</span><span class="lang-option__code">ไทย</span></button>
+      <button type="button" class="lang-option" data-code="tr" onclick="setLanguage('tr')"><span class="lang-option__name">Türkçe</span><span class="lang-option__code">TR</span></button>
+      <button type="button" class="lang-option" data-code="ar" onclick="setLanguage('ar')"><span class="lang-option__name">العربية</span><span class="lang-option__code">AR</span></button>
+      <button type="button" class="lang-option" data-code="pl" onclick="setLanguage('pl')"><span class="lang-option__name">Polski</span><span class="lang-option__code">PL</span></button>
+      <button type="button" class="lang-option" data-code="nl" onclick="setLanguage('nl')"><span class="lang-option__name">Nederlands</span><span class="lang-option__code">NL</span></button>
+      <button type="button" class="lang-option" data-code="sv" onclick="setLanguage('sv')"><span class="lang-option__name">Svenska</span><span class="lang-option__code">SV</span></button>
+      <button type="button" class="lang-option" data-code="nb" onclick="setLanguage('nb')"><span class="lang-option__name">Norsk Bokmål</span><span class="lang-option__code">NB</span></button>
+      <button type="button" class="lang-option" data-code="da" onclick="setLanguage('da')"><span class="lang-option__name">Dansk</span><span class="lang-option__code">DA</span></button>
+      <button type="button" class="lang-option" data-code="fi" onclick="setLanguage('fi')"><span class="lang-option__name">Suomi</span><span class="lang-option__code">FI</span></button>
+      <button type="button" class="lang-option" data-code="cs" onclick="setLanguage('cs')"><span class="lang-option__name">Čeština</span><span class="lang-option__code">CS</span></button>
+      <button type="button" class="lang-option" data-code="uk" onclick="setLanguage('uk')"><span class="lang-option__name">Українська</span><span class="lang-option__code">UK</span></button>
+      <button type="button" class="lang-option active" data-code="ro" onclick="setLanguage('ro')"><span class="lang-option__name">Română</span><span class="lang-option__code">RO</span></button>
+      <button type="button" class="lang-option" data-code="hu" onclick="setLanguage('hu')"><span class="lang-option__name">Magyar</span><span class="lang-option__code">HU</span></button>
+      <button type="button" class="lang-option" data-code="el" onclick="setLanguage('el')"><span class="lang-option__name">Ελληνικά</span><span class="lang-option__code">EL</span></button>
+      <button type="button" class="lang-option" data-code="he" onclick="setLanguage('he')"><span class="lang-option__name">עברית</span><span class="lang-option__code">HE</span></button>
+      <button type="button" class="lang-option" data-code="ms" onclick="setLanguage('ms')"><span class="lang-option__name">Bahasa Melayu</span><span class="lang-option__code">MS</span></button>
+      <button type="button" class="lang-option" data-code="tl" onclick="setLanguage('tl')"><span class="lang-option__name">Filipino</span><span class="lang-option__code">FIL</span></button>
+      <button type="button" class="lang-option" data-code="bn" onclick="setLanguage('bn')"><span class="lang-option__name">বাংলা</span><span class="lang-option__code">BN</span></button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var WORKBENCH_SAMPLES = {"sql_win": {"label": "sql-database-studio/analytics.sql \u2014 Window Functions & CTEs", "status": "SQL Studio \u00b7 9 Output Modes", "lines": ["<span class=\"tok-kw\">WITH<\/span> sales(rep, region, rev) <span class=\"tok-kw\">AS<\/span> (", "  <span class=\"tok-kw\">VALUES<\/span> (<span class=\"tok-str\">&#39;Maya&#39;<\/span>, <span class=\"tok-str\">&#39;APAC&#39;<\/span>, <span class=\"tok-num\">9400<\/span>), (<span class=\"tok-str\">&#39;Leo&#39;<\/span>, <span class=\"tok-str\">&#39;EU&#39;<\/span>, <span class=\"tok-num\">8800<\/span>), (<span class=\"tok-str\">&#39;Ken&#39;<\/span>, <span class=\"tok-str\">&#39;APAC&#39;<\/span>, <span class=\"tok-num\">9100<\/span>)", ")", "<span class=\"tok-kw\">SELECT<\/span> rep, region, rev, <span class=\"tok-fn\">DENSE_RANK<\/span>() <span class=\"tok-kw\">OVER<\/span> (<span class=\"tok-kw\">ORDER BY<\/span> rev <span class=\"tok-kw\">DESC<\/span>) <span class=\"tok-kw\">AS<\/span> rk <span class=\"tok-kw\">FROM<\/span> sales;"], "output": ["<span class=\"term-prompt\">sql&gt;<\/span> .mode box", "\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2510", "\u2502 rep  \u2502 region \u2502 rev  \u2502 rk \u2502", "\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2524", "\u2502 Maya \u2502 APAC   \u2502 9400 \u2502 1  \u2502", "\u2502 Ken  \u2502 APAC   \u2502 9100 \u2502 2  \u2502", "\u2502 Leo  \u2502 EU     \u2502 8800 \u2502 3  \u2502", "\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2518", "<span class=\"term-info\">&#10003; 3 rows &middot; Switchable: box | markdown | csv | json | table | insert<\/span>"]}, "sql_json": {"label": "sql-database-studio/json_fts.sql \u2014 Native JSON Path & Full-Text Search", "status": "SQL Studio \u00b7 JSONB + Full-Text Search", "lines": ["<span class=\"tok-kw\">CREATE TABLE<\/span> events (id <span class=\"tok-kw\">INT<\/span>, payload <span class=\"tok-kw\">TEXT<\/span>);", "<span class=\"tok-kw\">INSERT INTO<\/span> events <span class=\"tok-kw\">VALUES<\/span> (<span class=\"tok-num\">1<\/span>, <span class=\"tok-str\">&#39;{&quot;user&quot;:&quot;ada&quot;,&quot;plan&quot;:&quot;pro&quot;}&#39;<\/span>);", "<span class=\"tok-kw\">SELECT<\/span> id, payload-&gt;&gt;<span class=\"tok-str\">&#39;$.user&#39;<\/span> <span class=\"tok-kw\">AS<\/span> usr, <span class=\"tok-fn\">SHA256<\/span>(payload-&gt;&gt;<span class=\"tok-str\">&#39;$.user&#39;<\/span>) <span class=\"tok-kw\">FROM<\/span> events;"], "output": ["<span class=\"term-prompt\">sql&gt;<\/span> SELECT id, usr, substr(sha256, 1, 12) FROM events;", "1 | ada | b49f425a7e1f...", "<span class=\"term-info\">&#10003; 60+ Built-In Crypto, Regex, Statistical &amp; Date Functions<\/span>"]}, "sql_db": {"label": "sql-database-studio/import_csv.sql \u2014 .db Inspector & CSV/JSON Import", "status": "Database Explorer \u00b7 .db / .sqlite", "lines": ["<span class=\"tok-cmt\">-- Auto-mounts local .db/.sqlite files &amp; imports CSV/JSON<\/span>", ".open analytics.db", ".import --csv data/users.csv users", ".tables", "<span class=\"tok-kw\">SELECT<\/span> <span class=\"tok-fn\">COUNT<\/span>(*) <span class=\"tok-kw\">AS<\/span> imported_rows <span class=\"tok-kw\">FROM<\/span> users;"], "output": ["<span class=\"term-prompt\">sql&gt;<\/span> Mounted analytics.db &middot; Imported data/users.csv", "Tables: orders   sessions   users", "imported_rows: 1,250", "<span class=\"term-info\">&#10003; Supports Cloud MySQL 8.0 Procedures &amp; Multi-File Pipelines<\/span>"]}};
+    var currentTab = 'sql_win';
+    var runTimer = null;
+
+    function renderWorkbench(tabKey, animateRun) {
+      var sample = WORKBENCH_SAMPLES[tabKey] || WORKBENCH_SAMPLES['sql_win'];
+      if (!sample) { return; }
+      currentTab = tabKey;
+      var labelEl = document.getElementById('ide-compiler-label');
+      if (labelEl) { labelEl.textContent = sample.label; }
+      var statusEl = document.getElementById('wbStatusLang');
+      if (statusEl) { statusEl.textContent = sample.status; }
+
+      var tabs = document.querySelectorAll('.ide-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        var active = tabs[i].getAttribute('data-tab') === tabKey;
+        tabs[i].classList.toggle('active', active);
+        tabs[i].setAttribute('aria-selected', active ? 'true' : 'false');
+      }
+      var files = document.querySelectorAll('.wb-file');
+      for (var f = 0; f < files.length; f++) {
+        files[f].classList.toggle('active', files[f].getAttribute('data-tab') === tabKey);
+      }
+
+      var codeBox = document.getElementById('ide-code-box');
+      if (codeBox) {
+        var html = '';
+        for (var l = 0; l < sample.lines.length; l++) {
+          var activeCls = (l === sample.lines.length - 1) ? ' active-line' : '';
+          html += '<div class="code-line' + activeCls + '"><span class="ln">' + (l + 1) + '</span><span class="code-content">' + sample.lines[l] + '</span></div>';
+        }
+        codeBox.innerHTML = html;
+      }
+
+      if (animateRun) {
+        runWorkbenchSample();
+      }
+    }
+
+    function runWorkbenchSample() {
+      var sample = WORKBENCH_SAMPLES[currentTab] || WORKBENCH_SAMPLES['sql_win'];
+      var drawer = document.getElementById('ide-terminal-drawer');
+      var out = document.getElementById('ide-term-output');
+      var badge = document.getElementById('ide-exec-status');
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (!drawer || !out || !sample) { return; }
+
+      if (runTimer) { clearTimeout(runTimer); }
+      drawer.classList.add('is-open');
+      if (runBtn) { runBtn.classList.add('is-running'); }
+      if (badge) { badge.textContent = 'Running...'; badge.classList.remove('done'); }
+      out.innerHTML = '';
+
+      var idx = 0;
+      function step() {
+        if (idx < sample.output.length) {
+          var row = document.createElement('span');
+          row.className = 'term-line-item';
+          row.innerHTML = sample.output[idx];
+          out.appendChild(row);
+          idx++;
+          runTimer = setTimeout(step, 80);
+        } else {
+          var cur = document.createElement('span');
+          cur.className = 'term-cursor';
+          cur.textContent = '\u258b';
+          out.appendChild(cur);
+          if (badge) { badge.textContent = 'Completed'; badge.classList.add('done'); }
+          if (runBtn) { runBtn.classList.remove('is-running'); }
+        }
+      }
+      step();
+    }
+
+    function initNavigationAndSmartBar() {
+      var menuBtn = document.getElementById('menuBtn');
+      var drawer = document.getElementById('siteDrawer');
+      var bar = document.getElementById('mobileBottomBar');
+      var heroCta = document.getElementById('heroCta');
+      var siteFooter = document.getElementById('siteFooter');
+
+      function syncBar() {
+        if (!bar) { return; }
+        var drawerOpen = Boolean(drawer && !drawer.hasAttribute('hidden'));
+        var modalEl = document.getElementById('langModal');
+        var modalOpen = Boolean(modalEl && modalEl.classList.contains('show'));
+        var vh = window.innerHeight || document.documentElement.clientHeight || 800;
+        var heroInView = false;
+        if (heroCta) {
+          var hr = heroCta.getBoundingClientRect();
+          heroInView = (hr.bottom > 0 && hr.top < vh);
+        }
+        var footerInView = false;
+        if (siteFooter) {
+          var fr = siteFooter.getBoundingClientRect();
+          footerInView = (fr.top < vh + 24);
+        }
+        var scrollYVal = window.pageYOffset || window.scrollY || 0;
+        var docH = Math.max(document.body ? document.body.scrollHeight : 0, document.documentElement ? document.documentElement.scrollHeight : 0);
+        var nearBottom = (vh + scrollYVal) >= (docH - 120);
+        var shouldShow = !drawerOpen && !modalOpen && !heroInView && !footerInView && !nearBottom;
+        bar.classList.toggle('is-visible', shouldShow);
+      }
+
+      window.__supercodeSyncMobileBar = syncBar;
+
+      function setDrawer(open) {
+        if (!menuBtn || !drawer) { return; }
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { drawer.removeAttribute('hidden'); }
+        else { drawer.setAttribute('hidden', ''); }
+        syncBar();
+      }
+      if (menuBtn && drawer) {
+        menuBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          setDrawer(menuBtn.getAttribute('aria-expanded') !== 'true');
+        });
+        drawer.addEventListener('click', function (e) {
+          if (e.target && e.target.closest('a')) { setDrawer(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!drawer.hasAttribute('hidden') && !drawer.contains(e.target) && e.target !== menuBtn && !menuBtn.contains(e.target)) {
+            setDrawer(false);
+          }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') { setDrawer(false); }
+        });
+      }
+
+      if (bar) {
+        window.addEventListener('scroll', syncBar, { passive: true });
+        window.addEventListener('resize', syncBar);
+        syncBar();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var tabBtns = document.querySelectorAll('.ide-tab, .wb-file');
+      for (var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', function () {
+          renderWorkbench(this.getAttribute('data-tab'), true);
+        });
+      }
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (runBtn) { runBtn.addEventListener('click', function () { runWorkbenchSample(); }); }
+      var closeTerm = document.getElementById('btn-close-term');
+      if (closeTerm) {
+        closeTerm.addEventListener('click', function () {
+          var d = document.getElementById('ide-terminal-drawer');
+          if (d) { d.classList.remove('is-open'); }
+        });
+      }
+      initNavigationAndSmartBar();
+      renderWorkbench('sql_win', false);
+    });
+  })();
+</script>
+<script>window.__SUPERCODE_STATIC_LANG__="ro";window.__SUPERCODE_STATIC_CANONICAL__="https://supercode-ide.github.io/ro/sql-ide.html";</script>
+<script src="../i18n_extended.js"></script>
+</body>
+</html>

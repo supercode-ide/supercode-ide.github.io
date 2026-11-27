@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="bn" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090A0F">
+  <meta name="color-scheme" content="only dark">
+  <meta name="supported-color-schemes" content="dark">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <title>Android-এর জন্য Web ও PHP 8.2 IDE — অফলাইন HTML, CSS, JS, PDO SQLite ও WASM সার্ভার | SuperCode</title>
+  <meta name="description" content="Android-এর জন্য ফুল-স্ট্যাক অফলাইন Web ও PHP 8.2 IDE। HTML5, CSS3, ES Modules, WebAssembly (.wasm), PHP $_SESSION + PDO SQLite ডেটাবেস, ৩-ভিউপোর্ট DevTools REPL এবং SFTP ডিপ্লয়ের জন্য আসল লোকাল HTTP সার্ভার।">
+  <meta name="keywords" content="web ide for android, html css js editor android, run php offline on android, php 8 sqlite server app android, spck trebedit acode alternative, mobile web devtools inspect element, wasm android">
+  <meta name="author" content="Phoenix Global Studios">
+  <meta name="google-play-app" content="app-id=com.phoenixglobal.supercodeeditor">
+
+  <link id="canonical-link" rel="canonical" href="https://supercode-ide.github.io/bn/web-ide.html">
+  <link rel="alternate" hreflang="x-default" href="https://supercode-ide.github.io/web-ide.html">
+  <link rel="alternate" hreflang="en" href="https://supercode-ide.github.io/web-ide.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://supercode-ide.github.io/zh/web-ide.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://supercode-ide.github.io/zh-tw/web-ide.html">
+  <link rel="alternate" hreflang="es" href="https://supercode-ide.github.io/es/web-ide.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://supercode-ide.github.io/pt/web-ide.html">
+  <link rel="alternate" hreflang="ja" href="https://supercode-ide.github.io/ja/web-ide.html">
+  <link rel="alternate" hreflang="ko" href="https://supercode-ide.github.io/ko/web-ide.html">
+  <link rel="alternate" hreflang="de" href="https://supercode-ide.github.io/de/web-ide.html">
+  <link rel="alternate" hreflang="fr" href="https://supercode-ide.github.io/fr/web-ide.html">
+  <link rel="alternate" hreflang="ru" href="https://supercode-ide.github.io/ru/web-ide.html">
+  <link rel="alternate" hreflang="hi" href="https://supercode-ide.github.io/hi/web-ide.html">
+  <link rel="alternate" hreflang="id" href="https://supercode-ide.github.io/id/web-ide.html">
+  <link rel="alternate" hreflang="it" href="https://supercode-ide.github.io/it/web-ide.html">
+  <link rel="alternate" hreflang="vi" href="https://supercode-ide.github.io/vi/web-ide.html">
+  <link rel="alternate" hreflang="th" href="https://supercode-ide.github.io/th/web-ide.html">
+  <link rel="alternate" hreflang="tr" href="https://supercode-ide.github.io/tr/web-ide.html">
+  <link rel="alternate" hreflang="ar" href="https://supercode-ide.github.io/ar/web-ide.html">
+  <link rel="alternate" hreflang="pl" href="https://supercode-ide.github.io/pl/web-ide.html">
+  <link rel="alternate" hreflang="nl" href="https://supercode-ide.github.io/nl/web-ide.html">
+  <link rel="alternate" hreflang="sv" href="https://supercode-ide.github.io/sv/web-ide.html">
+  <link rel="alternate" hreflang="nb" href="https://supercode-ide.github.io/nb/web-ide.html">
+  <link rel="alternate" hreflang="da" href="https://supercode-ide.github.io/da/web-ide.html">
+  <link rel="alternate" hreflang="fi" href="https://supercode-ide.github.io/fi/web-ide.html">
+  <link rel="alternate" hreflang="cs" href="https://supercode-ide.github.io/cs/web-ide.html">
+  <link rel="alternate" hreflang="uk" href="https://supercode-ide.github.io/uk/web-ide.html">
+  <link rel="alternate" hreflang="ro" href="https://supercode-ide.github.io/ro/web-ide.html">
+  <link rel="alternate" hreflang="hu" href="https://supercode-ide.github.io/hu/web-ide.html">
+  <link rel="alternate" hreflang="el" href="https://supercode-ide.github.io/el/web-ide.html">
+  <link rel="alternate" hreflang="he" href="https://supercode-ide.github.io/he/web-ide.html">
+  <link rel="alternate" hreflang="ms" href="https://supercode-ide.github.io/ms/web-ide.html">
+  <link rel="alternate" hreflang="fil" href="https://supercode-ide.github.io/tl/web-ide.html">
+  <link rel="alternate" hreflang="bn" href="https://supercode-ide.github.io/bn/web-ide.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
+  <meta property="og:title" content="Android-এর জন্য Web ও PHP 8.2 IDE — অফলাইন HTML, CSS, JS, PDO SQLite ও WASM সার্ভার | SuperCode">
+  <meta property="og:description" content="Android-এর জন্য ফুল-স্ট্যাক অফলাইন Web ও PHP 8.2 IDE। HTML5, CSS3, ES Modules, WebAssembly (.wasm), PHP $_SESSION + PDO SQLite ডেটাবেস, ৩-ভিউপোর্ট DevTools REPL এবং SFTP ডিপ্লয়ের জন্য আসল লোকাল HTTP সার্ভার।">
+  <meta property="og:url" content="https://supercode-ide.github.io/bn/web-ide.html">
+  <meta property="og:locale" content="bn_BD">
+  <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-hero-bn.png">
+  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-hero-bn.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="লোকাল ওয়েব সার্ভার, অফলাইন PHP ও DevTools">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-hero-bn.png">
+  <meta name="twitter:title" content="Android-এর জন্য Web ও PHP 8.2 IDE — অফলাইন HTML, CSS, JS, PDO SQLite ও WASM সার্ভার | SuperCode">
+  <meta name="twitter:description" content="Android-এর জন্য ফুল-স্ট্যাক অফলাইন Web ও PHP 8.2 IDE। HTML5, CSS3, ES Modules, WebAssembly (.wasm), PHP $_SESSION + PDO SQLite ডেটাবেস, ৩-ভিউপোর্ট DevTools REPL এবং SFTP ডিপ্লয়ের জন্য আসল লোকাল HTTP সার্ভার।">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <script>if(/SamsungBrowser/i.test(navigator.userAgent)){document.documentElement.classList.add('is-samsung');}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "SoftwareApplication",
+        "MobileApplication",
+        "WebApplication"
+      ],
+      "@id": "https://supercode-ide.github.io/#supercode-app",
+      "name": "Code Editor: SuperCode IDE",
+      "alternateName": [
+        "Web IDE for Android",
+        "Offline PHP & HTML Editor Android",
+        "Mobile Web DevTools & WASM Studio"
+      ],
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Full-Stack HTML, CSS, JS, WebAssembly & Offline PHP IDE for Android",
+      "inLanguage": "bn",
+      "fileSize": "40.2MB",
+      "softwareVersion": "1.55.05",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=bn-BD&listing=web-php-studio",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=bn-BD&listing=web-php-studio",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=bn-BD"
+      ],
+      "potentialAction": [
+        {
+          "@type": "InstallAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=bn-BD&listing=web-php-studio",
+            "actionPlatform": [
+              "http://schema.org/AndroidPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          }
+        },
+        {
+          "@type": "ViewAction",
+          "name": "অ্যাপ গাইড",
+          "target": [
+            "https://supercode-ide.github.io/tutorial/?lang=bn",
+            "android-app://com.phoenixglobal.supercodeeditor/https/supercode-ide.github.io/tutorial"
+          ]
+        }
+      ],
+      "identifier": "com.phoenixglobal.supercodeeditor",
+      "url": "https://supercode-ide.github.io/bn/web-ide.html",
+      "screenshot": [
+        "https://supercode-ide.github.io/assets/gallery/bn/03_web_php_devtools.webp",
+        "https://supercode-ide.github.io/assets/gallery/bn/01_python_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/bn/02_cpp20_compiler.webp",
+        "https://supercode-ide.github.io/assets/gallery/bn/04_file_manager_tree.webp",
+        "https://supercode-ide.github.io/assets/gallery/bn/05_sql_sqlite_studio.webp",
+        "https://supercode-ide.github.io/assets/gallery/bn/06_java17_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/bn/07_visual_git_timemachine.webp",
+        "https://supercode-ide.github.io/assets/gallery/bn/08_symbol_keyboard_themes.webp"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Phoenix Global Studios",
+        "url": "https://supercode-ide.github.io/bn/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "66"
+      },
+      "featureList": [
+        "Real local HTTP/1.1 preview server unlocking fetch(), ES Modules, IndexedDB, Cookies & 206 video/audio streaming",
+        "Native WebAssembly (.wasm) streaming support, WebGL/3D assets (.glb/.gltf), web fonts & 65+ MIME types",
+        "100% offline dynamic PHP engine with $_GET, $_POST, $_SESSION, $_FILES, JSON REST APIs & multi-file include/require",
+        "Built-in offline SQL connectivity from PHP via PDO('sqlite:...') and SQLite3 with ACID transactions",
+        "Floating Dynamic Island, 3-mode Viewport Switcher (Mobile / Tablet 768dp / Desktop) & 2560px PNG screenshot export",
+        "Resizable Web DevTools Console (All / Error / Warn / Net) + live JS REPL + direct FTP/FTPS/SFTP remote web preview"
+      ],
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-bn.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://supercode-ide.github.io/bn/web-ide.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SuperCode IDE",
+          "item": "https://supercode-ide.github.io/bn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "ওয়েব, PHP 8.2 ও WASM হাব",
+          "item": "https://supercode-ide.github.io/bn/web-ide.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Build, Debug & Deploy a Full-Stack Site on Android",
+      "description": "From local HTML/CSS/WASM and PHP+SQL prototyping to live server deployment.",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Author HTML5, CSS3, JS, WASM & PHP Files",
+          "text": "Edit multi-file web projects with AST HTML/CSS/JS/PHP completion and recursive one-tap formatting that indents embedded <script> and <style> blocks together.",
+          "url": "https://supercode-ide.github.io/web-ide.html#step1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Connect Offline PHP Forms & APIs to SQL",
+          "text": "Query local .db SQLite databases from PHP via PDO prepared statements, or seed tables directly inside SuperCode's SQL Studio.",
+          "url": "https://supercode-ide.github.io/web-ide.html#step2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Preview Across Mobile, Tablet & Desktop + DevTools",
+          "text": "Switch viewports on the fly, inspect network status and JS errors in the resizable DevTools drawer, or test live DOM tweaks in the JS REPL.",
+          "url": "https://supercode-ide.github.io/web-ide.html#step3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Publish Updates Straight to Your Host or GitHub Pages",
+          "text": "Push static/WASM builds to GitHub Pages via Visual Git, or deploy PHP & web assets directly to your VPS over SFTP/FTPS.",
+          "url": "https://supercode-ide.github.io/web-ide.html#step4"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://supercode-ide.github.io/web-ide.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "আমি কি Android-এ অফলাইনে ডায়নামিক PHP ওয়েবসাইট চালাতে এবং SQL ডেটাবেসে সংযুক্ত হতে পারব?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "হ্যাঁ! বিল্ট-ইন PDO('sqlite:...') ও SQLite3 ডেটাবেস সাপোর্টসহ SuperCode সম্পূর্ণ অফলাইনে .php পেজ, REST JSON এন্ডপয়েন্ট, সেশন, ফর্ম আপলোড এবং মাল্টি-ফাইল include চালায়।"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ES6 মডিউল (<script type=\"module\">), fetch() এবং WebAssembly (.wasm) কি কাজ করে?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "হ্যাঁ। SuperCode ৬৫+ MIME টাইপ (যার মধ্যে application/wasm রয়েছে) সহ একটি আসল লোকাল HTTP সার্ভারে আপনার প্রজেক্ট পরিবেশন করে, তাই fetch(), ES মডিউল, WebGL 3D মডেল এবং WebAssembly.instantiateStreaming() সরাসরি কাজ করে।"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ফোনে JavaScript এরর, নেটওয়ার্ক রিকোয়েস্ট ও ডেস্কটপ লেআউট কীভাবে ডিবাগ করব?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "প্রিভিউ মোডে ড্র্যাগযোগ্য Dynamic Island পিল-এ ট্যাপ করে Mobile, Tablet (768dp) ও Desktop ভিউপোর্টে সুইচ করুন, অথবা রিসাইজেবল Web DevTools ড্রয়ার খুলে Error/Warn/Net লগ ফিল্টার করুন ও REPL-এ লাইভ JavaScript চালান।"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "আমি কি রিমোট FTP বা SFTP সার্ভারে হোস্ট করা ওয়েবসাইট প্রিভিউ ও আপডেট করতে পারব?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "হ্যাঁ। SFTP/FTPS/FTP ওয়ার্কস্পেসে আপনার সার্ভার মাউন্ট করুন, ৩-ধাপের অ্যাটমিক সেভ-সহ সরাসরি রিমোট HTML/CSS/JS/PHP ট্যাব এডিট করুন এবং অন-ডিমান্ড অ্যাসেট ক্যাশিংসহ রিমোট পেজ প্রিভিউ করতে Run ট্যাপ করুন।"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-page="web_ide">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="sc-logo" viewBox="20 14 68 72">
+    <path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/>
+    <path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/>
+    <path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/>
+    <path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+  </symbol>
+  <symbol id="gp-prism" viewBox="0 0 24 24">
+    <path fill="#4285F4" d="M3.6,2.4C3.3,2.7,3.1,3.2,3.1,3.8v16.4c0,0.6,0.2,1.1,0.5,1.4l0.1,0.1L12.9,12v-0.2L3.7,2.3L3.6,2.4z"/>
+    <path fill="#34A853" d="M16,15.1l-3.1-3.1v-0.2L16,8.7l0.1,0.1l3.6,2.1c1,0.6,1,1.5,0,2.1l-3.6,2.1L16,15.1z"/>
+    <path fill="#FBBC05" d="M16.1,15.1L12.9,12L3.6,21.3c0.3,0.4,0.9,0.4,1.6,0.1L16.1,15.1z"/>
+    <path fill="#EA4335" d="M16.1,8.9L5.2,2.6C4.5,2.2,3.9,2.3,3.6,2.7L12.9,12L16.1,8.9z"/>
+  </symbol>
+  <symbol id="i-ne" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8 20 7.2v9.6L12 21.2 4 16.8V7.2z"/><path d="M4 7.2l8 4.4 8-4.4M12 11.6v9.6"/></g></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2.8v3.2M15 2.8v3.2M9 18v3.2M15 18v3.2M2.8 9H6M2.8 15H6M18 9h3.2M18 15h3.2"/></g></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 2.8 7.8 12 12.6l9.2-4.8z"/><path d="m2.8 12 9.2 4.8 9.2-4.8"/><path d="m2.8 16.2 9.2 4.8 9.2-4.8"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="M2.8 8.5h18.4"/><path d="m9.5 12.5-2.2 2.2 2.2 2.2M14.5 12.5l2.2 2.2-2.2 2.2"/></g></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5.6" rx="7.6" ry="2.8"/><path d="M4.4 5.6v12.8c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8V5.6"/><path d="M4.4 12c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8"/></g></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="m7.2 9.5 3 2.5-3 2.5M12.8 15h4"/></g></symbol>
+  <symbol id="i-git" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.3"/><circle cx="6" cy="18" r="2.3"/><circle cx="18" cy="12" r="2.3"/><path d="M6 8.3v7.4M8.3 6h4.2a3.5 3.5 0 0 1 3.5 3.5v.2"/></g></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5h11a4 4 0 0 0 .7-7.94A5.5 5.5 0 0 0 7.4 9.2 3.8 3.8 0 0 0 6.5 18.5z"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M13 2.8 4.8 13.2h6.3L10.2 21.2 19.2 10.6h-6.4z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 2.8 4.8 5.8v5.6c0 5 3.1 8.5 7.2 9.8 4.1-1.3 7.2-4.8 7.2-9.8V5.8z"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="index.html" class="brand" aria-label="SuperCode IDE Home">
+      <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+      <span>SuperCode</span>
+      <span class="brand__tag">IDE</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary Workspaces">
+      <a href="code-editor.html" data-i18n="nav_code_editor">কোড এডিটর</a>
+      <a href="large-file-editor.html" data-i18n="nav_large_file">GB বড় ফাইল</a>
+      <a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a>
+      <a href="c-compiler.html" data-i18n="nav_c_compiler">C17 কম্পাইলার</a>
+      <a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a>
+      <a href="java-ide.html" data-i18n="nav_java_ide">Java 17 IDE</a>
+      <a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a>
+      <a href="web-ide.html" class="is-current" data-i18n="nav_web_ide">ওয়েব ও PHP</a>
+      <a href="sql-ide.html" data-i18n="nav_sql_ide">SQL স্টুডিও</a>
+      <a href="git-client.html" data-i18n="nav_git_client">ভিজ্যুয়াল Git</a>
+      <a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP ও FTPS</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button id="langModalBtn" class="btn-lang-trigger" type="button" onclick="openLangModal()" aria-label="Select Language">
+        <svg class="lang-globe-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span id="langTriggerText">BN</span>
+        <span class="lang-chevron" aria-hidden="true">&#9662;</span>
+      </button>
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=bn-BD&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dbn%26utm_campaign%3Dweb-php-studio%26utm_content%3Dweb-ide" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+        <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+        <span data-i18n="nav_cta">Google Play</span>
+      </a>
+      <a href="index.html" class="btn-home-icon" aria-label="Home" title="Home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5"/>
+          <path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
+        </svg>
+      </a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteDrawer" aria-label="All Pages Directory">
+        <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 8.5h16M4 15.5h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-drawer" id="siteDrawer" hidden>
+  <nav class="container menu-drawer__inner" aria-label="All SuperCode Pages">
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_core">এডিটর ও বড় ফাইল</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="index.html"><span data-i18n="nav_home">সংক্ষিপ্ত বিবরণ</span><span class="mono">01</span></a>
+        <a class="menu-drawer__link" href="code-editor.html"><span data-i18n="nav_code_editor">কোড এডিটর</span><span class="mono">02</span></a>
+        <a class="menu-drawer__link" href="large-file-editor.html"><span data-i18n="nav_large_file">GB বড় ফাইল</span><span class="mono">03</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_lang">অফলাইন কম্পাইলার ও ভাষা</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="python-ide.html"><span data-i18n="nav_python_ide">Python IDE</span><span class="mono">04</span></a>
+        <a class="menu-drawer__link" href="c-compiler.html"><span data-i18n="nav_c_compiler">C17 কম্পাইলার</span><span class="mono">05</span></a>
+        <a class="menu-drawer__link" href="cpp-ide.html"><span data-i18n="nav_cpp_ide">C++20 IDE</span><span class="mono">06</span></a>
+        <a class="menu-drawer__link" href="java-ide.html"><span data-i18n="nav_java_ide">Java 17 IDE</span><span class="mono">07</span></a>
+        <a class="menu-drawer__link" href="javascript-ide.html"><span data-i18n="nav_js_ide">JavaScript</span><span class="mono">08</span></a>
+        <a class="menu-drawer__link" href="lua-ide.html"><span data-i18n="nav_lua_ide">Lua 5.4</span><span class="mono">09</span></a>
+        <a class="menu-drawer__link" href="shell-ide.html"><span data-i18n="nav_shell_ide">Shell ও Kotlin</span><span class="mono">10</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_devops">ওয়েব, SQL ও রিমোট DevOps</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link is-current" href="web-ide.html"><span data-i18n="nav_web_ide">ওয়েব ও PHP</span><span class="mono">11</span></a>
+        <a class="menu-drawer__link" href="sql-ide.html"><span data-i18n="nav_sql_ide">SQL স্টুডিও</span><span class="mono">12</span></a>
+        <a class="menu-drawer__link" href="git-client.html"><span data-i18n="nav_git_client">ভিজ্যুয়াল Git</span><span class="mono">13</span></a>
+        <a class="menu-drawer__link" href="sftp-client.html"><span data-i18n="nav_sftp_client">SFTP ও FTPS</span><span class="mono">14</span></a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<main id="top">
+  <!-- ==================== 01 · EDITORIAL HERO & INTERACTIVE WORKBENCH ==================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <div class="trust-pill">
+            <span class="trust-pill__score"><span data-play-rating>4.9</span> &#9733;</span>
+            <span data-i18n="hero_tag">ফুল-স্ট্যাক WEB · PHP · WASM · SQL · SFTP স্টুডিও</span>
+          </div>
+
+          <h1 class="hero-h1" data-i18n="hero_h1">বিল্ট-ইন DevTools-সহ ফুল-স্ট্যাক <span class="text-gradient">Web, অফলাইন PHP &amp; WASM</span> স্টুডিও।</h1>
+
+          <p class="hero-lead" data-i18n="hero_desc">শুধু স্ট্যাটিক <code>file://</code> ভিউয়ার নয় — আপনার পকেটেই সম্পূর্ণ ফুল-স্ট্যাক ওয়েব সার্ভার। <strong>অফলাইন ডায়নামিক PHP</strong>, <strong>PDO SQLite ডেটাবেস</strong>, <strong>রেসপনসিভ DevTools</strong> ও সরাসরি <strong>FTP/SFTP পাবলিশিং</strong>-এর পাশাপাশি <strong>HTML5, CSS3, ES Modules ও WebAssembly (<code>.wasm</code>)</strong> চালান।</p>
+
+          <div class="hero__cta" id="heroCta">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=bn-BD&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dbn%26utm_campaign%3Dweb-php-studio%26utm_content%3Dweb-ide" target="_blank" rel="noopener" class="btn btn--gold">
+              <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+              <span data-i18n="cta_btn">Google Play-তে পান</span>
+            </a>
+            <a href="https://supercode-ide.github.io/tutorial/?lang=bn&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+              <span data-i18n="cta_tutorial">অ্যাপ গাইড</span>
+              <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <dl class="specs" aria-label="Key Specifications">
+          <div class="spec"><dt>HTTP</dt><dd data-i18n="web_spec1">আসল লোকাল অরিজিন</dd></div>
+          <div class="spec"><dt>PHP+SQL</dt><dd data-i18n="web_spec2">অফলাইন PDO ইঞ্জিন</dd></div>
+          <div class="spec"><dt>WASM</dt><dd data-i18n="web_spec3">স্ট্রিমিং রেডি</dd></div>
+          <div class="spec"><dt>3<small>Views</small></dt><dd data-i18n="web_spec4">মোবাইল/ট্যাব/ডেস্কটপ</dd></div>
+        </dl>
+      </div>
+
+      <div class="wb-caption">
+        <div class="sec-index" style="margin-bottom:0">
+          <span class="num">01</span>
+          <span class="rule"></span>
+          <span data-i18n="wb_eyebrow">ফুল-স্ট্যাক HTTP, অফলাইন PHP, WASM ও DEVTOOLS ওয়ার্কবেঞ্চ</span>
+        </div>
+        <span class="wb-caption__hint mono">Offline PHP + PDO SQL &#183; HTML/CSS/JS + WASM &#183; DevTools REPL &#183; SFTP Sync</span>
+      </div>
+
+      <div class="ide-workbench">
+        <div class="wb-titlebar">
+          <div class="wb-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="wb-title" id="ide-compiler-label">fullstack-web-php/index.php &#8212; Offline PHP + PDO SQLite Backend</div>
+          <button type="button" class="wb-run" id="btn-run-sandbox">
+            <span class="wb-run__tri" aria-hidden="true">&#9654;</span>
+            <span data-i18n="btn_run">ডেমো চালান</span>
+          </button>
+        </div>
+
+        <div class="wb-tabs" role="tablist" aria-label="Interactive Workspace Tabs">
+          <button type="button" class="ide-tab active" data-tab="web_php" role="tab" aria-selected="true"><i></i>index.php</button>
+          <button type="button" class="ide-tab" data-tab="web_wasm" role="tab" aria-selected="false"><i></i>wasm_app.html</button>
+          <button type="button" class="ide-tab" data-tab="web_dev" role="tab" aria-selected="false"><i></i>devtools.js</button>
+        </div>
+
+        <div class="wb-body">
+          <aside class="wb-explorer" aria-label="Project Explorer">
+            <div class="wb-explorer__head">Explorer</div>
+            <div class="wb-folder">&#9662; fullstack-web-php</div>
+            <button type="button" class="wb-file active" data-tab="web_php"><b>PHP</b><span>index.php</span></button>
+            <button type="button" class="wb-file" data-tab="web_wasm"><b>WASM</b><span>wasm_app.html</span></button>
+            <button type="button" class="wb-file" data-tab="web_dev"><b>DEV</b><span>devtools.js</span></button>
+          </aside>
+
+          <div class="wb-main">
+            <div class="ide-editor-body" id="ide-code-box" role="region" aria-label="Interactive Code Preview"></div>
+            <div class="ide-terminal" id="ide-terminal-drawer" aria-live="polite">
+              <div class="term-header">
+                <span data-i18n="term_title">ইন্টারেক্টিভ কনসোল আউটপুট</span>
+                <div class="term-header-right">
+                  <span class="term-exec-badge" id="ide-exec-status">Ready</span>
+                  <button type="button" class="btn-term-close" id="btn-close-term" aria-label="Close terminal">&#10005;</button>
+                </div>
+              </div>
+              <div class="term-stream" id="ide-term-output"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wb-statusbar">
+          <span class="wb-statusbar__dot"><i></i><span id="wbStatusLang">PHP + SQLite &#183; HTTP 200 Live</span></span>
+          <div class="wb-statusbar__right">
+            <span>UTF-8</span>
+            <span>LF</span>
+            <span>Ln 7, Col 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- SC_REAL_GALLERY_START -->
+  <section class="section sc-real-gallery" id="screenshots" aria-label="অ্যাপ প্রিভিউ ও স্ক্রিনশট">
+    <div class="container">
+      <div class="sc-gp-head">
+        <div class="sc-gp-head-left">
+          <div class="sc-gp-eyebrow" data-i18n="gal_eyebrow">বাস্তব Android স্ক্রিনশট</div>
+          <h2 class="sc-gp-title" data-i18n="gal_title">অ্যাপ প্রিভিউ ও স্ক্রিনশট</h2>
+          <p class="sc-gp-short" data-i18n="gal_short_desc">অফলাইন কোড এডিটর (Code Editor) & IDE: Python, C/C++, Java, HTML, SQL, PHP, Git</p>
+        </div>
+        <a class="sc-gp-store-bar" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=bn-BD&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dbn%26utm_campaign%3Dweb-php-studio%26utm_content%3Dweb-ide" target="_blank" rel="noopener" aria-label="Code Editor: SuperCode IDE — Phoenix Global Studios">
+          <svg class="sc-gp-app-icon" width="38" height="38" viewBox="16 12 76 76" aria-hidden="true"><rect x="16" y="12" width="76" height="76" rx="18" fill="#070A10" stroke="#3B82F6" stroke-width="2"/><path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/><path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/><path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/><path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/></svg>
+          <span class="sc-gp-app-meta">
+            <span class="sc-gp-app-name">Code Editor: SuperCode IDE</span>
+            <span class="sc-gp-app-dev">Phoenix Global Studios</span>
+          </span>
+          <span class="sc-gp-store-arrow" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      </div>
+      <div class="sc-gp-stage">
+        <button type="button" class="sc-gp-nav sc-gp-nav--prev is-hidden" id="scGpPrev" aria-label="আগের ছবি">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="sc-gp-rail" id="scGpRail">
+          <button type="button" class="sc-gp-item sc-gp-item--feature" aria-label="কোড এডিটর: SuperCode IDE — অফলাইন মোবাইল IDE">
+            <img src="../assets/gallery/bn/00_feature_graphic.webp" data-sc-file="00_feature_graphic.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_0" data-cap="কোড এডিটর: SuperCode IDE — অফলাইন মোবাইল IDE" alt="কোড এডিটর: SuperCode IDE — অফলাইন মোবাইল IDE" width="1024" height="500" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="লোকাল ওয়েব সার্ভার, অফলাইন PHP ও DevTools">
+            <img src="../assets/gallery/bn/03_web_php_devtools.webp" data-sc-file="03_web_php_devtools.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_3" data-cap="লোকাল ওয়েব সার্ভার, অফলাইন PHP ও DevTools" alt="লোকাল ওয়েব সার্ভার, অফলাইন PHP ও DevTools" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="অফলাইন Python 3.11 / 3.12 IDE ও স্প্লিট কনসোল">
+            <img src="../assets/gallery/bn/01_python_ide.webp" data-sc-file="01_python_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_1" data-cap="অফলাইন Python 3.11 / 3.12 IDE ও স্প্লিট কনসোল" alt="অফলাইন Python 3.11 / 3.12 IDE ও স্প্লিট কনসোল" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="লোকাল C17 ও C++20 মাল্টি-ফাইল কম্পাইলার">
+            <img src="../assets/gallery/bn/02_cpp20_compiler.webp" data-sc-file="02_cpp20_compiler.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_2" data-cap="লোকাল C17 ও C++20 মাল্টি-ফাইল কম্পাইলার" alt="লোকাল C17 ও C++20 মাল্টি-ফাইল কম্পাইলার" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="গ্লোবাল ফাইল ট্রি ও লোকাল ফাইল ম্যানেজার (SAF)">
+            <img src="../assets/gallery/bn/04_file_manager_tree.webp" data-sc-file="04_file_manager_tree.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_4" data-cap="গ্লোবাল ফাইল ট্রি ও লোকাল ফাইল ম্যানেজার (SAF)" alt="গ্লোবাল ফাইল ট্রি ও লোকাল ফাইল ম্যানেজার (SAF)" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="অফলাইন SQLite 3.54 স্টুডিও ও .db ইন্সপেক্টর">
+            <img src="../assets/gallery/bn/05_sql_sqlite_studio.webp" data-sc-file="05_sql_sqlite_studio.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_5" data-cap="অফলাইন SQLite 3.54 স্টুডিও ও .db ইন্সপেক্টর" alt="অফলাইন SQLite 3.54 স্টুডিও ও .db ইন্সপেক্টর" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="অফলাইন Java 17 IDE ও SQLite JDBC">
+            <img src="../assets/gallery/bn/06_java17_ide.webp" data-sc-file="06_java17_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_6" data-cap="অফলাইন Java 17 IDE ও SQLite JDBC" alt="অফলাইন Java 17 IDE ও SQLite JDBC" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="ভিজ্যুয়াল Git ক্লায়েন্ট, টাইম মেশিন ও SFTP">
+            <img src="../assets/gallery/bn/07_visual_git_timemachine.webp" data-sc-file="07_visual_git_timemachine.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_7" data-cap="ভিজ্যুয়াল Git ক্লায়েন্ট, টাইম মেশিন ও SFTP" alt="ভিজ্যুয়াল Git ক্লায়েন্ট, টাইম মেশিন ও SFTP" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="২১-কী সিম্বল বার ও ৮টি নিখুঁত IDE থিম">
+            <img src="../assets/gallery/bn/08_symbol_keyboard_themes.webp" data-sc-file="08_symbol_keyboard_themes.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_8" data-cap="২১-কী সিম্বল বার ও ৮টি নিখুঁত IDE থিম" alt="২১-কী সিম্বল বার ও ৮টি নিখুঁত IDE থিম" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+        </div>
+        <button type="button" class="sc-gp-nav sc-gp-nav--next" id="scGpNext" aria-label="পরের ছবি">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  <div class="sc-lb-modal" id="scLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="অ্যাপ প্রিভিউ ও স্ক্রিনশট">
+    <div class="sc-lb-topbar">
+      <button type="button" class="sc-lb-back" id="scLbBack">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-i18n="gal_back">ফিরে যান</span>
+      </button>
+      <div class="sc-lb-meta">
+        <span class="sc-lb-counter" id="scLbCounter">1 / 9</span>
+        <span class="sc-lb-title" id="scLbTitle"></span>
+      </div>
+      <button type="button" class="sc-lb-close" id="scLbClose" aria-label="প্রিভিউ বন্ধ করুন">&times;</button>
+    </div>
+    <div class="sc-lb-stage">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--prev" id="scLbPrev" aria-label="আগের ছবি">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <img class="sc-lb-img" id="scLbImg" src="" alt="SuperCode IDE Preview">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--next" id="scLbNext" aria-label="পরের ছবি">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="sc-lb-dots" id="scLbDots"></div>
+  </div>
+  <script defer src="../assets/gallery.js"></script>
+<!-- SC_REAL_GALLERY_END -->
+
+
+
+
+
+  <!-- ==================== 02 · CORE CAPABILITIES ==================== -->
+  <section class="section section--alt" id="capabilities">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">02</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_cap_eyebrow">মূল সক্ষমতা</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="sec_cap_title">Android-এ আধুনিক ওয়েব ইঞ্জিনিয়ারিংয়ের ৬টি সংযুক্ত স্তর</h2>
+        <p class="sec-lead" data-i18n="sec_cap_lead">ফ্রন্টএন্ড ES মডিউল, বাইনারি WebAssembly, ব্যাকএন্ড PHP সেশন, রিলেশনাল SQL ডেটাবেস, DevTools ইনস্পেকশন ও রিমোট SFTP ডিপ্লয়মেন্ট — সব একসাথে।</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="feature-grid feature-grid--6">
+          <article class="feature-card" id="cap1">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-web"/></svg></span>
+              <span class="f-idx">02.1</span>
+            </div>
+            <h3 class="f-title" data-i18n="f1_title">HTML5, CSS3, JS ও WASM-এর জন্য আসল লোকাল HTTP অরিজিন</h3>
+            <p class="f-desc" data-i18n="f1_desc">ভাঙা file:// URL-এর বদলে আসল লোকাল HTTP/1.1 অরিজিনে প্রজেক্ট পরিবেশন করে — ফলে fetch(), &lt;script type="module"&gt;, WebAssembly.instantiateStreaming() (.wasm), WebGL .glb/.gltf অ্যাসেট, IndexedDB এবং HTTP 206 ভিডিও/অডিও স্ক্রাবিং সচল হয়।</p>
+            <div class="f-code" data-i18n="f1_badge">৬৫+ MIME টাইপ · ES Modules · application/wasm · HTTP 206</div>
+          </article>
+          <article class="feature-card" id="cap2">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+              <span class="f-idx">02.2</span>
+            </div>
+            <h3 class="f-title" data-i18n="f2_title">১০০% অফলাইন ডায়নামিক PHP ব্যাকএন্ড ইঞ্জিন</h3>
+            <p class="f-desc" data-i18n="f2_desc">$_GET, $_POST, পারসিস্টেন্ট $_SESSION, $_FILES আপলোড, JSON REST হেডার এবং password_hash() সহ মাল্টি-পেজ .php টেমপ্লেট, OOP ক্লাস, ক্লোজার, match এবং include/require সম্পূর্ণ অফলাইনে চালান।</p>
+            <div class="f-code" data-i18n="f2_badge">$_GET / $_POST / $_SESSION · JSON API · অফলাইন PHP</div>
+          </article>
+          <article class="feature-card" id="cap3">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-db"/></svg></span>
+              <span class="f-idx">02.3</span>
+            </div>
+            <h3 class="f-title" data-i18n="f3_title">PDO ও SQLite3-এর মাধ্যমে সমন্বিত SQL ডেটাবেস</h3>
+            <p class="f-desc" data-i18n="f3_desc">প্রিপেয়ার্ড স্টেটমেন্ট (? ও :named বাইন্ডিং), ACID ট্রানজ্যাকশন এবং SQL IDE-তে তাৎক্ষণিক টেবিল ইনস্পেকশনসহ new PDO('sqlite:app.db') বা SQLite3 ব্যবহার করে অফলাইনে ডেটা-নির্ভর PHP অ্যাপ তৈরি করুন।</p>
+            <div class="f-code" data-i18n="f3_badge">PDO('sqlite:...') · প্রিপেয়ার্ড স্টেটমেন্ট · ACID ট্রানজ্যাকশন</div>
+          </article>
+          <article class="feature-card" id="cap4">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-term"/></svg></span>
+              <span class="f-idx">02.4</span>
+            </div>
+            <h3 class="f-title" data-i18n="f4_title">ফ্লোটিং DevTools কনসোল, নেটওয়ার্ক লগ ও JS REPL</h3>
+            <p class="f-desc" data-i18n="f4_desc">লাইভ HTTP রিকোয়েস্ট (GET /api.php -&gt; 200 · 3ms · 1.2 KB) ইনস্পেক্ট করুন, All / Error / Warn / Net লগ ফিল্টার করুন, স্ট্রাকচার্ড DOM/Object ট্রি দেখুন এবং &gt; Run JavaScript... REPL-এ লাইভ এক্সপ্রেশন চালান।</p>
+            <div class="f-code" data-i18n="f4_badge">নেট টাইমিং · এরর ব্যাজ · ইন্টারঅ্যাক্টিভ JS REPL</div>
+          </article>
+          <article class="feature-card" id="cap5">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
+              <span class="f-idx">02.5</span>
+            </div>
+            <h3 class="f-title" data-i18n="f5_title">৩-মোড ভিউপোর্ট সুইচার ও 2560px পেজ ক্যাপচার</h3>
+            <p class="f-desc" data-i18n="f5_desc">ড্র্যাগযোগ্য Dynamic Island থেকে মুহূর্তেই Mobile, Tablet (768dp) ও Desktop লেআউটে সুইচ করুন, ক্যামেরা/গ্যালারি &lt;input type="file"&gt; আপলোড টেস্ট করুন এবং ঝকঝকে 2560px PNG স্ক্রিনশট এক্সপোর্ট করুন।</p>
+            <div class="f-code" data-i18n="f5_badge">Mobile / Tablet / Desktop · 2560px PNG এক্সপোর্ট</div>
+          </article>
+          <article class="feature-card" id="cap6">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-cloud"/></svg></span>
+              <span class="f-idx">02.6</span>
+            </div>
+            <h3 class="f-title" data-i18n="f6_title">লাইভ রিমোট FTP / FTPS / SFTP ওয়েব প্রিভিউ ও ডিপ্লয়</h3>
+            <p class="f-desc" data-i18n="f6_desc">SFTP বা FTPS-এ লাইভ প্রোডাকশন সাইট এডিট করছেন? স্থানীয়ভাবে রিমোট পেজ প্রিভিউ করতে (অন-ডিমান্ডে রিলেটিভ CSS, JS ও ইমেজ ফেচ করে) Run ট্যাপ করুন এবং অ্যাটমিকভাবে আপনার ওয়েব হোস্টে পরিবর্তন সেভ করুন।</p>
+            <div class="f-code" data-i18n="f6_badge">লাইভ রিমোট প্রিভিউ · অ্যাটমিক SFTP / FTPS পাবলিশিং</div>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">ফোন, ফোল্ডেবল ও ট্যাবলেটের জন্য নির্মিত · হালকা 40.2 MB</span>
+        <a class="link-arrow" href="index.html">
+          <span data-i18n="nav_home">সংক্ষিপ্ত বিবরণ</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 03 · STEP-BY-STEP WORKFLOW GUIDE ==================== -->
+  <section class="section" id="workflow">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">03</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_wf_eyebrow">ধাপে ধাপে ওয়ার্কফ্লো</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="workflow_title">Android-এ ফুল-স্ট্যাক সাইট তৈরি, ডিবাগ ও ডিপ্লয় করার পদ্ধতি</h2>
+        <p class="sec-lead" data-i18n="workflow_lead">লোকাল HTML/CSS/WASM ও PHP+SQL প্রোটোটাইপিং থেকে সরাসরি লাইভ সার্ভার ডিপ্লয়মেন্ট পর্যন্ত।</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="workflow-grid">
+          <article class="wf-step" id="step1">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 01</span>
+              <span class="wf-step__cmd">index.html / index.php</span>
+            </div>
+            <h3 data-i18n="wf1_title">HTML5, CSS3, JS, WASM ও PHP ফাইল লিখুন</h3>
+            <p data-i18n="wf1_desc">AST HTML/CSS/JS/PHP কমপ্লিশন এবং রিকার্সিভ এক-ট্যাপ ফরম্যাটিংয়ের সাহায্যে মাল্টি-ফাইল ওয়েব প্রজেক্ট এডিট করুন, যা এমবেডেড &lt;script&gt; ও &lt;style&gt; ব্লক একসাথে ইন্ডেন্ট করে।</p>
+          </article>
+          <article class="wf-step" id="step2">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 02</span>
+              <span class="wf-step__cmd">PDO + app.db</span>
+            </div>
+            <h3 data-i18n="wf2_title">অফলাইন PHP ফর্ম ও API-কে SQL-এ সংযুক্ত করুন</h3>
+            <p data-i18n="wf2_desc">PDO প্রিপেয়ার্ড স্টেটমেন্টের মাধ্যমে PHP থেকে লোকাল .db SQLite ডেটাবেস কোয়েরি করুন, অথবা সরাসরি SuperCode-এর SQL Studio-তে টেবিল সিড করুন।</p>
+          </article>
+          <article class="wf-step" id="step3">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 03</span>
+              <span class="wf-step__cmd">Run &#9654; -&gt; Dynamic Island</span>
+            </div>
+            <h3 data-i18n="wf3_title">Mobile, Tablet ও Desktop + DevTools-এ প্রিভিউ করুন</h3>
+            <p data-i18n="wf3_desc">চলতি অবস্থায় ভিউপোর্ট বদলান, রিসাইজেবল DevTools ড্রয়ারে নেটওয়ার্ক স্ট্যাটাস ও JS এরর ইনস্পেক্ট করুন, অথবা JS REPL-এ লাইভ DOM পরিবর্তন টেস্ট করুন।</p>
+          </article>
+          <article class="wf-step" id="step4">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 04</span>
+              <span class="wf-step__cmd">SFTP / Visual Git</span>
+            </div>
+            <h3 data-i18n="wf4_title">সরাসরি আপনার হোস্ট বা GitHub Pages-এ আপডেট পাবলিশ করুন</h3>
+            <p data-i18n="wf4_desc">Visual Git-এর মাধ্যমে GitHub Pages-এ স্ট্যাটিক/WASM বিল্ড পুশ করুন, অথবা SFTP/FTPS দিয়ে সরাসরি আপনার VPS-এ PHP ও ওয়েব অ্যাসেট ডিপ্লয় করুন।</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="wf_foot_note">বাম প্রান্ত থেকে সোয়াইপ করলে সরাসরি Explorer-এ ফিরবে · এক ট্যাপে ক্যাশ ও সেশন রিসেট</span>
+        <a class="link-arrow" href="https://supercode-ide.github.io/tutorial/?lang=bn&amp;ref=official_web" data-supercode-tutorial="true">
+          <span data-i18n="cta_tutorial">অ্যাপ গাইড</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 04 · FEATURED SUMMARY & COMPARISON MATRIX ==================== -->
+  <section class="section section--alt" id="comparison">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">04</span>
+        <span class="rule"></span>
+        <span data-i18n="comp_eyebrow">সক্ষমতার ম্যাট্রিক্স</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="table_h2">SuperCode Web &amp; PHP Studio বনাম মোবাইল HTML ভিউয়ার</h2>
+        <p class="snippet-definition" data-i18n="snippet_p"><strong>SuperCode Web &amp; PHP Studio</strong> হলো Android-এর জন্য একটি ফুল-স্ট্যাক অফলাইন ওয়েব ডেভেলপমেন্ট IDE। এতে রয়েছে HTML5, CSS3, ES Modules, WebAssembly (.wasm), PDO SQLite ডেটাবেসসহ ডায়নামিক PHP, ৩-মোড রেসপনসিভ ভিউপোর্ট সুইচার, JS REPL-সহ Web DevTools এবং লাইভ SFTP ডিপ্লয়মেন্ট সমর্থিত আসল লোকাল HTTP সার্ভার।</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="table-wrap">
+          <table class="obsidian-benchmark-table">
+            <caption data-i18n="table_caption">ANDROID ফুল-স্ট্যাক WEB &amp; PHP ডেভেলপমেন্ট ম্যাট্রিক্স</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="th_0">Web সক্ষমতা</th>
+                <th scope="col" data-i18n="th_1">SuperCode Web + PHP Studio</th>
+                <th scope="col" data-i18n="th_2">সাধারণ মোবাইল HTML এডিটর</th>
+                <th scope="col" data-i18n="th_3">ক্লাউড ডেভ এনভায়রনমেন্ট</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="tr1_c0">সার্ভার অরিজিন &amp; WASM</th>
+                <td><strong data-i18n="tr1_c1">আসল লোকাল HTTP + ES Modules + .wasm স্ট্রিমিং</strong></td>
+                <td data-i18n="tr1_c2">file:// CORS fetch ও মডিউল ব্লক করে</td>
+                <td data-i18n="tr1_c3">ইন্টারনেট প্রয়োজন</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr2_c0">ব্যাকএন্ড PHP &amp; SQL</th>
+                <td><strong data-i18n="tr2_c1">১০০% অফলাইন PHP + $_SESSION + PDO SQLite</strong></td>
+                <td data-i18n="tr2_c2">শুধু স্ট্যাটিক ফ্রন্টএন্ড HTML/JS</td>
+                <td data-i18n="tr2_c3">পেইড ক্লাউড কন্টেইনার</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr3_c0">রেসপনসিভ &amp; DevTools</th>
+                <td><strong data-i18n="tr3_c1">Mobile/Tablet/Desktop + নেট লগ + লাইভ JS REPL</strong></td>
+                <td data-i18n="tr3_c2">শুধু সাধারণ alert() বা টেক্সট লগ</td>
+                <td data-i18n="tr3_c3">ফোনে ঠাসা ডেস্কটপ UI</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr4_c0">মিডিয়া &amp; এক্সপোর্ট</th>
+                <td><strong data-i18n="tr4_c1">ক্যামেরা/ফাইল আপলোড + Canvas/Blob + 2560px PNG</strong></td>
+                <td data-i18n="tr4_c2">ভাঙা &lt;input type=file&gt; ও blob:</td>
+                <td data-i18n="tr4_c3">রিমোট ডাউনলোড প্রয়োজন</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr5_c0">রিমোট হোস্টিং</th>
+                <td><strong data-i18n="tr5_c1">লাইভ SFTP/FTPS প্রিভিউ + ৩-ধাপের অ্যাটমিক সেভ</strong></td>
+                <td data-i18n="tr5_c2">ম্যানুয়াল বাহ্যিক FTP ক্লায়েন্ট</td>
+                <td data-i18n="tr5_c3">ক্লাউড-লকড</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">ফোন, ফোল্ডেবল ও ট্যাবলেটের জন্য নির্মিত · হালকা 40.2 MB</span>
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=bn-BD&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dbn%26utm_campaign%3Dweb-php-studio%26utm_content%3Dweb-ide" target="_blank" rel="noopener">
+          <span>Google Play</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 05 · VISIBLE EDITORIAL FAQ ==================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-head">
+          <div class="sec-index">
+            <span class="num">05</span>
+            <span class="rule"></span>
+            <span data-i18n="sec3_eyebrow">প্রশ্ন ও উত্তর</span>
+          </div>
+          <h2 class="h2" data-i18n="sec3_title">সচরাচর জিজ্ঞাসিত প্রশ্ন</h2>
+          <p class="sec-lead" data-i18n="faq_lead">অফলাইন PHP + SQLite, ES Modules / fetch() / WASM, Web DevTools এবং FTP/SFTP ডিপ্লয়মেন্ট সম্পর্কে প্রশ্নোত্তর।</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary><span data-i18n="faq1_q">আমি কি Android-এ অফলাইনে ডায়নামিক PHP ওয়েবসাইট চালাতে এবং SQL ডেটাবেসে সংযুক্ত হতে পারব?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq1_a">হ্যাঁ! বিল্ট-ইন PDO('sqlite:...') ও SQLite3 ডেটাবেস সাপোর্টসহ SuperCode সম্পূর্ণ অফলাইনে .php পেজ, REST JSON এন্ডপয়েন্ট, সেশন, ফর্ম আপলোড এবং মাল্টি-ফাইল include চালায়।</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq2_q">ES6 মডিউল (&lt;script type="module"&gt;), fetch() এবং WebAssembly (.wasm) কি কাজ করে?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq2_a">হ্যাঁ। SuperCode ৬৫+ MIME টাইপ (যার মধ্যে application/wasm রয়েছে) সহ একটি আসল লোকাল HTTP সার্ভারে আপনার প্রজেক্ট পরিবেশন করে, তাই fetch(), ES মডিউল, WebGL 3D মডেল এবং WebAssembly.instantiateStreaming() সরাসরি কাজ করে।</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq3_q">ফোনে JavaScript এরর, নেটওয়ার্ক রিকোয়েস্ট ও ডেস্কটপ লেআউট কীভাবে ডিবাগ করব?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq3_a">প্রিভিউ মোডে ড্র্যাগযোগ্য Dynamic Island পিল-এ ট্যাপ করে Mobile, Tablet (768dp) ও Desktop ভিউপোর্টে সুইচ করুন, অথবা রিসাইজেবল Web DevTools ড্রয়ার খুলে Error/Warn/Net লগ ফিল্টার করুন ও REPL-এ লাইভ JavaScript চালান।</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq4_q">আমি কি রিমোট FTP বা SFTP সার্ভারে হোস্ট করা ওয়েবসাইট প্রিভিউ ও আপডেট করতে পারব?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq4_a">হ্যাঁ। SFTP/FTPS/FTP ওয়ার্কস্পেসে আপনার সার্ভার মাউন্ট করুন, ৩-ধাপের অ্যাটমিক সেভ-সহ সরাসরি রিমোট HTML/CSS/JS/PHP ট্যাব এডিট করুন এবং অন-ডিমান্ড অ্যাসেট ক্যাশিংসহ রিমোট পেজ প্রিভিউ করতে Run ট্যাপ করুন।</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==================== 06 · TOPICAL AUTHORITY ECOSYSTEM CLUSTER ==================== -->
+  <section class="section section--alt" id="ecosystem-guides">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">06</span>
+        <span class="rule"></span>
+        <span>ফুল-স্ট্যাক ওয়েব, PHP 8.2 ও DevTools গাইড</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2>৪টি গভীর মোবাইল ওয়েব ও PHP 8.2 গাইড দেখুন</h2>
+        <p class="sec-lead">Android-এ সম্পূর্ণ ফ্রন্টএন্ড + ব্যাকএন্ড অ্যাপ্লিকেশন তৈরি করুন — অফলাইন PHP 8.2 + PDO SQLite, রেসপন্সিভ ভিউপোর্ট, ওয়েব DevTools, WASM এবং SFTP একসাথে ব্যবহার করে।</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="py-cluster-grid">
+          <a href="php-server-pdo-sqlite-android.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">WEB-01</span>
+              <span class="py-spoke-card__tag">PHP 8.2 · $_SESSION · PDO ACID</span>
+            </div>
+            <h3>অফলাইন PHP 8.2 ও PDO SQLite সার্ভার</h3>
+            <p>কোনো ডেমন সেটআপ ছাড়াই অফলাইনে মাল্টি-ফাইল PHP 8.2 ফর্ম, সেশন, ফাইল আপলোড, password_hash(), JSON API এবং PDO('sqlite:...') ডেটাবেস চালান।</p>
+            <div class="py-spoke-card__go">
+              <span>php-server-pdo-sqlite-android</span>
+              <span>গাইড খুলুন &rarr;</span>
+            </div>
+          </a>
+          <a href="html-css-js-responsive-preview.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">WEB-02</span>
+              <span class="py-spoke-card__tag">মোবাইল / 768dp ট্যাবলেট / ডেস্কটপ</span>
+            </div>
+            <h3>HTML5, CSS3 ও ৩-ভিউপোর্ট প্রিভিউ</h3>
+            <p>রিয়েল লোকাল HTTP সার্ভারে তাৎক্ষণিক মোবাইল/ট্যাবলেট/ডেস্কটপ সুইচিং ও ফুল-পেজ PNG ক্যাপচারসহ HTML5, CSS3, ES Modules ও WebGL লিখুন।</p>
+            <div class="py-spoke-card__go">
+              <span>html-css-js-responsive-preview</span>
+              <span>গাইড খুলুন &rarr;</span>
+            </div>
+          </a>
+          <a href="mobile-web-devtools-wasm-studio.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">WEB-03</span>
+              <span class="py-spoke-card__tag">নেট মনিটর · DOM REPL · .wasm</span>
+            </div>
+            <h3>মোবাইল ওয়েব DevTools, JS REPL ও WASM</h3>
+            <p>এরর, ওয়ার্নিং ও HTTP নেটওয়ার্ক টাইমিং ডিবাগ করুন, লাইভ JS REPL-এ সিরিয়ালাইজড DOM নোড যাচাই করুন এবং বাইনারি WASM (.wasm) স্ট্রিম করুন।</p>
+            <div class="py-spoke-card__go">
+              <span>mobile-web-devtools-wasm-studio</span>
+              <span>গাইড খুলুন &rarr;</span>
+            </div>
+          </a>
+          <a href="fullstack-web-sftp-deploy-android.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">WEB-04</span>
+              <span class="py-spoke-card__tag">SFTP/FTPS · Git Pages · স্টেজিং</span>
+            </div>
+            <h3>রিমোট FTP/SFTP লাইভ ওয়েব ডিপ্লয়</h3>
+            <p>রিমোট ওয়েবসাইট চাহিদামতো লোকালি প্রিভিউ করুন, ফুল-স্ট্যাক PHP/HTML পরিবর্তন নিরাপদে স্টেজ করুন ও ৩-ফেজ অ্যাটমিক SFTP বা ভিজ্যুয়াল Git-এ পাবলিশ করুন।</p>
+            <div class="py-spoke-card__go">
+              <span>fullstack-web-sftp-deploy-android</span>
+              <span>গাইড খুলুন &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span>৫টি আন্তঃসংযুক্ত ওয়েব ও PHP গাইড · রিয়েল লোকাল HTTP + অফলাইন PHP 8.2 + PDO SQL</span>
+        <a class="link-arrow" href="web-ide.html">
+          <span>ওয়েব, PHP 8.2 ও WASM হাব</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="siteFooter">
+  <div class="container">
+    <div class="footer-cta" id="footerCta">
+      <div>
+        <h2 class="h2" data-i18n="cta_h2">আপনার পকেটেই রাখুন ফুল-স্ট্যাক HTML, WASM, PHP &amp; SQL সার্ভার।</h2>
+        <p data-i18n="cta_desc">Google Play থেকে SuperCode IDE ডাউনলোড করুন এবং Android থেকেই সম্পূর্ণ ওয়েব অ্যাপ তৈরি, ইনস্পেক্ট ও ডিপ্লয় করুন।</p>
+      </div>
+      <div class="footer-cta__btns">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=bn-BD&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dbn%26utm_campaign%3Dweb-php-studio%26utm_content%3Dweb-ide" target="_blank" rel="noopener" class="btn btn--gold">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="cta_btn">Google Play-তে পান</span>
+        </a>
+        <a href="https://supercode-ide.github.io/tutorial/?lang=bn&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+          <span data-i18n="cta_tutorial">অ্যাপ গাইড</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+          <span>SuperCode</span>
+          <span class="brand__tag">IDE</span>
+        </a>
+        <p data-i18n="footer_tagline">বিশ্বজুড়ে Android প্রকৌশলী, শিক্ষার্থী ও শিক্ষকদের জন্য নির্মিত নেটিভ মোবাইল কোড এডিটর ও অফলাইন ডেভেলপমেন্ট স্টুডিও।</p>
+        <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
+        <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=bn-BD&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dbn%26utm_campaign%3Dweb-php-studio%26utm_content%3Dweb-ide" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://supercode-ide.github.io/tutorial/?lang=bn&amp;ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">অ্যাপ গাইড</span> &#8599;</a>
+          <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">ভাষা নির্বাচন করুন</span></button>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_core">এডিটর ও বড় ফাইল</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">সংক্ষিপ্ত বিবরণ</a></li>
+          <li><a href="code-editor.html" data-i18n="nav_code_editor">কোড এডিটর</a></li>
+          <li><a href="large-file-editor.html" data-i18n="nav_large_file">GB বড় ফাইল</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_lang">অফলাইন কম্পাইলার ও ভাষা</h4>
+        <ul>
+          <li><a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a></li>
+          <li><a href="c-compiler.html" data-i18n="nav_c_compiler">C17 কম্পাইলার</a></li>
+          <li><a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a></li>
+          <li><a href="java-ide.html" data-i18n="nav_java_ide">Java 17 IDE</a></li>
+          <li><a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a></li>
+          <li><a href="lua-ide.html" data-i18n="nav_lua_ide">Lua 5.4</a></li>
+          <li><a href="shell-ide.html" data-i18n="nav_shell_ide">Shell ও Kotlin</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_devops">ওয়েব, SQL ও রিমোট DevOps</h4>
+        <ul>
+          <li><a href="web-ide.html" class="is-current" data-i18n="nav_web_ide">ওয়েব ও PHP</a></li>
+          <li><a href="sql-ide.html" data-i18n="nav_sql_ide">SQL স্টুডিও</a></li>
+          <li><a href="git-client.html" data-i18n="nav_git_client">ভিজ্যুয়াল Git</a></li>
+          <li><a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP ও FTPS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <span>&copy; 2026 Phoenix Global Studios. All rights reserved.</span>
+      <span class="mono">com.phoenixglobal.supercodeeditor</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="mobile-bottom-bar" id="mobileBottomBar" aria-label="Quick App Actions">
+  <div class="dock-app-icon" aria-hidden="true"><svg><use href="#sc-logo"/></svg></div>
+  <div class="bottom-bar-info">
+    <div class="bottom-bar-title">SuperCode</div>
+    <div class="bottom-bar-sub"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  </div>
+  <div class="bottom-bar-actions">
+    <a href="https://supercode-ide.github.io/tutorial/?lang=bn&amp;ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">অ্যাপ গাইড</a>
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=bn-BD&amp;listing=web-php-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dbn%26utm_campaign%3Dweb-php-studio%26utm_content%3Dweb-ide" target="_blank" rel="noopener" class="btn-play-mini">
+      <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
+      <span data-i18n="bottom_cta">ডাউনলোড</span>
+    </a>
+  </div>
+</aside>
+
+<div class="modal-overlay" id="langModal" role="dialog" aria-modal="true" aria-labelledby="langModalTitle">
+  <div class="lang-modal">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div class="modal-header">
+      <h3 id="langModalTitle"><span data-i18n="modal_title">ভাষা নির্বাচন করুন</span><span class="modal-lang-count">32</span></h3>
+      <button type="button" class="btn-close-modal" onclick="closeLangModal()" aria-label="বন্ধ করুন">&#10005;</button>
+    </div>
+    <div class="lang-grid">
+      <button type="button" class="lang-option" data-code="en" onclick="setLanguage('en')"><span class="lang-option__name">English</span><span class="lang-option__code">EN</span></button>
+      <button type="button" class="lang-option" data-code="zh" onclick="setLanguage('zh')"><span class="lang-option__name">简体中文</span><span class="lang-option__code">简中</span></button>
+      <button type="button" class="lang-option" data-code="zh-tw" onclick="setLanguage('zh-tw')"><span class="lang-option__name">繁體中文</span><span class="lang-option__code">繁中</span></button>
+      <button type="button" class="lang-option" data-code="es" onclick="setLanguage('es')"><span class="lang-option__name">Español</span><span class="lang-option__code">ES</span></button>
+      <button type="button" class="lang-option" data-code="pt" onclick="setLanguage('pt')"><span class="lang-option__name">Português</span><span class="lang-option__code">PT</span></button>
+      <button type="button" class="lang-option" data-code="ja" onclick="setLanguage('ja')"><span class="lang-option__name">日本語</span><span class="lang-option__code">日本語</span></button>
+      <button type="button" class="lang-option" data-code="ko" onclick="setLanguage('ko')"><span class="lang-option__name">한국어</span><span class="lang-option__code">한국어</span></button>
+      <button type="button" class="lang-option" data-code="de" onclick="setLanguage('de')"><span class="lang-option__name">Deutsch</span><span class="lang-option__code">DE</span></button>
+      <button type="button" class="lang-option" data-code="fr" onclick="setLanguage('fr')"><span class="lang-option__name">Français</span><span class="lang-option__code">FR</span></button>
+      <button type="button" class="lang-option" data-code="ru" onclick="setLanguage('ru')"><span class="lang-option__name">Русский</span><span class="lang-option__code">RU</span></button>
+      <button type="button" class="lang-option" data-code="hi" onclick="setLanguage('hi')"><span class="lang-option__name">हिन्दी</span><span class="lang-option__code">HI</span></button>
+      <button type="button" class="lang-option" data-code="id" onclick="setLanguage('id')"><span class="lang-option__name">Bahasa Indonesia</span><span class="lang-option__code">ID</span></button>
+      <button type="button" class="lang-option" data-code="it" onclick="setLanguage('it')"><span class="lang-option__name">Italiano</span><span class="lang-option__code">IT</span></button>
+      <button type="button" class="lang-option" data-code="vi" onclick="setLanguage('vi')"><span class="lang-option__name">Tiếng Việt</span><span class="lang-option__code">VI</span></button>
+      <button type="button" class="lang-option" data-code="th" onclick="setLanguage('th')"><span class="lang-option__name">ไทย</span><span class="lang-option__code">ไทย</span></button>
+      <button type="button" class="lang-option" data-code="tr" onclick="setLanguage('tr')"><span class="lang-option__name">Türkçe</span><span class="lang-option__code">TR</span></button>
+      <button type="button" class="lang-option" data-code="ar" onclick="setLanguage('ar')"><span class="lang-option__name">العربية</span><span class="lang-option__code">AR</span></button>
+      <button type="button" class="lang-option" data-code="pl" onclick="setLanguage('pl')"><span class="lang-option__name">Polski</span><span class="lang-option__code">PL</span></button>
+      <button type="button" class="lang-option" data-code="nl" onclick="setLanguage('nl')"><span class="lang-option__name">Nederlands</span><span class="lang-option__code">NL</span></button>
+      <button type="button" class="lang-option" data-code="sv" onclick="setLanguage('sv')"><span class="lang-option__name">Svenska</span><span class="lang-option__code">SV</span></button>
+      <button type="button" class="lang-option" data-code="nb" onclick="setLanguage('nb')"><span class="lang-option__name">Norsk Bokmål</span><span class="lang-option__code">NB</span></button>
+      <button type="button" class="lang-option" data-code="da" onclick="setLanguage('da')"><span class="lang-option__name">Dansk</span><span class="lang-option__code">DA</span></button>
+      <button type="button" class="lang-option" data-code="fi" onclick="setLanguage('fi')"><span class="lang-option__name">Suomi</span><span class="lang-option__code">FI</span></button>
+      <button type="button" class="lang-option" data-code="cs" onclick="setLanguage('cs')"><span class="lang-option__name">Čeština</span><span class="lang-option__code">CS</span></button>
+      <button type="button" class="lang-option" data-code="uk" onclick="setLanguage('uk')"><span class="lang-option__name">Українська</span><span class="lang-option__code">UK</span></button>
+      <button type="button" class="lang-option" data-code="ro" onclick="setLanguage('ro')"><span class="lang-option__name">Română</span><span class="lang-option__code">RO</span></button>
+      <button type="button" class="lang-option" data-code="hu" onclick="setLanguage('hu')"><span class="lang-option__name">Magyar</span><span class="lang-option__code">HU</span></button>
+      <button type="button" class="lang-option" data-code="el" onclick="setLanguage('el')"><span class="lang-option__name">Ελληνικά</span><span class="lang-option__code">EL</span></button>
+      <button type="button" class="lang-option" data-code="he" onclick="setLanguage('he')"><span class="lang-option__name">עברית</span><span class="lang-option__code">HE</span></button>
+      <button type="button" class="lang-option" data-code="ms" onclick="setLanguage('ms')"><span class="lang-option__name">Bahasa Melayu</span><span class="lang-option__code">MS</span></button>
+      <button type="button" class="lang-option" data-code="tl" onclick="setLanguage('tl')"><span class="lang-option__name">Filipino</span><span class="lang-option__code">FIL</span></button>
+      <button type="button" class="lang-option active" data-code="bn" onclick="setLanguage('bn')"><span class="lang-option__name">বাংলা</span><span class="lang-option__code">BN</span></button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var WORKBENCH_SAMPLES = {"web_php": {"label": "fullstack-web-php/index.php \u2014 Offline PHP + PDO SQLite Backend", "status": "PHP + SQLite \u00b7 HTTP 200 Live", "lines": ["<span class=\"tok-kw\">&lt;?php<\/span>", "  <span class=\"tok-fn\">session_start<\/span>();", "  $pdo = <span class=\"tok-kw\">new<\/span> <span class=\"tok-fn\">PDO<\/span>(<span class=\"tok-str\">&#39;sqlite:shop.db&#39;<\/span>);", "  $stmt = $pdo-&gt;<span class=\"tok-fn\">prepare<\/span>(<span class=\"tok-str\">&#39;SELECT name, price FROM items WHERE stock &gt; :min&#39;<\/span>);", "  $stmt-&gt;<span class=\"tok-fn\">execute<\/span>([<span class=\"tok-str\">&#39;:min&#39;<\/span> =&gt; <span class=\"tok-num\">0<\/span>]);", "  <span class=\"tok-kw\">echo<\/span> <span class=\"tok-fn\">json_encode<\/span>($stmt-&gt;<span class=\"tok-fn\">fetchAll<\/span>(PDO::FETCH_ASSOC));", "<span class=\"tok-kw\">?&gt;<\/span>"], "output": ["<span class=\"term-prompt\">[Net 200]<\/span> GET /index.php &rarr; 200 OK (3.2 ms &middot; application/json)", "[{&quot;name&quot;:&quot;Pro Keyboard&quot;,&quot;price&quot;:89.0},{&quot;name&quot;:&quot;USB-C Dock&quot;,&quot;price&quot;:45.0}]", "<span class=\"term-info\">&#10003; $_GET / $_POST / $_SESSION / PDO SQLite3 Offline<\/span>"]}, "web_wasm": {"label": "fullstack-web-php/wasm_app.html \u2014 HTML5, CSS3, ES Modules & WASM", "status": "HTTP Server \u00b7 application/wasm Ready", "lines": ["<span class=\"tok-kw\">&lt;script<\/span> type=<span class=\"tok-str\">&quot;module&quot;<\/span><span class=\"tok-kw\">&gt;<\/span>", "  <span class=\"tok-kw\">const<\/span> { instance } = <span class=\"tok-kw\">await<\/span> WebAssembly.<span class=\"tok-fn\">instantiateStreaming<\/span>(<span class=\"tok-fn\">fetch<\/span>(<span class=\"tok-str\">&#39;./dsp.wasm&#39;<\/span>));", "  console.<span class=\"tok-fn\">log<\/span>(<span class=\"tok-str\">&#39;WASM FFT output:&#39;<\/span>, instance.exports.<span class=\"tok-fn\">computePeak<\/span>(<span class=\"tok-num\">1024<\/span>));", "<span class=\"tok-kw\">&lt;/script&gt;<\/span>"], "output": ["<span class=\"term-prompt\">[Net 200]<\/span> GET /dsp.wasm &rarr; 200 OK (application/wasm &middot; Streaming)", "[Console] WASM FFT output: 99.84", "<span class=\"term-info\">&#10003; Real HTTP Origin unlocks fetch(), ES Modules, IndexedDB &amp; Audio/Video Range<\/span>"]}, "web_dev": {"label": "fullstack-web-php/devtools.js \u2014 Viewport Switcher & JS REPL", "status": "Web DevTools \u00b7 All / Error / Warn / Net", "lines": ["<span class=\"tok-cmt\">// Built-in Floating Dynamic Island + Resizable DevTools Console<\/span>", "console.<span class=\"tok-fn\">time<\/span>(<span class=\"tok-str\">&quot;hydrate&quot;<\/span>);", "document.<span class=\"tok-fn\">querySelector<\/span>(<span class=\"tok-str\">&quot;#app&quot;<\/span>)?.classList.<span class=\"tok-fn\">add<\/span>(<span class=\"tok-str\">&quot;ready&quot;<\/span>);", "console.<span class=\"tok-fn\">timeEnd<\/span>(<span class=\"tok-str\">&quot;hydrate&quot;<\/span>);"], "output": ["<span class=\"term-prompt\">[DevTools REPL]<\/span> &gt; window.innerWidth // Mobile 360 | Tablet 768 | Desktop 1280", "hydrate: 1.42 ms", "<span class=\"term-info\">&#10003; 2560px PNG Screenshot Export + Live SFTP/FTP Remote Web Preview<\/span>"]}};
+    var currentTab = 'web_php';
+    var runTimer = null;
+
+    function renderWorkbench(tabKey, animateRun) {
+      var sample = WORKBENCH_SAMPLES[tabKey] || WORKBENCH_SAMPLES['web_php'];
+      if (!sample) { return; }
+      currentTab = tabKey;
+      var labelEl = document.getElementById('ide-compiler-label');
+      if (labelEl) { labelEl.textContent = sample.label; }
+      var statusEl = document.getElementById('wbStatusLang');
+      if (statusEl) { statusEl.textContent = sample.status; }
+
+      var tabs = document.querySelectorAll('.ide-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        var active = tabs[i].getAttribute('data-tab') === tabKey;
+        tabs[i].classList.toggle('active', active);
+        tabs[i].setAttribute('aria-selected', active ? 'true' : 'false');
+      }
+      var files = document.querySelectorAll('.wb-file');
+      for (var f = 0; f < files.length; f++) {
+        files[f].classList.toggle('active', files[f].getAttribute('data-tab') === tabKey);
+      }
+
+      var codeBox = document.getElementById('ide-code-box');
+      if (codeBox) {
+        var html = '';
+        for (var l = 0; l < sample.lines.length; l++) {
+          var activeCls = (l === sample.lines.length - 1) ? ' active-line' : '';
+          html += '<div class="code-line' + activeCls + '"><span class="ln">' + (l + 1) + '</span><span class="code-content">' + sample.lines[l] + '</span></div>';
+        }
+        codeBox.innerHTML = html;
+      }
+
+      if (animateRun) {
+        runWorkbenchSample();
+      }
+    }
+
+    function runWorkbenchSample() {
+      var sample = WORKBENCH_SAMPLES[currentTab] || WORKBENCH_SAMPLES['web_php'];
+      var drawer = document.getElementById('ide-terminal-drawer');
+      var out = document.getElementById('ide-term-output');
+      var badge = document.getElementById('ide-exec-status');
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (!drawer || !out || !sample) { return; }
+
+      if (runTimer) { clearTimeout(runTimer); }
+      drawer.classList.add('is-open');
+      if (runBtn) { runBtn.classList.add('is-running'); }
+      if (badge) { badge.textContent = 'Running...'; badge.classList.remove('done'); }
+      out.innerHTML = '';
+
+      var idx = 0;
+      function step() {
+        if (idx < sample.output.length) {
+          var row = document.createElement('span');
+          row.className = 'term-line-item';
+          row.innerHTML = sample.output[idx];
+          out.appendChild(row);
+          idx++;
+          runTimer = setTimeout(step, 80);
+        } else {
+          var cur = document.createElement('span');
+          cur.className = 'term-cursor';
+          cur.textContent = '\u258b';
+          out.appendChild(cur);
+          if (badge) { badge.textContent = 'Completed'; badge.classList.add('done'); }
+          if (runBtn) { runBtn.classList.remove('is-running'); }
+        }
+      }
+      step();
+    }
+
+    function initNavigationAndSmartBar() {
+      var menuBtn = document.getElementById('menuBtn');
+      var drawer = document.getElementById('siteDrawer');
+      var bar = document.getElementById('mobileBottomBar');
+      var heroCta = document.getElementById('heroCta');
+      var siteFooter = document.getElementById('siteFooter');
+
+      function syncBar() {
+        if (!bar) { return; }
+        var drawerOpen = Boolean(drawer && !drawer.hasAttribute('hidden'));
+        var modalEl = document.getElementById('langModal');
+        var modalOpen = Boolean(modalEl && modalEl.classList.contains('show'));
+        var vh = window.innerHeight || document.documentElement.clientHeight || 800;
+        var heroInView = false;
+        if (heroCta) {
+          var hr = heroCta.getBoundingClientRect();
+          heroInView = (hr.bottom > 0 && hr.top < vh);
+        }
+        var footerInView = false;
+        if (siteFooter) {
+          var fr = siteFooter.getBoundingClientRect();
+          footerInView = (fr.top < vh + 24);
+        }
+        var scrollYVal = window.pageYOffset || window.scrollY || 0;
+        var docH = Math.max(document.body ? document.body.scrollHeight : 0, document.documentElement ? document.documentElement.scrollHeight : 0);
+        var nearBottom = (vh + scrollYVal) >= (docH - 120);
+        var shouldShow = !drawerOpen && !modalOpen && !heroInView && !footerInView && !nearBottom;
+        bar.classList.toggle('is-visible', shouldShow);
+      }
+
+      window.__supercodeSyncMobileBar = syncBar;
+
+      function setDrawer(open) {
+        if (!menuBtn || !drawer) { return; }
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { drawer.removeAttribute('hidden'); }
+        else { drawer.setAttribute('hidden', ''); }
+        syncBar();
+      }
+      if (menuBtn && drawer) {
+        menuBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          setDrawer(menuBtn.getAttribute('aria-expanded') !== 'true');
+        });
+        drawer.addEventListener('click', function (e) {
+          if (e.target && e.target.closest('a')) { setDrawer(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!drawer.hasAttribute('hidden') && !drawer.contains(e.target) && e.target !== menuBtn && !menuBtn.contains(e.target)) {
+            setDrawer(false);
+          }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') { setDrawer(false); }
+        });
+      }
+
+      if (bar) {
+        window.addEventListener('scroll', syncBar, { passive: true });
+        window.addEventListener('resize', syncBar);
+        syncBar();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var tabBtns = document.querySelectorAll('.ide-tab, .wb-file');
+      for (var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', function () {
+          renderWorkbench(this.getAttribute('data-tab'), true);
+        });
+      }
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (runBtn) { runBtn.addEventListener('click', function () { runWorkbenchSample(); }); }
+      var closeTerm = document.getElementById('btn-close-term');
+      if (closeTerm) {
+        closeTerm.addEventListener('click', function () {
+          var d = document.getElementById('ide-terminal-drawer');
+          if (d) { d.classList.remove('is-open'); }
+        });
+      }
+      initNavigationAndSmartBar();
+      renderWorkbench('web_php', false);
+    });
+  })();
+</script>
+<script>window.__SUPERCODE_STATIC_LANG__="bn";window.__SUPERCODE_STATIC_CANONICAL__="https://supercode-ide.github.io/bn/web-ide.html";</script>
+<script src="../i18n_extended.js"></script>
+</body>
+</html>

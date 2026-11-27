@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -7,778 +7,131 @@
   <meta name="robots" content="noindex, follow">
   <title>SuperCode IDE &mdash; Interactive App Guide</title>
   <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-hero-en.png">
-  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-hero-en.png">
-  <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Code Editor: SuperCode IDE — Offline Mobile IDE">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-hero-en.png">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <style>
     :root {
-      --bg: #090A0F;
-      --card: #151821;
-      --line: rgba(255, 255, 255, 0.08);
-      --line-strong: rgba(255, 255, 255, 0.14);
-      --fg: #F5F7FA;
-      --fg-2: #9BA3B4;
-      --fg-3: #7E879A;
-      --gold: #F5C451;
-      --gold-border: rgba(255, 215, 0, 0.32);
-      --gold-border-hover: rgba(255, 215, 0, 0.55);
+      --bg: #090A0F; --card: #151821; --line-strong: rgba(255, 255, 255, 0.14);
+      --fg: #F5F7FA; --fg-2: #9BA3B4; --gold: #F5C451;
+      --gold-border: rgba(255, 215, 0, 0.32); --gold-border-hover: rgba(255, 215, 0, 0.55);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
     body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      background:
-        radial-gradient(50% 45% at 50% 0%, rgba(245, 196, 81, 0.06), transparent 70%),
-        var(--bg);
+      min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px;
+      background: radial-gradient(50% 45% at 50% 0%, rgba(245, 196, 81, 0.06), transparent 70%), var(--bg);
       color: var(--fg);
-      font-family: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Microsoft YaHei UI", system-ui, sans-serif;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Noto Sans Arabic", "Noto Sans Hebrew", system-ui, sans-serif;
       -webkit-font-smoothing: antialiased;
     }
     .launchpad {
-      width: 100%;
-      max-width: 420px;
-      background: var(--card);
-      border: 1px solid var(--line-strong);
-      border-radius: 18px;
-      padding: 28px 24px 24px;
+      width: 100%; max-width: 440px; background: var(--card); border: 1px solid var(--line-strong);
+      border-radius: 18px; padding: 28px 24px 24px;
       box-shadow: 0 28px 64px -16px rgba(0, 0, 0, 0.80), inset 0 1px 0 rgba(255, 255, 255, 0.05);
     }
-    .lp-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 22px;
-    }
+    .lp-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; }
     .badge {
-      width: 44px;
-      height: 44px;
-      border-radius: 11px;
+      width: 44px; height: 44px; border-radius: 11px;
       background: linear-gradient(180deg, #1B1E29 0%, #11131A 100%);
-      border: 1px solid rgba(255, 215, 0, 0.28);
-      display: grid;
-      place-items: center;
+      border: 1px solid rgba(255, 215, 0, 0.28); display: grid; place-items: center;
     }
     .badge svg { width: 26px; height: 26px; }
     .btn-home-icon {
-      width: 34px;
-      height: 34px;
-      display: grid;
-      place-items: center;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--line-strong);
-      color: var(--fg-2);
-      text-decoration: none;
-      transition: all 0.2s ease;
+      width: 34px; height: 34px; display: grid; place-items: center; border-radius: 8px;
+      background: rgba(255, 255, 255, 0.03); border: 1px solid var(--line-strong);
+      color: var(--fg-2); text-decoration: none; transition: all 0.2s ease;
     }
     .btn-home-icon:hover { color: var(--gold); border-color: var(--gold-border); background: rgba(245, 196, 81, 0.08); }
-    h1 { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.3; margin-bottom: 10px; }
-    p { font-size: 0.9rem; color: var(--fg-2); line-height: 1.62; margin-bottom: 24px; }
+    h1 { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.35; margin-bottom: 10px; }
+    p { font-size: 0.92rem; color: var(--fg-2); line-height: 1.65; margin-bottom: 24px; }
     .actions { display: flex; flex-wrap: wrap; gap: 10px; }
     .btn-gold {
-      flex: 1 1 auto;
-      height: 42px;
-      padding: 0 18px;
-      border-radius: 10px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
+      flex: 1 1 auto; height: 42px; padding: 0 18px; border-radius: 10px;
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
       background: linear-gradient(180deg, #1A1D27 0%, #11131A 100%);
-      border: 1px solid var(--gold-border);
-      box-shadow: inset 0 1px 0 rgba(255, 241, 118, 0.14), 0 8px 24px -10px rgba(255, 165, 0, 0.22);
-      color: var(--fg);
-      font-weight: 600;
-      font-size: 0.875rem;
-      text-decoration: none;
-      white-space: nowrap;
+      border: 1px solid var(--gold-border); color: var(--fg); font-weight: 600; font-size: 0.875rem; text-decoration: none; white-space: nowrap;
     }
     .btn-gold:hover { border-color: var(--gold-border-hover); }
     .btn-ghost {
-      flex: 1 1 auto;
-      height: 42px;
-      padding: 0 16px;
-      border-radius: 10px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 7px;
-      background: rgba(255, 255, 255, 0.025);
-      border: 1px solid var(--line-strong);
-      color: var(--fg-2);
-      font-weight: 500;
-      font-size: 0.875rem;
-      text-decoration: none;
-      white-space: nowrap;
+      flex: 1 1 auto; height: 42px; padding: 0 16px; border-radius: 10px;
+      display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+      background: rgba(255, 255, 255, 0.025); border: 1px solid var(--line-strong);
+      color: var(--fg-2); font-weight: 500; font-size: 0.875rem; text-decoration: none; white-space: nowrap;
     }
     .btn-ghost:hover { color: var(--fg); background: rgba(255, 255, 255, 0.06); }
     .gp-prism { width: 15px; height: 15px; flex: none; }
   </style>
-<!-- SC_REAL_GALLERY_CSS_START -->
-<style>
-  /* Google Play Golden-Height Horizontal Media Carousel + Fullscreen Back-to-Page Viewer */
-  .sc-real-gallery {
-    --gp-h: 296px;
-    background: linear-gradient(180deg, #090A0F 0%, #0D111C 52%, #090A0F 100%);
-    border-top: 1px solid rgba(148,163,184,0.12);
-    border-bottom: 1px solid rgba(148,163,184,0.12);
-    padding: 48px 0 44px;
-  }
-  .sc-gp-head {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 18px 24px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-  }
-  .sc-gp-head-left { flex: 1 1 440px; max-width: 640px; min-width: 0; }
-  .sc-gp-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #F5C451;
-    margin-bottom: 8px;
-  }
-  .sc-gp-eyebrow::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #34D399;
-    box-shadow: 0 0 10px rgba(52,211,153,0.75);
-  }
-  .sc-gp-title {
-    margin: 0 0 6px;
-    font-size: clamp(1.32rem, 2.2vw, 1.78rem);
-    font-weight: 750;
-    line-height: 1.22;
-    letter-spacing: -0.02em;
-    color: #F5F7FA;
-  }
-  .sc-gp-short {
-    margin: 0;
-    font-size: 0.9375rem;
-    line-height: 1.5;
-    color: #A6B2C9;
-  }
-  .sc-gp-store-bar {
-    flex: 0 0 auto;
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 14px;
-    padding: 8px 10px 8px 11px;
-    border-radius: 14px;
-    background: linear-gradient(135deg, rgba(22,28,44,0.92), rgba(14,18,30,0.94));
-    border: 1px solid rgba(148,163,184,0.22);
-    box-shadow: 0 10px 28px rgba(0,0,0,0.42);
-    max-width: 100%;
-  }
-  .sc-gp-app-id {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    min-width: 0;
-  }
-  .sc-gp-app-icon {
-    flex: 0 0 auto;
-    width: 34px;
-    height: 34px;
-    border-radius: 9px;
-    display: block;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.45);
-  }
-  .sc-gp-app-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    min-width: 0;
-  }
-  .sc-gp-app-name {
-    font-size: 0.875rem;
-    font-weight: 700;
-    letter-spacing: -0.012em;
-    line-height: 1.2;
-    color: #F5F7FA;
-    white-space: nowrap;
-  }
-  .sc-gp-app-dev {
-    font-size: 0.71rem;
-    font-weight: 500;
-    line-height: 1.2;
-    color: #8C99B3;
-    white-space: nowrap;
-  }
-  .sc-gp-cta {
-    flex: 0 0 auto;
-    white-space: nowrap;
-  }
-  .sc-gp-stage {
-    position: relative;
-  }
-  .sc-gp-rail {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: stretch;
-    gap: 12px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-    scroll-snap-type: x proximity;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    padding: 4px 2px 10px;
-    cursor: grab;
-  }
-  .sc-gp-rail.is-dragging { cursor: grabbing; scroll-behavior: auto; scroll-snap-type: none; }
-  .sc-gp-rail::-webkit-scrollbar { display: none; }
-  .sc-gp-item {
-    position: relative;
-    flex: 0 0 auto;
-    height: var(--gp-h);
-    padding: 0;
-    margin: 0;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid rgba(148,163,184,0.22);
-    background: #0D111C;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.44);
-    cursor: zoom-in;
-    scroll-snap-align: start;
-    transition: transform .2s cubic-bezier(.22,1,.36,1), border-color .2s ease, box-shadow .2s ease;
-    display: block;
-    appearance: none;
-    -webkit-appearance: none;
-  }
-  .sc-gp-item--feature { aspect-ratio: 1024 / 500; border-color: rgba(245,196,81,0.34); }
-  .sc-gp-item--shot { aspect-ratio: 9 / 16; }
-  .sc-gp-item:hover, .sc-gp-item:focus-visible {
-    transform: translateY(-2px);
-    border-color: rgba(245,196,81,0.68);
-    box-shadow: 0 14px 32px rgba(0,0,0,0.62);
-    outline: none;
-  }
-  .sc-gp-item img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    user-select: none;
-    -webkit-user-drag: none;
-    pointer-events: none;
-  }
-  .sc-gp-zoom-cue {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 28px;
-    height: 28px;
-    border-radius: 999px;
-    background: rgba(9,10,15,0.72);
-    border: 1px solid rgba(255,255,255,0.22);
-    color: #F5F7FA;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity .18s ease;
-    pointer-events: none;
-  }
-  .sc-gp-item:hover .sc-gp-zoom-cue, .sc-gp-item:focus-visible .sc-gp-zoom-cue { opacity: 1; }
-  .sc-gp-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-54%);
-    z-index: 6;
-    width: 44px;
-    height: 44px;
-    border-radius: 999px;
-    border: 1px solid rgba(245,196,81,0.36);
-    background: rgba(13,17,28,0.92);
-    color: #F5F7FA;
-    box-shadow: 0 8px 26px rgba(0,0,0,0.62);
-    backdrop-filter: blur(8px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: opacity .2s ease, transform .2s ease, border-color .2s ease, background .2s ease;
-  }
-  .sc-gp-nav:hover { background: rgba(24,31,48,0.98); border-color: #F5C451; color: #F5C451; }
-  .sc-gp-nav--prev { left: -16px; }
-  .sc-gp-nav--next { right: -16px; }
-  .sc-gp-nav.is-hidden { opacity: 0; pointer-events: none; }
-  /* Fullscreen Lightbox Viewer */
-  .sc-lb-modal {
-    position: fixed;
-    inset: 0;
-    width: 100vw;
-    height: 100dvh;
-    z-index: 10000;
-    background: rgba(5,7,13,0.96);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    display: none;
-    flex-direction: column;
-    overscroll-behavior: contain;
-  }
-  .sc-lb-modal.is-open { display: flex; }
-  .sc-lb-topbar {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 12px 18px;
-    border-bottom: 1px solid rgba(148,163,184,0.14);
-    background: rgba(9,10,15,0.72);
-  }
-  .sc-lb-back {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    height: 38px;
-    padding: 0 15px 0 11px;
-    border-radius: 999px;
-    border: 1px solid rgba(245,196,81,0.42);
-    background: rgba(245,196,81,0.12);
-    color: #F8FAFC;
-    font-size: 0.875rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background .18s ease, border-color .18s ease;
-    white-space: nowrap;
-  }
-  .sc-lb-back:hover { background: rgba(245,196,81,0.22); border-color: #F5C451; color: #F5C451; }
-  .sc-lb-meta {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    min-width: 0;
-    overflow: hidden;
-  }
-  .sc-lb-counter {
-    flex: 0 0 auto;
-    padding: 3px 9px;
-    border-radius: 999px;
-    background: rgba(148,163,184,0.14);
-    color: #F5C451;
-    font-size: 0.78rem;
-    font-weight: 700;
-    font-variant-numeric: tabular-nums;
-  }
-  .sc-lb-title {
-    color: #DCE5F4;
-    font-size: 0.875rem;
-    font-weight: 500;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .sc-lb-close {
-    flex: 0 0 auto;
-    width: 38px;
-    height: 38px;
-    border-radius: 999px;
-    border: 1px solid rgba(148,163,184,0.24);
-    background: rgba(20,24,36,0.88);
-    color: #F5F7FA;
-    font-size: 1.25rem;
-    line-height: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: border-color .18s ease, color .18s ease;
-  }
-  .sc-lb-close:hover { border-color: #F5C451; color: #F5C451; }
-  .sc-lb-stage {
-    position: relative;
-    flex: 1 1 auto;
-    min-height: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 18px 68px;
-    user-select: none;
-  }
-  .sc-lb-img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    border-radius: 14px;
-    border: 1px solid rgba(245,196,81,0.32);
-    box-shadow: 0 28px 80px rgba(0,0,0,0.82);
-    background: #090A0F;
-  }
-  .sc-lb-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 46px;
-    height: 46px;
-    border-radius: 999px;
-    border: 1px solid rgba(148,163,184,0.28);
-    background: rgba(15,20,34,0.86);
-    color: #F5F7FA;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: border-color .18s ease, color .18s ease, background .18s ease;
-  }
-  .sc-lb-arrow:hover { border-color: #F5C451; color: #F5C451; background: rgba(24,31,48,0.96); }
-  .sc-lb-arrow--prev { left: 14px; }
-  .sc-lb-arrow--next { right: 14px; }
-  .sc-lb-dots {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 10px 16px max(14px, env(safe-area-inset-bottom));
-  }
-  .sc-lb-dot {
-    width: 8px;
-    height: 8px;
-    padding: 0;
-    border: 0;
-    border-radius: 999px;
-    background: rgba(148,163,184,0.36);
-    cursor: pointer;
-    transition: width .2s ease, background .2s ease;
-  }
-  .sc-lb-dot--wide { width: 16px; }
-  .sc-lb-dot.is-active { width: 26px; background: #F5C451; }
-  @media (max-width: 1023px) {
-    .sc-real-gallery { --gp-h: 244px; padding: 40px 0 36px; }
-    .sc-gp-nav--prev { left: 4px; }
-    .sc-gp-nav--next { right: 4px; }
-  }
-  @media (max-width: 640px) {
-    .sc-real-gallery { --gp-h: 164px; padding: 30px 0 26px; }
-    .sc-gp-head { margin-bottom: 14px; gap: 12px; }
-    .sc-gp-store-bar { width: 100%; flex-direction: column; align-items: stretch; padding: 11px 12px; gap: 10px; border-radius: 13px; }
-    .sc-gp-app-id { gap: 10px; }
-    .sc-gp-app-icon { width: 34px; height: 34px; border-radius: 9px; }
-    .sc-gp-app-name { font-size: 0.875rem; }
-    .sc-gp-app-dev { font-size: 0.71rem; }
-    .sc-gp-cta { width: 100%; justify-content: center; text-align: center; padding: 9px 14px; font-size: 0.84rem; }
-    .sc-gp-rail { margin-inline: -16px; padding: 4px 16px 8px; gap: 10px; }
-    .sc-gp-nav { display: none; }
-    .sc-lb-topbar { padding: 10px 12px; }
-    .sc-lb-title { display: none; }
-    .sc-lb-stage { padding: 12px 12px; }
-    .sc-lb-arrow { width: 38px; height: 38px; background: rgba(15,20,34,0.62); }
-    .sc-lb-arrow--prev { left: 8px; }
-    .sc-lb-arrow--next { right: 8px; }
-  }
-</style>
-<!-- SC_REAL_GALLERY_CSS_END -->
 </head>
 <body>
   <main class="launchpad">
     <div class="lp-top">
       <div class="badge" aria-hidden="true">
-        <svg viewBox="20 14 68 72" xmlns="http://www.w3.org/2000/svg">
-          <path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z" />
-          <path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z" />
-          <path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z" />
-          <path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0" />
+        <svg viewBox="16 12 76 76">
+          <path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/>
+          <path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/>
+          <path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/>
+          <path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
         </svg>
       </div>
-      <a href="/" class="btn-home-icon" aria-label="Home" title="Home">
+      <a id="lp-home-link" href="../" class="btn-home-icon" aria-label="Official Website" title="Official Website">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M3 10.5L12 3l9 7.5"/>
-          <path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
+          <path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
         </svg>
       </a>
     </div>
-
-    <h1 id="lp-title">Opening SuperCode App Guide&hellip;</h1>
-    <p id="lp-desc">Launching the interactive onboarding walkthrough inside SuperCode IDE. Don&#39;t have the app yet? Get it on Google Play.</p>
-
+    <h1 id="lp-title">Opening SuperCode App Guide…</h1>
+    <p id="lp-desc">Launching the interactive onboarding walkthrough inside SuperCode IDE. Don't have the app yet? Get it on Google Play.</p>
     <div class="actions">
-      <a id="btnOpenApp" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=code-editor-pro&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Den%26utm_campaign%3Dcode-editor-pro%26utm_content%3Dtutorial" class="btn-gold">
-        <span id="lp-open-text">Open App Guide</span>
+      <a id="btnOpenApp" class="btn-gold" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor">
+        <span id="lp-open-text">Open in SuperCode IDE</span>
       </a>
-      <a id="btnPlayStore" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=code-editor-pro&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Den%26utm_campaign%3Dcode-editor-pro%26utm_content%3Dtutorial" class="btn-ghost">
-        <svg class="gp-prism" viewBox="0 0 24 24" aria-hidden="true">
-          <path fill="#4285F4" d="M3.6,2.4C3.3,2.7,3.1,3.2,3.1,3.8v16.4c0,0.6,0.2,1.1,0.5,1.4l0.1,0.1L12.9,12v-0.2L3.7,2.3L3.6,2.4z"/>
-          <path fill="#34A853" d="M16,15.1l-3.1-3.1v-0.2L16,8.7l0.1,0.1l3.6,2.1c1,0.6,1,1.5,0,2.1l-3.6,2.1L16,15.1z"/>
-          <path fill="#FBBC05" d="M16.1,15.1L12.9,12L3.6,21.3c0.3,0.4,0.9,0.4,1.6,0.1L16.1,15.1z"/>
-          <path fill="#EA4335" d="M16.1,8.9L5.2,2.6C4.5,2.2,3.9,2.3,3.6,2.7L12.9,12L16.1,8.9z"/>
-        </svg>
-        <span id="lp-play-text">Google Play</span>
+      <a id="btnPlayStore" class="btn-ghost" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor" target="_blank" rel="noopener">
+        <svg class="gp-prism" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M3.61 1.814L13.793 12 3.61 22.186a1.7 1.7 0 0 1-.61-1.31V3.124c0-.517.226-.982.61-1.31z"/><path fill="#34A853" d="M17.242 8.551L13.793 12 3.61 1.814c.406-.342.987-.43 1.545-.118l12.087 6.855z"/><path fill="#FBBC05" d="M20.382 10.332c.99.561.99 1.775 0 2.336l-3.14 1.781L13.793 12l3.449-3.449 3.14 1.781z"/><path fill="#EA4335" d="M13.793 12l3.449 3.449-12.087 6.855c-.558.312-1.139.224-1.545-.118L13.793 12z"/></svg>
+        <span id="lp-play-text">Get on Google Play</span>
       </a>
     </div>
-  
-<!-- SC_REAL_GALLERY_START -->
-  <section class="section sc-real-gallery" id="screenshots" aria-label="App Preview and Screenshots">
-    <div class="container">
-      <div class="sc-gp-head">
-        <div class="sc-gp-head-left">
-          <div class="sc-gp-eyebrow" data-i18n="gal_eyebrow">REAL ANDROID CAPTURES</div>
-          <h2 class="sc-gp-title" data-i18n="gal_title">App Preview &amp; Screenshots</h2>
-          <p class="sc-gp-short" data-i18n="gal_short_desc">Offline IDE &amp; Compiler: Python, C/C++, Java, JS, HTML, SQL, PHP, Lua, Git, SFTP</p>
-        </div>
-        <div class="sc-gp-store-bar">
-          <div class="sc-gp-app-id">
-            <svg class="sc-gp-app-icon" width="34" height="34" viewBox="16 12 76 76" aria-hidden="true"><rect x="16" y="12" width="76" height="76" rx="18" fill="#070A10" stroke="#3B82F6" stroke-width="2"/><path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/><path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/><path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/><path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/></svg>
-            <div class="sc-gp-app-meta">
-              <span class="sc-gp-app-name">Code Editor: SuperCode IDE</span>
-              <span class="sc-gp-app-dev">Phoenix Global Studios</span>
-            </div>
-          </div>
-          <a class="btn btn--gold btn--sm sc-gp-cta" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;listing=code-editor-pro&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Den%26utm_campaign%3Dcode-editor-pro%26utm_content%3Dtutorial" target="_blank" rel="noopener"><span data-i18n="gal_cta">Google Play</span> &#8599;</a>
-        </div>
-      </div>
-      <div class="sc-gp-stage">
-        <button type="button" class="sc-gp-nav sc-gp-nav--prev is-hidden" id="scGpPrev" aria-label="Previous image">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-        </button>
-        <div class="sc-gp-rail" id="scGpRail">
-          <button type="button" class="sc-gp-item sc-gp-item--feature" aria-label="Code Editor: SuperCode IDE — Offline Mobile IDE">
-            <img src="../assets/gallery/en/00_feature_graphic.webp" data-sc-file="00_feature_graphic.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_0" data-cap="Code Editor: SuperCode IDE — Offline Mobile IDE" alt="Code Editor: SuperCode IDE — Offline Mobile IDE" width="1024" height="500" loading="eager" decoding="async">
-            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
-          </button>
-          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Offline Python 3.11 / 3.12 IDE &amp; Split Console">
-            <img src="../assets/gallery/en/01_python_ide.webp" data-sc-file="01_python_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_1" data-cap="Offline Python 3.11 / 3.12 IDE &amp; Split Console" alt="Offline Python 3.11 / 3.12 IDE &amp; Split Console" width="720" height="1280" loading="eager" decoding="async">
-            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
-          </button>
-          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Local C17 &amp; C++20 Multi-File Compiler">
-            <img src="../assets/gallery/en/02_cpp20_compiler.webp" data-sc-file="02_cpp20_compiler.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_2" data-cap="Local C17 &amp; C++20 Multi-File Compiler" alt="Local C17 &amp; C++20 Multi-File Compiler" width="720" height="1280" loading="eager" decoding="async">
-            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
-          </button>
-          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Local Web Server, Offline PHP &amp; DevTools">
-            <img src="../assets/gallery/en/03_web_php_devtools.webp" data-sc-file="03_web_php_devtools.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_3" data-cap="Local Web Server, Offline PHP &amp; DevTools" alt="Local Web Server, Offline PHP &amp; DevTools" width="720" height="1280" loading="eager" decoding="async">
-            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
-          </button>
-          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Global File Tree &amp; Local File Manager (SAF)">
-            <img src="../assets/gallery/en/04_file_manager_tree.webp" data-sc-file="04_file_manager_tree.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_4" data-cap="Global File Tree &amp; Local File Manager (SAF)" alt="Global File Tree &amp; Local File Manager (SAF)" width="720" height="1280" loading="lazy" decoding="async">
-            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
-          </button>
-          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Offline SQLite 3.54 Studio &amp; .db Inspector">
-            <img src="../assets/gallery/en/05_sql_sqlite_studio.webp" data-sc-file="05_sql_sqlite_studio.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_5" data-cap="Offline SQLite 3.54 Studio &amp; .db Inspector" alt="Offline SQLite 3.54 Studio &amp; .db Inspector" width="720" height="1280" loading="lazy" decoding="async">
-            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
-          </button>
-          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Offline Java 17 IDE &amp; SQLite JDBC">
-            <img src="../assets/gallery/en/06_java17_ide.webp" data-sc-file="06_java17_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_6" data-cap="Offline Java 17 IDE &amp; SQLite JDBC" alt="Offline Java 17 IDE &amp; SQLite JDBC" width="720" height="1280" loading="lazy" decoding="async">
-            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
-          </button>
-          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Visual Git Client, Time Machine &amp; SFTP">
-            <img src="../assets/gallery/en/07_visual_git_timemachine.webp" data-sc-file="07_visual_git_timemachine.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_7" data-cap="Visual Git Client, Time Machine &amp; SFTP" alt="Visual Git Client, Time Machine &amp; SFTP" width="720" height="1280" loading="lazy" decoding="async">
-            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
-          </button>
-          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="21-Key Symbol Bar &amp; 8 Crafted IDE Themes">
-            <img src="../assets/gallery/en/08_symbol_keyboard_themes.webp" data-sc-file="08_symbol_keyboard_themes.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_8" data-cap="21-Key Symbol Bar &amp; 8 Crafted IDE Themes" alt="21-Key Symbol Bar &amp; 8 Crafted IDE Themes" width="720" height="1280" loading="lazy" decoding="async">
-            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
-          </button>
-        </div>
-        <button type="button" class="sc-gp-nav sc-gp-nav--next" id="scGpNext" aria-label="Next image">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        </button>
-      </div>
-    </div>
-  </section>
-  <div class="sc-lb-modal" id="scLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="App Preview and Screenshots">
-    <div class="sc-lb-topbar">
-      <button type="button" class="sc-lb-back" id="scLbBack">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-        <span data-i18n="gal_back">Back</span>
-      </button>
-      <div class="sc-lb-meta">
-        <span class="sc-lb-counter" id="scLbCounter">1 / 9</span>
-        <span class="sc-lb-title" id="scLbTitle"></span>
-      </div>
-      <button type="button" class="sc-lb-close" id="scLbClose" aria-label="Close preview">&times;</button>
-    </div>
-    <div class="sc-lb-stage">
-      <button type="button" class="sc-lb-arrow sc-lb-arrow--prev" id="scLbPrev" aria-label="Previous image">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      <img class="sc-lb-img" id="scLbImg" src="" alt="SuperCode IDE Preview">
-      <button type="button" class="sc-lb-arrow sc-lb-arrow--next" id="scLbNext" aria-label="Next image">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-    </div>
-    <div class="sc-lb-dots" id="scLbDots"></div>
-  </div>
-  <script>
-  (function(){
-    var rail = document.getElementById('scGpRail');
-    var prevBtn = document.getElementById('scGpPrev');
-    var nextBtn = document.getElementById('scGpNext');
-    var modal = document.getElementById('scLightbox');
-    var lbImg = document.getElementById('scLbImg');
-    var lbTitle = document.getElementById('scLbTitle');
-    var lbCounter = document.getElementById('scLbCounter');
-    var lbDots = document.getElementById('scLbDots');
-    var lbBack = document.getElementById('scLbBack');
-    var lbClose = document.getElementById('scLbClose');
-    var lbPrev = document.getElementById('scLbPrev');
-    var lbNext = document.getElementById('scLbNext');
-    if (!rail || !modal) return;
-
-    function getItems(){ return Array.prototype.slice.call(rail.querySelectorAll('.sc-gp-item')); }
-    function updateArrows(){
-      if (!prevBtn || !nextBtn) return;
-      prevBtn.classList.toggle('is-hidden', rail.scrollLeft <= 6);
-      nextBtn.classList.toggle('is-hidden', rail.scrollLeft + rail.clientWidth >= rail.scrollWidth - 8);
-    }
-    if (prevBtn) prevBtn.addEventListener('click', function(){ rail.scrollBy({ left: -Math.max(320, rail.clientWidth * 0.72), behavior: 'smooth' }); });
-    if (nextBtn) nextBtn.addEventListener('click', function(){ rail.scrollBy({ left: Math.max(320, rail.clientWidth * 0.72), behavior: 'smooth' }); });
-    rail.addEventListener('scroll', updateArrows, { passive: true });
-    window.addEventListener('resize', updateArrows, { passive: true });
-    updateArrows();
-
-    /* Smooth desktop drag-to-scroll without breaking clicks */
-    var isDown = false, startX = 0, startScroll = 0, moved = false;
-    rail.addEventListener('mousedown', function(e){
-      if (e.button !== 0) return;
-      isDown = true; moved = false; startX = e.pageX; startScroll = rail.scrollLeft;
-      rail.classList.add('is-dragging');
-    });
-    window.addEventListener('mousemove', function(e){
-      if (!isDown) return;
-      var dx = e.pageX - startX;
-      if (Math.abs(dx) > 6) { moved = true; e.preventDefault(); rail.scrollLeft = startScroll - dx; }
-    });
-    window.addEventListener('mouseup', function(){
-      if (!isDown) return;
-      isDown = false; rail.classList.remove('is-dragging');
-      setTimeout(function(){ moved = false; }, 40);
-    });
-
-    /* Fullscreen Lightbox with History Back & Touch Swipe */
-    var curIdx = 0, pushedState = false;
-    function renderSlide(idx){
-      var items = getItems();
-      if (!items.length) return;
-      curIdx = (idx + items.length) % items.length;
-      var img = items[curIdx].querySelector('img');
-      if (img) {
-        lbImg.src = img.getAttribute('src') || img.src;
-        lbImg.alt = img.alt || 'SuperCode IDE';
-        if (lbTitle) lbTitle.textContent = img.getAttribute('data-cap') || img.alt || '';
-      }
-      if (lbCounter) lbCounter.textContent = (curIdx + 1) + ' / ' + items.length;
-      if (lbDots) {
-        var dots = lbDots.querySelectorAll('.sc-lb-dot');
-        for (var d = 0; d < dots.length; d++) { dots[d].classList.toggle('is-active', d === curIdx); }
-      }
-    }
-    function buildDots(){
-      if (!lbDots) return;
-      var items = getItems();
-      lbDots.innerHTML = '';
-      for (var i = 0; i < items.length; i++) {
-        (function(k){
-          var b = document.createElement('button');
-          b.type = 'button';
-          b.className = 'sc-lb-dot' + (k === 0 ? ' sc-lb-dot--wide' : '');
-          b.setAttribute('aria-label', String(k + 1));
-          b.addEventListener('click', function(){ renderSlide(k); });
-          lbDots.appendChild(b);
-        })(i);
-      }
-    }
-    function openLb(idx){
-      buildDots();
-      renderSlide(idx);
-      modal.classList.add('is-open');
-      modal.setAttribute('aria-hidden', 'false');
-      document.documentElement.style.overflow = 'hidden';
-      document.body.style.overflow = 'hidden';
-      try {
-        if (window.history && window.history.pushState) {
-          window.history.pushState({ scLightbox: true }, '', window.location.href);
-          pushedState = true;
-        }
-      } catch (e) { pushedState = false; }
-    }
-    function closeLb(fromPop){
-      if (!modal.classList.contains('is-open')) return;
-      modal.classList.remove('is-open');
-      modal.setAttribute('aria-hidden', 'true');
-      document.documentElement.style.overflow = '';
-      document.body.style.overflow = '';
-      if (!fromPop && pushedState) {
-        pushedState = false;
-        try { window.history.back(); } catch (e) {}
-      } else {
-        pushedState = false;
-      }
-    }
-
-    rail.addEventListener('click', function(e){
-      if (moved) return;
-      var btn = e.target.closest ? e.target.closest('.sc-gp-item') : null;
-      if (!btn) return;
-      var items = getItems();
-      var idx = items.indexOf(btn);
-      if (idx >= 0) openLb(idx);
-    });
-    if (lbBack) lbBack.addEventListener('click', function(){ closeLb(false); });
-    if (lbClose) lbClose.addEventListener('click', function(){ closeLb(false); });
-    if (lbPrev) lbPrev.addEventListener('click', function(e){ e.stopPropagation(); renderSlide(curIdx - 1); });
-    if (lbNext) lbNext.addEventListener('click', function(e){ e.stopPropagation(); renderSlide(curIdx + 1); });
-    modal.addEventListener('click', function(e){
-      if (e.target === modal || e.target.classList.contains('sc-lb-stage')) closeLb(false);
-    });
-    window.addEventListener('popstate', function(){ if (modal.classList.contains('is-open')) closeLb(true); });
-    window.addEventListener('keydown', function(e){
-      if (!modal.classList.contains('is-open')) return;
-      if (e.key === 'Escape') closeLb(false);
-      else if (e.key === 'ArrowLeft') renderSlide(curIdx - 1);
-      else if (e.key === 'ArrowRight') renderSlide(curIdx + 1);
-    });
-
-    /* Mobile touch swipe: left/right to flip, down to close & return */
-    var tx0 = 0, ty0 = 0;
-    modal.addEventListener('touchstart', function(e){
-      if (e.touches && e.touches.length === 1) { tx0 = e.touches[0].clientX; ty0 = e.touches[0].clientY; }
-    }, { passive: true });
-    modal.addEventListener('touchend', function(e){
-      if (!e.changedTouches || !e.changedTouches.length) return;
-      var dx = e.changedTouches[0].clientX - tx0;
-      var dy = e.changedTouches[0].clientY - ty0;
-      if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy)) {
-        renderSlide(dx < 0 ? curIdx + 1 : curIdx - 1);
-      } else if (dy > 76 && Math.abs(dy) > Math.abs(dx)) {
-        closeLb(false);
-      }
-    }, { passive: true });
-  })();
-  </script>
-<!-- SC_REAL_GALLERY_END -->
-</main>
+  </main>
   <script>
     (function () {
-      var fallback = 'https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&referrer=utm_source%3Dofficial_web%26utm_medium%3Dtutorial_launchpad';
-      var intentUrl = 'intent://supercode-ide.github.io/tutorial?ref=launchpad#Intent;scheme=https;package=com.phoenixglobal.supercodeeditor;S.browser_fallback_url=' + encodeURIComponent(fallback) + ';end';
-      var isZh = /^zh/i.test(navigator.language || '');
-      if (isZh) {
-        document.getElementById('lp-title').textContent = '\u6b63\u5728\u5524\u8d77 SuperCode \u65b0\u624b\u5f15\u5bfc\u2026';
-        document.getElementById('lp-desc').textContent = '\u5373\u5c06\u5728 SuperCode IDE \u5185\u76f4\u8fbe\u5f00\u542f\u4ea4\u4e92\u5f0f\u65b0\u624b\u5bfc\u822a\u3002\u82e5\u5c1a\u672a\u5b89\u88c5\u5e94\u7528\uff0c\u53ef\u5728 Google Play \u83b7\u53d6\u3002';
-        document.getElementById('lp-open-text').textContent = '\u5f00\u542f\u65b0\u624b\u5f15\u5bfc';
-        document.getElementById('lp-play-text').textContent = 'Google Play \u83b7\u53d6';
+      var T = {"en":{"htmlLang":"en","dir":"ltr","playHl":"en-US","title":"SuperCode IDE \u2014 Interactive App Guide","h1":"Opening SuperCode App Guide\u2026","desc":"Launching the interactive onboarding walkthrough inside SuperCode IDE. Don't have the app yet? Get it on Google Play.","open":"Open in SuperCode IDE","play":"Get on Google Play","home":"Official Website"},"zh":{"htmlLang":"zh-Hans","dir":"ltr","playHl":"zh-CN","title":"SuperCode IDE \u2014 \u4ea4\u4e92\u5f0f\u5e94\u7528\u6307\u5357","h1":"\u6b63\u5728\u6253\u5f00 SuperCode \u5e94\u7528\u6307\u5357\u2026","desc":"\u6b63\u5728 SuperCode IDE \u4e2d\u542f\u52a8\u4ea4\u4e92\u5f0f\u65b0\u624b\u5f15\u5bfc\u3002\u5c1a\u672a\u5b89\u88c5\u5e94\u7528\uff1f\u524d\u5f80 Google Play \u4e0b\u8f7d\u3002","open":"\u5728 SuperCode IDE \u4e2d\u6253\u5f00","play":"\u524d\u5f80 Google Play \u4e0b\u8f7d","home":"\u5b98\u65b9\u7f51\u7ad9"},"zh-tw":{"htmlLang":"zh-Hant","dir":"ltr","playHl":"zh-TW","title":"SuperCode IDE \u2014 \u4e92\u52d5\u5f0f\u61c9\u7528\u6307\u5357","h1":"\u6b63\u5728\u958b\u555f SuperCode \u61c9\u7528\u6307\u5357\u2026","desc":"\u6b63\u5728\u555f\u52d5 SuperCode IDE \u5167\u7684\u4e92\u52d5\u5f0f\u65b0\u624b\u5f15\u5c0e\u6559\u5b78\u3002\u5c1a\u672a\u5b89\u88dd\u61c9\u7528\u7a0b\u5f0f\uff1f\u8acb\u524d\u5f80 Google Play \u4e0b\u8f09\u3002","open":"\u5728 SuperCode IDE \u4e2d\u958b\u555f","play":"\u524d\u5f80 Google Play \u4e0b\u8f09","home":"\u5b98\u65b9\u7db2\u7ad9"},"es":{"htmlLang":"es","dir":"ltr","playHl":"es-419","title":"SuperCode IDE \u2014 Gu\u00eda interactiva de la app","h1":"Abriendo la gu\u00eda de la app SuperCode\u2026","desc":"Iniciando el recorrido interactivo dentro de SuperCode IDE. \u00bfA\u00fan no tienes la app? Cons\u00edguela en Google Play.","open":"Abrir en SuperCode IDE","play":"Obtener en Google Play","home":"Sitio web oficial"},"pt":{"htmlLang":"pt-BR","dir":"ltr","playHl":"pt-BR","title":"SuperCode IDE \u2014 Guia interativo do app","h1":"Abrindo o guia do SuperCode\u2026","desc":"Iniciando o tour interativo no SuperCode IDE. Ainda n\u00e3o tem o app? Baixe no Google Play.","open":"Abrir no SuperCode IDE","play":"Baixar no Google Play","home":"Site oficial"},"ja":{"htmlLang":"ja","dir":"ltr","playHl":"ja-JP","title":"SuperCode IDE \u2014 \u30a4\u30f3\u30bf\u30e9\u30af\u30c6\u30a3\u30d6\u30a2\u30d7\u30ea\u30ac\u30a4\u30c9","h1":"SuperCode \u30a2\u30d7\u30ea\u30ac\u30a4\u30c9\u3092\u958b\u3044\u3066\u3044\u307e\u3059\u2026","desc":"SuperCode IDE \u5185\u306e\u30a4\u30f3\u30bf\u30e9\u30af\u30c6\u30a3\u30d6\u30ac\u30a4\u30c9\u3092\u8d77\u52d5\u3057\u3066\u3044\u307e\u3059\u3002\u307e\u3060\u30a2\u30d7\u30ea\u3092\u304a\u6301\u3061\u3067\u306a\u3044\u5834\u5408\u306f\u3001Google Play \u304b\u3089\u5165\u624b\u3067\u304d\u307e\u3059\u3002","open":"SuperCode IDE \u3067\u958b\u304f","play":"Google Play \u3067\u5165\u624b","home":"\u516c\u5f0f\u30b5\u30a4\u30c8"},"ko":{"htmlLang":"ko","dir":"ltr","playHl":"ko-KR","title":"SuperCode IDE \u2014 \uc778\ud130\ub799\ud2f0\ube0c \uc571 \uac00\uc774\ub4dc","h1":"SuperCode \uc571 \uac00\uc774\ub4dc\ub97c \uc5ec\ub294 \uc911\u2026","desc":"SuperCode IDE\uc5d0\uc11c \uc778\ud130\ub799\ud2f0\ube0c \uc628\ubcf4\ub529 \uac00\uc774\ub4dc\ub97c \uc2e4\ud589\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4. \uc544\uc9c1 \uc571\uc774 \uc5c6\uc73c\uc2e0\uac00\uc694? Google Play\uc5d0\uc11c \ub2e4\uc6b4\ub85c\ub4dc\ud558\uc138\uc694.","open":"SuperCode IDE\uc5d0\uc11c \uc5f4\uae30","play":"Google Play\uc5d0\uc11c \ub2e4\uc6b4\ub85c\ub4dc","home":"\uacf5\uc2dd \uc6f9\uc0ac\uc774\ud2b8"},"de":{"htmlLang":"de","dir":"ltr","playHl":"de-DE","title":"SuperCode IDE \u2014 Interaktiver App-Guide","h1":"SuperCode App-Guide wird ge\u00f6ffnet\u2026","desc":"Die interaktive Einf\u00fchrung wird in SuperCode IDE gestartet. App noch nicht installiert? Jetzt bei Google Play laden.","open":"In SuperCode IDE \u00f6ffnen","play":"Bei Google Play laden","home":"Offizielle Website"},"fr":{"htmlLang":"fr","dir":"ltr","playHl":"fr-FR","title":"SuperCode IDE \u2014 Guide interactif de l'application","h1":"Ouverture du guide SuperCode\u2026","desc":"Lancement du guide de prise en main interactif dans SuperCode IDE. Vous n'avez pas encore l'application ? T\u00e9l\u00e9chargez-la sur Google Play.","open":"Ouvrir dans SuperCode IDE","play":"T\u00e9l\u00e9charger sur Google Play","home":"Site officiel"},"ru":{"htmlLang":"ru","dir":"ltr","playHl":"ru-RU","title":"SuperCode IDE \u2014 \u0438\u043d\u0442\u0435\u0440\u0430\u043a\u0442\u0438\u0432\u043d\u044b\u0439 \u0433\u0438\u0434 \u043f\u043e \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044e","h1":"\u041e\u0442\u043a\u0440\u044b\u0442\u0438\u0435 \u0433\u0438\u0434\u0430 SuperCode\u2026","desc":"\u0417\u0430\u043f\u0443\u0441\u043a \u0438\u043d\u0442\u0435\u0440\u0430\u043a\u0442\u0438\u0432\u043d\u043e\u0433\u043e \u043e\u0431\u0443\u0447\u0435\u043d\u0438\u044f \u0432 SuperCode IDE. \u0415\u0449\u0451 \u043d\u0435\u0442 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f? \u0421\u043a\u0430\u0447\u0430\u0439\u0442\u0435 \u0432 Google Play.","open":"\u041e\u0442\u043a\u0440\u044b\u0442\u044c \u0432 SuperCode IDE","play":"\u0421\u043a\u0430\u0447\u0430\u0442\u044c \u0432 Google Play","home":"\u041e\u0444\u0438\u0446\u0438\u0430\u043b\u044c\u043d\u044b\u0439 \u0441\u0430\u0439\u0442"},"hi":{"htmlLang":"hi","dir":"ltr","playHl":"hi-IN","title":"SuperCode IDE \u2014 \u0907\u0902\u091f\u0930\u0948\u0915\u094d\u091f\u093f\u0935 \u0910\u092a \u0917\u093e\u0907\u0921","h1":"SuperCode \u0910\u092a \u0917\u093e\u0907\u0921 \u0916\u094b\u0932 \u0930\u0939\u0947 \u0939\u0948\u0902\u2026","desc":"SuperCode IDE \u092e\u0947\u0902 \u0907\u0902\u091f\u0930\u0948\u0915\u094d\u091f\u093f\u0935 \u0911\u0928\u092c\u094b\u0930\u094d\u0921\u093f\u0902\u0917 \u0917\u093e\u0907\u0921 \u0916\u0941\u0932 \u0930\u0939\u0940 \u0939\u0948\u0964 \u0905\u092d\u0940 \u0924\u0915 \u0910\u092a \u0928\u0939\u0940\u0902 \u0939\u0948? \u0907\u0938\u0947 Google Play \u0938\u0947 \u0921\u093e\u0909\u0928\u0932\u094b\u0921 \u0915\u0930\u0947\u0902\u0964","open":"SuperCode IDE \u092e\u0947\u0902 \u0916\u094b\u0932\u0947\u0902","play":"Google Play \u092a\u0930 \u092a\u093e\u090f\u0902","home":"\u0906\u0927\u093f\u0915\u093e\u0930\u093f\u0915 \u0935\u0947\u092c\u0938\u093e\u0907\u091f"},"id":{"htmlLang":"id","dir":"ltr","playHl":"id","title":"SuperCode IDE \u2014 Panduan Aplikasi Interaktif","h1":"Membuka Panduan Aplikasi SuperCode\u2026","desc":"Membuka panduan interaktif di dalam SuperCode IDE. Belum punya aplikasinya? Dapatkan di Google Play.","open":"Buka di SuperCode IDE","play":"Dapatkan di Google Play","home":"Situs Web Resmi"},"it":{"htmlLang":"it","dir":"ltr","playHl":"it-IT","title":"SuperCode IDE \u2014 Guida interattiva all'app","h1":"Apertura guida SuperCode\u2026","desc":"Avvio della guida interattiva di onboarding in SuperCode IDE. Non hai ancora l'app? Scaricala su Google Play.","open":"Apri in SuperCode IDE","play":"Scarica su Google Play","home":"Sito ufficiale"},"vi":{"htmlLang":"vi","dir":"ltr","playHl":"vi","title":"SuperCode IDE \u2014 H\u01b0\u1edbng d\u1eabn t\u01b0\u01a1ng t\u00e1c","h1":"\u0110ang m\u1edf H\u01b0\u1edbng d\u1eabn SuperCode\u2026","desc":"\u0110ang kh\u1edfi ch\u1ea1y h\u01b0\u1edbng d\u1eabn l\u00e0m quen t\u01b0\u01a1ng t\u00e1c trong SuperCode IDE. Ch\u01b0a c\u00e0i \u1ee9ng d\u1ee5ng? T\u1ea3i ngay tr\u00ean Google Play.","open":"M\u1edf trong SuperCode IDE","play":"T\u1ea3i tr\u00ean Google Play","home":"Trang ch\u1ee7 ch\u00ednh th\u1ee9c"},"th":{"htmlLang":"th","dir":"ltr","playHl":"th","title":"SuperCode IDE \u2014 \u0e04\u0e39\u0e48\u0e21\u0e37\u0e2d\u0e41\u0e2d\u0e1b\u0e41\u0e1a\u0e1a\u0e42\u0e15\u0e49\u0e15\u0e2d\u0e1a","h1":"\u0e01\u0e33\u0e25\u0e31\u0e07\u0e40\u0e1b\u0e34\u0e14\u0e04\u0e39\u0e48\u0e21\u0e37\u0e2d\u0e41\u0e2d\u0e1b SuperCode\u2026","desc":"\u0e01\u0e33\u0e25\u0e31\u0e07\u0e40\u0e1b\u0e34\u0e14\u0e04\u0e33\u0e41\u0e19\u0e30\u0e19\u0e33\u0e01\u0e32\u0e23\u0e43\u0e0a\u0e49\u0e07\u0e32\u0e19\u0e41\u0e1a\u0e1a\u0e42\u0e15\u0e49\u0e15\u0e2d\u0e1a\u0e20\u0e32\u0e22\u0e43\u0e19 SuperCode IDE \u0e2b\u0e32\u0e01\u0e22\u0e31\u0e07\u0e44\u0e21\u0e48\u0e21\u0e35\u0e41\u0e2d\u0e1b \u0e14\u0e32\u0e27\u0e19\u0e4c\u0e42\u0e2b\u0e25\u0e14\u0e44\u0e14\u0e49\u0e1a\u0e19 Google Play","open":"\u0e40\u0e1b\u0e34\u0e14\u0e43\u0e19 SuperCode IDE","play":"\u0e14\u0e32\u0e27\u0e19\u0e4c\u0e42\u0e2b\u0e25\u0e14\u0e1a\u0e19 Google Play","home":"\u0e40\u0e27\u0e47\u0e1a\u0e44\u0e0b\u0e15\u0e4c\u0e17\u0e32\u0e07\u0e01\u0e32\u0e23"},"tr":{"htmlLang":"tr","dir":"ltr","playHl":"tr-TR","title":"SuperCode IDE \u2014 Etkile\u015fimli Uygulama Rehberi","h1":"SuperCode Uygulama Rehberi A\u00e7\u0131l\u0131yor\u2026","desc":"SuperCode IDE i\u00e7inde etkile\u015fimli ba\u015flang\u0131\u00e7 rehberi ba\u015flat\u0131l\u0131yor. Uygulama hen\u00fcz y\u00fckl\u00fc de\u011fil mi? Google Play'den edinin.","open":"SuperCode IDE'de A\u00e7","play":"Google Play'den \u0130ndir","home":"Resmi Web Sitesi"},"ar":{"htmlLang":"ar","dir":"rtl","playHl":"ar","title":"SuperCode IDE \u2014 \u062f\u0644\u064a\u0644 \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0627\u0644\u062a\u0641\u0627\u0639\u0644\u064a","h1":"\u062c\u0627\u0631\u064d \u0641\u062a\u062d \u062f\u0644\u064a\u0644 SuperCode \u0627\u0644\u062a\u0637\u0628\u064a\u0642\u064a\u2026","desc":"\u064a\u062a\u0645 \u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u062c\u0648\u0644\u0629 \u0627\u0644\u062a\u0639\u0631\u064a\u0641\u064a\u0629 \u0627\u0644\u062a\u0641\u0627\u0639\u0644\u064a\u0629 \u062f\u0627\u062e\u0644 SuperCode IDE. \u0623\u0644\u0645 \u062a\u062b\u0628\u0651\u062a \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0628\u0639\u062f\u061f \u0627\u062d\u0635\u0644 \u0639\u0644\u064a\u0647 \u0645\u0646 Google Play.","open":"\u0641\u062a\u062d \u0641\u064a SuperCode IDE","play":"\u062a\u0646\u0632\u064a\u0644 \u0645\u0646 Google Play","home":"\u0627\u0644\u0645\u0648\u0642\u0639 \u0627\u0644\u0631\u0633\u0645\u064a"},"pl":{"htmlLang":"pl","dir":"ltr","playHl":"pl-PL","title":"SuperCode IDE \u2014 Interaktywny przewodnik po aplikacji","h1":"Otwieranie przewodnika SuperCode\u2026","desc":"Uruchamianie interaktywnego wprowadzenia w SuperCode IDE. Nie masz jeszcze aplikacji? Pobierz j\u0105 z Google Play.","open":"Otw\u00f3rz w SuperCode IDE","play":"Pobierz z Google Play","home":"Oficjalna strona"},"nl":{"htmlLang":"nl","dir":"ltr","playHl":"nl-NL","title":"SuperCode IDE \u2014 Interactieve app-gids","h1":"SuperCode App-gids openen\u2026","desc":"De interactieve introductierondleiding wordt gestart in SuperCode IDE. Heb je de app nog niet? Download deze op Google Play.","open":"Openen in SuperCode IDE","play":"Download op Google Play","home":"Offici\u00eble website"},"sv":{"htmlLang":"sv","dir":"ltr","playHl":"sv-SE","title":"SuperCode IDE \u2014 Interaktiv appguide","h1":"\u00d6ppnar SuperCode appguide\u2026","desc":"Startar den interaktiva introduktionsguiden i SuperCode IDE. Har du inte appen \u00e4n? H\u00e4mta den p\u00e5 Google Play.","open":"\u00d6ppna i SuperCode IDE","play":"H\u00e4mta p\u00e5 Google Play","home":"Officiell webbplats"},"nb":{"htmlLang":"nb","dir":"ltr","playHl":"no-NO","title":"SuperCode IDE \u2014 Interaktiv appveiledning","h1":"\u00c5pner SuperCode-appveiledning\u2026","desc":"Starter den interaktive introduksjonen i SuperCode IDE. Har du ikke appen enn\u00e5? Last den ned p\u00e5 Google Play.","open":"\u00c5pne i SuperCode IDE","play":"Last ned p\u00e5 Google Play","home":"Offisiell nettside"},"da":{"htmlLang":"da","dir":"ltr","playHl":"da-DK","title":"SuperCode IDE \u2014 Interaktiv app-guide","h1":"\u00c5bner SuperCode App-guide\u2026","desc":"Starter den interaktive introduktion i SuperCode IDE. Har du ikke appen endnu? Hent den p\u00e5 Google Play.","open":"\u00c5bn i SuperCode IDE","play":"Hent p\u00e5 Google Play","home":"Officielt website"},"fi":{"htmlLang":"fi","dir":"ltr","playHl":"fi-FI","title":"SuperCode IDE \u2014 Interaktiivinen sovellusopas","h1":"Avataan SuperCode-sovellusopasta\u2026","desc":"K\u00e4ynnistet\u00e4\u00e4n interaktiivinen perehdytysopas SuperCode IDE -sovelluksessa. Eik\u00f6 sinulla ole viel\u00e4 sovellusta? Lataa se Google Playsta.","open":"Avaa SuperCode IDE:ss\u00e4","play":"Lataa Google Playsta","home":"Virallinen verkkosivusto"},"cs":{"htmlLang":"cs","dir":"ltr","playHl":"cs-CZ","title":"SuperCode IDE \u2014 Interaktivn\u00ed pr\u016fvodce aplikac\u00ed","h1":"Otev\u00edr\u00e1n\u00ed pr\u016fvodce SuperCode\u2026","desc":"Spou\u0161t\u011bn\u00ed interaktivn\u00edho \u00favodn\u00edho pr\u016fvodce uvnit\u0159 SuperCode IDE. Je\u0161t\u011b nem\u00e1te aplikaci? St\u00e1hn\u011bte si ji na Google Play.","open":"Otev\u0159\u00edt v SuperCode IDE","play":"St\u00e1hnout na Google Play","home":"Ofici\u00e1ln\u00ed web"},"uk":{"htmlLang":"uk","dir":"ltr","playHl":"uk","title":"SuperCode IDE \u2014 \u0456\u043d\u0442\u0435\u0440\u0430\u043a\u0442\u0438\u0432\u043d\u0438\u0439 \u043f\u043e\u0441\u0456\u0431\u043d\u0438\u043a","h1":"\u0412\u0456\u0434\u043a\u0440\u0438\u0442\u0442\u044f \u043f\u043e\u0441\u0456\u0431\u043d\u0438\u043a\u0430 SuperCode\u2026","desc":"\u0417\u0430\u043f\u0443\u0441\u043a\u0430\u0454\u043c\u043e \u0456\u043d\u0442\u0435\u0440\u0430\u043a\u0442\u0438\u0432\u043d\u0438\u0439 \u0433\u0456\u0434 \u0443 SuperCode IDE. \u0429\u0435 \u043d\u0435 \u0432\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u043b\u0438 \u0434\u043e\u0434\u0430\u0442\u043e\u043a? \u0417\u0430\u0432\u0430\u043d\u0442\u0430\u0436\u0442\u0435 \u0432 Google Play.","open":"\u0412\u0456\u0434\u043a\u0440\u0438\u0442\u0438 \u0432 SuperCode IDE","play":"\u0417\u0430\u0432\u0430\u043d\u0442\u0430\u0436\u0438\u0442\u0438 \u0432 Google Play","home":"\u041e\u0444\u0456\u0446\u0456\u0439\u043d\u0438\u0439 \u0441\u0430\u0439\u0442"},"ro":{"htmlLang":"ro","dir":"ltr","playHl":"ro","title":"SuperCode IDE \u2014 Ghid interactiv","h1":"Se deschide ghidul SuperCode\u2026","desc":"Se lanseaz\u0103 turul interactiv de ini\u021biere \u00een SuperCode IDE. Nu ai \u00eenc\u0103 aplica\u021bia? Descarc\u0103 de pe Google Play.","open":"Deschide \u00een SuperCode IDE","play":"Descarc\u0103 de pe Google Play","home":"Site oficial"},"hu":{"htmlLang":"hu","dir":"ltr","playHl":"hu-HU","title":"SuperCode IDE \u2014 Interakt\u00edv \u00fatmutat\u00f3","h1":"SuperCode \u00fatmutat\u00f3 megnyit\u00e1sa\u2026","desc":"Az interakt\u00edv bemutat\u00f3 ind\u00edt\u00e1sa a SuperCode IDE alkalmaz\u00e1sban. M\u00e9g nincs meg az alkalmaz\u00e1s? T\u00f6ltsd le a Google Playr\u0151l.","open":"Megnyit\u00e1s a SuperCode IDE-ben","play":"Let\u00f6lt\u00e9s a Google Playr\u0151l","home":"Hivatalos weboldal"},"el":{"htmlLang":"el","dir":"ltr","playHl":"el-GR","title":"SuperCode IDE \u2014 \u0394\u03b9\u03b1\u03b4\u03c1\u03b1\u03c3\u03c4\u03b9\u03ba\u03cc\u03c2 \u039f\u03b4\u03b7\u03b3\u03cc\u03c2 \u0395\u03c6\u03b1\u03c1\u03bc\u03bf\u03b3\u03ae\u03c2","h1":"\u0386\u03bd\u03bf\u03b9\u03b3\u03bc\u03b1 \u039f\u03b4\u03b7\u03b3\u03bf\u03cd SuperCode\u2026","desc":"\u0395\u03ba\u03ba\u03af\u03bd\u03b7\u03c3\u03b7 \u03c4\u03b7\u03c2 \u03b4\u03b9\u03b1\u03b4\u03c1\u03b1\u03c3\u03c4\u03b9\u03ba\u03ae\u03c2 \u03be\u03b5\u03bd\u03ac\u03b3\u03b7\u03c3\u03b7\u03c2 \u03bc\u03ad\u03c3\u03b1 \u03c3\u03c4\u03bf SuperCode IDE. \u0394\u03b5\u03bd \u03ad\u03c7\u03b5\u03c4\u03b5 \u03b1\u03ba\u03cc\u03bc\u03b1 \u03c4\u03b7\u03bd \u03b5\u03c6\u03b1\u03c1\u03bc\u03bf\u03b3\u03ae; \u039a\u03b1\u03c4\u03b5\u03b2\u03ac\u03c3\u03c4\u03b5 \u03c4\u03b7 \u03c3\u03c4\u03bf Google Play.","open":"\u0386\u03bd\u03bf\u03b9\u03b3\u03bc\u03b1 \u03c3\u03c4\u03bf SuperCode IDE","play":"\u039b\u03ae\u03c8\u03b7 \u03c3\u03c4\u03bf Google Play","home":"\u0395\u03c0\u03af\u03c3\u03b7\u03bc\u03bf\u03c2 \u0399\u03c3\u03c4\u03cc\u03c4\u03bf\u03c0\u03bf\u03c2"},"he":{"htmlLang":"he","dir":"rtl","playHl":"iw-IL","title":"SuperCode IDE \u2014 \u05de\u05d3\u05e8\u05d9\u05da \u05d0\u05d9\u05e0\u05d8\u05e8\u05d0\u05e7\u05d8\u05d9\u05d1\u05d9 \u05dc\u05d0\u05e4\u05dc\u05d9\u05e7\u05e6\u05d9\u05d4","h1":"\u05e4\u05d5\u05ea\u05d7 \u05d0\u05ea \u05de\u05d3\u05e8\u05d9\u05da SuperCode\u2026","desc":"\u05de\u05e4\u05e2\u05d9\u05dc \u05d0\u05ea \u05de\u05d3\u05e8\u05d9\u05da \u05d4\u05d4\u05d9\u05db\u05e8\u05d5\u05ea \u05d4\u05d0\u05d9\u05e0\u05d8\u05e8\u05d0\u05e7\u05d8\u05d9\u05d1\u05d9 \u05d1\u05ea\u05d5\u05da SuperCode IDE. \u05e2\u05d3\u05d9\u05d9\u05df \u05d0\u05d9\u05df \u05dc\u05db\u05dd \u05d0\u05ea \u05d4\u05d0\u05e4\u05dc\u05d9\u05e7\u05e6\u05d9\u05d4? \u05d4\u05d5\u05e8\u05d9\u05d3\u05d5 \u05d1-Google Play.","open":"\u05e4\u05ea\u05d7 \u05d1-SuperCode IDE","play":"\u05d4\u05d5\u05e8\u05d3\u05d4 \u05d1-Google Play","home":"\u05d4\u05d0\u05ea\u05e8 \u05d4\u05e8\u05e9\u05de\u05d9"},"ms":{"htmlLang":"ms","dir":"ltr","playHl":"ms","title":"SuperCode IDE \u2014 Panduan Aplikasi Interaktif","h1":"Membuka Panduan Aplikasi SuperCode\u2026","desc":"Melancarkan panduan pengenalan interaktif di dalam SuperCode IDE. Belum ada aplikasi ini? Dapatkan di Google Play.","open":"Buka dalam SuperCode IDE","play":"Dapatkan di Google Play","home":"Laman Web Rasmi"},"tl":{"htmlLang":"fil","dir":"ltr","playHl":"fil","title":"SuperCode IDE \u2014 Interactive na Gabay sa App","h1":"Binubuksan ang Gabay sa SuperCode App\u2026","desc":"Binubuksan ang interactive onboarding walkthrough sa loob ng SuperCode IDE. Wala pa ng app? Kunin sa Google Play.","open":"Buksan sa SuperCode IDE","play":"Kunin sa Google Play","home":"Opisyal na Website"},"bn":{"htmlLang":"bn","dir":"ltr","playHl":"bn-BD","title":"SuperCode IDE \u2014 \u0987\u09a8\u09cd\u099f\u09be\u09b0\u09c7\u0995\u09cd\u099f\u09bf\u09ad \u0985\u09cd\u09af\u09be\u09aa \u0997\u09be\u0987\u09a1","h1":"SuperCode \u0985\u09cd\u09af\u09be\u09aa \u0997\u09be\u0987\u09a1 \u0996\u09cb\u09b2\u09be \u09b9\u099a\u09cd\u099b\u09c7\u2026","desc":"SuperCode IDE-\u098f\u09b0 \u09ad\u09c7\u09a4\u09b0\u09c7 \u0987\u09a8\u09cd\u099f\u09be\u09b0\u09c7\u0995\u09cd\u099f\u09bf\u09ad \u0985\u09a8\u09ac\u09cb\u09b0\u09cd\u09a1\u09bf\u0982 \u0997\u09be\u0987\u09a1 \u099a\u09be\u09b2\u09c1 \u09b9\u099a\u09cd\u099b\u09c7\u0964 \u098f\u0996\u09a8\u09cb \u0985\u09cd\u09af\u09be\u09aa\u099f\u09bf \u09a8\u09c7\u0987? Google Play \u09a5\u09c7\u0995\u09c7 \u09a1\u09be\u0989\u09a8\u09b2\u09cb\u09a1 \u0995\u09b0\u09c1\u09a8\u0964","open":"SuperCode IDE-\u09a4\u09c7 \u0996\u09c1\u09b2\u09c1\u09a8","play":"Google Play-\u09a4\u09c7 \u09aa\u09be\u09a8","home":"\u0985\u09ab\u09bf\u09b6\u09bf\u09df\u09be\u09b2 \u0993\u09af\u09bc\u09c7\u09ac\u09b8\u09be\u0987\u099f"}};
+      function norm(raw) {
+        if (!raw) return '';
+        var l = String(raw).toLowerCase().trim().replace(/_/g, '-');
+        if (T[l]) return l;
+        if (l.indexOf('zh-tw') === 0 || l.indexOf('zh-hk') === 0 || l.indexOf('zh-mo') === 0 || l.indexOf('zh-hant') === 0) return 'zh-tw';
+        if (l.indexOf('zh') === 0) return 'zh';
+        if (l.indexOf('iw') === 0 || l.indexOf('he') === 0) return 'he';
+        if (l.indexOf('no') === 0 || l.indexOf('nb') === 0 || l.indexOf('nn') === 0) return 'nb';
+        if (l.indexOf('fil') === 0 || l.indexOf('tl') === 0) return 'tl';
+        if (l.indexOf('in') === 0 || l.indexOf('id') === 0) return 'id';
+        var p = l.split('-')[0];
+        return T[p] ? p : '';
       }
+      var params = new URLSearchParams(window.location.search);
+      var lang = norm(params.get('lang'));
+      if (!lang) { try { lang = norm(localStorage.getItem('supercode_user_lang_v4')); } catch (e) {} }
+      if (!lang && navigator) {
+        var ls = navigator.languages || [navigator.language || 'en'];
+        for (var i = 0; i < ls.length; i++) { lang = norm(ls[i]); if (lang) break; }
+      }
+      lang = lang || 'en';
+      var d = T[lang] || T.en;
+      document.documentElement.lang = d.htmlLang;
+      document.documentElement.dir = d.dir;
+      document.title = d.title;
+      document.getElementById('lp-title').textContent = d.h1;
+      document.getElementById('lp-desc').textContent = d.desc;
+      document.getElementById('lp-open-text').textContent = d.open;
+      document.getElementById('lp-play-text').textContent = d.play;
+      var homeLink = document.getElementById('lp-home-link');
+      homeLink.setAttribute('href', lang === 'en' ? '../' : ('../' + lang + '/'));
+      homeLink.setAttribute('aria-label', d.home);
+      homeLink.setAttribute('title', d.home);
+      var fallback = 'https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=' + d.playHl + '&referrer=utm_source%3Dofficial_web%26utm_medium%3Dtutorial_launchpad';
+      var intentUrl = 'intent://supercode-ide.github.io/tutorial?ref=launchpad#Intent;scheme=https;package=com.phoenixglobal.supercodeeditor;S.browser_fallback_url=' + encodeURIComponent(fallback) + ';end';
+      document.getElementById('btnPlayStore').setAttribute('href', fallback);
       var openBtn = document.getElementById('btnOpenApp');
       if (/Android/i.test(navigator.userAgent || '')) {
         openBtn.setAttribute('href', intentUrl);

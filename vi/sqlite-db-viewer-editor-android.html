@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090A0F">
+  <meta name="color-scheme" content="only dark">
+  <meta name="supported-color-schemes" content="dark">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <title>Mở &amp; Truy vấn tệp .db, .sqlite &amp; .sqlite3 ngoại tuyến trên Android | SuperCode SQLite 3.54.1</title>
+  <meta name="description" content="Mở, kiểm tra và chỉnh sửa tệp .db, .sqlite, .sqlite3, .db3 và .s3db ngoại tuyến 100% trên Android với SQLite 3.54.1. Tự động nhập CSV/TSV/JSON tối đa 8 MB và xuất theo 9 chế độ (Box, Markdown, JSON, CSV).">
+  <meta name="keywords" content="sqlite editor android, open db file on android, sqlite viewer and query runner offline, import csv json to sqlite android, sqlite3 file opener android, export sqlite to csv markdown android">
+  <meta name="author" content="Phoenix Global Studios">
+  <meta name="google-play-app" content="app-id=com.phoenixglobal.supercodeeditor">
+
+  <link id="canonical-link" rel="canonical" href="https://supercode-ide.github.io/vi/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="x-default" href="https://supercode-ide.github.io/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="en" href="https://supercode-ide.github.io/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://supercode-ide.github.io/zh/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://supercode-ide.github.io/zh-tw/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="es" href="https://supercode-ide.github.io/es/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://supercode-ide.github.io/pt/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="ja" href="https://supercode-ide.github.io/ja/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="ko" href="https://supercode-ide.github.io/ko/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="de" href="https://supercode-ide.github.io/de/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="fr" href="https://supercode-ide.github.io/fr/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="ru" href="https://supercode-ide.github.io/ru/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="hi" href="https://supercode-ide.github.io/hi/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="id" href="https://supercode-ide.github.io/id/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="it" href="https://supercode-ide.github.io/it/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="vi" href="https://supercode-ide.github.io/vi/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="th" href="https://supercode-ide.github.io/th/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="tr" href="https://supercode-ide.github.io/tr/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="ar" href="https://supercode-ide.github.io/ar/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="pl" href="https://supercode-ide.github.io/pl/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="nl" href="https://supercode-ide.github.io/nl/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="sv" href="https://supercode-ide.github.io/sv/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="nb" href="https://supercode-ide.github.io/nb/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="da" href="https://supercode-ide.github.io/da/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="fi" href="https://supercode-ide.github.io/fi/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="cs" href="https://supercode-ide.github.io/cs/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="uk" href="https://supercode-ide.github.io/uk/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="ro" href="https://supercode-ide.github.io/ro/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="hu" href="https://supercode-ide.github.io/hu/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="el" href="https://supercode-ide.github.io/el/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="he" href="https://supercode-ide.github.io/he/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="ms" href="https://supercode-ide.github.io/ms/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="fil" href="https://supercode-ide.github.io/tl/sqlite-db-viewer-editor-android.html">
+  <link rel="alternate" hreflang="bn" href="https://supercode-ide.github.io/bn/sqlite-db-viewer-editor-android.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
+  <meta property="og:title" content="Mở &amp; Truy vấn tệp .db, .sqlite &amp; .sqlite3 ngoại tuyến trên Android | SuperCode SQLite 3.54.1">
+  <meta property="og:description" content="Mở, kiểm tra và chỉnh sửa tệp .db, .sqlite, .sqlite3, .db3 và .s3db ngoại tuyến 100% trên Android với SQLite 3.54.1. Tự động nhập CSV/TSV/JSON tối đa 8 MB và xuất theo 9 chế độ (Box, Markdown, JSON, CSV).">
+  <meta property="og:url" content="https://supercode-ide.github.io/vi/sqlite-db-viewer-editor-android.html">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-hero-vi.png">
+  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-hero-vi.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SQLite 3.54 Studio ngoại tuyến &amp; Trình kiểm tra .db">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-hero-vi.png">
+  <meta name="twitter:title" content="Mở &amp; Truy vấn tệp .db, .sqlite &amp; .sqlite3 ngoại tuyến trên Android | SuperCode SQLite 3.54.1">
+  <meta name="twitter:description" content="Mở, kiểm tra và chỉnh sửa tệp .db, .sqlite, .sqlite3, .db3 và .s3db ngoại tuyến 100% trên Android với SQLite 3.54.1. Tự động nhập CSV/TSV/JSON tối đa 8 MB và xuất theo 9 chế độ (Box, Markdown, JSON, CSV).">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <script>if(/SamsungBrowser/i.test(navigator.userAgent)){document.documentElement.classList.add('is-samsung');}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "SoftwareApplication",
+        "MobileApplication",
+        "WebApplication"
+      ],
+      "@id": "https://supercode-ide.github.io/#supercode-app",
+      "name": "Code Editor: SuperCode IDE",
+      "alternateName": [
+        "Open .db File on Android Offline",
+        "SQLite Viewer & Query Editor Android",
+        "CSV JSON to SQLite Converter Android"
+      ],
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Offline SQLite 3.54.1 Database Viewer, .db Editor & CSV/JSON Importer for Android",
+      "inLanguage": "vi",
+      "fileSize": "40.2MB",
+      "softwareVersion": "1.55.05",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=vi&listing=sql-sqlite-studio",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=vi&listing=sql-sqlite-studio",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=vi"
+      ],
+      "potentialAction": [
+        {
+          "@type": "InstallAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=vi&listing=sql-sqlite-studio",
+            "actionPlatform": [
+              "http://schema.org/AndroidPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          }
+        },
+        {
+          "@type": "ViewAction",
+          "name": "Hướng dẫn",
+          "target": [
+            "https://supercode-ide.github.io/tutorial/?lang=vi",
+            "android-app://com.phoenixglobal.supercodeeditor/https/supercode-ide.github.io/tutorial"
+          ]
+        }
+      ],
+      "identifier": "com.phoenixglobal.supercodeeditor",
+      "url": "https://supercode-ide.github.io/vi/sqlite-db-viewer-editor-android.html",
+      "screenshot": [
+        "https://supercode-ide.github.io/assets/gallery/vi/05_sql_sqlite_studio.webp",
+        "https://supercode-ide.github.io/assets/gallery/vi/01_python_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/vi/02_cpp20_compiler.webp",
+        "https://supercode-ide.github.io/assets/gallery/vi/03_web_php_devtools.webp",
+        "https://supercode-ide.github.io/assets/gallery/vi/04_file_manager_tree.webp",
+        "https://supercode-ide.github.io/assets/gallery/vi/06_java17_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/vi/07_visual_git_timemachine.webp",
+        "https://supercode-ide.github.io/assets/gallery/vi/08_symbol_keyboard_themes.webp"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Phoenix Global Studios",
+        "url": "https://supercode-ide.github.io/vi/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "66"
+      },
+      "featureList": [
+        "1-tap offline opening of binary .db, .sqlite, .sqlite3, .db3, and .s3db files powered by embedded SQLite 3.54.1",
+        "Instant automatic database audit displaying .dbinfo metadata, .tables inventory, and complete CREATE TABLE / INDEX .schema DDL",
+        "9 switchable .mode output formats: box (Unicode grid), table, markdown, json, csv, tabs, insert, line, and list",
+        "Zero-DDL .import --csv, --tsv, and --json dataset loader that auto-creates relational tables up to 8 MB offline",
+        "Automatic workspace .db mounting so standalone .sql scripts query and persist directly to your project database",
+        "1-step .once file export writing formatted Markdown tables, JSON payloads, CSV sheets, or SQL INSERT dumps to disk"
+      ],
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-vi.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://supercode-ide.github.io/vi/sqlite-db-viewer-editor-android.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SuperCode IDE",
+          "item": "https://supercode-ide.github.io/vi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Trung tâm SQL & SQLite Studio",
+          "item": "https://supercode-ide.github.io/vi/sql-ide.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Trình xem .db / .sqlite & 9 Chế độ",
+          "item": "https://supercode-ide.github.io/vi/sqlite-db-viewer-editor-android.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Inspect a `.db` File or Query a CSV/JSON Dataset on Android",
+      "description": "Open existing binary databases or build new ones from raw files in four quick steps.",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Open Any .db, .sqlite, or .sqlite3 File in One Tap",
+          "text": "Select a database file in your workspace to view its .dbinfo summary, .tables list, and CREATE TABLE / INDEX schema instantly.",
+          "url": "https://supercode-ide.github.io/sqlite-db-viewer-editor-android.html#step1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Or Import Raw CSV, TSV & JSON Files Into Tables",
+          "text": "Run .import --csv data.csv my_table in a .sql script to auto-create and populate relational columns from flat files up to 8 MB.",
+          "url": "https://supercode-ide.github.io/sqlite-db-viewer-editor-android.html#step2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Run SQL Queries & Switch Among 9 Output Formats",
+          "text": "Write SELECT, JOIN, UPDATE, or ALTER statements with AST SQL completion and preview clean Unicode box or Markdown grids.",
+          "url": "https://supercode-ide.github.io/sqlite-db-viewer-editor-android.html#step3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Export Clean Results Back to Your Workspace",
+          "text": "Use .once with csv, json, markdown, or insert mode to save clean analytical outputs directly to your project folder.",
+          "url": "https://supercode-ide.github.io/sqlite-db-viewer-editor-android.html#step4"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://supercode-ide.github.io/sqlite-db-viewer-editor-android.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "SuperCode có thể mở trực tiếp những phần mở rộng tệp cơ sở dữ liệu SQLite nào?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SuperCode nhận diện tệp `.db`, `.sqlite`, `.sqlite3`, `.db3` và `.s3db` chỉ với một chạm, tự động chạy kiểm tra ngoại tuyến `.dbinfo`, `.tables` và `.schema`."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Tại sao SQLite 3.54.1 nhúng lại quan trọng hơn so với các trình xem SQLite Android thông thường?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Phần lớn trình xem DB Android phụ thuộc vào bản SQLite hệ thống cũ của điện thoại, vốn thiếu bảng `STRICT`, `RETURNING`, `JSONB`, mệnh đề Window frame hiện đại và trình tối ưu truy vấn mới. SuperCode cung cấp SQLite 3.54.1 đồng nhất trên mọi thiết bị Android 8.0+."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Tôi có thể nhập tệp `.csv` hoặc `.json` mà không cần viết `CREATE TABLE` trước không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Có! Chạy `.import --csv filename.csv tablename` (hoặc `--tsv` / `--json`) tối đa 8 MB — nếu `tablename` chưa tồn tại, SuperCode tự động tạo schema bảng từ tiêu đề CSV hoặc các khóa đối tượng JSON của bạn."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Làm thế nào để xuất kết quả truy vấn SQL ra bảng Markdown hoặc tệp CSV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Thêm `.mode markdown` (hoặc `.mode csv` / `.mode json` / `.mode insert`) theo sau bởi `.once output.md` ngay phía trên lệnh `SELECT` của bạn và chạm Chạy — tệp sẽ xuất hiện ngay lập tức trong trình duyệt dự án."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-page="sql_db_viewer">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="sc-logo" viewBox="20 14 68 72">
+    <path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/>
+    <path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/>
+    <path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/>
+    <path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+  </symbol>
+  <symbol id="gp-prism" viewBox="0 0 24 24">
+    <path fill="#4285F4" d="M3.6,2.4C3.3,2.7,3.1,3.2,3.1,3.8v16.4c0,0.6,0.2,1.1,0.5,1.4l0.1,0.1L12.9,12v-0.2L3.7,2.3L3.6,2.4z"/>
+    <path fill="#34A853" d="M16,15.1l-3.1-3.1v-0.2L16,8.7l0.1,0.1l3.6,2.1c1,0.6,1,1.5,0,2.1l-3.6,2.1L16,15.1z"/>
+    <path fill="#FBBC05" d="M16.1,15.1L12.9,12L3.6,21.3c0.3,0.4,0.9,0.4,1.6,0.1L16.1,15.1z"/>
+    <path fill="#EA4335" d="M16.1,8.9L5.2,2.6C4.5,2.2,3.9,2.3,3.6,2.7L12.9,12L16.1,8.9z"/>
+  </symbol>
+  <symbol id="i-ne" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8 20 7.2v9.6L12 21.2 4 16.8V7.2z"/><path d="M4 7.2l8 4.4 8-4.4M12 11.6v9.6"/></g></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2.8v3.2M15 2.8v3.2M9 18v3.2M15 18v3.2M2.8 9H6M2.8 15H6M18 9h3.2M18 15h3.2"/></g></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 2.8 7.8 12 12.6l9.2-4.8z"/><path d="m2.8 12 9.2 4.8 9.2-4.8"/><path d="m2.8 16.2 9.2 4.8 9.2-4.8"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="M2.8 8.5h18.4"/><path d="m9.5 12.5-2.2 2.2 2.2 2.2M14.5 12.5l2.2 2.2-2.2 2.2"/></g></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5.6" rx="7.6" ry="2.8"/><path d="M4.4 5.6v12.8c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8V5.6"/><path d="M4.4 12c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8"/></g></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="m7.2 9.5 3 2.5-3 2.5M12.8 15h4"/></g></symbol>
+  <symbol id="i-git" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.3"/><circle cx="6" cy="18" r="2.3"/><circle cx="18" cy="12" r="2.3"/><path d="M6 8.3v7.4M8.3 6h4.2a3.5 3.5 0 0 1 3.5 3.5v.2"/></g></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5h11a4 4 0 0 0 .7-7.94A5.5 5.5 0 0 0 7.4 9.2 3.8 3.8 0 0 0 6.5 18.5z"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M13 2.8 4.8 13.2h6.3L10.2 21.2 19.2 10.6h-6.4z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 2.8 4.8 5.8v5.6c0 5 3.1 8.5 7.2 9.8 4.1-1.3 7.2-4.8 7.2-9.8V5.8z"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="index.html" class="brand" aria-label="SuperCode IDE Home">
+      <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+      <span>SuperCode</span>
+      <span class="brand__tag">IDE</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary Workspaces">
+      <a href="code-editor.html" data-i18n="nav_code_editor">Trình sửa mã</a>
+      <a href="large-file-editor.html" data-i18n="nav_large_file">Tệp lớn GB</a>
+      <a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a>
+      <a href="c-compiler.html" data-i18n="nav_c_compiler">Trình biên dịch C17</a>
+      <a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a>
+      <a href="java-ide.html" data-i18n="nav_java_ide">Java 17 IDE</a>
+      <a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a>
+      <a href="web-ide.html" data-i18n="nav_web_ide">Web & PHP</a>
+      <a href="sql-ide.html" class="is-current" data-i18n="nav_sql_ide">SQL Studio</a>
+      <a href="git-client.html" data-i18n="nav_git_client">Git trực quan</a>
+      <a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP & FTPS</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button id="langModalBtn" class="btn-lang-trigger" type="button" onclick="openLangModal()" aria-label="Select Language">
+        <svg class="lang-globe-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span id="langTriggerText">VI</span>
+        <span class="lang-chevron" aria-hidden="true">&#9662;</span>
+      </button>
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=vi&amp;listing=sql-sqlite-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dvi%26utm_campaign%3Dsql-sqlite-studio%26utm_content%3Dsqlite-db-viewer-editor-android" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+        <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+        <span data-i18n="nav_cta">Google Play</span>
+      </a>
+      <a href="index.html" class="btn-home-icon" aria-label="Home" title="Home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5"/>
+          <path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
+        </svg>
+      </a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteDrawer" aria-label="All Pages Directory">
+        <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 8.5h16M4 15.5h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-drawer" id="siteDrawer" hidden>
+  <nav class="container menu-drawer__inner" aria-label="All SuperCode Pages">
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_core">Trình sửa mã & Tệp lớn</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="index.html"><span data-i18n="nav_home">Tổng quan</span><span class="mono">01</span></a>
+        <a class="menu-drawer__link" href="code-editor.html"><span data-i18n="nav_code_editor">Trình sửa mã</span><span class="mono">02</span></a>
+        <a class="menu-drawer__link" href="large-file-editor.html"><span data-i18n="nav_large_file">Tệp lớn GB</span><span class="mono">03</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_lang">Trình biên dịch ngoại tuyến & Ngôn ngữ</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="python-ide.html"><span data-i18n="nav_python_ide">Python IDE</span><span class="mono">04</span></a>
+        <a class="menu-drawer__link" href="c-compiler.html"><span data-i18n="nav_c_compiler">Trình biên dịch C17</span><span class="mono">05</span></a>
+        <a class="menu-drawer__link" href="cpp-ide.html"><span data-i18n="nav_cpp_ide">C++20 IDE</span><span class="mono">06</span></a>
+        <a class="menu-drawer__link" href="java-ide.html"><span data-i18n="nav_java_ide">Java 17 IDE</span><span class="mono">07</span></a>
+        <a class="menu-drawer__link" href="javascript-ide.html"><span data-i18n="nav_js_ide">JavaScript</span><span class="mono">08</span></a>
+        <a class="menu-drawer__link" href="lua-ide.html"><span data-i18n="nav_lua_ide">Lua 5.4</span><span class="mono">09</span></a>
+        <a class="menu-drawer__link" href="shell-ide.html"><span data-i18n="nav_shell_ide">Shell & Kotlin</span><span class="mono">10</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_devops">Web, SQL & DevOps từ xa</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="web-ide.html"><span data-i18n="nav_web_ide">Web & PHP</span><span class="mono">11</span></a>
+        <a class="menu-drawer__link is-current" href="sql-ide.html"><span data-i18n="nav_sql_ide">SQL Studio</span><span class="mono">12</span></a>
+        <a class="menu-drawer__link" href="git-client.html"><span data-i18n="nav_git_client">Git trực quan</span><span class="mono">13</span></a>
+        <a class="menu-drawer__link" href="sftp-client.html"><span data-i18n="nav_sftp_client">SFTP & FTPS</span><span class="mono">14</span></a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<main id="top">
+  <!-- ==================== 01 · EDITORIAL HERO & INTERACTIVE WORKBENCH ==================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <div class="py-hub-crumb"><a href="sql-ide.html"><span class="crumb-arrow" aria-hidden="true">&larr;</span> Trung tâm SQL &amp; SQLite Studio</a><span class="sep">/</span><span>Trình xem .db / .sqlite &amp; 9 Chế độ</span></div>
+          <div class="trust-pill">
+            <span class="trust-pill__score"><span data-play-rating>4.9</span> &#9733;</span>
+            <span data-i18n="hero_tag">SQLITE 3.54.1 NGOẠI TUYẾN &#183; .DB / .SQLITE / .DB3 &#183; 9 CHẾ ĐỘ XUẤT &#183; NHẬP CSV/JSON</span>
+          </div>
+
+          <h1 class="hero-h1" data-i18n="hero_h1">Mở, kiểm tra &amp; truy vấn tệp <span class="text-gradient">.db, .sqlite &amp; .sqlite3</span> ngoại tuyến trên Android.</h1>
+
+          <p class="hero-lead" data-i18n="hero_desc">Cần kiểm tra tệp nhị phân <code>.db</code> của ứng dụng, chuyển bản xuất <code>.csv</code> hoặc <code>.json</code> thô thành bảng quan hệ, hay chạy lệnh <code>UPDATE</code> thực thụ mà không tải dữ liệu riêng tư lên đám mây? SuperCode tích hợp sẵn <strong>SQLite 3.54.1 ngoại tuyến</strong> với trình kiểm tra schema 1 chạm và <strong>9 chế độ xuất định dạng</strong>.</p>
+
+          <div class="hero__cta" id="heroCta">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=vi&amp;listing=sql-sqlite-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dvi%26utm_campaign%3Dsql-sqlite-studio%26utm_content%3Dsqlite-db-viewer-editor-android" target="_blank" rel="noopener" class="btn btn--gold">
+              <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+              <span data-i18n="cta_btn">Tải trên Google Play</span>
+            </a>
+            <a href="https://supercode-ide.github.io/tutorial/?lang=vi&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+              <span data-i18n="cta_tutorial">Hướng dẫn</span>
+              <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <dl class="specs" aria-label="Key Specifications">
+          <div class="spec"><dt>3.54.1</dt><dd data-i18n="dbv_s1">SQLite ngoại tuyến</dd></div>
+          <div class="spec"><dt>9<small>Modes</small></dt><dd data-i18n="dbv_s2">Box/MD/JSON/CSV</dd></div>
+          <div class="spec"><dt>8 MB</dt><dd data-i18n="dbv_s3">Nhập CSV/TSV/JSON</dd></div>
+          <div class="spec"><dt>5<small>Exts</small></dt><dd data-i18n="dbv_s4">.db/.sqlite/.db3+</dd></div>
+        </dl>
+      </div>
+
+      <div class="wb-caption">
+        <div class="sec-index" style="margin-bottom:0">
+          <span class="num">01</span>
+          <span class="rule"></span>
+          <span data-i18n="wb_eyebrow">TRÌNH KIỂM TRA .DB NHỊ PHÂN, TỰ ĐỘNG NHẬP CSV/JSON &amp; WORKBENCH 9 CHẾ ĐỘ XUẤT</span>
+        </div>
+        <span class="wb-caption__hint mono">.db / .sqlite3 / .db3 / .s3db &#183; .import --csv/--json &#183; .mode box/markdown/json</span>
+      </div>
+
+      <div class="ide-workbench">
+        <div class="wb-titlebar">
+          <div class="wb-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="wb-title" id="ide-compiler-label">sqlite-db-viewer/inspect_db.sql &#8212; 1-Tap .db / .sqlite3 Schema Inspector</div>
+          <button type="button" class="wb-run" id="btn-run-sandbox">
+            <span class="wb-run__tri" aria-hidden="true">&#9654;</span>
+            <span data-i18n="btn_run">Chạy thử</span>
+          </button>
+        </div>
+
+        <div class="wb-tabs" role="tablist" aria-label="Interactive Workspace Tabs">
+          <button type="button" class="ide-tab active" data-tab="open_db" role="tab" aria-selected="true"><i></i>inspect_db.sql</button>
+          <button type="button" class="ide-tab" data-tab="csv_json_imp" role="tab" aria-selected="false"><i></i>import_datasets.sql</button>
+          <button type="button" class="ide-tab" data-tab="nine_modes" role="tab" aria-selected="false"><i></i>export_report.sql</button>
+        </div>
+
+        <div class="wb-body">
+          <aside class="wb-explorer" aria-label="Project Explorer">
+            <div class="wb-explorer__head">Explorer</div>
+            <div class="wb-folder">&#9662; sqlite-db-viewer</div>
+            <button type="button" class="wb-file active" data-tab="open_db"><b>.DB</b><span>inspect_db.sql</span></button>
+            <button type="button" class="wb-file" data-tab="csv_json_imp"><b>IMP</b><span>import_datasets.sql</span></button>
+            <button type="button" class="wb-file" data-tab="nine_modes"><b>MODE</b><span>export_report.sql</span></button>
+          </aside>
+
+          <div class="wb-main">
+            <div class="ide-editor-body" id="ide-code-box" role="region" aria-label="Interactive Code Preview"></div>
+            <div class="ide-terminal" id="ide-terminal-drawer" aria-live="polite">
+              <div class="term-header">
+                <span data-i18n="term_title">Bảng điều khiển tương tác</span>
+                <div class="term-header-right">
+                  <span class="term-exec-badge" id="ide-exec-status">Ready</span>
+                  <button type="button" class="btn-term-close" id="btn-close-term" aria-label="Close terminal">&#10005;</button>
+                </div>
+              </div>
+              <div class="term-stream" id="ide-term-output"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wb-statusbar">
+          <span class="wb-statusbar__dot"><i></i><span id="wbStatusLang">SQLite 3.54.1 &#183; .dbinfo / .schema</span></span>
+          <div class="wb-statusbar__right">
+            <span>UTF-8</span>
+            <span>LF</span>
+            <span>Ln 5, Col 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- SC_REAL_GALLERY_START -->
+  <section class="section sc-real-gallery" id="screenshots" aria-label="Xem trước ứng dụng và ảnh chụp màn hình">
+    <div class="container">
+      <div class="sc-gp-head">
+        <div class="sc-gp-head-left">
+          <div class="sc-gp-eyebrow" data-i18n="gal_eyebrow">ẢNH CHỤP ANDROID THỰC TẾ</div>
+          <h2 class="sc-gp-title" data-i18n="gal_title">Xem trước & Ảnh màn hình</h2>
+          <p class="sc-gp-short" data-i18n="gal_short_desc">Trình soạn thảo code & IDE ngoại tuyến: Python, C/C++, Java, HTML, SQL, PHP, Git</p>
+        </div>
+        <a class="sc-gp-store-bar" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=vi&amp;listing=sql-sqlite-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dvi%26utm_campaign%3Dsql-sqlite-studio%26utm_content%3Dsqlite-db-viewer-editor-android" target="_blank" rel="noopener" aria-label="Code Editor: SuperCode IDE — Phoenix Global Studios">
+          <svg class="sc-gp-app-icon" width="38" height="38" viewBox="16 12 76 76" aria-hidden="true"><rect x="16" y="12" width="76" height="76" rx="18" fill="#070A10" stroke="#3B82F6" stroke-width="2"/><path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/><path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/><path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/><path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/></svg>
+          <span class="sc-gp-app-meta">
+            <span class="sc-gp-app-name">Code Editor: SuperCode IDE</span>
+            <span class="sc-gp-app-dev">Phoenix Global Studios</span>
+          </span>
+          <span class="sc-gp-store-arrow" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      </div>
+      <div class="sc-gp-stage">
+        <button type="button" class="sc-gp-nav sc-gp-nav--prev is-hidden" id="scGpPrev" aria-label="Ảnh trước">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="sc-gp-rail" id="scGpRail">
+          <button type="button" class="sc-gp-item sc-gp-item--feature" aria-label="Trình sửa mã: SuperCode IDE — IDE di động ngoại tuyến">
+            <img src="../assets/gallery/vi/00_feature_graphic.webp" data-sc-file="00_feature_graphic.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_0" data-cap="Trình sửa mã: SuperCode IDE — IDE di động ngoại tuyến" alt="Trình sửa mã: SuperCode IDE — IDE di động ngoại tuyến" width="1024" height="500" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="SQLite 3.54 Studio ngoại tuyến &amp; Trình kiểm tra .db">
+            <img src="../assets/gallery/vi/05_sql_sqlite_studio.webp" data-sc-file="05_sql_sqlite_studio.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_5" data-cap="SQLite 3.54 Studio ngoại tuyến &amp; Trình kiểm tra .db" alt="SQLite 3.54 Studio ngoại tuyến &amp; Trình kiểm tra .db" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Python 3.11 / 3.12 IDE ngoại tuyến &amp; Bảng điều khiển chia đôi">
+            <img src="../assets/gallery/vi/01_python_ide.webp" data-sc-file="01_python_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_1" data-cap="Python 3.11 / 3.12 IDE ngoại tuyến &amp; Bảng điều khiển chia đôi" alt="Python 3.11 / 3.12 IDE ngoại tuyến &amp; Bảng điều khiển chia đôi" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Trình biên dịch đa tệp C17 &amp; C++20 cục bộ">
+            <img src="../assets/gallery/vi/02_cpp20_compiler.webp" data-sc-file="02_cpp20_compiler.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_2" data-cap="Trình biên dịch đa tệp C17 &amp; C++20 cục bộ" alt="Trình biên dịch đa tệp C17 &amp; C++20 cục bộ" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Máy chủ Web cục bộ, PHP ngoại tuyến &amp; DevTools">
+            <img src="../assets/gallery/vi/03_web_php_devtools.webp" data-sc-file="03_web_php_devtools.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_3" data-cap="Máy chủ Web cục bộ, PHP ngoại tuyến &amp; DevTools" alt="Máy chủ Web cục bộ, PHP ngoại tuyến &amp; DevTools" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Cây tệp toàn cục &amp; Trình quản lý tệp cục bộ (SAF)">
+            <img src="../assets/gallery/vi/04_file_manager_tree.webp" data-sc-file="04_file_manager_tree.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_4" data-cap="Cây tệp toàn cục &amp; Trình quản lý tệp cục bộ (SAF)" alt="Cây tệp toàn cục &amp; Trình quản lý tệp cục bộ (SAF)" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Java 17 IDE ngoại tuyến &amp; SQLite JDBC">
+            <img src="../assets/gallery/vi/06_java17_ide.webp" data-sc-file="06_java17_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_6" data-cap="Java 17 IDE ngoại tuyến &amp; SQLite JDBC" alt="Java 17 IDE ngoại tuyến &amp; SQLite JDBC" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Trình khách Git trực quan, Time Machine &amp; SFTP">
+            <img src="../assets/gallery/vi/07_visual_git_timemachine.webp" data-sc-file="07_visual_git_timemachine.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_7" data-cap="Trình khách Git trực quan, Time Machine &amp; SFTP" alt="Trình khách Git trực quan, Time Machine &amp; SFTP" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Thanh ký tự 21 phím &amp; 8 Giao diện IDE tinh chỉnh">
+            <img src="../assets/gallery/vi/08_symbol_keyboard_themes.webp" data-sc-file="08_symbol_keyboard_themes.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_8" data-cap="Thanh ký tự 21 phím &amp; 8 Giao diện IDE tinh chỉnh" alt="Thanh ký tự 21 phím &amp; 8 Giao diện IDE tinh chỉnh" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+        </div>
+        <button type="button" class="sc-gp-nav sc-gp-nav--next" id="scGpNext" aria-label="Ảnh tiếp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  <div class="sc-lb-modal" id="scLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Xem trước ứng dụng và ảnh chụp màn hình">
+    <div class="sc-lb-topbar">
+      <button type="button" class="sc-lb-back" id="scLbBack">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-i18n="gal_back">Quay lại</span>
+      </button>
+      <div class="sc-lb-meta">
+        <span class="sc-lb-counter" id="scLbCounter">1 / 9</span>
+        <span class="sc-lb-title" id="scLbTitle"></span>
+      </div>
+      <button type="button" class="sc-lb-close" id="scLbClose" aria-label="Đóng xem trước">&times;</button>
+    </div>
+    <div class="sc-lb-stage">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--prev" id="scLbPrev" aria-label="Ảnh trước">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <img class="sc-lb-img" id="scLbImg" src="" alt="SuperCode IDE Preview">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--next" id="scLbNext" aria-label="Ảnh tiếp">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="sc-lb-dots" id="scLbDots"></div>
+  </div>
+  <script defer src="../assets/gallery.js"></script>
+<!-- SC_REAL_GALLERY_END -->
+
+
+
+
+
+  <!-- ==================== 02 · CORE CAPABILITIES ==================== -->
+  <section class="section section--alt" id="capabilities">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">02</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_cap_eyebrow">NĂNG LỰC CỐT LÕI</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="sec_cap_title">Hơn cả bảng dữ liệu chỉ đọc &#8212; Trạm làm việc SQLite ngoại tuyến thực thụ</h2>
+        <p class="sec-lead" data-i18n="sec_cap_lead">Kiểm tra metadata nội bộ, chỉnh sửa bằng truy vấn tham số hóa, chuyển tệp phẳng thành bảng SQL và xuất báo cáo gọn gàng trong vài giây.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="feature-grid feature-grid--6">
+          <article class="feature-card" id="cap1">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-db"/></svg></span>
+              <span class="f-idx">02.1</span>
+            </div>
+            <h3 class="f-title" data-i18n="f1_title">Trình kiểm tra 1 chạm cho .db, .sqlite, .sqlite3, .db3 &amp; .s3db</h3>
+            <p class="f-desc" data-i18n="f1_desc">Chạm vào bất kỳ cơ sở dữ liệu SQLite nhị phân nào trong Trình duyệt tệp của SuperCode hoặc mở từ bộ nhớ Android. SuperCode xác minh header nhị phân và tự động in thông số trang .dbinfo, số lượng .tables cùng toàn bộ .schema DDL.</p>
+            <div class="f-code" data-i18n="f1_badge">.db &#183; .sqlite &#183; .sqlite3 &#183; .db3 &#183; .s3db</div>
+          </article>
+          <article class="feature-card" id="cap2">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+              <span class="f-idx">02.2</span>
+            </div>
+            <h3 class="f-title" data-i18n="f2_title">9 định dạng .mode chuyển đổi linh hoạt (Box, Markdown, JSON, CSV+)</h3>
+            <p class="f-desc" data-i18n="f2_desc">Định dạng kết quả cho mọi nhu cầu: lưới box Unicode sắc nét và bảng ASCII dễ đọc trên di động, bảng markdown cho tài liệu GitHub, mảng json cho API, csv/tabs cho trang tính, bản dump insert SQL hoặc thẻ line dọc.</p>
+            <div class="f-code" data-i18n="f2_badge">box &#183; table &#183; markdown &#183; json &#183; csv &#183; tabs &#183; insert &#183; line &#183; list</div>
+          </article>
+          <article class="feature-card" id="cap3">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
+              <span class="f-idx">02.3</span>
+            </div>
+            <h3 class="f-title" data-i18n="f3_title">Lệnh .import --csv, --tsv &amp; --json không cần code mẫu</h3>
+            <p class="f-desc" data-i18n="f3_desc">Bỏ qua việc gõ CREATE TABLE rườm rà. Chạy .import --csv sales.csv sales hoặc .import --json users.json users (tối đa 8 MB) và SuperCode tự động suy luận tên cột để bạn JOIN và tổng hợp dữ liệu ngay lập tức.</p>
+            <div class="f-code" data-i18n="f3_badge">Tự tạo bảng &#183; CSV / TSV / JSON tối đa 8 MB</div>
+          </article>
+          <article class="feature-card" id="cap4">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-cube"/></svg></span>
+              <span class="f-idx">02.4</span>
+            </div>
+            <h3 class="f-title" data-i18n="f4_title">Tự động gắn cơ sở dữ liệu Workspace cho script .sql</h3>
+            <p class="f-desc" data-i18n="f4_desc">Đặt queries.sql cạnh tệp app.db trong dự án của bạn. SuperCode tự động nhận diện và gắn kết cơ sở dữ liệu workspace (hoặc theo lệnh .open tường minh) để các thay đổi schema và chỉnh sửa được lưu trực tiếp trên ổ đĩa.</p>
+            <div class="f-code" data-i18n="f4_badge">Lưu chỉnh sửa trên ổ đĩa &#183; Hỗ trợ đa DB với .open</div>
+          </article>
+          <article class="feature-card" id="cap5">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-term"/></svg></span>
+              <span class="f-idx">02.5</span>
+            </div>
+            <h3 class="f-title" data-i18n="f5_title">Xuất tệp trực tiếp bằng .once vào thư mục dự án</h3>
+            <p class="f-desc" data-i18n="f5_desc">Kết hợp mọi chế độ xuất với .once &lt;filename&gt; &#8212; như .mode markdown + .once report.md hoặc .mode csv + .once clean_leads.csv &#8212; để ghi kết quả truy vấn thẳng vào tệp workspace sẵn sàng chia sẻ.</p>
+            <div class="f-code" data-i18n="f5_badge">Xuất với .once &#183; Tạo báo cáo &amp; bản dump tức thì</div>
+          </article>
+          <article class="feature-card" id="cap6">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <span class="f-idx">02.6</span>
+            </div>
+            <h3 class="f-title" data-i18n="f6_title">Bảo mật 100% trên thiết bị với SQLite 3.54.1</h3>
+            <p class="f-desc" data-i18n="f6_desc">Hồ sơ khách hàng, cơ sở dữ liệu ứng dụng di động ngoại tuyến và tệp CSV tài chính không bao giờ chạm tới máy chủ web bên ngoài. Mọi thao tác kiểm tra, tạo index, VACUUM và truy vấn đều chạy cục bộ trong SQLite 3.54.1 nhúng.</p>
+            <div class="f-code" data-i18n="f6_badge">Không tải lên Cloud &#183; Engine SQLite 3.54.1 ngoại tuyến</div>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">Tối ưu cho Điện thoại, Màn hình gập & Máy tính bảng · Nhẹ chỉ 40.2 MB</span>
+        <a class="link-arrow" href="sql-ide.html">
+          <span>SQL &amp; SQLite Studio Hub</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 03 · STEP-BY-STEP WORKFLOW GUIDE ==================== -->
+  <section class="section" id="workflow">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">03</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_wf_eyebrow">QUY TRÌNH TỪNG BƯỚC</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="workflow_title">Cách kiểm tra tệp `.db` hoặc truy vấn tập dữ liệu CSV/JSON trên Android</h2>
+        <p class="sec-lead" data-i18n="workflow_lead">Mở cơ sở dữ liệu nhị phân có sẵn hoặc tạo mới từ tệp thô chỉ trong 4 bước nhanh chóng.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="workflow-grid">
+          <article class="wf-step" id="step1">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 01</span>
+              <span class="wf-step__cmd">Explorer -&gt; Tap .db</span>
+            </div>
+            <h3 data-i18n="wf1_title">Mở mọi tệp .db, .sqlite hoặc .sqlite3 chỉ với 1 chạm</h3>
+            <p data-i18n="wf1_desc">Chọn tệp cơ sở dữ liệu trong workspace để xem ngay tóm tắt .dbinfo, danh sách .tables và schema CREATE TABLE / INDEX.</p>
+          </article>
+          <article class="wf-step" id="step2">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 02</span>
+              <span class="wf-step__cmd">.import --csv / --json</span>
+            </div>
+            <h3 data-i18n="wf2_title">Hoặc nhập tệp CSV, TSV &amp; JSON thô thành bảng</h3>
+            <p data-i18n="wf2_desc">Chạy .import --csv data.csv my_table trong script .sql để tự động tạo và nạp cột quan hệ từ tệp phẳng tối đa 8 MB.</p>
+          </article>
+          <article class="wf-step" id="step3">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 03</span>
+              <span class="wf-step__cmd">.mode box / markdown</span>
+            </div>
+            <h3 data-i18n="wf3_title">Chạy truy vấn SQL &amp; chuyển đổi giữa 9 định dạng xuất</h3>
+            <p data-i18n="wf3_desc">Viết lệnh SELECT, JOIN, UPDATE hoặc ALTER với gợi ý mã SQL từ AST và xem trước lưới Unicode box hoặc Markdown sắc nét.</p>
+          </article>
+          <article class="wf-step" id="step4">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 04</span>
+              <span class="wf-step__cmd">.once export.csv</span>
+            </div>
+            <h3 data-i18n="wf4_title">Xuất kết quả sạch trở lại Workspace của bạn</h3>
+            <p data-i18n="wf4_desc">Dùng .once với chế độ csv, json, markdown hoặc insert để lưu kết quả phân tích gọn gàng trực tiếp vào thư mục dự án.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="wf_foot_note">Tích hợp SQLite 3.54.1 &#183; Không cần tài khoản &#183; Đầy đủ giao dịch ACID đọc/ghi</span>
+        <a class="link-arrow" href="https://supercode-ide.github.io/tutorial/?lang=vi&amp;ref=official_web" data-supercode-tutorial="true">
+          <span data-i18n="cta_tutorial">Hướng dẫn</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 04 · FEATURED SUMMARY & COMPARISON MATRIX ==================== -->
+  <section class="section section--alt" id="comparison">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">04</span>
+        <span class="rule"></span>
+        <span data-i18n="comp_eyebrow">MA TRẬN TÍNH NĂNG</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="table_h2">SuperCode SQLite 3.54.1 Studio vs. Trình xem `.db` Android cơ bản</h2>
+        <p class="snippet-definition" data-i18n="snippet_p"><strong>Trình xem &amp; chỉnh sửa cơ sở dữ liệu SQLite ngoại tuyến của SuperCode</strong> mở các tệp nhị phân .db, .sqlite, .sqlite3, .db3 và .s3db trên Android chỉ với một chạm bằng SQLite 3.54.1. Kiểm tra schema và metadata ngoại tuyến, tự động nhập tệp CSV, TSV và JSON tối đa 8 MB, đồng thời định dạng kết quả truy vấn qua 9 chế độ xuất linh hoạt.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="table-wrap">
+          <table class="obsidian-benchmark-table">
+            <caption data-i18n="table_caption">MA TRẬN TRÌNH XEM .DB &amp; TRÌNH CHỈNH SỬA TRUY VẤN SQLITE ANDROID</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="th_0">Khả năng SQLite</th>
+                <th scope="col" data-i18n="th_1">SuperCode SQL Studio</th>
+                <th scope="col" data-i18n="th_2">Trình xem DB Android cơ bản</th>
+                <th scope="col" data-i18n="th_3">Ứng dụng bảng tính di động</th>
+                <th scope="col" data-i18n="th_4">Trình xem SQLite trực tuyến</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="tr1_c0">Phiên bản Engine</th>
+                <td><strong data-i18n="tr1_c1">SQLite 3.54.1 ngoại tuyến (JSONB/FTS5 hiện đại)</strong></td>
+                <td data-i18n="tr1_c2">SQLite 3.2x cũ của hệ điều hành Android</td>
+                <td data-i18n="tr1_c3">Không phải engine SQL quan hệ</td>
+                <td data-i18n="tr1_c4">Tải tệp .db riêng tư lên web</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr2_c0">Kiểm tra Schema 1 chạm</th>
+                <td><strong data-i18n="tr2_c1">Tự động .dbinfo + .tables + Full .schema DDL</strong></td>
+                <td data-i18n="tr2_c2">Chỉ có menu thả xuống chọn bảng thủ công</td>
+                <td data-i18n="tr2_c3">Không thể mở .db/.db3 nhị phân</td>
+                <td data-i18n="tr2_c4">Giới hạn bộ nhớ trình duyệt</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr3_c0">Định dạng đầu ra</th>
+                <td><strong data-i18n="tr3_c1">9 chế độ (box, markdown, json, csv, insert+)</strong></td>
+                <td data-i18n="tr3_c2">Lưới ô cố định chật hẹp</td>
+                <td data-i18n="tr3_c3">Chỉ hiển thị ô bảng tính</td>
+                <td data-i18n="tr3_c4">Bảng HTML cơ bản</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr4_c0">Nhập CSV / TSV / JSON</th>
+                <td><strong data-i18n="tr4_c1">Tự động tạo bảng SQL tối đa 8 MB</strong></td>
+                <td data-i18n="tr4_c2">Hiếm có hoặc là tính năng trả phí</td>
+                <td data-i18n="tr4_c3">Chỉ mở một trang tính phẳng đơn lẻ</td>
+                <td data-i18n="tr4_c4">Yêu cầu tải lên qua internet</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr5_c0">Tích hợp mã nguồn</th>
+                <td><strong data-i18n="tr5_c1">Truy vấn cùng tệp .db từ Python, PHP, Java &amp; Lua</strong></td>
+                <td data-i18n="tr5_c2">Trình xem độc lập biệt lập</td>
+                <td data-i18n="tr5_c3">Không có</td>
+                <td data-i18n="tr5_c4">Không có</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">Tối ưu cho Điện thoại, Màn hình gập & Máy tính bảng · Nhẹ chỉ 40.2 MB</span>
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=vi&amp;listing=sql-sqlite-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dvi%26utm_campaign%3Dsql-sqlite-studio%26utm_content%3Dsqlite-db-viewer-editor-android" target="_blank" rel="noopener">
+          <span>Google Play</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 05 · VISIBLE EDITORIAL FAQ ==================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-head">
+          <div class="sec-index">
+            <span class="num">05</span>
+            <span class="rule"></span>
+            <span data-i18n="sec3_eyebrow">HỎI & ĐÁP</span>
+          </div>
+          <h2 class="h2" data-i18n="sec3_title">Câu hỏi thường gặp</h2>
+          <p class="sec-lead" data-i18n="faq_lead">Giải đáp về việc mở tệp `.db`/`.sqlite3`, nhập tập dữ liệu CSV/JSON và xuất kết quả đã định dạng ngoại tuyến.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary><span data-i18n="faq1_q">SuperCode có thể mở trực tiếp những phần mở rộng tệp cơ sở dữ liệu SQLite nào?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq1_a">SuperCode nhận diện tệp `.db`, `.sqlite`, `.sqlite3`, `.db3` và `.s3db` chỉ với một chạm, tự động chạy kiểm tra ngoại tuyến `.dbinfo`, `.tables` và `.schema`.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq2_q">Tại sao SQLite 3.54.1 nhúng lại quan trọng hơn so với các trình xem SQLite Android thông thường?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq2_a">Phần lớn trình xem DB Android phụ thuộc vào bản SQLite hệ thống cũ của điện thoại, vốn thiếu bảng `STRICT`, `RETURNING`, `JSONB`, mệnh đề Window frame hiện đại và trình tối ưu truy vấn mới. SuperCode cung cấp SQLite 3.54.1 đồng nhất trên mọi thiết bị Android 8.0+.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq3_q">Tôi có thể nhập tệp `.csv` hoặc `.json` mà không cần viết `CREATE TABLE` trước không?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq3_a">Có! Chạy `.import --csv filename.csv tablename` (hoặc `--tsv` / `--json`) tối đa 8 MB &#8212; nếu `tablename` chưa tồn tại, SuperCode tự động tạo schema bảng từ tiêu đề CSV hoặc các khóa đối tượng JSON của bạn.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq4_q">Làm thế nào để xuất kết quả truy vấn SQL ra bảng Markdown hoặc tệp CSV?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq4_a">Thêm `.mode markdown` (hoặc `.mode csv` / `.mode json` / `.mode insert`) theo sau bởi `.once output.md` ngay phía trên lệnh `SELECT` của bạn và chạm Chạy &#8212; tệp sẽ xuất hiện ngay lập tức trong trình duyệt dự án.</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==================== 06 · TOPICAL AUTHORITY ECOSYSTEM CLUSTER ==================== -->
+  <section class="section section--alt" id="ecosystem-guides">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">06</span>
+        <span class="rule"></span>
+        <span>HƯỚNG DẪN THỰC HÀNH SQL, TRÌNH XEM .DB &amp; PHÂN TÍCH</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2>Bộ tài liệu đầy đủ về SQL &amp; Database Studio</h2>
+        <p class="sec-lead">Chuyển nhanh giữa trung tâm SQL IDE Offline chính và toàn bộ 4 tài liệu kỹ thuật cơ sở dữ liệu chuyên sâu.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="py-cluster-grid">
+          <a href="sql-ide.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">SQL-HUB</span>
+              <span class="py-spoke-card__tag">SQLite 3.54 · 9 Chế độ · Tổng quan</span>
+            </div>
+            <h3>Tổng quan SQL IDE Offline &amp; Trình duyệt .db</h3>
+            <p>Tổng quan studio SQLite 3.54.1 offline của SuperCode, 9 định dạng xuất, trình kiểm tra .db, nhập CSV/JSON và tương thích MySQL 8.0.</p>
+            <div class="py-spoke-card__go">
+              <span>sql-ide</span>
+              <span>Mở hướng dẫn &rarr;</span>
+            </div>
+          </a>
+          <a href="sqlite-db-viewer-editor-android.html" class="py-spoke-card is-active">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">SQL-01</span>
+              <span class="py-spoke-card__tag">Box · Markdown · CSV · JSON</span>
+            </div>
+            <h3>Trình kiểm tra .db / .sqlite &amp; 9 chế độ</h3>
+            <p>Mở tệp nhị phân .db, .sqlite và .sqlite3 chỉ với một chạm, tự động nhập bộ dữ liệu CSV/TSV/JSON và xuất truy vấn theo 9 kiểu .mode.</p>
+            <div class="py-spoke-card__go">
+              <span>sqlite-db-viewer-editor-android</span>
+              <span>Đang xem hướng dẫn</span>
+            </div>
+          </a>
+          <a href="sql-window-functions-fts5-json.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">SQL-02</span>
+              <span class="py-spoke-card__tag">OVER() · CTE đệ quy · BM25</span>
+            </div>
+            <h3>Hàm cửa sổ, CTE, JSONB &amp; FTS5</h3>
+            <p>Thực hành SQL phân tích hiện đại offline: khung cửa sổ LAG/DENSE_RANK, CTE đệ quy, đường dẫn JSONB -&gt;&gt;, tìm kiếm BM25 FTS5 và MEDIAN/STDDEV.</p>
+            <div class="py-spoke-card__go">
+              <span>sql-window-functions-fts5-json</span>
+              <span>Mở hướng dẫn &rarr;</span>
+            </div>
+          </a>
+          <a href="mysql-postgresql-syntax-android.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">SQL-03</span>
+              <span class="py-spoke-card__tag">SHOW TABLES · AUTO_INCREMENT · 8.0</span>
+            </div>
+            <h3>Tương thích MySQL &amp; PostgreSQL</h3>
+            <p>Chạy các lệnh DDL MySQL/Postgres hằng ngày (SHOW TABLES, DESCRIBE, SERIAL, ILIKE, SHA256, REGEXP) offline, kèm Stored Procedure MySQL 8.0 trên Cloud.</p>
+            <div class="py-spoke-card__go">
+              <span>mysql-postgresql-syntax-android</span>
+              <span>Mở hướng dẫn &rarr;</span>
+            </div>
+          </a>
+          <a href="sql-python-php-java-lua-integration.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">SQL-04</span>
+              <span class="py-spoke-card__tag">Python sqlite3 · PHP PDO · JDBC</span>
+            </div>
+            <h3>Dùng chung .db giữa SQL, Python, PHP &amp; Java</h3>
+            <p>Thiết kế lược đồ trong SQL Studio, rồi truy vấn chính tệp .db cục bộ đó từ Python sqlite3, PHP 8.2 PDO, Java 17 JDBC và Lua lsqlite3!</p>
+            <div class="py-spoke-card__go">
+              <span>sql-python-php-java-lua-integration</span>
+              <span>Mở hướng dẫn &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span>5 Tài liệu SQL Liên kết · SQLite 3.54.1 + 50+ Hàm MySQL/Postgres</span>
+        <a class="link-arrow" href="sql-ide.html">
+          <span>Trung tâm SQL &amp; SQLite Studio</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="siteFooter">
+  <div class="container">
+    <div class="footer-cta" id="footerCta">
+      <div>
+        <h2 class="h2" data-i18n="cta_h2">Mở, truy vấn &amp; xuất mọi tệp `.db` SQLite ngoại tuyến.</h2>
+        <p data-i18n="cta_desc">Tải miễn phí SuperCode IDE trên Google Play &#8212; SQLite 3.54.1, 9 định dạng xuất và nhập CSV/JSON tức thì.</p>
+      </div>
+      <div class="footer-cta__btns">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=vi&amp;listing=sql-sqlite-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dvi%26utm_campaign%3Dsql-sqlite-studio%26utm_content%3Dsqlite-db-viewer-editor-android" target="_blank" rel="noopener" class="btn btn--gold">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="cta_btn">Tải trên Google Play</span>
+        </a>
+        <a href="https://supercode-ide.github.io/tutorial/?lang=vi&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+          <span data-i18n="cta_tutorial">Hướng dẫn</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+          <span>SuperCode</span>
+          <span class="brand__tag">IDE</span>
+        </a>
+        <p data-i18n="footer_tagline">Trình sửa mã di động gốc và studio lập trình ngoại tuyến cho kỹ sư, sinh viên và giảng viên Android toàn cầu.</p>
+        <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
+        <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=vi&amp;listing=sql-sqlite-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dvi%26utm_campaign%3Dsql-sqlite-studio%26utm_content%3Dsqlite-db-viewer-editor-android" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://supercode-ide.github.io/tutorial/?lang=vi&amp;ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">Hướng dẫn</span> &#8599;</a>
+          <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">Chọn ngôn ngữ</span></button>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_core">Trình sửa mã & Tệp lớn</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Tổng quan</a></li>
+          <li><a href="code-editor.html" data-i18n="nav_code_editor">Trình sửa mã</a></li>
+          <li><a href="large-file-editor.html" data-i18n="nav_large_file">Tệp lớn GB</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_lang">Trình biên dịch ngoại tuyến & Ngôn ngữ</h4>
+        <ul>
+          <li><a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a></li>
+          <li><a href="c-compiler.html" data-i18n="nav_c_compiler">Trình biên dịch C17</a></li>
+          <li><a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a></li>
+          <li><a href="java-ide.html" data-i18n="nav_java_ide">Java 17 IDE</a></li>
+          <li><a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a></li>
+          <li><a href="lua-ide.html" data-i18n="nav_lua_ide">Lua 5.4</a></li>
+          <li><a href="shell-ide.html" data-i18n="nav_shell_ide">Shell & Kotlin</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_devops">Web, SQL & DevOps từ xa</h4>
+        <ul>
+          <li><a href="web-ide.html" data-i18n="nav_web_ide">Web & PHP</a></li>
+          <li><a href="sql-ide.html" data-i18n="nav_sql_ide">SQL Studio</a></li>
+          <li><a href="git-client.html" data-i18n="nav_git_client">Git trực quan</a></li>
+          <li><a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP & FTPS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <span>&copy; 2026 Phoenix Global Studios. All rights reserved.</span>
+      <span class="mono">com.phoenixglobal.supercodeeditor</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="mobile-bottom-bar" id="mobileBottomBar" aria-label="Quick App Actions">
+  <div class="dock-app-icon" aria-hidden="true"><svg><use href="#sc-logo"/></svg></div>
+  <div class="bottom-bar-info">
+    <div class="bottom-bar-title">SuperCode</div>
+    <div class="bottom-bar-sub"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  </div>
+  <div class="bottom-bar-actions">
+    <a href="https://supercode-ide.github.io/tutorial/?lang=vi&amp;ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">Hướng dẫn</a>
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=vi&amp;listing=sql-sqlite-studio&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dvi%26utm_campaign%3Dsql-sqlite-studio%26utm_content%3Dsqlite-db-viewer-editor-android" target="_blank" rel="noopener" class="btn-play-mini">
+      <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
+      <span data-i18n="bottom_cta">Tải về</span>
+    </a>
+  </div>
+</aside>
+
+<div class="modal-overlay" id="langModal" role="dialog" aria-modal="true" aria-labelledby="langModalTitle">
+  <div class="lang-modal">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div class="modal-header">
+      <h3 id="langModalTitle"><span data-i18n="modal_title">Chọn ngôn ngữ</span><span class="modal-lang-count">32</span></h3>
+      <button type="button" class="btn-close-modal" onclick="closeLangModal()" aria-label="Đóng">&#10005;</button>
+    </div>
+    <div class="lang-grid">
+      <button type="button" class="lang-option" data-code="en" onclick="setLanguage('en')"><span class="lang-option__name">English</span><span class="lang-option__code">EN</span></button>
+      <button type="button" class="lang-option" data-code="zh" onclick="setLanguage('zh')"><span class="lang-option__name">简体中文</span><span class="lang-option__code">简中</span></button>
+      <button type="button" class="lang-option" data-code="zh-tw" onclick="setLanguage('zh-tw')"><span class="lang-option__name">繁體中文</span><span class="lang-option__code">繁中</span></button>
+      <button type="button" class="lang-option" data-code="es" onclick="setLanguage('es')"><span class="lang-option__name">Español</span><span class="lang-option__code">ES</span></button>
+      <button type="button" class="lang-option" data-code="pt" onclick="setLanguage('pt')"><span class="lang-option__name">Português</span><span class="lang-option__code">PT</span></button>
+      <button type="button" class="lang-option" data-code="ja" onclick="setLanguage('ja')"><span class="lang-option__name">日本語</span><span class="lang-option__code">日本語</span></button>
+      <button type="button" class="lang-option" data-code="ko" onclick="setLanguage('ko')"><span class="lang-option__name">한국어</span><span class="lang-option__code">한국어</span></button>
+      <button type="button" class="lang-option" data-code="de" onclick="setLanguage('de')"><span class="lang-option__name">Deutsch</span><span class="lang-option__code">DE</span></button>
+      <button type="button" class="lang-option" data-code="fr" onclick="setLanguage('fr')"><span class="lang-option__name">Français</span><span class="lang-option__code">FR</span></button>
+      <button type="button" class="lang-option" data-code="ru" onclick="setLanguage('ru')"><span class="lang-option__name">Русский</span><span class="lang-option__code">RU</span></button>
+      <button type="button" class="lang-option" data-code="hi" onclick="setLanguage('hi')"><span class="lang-option__name">हिन्दी</span><span class="lang-option__code">HI</span></button>
+      <button type="button" class="lang-option" data-code="id" onclick="setLanguage('id')"><span class="lang-option__name">Bahasa Indonesia</span><span class="lang-option__code">ID</span></button>
+      <button type="button" class="lang-option" data-code="it" onclick="setLanguage('it')"><span class="lang-option__name">Italiano</span><span class="lang-option__code">IT</span></button>
+      <button type="button" class="lang-option active" data-code="vi" onclick="setLanguage('vi')"><span class="lang-option__name">Tiếng Việt</span><span class="lang-option__code">VI</span></button>
+      <button type="button" class="lang-option" data-code="th" onclick="setLanguage('th')"><span class="lang-option__name">ไทย</span><span class="lang-option__code">ไทย</span></button>
+      <button type="button" class="lang-option" data-code="tr" onclick="setLanguage('tr')"><span class="lang-option__name">Türkçe</span><span class="lang-option__code">TR</span></button>
+      <button type="button" class="lang-option" data-code="ar" onclick="setLanguage('ar')"><span class="lang-option__name">العربية</span><span class="lang-option__code">AR</span></button>
+      <button type="button" class="lang-option" data-code="pl" onclick="setLanguage('pl')"><span class="lang-option__name">Polski</span><span class="lang-option__code">PL</span></button>
+      <button type="button" class="lang-option" data-code="nl" onclick="setLanguage('nl')"><span class="lang-option__name">Nederlands</span><span class="lang-option__code">NL</span></button>
+      <button type="button" class="lang-option" data-code="sv" onclick="setLanguage('sv')"><span class="lang-option__name">Svenska</span><span class="lang-option__code">SV</span></button>
+      <button type="button" class="lang-option" data-code="nb" onclick="setLanguage('nb')"><span class="lang-option__name">Norsk Bokmål</span><span class="lang-option__code">NB</span></button>
+      <button type="button" class="lang-option" data-code="da" onclick="setLanguage('da')"><span class="lang-option__name">Dansk</span><span class="lang-option__code">DA</span></button>
+      <button type="button" class="lang-option" data-code="fi" onclick="setLanguage('fi')"><span class="lang-option__name">Suomi</span><span class="lang-option__code">FI</span></button>
+      <button type="button" class="lang-option" data-code="cs" onclick="setLanguage('cs')"><span class="lang-option__name">Čeština</span><span class="lang-option__code">CS</span></button>
+      <button type="button" class="lang-option" data-code="uk" onclick="setLanguage('uk')"><span class="lang-option__name">Українська</span><span class="lang-option__code">UK</span></button>
+      <button type="button" class="lang-option" data-code="ro" onclick="setLanguage('ro')"><span class="lang-option__name">Română</span><span class="lang-option__code">RO</span></button>
+      <button type="button" class="lang-option" data-code="hu" onclick="setLanguage('hu')"><span class="lang-option__name">Magyar</span><span class="lang-option__code">HU</span></button>
+      <button type="button" class="lang-option" data-code="el" onclick="setLanguage('el')"><span class="lang-option__name">Ελληνικά</span><span class="lang-option__code">EL</span></button>
+      <button type="button" class="lang-option" data-code="he" onclick="setLanguage('he')"><span class="lang-option__name">עברית</span><span class="lang-option__code">HE</span></button>
+      <button type="button" class="lang-option" data-code="ms" onclick="setLanguage('ms')"><span class="lang-option__name">Bahasa Melayu</span><span class="lang-option__code">MS</span></button>
+      <button type="button" class="lang-option" data-code="tl" onclick="setLanguage('tl')"><span class="lang-option__name">Filipino</span><span class="lang-option__code">FIL</span></button>
+      <button type="button" class="lang-option" data-code="bn" onclick="setLanguage('bn')"><span class="lang-option__name">বাংলা</span><span class="lang-option__code">BN</span></button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var WORKBENCH_SAMPLES = {"open_db": {"label": "sqlite-db-viewer/inspect_db.sql \u2014 1-Tap .db / .sqlite3 Schema Inspector", "status": "SQLite 3.54.1 \u00b7 .dbinfo / .schema", "lines": ["<span class=\"tok-cmt\">-- Tap any .db, .sqlite, .sqlite3, .db3, or .s3db file to inspect offline:<\/span>", ".open store_prod.sqlite3", ".tables", ".mode box", "<span class=\"tok-kw\">SELECT<\/span> id, sku, stock, price_usd <span class=\"tok-kw\">FROM<\/span> inventory <span class=\"tok-kw\">ORDER BY<\/span> stock <span class=\"tok-kw\">ASC LIMIT<\/span> <span class=\"tok-num\">3<\/span>;"], "output": ["<span class=\"term-prompt\">[SQLite 3.54.1]<\/span> Mounted store_prod.sqlite3 (page size: 4096 B &middot; UTF-8 &middot; 4 tables)", "\u250c\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510", "\u2502 id \u2502     sku      \u2502 stock \u2502 price_usd \u2502", "\u251c\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524", "\u2502 14 \u2502 USB-C-HUB-8P \u2502 6     \u2502 39.50     \u2502", "\u2502 07 \u2502 NVME-2TB-PRO \u2502 11    \u2502 149.00    \u2502", "\u2502 02 \u2502 MECH-KB-65   \u2502 19    \u2502 89.00     \u2502", "\u2514\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518"]}, "csv_json_imp": {"label": "sqlite-db-viewer/import_datasets.sql \u2014 Auto-Create Tables From CSV & JSON", "status": ".import --csv / --tsv / --json (8 MB)", "lines": ["<span class=\"tok-cmt\">-- Zero CREATE TABLE boilerplate \u2014 headers inferred automatically:<\/span>", ".open analytics.db", ".import --csv exports/orders_2026.csv orders", ".import --json exports/customers.json customers", "<span class=\"tok-kw\">SELECT<\/span> c.country, <span class=\"tok-fn\">COUNT<\/span>(*) <span class=\"tok-kw\">AS<\/span> orders_cnt <span class=\"tok-kw\">FROM<\/span> orders o", "<span class=\"tok-kw\">JOIN<\/span> customers c <span class=\"tok-kw\">ON<\/span> c.id = o.customer_id <span class=\"tok-kw\">GROUP BY<\/span> c.country;"], "output": ["<span class=\"term-prompt\">sql&gt;<\/span> Auto-created table &quot;orders&quot; (4,820 rows) &amp; &quot;customers&quot; (910 rows)", "US | 2140", "DE | 1395", "JP | 1285", "<span class=\"term-info\">&#10003; Supports .import --csv, --tsv, and --json files up to 8 MB offline<\/span>"]}, "nine_modes": {"label": "sqlite-db-viewer/export_report.sql \u2014 9 Output Formats & .once Export", "status": "box \u00b7 markdown \u00b7 json \u00b7 csv \u00b7 insert", "lines": ["<span class=\"tok-cmt\">-- Switch among 9 formats: box, table, markdown, json, csv, tabs, insert, line, list<\/span>", ".mode markdown", ".once quarterly_kpi.md", "<span class=\"tok-kw\">SELECT<\/span> quarter, revenue_k, margin_pct <span class=\"tok-kw\">FROM<\/span> kpi_summary;", ".mode json", "<span class=\"tok-kw\">SELECT<\/span> quarter, revenue_k <span class=\"tok-kw\">FROM<\/span> kpi_summary <span class=\"tok-kw\">LIMIT<\/span> <span class=\"tok-num\">2<\/span>;"], "output": ["<span class=\"term-prompt\">[.once]<\/span> Wrote Markdown table to sqlite-db-viewer/quarterly_kpi.md", "[{&quot;quarter&quot;:&quot;2026-Q1&quot;,&quot;revenue_k&quot;:420},{&quot;quarter&quot;:&quot;2026-Q2&quot;,&quot;revenue_k&quot;:485}]", "<span class=\"term-info\">&#10003; 9 .mode formatters + direct .once file export to workspace<\/span>"]}};
+    var currentTab = 'open_db';
+    var runTimer = null;
+
+    function renderWorkbench(tabKey, animateRun) {
+      var sample = WORKBENCH_SAMPLES[tabKey] || WORKBENCH_SAMPLES['open_db'];
+      if (!sample) { return; }
+      currentTab = tabKey;
+      var labelEl = document.getElementById('ide-compiler-label');
+      if (labelEl) { labelEl.textContent = sample.label; }
+      var statusEl = document.getElementById('wbStatusLang');
+      if (statusEl) { statusEl.textContent = sample.status; }
+
+      var tabs = document.querySelectorAll('.ide-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        var active = tabs[i].getAttribute('data-tab') === tabKey;
+        tabs[i].classList.toggle('active', active);
+        tabs[i].setAttribute('aria-selected', active ? 'true' : 'false');
+      }
+      var files = document.querySelectorAll('.wb-file');
+      for (var f = 0; f < files.length; f++) {
+        files[f].classList.toggle('active', files[f].getAttribute('data-tab') === tabKey);
+      }
+
+      var codeBox = document.getElementById('ide-code-box');
+      if (codeBox) {
+        var html = '';
+        for (var l = 0; l < sample.lines.length; l++) {
+          var activeCls = (l === sample.lines.length - 1) ? ' active-line' : '';
+          html += '<div class="code-line' + activeCls + '"><span class="ln">' + (l + 1) + '</span><span class="code-content">' + sample.lines[l] + '</span></div>';
+        }
+        codeBox.innerHTML = html;
+      }
+
+      if (animateRun) {
+        runWorkbenchSample();
+      }
+    }
+
+    function runWorkbenchSample() {
+      var sample = WORKBENCH_SAMPLES[currentTab] || WORKBENCH_SAMPLES['open_db'];
+      var drawer = document.getElementById('ide-terminal-drawer');
+      var out = document.getElementById('ide-term-output');
+      var badge = document.getElementById('ide-exec-status');
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (!drawer || !out || !sample) { return; }
+
+      if (runTimer) { clearTimeout(runTimer); }
+      drawer.classList.add('is-open');
+      if (runBtn) { runBtn.classList.add('is-running'); }
+      if (badge) { badge.textContent = 'Running...'; badge.classList.remove('done'); }
+      out.innerHTML = '';
+
+      var idx = 0;
+      function step() {
+        if (idx < sample.output.length) {
+          var row = document.createElement('span');
+          row.className = 'term-line-item';
+          row.innerHTML = sample.output[idx];
+          out.appendChild(row);
+          idx++;
+          runTimer = setTimeout(step, 80);
+        } else {
+          var cur = document.createElement('span');
+          cur.className = 'term-cursor';
+          cur.textContent = '\u258b';
+          out.appendChild(cur);
+          if (badge) { badge.textContent = 'Completed'; badge.classList.add('done'); }
+          if (runBtn) { runBtn.classList.remove('is-running'); }
+        }
+      }
+      step();
+    }
+
+    function initNavigationAndSmartBar() {
+      var menuBtn = document.getElementById('menuBtn');
+      var drawer = document.getElementById('siteDrawer');
+      var bar = document.getElementById('mobileBottomBar');
+      var heroCta = document.getElementById('heroCta');
+      var siteFooter = document.getElementById('siteFooter');
+
+      function syncBar() {
+        if (!bar) { return; }
+        var drawerOpen = Boolean(drawer && !drawer.hasAttribute('hidden'));
+        var modalEl = document.getElementById('langModal');
+        var modalOpen = Boolean(modalEl && modalEl.classList.contains('show'));
+        var vh = window.innerHeight || document.documentElement.clientHeight || 800;
+        var heroInView = false;
+        if (heroCta) {
+          var hr = heroCta.getBoundingClientRect();
+          heroInView = (hr.bottom > 0 && hr.top < vh);
+        }
+        var footerInView = false;
+        if (siteFooter) {
+          var fr = siteFooter.getBoundingClientRect();
+          footerInView = (fr.top < vh + 24);
+        }
+        var scrollYVal = window.pageYOffset || window.scrollY || 0;
+        var docH = Math.max(document.body ? document.body.scrollHeight : 0, document.documentElement ? document.documentElement.scrollHeight : 0);
+        var nearBottom = (vh + scrollYVal) >= (docH - 120);
+        var shouldShow = !drawerOpen && !modalOpen && !heroInView && !footerInView && !nearBottom;
+        bar.classList.toggle('is-visible', shouldShow);
+      }
+
+      window.__supercodeSyncMobileBar = syncBar;
+
+      function setDrawer(open) {
+        if (!menuBtn || !drawer) { return; }
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { drawer.removeAttribute('hidden'); }
+        else { drawer.setAttribute('hidden', ''); }
+        syncBar();
+      }
+      if (menuBtn && drawer) {
+        menuBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          setDrawer(menuBtn.getAttribute('aria-expanded') !== 'true');
+        });
+        drawer.addEventListener('click', function (e) {
+          if (e.target && e.target.closest('a')) { setDrawer(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!drawer.hasAttribute('hidden') && !drawer.contains(e.target) && e.target !== menuBtn && !menuBtn.contains(e.target)) {
+            setDrawer(false);
+          }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') { setDrawer(false); }
+        });
+      }
+
+      if (bar) {
+        window.addEventListener('scroll', syncBar, { passive: true });
+        window.addEventListener('resize', syncBar);
+        syncBar();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var tabBtns = document.querySelectorAll('.ide-tab, .wb-file');
+      for (var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', function () {
+          renderWorkbench(this.getAttribute('data-tab'), true);
+        });
+      }
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (runBtn) { runBtn.addEventListener('click', function () { runWorkbenchSample(); }); }
+      var closeTerm = document.getElementById('btn-close-term');
+      if (closeTerm) {
+        closeTerm.addEventListener('click', function () {
+          var d = document.getElementById('ide-terminal-drawer');
+          if (d) { d.classList.remove('is-open'); }
+        });
+      }
+      initNavigationAndSmartBar();
+      renderWorkbench('open_db', false);
+    });
+  })();
+</script>
+<script>window.__SUPERCODE_STATIC_LANG__="vi";window.__SUPERCODE_STATIC_CANONICAL__="https://supercode-ide.github.io/vi/sqlite-db-viewer-editor-android.html";</script>
+<script src="../i18n_extended.js"></script>
+</body>
+</html>

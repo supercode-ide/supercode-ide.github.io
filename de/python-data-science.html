@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090A0F">
+  <meta name="color-scheme" content="only dark">
+  <meta name="supported-color-schemes" content="dark">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <title>Python-Data-Science-App für Android — Offline NumPy, Pandas, DuckDB &amp; Matplotlib | SuperCode</title>
+  <meta name="description" content="Analysiere Datensätze und erstelle Diagramme offline auf Android mit SuperCode. Führe NumPy, Pandas, Polars, DuckDB, SciPy, SymPy, Matplotlib und Seaborn auf Smartphone oder Tablet mit automatischem PNG/SVG/PDF-Ordner-Sync aus.">
+  <meta name="keywords" content="numpy pandas on android, matplotlib android app, python data science app for android, run pandas offline on phone, polars duckdb android python, scipy sympy android ide, data analysis coding app android">
+  <meta name="author" content="Phoenix Global Studios">
+  <meta name="google-play-app" content="app-id=com.phoenixglobal.supercodeeditor">
+
+  <link id="canonical-link" rel="canonical" href="https://supercode-ide.github.io/de/python-data-science.html">
+  <link rel="alternate" hreflang="x-default" href="https://supercode-ide.github.io/python-data-science.html">
+  <link rel="alternate" hreflang="en" href="https://supercode-ide.github.io/python-data-science.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://supercode-ide.github.io/zh/python-data-science.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://supercode-ide.github.io/zh-tw/python-data-science.html">
+  <link rel="alternate" hreflang="es" href="https://supercode-ide.github.io/es/python-data-science.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://supercode-ide.github.io/pt/python-data-science.html">
+  <link rel="alternate" hreflang="ja" href="https://supercode-ide.github.io/ja/python-data-science.html">
+  <link rel="alternate" hreflang="ko" href="https://supercode-ide.github.io/ko/python-data-science.html">
+  <link rel="alternate" hreflang="de" href="https://supercode-ide.github.io/de/python-data-science.html">
+  <link rel="alternate" hreflang="fr" href="https://supercode-ide.github.io/fr/python-data-science.html">
+  <link rel="alternate" hreflang="ru" href="https://supercode-ide.github.io/ru/python-data-science.html">
+  <link rel="alternate" hreflang="hi" href="https://supercode-ide.github.io/hi/python-data-science.html">
+  <link rel="alternate" hreflang="id" href="https://supercode-ide.github.io/id/python-data-science.html">
+  <link rel="alternate" hreflang="it" href="https://supercode-ide.github.io/it/python-data-science.html">
+  <link rel="alternate" hreflang="vi" href="https://supercode-ide.github.io/vi/python-data-science.html">
+  <link rel="alternate" hreflang="th" href="https://supercode-ide.github.io/th/python-data-science.html">
+  <link rel="alternate" hreflang="tr" href="https://supercode-ide.github.io/tr/python-data-science.html">
+  <link rel="alternate" hreflang="ar" href="https://supercode-ide.github.io/ar/python-data-science.html">
+  <link rel="alternate" hreflang="pl" href="https://supercode-ide.github.io/pl/python-data-science.html">
+  <link rel="alternate" hreflang="nl" href="https://supercode-ide.github.io/nl/python-data-science.html">
+  <link rel="alternate" hreflang="sv" href="https://supercode-ide.github.io/sv/python-data-science.html">
+  <link rel="alternate" hreflang="nb" href="https://supercode-ide.github.io/nb/python-data-science.html">
+  <link rel="alternate" hreflang="da" href="https://supercode-ide.github.io/da/python-data-science.html">
+  <link rel="alternate" hreflang="fi" href="https://supercode-ide.github.io/fi/python-data-science.html">
+  <link rel="alternate" hreflang="cs" href="https://supercode-ide.github.io/cs/python-data-science.html">
+  <link rel="alternate" hreflang="uk" href="https://supercode-ide.github.io/uk/python-data-science.html">
+  <link rel="alternate" hreflang="ro" href="https://supercode-ide.github.io/ro/python-data-science.html">
+  <link rel="alternate" hreflang="hu" href="https://supercode-ide.github.io/hu/python-data-science.html">
+  <link rel="alternate" hreflang="el" href="https://supercode-ide.github.io/el/python-data-science.html">
+  <link rel="alternate" hreflang="he" href="https://supercode-ide.github.io/he/python-data-science.html">
+  <link rel="alternate" hreflang="ms" href="https://supercode-ide.github.io/ms/python-data-science.html">
+  <link rel="alternate" hreflang="fil" href="https://supercode-ide.github.io/tl/python-data-science.html">
+  <link rel="alternate" hreflang="bn" href="https://supercode-ide.github.io/bn/python-data-science.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
+  <meta property="og:title" content="Python-Data-Science-App für Android — Offline NumPy, Pandas, DuckDB &amp; Matplotlib | SuperCode">
+  <meta property="og:description" content="Analysiere Datensätze und erstelle Diagramme offline auf Android mit SuperCode. Führe NumPy, Pandas, Polars, DuckDB, SciPy, SymPy, Matplotlib und Seaborn auf Smartphone oder Tablet mit automatischem PNG/SVG/PDF-Ordner-Sync aus.">
+  <meta property="og:url" content="https://supercode-ide.github.io/de/python-data-science.html">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-hero-de.png">
+  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-hero-de.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Offline Python 3.11 / 3.12 IDE &amp; Split-Konsole">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-hero-de.png">
+  <meta name="twitter:title" content="Python-Data-Science-App für Android — Offline NumPy, Pandas, DuckDB &amp; Matplotlib | SuperCode">
+  <meta name="twitter:description" content="Analysiere Datensätze und erstelle Diagramme offline auf Android mit SuperCode. Führe NumPy, Pandas, Polars, DuckDB, SciPy, SymPy, Matplotlib und Seaborn auf Smartphone oder Tablet mit automatischem PNG/SVG/PDF-Ordner-Sync aus.">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <script>if(/SamsungBrowser/i.test(navigator.userAgent)){document.documentElement.classList.add('is-samsung');}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "SoftwareApplication",
+        "MobileApplication",
+        "WebApplication"
+      ],
+      "@id": "https://supercode-ide.github.io/#supercode-app",
+      "name": "Code Editor: SuperCode IDE",
+      "alternateName": [
+        "NumPy Pandas App for Android",
+        "Matplotlib Python Android",
+        "Mobile Data Science IDE"
+      ],
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Offline Python Data Science, Pandas & Matplotlib App for Android",
+      "inLanguage": "de",
+      "fileSize": "40.2MB",
+      "softwareVersion": "1.55.05",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=de-DE&listing=python-ide",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=de-DE&listing=python-ide",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=de-DE"
+      ],
+      "potentialAction": [
+        {
+          "@type": "InstallAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=de-DE&listing=python-ide",
+            "actionPlatform": [
+              "http://schema.org/AndroidPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          }
+        },
+        {
+          "@type": "ViewAction",
+          "name": "App-Guide",
+          "target": [
+            "https://supercode-ide.github.io/tutorial/?lang=de",
+            "android-app://com.phoenixglobal.supercodeeditor/https/supercode-ide.github.io/tutorial"
+          ]
+        }
+      ],
+      "identifier": "com.phoenixglobal.supercodeeditor",
+      "url": "https://supercode-ide.github.io/de/python-data-science.html",
+      "screenshot": [
+        "https://supercode-ide.github.io/assets/gallery/de/01_python_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/de/02_cpp20_compiler.webp",
+        "https://supercode-ide.github.io/assets/gallery/de/03_web_php_devtools.webp",
+        "https://supercode-ide.github.io/assets/gallery/de/04_file_manager_tree.webp",
+        "https://supercode-ide.github.io/assets/gallery/de/05_sql_sqlite_studio.webp",
+        "https://supercode-ide.github.io/assets/gallery/de/06_java17_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/de/07_visual_git_timemachine.webp",
+        "https://supercode-ide.github.io/assets/gallery/de/08_symbol_keyboard_themes.webp"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Phoenix Global Studios",
+        "url": "https://supercode-ide.github.io/de/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "66"
+      },
+      "featureList": [
+        "Cached on-device Scientific Python 3.12 runtime with NumPy, SciPy, SymPy, Pandas, Polars & DuckDB",
+        "Automatic workspace chart synchronization for Matplotlib, Seaborn, Plotly, Bokeh & WordCloud",
+        "Direct project mounting of .csv, .tsv, .json, .sql, .sqlite3, .npy, .npz, and .pkl datasets",
+        "Built-in high-resolution pinch-to-zoom Image Viewer and native PDF Viewer for exported figures",
+        "55%/45% tablet & foldable dual-pane layout for side-by-side DataFrame scripting and console output",
+        "Companion standalone SQL IDE for inspecting SQLite .db exports with 9 output formatting modes"
+      ],
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-de.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://supercode-ide.github.io/de/python-data-science.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SuperCode IDE",
+          "item": "https://supercode-ide.github.io/de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Python-Coding-App-Hub",
+          "item": "https://supercode-ide.github.io/de/python-ide.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "NumPy, Pandas & Matplotlib",
+          "item": "https://supercode-ide.github.io/de/python-data-science.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Analyze Data & Export Plots Offline on Android",
+      "description": "A complete local data science loop without Jupyter server timeouts or browser disconnects.",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Drop CSV, JSON, or SQLite Files Into Your Project",
+          "text": "Open any folder on your Android storage containing `.csv`, `.json`, `.sqlite3`, or `.npy` files — SuperCode mounts companion data files automatically.",
+          "url": "https://supercode-ide.github.io/python-data-science.html#step1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Write NumPy, Pandas, DuckDB, or SymPy Scripts",
+          "text": "First-time scientific imports cache their binary wheels locally on your phone; every subsequent run works 100% offline.",
+          "url": "https://supercode-ide.github.io/python-data-science.html#step2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Run & Auto-Sync High-DPI Figures to Disk",
+          "text": "Tap Run ▶ to view tabular summaries in the console and automatically write PNG, SVG, PDF, or cleaned CSV outputs to your folder.",
+          "url": "https://supercode-ide.github.io/python-data-science.html#step3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Inspect Charts in the Built-In HD Image & PDF Viewers",
+          "text": "Tap your generated PNG or PDF in the file tree for crisp pinch-to-zoom inspection or share directly with teammates and lab reports.",
+          "url": "https://supercode-ide.github.io/python-data-science.html#step4"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://supercode-ide.github.io/python-data-science.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Laufen NumPy und Pandas wirklich offline auf meinem Android-Smartphone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Sobald die Scientific-Laufzeit initialisiert ist und das Paket-Wheel (z. B. `numpy`, `pandas` oder `matplotlib`) auf deinem Gerät gecacht wurde, laufen alle weiteren Durchläufe zu 100 % offline ohne Internet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie zeige ich `matplotlib.pyplot`-Diagramme auf Android an?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Speichere dein Diagramm mit `plt.savefig('plot.png', dpi=180)` (oder `.svg` / `.pdf`). SuperCode synchronisiert die Datei direkt in dein aktives Projektverzeichnis, sodass du sie sofort im integrierten hochauflösenden Bild- oder PDF-Viewer öffnen kannst."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann mein Pandas-Skript eine `.csv`- oder `.sqlite`-Datei im selben Ordner lesen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja. Relative Pfade wie `pd.read_csv('sales.csv')` oder `sqlite3.connect('app.db')` werden direkt im Projekt-Workspace aufgelöst, und geänderte oder neu erstellte Dateien werden nach Ausführungsende zurücksynchronisiert."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Werden neben Pandas auch Polars und DuckDB unterstützt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja — sowohl `polars` als auch `duckdb` (zusammen mit `pyarrow` und `fastparquet`) werden für schnelle analytische Abfragen auf mobilen Geräten unterstützt."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-page="py_data_science">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="sc-logo" viewBox="20 14 68 72">
+    <path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/>
+    <path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/>
+    <path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/>
+    <path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+  </symbol>
+  <symbol id="gp-prism" viewBox="0 0 24 24">
+    <path fill="#4285F4" d="M3.6,2.4C3.3,2.7,3.1,3.2,3.1,3.8v16.4c0,0.6,0.2,1.1,0.5,1.4l0.1,0.1L12.9,12v-0.2L3.7,2.3L3.6,2.4z"/>
+    <path fill="#34A853" d="M16,15.1l-3.1-3.1v-0.2L16,8.7l0.1,0.1l3.6,2.1c1,0.6,1,1.5,0,2.1l-3.6,2.1L16,15.1z"/>
+    <path fill="#FBBC05" d="M16.1,15.1L12.9,12L3.6,21.3c0.3,0.4,0.9,0.4,1.6,0.1L16.1,15.1z"/>
+    <path fill="#EA4335" d="M16.1,8.9L5.2,2.6C4.5,2.2,3.9,2.3,3.6,2.7L12.9,12L16.1,8.9z"/>
+  </symbol>
+  <symbol id="i-ne" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8 20 7.2v9.6L12 21.2 4 16.8V7.2z"/><path d="M4 7.2l8 4.4 8-4.4M12 11.6v9.6"/></g></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2.8v3.2M15 2.8v3.2M9 18v3.2M15 18v3.2M2.8 9H6M2.8 15H6M18 9h3.2M18 15h3.2"/></g></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 2.8 7.8 12 12.6l9.2-4.8z"/><path d="m2.8 12 9.2 4.8 9.2-4.8"/><path d="m2.8 16.2 9.2 4.8 9.2-4.8"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="M2.8 8.5h18.4"/><path d="m9.5 12.5-2.2 2.2 2.2 2.2M14.5 12.5l2.2 2.2-2.2 2.2"/></g></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5.6" rx="7.6" ry="2.8"/><path d="M4.4 5.6v12.8c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8V5.6"/><path d="M4.4 12c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8"/></g></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="m7.2 9.5 3 2.5-3 2.5M12.8 15h4"/></g></symbol>
+  <symbol id="i-git" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.3"/><circle cx="6" cy="18" r="2.3"/><circle cx="18" cy="12" r="2.3"/><path d="M6 8.3v7.4M8.3 6h4.2a3.5 3.5 0 0 1 3.5 3.5v.2"/></g></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5h11a4 4 0 0 0 .7-7.94A5.5 5.5 0 0 0 7.4 9.2 3.8 3.8 0 0 0 6.5 18.5z"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M13 2.8 4.8 13.2h6.3L10.2 21.2 19.2 10.6h-6.4z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 2.8 4.8 5.8v5.6c0 5 3.1 8.5 7.2 9.8 4.1-1.3 7.2-4.8 7.2-9.8V5.8z"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="index.html" class="brand" aria-label="SuperCode IDE Home">
+      <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+      <span>SuperCode</span>
+      <span class="brand__tag">IDE</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary Workspaces">
+      <a href="code-editor.html" data-i18n="nav_code_editor">Code-Editor</a>
+      <a href="large-file-editor.html" data-i18n="nav_large_file">GB-Dateien</a>
+      <a href="python-ide.html" class="is-current" data-i18n="nav_python_ide">Python IDE</a>
+      <a href="c-compiler.html" data-i18n="nav_c_compiler">C-Compiler</a>
+      <a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a>
+      <a href="java-ide.html" data-i18n="nav_java_ide">Java 17</a>
+      <a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a>
+      <a href="web-ide.html" data-i18n="nav_web_ide">Web & PHP</a>
+      <a href="sql-ide.html" data-i18n="nav_sql_ide">SQL-Studio</a>
+      <a href="git-client.html" data-i18n="nav_git_client">Visual Git</a>
+      <a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP & FTPS</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button id="langModalBtn" class="btn-lang-trigger" type="button" onclick="openLangModal()" aria-label="Select Language">
+        <svg class="lang-globe-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span id="langTriggerText">DE</span>
+        <span class="lang-chevron" aria-hidden="true">&#9662;</span>
+      </button>
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=de-DE&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dde%26utm_campaign%3Dpython-ide%26utm_content%3Dpython-data-science" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+        <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+        <span data-i18n="nav_cta">Google Play</span>
+      </a>
+      <a href="index.html" class="btn-home-icon" aria-label="Home" title="Home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5"/>
+          <path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
+        </svg>
+      </a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteDrawer" aria-label="All Pages Directory">
+        <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 8.5h16M4 15.5h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-drawer" id="siteDrawer" hidden>
+  <nav class="container menu-drawer__inner" aria-label="All SuperCode Pages">
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_core">Editor & Große Dateien</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="index.html"><span data-i18n="nav_home">Übersicht</span><span class="mono">01</span></a>
+        <a class="menu-drawer__link" href="code-editor.html"><span data-i18n="nav_code_editor">Code-Editor</span><span class="mono">02</span></a>
+        <a class="menu-drawer__link" href="large-file-editor.html"><span data-i18n="nav_large_file">GB-Dateien</span><span class="mono">03</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_lang">Offline-Compiler & Sprachen</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link is-current" href="python-ide.html"><span data-i18n="nav_python_ide">Python IDE</span><span class="mono">04</span></a>
+        <a class="menu-drawer__link" href="c-compiler.html"><span data-i18n="nav_c_compiler">C-Compiler</span><span class="mono">05</span></a>
+        <a class="menu-drawer__link" href="cpp-ide.html"><span data-i18n="nav_cpp_ide">C++20 IDE</span><span class="mono">06</span></a>
+        <a class="menu-drawer__link" href="java-ide.html"><span data-i18n="nav_java_ide">Java 17</span><span class="mono">07</span></a>
+        <a class="menu-drawer__link" href="javascript-ide.html"><span data-i18n="nav_js_ide">JavaScript</span><span class="mono">08</span></a>
+        <a class="menu-drawer__link" href="lua-ide.html"><span data-i18n="nav_lua_ide">Lua 5.4</span><span class="mono">09</span></a>
+        <a class="menu-drawer__link" href="shell-ide.html"><span data-i18n="nav_shell_ide">Shell & Kotlin</span><span class="mono">10</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_devops">Web, SQL & Remote-DevOps</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="web-ide.html"><span data-i18n="nav_web_ide">Web & PHP</span><span class="mono">11</span></a>
+        <a class="menu-drawer__link" href="sql-ide.html"><span data-i18n="nav_sql_ide">SQL-Studio</span><span class="mono">12</span></a>
+        <a class="menu-drawer__link" href="git-client.html"><span data-i18n="nav_git_client">Visual Git</span><span class="mono">13</span></a>
+        <a class="menu-drawer__link" href="sftp-client.html"><span data-i18n="nav_sftp_client">SFTP & FTPS</span><span class="mono">14</span></a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<main id="top">
+  <!-- ==================== 01 · EDITORIAL HERO & INTERACTIVE WORKBENCH ==================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <div class="py-hub-crumb"><a href="python-ide.html"><span class="crumb-arrow" aria-hidden="true">&larr;</span> Python-Coding-App-Hub</a><span class="sep">/</span><span>NumPy, Pandas &amp; Matplotlib</span></div>
+          <div class="trust-pill">
+            <span class="trust-pill__score"><span data-play-rating>4.9</span> &#9733;</span>
+            <span data-i18n="hero_tag">OFFLINE NUMPY &#183; PANDAS &#183; POLARS &#183; DUCKDB &#183; MATPLOTLIB</span>
+          </div>
+
+          <h1 class="hero-h1" data-i18n="hero_h1">Mobiles <span class="text-gradient">Python Data Science, Pandas &amp; Matplotlib</span> Studio für Android.</h1>
+
+          <p class="hero-lead" data-i18n="hero_desc">Analysiere echte CSV-, JSON- und SQLite-Datensätze überall, ohne ein Cloud-Notebook hochzufahren. SuperCode speichert <strong>NumPy, Pandas, Polars, DuckDB, SciPy und Matplotlib</strong> lokal auf deinem Android-Gerät und synchronisiert jede <strong><code>plt.savefig()</code></strong>-Grafik direkt in deinen Workspace.</p>
+
+          <div class="hero__cta" id="heroCta">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=de-DE&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dde%26utm_campaign%3Dpython-ide%26utm_content%3Dpython-data-science" target="_blank" rel="noopener" class="btn btn--gold">
+              <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+              <span data-i18n="cta_btn">Bei Google Play</span>
+            </a>
+            <a href="https://supercode-ide.github.io/tutorial/?lang=de&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+              <span data-i18n="cta_tutorial">App-Guide</span>
+              <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <dl class="specs" aria-label="Key Specifications">
+          <div class="spec"><dt>NumPy</dt><dd data-i18n="ds_s1">&amp; SciPy / SymPy</dd></div>
+          <div class="spec"><dt>Pandas</dt><dd data-i18n="ds_s2">Polars &amp; DuckDB</dd></div>
+          <div class="spec"><dt>Plots</dt><dd data-i18n="ds_s3">PNG &#183; SVG &#183; PDF</dd></div>
+          <div class="spec"><dt>100%</dt><dd data-i18n="ds_s4">Offline gecacht</dd></div>
+        </dl>
+      </div>
+
+      <div class="wb-caption">
+        <div class="sec-index" style="margin-bottom:0">
+          <span class="num">01</span>
+          <span class="rule"></span>
+          <span data-i18n="wb_eyebrow">INTERAKTIVE DATAFRAME-, DUCKDB- &amp; MATPLOTLIB-WORKBENCH</span>
+        </div>
+        <span class="wb-caption__hint mono">NumPy &#183; Pandas &#183; DuckDB SQL &#183; Matplotlib Auto-Export</span>
+      </div>
+
+      <div class="ide-workbench">
+        <div class="wb-titlebar">
+          <div class="wb-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="wb-title" id="ide-compiler-label">android-data-science/dataframe_kpi.py &#8212; Offline NumPy &amp; Pandas</div>
+          <button type="button" class="wb-run" id="btn-run-sandbox">
+            <span class="wb-run__tri" aria-hidden="true">&#9654;</span>
+            <span data-i18n="btn_run">Demo starten</span>
+          </button>
+        </div>
+
+        <div class="wb-tabs" role="tablist" aria-label="Interactive Workspace Tabs">
+          <button type="button" class="ide-tab active" data-tab="pandas" role="tab" aria-selected="true"><i></i>dataframe_kpi.py</button>
+          <button type="button" class="ide-tab" data-tab="duckdb" role="tab" aria-selected="false"><i></i>duckdb_polars.py</button>
+          <button type="button" class="ide-tab" data-tab="plot" role="tab" aria-selected="false"><i></i>plot_export.py</button>
+        </div>
+
+        <div class="wb-body">
+          <aside class="wb-explorer" aria-label="Project Explorer">
+            <div class="wb-explorer__head">Explorer</div>
+            <div class="wb-folder">&#9662; android-data-science</div>
+            <button type="button" class="wb-file active" data-tab="pandas"><b>PD</b><span>dataframe_kpi.py</span></button>
+            <button type="button" class="wb-file" data-tab="duckdb"><b>SQL</b><span>duckdb_polars.py</span></button>
+            <button type="button" class="wb-file" data-tab="plot"><b>PLT</b><span>plot_export.py</span></button>
+          </aside>
+
+          <div class="wb-main">
+            <div class="ide-editor-body" id="ide-code-box" role="region" aria-label="Interactive Code Preview"></div>
+            <div class="ide-terminal" id="ide-terminal-drawer" aria-live="polite">
+              <div class="term-header">
+                <span data-i18n="term_title">Interaktive Konsolenausgabe</span>
+                <div class="term-header-right">
+                  <span class="term-exec-badge" id="ide-exec-status">Ready</span>
+                  <button type="button" class="btn-term-close" id="btn-close-term" aria-label="Close terminal">&#10005;</button>
+                </div>
+              </div>
+              <div class="term-stream" id="ide-term-output"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wb-statusbar">
+          <span class="wb-statusbar__dot"><i></i><span id="wbStatusLang">Pandas &#183; NumPy Offline</span></span>
+          <div class="wb-statusbar__right">
+            <span>UTF-8</span>
+            <span>LF</span>
+            <span>Ln 8, Col 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- SC_REAL_GALLERY_START -->
+  <section class="section sc-real-gallery" id="screenshots" aria-label="App-Vorschau und Screenshots">
+    <div class="container">
+      <div class="sc-gp-head">
+        <div class="sc-gp-head-left">
+          <div class="sc-gp-eyebrow" data-i18n="gal_eyebrow">ECHTE ANDROID-AUFNAHMEN</div>
+          <h2 class="sc-gp-title" data-i18n="gal_title">App-Vorschau & Screenshots</h2>
+          <p class="sc-gp-short" data-i18n="gal_short_desc">Offline Code-Editor & IDE: Python, C/C++, Java, JS, HTML, SQL, PHP Compiler, Git</p>
+        </div>
+        <a class="sc-gp-store-bar" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=de-DE&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dde%26utm_campaign%3Dpython-ide%26utm_content%3Dpython-data-science" target="_blank" rel="noopener" aria-label="Code Editor: SuperCode IDE — Phoenix Global Studios">
+          <svg class="sc-gp-app-icon" width="38" height="38" viewBox="16 12 76 76" aria-hidden="true"><rect x="16" y="12" width="76" height="76" rx="18" fill="#070A10" stroke="#3B82F6" stroke-width="2"/><path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/><path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/><path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/><path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/></svg>
+          <span class="sc-gp-app-meta">
+            <span class="sc-gp-app-name">Code Editor: SuperCode IDE</span>
+            <span class="sc-gp-app-dev">Phoenix Global Studios</span>
+          </span>
+          <span class="sc-gp-store-arrow" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      </div>
+      <div class="sc-gp-stage">
+        <button type="button" class="sc-gp-nav sc-gp-nav--prev is-hidden" id="scGpPrev" aria-label="Vorheriges Bild">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="sc-gp-rail" id="scGpRail">
+          <button type="button" class="sc-gp-item sc-gp-item--feature" aria-label="Code Editor: SuperCode IDE — Offline-IDE für Android">
+            <img src="../assets/gallery/de/00_feature_graphic.webp" data-sc-file="00_feature_graphic.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_0" data-cap="Code Editor: SuperCode IDE — Offline-IDE für Android" alt="Code Editor: SuperCode IDE — Offline-IDE für Android" width="1024" height="500" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Offline Python 3.11 / 3.12 IDE &amp; Split-Konsole">
+            <img src="../assets/gallery/de/01_python_ide.webp" data-sc-file="01_python_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_1" data-cap="Offline Python 3.11 / 3.12 IDE &amp; Split-Konsole" alt="Offline Python 3.11 / 3.12 IDE &amp; Split-Konsole" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Lokaler C17 &amp; C++20 Mehrdatei-Compiler">
+            <img src="../assets/gallery/de/02_cpp20_compiler.webp" data-sc-file="02_cpp20_compiler.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_2" data-cap="Lokaler C17 &amp; C++20 Mehrdatei-Compiler" alt="Lokaler C17 &amp; C++20 Mehrdatei-Compiler" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Lokaler Web- &amp; Offline-PHP-Server + DevTools">
+            <img src="../assets/gallery/de/03_web_php_devtools.webp" data-sc-file="03_web_php_devtools.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_3" data-cap="Lokaler Web- &amp; Offline-PHP-Server + DevTools" alt="Lokaler Web- &amp; Offline-PHP-Server + DevTools" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Lokaler Dateimanager &amp; Projekt-Dateibaum (SAF)">
+            <img src="../assets/gallery/de/04_file_manager_tree.webp" data-sc-file="04_file_manager_tree.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_4" data-cap="Lokaler Dateimanager &amp; Projekt-Dateibaum (SAF)" alt="Lokaler Dateimanager &amp; Projekt-Dateibaum (SAF)" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Offline SQLite 3.54 Studio &amp; .db-Inspektor">
+            <img src="../assets/gallery/de/05_sql_sqlite_studio.webp" data-sc-file="05_sql_sqlite_studio.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_5" data-cap="Offline SQLite 3.54 Studio &amp; .db-Inspektor" alt="Offline SQLite 3.54 Studio &amp; .db-Inspektor" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Offline Java 17 IDE &amp; SQLite JDBC">
+            <img src="../assets/gallery/de/06_java17_ide.webp" data-sc-file="06_java17_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_6" data-cap="Offline Java 17 IDE &amp; SQLite JDBC" alt="Offline Java 17 IDE &amp; SQLite JDBC" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Visueller Git-Client, Verlauf &amp; SFTP/FTPS">
+            <img src="../assets/gallery/de/07_visual_git_timemachine.webp" data-sc-file="07_visual_git_timemachine.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_7" data-cap="Visueller Git-Client, Verlauf &amp; SFTP/FTPS" alt="Visueller Git-Client, Verlauf &amp; SFTP/FTPS" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="21-Tasten-Symbole &amp; 8 Design-IDE-Themes">
+            <img src="../assets/gallery/de/08_symbol_keyboard_themes.webp" data-sc-file="08_symbol_keyboard_themes.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_8" data-cap="21-Tasten-Symbole &amp; 8 Design-IDE-Themes" alt="21-Tasten-Symbole &amp; 8 Design-IDE-Themes" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+        </div>
+        <button type="button" class="sc-gp-nav sc-gp-nav--next" id="scGpNext" aria-label="Nächstes Bild">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  <div class="sc-lb-modal" id="scLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="App-Vorschau und Screenshots">
+    <div class="sc-lb-topbar">
+      <button type="button" class="sc-lb-back" id="scLbBack">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-i18n="gal_back">Zurück</span>
+      </button>
+      <div class="sc-lb-meta">
+        <span class="sc-lb-counter" id="scLbCounter">1 / 9</span>
+        <span class="sc-lb-title" id="scLbTitle"></span>
+      </div>
+      <button type="button" class="sc-lb-close" id="scLbClose" aria-label="Vorschau schließen">&times;</button>
+    </div>
+    <div class="sc-lb-stage">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--prev" id="scLbPrev" aria-label="Vorheriges Bild">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <img class="sc-lb-img" id="scLbImg" src="" alt="SuperCode IDE Preview">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--next" id="scLbNext" aria-label="Nächstes Bild">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="sc-lb-dots" id="scLbDots"></div>
+  </div>
+  <script defer src="../assets/gallery.js"></script>
+<!-- SC_REAL_GALLERY_END -->
+
+
+
+
+
+  <!-- ==================== 02 · CORE CAPABILITIES ==================== -->
+  <section class="section section--alt" id="capabilities">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">02</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_cap_eyebrow">KERNFUNKTIONEN</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="sec_cap_title">Entwickelt für Data Analysts, Forschende &amp; MINT-Studierende</h2>
+        <p class="sec-lead" data-i18n="sec_cap_lead">Von symbolischer Analysis in SymPy über Multi-Tabellen-SQL-Joins in DuckDB bis hin zu publikationsreifen Matplotlib-Plots läuft alles nativ auf Android.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="feature-grid feature-grid--6">
+          <article class="feature-card" id="cap1">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+              <span class="f-idx">02.1</span>
+            </div>
+            <h3 class="f-title" data-i18n="f1_title">Pandas, Polars &amp; DuckDB für echte lokale Datensätze</h3>
+            <p class="f-desc" data-i18n="f1_desc">Lege .csv-, .tsv-, .json-, .db- oder .sqlite3-Dateien in deinen Projektordner und frage sie direkt per pd.read_csv(), polars, pyarrow oder duckdb.sql() ab. Exportiere bereinigte CSVs oder SQLite-Tabellen direkt zurück auf den Speicher.</p>
+            <div class="f-code" data-i18n="f1_badge">pandas &#183; polars &#183; duckdb &#183; pyarrow &#183; fastparquet</div>
+          </article>
+          <article class="feature-card" id="cap2">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-chip"/></svg></span>
+              <span class="f-idx">02.2</span>
+            </div>
+            <h3 class="f-title" data-i18n="f2_title">Wissenschaftliches Rechnen mit NumPy, SciPy &amp; SymPy</h3>
+            <p class="f-desc" data-i18n="f2_desc">Führe lineare Algebra, FFT-Signalverarbeitung, numerische Integration, Optimierung und symbolisches Differenzieren offline mit numpy, scipy, sympy, mpmath, numexpr und pywavelets aus.</p>
+            <div class="f-code" data-i18n="f2_badge">Matrixalgebra &#183; FFT &#183; Symbolische Analysis &#183; .npy/.npz</div>
+          </article>
+          <article class="feature-card" id="cap3">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-web"/></svg></span>
+              <span class="f-idx">02.3</span>
+            </div>
+            <h3 class="f-title" data-i18n="f3_title">Zero-Config-Sync für Matplotlib- &amp; Seaborn-Diagramme</h3>
+            <p class="f-desc" data-i18n="f3_desc">Nutze plt.savefig('figure.png', dpi=200) oder exportiere .svg- und .pdf-Vektorgrafiken &#8212; selbst ohne savefig() lassen sich offene Figures erfassen und zur sofortigen Ansicht direkt in dein Projektverzeichnis synchronisieren.</p>
+            <div class="f-code" data-i18n="f3_badge">matplotlib &#183; seaborn &#183; wordcloud &#183; Integrierter HD-Viewer</div>
+          </article>
+          <article class="feature-card" id="cap4">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-db"/></svg></span>
+              <span class="f-idx">02.4</span>
+            </div>
+            <h3 class="f-title" data-i18n="f4_title">Nahtlose Brücke zu SuperCodes GB-Datei- &amp; SQL-Studios</h3>
+            <p class="f-desc" data-i18n="f4_desc">Ein 500-MB-CSV-Log oder eine SQLite-Datenbank mit vielen Tabellen? Bereinige riesige Dumps per Global Stream Regex Replace, prüfe Schemas in der SQL IDE und starte Python-Pandas-Pipelines im selben Workspace.</p>
+            <div class="f-code" data-i18n="f4_badge">GB-Log-Bereinigung + SQL-Explorer + Python Pandas</div>
+          </article>
+          <article class="feature-card" id="cap5">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-cube"/></svg></span>
+              <span class="f-idx">02.5</span>
+            </div>
+            <h3 class="f-title" data-i18n="f5_title">Geodaten- &amp; wissenschaftliche Dateiformate inklusive</h3>
+            <p class="f-desc" data-i18n="f5_desc">Arbeite auf Android-Tablets und Smartphones mit speziellen Forschungsformaten dank geopandas, shapely, pyproj, h5py, netcdf4, xarray und zarr.</p>
+            <div class="f-code" data-i18n="f5_badge">geopandas &#183; shapely &#183; h5py &#183; xarray &#183; zarr</div>
+          </article>
+          <article class="feature-card" id="cap6">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
+              <span class="f-idx">02.6</span>
+            </div>
+            <h3 class="f-title" data-i18n="f6_title">55:45-Tablet-Querformat-Split &amp; AST-Autovervollständigung</h3>
+            <p class="f-desc" data-i18n="f6_desc">Schreibe auf Android-Tablets und Foldables links auf 55 % DataFrame-Transformationen mit AST-Methodenvervollständigung und prüfe rechts auf 45 % breite Konsolen-Tabellenausgaben.</p>
+            <div class="f-code" data-i18n="f6_badge">7sp&#8211;26sp Konsolen-Zoom &#183; Breite Tabellenlesbarkeit</div>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">Für Smartphones, Foldables & Tablets · Leichtgewichtige 40,2 MB</span>
+        <a class="link-arrow" href="python-ide.html">
+          <span>Python Coding App Hub</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 03 · STEP-BY-STEP WORKFLOW GUIDE ==================== -->
+  <section class="section" id="workflow">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">03</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_wf_eyebrow">SCHRITT-FÜR-SCHRITT-ANLEITUNG</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="workflow_title">Daten analysieren &amp; Plots offline auf Android exportieren</h2>
+        <p class="sec-lead" data-i18n="workflow_lead">Ein kompletter lokaler Data-Science-Workflow ohne Jupyter-Timeouts oder Browser-Abbrüche.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="workflow-grid">
+          <article class="wf-step" id="step1">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 01</span>
+              <span class="wf-step__cmd">Project Folder -&gt; data.csv</span>
+            </div>
+            <h3 data-i18n="wf1_title">CSV-, JSON- oder SQLite-Dateien ins Projekt legen</h3>
+            <p data-i18n="wf1_desc">Öffne einen beliebigen Ordner auf deinem Android-Speicher mit `.csv`-, `.json`-, `.sqlite3`- oder `.npy`-Dateien &#8212; SuperCode bindet Begleitdateien automatisch ein.</p>
+          </article>
+          <article class="wf-step" id="step2">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 02</span>
+              <span class="wf-step__cmd">import pandas, matplotlib</span>
+            </div>
+            <h3 data-i18n="wf2_title">NumPy-, Pandas-, DuckDB- oder SymPy-Skripte schreiben</h3>
+            <p data-i18n="wf2_desc">Beim ersten Import werden die binären Scientific-Wheels lokal auf deinem Smartphone gecacht; jede weitere Ausführung läuft zu 100 % offline.</p>
+          </article>
+          <article class="wf-step" id="step3">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 03</span>
+              <span class="wf-step__cmd">plt.savefig('chart.png')</span>
+            </div>
+            <h3 data-i18n="wf3_title">Ausführen &amp; High-DPI-Grafiken automatisch speichern</h3>
+            <p data-i18n="wf3_desc">Tippe auf Ausführen &#9654;, um Tabellenausgaben in der Konsole anzuzeigen und PNG-, SVG-, PDF- oder bereinigte CSV-Ergebnisse automatisch in deinen Ordner zu schreiben.</p>
+          </article>
+          <article class="wf-step" id="step4">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 04</span>
+              <span class="wf-step__cmd">File Tree -&gt; Tap Image/PDF</span>
+            </div>
+            <h3 data-i18n="wf4_title">Diagramme im integrierten HD-Bild- &amp; PDF-Viewer prüfen</h3>
+            <p data-i18n="wf4_desc">Tippe im Dateibaum auf deine generierte PNG- oder PDF-Datei für gestochen scharfen Pinch-to-Zoom oder teile sie direkt mit deinem Team und für Laborberichte.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="wf_foot_note">Offline-Wheel-Caching &#183; Automatische Projektbaum-Aktualisierung nach jedem Lauf</span>
+        <a class="link-arrow" href="https://supercode-ide.github.io/tutorial/?lang=de&amp;ref=official_web" data-supercode-tutorial="true">
+          <span data-i18n="cta_tutorial">App-Guide</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 04 · FEATURED SUMMARY & COMPARISON MATRIX ==================== -->
+  <section class="section section--alt" id="comparison">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">04</span>
+        <span class="rule"></span>
+        <span data-i18n="comp_eyebrow">FUNKTIONSVERGLEICH</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="table_h2">SuperCode Data Science Studio vs. mobile Cloud-Notebooks</h2>
+        <p class="snippet-definition" data-i18n="snippet_p"><strong>SuperCode IDE</strong> bringt Offline-Python-Data-Science auf Android mit zwischengespeicherter Ausführung von NumPy, SciPy, SymPy, Pandas, Polars, DuckDB, Matplotlib und Seaborn, direktem Zugriff auf lokale CSV-/SQLite-Dateien und automatischem High-DPI-Diagramm-Sync.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="table-wrap">
+          <table class="obsidian-benchmark-table">
+            <caption data-i18n="table_caption">MOBILER PYTHON-DATA-SCIENCE-VERGLEICH</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="th_0">Data-Science-Workflow</th>
+                <th scope="col" data-i18n="th_1">SuperCode Android Studio</th>
+                <th scope="col" data-i18n="th_2">Mobile Cloud-Notebooks</th>
+                <th scope="col" data-i18n="th_3">Einfache Python-Apps</th>
+                <th scope="col" data-i18n="th_4">Nur Desktop-Laptop</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="tr1_c0">Offline-Ausführung</th>
+                <td><strong data-i18n="tr1_c1">Gecachtes NumPy, Pandas, DuckDB &amp; Matplotlib</strong></td>
+                <td data-i18n="tr1_c2">Bricht ohne Empfang ab</td>
+                <td data-i18n="tr1_c3">Nur Stdlib-Math</td>
+                <td data-i18n="tr1_c4">Offline</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr2_c0">Moderne Data-Engines</th>
+                <td><strong data-i18n="tr2_c1">Pandas + Polars + DuckDB + PyArrow</strong></td>
+                <td data-i18n="tr2_c2">Je nach Container verschieden</td>
+                <td data-i18n="tr2_c3">Nicht unterstützt</td>
+                <td data-i18n="tr2_c4">Unterstützt</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr3_c0">Lokaler Datei- &amp; Chart-Sync</th>
+                <td><strong data-i18n="tr3_c1">Direktes Android-Ordner-I/O + HD-Viewer</strong></td>
+                <td data-i18n="tr3_c2">Manueller Upload/Download</td>
+                <td data-i18n="tr3_c3">Versteckte Temp-Sandbox</td>
+                <td data-i18n="tr3_c4">Direkt</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr4_c0">Große Roh-CSV-Aufbereitung</th>
+                <td><strong data-i18n="tr4_c1">Integrierter GB-Dateipager &amp; Stream-Regex-Ersetzung</strong></td>
+                <td data-i18n="tr4_c2">Browser-Tab stürzt ab</td>
+                <td data-i18n="tr4_c3">Absturz bei &gt;20 MB</td>
+                <td data-i18n="tr4_c4">Zusätzliche Tools nötig</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr5_c0">SQL-Datenbank-GUI</th>
+                <td><strong data-i18n="tr5_c1">Integriertes 9-Modi-SQL-Studio inklusive</strong></td>
+                <td data-i18n="tr5_c2">Keine</td>
+                <td data-i18n="tr5_c3">Keine</td>
+                <td data-i18n="tr5_c4">Separater DB-Client</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">Für Smartphones, Foldables & Tablets · Leichtgewichtige 40,2 MB</span>
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=de-DE&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dde%26utm_campaign%3Dpython-ide%26utm_content%3Dpython-data-science" target="_blank" rel="noopener">
+          <span>Google Play</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 05 · VISIBLE EDITORIAL FAQ ==================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-head">
+          <div class="sec-index">
+            <span class="num">05</span>
+            <span class="rule"></span>
+            <span data-i18n="sec3_eyebrow">FRAGEN & ANTWORTEN</span>
+          </div>
+          <h2 class="h2" data-i18n="sec3_title">Häufig gestellte Fragen (FAQ)</h2>
+          <p class="sec-lead" data-i18n="faq_lead">Fragen zur Offline-Ausführung von NumPy, Pandas, Polars und Matplotlib auf Android-Smartphones und -Tablets.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary><span data-i18n="faq1_q">Laufen NumPy und Pandas wirklich offline auf meinem Android-Smartphone?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq1_a">Ja. Sobald die Scientific-Laufzeit initialisiert ist und das Paket-Wheel (z. B. `numpy`, `pandas` oder `matplotlib`) auf deinem Gerät gecacht wurde, laufen alle weiteren Durchläufe zu 100 % offline ohne Internet.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq2_q">Wie zeige ich `matplotlib.pyplot`-Diagramme auf Android an?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq2_a">Speichere dein Diagramm mit `plt.savefig('plot.png', dpi=180)` (oder `.svg` / `.pdf`). SuperCode synchronisiert die Datei direkt in dein aktives Projektverzeichnis, sodass du sie sofort im integrierten hochauflösenden Bild- oder PDF-Viewer öffnen kannst.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq3_q">Kann mein Pandas-Skript eine `.csv`- oder `.sqlite`-Datei im selben Ordner lesen?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq3_a">Ja. Relative Pfade wie `pd.read_csv('sales.csv')` oder `sqlite3.connect('app.db')` werden direkt im Projekt-Workspace aufgelöst, und geänderte oder neu erstellte Dateien werden nach Ausführungsende zurücksynchronisiert.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq4_q">Werden neben Pandas auch Polars und DuckDB unterstützt?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq4_a">Ja &#8212; sowohl `polars` als auch `duckdb` (zusammen mit `pyarrow` und `fastparquet`) werden für schnelle analytische Abfragen auf mobilen Geräten unterstützt.</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==================== 06 · TOPICAL AUTHORITY ECOSYSTEM CLUSTER ==================== -->
+  <section class="section section--alt" id="ecosystem-guides">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">06</span>
+        <span class="rule"></span>
+        <span>PYTHON-CODING-APP-ÖKOSYSTEM &amp; GUIDES</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2>Vollständige Dokumentation zur Python-Coding-App</h2>
+        <p class="sec-lead">Springe direkt zwischen dem Python-Coding-App-Hub und allen 7 spezialisierten Python-Guides für Android.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="py-cluster-grid">
+          <a href="python-ide.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-HUB</span>
+              <span class="py-spoke-card__tag">Python 3.11/3.12 · Pillar Hub</span>
+            </div>
+            <h3>Python-Coding-App &amp; IDE im Überblick</h3>
+            <p>Gesamtüberblick über die Offline-Python-3.11- &amp; 3.12-Runtime von SuperCode, interaktive input()-Konsole, PEP-8-Tools und Multi-Language-Studio.</p>
+            <div class="py-spoke-card__go">
+              <span>python-ide</span>
+              <span>Guide öffnen &rarr;</span>
+            </div>
+          </a>
+          <a href="python-pip-manager.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-01</span>
+              <span class="py-spoke-card__tag">PIP · .whl · requirements.txt</span>
+            </div>
+            <h3>PIP- &amp; Offline-.whl-Guide</h3>
+            <p>Installiere PyPI-Pakete, verknüpfe 35+ Modul-Aliase automatisch, führe requirements.txt im Stapel aus oder importiere Offline-.whl-Archive aus Downloads.</p>
+            <div class="py-spoke-card__go">
+              <span>python-pip-manager</span>
+              <span>Guide öffnen &rarr;</span>
+            </div>
+          </a>
+          <a href="python-offline-libraries.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-02</span>
+              <span class="py-spoke-card__tag">250+ Stdlib · PyPI · Scientific</span>
+            </div>
+            <h3>Unterstützte Python-Bibliotheken</h3>
+            <p>Vollständiges Kompatibilitätsverzeichnis für 200+ Python-3.11-Standardmodule, Pure-Python-PyPI-Wheels, 60+ Scientific-Pakete und Cloud-ML.</p>
+            <div class="py-spoke-card__go">
+              <span>python-offline-libraries</span>
+              <span>Guide öffnen &rarr;</span>
+            </div>
+          </a>
+          <a href="python-data-science.html" class="py-spoke-card is-active">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-03</span>
+              <span class="py-spoke-card__tag">NumPy · Pandas · Polars · DuckDB</span>
+            </div>
+            <h3>NumPy, Pandas &amp; Matplotlib</h3>
+            <p>Führe Scientific Python 3.12 lokal gecacht auf dem Gerät aus, analysiere CSV/Parquet/SQLite-Datensätze und speichere Matplotlib- &amp; Seaborn-Plots automatisch.</p>
+            <div class="py-spoke-card__go">
+              <span>python-data-science</span>
+              <span>Guide-Ansicht</span>
+            </div>
+          </a>
+          <a href="python-machine-learning.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-04</span>
+              <span class="py-spoke-card__tag">sklearn · XGBoost · cv2 · PyTorch</span>
+            </div>
+            <h3>Scikit-Learn, OpenCV &amp; KI</h3>
+            <p>Trainiere Scikit-Learn- und XGBoost-Modelle offline, bearbeite Bilder mit OpenCV &amp; Pillow und lagere schwere PyTorch/TensorFlow-Jobs mit 1:1-Tracebacks aus.</p>
+            <div class="py-spoke-card__go">
+              <span>python-machine-learning</span>
+              <span>Guide öffnen &rarr;</span>
+            </div>
+          </a>
+          <a href="python-web-scraping-automation.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-05</span>
+              <span class="py-spoke-card__tag">Requests · BS4 · Flask · Telebot</span>
+            </div>
+            <h3>Web-Scraping, APIs &amp; Bots</h3>
+            <p>Entwickle BeautifulSoup-Scraper, Pydantic-REST-Clients, Flask-Micro-Apps, Telegram-Bots und python-docx/SQLite-Automatisierungsskripte auf Android.</p>
+            <div class="py-spoke-card__go">
+              <span>python-web-scraping-automation</span>
+              <span>Guide öffnen &rarr;</span>
+            </div>
+          </a>
+          <a href="python-projects-workspace.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-06</span>
+              <span class="py-spoke-card__tag">Entry-Routing · PEP 8 · Git/SFTP</span>
+            </div>
+            <h3>Multi-File-Projekte &amp; Git</h3>
+            <p>Meistere ordnerübergreifende Python-Projekte, smarte main.py-Arbitration, Live-input(), PEP-8-Formatierung, AST-Vervollständigung und Visual Git.</p>
+            <div class="py-spoke-card__go">
+              <span>python-projects-workspace</span>
+              <span>Guide öffnen &rarr;</span>
+            </div>
+          </a>
+          <a href="learn-python-android.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-07</span>
+              <span class="py-spoke-card__tag">Kein Login · 8 Vorlagen · CS101</span>
+            </div>
+            <h3>Python offline lernen</h3>
+            <p>Übe Python überall im Flugmodus mit 8 ausführbaren Starter-Vorlagen, einer 21-Tasten-Python-Symbolleiste und Echtzeit-Syntax-Fehler-Radar.</p>
+            <div class="py-spoke-card__go">
+              <span>learn-python-android</span>
+              <span>Guide öffnen &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span>8 vernetzte Android-Python-Guides · Offline-Python 3.11 &amp; Scientific 3.12</span>
+        <a class="link-arrow" href="python-ide.html">
+          <span>Python-Coding-App-Hub</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="siteFooter">
+  <div class="container">
+    <div class="footer-cta" id="footerCta">
+      <div>
+        <h2 class="h2" data-i18n="cta_h2">Überall auf Android Daten analysieren &amp; Diagramme zeichnen.</h2>
+        <p data-i18n="cta_desc">Installiere SuperCode IDE kostenlos bei Google Play und nutze NumPy, Pandas, DuckDB und Matplotlib direkt in der Hosentasche.</p>
+      </div>
+      <div class="footer-cta__btns">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=de-DE&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dde%26utm_campaign%3Dpython-ide%26utm_content%3Dpython-data-science" target="_blank" rel="noopener" class="btn btn--gold">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="cta_btn">Bei Google Play</span>
+        </a>
+        <a href="https://supercode-ide.github.io/tutorial/?lang=de&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+          <span data-i18n="cta_tutorial">App-Guide</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+          <span>SuperCode</span>
+          <span class="brand__tag">IDE</span>
+        </a>
+        <p data-i18n="footer_tagline">Nativer mobiler Code-Editor und Offline-Entwicklungsstudio für Android-Entwickler, Studierende und Lehrende weltweit.</p>
+        <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
+        <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=de-DE&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dde%26utm_campaign%3Dpython-ide%26utm_content%3Dpython-data-science" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://supercode-ide.github.io/tutorial/?lang=de&amp;ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">App-Guide</span> &#8599;</a>
+          <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">Sprache wählen</span></button>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_core">Editor & Große Dateien</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Übersicht</a></li>
+          <li><a href="code-editor.html" data-i18n="nav_code_editor">Code-Editor</a></li>
+          <li><a href="large-file-editor.html" data-i18n="nav_large_file">GB-Dateien</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_lang">Offline-Compiler & Sprachen</h4>
+        <ul>
+          <li><a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a></li>
+          <li><a href="c-compiler.html" data-i18n="nav_c_compiler">C-Compiler</a></li>
+          <li><a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a></li>
+          <li><a href="java-ide.html" data-i18n="nav_java_ide">Java 17</a></li>
+          <li><a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a></li>
+          <li><a href="lua-ide.html" data-i18n="nav_lua_ide">Lua 5.4</a></li>
+          <li><a href="shell-ide.html" data-i18n="nav_shell_ide">Shell & Kotlin</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_devops">Web, SQL & Remote-DevOps</h4>
+        <ul>
+          <li><a href="web-ide.html" data-i18n="nav_web_ide">Web & PHP</a></li>
+          <li><a href="sql-ide.html" data-i18n="nav_sql_ide">SQL-Studio</a></li>
+          <li><a href="git-client.html" data-i18n="nav_git_client">Visual Git</a></li>
+          <li><a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP & FTPS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <span>&copy; 2026 Phoenix Global Studios. All rights reserved.</span>
+      <span class="mono">com.phoenixglobal.supercodeeditor</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="mobile-bottom-bar" id="mobileBottomBar" aria-label="Quick App Actions">
+  <div class="dock-app-icon" aria-hidden="true"><svg><use href="#sc-logo"/></svg></div>
+  <div class="bottom-bar-info">
+    <div class="bottom-bar-title">SuperCode</div>
+    <div class="bottom-bar-sub"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  </div>
+  <div class="bottom-bar-actions">
+    <a href="https://supercode-ide.github.io/tutorial/?lang=de&amp;ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">App-Guide</a>
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=de-DE&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dde%26utm_campaign%3Dpython-ide%26utm_content%3Dpython-data-science" target="_blank" rel="noopener" class="btn-play-mini">
+      <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
+      <span data-i18n="bottom_cta">Laden</span>
+    </a>
+  </div>
+</aside>
+
+<div class="modal-overlay" id="langModal" role="dialog" aria-modal="true" aria-labelledby="langModalTitle">
+  <div class="lang-modal">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div class="modal-header">
+      <h3 id="langModalTitle"><span data-i18n="modal_title">Sprache wählen</span><span class="modal-lang-count">32</span></h3>
+      <button type="button" class="btn-close-modal" onclick="closeLangModal()" aria-label="Schließen">&#10005;</button>
+    </div>
+    <div class="lang-grid">
+      <button type="button" class="lang-option" data-code="en" onclick="setLanguage('en')"><span class="lang-option__name">English</span><span class="lang-option__code">EN</span></button>
+      <button type="button" class="lang-option" data-code="zh" onclick="setLanguage('zh')"><span class="lang-option__name">简体中文</span><span class="lang-option__code">简中</span></button>
+      <button type="button" class="lang-option" data-code="zh-tw" onclick="setLanguage('zh-tw')"><span class="lang-option__name">繁體中文</span><span class="lang-option__code">繁中</span></button>
+      <button type="button" class="lang-option" data-code="es" onclick="setLanguage('es')"><span class="lang-option__name">Español</span><span class="lang-option__code">ES</span></button>
+      <button type="button" class="lang-option" data-code="pt" onclick="setLanguage('pt')"><span class="lang-option__name">Português</span><span class="lang-option__code">PT</span></button>
+      <button type="button" class="lang-option" data-code="ja" onclick="setLanguage('ja')"><span class="lang-option__name">日本語</span><span class="lang-option__code">日本語</span></button>
+      <button type="button" class="lang-option" data-code="ko" onclick="setLanguage('ko')"><span class="lang-option__name">한국어</span><span class="lang-option__code">한국어</span></button>
+      <button type="button" class="lang-option active" data-code="de" onclick="setLanguage('de')"><span class="lang-option__name">Deutsch</span><span class="lang-option__code">DE</span></button>
+      <button type="button" class="lang-option" data-code="fr" onclick="setLanguage('fr')"><span class="lang-option__name">Français</span><span class="lang-option__code">FR</span></button>
+      <button type="button" class="lang-option" data-code="ru" onclick="setLanguage('ru')"><span class="lang-option__name">Русский</span><span class="lang-option__code">RU</span></button>
+      <button type="button" class="lang-option" data-code="hi" onclick="setLanguage('hi')"><span class="lang-option__name">हिन्दी</span><span class="lang-option__code">HI</span></button>
+      <button type="button" class="lang-option" data-code="id" onclick="setLanguage('id')"><span class="lang-option__name">Bahasa Indonesia</span><span class="lang-option__code">ID</span></button>
+      <button type="button" class="lang-option" data-code="it" onclick="setLanguage('it')"><span class="lang-option__name">Italiano</span><span class="lang-option__code">IT</span></button>
+      <button type="button" class="lang-option" data-code="vi" onclick="setLanguage('vi')"><span class="lang-option__name">Tiếng Việt</span><span class="lang-option__code">VI</span></button>
+      <button type="button" class="lang-option" data-code="th" onclick="setLanguage('th')"><span class="lang-option__name">ไทย</span><span class="lang-option__code">ไทย</span></button>
+      <button type="button" class="lang-option" data-code="tr" onclick="setLanguage('tr')"><span class="lang-option__name">Türkçe</span><span class="lang-option__code">TR</span></button>
+      <button type="button" class="lang-option" data-code="ar" onclick="setLanguage('ar')"><span class="lang-option__name">العربية</span><span class="lang-option__code">AR</span></button>
+      <button type="button" class="lang-option" data-code="pl" onclick="setLanguage('pl')"><span class="lang-option__name">Polski</span><span class="lang-option__code">PL</span></button>
+      <button type="button" class="lang-option" data-code="nl" onclick="setLanguage('nl')"><span class="lang-option__name">Nederlands</span><span class="lang-option__code">NL</span></button>
+      <button type="button" class="lang-option" data-code="sv" onclick="setLanguage('sv')"><span class="lang-option__name">Svenska</span><span class="lang-option__code">SV</span></button>
+      <button type="button" class="lang-option" data-code="nb" onclick="setLanguage('nb')"><span class="lang-option__name">Norsk Bokmål</span><span class="lang-option__code">NB</span></button>
+      <button type="button" class="lang-option" data-code="da" onclick="setLanguage('da')"><span class="lang-option__name">Dansk</span><span class="lang-option__code">DA</span></button>
+      <button type="button" class="lang-option" data-code="fi" onclick="setLanguage('fi')"><span class="lang-option__name">Suomi</span><span class="lang-option__code">FI</span></button>
+      <button type="button" class="lang-option" data-code="cs" onclick="setLanguage('cs')"><span class="lang-option__name">Čeština</span><span class="lang-option__code">CS</span></button>
+      <button type="button" class="lang-option" data-code="uk" onclick="setLanguage('uk')"><span class="lang-option__name">Українська</span><span class="lang-option__code">UK</span></button>
+      <button type="button" class="lang-option" data-code="ro" onclick="setLanguage('ro')"><span class="lang-option__name">Română</span><span class="lang-option__code">RO</span></button>
+      <button type="button" class="lang-option" data-code="hu" onclick="setLanguage('hu')"><span class="lang-option__name">Magyar</span><span class="lang-option__code">HU</span></button>
+      <button type="button" class="lang-option" data-code="el" onclick="setLanguage('el')"><span class="lang-option__name">Ελληνικά</span><span class="lang-option__code">EL</span></button>
+      <button type="button" class="lang-option" data-code="he" onclick="setLanguage('he')"><span class="lang-option__name">עברית</span><span class="lang-option__code">HE</span></button>
+      <button type="button" class="lang-option" data-code="ms" onclick="setLanguage('ms')"><span class="lang-option__name">Bahasa Melayu</span><span class="lang-option__code">MS</span></button>
+      <button type="button" class="lang-option" data-code="tl" onclick="setLanguage('tl')"><span class="lang-option__name">Filipino</span><span class="lang-option__code">FIL</span></button>
+      <button type="button" class="lang-option" data-code="bn" onclick="setLanguage('bn')"><span class="lang-option__name">বাংলা</span><span class="lang-option__code">BN</span></button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var WORKBENCH_SAMPLES = {"pandas": {"label": "android-data-science/dataframe_kpi.py \u2014 Offline NumPy & Pandas", "status": "Pandas \u00b7 NumPy Offline", "lines": ["<span class=\"tok-kw\">import<\/span> numpy <span class=\"tok-kw\">as<\/span> np, pandas <span class=\"tok-kw\">as<\/span> pd", "", "df = pd.<span class=\"tok-fn\">DataFrame<\/span>({", "    <span class=\"tok-str\">&quot;region&quot;<\/span>: [<span class=\"tok-str\">&quot;NA&quot;<\/span>, <span class=\"tok-str\">&quot;EU&quot;<\/span>, <span class=\"tok-str\">&quot;APAC&quot;<\/span>, <span class=\"tok-str\">&quot;LATAM&quot;<\/span>],", "    <span class=\"tok-str\">&quot;users&quot;<\/span>: [<span class=\"tok-num\">18400<\/span>, <span class=\"tok-num\">14200<\/span>, <span class=\"tok-num\">22900<\/span>, <span class=\"tok-num\">9800<\/span>],", "})", "df[<span class=\"tok-str\">&quot;share_pct&quot;<\/span>] = (df[<span class=\"tok-str\">&quot;users&quot;<\/span>] / df[<span class=\"tok-str\">&quot;users&quot;<\/span>].<span class=\"tok-fn\">sum<\/span>() * <span class=\"tok-num\">100<\/span>).<span class=\"tok-fn\">round<\/span>(<span class=\"tok-num\">1<\/span>)", "<span class=\"tok-fn\">print<\/span>(df.<span class=\"tok-fn\">to_string<\/span>(index=<span class=\"tok-kw\">False<\/span>))"], "output": ["<span class=\"term-prompt\">[Scientific 3.12]<\/span> Running dataframe_kpi.py (cached offline)", "region  users  share_pct", "    NA  18400       28.2", "    EU  14200       21.7", "  APAC  22900       35.1", "<span class=\"term-info\">[Process exited 0 \u00b7 46ms]<\/span>"]}, "duckdb": {"label": "android-data-science/duckdb_polars.py \u2014 Columnar Analytics", "status": "DuckDB \u00b7 Polars", "lines": ["<span class=\"tok-kw\">import<\/span> duckdb", "", "rel = duckdb.<span class=\"tok-fn\">sql<\/span>(<span class=\"tok-str\">&quot;SELECT category, COUNT(*) AS rows, ROUND(AVG(latency_ms), 2) AS avg_ms FROM latency_samples GROUP BY category ORDER BY avg_ms ASC&quot;<\/span>)", "<span class=\"tok-fn\">print<\/span>(rel)"], "output": ["<span class=\"term-prompt\">$<\/span> python3 duckdb_polars.py", "\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510", "\u2502 category \u2502 rows  \u2502 avg_ms \u2502", "\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524", "\u2502 DB       \u2502     1 \u2502   4.20 \u2502", "\u2502 API      \u2502     2 \u2502  12.60 \u2502", "\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518"]}, "plot": {"label": "android-data-science/plot_export.py \u2014 Matplotlib Workspace Sync", "status": "Matplotlib \u00b7 Auto-Sync", "lines": ["<span class=\"tok-kw\">import<\/span> matplotlib.pyplot <span class=\"tok-kw\">as<\/span> plt, numpy <span class=\"tok-kw\">as<\/span> np", "", "t = np.<span class=\"tok-fn\">linspace<\/span>(<span class=\"tok-num\">0<\/span>, <span class=\"tok-num\">2<\/span> * np.pi, <span class=\"tok-num\">200<\/span>)", "plt.<span class=\"tok-fn\">figure<\/span>(figsize=(<span class=\"tok-num\">6<\/span>, <span class=\"tok-num\">3.5<\/span>), dpi=<span class=\"tok-num\">160<\/span>)", "plt.<span class=\"tok-fn\">plot<\/span>(t, np.<span class=\"tok-fn\">sin<\/span>(t), label=<span class=\"tok-str\">&quot;Harmonic A&quot;<\/span>)", "plt.<span class=\"tok-fn\">savefig<\/span>(<span class=\"tok-str\">&quot;harmonic_wave.png&quot;<\/span>, bbox_inches=<span class=\"tok-str\">&quot;tight&quot;<\/span>)", "<span class=\"tok-fn\">print<\/span>(<span class=\"tok-str\">&quot;Saved harmonic_wave.png to project folder!&quot;<\/span>)"], "output": ["Saved harmonic_wave.png to project folder!", "<span class=\"term-info\">[Artifact Sync] harmonic_wave.png (48.2 KB) written to android-data-science/<\/span>", "<span class=\"term-info\">\u2713 Tap harmonic_wave.png in Explorer to inspect in HD Image Viewer<\/span>"]}};
+    var currentTab = 'pandas';
+    var runTimer = null;
+
+    function renderWorkbench(tabKey, animateRun) {
+      var sample = WORKBENCH_SAMPLES[tabKey] || WORKBENCH_SAMPLES['pandas'];
+      if (!sample) { return; }
+      currentTab = tabKey;
+      var labelEl = document.getElementById('ide-compiler-label');
+      if (labelEl) { labelEl.textContent = sample.label; }
+      var statusEl = document.getElementById('wbStatusLang');
+      if (statusEl) { statusEl.textContent = sample.status; }
+
+      var tabs = document.querySelectorAll('.ide-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        var active = tabs[i].getAttribute('data-tab') === tabKey;
+        tabs[i].classList.toggle('active', active);
+        tabs[i].setAttribute('aria-selected', active ? 'true' : 'false');
+      }
+      var files = document.querySelectorAll('.wb-file');
+      for (var f = 0; f < files.length; f++) {
+        files[f].classList.toggle('active', files[f].getAttribute('data-tab') === tabKey);
+      }
+
+      var codeBox = document.getElementById('ide-code-box');
+      if (codeBox) {
+        var html = '';
+        for (var l = 0; l < sample.lines.length; l++) {
+          var activeCls = (l === sample.lines.length - 1) ? ' active-line' : '';
+          html += '<div class="code-line' + activeCls + '"><span class="ln">' + (l + 1) + '</span><span class="code-content">' + sample.lines[l] + '</span></div>';
+        }
+        codeBox.innerHTML = html;
+      }
+
+      if (animateRun) {
+        runWorkbenchSample();
+      }
+    }
+
+    function runWorkbenchSample() {
+      var sample = WORKBENCH_SAMPLES[currentTab] || WORKBENCH_SAMPLES['pandas'];
+      var drawer = document.getElementById('ide-terminal-drawer');
+      var out = document.getElementById('ide-term-output');
+      var badge = document.getElementById('ide-exec-status');
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (!drawer || !out || !sample) { return; }
+
+      if (runTimer) { clearTimeout(runTimer); }
+      drawer.classList.add('is-open');
+      if (runBtn) { runBtn.classList.add('is-running'); }
+      if (badge) { badge.textContent = 'Running...'; badge.classList.remove('done'); }
+      out.innerHTML = '';
+
+      var idx = 0;
+      function step() {
+        if (idx < sample.output.length) {
+          var row = document.createElement('span');
+          row.className = 'term-line-item';
+          row.innerHTML = sample.output[idx];
+          out.appendChild(row);
+          idx++;
+          runTimer = setTimeout(step, 80);
+        } else {
+          var cur = document.createElement('span');
+          cur.className = 'term-cursor';
+          cur.textContent = '\u258b';
+          out.appendChild(cur);
+          if (badge) { badge.textContent = 'Completed'; badge.classList.add('done'); }
+          if (runBtn) { runBtn.classList.remove('is-running'); }
+        }
+      }
+      step();
+    }
+
+    function initNavigationAndSmartBar() {
+      var menuBtn = document.getElementById('menuBtn');
+      var drawer = document.getElementById('siteDrawer');
+      var bar = document.getElementById('mobileBottomBar');
+      var heroCta = document.getElementById('heroCta');
+      var siteFooter = document.getElementById('siteFooter');
+
+      function syncBar() {
+        if (!bar) { return; }
+        var drawerOpen = Boolean(drawer && !drawer.hasAttribute('hidden'));
+        var modalEl = document.getElementById('langModal');
+        var modalOpen = Boolean(modalEl && modalEl.classList.contains('show'));
+        var vh = window.innerHeight || document.documentElement.clientHeight || 800;
+        var heroInView = false;
+        if (heroCta) {
+          var hr = heroCta.getBoundingClientRect();
+          heroInView = (hr.bottom > 0 && hr.top < vh);
+        }
+        var footerInView = false;
+        if (siteFooter) {
+          var fr = siteFooter.getBoundingClientRect();
+          footerInView = (fr.top < vh + 24);
+        }
+        var scrollYVal = window.pageYOffset || window.scrollY || 0;
+        var docH = Math.max(document.body ? document.body.scrollHeight : 0, document.documentElement ? document.documentElement.scrollHeight : 0);
+        var nearBottom = (vh + scrollYVal) >= (docH - 120);
+        var shouldShow = !drawerOpen && !modalOpen && !heroInView && !footerInView && !nearBottom;
+        bar.classList.toggle('is-visible', shouldShow);
+      }
+
+      window.__supercodeSyncMobileBar = syncBar;
+
+      function setDrawer(open) {
+        if (!menuBtn || !drawer) { return; }
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { drawer.removeAttribute('hidden'); }
+        else { drawer.setAttribute('hidden', ''); }
+        syncBar();
+      }
+      if (menuBtn && drawer) {
+        menuBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          setDrawer(menuBtn.getAttribute('aria-expanded') !== 'true');
+        });
+        drawer.addEventListener('click', function (e) {
+          if (e.target && e.target.closest('a')) { setDrawer(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!drawer.hasAttribute('hidden') && !drawer.contains(e.target) && e.target !== menuBtn && !menuBtn.contains(e.target)) {
+            setDrawer(false);
+          }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') { setDrawer(false); }
+        });
+      }
+
+      if (bar) {
+        window.addEventListener('scroll', syncBar, { passive: true });
+        window.addEventListener('resize', syncBar);
+        syncBar();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var tabBtns = document.querySelectorAll('.ide-tab, .wb-file');
+      for (var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', function () {
+          renderWorkbench(this.getAttribute('data-tab'), true);
+        });
+      }
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (runBtn) { runBtn.addEventListener('click', function () { runWorkbenchSample(); }); }
+      var closeTerm = document.getElementById('btn-close-term');
+      if (closeTerm) {
+        closeTerm.addEventListener('click', function () {
+          var d = document.getElementById('ide-terminal-drawer');
+          if (d) { d.classList.remove('is-open'); }
+        });
+      }
+      initNavigationAndSmartBar();
+      renderWorkbench('pandas', false);
+    });
+  })();
+</script>
+<script>window.__SUPERCODE_STATIC_LANG__="de";window.__SUPERCODE_STATIC_CANONICAL__="https://supercode-ide.github.io/de/python-data-science.html";</script>
+<script src="../i18n_extended.js"></script>
+</body>
+</html>

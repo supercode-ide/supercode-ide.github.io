@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="cs" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090A0F">
+  <meta name="color-scheme" content="only dark">
+  <meta name="supported-color-schemes" content="dark">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <title>Java IDE a offline aplikace pro Java 17 na Android — Records, OOP a SQLite JDBC | SuperCode</title>
+  <meta name="description" content="Kompilujte a spouštějte Java 17 offline na Androidu — moderní alternativa k aplikacím s Java 11. Podporuje records, sealed třídy, Streams, vícetřídní OOP, 0ms cache bajtkódu, vestavěné SQLite JDBC a vlastní soubory .jar.">
+  <meta name="keywords" content="java ide for android, java coding app, offline java 17 compiler android, jvdroid alternative java 17, run multi class java on phone, ap computer science a java app, java sqlite jdbc android">
+  <meta name="author" content="Phoenix Global Studios">
+  <meta name="google-play-app" content="app-id=com.phoenixglobal.supercodeeditor">
+
+  <link id="canonical-link" rel="canonical" href="https://supercode-ide.github.io/cs/java-ide.html">
+  <link rel="alternate" hreflang="x-default" href="https://supercode-ide.github.io/java-ide.html">
+  <link rel="alternate" hreflang="en" href="https://supercode-ide.github.io/java-ide.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://supercode-ide.github.io/zh/java-ide.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://supercode-ide.github.io/zh-tw/java-ide.html">
+  <link rel="alternate" hreflang="es" href="https://supercode-ide.github.io/es/java-ide.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://supercode-ide.github.io/pt/java-ide.html">
+  <link rel="alternate" hreflang="ja" href="https://supercode-ide.github.io/ja/java-ide.html">
+  <link rel="alternate" hreflang="ko" href="https://supercode-ide.github.io/ko/java-ide.html">
+  <link rel="alternate" hreflang="de" href="https://supercode-ide.github.io/de/java-ide.html">
+  <link rel="alternate" hreflang="fr" href="https://supercode-ide.github.io/fr/java-ide.html">
+  <link rel="alternate" hreflang="ru" href="https://supercode-ide.github.io/ru/java-ide.html">
+  <link rel="alternate" hreflang="hi" href="https://supercode-ide.github.io/hi/java-ide.html">
+  <link rel="alternate" hreflang="id" href="https://supercode-ide.github.io/id/java-ide.html">
+  <link rel="alternate" hreflang="it" href="https://supercode-ide.github.io/it/java-ide.html">
+  <link rel="alternate" hreflang="vi" href="https://supercode-ide.github.io/vi/java-ide.html">
+  <link rel="alternate" hreflang="th" href="https://supercode-ide.github.io/th/java-ide.html">
+  <link rel="alternate" hreflang="tr" href="https://supercode-ide.github.io/tr/java-ide.html">
+  <link rel="alternate" hreflang="ar" href="https://supercode-ide.github.io/ar/java-ide.html">
+  <link rel="alternate" hreflang="pl" href="https://supercode-ide.github.io/pl/java-ide.html">
+  <link rel="alternate" hreflang="nl" href="https://supercode-ide.github.io/nl/java-ide.html">
+  <link rel="alternate" hreflang="sv" href="https://supercode-ide.github.io/sv/java-ide.html">
+  <link rel="alternate" hreflang="nb" href="https://supercode-ide.github.io/nb/java-ide.html">
+  <link rel="alternate" hreflang="da" href="https://supercode-ide.github.io/da/java-ide.html">
+  <link rel="alternate" hreflang="fi" href="https://supercode-ide.github.io/fi/java-ide.html">
+  <link rel="alternate" hreflang="cs" href="https://supercode-ide.github.io/cs/java-ide.html">
+  <link rel="alternate" hreflang="uk" href="https://supercode-ide.github.io/uk/java-ide.html">
+  <link rel="alternate" hreflang="ro" href="https://supercode-ide.github.io/ro/java-ide.html">
+  <link rel="alternate" hreflang="hu" href="https://supercode-ide.github.io/hu/java-ide.html">
+  <link rel="alternate" hreflang="el" href="https://supercode-ide.github.io/el/java-ide.html">
+  <link rel="alternate" hreflang="he" href="https://supercode-ide.github.io/he/java-ide.html">
+  <link rel="alternate" hreflang="ms" href="https://supercode-ide.github.io/ms/java-ide.html">
+  <link rel="alternate" hreflang="fil" href="https://supercode-ide.github.io/tl/java-ide.html">
+  <link rel="alternate" hreflang="bn" href="https://supercode-ide.github.io/bn/java-ide.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
+  <meta property="og:title" content="Java IDE a offline aplikace pro Java 17 na Android — Records, OOP a SQLite JDBC | SuperCode">
+  <meta property="og:description" content="Kompilujte a spouštějte Java 17 offline na Androidu — moderní alternativa k aplikacím s Java 11. Podporuje records, sealed třídy, Streams, vícetřídní OOP, 0ms cache bajtkódu, vestavěné SQLite JDBC a vlastní soubory .jar.">
+  <meta property="og:url" content="https://supercode-ide.github.io/cs/java-ide.html">
+  <meta property="og:locale" content="cs_CZ">
+  <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-hero-cs.png">
+  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-hero-cs.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Offline Java 17 IDE a SQLite JDBC">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-hero-cs.png">
+  <meta name="twitter:title" content="Java IDE a offline aplikace pro Java 17 na Android — Records, OOP a SQLite JDBC | SuperCode">
+  <meta name="twitter:description" content="Kompilujte a spouštějte Java 17 offline na Androidu — moderní alternativa k aplikacím s Java 11. Podporuje records, sealed třídy, Streams, vícetřídní OOP, 0ms cache bajtkódu, vestavěné SQLite JDBC a vlastní soubory .jar.">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <script>if(/SamsungBrowser/i.test(navigator.userAgent)){document.documentElement.classList.add('is-samsung');}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "SoftwareApplication",
+        "MobileApplication",
+        "WebApplication"
+      ],
+      "@id": "https://supercode-ide.github.io/#supercode-app",
+      "name": "Code Editor: SuperCode IDE",
+      "alternateName": [
+        "Java IDE for Android",
+        "Offline Java 17 Compiler App",
+        "Mobile Java OOP & JDBC Studio"
+      ],
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Offline Java 17 Compiler, Multi-Class OOP & JDBC IDE for Android",
+      "inLanguage": "cs",
+      "fileSize": "40.2MB",
+      "softwareVersion": "1.55.05",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=cs-CZ&listing=java-ide",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=cs-CZ&listing=java-ide",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=cs-CZ"
+      ],
+      "potentialAction": [
+        {
+          "@type": "InstallAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=cs-CZ&listing=java-ide",
+            "actionPlatform": [
+              "http://schema.org/AndroidPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          }
+        },
+        {
+          "@type": "ViewAction",
+          "name": "Průvodce aplikací",
+          "target": [
+            "https://supercode-ide.github.io/tutorial/?lang=cs",
+            "android-app://com.phoenixglobal.supercodeeditor/https/supercode-ide.github.io/tutorial"
+          ]
+        }
+      ],
+      "identifier": "com.phoenixglobal.supercodeeditor",
+      "url": "https://supercode-ide.github.io/cs/java-ide.html",
+      "screenshot": [
+        "https://supercode-ide.github.io/assets/gallery/cs/06_java17_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/cs/01_python_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/cs/02_cpp20_compiler.webp",
+        "https://supercode-ide.github.io/assets/gallery/cs/03_web_php_devtools.webp",
+        "https://supercode-ide.github.io/assets/gallery/cs/04_file_manager_tree.webp",
+        "https://supercode-ide.github.io/assets/gallery/cs/05_sql_sqlite_studio.webp",
+        "https://supercode-ide.github.io/assets/gallery/cs/07_visual_git_timemachine.webp",
+        "https://supercode-ide.github.io/assets/gallery/cs/08_symbol_keyboard_themes.webp"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Phoenix Global Studios",
+        "url": "https://supercode-ide.github.io/cs/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "66"
+      },
+      "featureList": [
+        "100% offline Java 17 compiler supporting records, sealed classes, switch expressions, pattern matching & Streams",
+        "Student-friendly compact void main() support alongside multi-package / multi-class OOP compilation",
+        "Content-hash bytecode cache delivering 0ms instant re-runs when source files are unchanged",
+        "Built-in offline SQLite JDBC driver (jdbc:sqlite:...) plus automatic libs/*.jar classpath loading",
+        "Live interactive Scanner(System.in) & BufferedReader console with safe System.exit() handling",
+        "Seamless Cloud Java 21+ & Java SE fallback for desktop-exclusive packages"
+      ],
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-cs.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://supercode-ide.github.io/cs/java-ide.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SuperCode IDE",
+          "item": "https://supercode-ide.github.io/cs/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Java 17 IDE centrum",
+          "item": "https://supercode-ide.github.io/cs/java-ide.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Build Multi-Class Java Projects in SuperCode",
+      "description": "Ideal for OOP coursework, data structures, and database-backed Java applications.",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Create Java Classes & Optional .jar Libraries",
+          "text": "Organize .java classes across packages (and optional .jar files in libs/) with offline AST completion and automatic bracket/import assistance.",
+          "url": "https://supercode-ide.github.io/java-ide.html#step1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Format Java Blocks & Verify Syntax",
+          "text": "Tap Format to align classes, methods, and Javadoc comments cleanly, and check Error Radar for any unclosed braces or literals.",
+          "url": "https://supercode-ide.github.io/java-ide.html#step2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Compile Offline to Cached Bytecode",
+          "text": "SuperCode compiles your Java 17 sources on-device (downloading the offline Java SDK once on first run) and caches bytecode for instant repeat runs.",
+          "url": "https://supercode-ide.github.io/java-ide.html#step3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Interact via System.in & Sync Generated Files",
+          "text": "Enter console inputs live, query local SQLite databases via JDBC, and inspect any generated files synced automatically into your workspace.",
+          "url": "https://supercode-ide.github.io/java-ide.html#step4"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://supercode-ide.github.io/java-ide.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Jakou verzi Javy kompiluje SuperCode offline na Androidu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SuperCode kompiluje a spouští Java 17 offline — včetně records, sealed tříd, výrazů switch, pattern matchingu pro instanceof, textových bloků a Streams — s automatickým směrováním na Cloud Java pro funkce Java 21+."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mohu spustit Java projekt s více třídami a balíčky?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ano. SuperCode vyřeší všechny soubory .java napříč složkami projektu i otevřenými kartami editoru, automaticky určí třídu s metodou main() a synchronizuje veškeré zapsané soubory zpět do pracovního prostoru."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mohu Javu připojit k lokální databázi SQLite nebo přidat externí soubory .jar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ano! Offline ovladač jdbc:sqlite:... JDBC je vestavěn přímo v aplikaci a jakékoli kompatibilní knihovny .jar umístěné ve složce libs/ vašeho projektu se automaticky přidají do classpath."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Funguje Scanner(System.in) interaktivně?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ano. Program se čistě pozastaví, kdykoli Scanner nebo BufferedReader čeká na vstup, a umožní vám psát více řádků v rozděleném terminálu."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-page="java_ide">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="sc-logo" viewBox="20 14 68 72">
+    <path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/>
+    <path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/>
+    <path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/>
+    <path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+  </symbol>
+  <symbol id="gp-prism" viewBox="0 0 24 24">
+    <path fill="#4285F4" d="M3.6,2.4C3.3,2.7,3.1,3.2,3.1,3.8v16.4c0,0.6,0.2,1.1,0.5,1.4l0.1,0.1L12.9,12v-0.2L3.7,2.3L3.6,2.4z"/>
+    <path fill="#34A853" d="M16,15.1l-3.1-3.1v-0.2L16,8.7l0.1,0.1l3.6,2.1c1,0.6,1,1.5,0,2.1l-3.6,2.1L16,15.1z"/>
+    <path fill="#FBBC05" d="M16.1,15.1L12.9,12L3.6,21.3c0.3,0.4,0.9,0.4,1.6,0.1L16.1,15.1z"/>
+    <path fill="#EA4335" d="M16.1,8.9L5.2,2.6C4.5,2.2,3.9,2.3,3.6,2.7L12.9,12L16.1,8.9z"/>
+  </symbol>
+  <symbol id="i-ne" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8 20 7.2v9.6L12 21.2 4 16.8V7.2z"/><path d="M4 7.2l8 4.4 8-4.4M12 11.6v9.6"/></g></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2.8v3.2M15 2.8v3.2M9 18v3.2M15 18v3.2M2.8 9H6M2.8 15H6M18 9h3.2M18 15h3.2"/></g></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 2.8 7.8 12 12.6l9.2-4.8z"/><path d="m2.8 12 9.2 4.8 9.2-4.8"/><path d="m2.8 16.2 9.2 4.8 9.2-4.8"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="M2.8 8.5h18.4"/><path d="m9.5 12.5-2.2 2.2 2.2 2.2M14.5 12.5l2.2 2.2-2.2 2.2"/></g></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5.6" rx="7.6" ry="2.8"/><path d="M4.4 5.6v12.8c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8V5.6"/><path d="M4.4 12c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8"/></g></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="m7.2 9.5 3 2.5-3 2.5M12.8 15h4"/></g></symbol>
+  <symbol id="i-git" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.3"/><circle cx="6" cy="18" r="2.3"/><circle cx="18" cy="12" r="2.3"/><path d="M6 8.3v7.4M8.3 6h4.2a3.5 3.5 0 0 1 3.5 3.5v.2"/></g></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5h11a4 4 0 0 0 .7-7.94A5.5 5.5 0 0 0 7.4 9.2 3.8 3.8 0 0 0 6.5 18.5z"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M13 2.8 4.8 13.2h6.3L10.2 21.2 19.2 10.6h-6.4z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 2.8 4.8 5.8v5.6c0 5 3.1 8.5 7.2 9.8 4.1-1.3 7.2-4.8 7.2-9.8V5.8z"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="index.html" class="brand" aria-label="SuperCode IDE Home">
+      <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+      <span>SuperCode</span>
+      <span class="brand__tag">IDE</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary Workspaces">
+      <a href="code-editor.html" data-i18n="nav_code_editor">Editor kódu</a>
+      <a href="large-file-editor.html" data-i18n="nav_large_file">Velké soubory (GB)</a>
+      <a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a>
+      <a href="c-compiler.html" data-i18n="nav_c_compiler">Kompilátor C17</a>
+      <a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a>
+      <a href="java-ide.html" class="is-current" data-i18n="nav_java_ide">Java 17 IDE</a>
+      <a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a>
+      <a href="web-ide.html" data-i18n="nav_web_ide">Web a PHP</a>
+      <a href="sql-ide.html" data-i18n="nav_sql_ide">SQL Studio</a>
+      <a href="git-client.html" data-i18n="nav_git_client">Vizuální Git</a>
+      <a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP a FTPS</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button id="langModalBtn" class="btn-lang-trigger" type="button" onclick="openLangModal()" aria-label="Select Language">
+        <svg class="lang-globe-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span id="langTriggerText">CS</span>
+        <span class="lang-chevron" aria-hidden="true">&#9662;</span>
+      </button>
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=cs-CZ&amp;listing=java-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dcs%26utm_campaign%3Djava-ide%26utm_content%3Djava-ide" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+        <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+        <span data-i18n="nav_cta">Google Play</span>
+      </a>
+      <a href="index.html" class="btn-home-icon" aria-label="Home" title="Home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5"/>
+          <path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
+        </svg>
+      </a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteDrawer" aria-label="All Pages Directory">
+        <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 8.5h16M4 15.5h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-drawer" id="siteDrawer" hidden>
+  <nav class="container menu-drawer__inner" aria-label="All SuperCode Pages">
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_core">Editor a velké soubory</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="index.html"><span data-i18n="nav_home">Přehled</span><span class="mono">01</span></a>
+        <a class="menu-drawer__link" href="code-editor.html"><span data-i18n="nav_code_editor">Editor kódu</span><span class="mono">02</span></a>
+        <a class="menu-drawer__link" href="large-file-editor.html"><span data-i18n="nav_large_file">Velké soubory (GB)</span><span class="mono">03</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_lang">Offline kompilátory a jazyky</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="python-ide.html"><span data-i18n="nav_python_ide">Python IDE</span><span class="mono">04</span></a>
+        <a class="menu-drawer__link" href="c-compiler.html"><span data-i18n="nav_c_compiler">Kompilátor C17</span><span class="mono">05</span></a>
+        <a class="menu-drawer__link" href="cpp-ide.html"><span data-i18n="nav_cpp_ide">C++20 IDE</span><span class="mono">06</span></a>
+        <a class="menu-drawer__link is-current" href="java-ide.html"><span data-i18n="nav_java_ide">Java 17 IDE</span><span class="mono">07</span></a>
+        <a class="menu-drawer__link" href="javascript-ide.html"><span data-i18n="nav_js_ide">JavaScript</span><span class="mono">08</span></a>
+        <a class="menu-drawer__link" href="lua-ide.html"><span data-i18n="nav_lua_ide">Lua 5.4</span><span class="mono">09</span></a>
+        <a class="menu-drawer__link" href="shell-ide.html"><span data-i18n="nav_shell_ide">Shell a Kotlin</span><span class="mono">10</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_devops">Web, SQL a vzdálený DevOps</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="web-ide.html"><span data-i18n="nav_web_ide">Web a PHP</span><span class="mono">11</span></a>
+        <a class="menu-drawer__link" href="sql-ide.html"><span data-i18n="nav_sql_ide">SQL Studio</span><span class="mono">12</span></a>
+        <a class="menu-drawer__link" href="git-client.html"><span data-i18n="nav_git_client">Vizuální Git</span><span class="mono">13</span></a>
+        <a class="menu-drawer__link" href="sftp-client.html"><span data-i18n="nav_sftp_client">SFTP a FTPS</span><span class="mono">14</span></a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<main id="top">
+  <!-- ==================== 01 · EDITORIAL HERO & INTERACTIVE WORKBENCH ==================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <div class="trust-pill">
+            <span class="trust-pill__score"><span data-play-rating>4.9</span> &#9733;</span>
+            <span data-i18n="hero_tag">OFFLINE JAVA 17 · VÍCETŘÍDNÍ OOP &amp; JDBC</span>
+          </div>
+
+          <h1 class="hero-h1" data-i18n="hero_h1">Kompilujte a spouštějte <span class="text-gradient">Java 17 a vícetřídní OOP</span> offline na Androidu.</h1>
+
+          <p class="hero-lead" data-i18n="hero_desc">Navrženo pro vysokoškolské kurzy Javy, AP Computer Science, prototypování backendu i pohovory. Pište <strong>Java 17 records, sealed třídy a Streams</strong> offline s <strong>0ms opakovaným spuštěním z cache</strong>, <strong>vestavěným SQLite JDBC</strong> a živým <strong><code>Scanner(System.in)</code></strong>.</p>
+
+          <div class="hero__cta" id="heroCta">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=cs-CZ&amp;listing=java-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dcs%26utm_campaign%3Djava-ide%26utm_content%3Djava-ide" target="_blank" rel="noopener" class="btn btn--gold">
+              <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+              <span data-i18n="cta_btn">Stáhnout na Google Play</span>
+            </a>
+            <a href="https://supercode-ide.github.io/tutorial/?lang=cs&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+              <span data-i18n="cta_tutorial">Průvodce aplikací</span>
+              <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <dl class="specs" aria-label="Key Specifications">
+          <div class="spec"><dt>Java 17</dt><dd data-i18n="jv_spec1">Offline SDK</dd></div>
+          <div class="spec"><dt>0<small>ms</small></dt><dd data-i18n="jv_spec2">Cache bajtkódu</dd></div>
+          <div class="spec"><dt>JDBC</dt><dd data-i18n="jv_spec3">Vestavěný SQLite</dd></div>
+          <div class="spec"><dt>.jar</dt><dd data-i18n="jv_spec4">Načítání vlastních libs/</dd></div>
+        </dl>
+      </div>
+
+      <div class="wb-caption">
+        <div class="sec-index" style="margin-bottom:0">
+          <span class="num">01</span>
+          <span class="rule"></span>
+          <span data-i18n="wb_eyebrow">INTERAKTIVNÍ PRACOVIŠTĚ JAVA 17 &amp; JDBC</span>
+        </div>
+        <span class="wb-caption__hint mono">Java 17 Records &#183; Multi-Package OOP &#183; Built-In SQLite JDBC</span>
+      </div>
+
+      <div class="ide-workbench">
+        <div class="wb-titlebar">
+          <div class="wb-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="wb-title" id="ide-compiler-label">java17-workspace/Main.java &#8212; Java 17 Records, Sealed &amp; Streams</div>
+          <button type="button" class="wb-run" id="btn-run-sandbox">
+            <span class="wb-run__tri" aria-hidden="true">&#9654;</span>
+            <span data-i18n="btn_run">Spustit demo</span>
+          </button>
+        </div>
+
+        <div class="wb-tabs" role="tablist" aria-label="Interactive Workspace Tabs">
+          <button type="button" class="ide-tab active" data-tab="jv_rec" role="tab" aria-selected="true"><i></i>Main.java</button>
+          <button type="button" class="ide-tab" data-tab="jv_oop" role="tab" aria-selected="false"><i></i>LedgerService.java</button>
+          <button type="button" class="ide-tab" data-tab="jv_jdbc" role="tab" aria-selected="false"><i></i>DatabaseApp.java</button>
+        </div>
+
+        <div class="wb-body">
+          <aside class="wb-explorer" aria-label="Project Explorer">
+            <div class="wb-explorer__head">Explorer</div>
+            <div class="wb-folder">&#9662; java17-workspace</div>
+            <button type="button" class="wb-file active" data-tab="jv_rec"><b>J17</b><span>Main.java</span></button>
+            <button type="button" class="wb-file" data-tab="jv_oop"><b>OOP</b><span>LedgerService.java</span></button>
+            <button type="button" class="wb-file" data-tab="jv_jdbc"><b>JDBC</b><span>DatabaseApp.java</span></button>
+          </aside>
+
+          <div class="wb-main">
+            <div class="ide-editor-body" id="ide-code-box" role="region" aria-label="Interactive Code Preview"></div>
+            <div class="ide-terminal" id="ide-terminal-drawer" aria-live="polite">
+              <div class="term-header">
+                <span data-i18n="term_title">Interaktivní výstup konzole</span>
+                <div class="term-header-right">
+                  <span class="term-exec-badge" id="ide-exec-status">Ready</span>
+                  <button type="button" class="btn-term-close" id="btn-close-term" aria-label="Close terminal">&#10005;</button>
+                </div>
+              </div>
+              <div class="term-stream" id="ide-term-output"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wb-statusbar">
+          <span class="wb-statusbar__dot"><i></i><span id="wbStatusLang">Java 17 &#183; Offline SDK</span></span>
+          <div class="wb-statusbar__right">
+            <span>UTF-8</span>
+            <span>LF</span>
+            <span>Ln 9, Col 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- SC_REAL_GALLERY_START -->
+  <section class="section sc-real-gallery" id="screenshots" aria-label="Náhled aplikace a snímky obrazovky">
+    <div class="container">
+      <div class="sc-gp-head">
+        <div class="sc-gp-head-left">
+          <div class="sc-gp-eyebrow" data-i18n="gal_eyebrow">REÁLNÉ SNÍMKY Z ANDROIDU</div>
+          <h2 class="sc-gp-title" data-i18n="gal_title">Náhled aplikace a snímky obrazovky</h2>
+          <p class="sc-gp-short" data-i18n="gal_short_desc">Offline editor kódu a IDE: kompilátor Python, C/C++, Java, HTML, SQL, PHP a Git</p>
+        </div>
+        <a class="sc-gp-store-bar" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=cs-CZ&amp;listing=java-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dcs%26utm_campaign%3Djava-ide%26utm_content%3Djava-ide" target="_blank" rel="noopener" aria-label="Code Editor: SuperCode IDE — Phoenix Global Studios">
+          <svg class="sc-gp-app-icon" width="38" height="38" viewBox="16 12 76 76" aria-hidden="true"><rect x="16" y="12" width="76" height="76" rx="18" fill="#070A10" stroke="#3B82F6" stroke-width="2"/><path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/><path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/><path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/><path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/></svg>
+          <span class="sc-gp-app-meta">
+            <span class="sc-gp-app-name">Code Editor: SuperCode IDE</span>
+            <span class="sc-gp-app-dev">Phoenix Global Studios</span>
+          </span>
+          <span class="sc-gp-store-arrow" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      </div>
+      <div class="sc-gp-stage">
+        <button type="button" class="sc-gp-nav sc-gp-nav--prev is-hidden" id="scGpPrev" aria-label="Předchozí obrázek">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="sc-gp-rail" id="scGpRail">
+          <button type="button" class="sc-gp-item sc-gp-item--feature" aria-label="Editor kódu: SuperCode IDE — Offline mobilní IDE">
+            <img src="../assets/gallery/cs/00_feature_graphic.webp" data-sc-file="00_feature_graphic.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_0" data-cap="Editor kódu: SuperCode IDE — Offline mobilní IDE" alt="Editor kódu: SuperCode IDE — Offline mobilní IDE" width="1024" height="500" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Offline Java 17 IDE a SQLite JDBC">
+            <img src="../assets/gallery/cs/06_java17_ide.webp" data-sc-file="06_java17_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_6" data-cap="Offline Java 17 IDE a SQLite JDBC" alt="Offline Java 17 IDE a SQLite JDBC" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Offline Python 3.11 / 3.12 IDE a dělená konzole">
+            <img src="../assets/gallery/cs/01_python_ide.webp" data-sc-file="01_python_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_1" data-cap="Offline Python 3.11 / 3.12 IDE a dělená konzole" alt="Offline Python 3.11 / 3.12 IDE a dělená konzole" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Lokální vícesouborový kompilátor C17 a C++20">
+            <img src="../assets/gallery/cs/02_cpp20_compiler.webp" data-sc-file="02_cpp20_compiler.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_2" data-cap="Lokální vícesouborový kompilátor C17 a C++20" alt="Lokální vícesouborový kompilátor C17 a C++20" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Lokální webový server, offline PHP a DevTools">
+            <img src="../assets/gallery/cs/03_web_php_devtools.webp" data-sc-file="03_web_php_devtools.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_3" data-cap="Lokální webový server, offline PHP a DevTools" alt="Lokální webový server, offline PHP a DevTools" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Globální strom souborů a lokální správce souborů (SAF)">
+            <img src="../assets/gallery/cs/04_file_manager_tree.webp" data-sc-file="04_file_manager_tree.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_4" data-cap="Globální strom souborů a lokální správce souborů (SAF)" alt="Globální strom souborů a lokální správce souborů (SAF)" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Offline SQLite 3.54 Studio a inspektor .db">
+            <img src="../assets/gallery/cs/05_sql_sqlite_studio.webp" data-sc-file="05_sql_sqlite_studio.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_5" data-cap="Offline SQLite 3.54 Studio a inspektor .db" alt="Offline SQLite 3.54 Studio a inspektor .db" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Vizuální Git klient, Stroj času a SFTP">
+            <img src="../assets/gallery/cs/07_visual_git_timemachine.webp" data-sc-file="07_visual_git_timemachine.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_7" data-cap="Vizuální Git klient, Stroj času a SFTP" alt="Vizuální Git klient, Stroj času a SFTP" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Lišta 21 symbolů a 8 vyladěných motivů IDE">
+            <img src="../assets/gallery/cs/08_symbol_keyboard_themes.webp" data-sc-file="08_symbol_keyboard_themes.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_8" data-cap="Lišta 21 symbolů a 8 vyladěných motivů IDE" alt="Lišta 21 symbolů a 8 vyladěných motivů IDE" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+        </div>
+        <button type="button" class="sc-gp-nav sc-gp-nav--next" id="scGpNext" aria-label="Další obrázek">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  <div class="sc-lb-modal" id="scLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Náhled aplikace a snímky obrazovky">
+    <div class="sc-lb-topbar">
+      <button type="button" class="sc-lb-back" id="scLbBack">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-i18n="gal_back">Zpět</span>
+      </button>
+      <div class="sc-lb-meta">
+        <span class="sc-lb-counter" id="scLbCounter">1 / 9</span>
+        <span class="sc-lb-title" id="scLbTitle"></span>
+      </div>
+      <button type="button" class="sc-lb-close" id="scLbClose" aria-label="Zavřít náhled">&times;</button>
+    </div>
+    <div class="sc-lb-stage">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--prev" id="scLbPrev" aria-label="Předchozí obrázek">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <img class="sc-lb-img" id="scLbImg" src="" alt="SuperCode IDE Preview">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--next" id="scLbNext" aria-label="Další obrázek">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="sc-lb-dots" id="scLbDots"></div>
+  </div>
+  <script defer src="../assets/gallery.js"></script>
+<!-- SC_REAL_GALLERY_END -->
+
+
+
+
+
+  <!-- ==================== 02 · CORE CAPABILITIES ==================== -->
+  <section class="section section--alt" id="capabilities">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">02</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_cap_eyebrow">KLÍČOVÉ SCHOPNOSTI</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="sec_cap_title">Síla moderní Java 17 bez zátěže desktopu</h2>
+        <p class="sec-lead" data-i18n="sec_cap_lead">Vše od prvních kompaktních metod main() až po vícebalíčkové databázové JDBC projekty běží přímo na vašem zařízení Android.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="feature-grid feature-grid--6">
+          <article class="feature-card" id="cap1">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+              <span class="f-idx">02.1</span>
+            </div>
+            <h3 class="f-title" data-i18n="f1_title">Moderní offline syntaxe Java 17 &amp; kompaktní main()</h3>
+            <p class="f-desc" data-i18n="f1_desc">Používejte třídy record, rozhraní sealed, výrazy switch -&gt;, pattern matching pro instanceof, textové bloky (""""), Streams, java.time a stručné metody void main() 100% offline.</p>
+            <div class="f-code" data-i18n="f1_badge">Records · Sealed · Switch -&gt; · Textové bloky · Streams</div>
+          </article>
+          <article class="feature-card" id="cap2">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
+              <span class="f-idx">02.2</span>
+            </div>
+            <h3 class="f-title" data-i18n="f2_title">Vícebalíčkové OOP &amp; 0ms cache bajtkódu</h3>
+            <p class="f-desc" data-i18n="f2_desc">Kompiluje vícesouborové balíčky napříč otevřenými kartami a složkami projektu, automaticky najde vstupní třídu s main() a ukládá bajtkód podle hashe pro okamžité ⚡ Cache spuštění.</p>
+            <div class="f-code" data-i18n="f2_badge">Vícebalíčkové třídy · Auto-výběr main() · ⚡ Cache</div>
+          </article>
+          <article class="feature-card" id="cap3">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-db"/></svg></span>
+              <span class="f-idx">02.3</span>
+            </div>
+            <h3 class="f-title" data-i18n="f3_title">Vestavěné offline SQLite JDBC &amp; vlastní libs/*.jar</h3>
+            <p class="f-desc" data-i18n="f3_desc">Připojte se přímo k lokálním databázím přes DriverManager.getConnection("jdbc:sqlite:app.db") bez stahování ovladačů, nebo vložte vlastní knihovny .jar do složky libs/ projektu.</p>
+            <div class="f-code" data-i18n="f3_badge">jdbc:sqlite připraveno · Vlastní .jar Classpath</div>
+          </article>
+          <article class="feature-card" id="cap4">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-term"/></svg></span>
+              <span class="f-idx">02.4</span>
+            </div>
+            <h3 class="f-title" data-i18n="f4_title">Živý Scanner(System.in) &amp; čisté stack traces</h3>
+            <p class="f-desc" data-i18n="f4_desc">Podporuje interaktivní smyčky Scanner a BufferedReader s ovládáním [EOF], bezpečně zachytává System.exit() bez zavření aplikace a odstraňuje interní šum ze stack traces výjimek.</p>
+            <div class="f-code" data-i18n="f4_badge">Živý System.in · Bezpečný System.exit() · Čistá diagnostika</div>
+          </article>
+          <article class="feature-card" id="cap5">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-cube"/></svg></span>
+              <span class="f-idx">02.5</span>
+            </div>
+            <h3 class="f-title" data-i18n="f5_title">AST doplňování Javy, formátovač &amp; 8 šablon</h3>
+            <p class="f-desc" data-i18n="f5_desc">Pište kód rychle s 21klávesovou lištou symbolů Java/Kotlin, offline AST doplňováním, formátováním jedním klepnutím a 8 vestavěnými šablonami OOP a datových struktur.</p>
+            <div class="f-code" data-i18n="f5_badge">AST doplňování · Java formátovač · 8 Java ukázek</div>
+          </article>
+          <article class="feature-card" id="cap6">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-cloud"/></svg></span>
+              <span class="f-idx">02.6</span>
+            </div>
+            <h3 class="f-title" data-i18n="f6_title">Automatické směrování na Cloud Java 21+ &amp; SE</h3>
+            <p class="f-desc" data-i18n="f6_desc">Testujete syntaxi Java 21+ nebo balíčky Standard Edition nedostupné na mobilu? SuperCode automaticky zabalí vaše třídy a spustí je na Cloud Java.</p>
+            <div class="f-code" data-i18n="f6_badge">Záložní Java 21+ · Vícesouborový Cloud Bundler</div>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">Navrženo pro telefony, skládací zařízení a tablety · Lehkých 40,2 MB</span>
+        <a class="link-arrow" href="index.html">
+          <span data-i18n="nav_home">Přehled</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 03 · STEP-BY-STEP WORKFLOW GUIDE ==================== -->
+  <section class="section" id="workflow">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">03</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_wf_eyebrow">PRACOVNÍ POSTUP KROK ZA KROKEM</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="workflow_title">Jak vytvářet vícetřídní Java projekty v SuperCode</h2>
+        <p class="sec-lead" data-i18n="workflow_lead">Ideální pro výuku OOP, datové struktury a databázové Java aplikace.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="workflow-grid">
+          <article class="wf-step" id="step1">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 01</span>
+              <span class="wf-step__cmd">src/ + libs/</span>
+            </div>
+            <h3 data-i18n="wf1_title">Vytvořte Java třídy &amp; volitelné knihovny .jar</h3>
+            <p data-i18n="wf1_desc">Uspořádejte třídy .java do balíčků (a volitelné soubory .jar do libs/) s offline AST doplňováním a automatickými závorkami i importy.</p>
+          </article>
+          <article class="wf-step" id="step2">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 02</span>
+              <span class="wf-step__cmd">Format &amp; Lint</span>
+            </div>
+            <h3 data-i18n="wf2_title">Formátujte bloky Javy &amp; ověřte syntaxi</h3>
+            <p data-i18n="wf2_desc">Klepnutím na Formátovat čistě zarovnejte třídy, metody a Javadoc komentáře a v Error Radaru zkontrolujte neuzavřené závorky či literály.</p>
+          </article>
+          <article class="wf-step" id="step3">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 03</span>
+              <span class="wf-step__cmd">Toolbar -&gt; Run &#9654;</span>
+            </div>
+            <h3 data-i18n="wf3_title">Kompilujte offline do bajtkódu v cache</h3>
+            <p data-i18n="wf3_desc">SuperCode zkompiluje vaše zdrojové kódy Java 17 přímo v zařízení (offline Java SDK stáhne jen při prvním spuštění) a uloží bajtkód do cache pro okamžité opakované spuštění.</p>
+          </article>
+          <article class="wf-step" id="step4">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 04</span>
+              <span class="wf-step__cmd">Scanner / JDBC</span>
+            </div>
+            <h3 data-i18n="wf4_title">Interagujte přes System.in &amp; synchronizujte soubory</h3>
+            <p data-i18n="wf4_desc">Zadávejte konzolové vstupy živě, dotazujte lokální databáze SQLite přes JDBC a prohlížejte vygenerované soubory automaticky synchronizované do pracovního prostoru.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="wf_foot_note">15s Watchdog · Ochrana kvóty vláken · Vestavěné SQLite JDBC</span>
+        <a class="link-arrow" href="https://supercode-ide.github.io/tutorial/?lang=cs&amp;ref=official_web" data-supercode-tutorial="true">
+          <span data-i18n="cta_tutorial">Průvodce aplikací</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 04 · FEATURED SUMMARY & COMPARISON MATRIX ==================== -->
+  <section class="section section--alt" id="comparison">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">04</span>
+        <span class="rule"></span>
+        <span data-i18n="comp_eyebrow">MATICE FUNKCÍ</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="table_h2">SuperCode Java 17 IDE vs. zastaralé Java kompilátory pro Android</h2>
+        <p class="snippet-definition" data-i18n="snippet_p"><strong>SuperCode Java IDE</strong> je offline kompilátor Java 17 a prostředí pro vícetřídní OOP na Androidu. Podporuje moderní Java 17 records, sealed třídy, výrazy switch, Streams, kompaktní void main(), 0ms spuštění z cache, vestavěné offline SQLite JDBC, vlastní knihovny .jar a interaktivní konzolový vstup Scanner(System.in).</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="table-wrap">
+          <table class="obsidian-benchmark-table">
+            <caption data-i18n="table_caption">SROVNÁNÍ JAVA IDE A KOMPILÁTORŮ PRO ANDROID</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="th_0">Funkce Javy</th>
+                <th scope="col" data-i18n="th_1">SuperCode Java 17 IDE</th>
+                <th scope="col" data-i18n="th_2">Starší mobilní Java aplikace</th>
+                <th scope="col" data-i18n="th_3">Online Java kompilátory</th>
+                <th scope="col" data-i18n="th_4">Vzdálená desktopová IDE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="tr1_c0">Verze Javy</th>
+                <td><strong data-i18n="tr1_c1">Offline Java 17 + Cloud Java 21+</strong></td>
+                <td data-i18n="tr1_c2">Uvízlé na Java 7 nebo Java 8</td>
+                <td data-i18n="tr1_c3">Vyžaduje internet</td>
+                <td data-i18n="tr1_c4">Vyžaduje vzdálené PC</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr2_c0">Více tříd &amp; .jar</th>
+                <td><strong data-i18n="tr2_c1">Auto-spuštění více balíčků + libs/*.jar + Cache</strong></td>
+                <td data-i18n="tr2_c2">Ruční nastavení hlavní třídy</td>
+                <td data-i18n="tr2_c3">Vložení jediného souboru</td>
+                <td data-i18n="tr2_c4">Náročný Gradle build</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr3_c0">Připojení k databázi</th>
+                <td><strong data-i18n="tr3_c1">Vestavěný offline ovladač jdbc:sqlite</strong></td>
+                <td data-i18n="tr3_c2">Není součástí</td>
+                <td data-i18n="tr3_c3">Pouze dočasná paměť</td>
+                <td data-i18n="tr3_c4">Ruční nastavení Mavenu</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr4_c0">Ergonomie pro studenty</th>
+                <td><strong data-i18n="tr4_c1">Kompaktní void main() + čisté stack traces</strong></td>
+                <td data-i18n="tr4_c2">Pouze zdlouhavý boilerplate</td>
+                <td data-i18n="tr4_c3">Bez offline přístupu</td>
+                <td data-i18n="tr4_c4">Nepřizpůsobeno dotyku</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr5_c0">Integrovaný workflow</th>
+                <td><strong data-i18n="tr5_c1">Java + SQL Explorer + Vizuální Git + SFTP</strong></td>
+                <td data-i18n="tr5_c2">Izolovaný Java sandbox</td>
+                <td data-i18n="tr5_c3">Jen záložka prohlížeče</td>
+                <td data-i18n="tr5_c4">Vysoká spotřeba baterie a dat</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">Navrženo pro telefony, skládací zařízení a tablety · Lehkých 40,2 MB</span>
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=cs-CZ&amp;listing=java-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dcs%26utm_campaign%3Djava-ide%26utm_content%3Djava-ide" target="_blank" rel="noopener">
+          <span>Google Play</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 05 · VISIBLE EDITORIAL FAQ ==================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-head">
+          <div class="sec-index">
+            <span class="num">05</span>
+            <span class="rule"></span>
+            <span data-i18n="sec3_eyebrow">OTÁZKY A ODPOVĚDI</span>
+          </div>
+          <h2 class="h2" data-i18n="sec3_title">Často kladené otázky</h2>
+          <p class="sec-lead" data-i18n="faq_lead">Časté dotazy k funkcím Java 17, vícesouborovému OOP, vlastním .jar souborům a offline vstupu Scanner.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary><span data-i18n="faq1_q">Jakou verzi Javy kompiluje SuperCode offline na Androidu?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq1_a">SuperCode kompiluje a spouští Java 17 offline — včetně records, sealed tříd, výrazů switch, pattern matchingu pro instanceof, textových bloků a Streams — s automatickým směrováním na Cloud Java pro funkce Java 21+.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq2_q">Mohu spustit Java projekt s více třídami a balíčky?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq2_a">Ano. SuperCode vyřeší všechny soubory .java napříč složkami projektu i otevřenými kartami editoru, automaticky určí třídu s metodou main() a synchronizuje veškeré zapsané soubory zpět do pracovního prostoru.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq3_q">Mohu Javu připojit k lokální databázi SQLite nebo přidat externí soubory .jar?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq3_a">Ano! Offline ovladač jdbc:sqlite:... JDBC je vestavěn přímo v aplikaci a jakékoli kompatibilní knihovny .jar umístěné ve složce libs/ vašeho projektu se automaticky přidají do classpath.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq4_q">Funguje Scanner(System.in) interaktivně?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq4_a">Ano. Program se čistě pozastaví, kdykoli Scanner nebo BufferedReader čeká na vstup, a umožní vám psát více řádků v rozděleném terminálu.</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==================== 06 · TOPICAL AUTHORITY ECOSYSTEM CLUSTER ==================== -->
+  <section class="section section--alt" id="ecosystem-guides">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">06</span>
+        <span class="rule"></span>
+        <span>PRŮVODCI PRO JAVA 17, OOP A JDBC</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2>4 podrobní průvodci Java 17 pro Android</h2>
+        <p class="sec-lead">Zjistěte, proč studenti a backendoví vývojáři přecházejí ze zastaralých aplikací Java 11 na offline Java 17 records, vícebalíčková sestavení .jar a SQLite JDBC.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="py-cluster-grid">
+          <a href="java-17-records-oop-android.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JV-01</span>
+              <span class="py-spoke-card__tag">Java 17 + Cloud Java 21+</span>
+            </div>
+            <h3>Java 17 Records, Sealed a Streams</h3>
+            <p>Kompilujte moderní Java 17 records, sealed hierarchie, switch -&gt; výrazy, textové bloky a Streams offline — a v cloudu virtuální vlákna Java 21+.</p>
+            <div class="py-spoke-card__go">
+              <span>java-17-records-oop-android</span>
+              <span>Otevřít průvodce &rarr;</span>
+            </div>
+          </a>
+          <a href="java-multiclass-packages-ide.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JV-02</span>
+              <span class="py-spoke-card__tag">500 souborů · libs/*.jar · 0ms cache</span>
+            </div>
+            <h3>Více tříd v balíčcích a .jar knihovny</h3>
+            <p>Vytvářejte vícebalíčkové architektury src/main/java, automaticky načítajte vlastní .jar knihovny z libs/ a spouštějte nezměněné třídy znovu za ~0 ms.</p>
+            <div class="py-spoke-card__go">
+              <span>java-multiclass-packages-ide</span>
+              <span>Otevřít průvodce &rarr;</span>
+            </div>
+          </a>
+          <a href="java-jdbc-sqlite-file-io.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JV-03</span>
+              <span class="py-spoke-card__tag">jdbc:sqlite · HttpClient · Files</span>
+            </div>
+            <h3>Offline Java SQLite JDBC a NIO.2</h3>
+            <p>Dotazujte se trvalých SQLite .db souborů přímo z Javy přes vestavěné org.sqlite.JDBC bez nastavování Mavenu/Gradlu a se synchronizací NIO.2.</p>
+            <div class="py-spoke-card__go">
+              <span>java-jdbc-sqlite-file-io</span>
+              <span>Otevřít průvodce &rarr;</span>
+            </div>
+          </a>
+          <a href="learn-java-dsa-android.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JV-04</span>
+              <span class="py-spoke-card__tag">Kompaktní void main() · Scanner</span>
+            </div>
+            <h3>Učte se Javu, AP CS a DSA offline</h3>
+            <p>Ideální pro AP Computer Science A a pohovory z DSA: kompaktní void main(), živý Scanner(System.in), 8 Java šablon a export úkolů do PDF A4.</p>
+            <div class="py-spoke-card__go">
+              <span>learn-java-dsa-android</span>
+              <span>Otevřít průvodce &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span>5 propojených průvodců pro Java 17 · Records a Sealed · Vestavěné SQLite JDBC</span>
+        <a class="link-arrow" href="java-ide.html">
+          <span>Centrum Java 17 IDE</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="siteFooter">
+  <div class="container">
+    <div class="footer-cta" id="footerCta">
+      <div>
+        <h2 class="h2" data-i18n="cta_h2">Pište a spouštějte moderní Java 17 kdekoli na Androidu.</h2>
+        <p data-i18n="cta_desc">Stáhněte si SuperCode IDE na Google Play — s offline Java 17, SQLite JDBC, AST doplňováním a vizuálním Git.</p>
+      </div>
+      <div class="footer-cta__btns">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=cs-CZ&amp;listing=java-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dcs%26utm_campaign%3Djava-ide%26utm_content%3Djava-ide" target="_blank" rel="noopener" class="btn btn--gold">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="cta_btn">Stáhnout na Google Play</span>
+        </a>
+        <a href="https://supercode-ide.github.io/tutorial/?lang=cs&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+          <span data-i18n="cta_tutorial">Průvodce aplikací</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+          <span>SuperCode</span>
+          <span class="brand__tag">IDE</span>
+        </a>
+        <p data-i18n="footer_tagline">Nativní mobilní editor kódu a offline vývojářské studio vytvořené pro inženýry, studenty a učitele na Androidu po celém světě.</p>
+        <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
+        <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=cs-CZ&amp;listing=java-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dcs%26utm_campaign%3Djava-ide%26utm_content%3Djava-ide" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://supercode-ide.github.io/tutorial/?lang=cs&amp;ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">Průvodce aplikací</span> &#8599;</a>
+          <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">Vybrat jazyk</span></button>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_core">Editor a velké soubory</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Přehled</a></li>
+          <li><a href="code-editor.html" data-i18n="nav_code_editor">Editor kódu</a></li>
+          <li><a href="large-file-editor.html" data-i18n="nav_large_file">Velké soubory (GB)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_lang">Offline kompilátory a jazyky</h4>
+        <ul>
+          <li><a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a></li>
+          <li><a href="c-compiler.html" data-i18n="nav_c_compiler">Kompilátor C17</a></li>
+          <li><a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a></li>
+          <li><a href="java-ide.html" class="is-current" data-i18n="nav_java_ide">Java 17 IDE</a></li>
+          <li><a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a></li>
+          <li><a href="lua-ide.html" data-i18n="nav_lua_ide">Lua 5.4</a></li>
+          <li><a href="shell-ide.html" data-i18n="nav_shell_ide">Shell a Kotlin</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_devops">Web, SQL a vzdálený DevOps</h4>
+        <ul>
+          <li><a href="web-ide.html" data-i18n="nav_web_ide">Web a PHP</a></li>
+          <li><a href="sql-ide.html" data-i18n="nav_sql_ide">SQL Studio</a></li>
+          <li><a href="git-client.html" data-i18n="nav_git_client">Vizuální Git</a></li>
+          <li><a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP a FTPS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <span>&copy; 2026 Phoenix Global Studios. All rights reserved.</span>
+      <span class="mono">com.phoenixglobal.supercodeeditor</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="mobile-bottom-bar" id="mobileBottomBar" aria-label="Quick App Actions">
+  <div class="dock-app-icon" aria-hidden="true"><svg><use href="#sc-logo"/></svg></div>
+  <div class="bottom-bar-info">
+    <div class="bottom-bar-title">SuperCode</div>
+    <div class="bottom-bar-sub"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  </div>
+  <div class="bottom-bar-actions">
+    <a href="https://supercode-ide.github.io/tutorial/?lang=cs&amp;ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">Průvodce</a>
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=cs-CZ&amp;listing=java-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dcs%26utm_campaign%3Djava-ide%26utm_content%3Djava-ide" target="_blank" rel="noopener" class="btn-play-mini">
+      <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
+      <span data-i18n="bottom_cta">Získat</span>
+    </a>
+  </div>
+</aside>
+
+<div class="modal-overlay" id="langModal" role="dialog" aria-modal="true" aria-labelledby="langModalTitle">
+  <div class="lang-modal">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div class="modal-header">
+      <h3 id="langModalTitle"><span data-i18n="modal_title">Vybrat jazyk</span><span class="modal-lang-count">32</span></h3>
+      <button type="button" class="btn-close-modal" onclick="closeLangModal()" aria-label="Zavřít">&#10005;</button>
+    </div>
+    <div class="lang-grid">
+      <button type="button" class="lang-option" data-code="en" onclick="setLanguage('en')"><span class="lang-option__name">English</span><span class="lang-option__code">EN</span></button>
+      <button type="button" class="lang-option" data-code="zh" onclick="setLanguage('zh')"><span class="lang-option__name">简体中文</span><span class="lang-option__code">简中</span></button>
+      <button type="button" class="lang-option" data-code="zh-tw" onclick="setLanguage('zh-tw')"><span class="lang-option__name">繁體中文</span><span class="lang-option__code">繁中</span></button>
+      <button type="button" class="lang-option" data-code="es" onclick="setLanguage('es')"><span class="lang-option__name">Español</span><span class="lang-option__code">ES</span></button>
+      <button type="button" class="lang-option" data-code="pt" onclick="setLanguage('pt')"><span class="lang-option__name">Português</span><span class="lang-option__code">PT</span></button>
+      <button type="button" class="lang-option" data-code="ja" onclick="setLanguage('ja')"><span class="lang-option__name">日本語</span><span class="lang-option__code">日本語</span></button>
+      <button type="button" class="lang-option" data-code="ko" onclick="setLanguage('ko')"><span class="lang-option__name">한국어</span><span class="lang-option__code">한국어</span></button>
+      <button type="button" class="lang-option" data-code="de" onclick="setLanguage('de')"><span class="lang-option__name">Deutsch</span><span class="lang-option__code">DE</span></button>
+      <button type="button" class="lang-option" data-code="fr" onclick="setLanguage('fr')"><span class="lang-option__name">Français</span><span class="lang-option__code">FR</span></button>
+      <button type="button" class="lang-option" data-code="ru" onclick="setLanguage('ru')"><span class="lang-option__name">Русский</span><span class="lang-option__code">RU</span></button>
+      <button type="button" class="lang-option" data-code="hi" onclick="setLanguage('hi')"><span class="lang-option__name">हिन्दी</span><span class="lang-option__code">HI</span></button>
+      <button type="button" class="lang-option" data-code="id" onclick="setLanguage('id')"><span class="lang-option__name">Bahasa Indonesia</span><span class="lang-option__code">ID</span></button>
+      <button type="button" class="lang-option" data-code="it" onclick="setLanguage('it')"><span class="lang-option__name">Italiano</span><span class="lang-option__code">IT</span></button>
+      <button type="button" class="lang-option" data-code="vi" onclick="setLanguage('vi')"><span class="lang-option__name">Tiếng Việt</span><span class="lang-option__code">VI</span></button>
+      <button type="button" class="lang-option" data-code="th" onclick="setLanguage('th')"><span class="lang-option__name">ไทย</span><span class="lang-option__code">ไทย</span></button>
+      <button type="button" class="lang-option" data-code="tr" onclick="setLanguage('tr')"><span class="lang-option__name">Türkçe</span><span class="lang-option__code">TR</span></button>
+      <button type="button" class="lang-option" data-code="ar" onclick="setLanguage('ar')"><span class="lang-option__name">العربية</span><span class="lang-option__code">AR</span></button>
+      <button type="button" class="lang-option" data-code="pl" onclick="setLanguage('pl')"><span class="lang-option__name">Polski</span><span class="lang-option__code">PL</span></button>
+      <button type="button" class="lang-option" data-code="nl" onclick="setLanguage('nl')"><span class="lang-option__name">Nederlands</span><span class="lang-option__code">NL</span></button>
+      <button type="button" class="lang-option" data-code="sv" onclick="setLanguage('sv')"><span class="lang-option__name">Svenska</span><span class="lang-option__code">SV</span></button>
+      <button type="button" class="lang-option" data-code="nb" onclick="setLanguage('nb')"><span class="lang-option__name">Norsk Bokmål</span><span class="lang-option__code">NB</span></button>
+      <button type="button" class="lang-option" data-code="da" onclick="setLanguage('da')"><span class="lang-option__name">Dansk</span><span class="lang-option__code">DA</span></button>
+      <button type="button" class="lang-option" data-code="fi" onclick="setLanguage('fi')"><span class="lang-option__name">Suomi</span><span class="lang-option__code">FI</span></button>
+      <button type="button" class="lang-option active" data-code="cs" onclick="setLanguage('cs')"><span class="lang-option__name">Čeština</span><span class="lang-option__code">CS</span></button>
+      <button type="button" class="lang-option" data-code="uk" onclick="setLanguage('uk')"><span class="lang-option__name">Українська</span><span class="lang-option__code">UK</span></button>
+      <button type="button" class="lang-option" data-code="ro" onclick="setLanguage('ro')"><span class="lang-option__name">Română</span><span class="lang-option__code">RO</span></button>
+      <button type="button" class="lang-option" data-code="hu" onclick="setLanguage('hu')"><span class="lang-option__name">Magyar</span><span class="lang-option__code">HU</span></button>
+      <button type="button" class="lang-option" data-code="el" onclick="setLanguage('el')"><span class="lang-option__name">Ελληνικά</span><span class="lang-option__code">EL</span></button>
+      <button type="button" class="lang-option" data-code="he" onclick="setLanguage('he')"><span class="lang-option__name">עברית</span><span class="lang-option__code">HE</span></button>
+      <button type="button" class="lang-option" data-code="ms" onclick="setLanguage('ms')"><span class="lang-option__name">Bahasa Melayu</span><span class="lang-option__code">MS</span></button>
+      <button type="button" class="lang-option" data-code="tl" onclick="setLanguage('tl')"><span class="lang-option__name">Filipino</span><span class="lang-option__code">FIL</span></button>
+      <button type="button" class="lang-option" data-code="bn" onclick="setLanguage('bn')"><span class="lang-option__name">বাংলা</span><span class="lang-option__code">BN</span></button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var WORKBENCH_SAMPLES = {"jv_rec": {"label": "java17-workspace/Main.java \u2014 Java 17 Records, Sealed & Streams", "status": "Java 17 \u00b7 Offline SDK", "lines": ["<span class=\"tok-kw\">import<\/span> java.util.List;", "<span class=\"tok-kw\">record<\/span> <span class=\"tok-fn\">Student<\/span>(String name, <span class=\"tok-kw\">int<\/span> score) {}", "", "<span class=\"tok-kw\">public class<\/span> <span class=\"tok-fn\">Main<\/span> {", "  <span class=\"tok-kw\">public static void<\/span> <span class=\"tok-fn\">main<\/span>(String[] args) {", "    <span class=\"tok-kw\">var<\/span> list = List.<span class=\"tok-fn\">of<\/span>(<span class=\"tok-kw\">new<\/span> <span class=\"tok-fn\">Student<\/span>(<span class=\"tok-str\">&quot;Lin&quot;<\/span>, <span class=\"tok-num\">98<\/span>), <span class=\"tok-kw\">new<\/span> <span class=\"tok-fn\">Student<\/span>(<span class=\"tok-str\">&quot;Ava&quot;<\/span>, <span class=\"tok-num\">95<\/span>));", "    list.<span class=\"tok-fn\">forEach<\/span>(s -&gt; System.out.<span class=\"tok-fn\">println<\/span>(s.name() + <span class=\"tok-str\">&quot;: &quot;<\/span> + s.score()));", "  }", "}"], "output": ["<span class=\"term-prompt\">&#9656;<\/span> Java 17 &middot; Main.java", "Lin: 98", "Ava: 95", "<span class=\"term-info\">&#10003; Exit 0 &middot; 16 ms &middot; Instant Bytecode Cache<\/span>"]}, "jv_oop": {"label": "java17-workspace/LedgerService.java \u2192 Main.java (3 files)", "status": "Java 17 \u00b7 Multi-Package Resolver", "lines": ["<span class=\"tok-kw\">package<\/span> studio.core;", "<span class=\"tok-kw\">public class<\/span> <span class=\"tok-fn\">LedgerService<\/span> {", "  <span class=\"tok-kw\">public double<\/span> <span class=\"tok-fn\">compound<\/span>(<span class=\"tok-kw\">double<\/span> p, <span class=\"tok-kw\">int<\/span> yrs) {", "    <span class=\"tok-kw\">return<\/span> Math.<span class=\"tok-fn\">round<\/span>(p * Math.<span class=\"tok-fn\">pow<\/span>(<span class=\"tok-num\">1.08<\/span>, yrs) * <span class=\"tok-num\">100.0<\/span>) / <span class=\"tok-num\">100.0<\/span>;", "  }", "}"], "output": ["<span class=\"term-prompt\">&#9656;<\/span> Java 17 &middot; LedgerService.java &rarr; Main.java (3 files)", "5-Year Balance: $1469.33", "<span class=\"term-info\">&#10003; Exit 0 &middot; Auto Entry-Point Arbitration<\/span>"]}, "jv_jdbc": {"label": "java17-workspace/DatabaseApp.java \u2014 Built-In Offline SQLite JDBC", "status": "Java 17 \u00b7 Built-In jdbc:sqlite", "lines": ["<span class=\"tok-kw\">import<\/span> java.sql.*;", "<span class=\"tok-kw\">public class<\/span> <span class=\"tok-fn\">DatabaseApp<\/span> {", "  <span class=\"tok-kw\">public static void<\/span> <span class=\"tok-fn\">main<\/span>(String[] args) <span class=\"tok-kw\">throws<\/span> Exception {", "    <span class=\"tok-kw\">try<\/span> (<span class=\"tok-kw\">var<\/span> c = DriverManager.<span class=\"tok-fn\">getConnection<\/span>(<span class=\"tok-str\">&quot;jdbc:sqlite::memory:&quot;<\/span>)) {", "      System.out.<span class=\"tok-fn\">println<\/span>(<span class=\"tok-str\">&quot;JDBC Connected: &quot;<\/span> + c.<span class=\"tok-fn\">getMetaData<\/span>().<span class=\"tok-fn\">getDatabaseProductName<\/span>());", "    }", "  }", "}"], "output": ["<span class=\"term-prompt\">&#9656;<\/span> Java 17 &middot; DatabaseApp.java", "JDBC Connected: SQLite", "<span class=\"term-info\">&#10003; Exit 0 &middot; Supports libs/*.jar &amp; Scanner(System.in)<\/span>"]}};
+    var currentTab = 'jv_rec';
+    var runTimer = null;
+
+    function renderWorkbench(tabKey, animateRun) {
+      var sample = WORKBENCH_SAMPLES[tabKey] || WORKBENCH_SAMPLES['jv_rec'];
+      if (!sample) { return; }
+      currentTab = tabKey;
+      var labelEl = document.getElementById('ide-compiler-label');
+      if (labelEl) { labelEl.textContent = sample.label; }
+      var statusEl = document.getElementById('wbStatusLang');
+      if (statusEl) { statusEl.textContent = sample.status; }
+
+      var tabs = document.querySelectorAll('.ide-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        var active = tabs[i].getAttribute('data-tab') === tabKey;
+        tabs[i].classList.toggle('active', active);
+        tabs[i].setAttribute('aria-selected', active ? 'true' : 'false');
+      }
+      var files = document.querySelectorAll('.wb-file');
+      for (var f = 0; f < files.length; f++) {
+        files[f].classList.toggle('active', files[f].getAttribute('data-tab') === tabKey);
+      }
+
+      var codeBox = document.getElementById('ide-code-box');
+      if (codeBox) {
+        var html = '';
+        for (var l = 0; l < sample.lines.length; l++) {
+          var activeCls = (l === sample.lines.length - 1) ? ' active-line' : '';
+          html += '<div class="code-line' + activeCls + '"><span class="ln">' + (l + 1) + '</span><span class="code-content">' + sample.lines[l] + '</span></div>';
+        }
+        codeBox.innerHTML = html;
+      }
+
+      if (animateRun) {
+        runWorkbenchSample();
+      }
+    }
+
+    function runWorkbenchSample() {
+      var sample = WORKBENCH_SAMPLES[currentTab] || WORKBENCH_SAMPLES['jv_rec'];
+      var drawer = document.getElementById('ide-terminal-drawer');
+      var out = document.getElementById('ide-term-output');
+      var badge = document.getElementById('ide-exec-status');
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (!drawer || !out || !sample) { return; }
+
+      if (runTimer) { clearTimeout(runTimer); }
+      drawer.classList.add('is-open');
+      if (runBtn) { runBtn.classList.add('is-running'); }
+      if (badge) { badge.textContent = 'Running...'; badge.classList.remove('done'); }
+      out.innerHTML = '';
+
+      var idx = 0;
+      function step() {
+        if (idx < sample.output.length) {
+          var row = document.createElement('span');
+          row.className = 'term-line-item';
+          row.innerHTML = sample.output[idx];
+          out.appendChild(row);
+          idx++;
+          runTimer = setTimeout(step, 80);
+        } else {
+          var cur = document.createElement('span');
+          cur.className = 'term-cursor';
+          cur.textContent = '\u258b';
+          out.appendChild(cur);
+          if (badge) { badge.textContent = 'Completed'; badge.classList.add('done'); }
+          if (runBtn) { runBtn.classList.remove('is-running'); }
+        }
+      }
+      step();
+    }
+
+    function initNavigationAndSmartBar() {
+      var menuBtn = document.getElementById('menuBtn');
+      var drawer = document.getElementById('siteDrawer');
+      var bar = document.getElementById('mobileBottomBar');
+      var heroCta = document.getElementById('heroCta');
+      var siteFooter = document.getElementById('siteFooter');
+
+      function syncBar() {
+        if (!bar) { return; }
+        var drawerOpen = Boolean(drawer && !drawer.hasAttribute('hidden'));
+        var modalEl = document.getElementById('langModal');
+        var modalOpen = Boolean(modalEl && modalEl.classList.contains('show'));
+        var vh = window.innerHeight || document.documentElement.clientHeight || 800;
+        var heroInView = false;
+        if (heroCta) {
+          var hr = heroCta.getBoundingClientRect();
+          heroInView = (hr.bottom > 0 && hr.top < vh);
+        }
+        var footerInView = false;
+        if (siteFooter) {
+          var fr = siteFooter.getBoundingClientRect();
+          footerInView = (fr.top < vh + 24);
+        }
+        var scrollYVal = window.pageYOffset || window.scrollY || 0;
+        var docH = Math.max(document.body ? document.body.scrollHeight : 0, document.documentElement ? document.documentElement.scrollHeight : 0);
+        var nearBottom = (vh + scrollYVal) >= (docH - 120);
+        var shouldShow = !drawerOpen && !modalOpen && !heroInView && !footerInView && !nearBottom;
+        bar.classList.toggle('is-visible', shouldShow);
+      }
+
+      window.__supercodeSyncMobileBar = syncBar;
+
+      function setDrawer(open) {
+        if (!menuBtn || !drawer) { return; }
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { drawer.removeAttribute('hidden'); }
+        else { drawer.setAttribute('hidden', ''); }
+        syncBar();
+      }
+      if (menuBtn && drawer) {
+        menuBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          setDrawer(menuBtn.getAttribute('aria-expanded') !== 'true');
+        });
+        drawer.addEventListener('click', function (e) {
+          if (e.target && e.target.closest('a')) { setDrawer(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!drawer.hasAttribute('hidden') && !drawer.contains(e.target) && e.target !== menuBtn && !menuBtn.contains(e.target)) {
+            setDrawer(false);
+          }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') { setDrawer(false); }
+        });
+      }
+
+      if (bar) {
+        window.addEventListener('scroll', syncBar, { passive: true });
+        window.addEventListener('resize', syncBar);
+        syncBar();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var tabBtns = document.querySelectorAll('.ide-tab, .wb-file');
+      for (var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', function () {
+          renderWorkbench(this.getAttribute('data-tab'), true);
+        });
+      }
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (runBtn) { runBtn.addEventListener('click', function () { runWorkbenchSample(); }); }
+      var closeTerm = document.getElementById('btn-close-term');
+      if (closeTerm) {
+        closeTerm.addEventListener('click', function () {
+          var d = document.getElementById('ide-terminal-drawer');
+          if (d) { d.classList.remove('is-open'); }
+        });
+      }
+      initNavigationAndSmartBar();
+      renderWorkbench('jv_rec', false);
+    });
+  })();
+</script>
+<script>window.__SUPERCODE_STATIC_LANG__="cs";window.__SUPERCODE_STATIC_CANONICAL__="https://supercode-ide.github.io/cs/java-ide.html";</script>
+<script src="../i18n_extended.js"></script>
+</body>
+</html>

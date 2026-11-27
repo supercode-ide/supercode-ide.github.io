@@ -5,15 +5,15 @@
 > Official Website: https://supercode-ide.github.io/
 
 ## Core Capabilities
-- Smart Code Editor with offline AST context completion (., ->, ::, :), dual-mode syntax highlighting across 40+ file types, 30+ offline formatters, Error Radar diagnostics, holographic UTF-8 byte stats, 29-tool adaptive toolbar, 21-key swipe-up symbol keyboard, 8 optical studio themes, and native A4 PDF export.
+- Smart Code Editor with offline AST context completion (., ->, ::, :), dual-mode syntax highlighting across 70+ file types, 30+ offline formatters, Error Radar diagnostics, holographic UTF-8 byte stats, 29-tool adaptive toolbar, 21-key swipe-up symbol keyboard, 8 optical studio themes, and native A4 PDF export.
 - GB-Scale Large File Viewer & Global Stream Regex Replace: 10M-character disk-backed pagination at 120Hz, 15 MB virtual clipboard, 50k-node workspace fuzzy finder, and 34 character encodings (UTF-8/16/32, GB18030, Shift_JIS, EUC-KR, KOI8-R, ISO-8859, Windows-125x).
 - Dedicated Offline Compilers & Runtimes: Python 3.11 & Scientific 3.12 (NumPy, Pandas, Polars, DuckDB, Matplotlib, Scikit-Learn, OpenCV, PIP & local .whl), GNU C17 (CMake/Makefile & POSIX), GNU C++20 (STL & 21 project templates), Java 17 (records, sealed, 0ms cache, SQLite JDBC & custom .jar), ES2024 JavaScript + 29 offline Node.js core modules, native Lua 5.4.7 + 11 built-in modules (cjson, lsqlite3, lfs), and non-root Linux Shell (.sh) + Kotlin.
 - Full-Stack Web, PHP 8.2 & SQL: Real local HTTP server supporting HTML5, CSS3, ES Modules, WebAssembly (.wasm), offline dynamic PHP 8.2 + PDO SQLite, 3-mode Viewport Switcher, Web DevTools JS REPL, and standalone SQLite 3.54.1 Studio with FTS5, JSONB, 50+ MySQL/Postgres functions & 9 output modes.
 - Integrated DevOps: Self-contained Visual Git Client (HTTPS PAT clone, 120-commit Time Machine unified diffs, visual conflict resolver) and SFTP / FTPS (TLS 1.3) / FTP workspace with AES-256 SSH key vault & 3-phase atomic remote saves.
 
-## Dedicated Documentation Pages (Available in 10 Languages: en, zh, es, ja, de, fr, ko, pt, hi, ru)
+## Dedicated Documentation Pages (All 53 Pages Available in All 32 Languages: en, zh, zh-tw, es, pt, ja, ko, de, fr, ru, hi, id, it, vi, th, tr, ar, pl, nl, sv, nb, da, fi, cs, uk, ro, hu, el, he, ms, tl, bn)
 - [Overview](https://supercode-ide.github.io/): Native offline code editor and full-stack mobile IDE for Android. Edit GB-scale files, run Python, C17, C++20, Java 17, JavaScript, Lua, Shell, SQL, and local PHP/WASM websites with visual Git and SFTP.
-- [Smart Code Editor](https://supercode-ide.github.io/code-editor.html): Professional native Android code editor with offline AST smart completion, dual-mode syntax highlighting across 40+ file types, one-tap formatting, real-time Error Radar, holographic word/byte stats, 29-tool adaptive toolbar, and 8 studio themes.
+- [Smart Code Editor](https://supercode-ide.github.io/code-editor.html): Professional native Android code editor with offline AST smart completion, dual-mode syntax highlighting across 70+ file types, one-tap formatting, real-time Error Radar, holographic word/byte stats, 29-tool adaptive toolbar, and 8 studio themes.
 - [GB Large File Editor](https://supercode-ide.github.io/large-file-editor.html): Open multi-hundred-MB and GB log files, SQL dumps, and CSV datasets instantly on Android without freezing. Includes 10MB disk paging, global streaming regex replace, 15MB virtual clipboard, and 34 character encodings.
 - [Python Coding App & IDE](https://supercode-ide.github.io/python-ide.html): Free offline Python coding app and Python 3.11/3.12 IDE for Android. Run multi-file Python projects, install PIP & offline .whl packages, use NumPy/Pandas/Matplotlib, interactive input(), and Visual Git.
 - [C17 Compiler](https://supercode-ide.github.io/c-compiler.html): Dedicated offline C17 compiler and C coding app for Android. Compile multi-file .c/.h and CMake/Makefile projects offline, test pointers and structs, use unbuffered scanf/fgets stdin, and POSIX headers.
@@ -27,7 +27,7 @@
 - [Visual Git Client](https://supercode-ide.github.io/git-client.html): Complete visual Git client built into SuperCode IDE for Android. Clone GitHub/GitLab/Gitee repos via PAT, inspect color-coded commit diffs, switch branches, auto-stash on Pull, and resolve merge conflicts visually.
 - [SFTP · FTPS · FTP Client](https://supercode-ide.github.io/sftp-client.html): Connect to SFTP, FTPS (TLS 1.3), and FTP servers directly in SuperCode IDE on Android. Authenticate with Ed25519/RSA/PEM SSH keys in an AES-256 vault, edit remote code with 3-phase atomic save, and resume interrupted transfers.
 
-## Python Coding App Deep-Dive Guides (English)
+## Python Coding App Deep-Dive Guides (32 Languages)
 - [PIP & Offline .whl Guide](https://supercode-ide.github.io/python-pip-manager.html): Complete guide to installing Python PIP packages on Android with SuperCode. Use Auto-PIP alias resolution, batch-install requirements.txt, or import offline .whl/.zip files from Downloads without internet.
 - [Supported Python Libraries](https://supercode-ide.github.io/python-offline-libraries.html): Explore the complete list of Python libraries supported on Android in SuperCode IDE: 200+ Python 3.11 standard modules, pure-Python PyPI wheels, 60+ pre-built NumPy/Pandas/OpenCV/Scikit-Learn libraries, and PyTorch.
 - [NumPy, Pandas & Matplotlib](https://supercode-ide.github.io/python-data-science.html): Analyze datasets and plot charts offline on Android with SuperCode. Run NumPy, Pandas, Polars, DuckDB, SciPy, SymPy, Matplotlib, and Seaborn on your phone or tablet with automatic PNG/SVG/PDF folder sync.
@@ -36,49 +36,49 @@
 - [Multi-File Projects & Git](https://supercode-ide.github.io/python-projects-workspace.html): Develop real multi-file Python projects on Android. Smart main.py entry routing, PEP 420 packages, live unsaved tab overlay, interactive input() split console, AST autocomplete, PEP 8 formatter, and Visual Git.
 - [Learn Python Offline](https://supercode-ide.github.io/learn-python-android.html): Practice and learn Python offline on Android with zero login walls. SuperCode includes 8 runnable Python templates, live input() console, 21-key Python symbol keyboard, Error Radar, and PIP/NumPy.
 
-## C Compiler & IDE Deep-Dive Guides (English)
+## C Compiler & IDE Deep-Dive Guides (32 Languages)
 - [Pointers, Structs & Memory Lab](https://supercode-ide.github.io/c-pointers-memory-coursework.html): Learn ANSI/GNU C17 offline on Android without archaic Turbo C <conio.h> bugs. Practice pointers, structs, malloc/free, bitwise ops, and <math.h> with 6 C templates and A4 PDF export.
 - [Multi-File .c/.h & CMake Builds](https://supercode-ide.github.io/c-multifile-header-projects.html): Compile multi-file .c and .h projects up to 350 files offline on Android. SuperCode parses CMakeLists.txt and Makefiles automatically—or links #include headers with zero config and incremental caching.
 - [Live scanf Stdin & File I/O](https://supercode-ide.github.io/c-scanf-file-io-console.html): Run interactive C programs on Android with unbuffered stdout prompts before scanf/fgets, [EOF] loop termination, // @args argc/argv CLI flags, and two-way fopen/fwrite file sync.
 - [POSIX Headers, Threads & Sockets](https://supercode-ide.github.io/c-posix-systems-programming.html): Write Operating Systems and POSIX C code on Android. Use unistd.h, fcntl.h, dirent.h, getopt.h, regex.h, and stdatomic.h offline, plus seamless pthread, semaphore, fork/pipe, and socket builds.
 
-## C++20 Compiler & IDE Deep-Dive Guides (English)
+## C++20 Compiler & IDE Deep-Dive Guides (32 Languages)
 - [Competitive Coding & STL Lab](https://supercode-ide.github.io/cpp-competitive-programming-stl.html): Practice Codeforces, LeetCode, AtCoder, CSES, and USACO offline on Android. Full GNU C++20 STL, 55:45 dual-pane std::cin console, µs/KB runtime & memory metrics, and 20s loop guard.
 - [Modern C++20, Ranges & OOP](https://supercode-ide.github.io/cpp-oop-smart-pointers-modern.html): Leave outdated C++11 mobile apps behind. Write modern C++20 offline on Android with <ranges>, <concepts>, <format>, <span>, optional/variant, smart pointers, and <thread>/<latch> concurrency.
 - [Multi-File .cpp/.hpp & 21 Templates](https://supercode-ide.github.io/cpp-multifile-hpp-builder.html): Build multi-file .cpp, .hpp, and .inl C++20 projects offline on Android. Includes 21 complete multi-file CMake starter projects, automatic CMakeLists.txt/Makefile parsing, and incremental object caching.
 - [Learn C++ Offline](https://supercode-ide.github.io/learn-cpp-offline-android.html): Learn and practice C++20 offline on Android with zero sign-up. Includes 8 single-file + 21 multi-file C++ templates, 21-key C++ symbol bar (::, ->, <<, >>), Error Radar, 1-tap formatter, and A4 PDF export.
 
-## Java 17 IDE Deep-Dive Guides (English)
+## Java 17 IDE Deep-Dive Guides (32 Languages)
 - [Java 17 Records, Sealed & Streams](https://supercode-ide.github.io/java-17-records-oop-android.html): Compile and run modern Java 17 offline on Android. Supports records, sealed classes, switch -> expressions, pattern matching, text blocks, and Streams — plus automatic Cloud Java 21+ virtual threads.
 - [Multi-Class Packages & .jar Libs](https://supercode-ide.github.io/java-multiclass-packages-ide.html): Build multi-class, multi-package Java 17 projects offline on Android. Scan up to 500 .java files, auto-load custom libs/*.jar libraries (up to 30 MB), bundle resources/, and re-run in ~0ms via SHA-256 cache.
 - [Java SQLite JDBC & File I/O](https://supercode-ide.github.io/java-jdbc-sqlite-file-io.html): Write Java database and file I/O programs offline on Android. Connect via built-in jdbc:sqlite with zero Maven setup, inspect .db files in SQL Studio, sync NIO.2 Files to your folder, and use HttpClient.
 - [Learn Java, AP CS & DSA](https://supercode-ide.github.io/learn-java-dsa-android.html): Free offline Java coding app for Android beginners, AP Computer Science A students, and LeetCode DSA prep. Run compact void main(), interactive Scanner(System.in), 8 Java templates, and export A4 PDF homework.
 
-## JavaScript & Node IDE Deep-Dive Guides (English)
+## JavaScript & Node IDE Deep-Dive Guides (32 Languages)
 - [29+ Offline Node.js Core Modules](https://supercode-ide.github.io/javascript-node-core-modules-offline.html): Run 29+ Node.js core modules (node:fs, fs/promises, path, buffer, events, stream, zlib, crypto, readline, util) 100% offline on Android. Supports ESM, CommonJS, package.json exports, and folder sync.
 - [ES2024 Async, Await & Worker](https://supercode-ide.github.io/javascript-es2024-async-console.html): Run modern ES2024 JavaScript offline on Android without HTML boilerplate. Supports top-level await, async generators, BigInt, structuredClone, Fetch, console.table(), and <1ms infinite-loop protection.
 - [Web Crypto & node:crypto](https://supercode-ide.github.io/javascript-web-crypto-security.html): Prototype and audit cryptography offline in JavaScript on Android. Use W3C crypto.subtle and node:crypto for AES-256-GCM encryption, SHA-256/512 hashing, constant-time JWT HMAC, PBKDF2, and UUIDs.
 - [Learn JS & Practice DSA](https://supercode-ide.github.io/learn-javascript-dsa-android.html): Free offline JavaScript coding app for Android beginners and LeetCode interview prep. Includes 6 JS starter templates, a 21-key arrow-function symbol bar, AST autocomplete, JSON formatter, and live prompt() input.
 
-## Web, PHP 8.2 & WASM Deep-Dive Guides (English)
+## Web, PHP 8.2 & WASM Deep-Dive Guides (32 Languages)
 - [Offline PHP 8.2 & PDO Server](https://supercode-ide.github.io/php-server-pdo-sqlite-android.html): Run multi-file PHP 8.2 and PDO SQLite websites 100% offline on Android. Supports $_GET, $_POST, persistent $_SESSION, 24 MB $_FILES uploads, password_hash(), and JSON APIs without KSWEB or CLI setup.
 - [HTML5, CSS3 & 3-Viewport Preview](https://supercode-ide.github.io/html-css-js-responsive-preview.html): Design and test responsive websites offline on Android. SuperCode pairs an AST HTML5/CSS3/JS editor and 1-tap recursive formatter with a real local HTTP server, Mobile/768dp Tablet/Desktop switcher, and PNG export.
 - [Web DevTools, JS REPL & WASM](https://supercode-ide.github.io/mobile-web-devtools-wasm-studio.html): Debug mobile web apps without a desktop cable. SuperCode embeds a resizable DevTools Console (All/Error/Warn/Net), HTTP timing monitor, live async DOM JS REPL, and native WebAssembly (.wasm) streaming on Android.
 - [SFTP, FTPS & Git Web Deploy](https://supercode-ide.github.io/fullstack-web-sftp-deploy-android.html): Maintain and deploy production HTML, CSS, JS, WASM, and PHP websites from your Android phone. Preview remote SFTP/FTPS tabs locally on demand, save via 3-phase atomic transactions, or push to GitHub Pages.
 
-## SQL & SQLite Studio Deep-Dive Guides (English)
+## SQL & SQLite Studio Deep-Dive Guides (32 Languages)
 - [.db / .sqlite Viewer & 9 Modes](https://supercode-ide.github.io/sqlite-db-viewer-editor-android.html): Open, inspect, and edit .db, .sqlite, .sqlite3, .db3, and .s3db files 100% offline on Android with SQLite 3.54.1. Auto-import CSV/TSV/JSON up to 8 MB and export across 9 modes (Box, Markdown, JSON, CSV).
 - [Window Functions, JSONB & FTS5](https://supercode-ide.github.io/sql-window-functions-fts5-json.html): Practice real analytical SQL and ace technical interviews offline on Android. Run Window Functions (OVER, LAG, DENSE_RANK), Recursive CTEs, JSONB ->/->>, FTS5 bm25() search, and MEDIAN/STDDEV with 6 SQL templates.
 - [MySQL & PostgreSQL Syntax](https://supercode-ide.github.io/mysql-postgresql-syntax-android.html): Run MySQL and PostgreSQL coursework on your Android phone. Execute AUTO_INCREMENT, SERIAL, ENUM, ILIKE, SHOW TABLES, DESCRIBE, and 50+ functions offline, plus Cloud MySQL 8.0 for stored procedures and DELIMITER.
 - [SQL + Python, PHP, Java & Lua](https://supercode-ide.github.io/sql-python-php-java-lua-integration.html): Build real database-backed apps offline on Android. Seed app.db in SQL Studio, then connect to the exact same SQLite file from Python 3.11 sqlite3, PHP 8.2 PDO, Java 17 JDBC, and Lua 5.4 — plus edit multi-GB .sql dumps.
 
-## Lua 5.4 IDE Deep-Dive Guides (English)
+## Lua 5.4 IDE Deep-Dive Guides (32 Languages)
 - [Game Scripting, Metatables & Coroutines](https://supercode-ide.github.io/lua-game-scripting-metatables-oop.html): Practice Lua game scripting offline on Android in ~400µs. Prototype metatable OOP classes, coroutine state machines, and modular Luau/Roblox & Love2D logic with . vs : AST completion and 8 starter scripts.
 - [Built-In Modules (cjson, lsqlite3, lfs)](https://supercode-ide.github.io/lua-builtin-modules-cjson-sqlite.html): Require cjson, lsqlite3, lfs (LuaFileSystem), crypto/sha2, regex, base64, socket.http, and inspect offline on Android with zero luarocks setup in SuperCode's native Lua 5.4.7 IDE.
 - [Lua 5.4 Bitwise, <close> & Multi-File](https://supercode-ide.github.io/lua-54-bitwise-close-multifile.html): Upgrade from legacy Lua 5.2 mobile apps to genuine native Lua 5.4.7 on Android. Run 64-bit bitwise operators, // floor division, <const> & <close> variables, string.pack, utf8, and multi-folder require().
 - [Learn Lua Offline on Android](https://supercode-ide.github.io/learn-lua-offline-android.html): Learn Lua programming offline on your Android phone or tablet. Zero login required — includes 8 runnable Lua examples, live io.read() input, . vs : autocomplete, 1-tap Lua formatter, and A4 PDF export.
 
-## Linux Shell & Kotlin Deep-Dive Guides (English)
+## Linux Shell & Kotlin Deep-Dive Guides (32 Languages)
 - [Run .sh Scripts on Android (No Root)](https://supercode-ide.github.io/run-sh-shell-scripts-android-noroot.html): Execute Linux .sh and .bash scripts directly inside Android shared storage folders without root or 'chmod +x: Permission denied' errors. Supports set -euo pipefail, getopts, read -p, and multi-script sourcing.
 - [awk, sed, grep & curl Pipelines](https://supercode-ide.github.io/shell-awk-sed-grep-log-pipelines.html): Run offline awk, sed, grep, sort, uniq, bc -l, curl, tar/gzip, and sha256sum text pipelines over real files on Android — plus seamless Cloud Ubuntu GNU Bash 5.2 for declare -A and jq.
 - [Kotlin Coding App & .kt/.kts Runner](https://supercode-ide.github.io/kotlin-coding-app-compiler-android.html): Write, format, and compile Kotlin (.kt and .kts) on your Android phone or tablet. Features offline AST completion, a 21-key -> / ?: / ?. symbol bar, 1-tap Kotlin formatter, multiline stdin, and fast execution.

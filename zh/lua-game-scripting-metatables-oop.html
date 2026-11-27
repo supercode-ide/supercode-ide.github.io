@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090A0F">
+  <meta name="color-scheme" content="only dark">
+  <meta name="supported-color-schemes" content="dark">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <title>Android Lua 游戏脚本 IDE — 元表、协程与 Love2D/Luau 实战 | SuperCode</title>
+  <meta name="description" content="在 Android 上以 ~400µs 离线演练 Lua 游戏脚本。编写元表 OOP 类、协程状态机与模块化 Luau/Roblox 及 Love2D 逻辑，配备 . 与 : AST 补全及 8 个内置示例脚本。">
+  <meta name="keywords" content="lua game scripting app android, learn lua for roblox love2d offline, lua metatables coroutines tutorial mobile, lua coding practice app, lua oop __index android, game state machine lua ide">
+  <meta name="author" content="Phoenix Global Studios">
+  <meta name="google-play-app" content="app-id=com.phoenixglobal.supercodeeditor">
+
+  <link id="canonical-link" rel="canonical" href="https://supercode-ide.github.io/zh/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="x-default" href="https://supercode-ide.github.io/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="en" href="https://supercode-ide.github.io/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://supercode-ide.github.io/zh/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://supercode-ide.github.io/zh-tw/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="es" href="https://supercode-ide.github.io/es/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://supercode-ide.github.io/pt/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="ja" href="https://supercode-ide.github.io/ja/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="ko" href="https://supercode-ide.github.io/ko/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="de" href="https://supercode-ide.github.io/de/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="fr" href="https://supercode-ide.github.io/fr/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="ru" href="https://supercode-ide.github.io/ru/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="hi" href="https://supercode-ide.github.io/hi/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="id" href="https://supercode-ide.github.io/id/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="it" href="https://supercode-ide.github.io/it/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="vi" href="https://supercode-ide.github.io/vi/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="th" href="https://supercode-ide.github.io/th/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="tr" href="https://supercode-ide.github.io/tr/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="ar" href="https://supercode-ide.github.io/ar/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="pl" href="https://supercode-ide.github.io/pl/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="nl" href="https://supercode-ide.github.io/nl/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="sv" href="https://supercode-ide.github.io/sv/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="nb" href="https://supercode-ide.github.io/nb/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="da" href="https://supercode-ide.github.io/da/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="fi" href="https://supercode-ide.github.io/fi/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="cs" href="https://supercode-ide.github.io/cs/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="uk" href="https://supercode-ide.github.io/uk/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="ro" href="https://supercode-ide.github.io/ro/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="hu" href="https://supercode-ide.github.io/hu/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="el" href="https://supercode-ide.github.io/el/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="he" href="https://supercode-ide.github.io/he/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="ms" href="https://supercode-ide.github.io/ms/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="fil" href="https://supercode-ide.github.io/tl/lua-game-scripting-metatables-oop.html">
+  <link rel="alternate" hreflang="bn" href="https://supercode-ide.github.io/bn/lua-game-scripting-metatables-oop.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
+  <meta property="og:title" content="Android Lua 游戏脚本 IDE — 元表、协程与 Love2D/Luau 实战 | SuperCode">
+  <meta property="og:description" content="在 Android 上以 ~400µs 离线演练 Lua 游戏脚本。编写元表 OOP 类、协程状态机与模块化 Luau/Roblox 及 Love2D 逻辑，配备 . 与 : AST 补全及 8 个内置示例脚本。">
+  <meta property="og:url" content="https://supercode-ide.github.io/zh/lua-game-scripting-metatables-oop.html">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-hero-zh.png">
+  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-hero-zh.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="21 键符号编程键盘与 8 套精雕 IDE 主题">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-hero-zh.png">
+  <meta name="twitter:title" content="Android Lua 游戏脚本 IDE — 元表、协程与 Love2D/Luau 实战 | SuperCode">
+  <meta name="twitter:description" content="在 Android 上以 ~400µs 离线演练 Lua 游戏脚本。编写元表 OOP 类、协程状态机与模块化 Luau/Roblox 及 Love2D 逻辑，配备 . 与 : AST 补全及 8 个内置示例脚本。">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <script>if(/SamsungBrowser/i.test(navigator.userAgent)){document.documentElement.classList.add('is-samsung');}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "SoftwareApplication",
+        "MobileApplication",
+        "WebApplication"
+      ],
+      "@id": "https://supercode-ide.github.io/#supercode-app",
+      "name": "Code Editor: SuperCode IDE",
+      "alternateName": [
+        "Lua Game Scripting App Android",
+        "Learn Lua for Roblox & Love2D Offline",
+        "Mobile Lua Metatables & Coroutines Studio"
+      ],
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Offline Lua 5.4 Game Scripting, Metatables & Coroutines App for Android",
+      "inLanguage": "zh-Hans",
+      "fileSize": "40.2MB",
+      "softwareVersion": "1.55.05",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=zh-CN&listing=js-lua-coding",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=zh-CN&listing=js-lua-coding",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=zh-CN"
+      ],
+      "potentialAction": [
+        {
+          "@type": "InstallAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=zh-CN&listing=js-lua-coding",
+            "actionPlatform": [
+              "http://schema.org/AndroidPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          }
+        },
+        {
+          "@type": "ViewAction",
+          "name": "新手引导",
+          "target": [
+            "https://supercode-ide.github.io/tutorial/?lang=zh",
+            "android-app://com.phoenixglobal.supercodeeditor/https/supercode-ide.github.io/tutorial"
+          ]
+        }
+      ],
+      "identifier": "com.phoenixglobal.supercodeeditor",
+      "url": "https://supercode-ide.github.io/zh/lua-game-scripting-metatables-oop.html",
+      "screenshot": [
+        "https://supercode-ide.github.io/assets/gallery/zh/08_symbol_keyboard_themes.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh/01_python_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh/02_cpp20_compiler.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh/03_web_php_devtools.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh/04_file_manager_tree.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh/05_sql_sqlite_studio.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh/06_java17_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh/07_visual_git_timemachine.webp"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Phoenix Global Studios",
+        "url": "https://supercode-ide.github.io/zh/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "66"
+      },
+      "featureList": [
+        "Native Lua 5.4.7 engine with ~400 microsecond cold start for instant game-loop prototyping offline",
+        "Full metatable OOP inheritance (__index, __newindex, __call, __tostring) and vector operator overloading",
+        "Cooperative coroutine state machines (coroutine.create, resume, yield, wrap) for NPC AI and quest sequences",
+        "Method-aware (. vs :) offline AST autocomplete across standard libraries and custom entity tables",
+        "Multi-file require() module linking across entities/, systems/, and data/ folders plus unsaved tabs",
+        "8 built-in runnable Lua starter scripts including adventure.lua, metatables.lua, tables.lua, and guess.lua"
+      ],
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-zh.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://supercode-ide.github.io/zh/lua-game-scripting-metatables-oop.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SuperCode IDE",
+          "item": "https://supercode-ide.github.io/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Lua 5.4 IDE 中心",
+          "item": "https://supercode-ide.github.io/zh/lua-ide.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "游戏脚本、元表与协程",
+          "item": "https://supercode-ide.github.io/zh/lua-game-scripting-metatables-oop.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Practice Game Scripting Logic on Your Phone",
+      "description": "Build, test, and refine core gameplay systems on your commute, then drop the pure Lua modules straight into your PC engine.",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Load a Built-In Game Script or Create Entity Modules",
+          "text": "Start from adventure.lua or metatables.lua, or organize fresh files like player.lua, combat.lua, and main.lua in your workspace.",
+          "url": "https://supercode-ide.github.io/lua-game-scripting-metatables-oop.html#step1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Write Metatable Classes With Colon-Method Autocomplete",
+          "text": "Type : on entity instances for self-bound method suggestions and tap Format to align nested table constructors.",
+          "url": "https://supercode-ide.github.io/lua-game-scripting-metatables-oop.html#step2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Simulate Turns & Coroutine Ticks in ~400 Microseconds",
+          "text": "Tap Run ▶ to test combat formulas, RNG drop rates, and live io.read() player choices with sub-millisecond feedback.",
+          "url": "https://supercode-ide.github.io/lua-game-scripting-metatables-oop.html#step3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Sync Pure Lua Modules to Love2D, Defold, or GitHub",
+          "text": "Commit decoupled gameplay modules via Visual Git so your desktop Love2D, Defold, or Luau project pulls them cleanly.",
+          "url": "https://supercode-ide.github.io/lua-game-scripting-metatables-oop.html#step4"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://supercode-ide.github.io/lua-game-scripting-metatables-oop.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "在 SuperCode 中练习 Lua 5.4 能直接迁移到 Roblox (Luau) 和 Love2D 吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "完全可以！核心的 Lua 表、闭包、词法作用域、元表（`__index`、`__add`）、协程、数学库以及模块化 `return M` 写法，正是 Roblox Luau、Love2D、Defold、Solar2D 以及魔兽世界 / Garry's Mod 插件共同的技术基石。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "SuperCode 能直接渲染 3D Roblox 场景或 Love2D OpenGL 窗口吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SuperCode 专注于在原生终端中高效打磨解耦后的游戏玩法逻辑、数据驱动 RPG 系统、基于 SQLite/JSON 的背包存档以及算法原型 — 让你随时随地完善核心模块脚本，并通过 Git 同步到桌面端渲染器。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "SuperCode 如何避免 Lua OOP 中的 `.` 与 `:` 调用错误？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "当你输入 `entity:` 或 `Entity.` 时，SuperCode 的离线 AST 自动补全会根据上下文过滤候选项，将冒号定义的实例方法与静态模块函数明确区分开来。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "应用内是否自带可供离线学习的入门游戏脚本？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "是的。内置 8 个可直接运行的 Lua 模板 — 包括 `adventure.lua`、`guess.lua`、`metatables.lua` 和 `tables.lua` — 100% 支持离线学习与运行。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-page="lua_game_oop">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="sc-logo" viewBox="20 14 68 72">
+    <path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/>
+    <path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/>
+    <path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/>
+    <path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+  </symbol>
+  <symbol id="gp-prism" viewBox="0 0 24 24">
+    <path fill="#4285F4" d="M3.6,2.4C3.3,2.7,3.1,3.2,3.1,3.8v16.4c0,0.6,0.2,1.1,0.5,1.4l0.1,0.1L12.9,12v-0.2L3.7,2.3L3.6,2.4z"/>
+    <path fill="#34A853" d="M16,15.1l-3.1-3.1v-0.2L16,8.7l0.1,0.1l3.6,2.1c1,0.6,1,1.5,0,2.1l-3.6,2.1L16,15.1z"/>
+    <path fill="#FBBC05" d="M16.1,15.1L12.9,12L3.6,21.3c0.3,0.4,0.9,0.4,1.6,0.1L16.1,15.1z"/>
+    <path fill="#EA4335" d="M16.1,8.9L5.2,2.6C4.5,2.2,3.9,2.3,3.6,2.7L12.9,12L16.1,8.9z"/>
+  </symbol>
+  <symbol id="i-ne" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8 20 7.2v9.6L12 21.2 4 16.8V7.2z"/><path d="M4 7.2l8 4.4 8-4.4M12 11.6v9.6"/></g></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2.8v3.2M15 2.8v3.2M9 18v3.2M15 18v3.2M2.8 9H6M2.8 15H6M18 9h3.2M18 15h3.2"/></g></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 2.8 7.8 12 12.6l9.2-4.8z"/><path d="m2.8 12 9.2 4.8 9.2-4.8"/><path d="m2.8 16.2 9.2 4.8 9.2-4.8"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="M2.8 8.5h18.4"/><path d="m9.5 12.5-2.2 2.2 2.2 2.2M14.5 12.5l2.2 2.2-2.2 2.2"/></g></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5.6" rx="7.6" ry="2.8"/><path d="M4.4 5.6v12.8c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8V5.6"/><path d="M4.4 12c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8"/></g></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="m7.2 9.5 3 2.5-3 2.5M12.8 15h4"/></g></symbol>
+  <symbol id="i-git" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.3"/><circle cx="6" cy="18" r="2.3"/><circle cx="18" cy="12" r="2.3"/><path d="M6 8.3v7.4M8.3 6h4.2a3.5 3.5 0 0 1 3.5 3.5v.2"/></g></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5h11a4 4 0 0 0 .7-7.94A5.5 5.5 0 0 0 7.4 9.2 3.8 3.8 0 0 0 6.5 18.5z"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M13 2.8 4.8 13.2h6.3L10.2 21.2 19.2 10.6h-6.4z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 2.8 4.8 5.8v5.6c0 5 3.1 8.5 7.2 9.8 4.1-1.3 7.2-4.8 7.2-9.8V5.8z"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="index.html" class="brand" aria-label="SuperCode IDE Home">
+      <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+      <span>SuperCode</span>
+      <span class="brand__tag">IDE</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary Workspaces">
+      <a href="code-editor.html" data-i18n="nav_code_editor">代码编辑器</a>
+      <a href="large-file-editor.html" data-i18n="nav_large_file">GB 大文件</a>
+      <a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a>
+      <a href="c-compiler.html" data-i18n="nav_c_compiler">C 语言编译</a>
+      <a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a>
+      <a href="java-ide.html" data-i18n="nav_java_ide">Java 17</a>
+      <a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a>
+      <a href="web-ide.html" data-i18n="nav_web_ide">Web & PHP</a>
+      <a href="sql-ide.html" data-i18n="nav_sql_ide">SQL 数据库</a>
+      <a href="git-client.html" data-i18n="nav_git_client">可视化 Git</a>
+      <a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP & FTPS</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button id="langModalBtn" class="btn-lang-trigger" type="button" onclick="openLangModal()" aria-label="Select Language">
+        <svg class="lang-globe-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span id="langTriggerText">简中</span>
+        <span class="lang-chevron" aria-hidden="true">&#9662;</span>
+      </button>
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-CN&amp;listing=js-lua-coding&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh%26utm_campaign%3Djs-lua-coding%26utm_content%3Dlua-game-scripting-metatables-oop" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+        <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+        <span data-i18n="nav_cta">Google Play</span>
+      </a>
+      <a href="index.html" class="btn-home-icon" aria-label="Home" title="Home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5"/>
+          <path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
+        </svg>
+      </a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteDrawer" aria-label="All Pages Directory">
+        <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 8.5h16M4 15.5h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-drawer" id="siteDrawer" hidden>
+  <nav class="container menu-drawer__inner" aria-label="All SuperCode Pages">
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_core">核心编辑器与巨型文件</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="index.html"><span data-i18n="nav_home">总览首页</span><span class="mono">01</span></a>
+        <a class="menu-drawer__link" href="code-editor.html"><span data-i18n="nav_code_editor">代码编辑器</span><span class="mono">02</span></a>
+        <a class="menu-drawer__link" href="large-file-editor.html"><span data-i18n="nav_large_file">GB 大文件</span><span class="mono">03</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_lang">离线编译器与脚本语言</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="python-ide.html"><span data-i18n="nav_python_ide">Python IDE</span><span class="mono">04</span></a>
+        <a class="menu-drawer__link" href="c-compiler.html"><span data-i18n="nav_c_compiler">C 语言编译</span><span class="mono">05</span></a>
+        <a class="menu-drawer__link" href="cpp-ide.html"><span data-i18n="nav_cpp_ide">C++20 IDE</span><span class="mono">06</span></a>
+        <a class="menu-drawer__link" href="java-ide.html"><span data-i18n="nav_java_ide">Java 17</span><span class="mono">07</span></a>
+        <a class="menu-drawer__link" href="javascript-ide.html"><span data-i18n="nav_js_ide">JavaScript</span><span class="mono">08</span></a>
+        <a class="menu-drawer__link is-current" href="lua-ide.html"><span data-i18n="nav_lua_ide">Lua 5.4</span><span class="mono">09</span></a>
+        <a class="menu-drawer__link" href="shell-ide.html"><span data-i18n="nav_shell_ide">Shell & Kotlin</span><span class="mono">10</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_devops">全栈 Web · 数据库 · 远程运维</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="web-ide.html"><span data-i18n="nav_web_ide">Web & PHP</span><span class="mono">11</span></a>
+        <a class="menu-drawer__link" href="sql-ide.html"><span data-i18n="nav_sql_ide">SQL 数据库</span><span class="mono">12</span></a>
+        <a class="menu-drawer__link" href="git-client.html"><span data-i18n="nav_git_client">可视化 Git</span><span class="mono">13</span></a>
+        <a class="menu-drawer__link" href="sftp-client.html"><span data-i18n="nav_sftp_client">SFTP & FTPS</span><span class="mono">14</span></a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<main id="top">
+  <!-- ==================== 01 · EDITORIAL HERO & INTERACTIVE WORKBENCH ==================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <div class="py-hub-crumb"><a href="lua-ide.html"><span class="crumb-arrow" aria-hidden="true">&larr;</span> Lua 5.4 IDE 中心</a><span class="sep">/</span><span>游戏脚本、元表与协程</span></div>
+          <div class="trust-pill">
+            <span class="trust-pill__score"><span data-play-rating>4.9</span> &#9733;</span>
+            <span data-i18n="hero_tag">原生 LUA 5.4.7 &#183; 元表 OOP &#183; 协程状态机 &#183; ~400&#181;s 启动</span>
+          </div>
+
+          <h1 class="hero-h1" data-i18n="hero_h1">在 Android 上离线原型开发 <span class="text-gradient">Lua 游戏逻辑、元表与协程</span>。</h1>
+
+          <p class="hero-lead" data-i18n="hero_desc">灵感来袭时，随时随地打磨 <strong>Roblox (Luau)、Love2D、Defold 与 Solar2D</strong> 核心脚本模式。在 <strong>~400 微秒</strong>内启动<strong>原生 Lua 5.4.7</strong> 离线运行，完整支持<strong>元表 OOP</strong>、协作式<strong>协程</strong>以及区分 <strong><code>.</code> 与 <code>:</code> 方法的 AST 智能补全</strong>。</p>
+
+          <div class="hero__cta" id="heroCta">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-CN&amp;listing=js-lua-coding&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh%26utm_campaign%3Djs-lua-coding%26utm_content%3Dlua-game-scripting-metatables-oop" target="_blank" rel="noopener" class="btn btn--gold">
+              <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+              <span data-i18n="cta_btn">Google Play 获取</span>
+            </a>
+            <a href="https://supercode-ide.github.io/tutorial/?lang=zh&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+              <span data-i18n="cta_tutorial">新手引导</span>
+              <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <dl class="specs" aria-label="Key Specifications">
+          <div class="spec"><dt>~400<small>&micro;s</small></dt><dd data-i18n="lgo_s1">原生 Lua 5.4.7</dd></div>
+          <div class="spec"><dt>__index</dt><dd data-i18n="lgo_s2">元表 OOP</dd></div>
+          <div class="spec"><dt>yield()</dt><dd data-i18n="lgo_s3">协程状态机</dd></div>
+          <div class="spec"><dt>. vs :</dt><dd data-i18n="lgo_s4">方法 AST 守卫</dd></div>
+        </dl>
+      </div>
+
+      <div class="wb-caption">
+        <div class="sec-index" style="margin-bottom:0">
+          <span class="num">01</span>
+          <span class="rule"></span>
+          <span data-i18n="wb_eyebrow">交互式 LUA 游戏逻辑、元表 OOP 与协程工作台</span>
+        </div>
+        <span class="wb-caption__hint mono">Metatable Vec2 OOP &#183; Coroutine Boss AI &#183; Live io.read() RPG Loop</span>
+      </div>
+
+      <div class="ide-workbench">
+        <div class="wb-titlebar">
+          <div class="wb-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="wb-title" id="ide-compiler-label">lua-game-sandbox/entity_oop.lua &#8212; Metatable OOP &amp; Operator Overloading</div>
+          <button type="button" class="wb-run" id="btn-run-sandbox">
+            <span class="wb-run__tri" aria-hidden="true">&#9654;</span>
+            <span data-i18n="btn_run">运行示例</span>
+          </button>
+        </div>
+
+        <div class="wb-tabs" role="tablist" aria-label="Interactive Workspace Tabs">
+          <button type="button" class="ide-tab active" data-tab="oop" role="tab" aria-selected="true"><i></i>entity_oop.lua</button>
+          <button type="button" class="ide-tab" data-tab="coro" role="tab" aria-selected="false"><i></i>quest_fsm.lua</button>
+          <button type="button" class="ide-tab" data-tab="adv" role="tab" aria-selected="false"><i></i>adventure.lua</button>
+        </div>
+
+        <div class="wb-body">
+          <aside class="wb-explorer" aria-label="Project Explorer">
+            <div class="wb-explorer__head">Explorer</div>
+            <div class="wb-folder">&#9662; lua-game-sandbox</div>
+            <button type="button" class="wb-file active" data-tab="oop"><b>OOP</b><span>entity_oop.lua</span></button>
+            <button type="button" class="wb-file" data-tab="coro"><b>FSM</b><span>quest_fsm.lua</span></button>
+            <button type="button" class="wb-file" data-tab="adv"><b>RPG</b><span>adventure.lua</span></button>
+          </aside>
+
+          <div class="wb-main">
+            <div class="ide-editor-body" id="ide-code-box" role="region" aria-label="Interactive Code Preview"></div>
+            <div class="ide-terminal" id="ide-terminal-drawer" aria-live="polite">
+              <div class="term-header">
+                <span data-i18n="term_title">交互式控制台输出</span>
+                <div class="term-header-right">
+                  <span class="term-exec-badge" id="ide-exec-status">Ready</span>
+                  <button type="button" class="btn-term-close" id="btn-close-term" aria-label="Close terminal">&#10005;</button>
+                </div>
+              </div>
+              <div class="term-stream" id="ide-term-output"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wb-statusbar">
+          <span class="wb-statusbar__dot"><i></i><span id="wbStatusLang">Lua 5.4.7 &#183; ~400&#181;s Native</span></span>
+          <div class="wb-statusbar__right">
+            <span>UTF-8</span>
+            <span>LF</span>
+            <span>Ln 8, Col 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- SC_REAL_GALLERY_START -->
+  <section class="section sc-real-gallery" id="screenshots" aria-label="应用预览与真机截屏">
+    <div class="container">
+      <div class="sc-gp-head">
+        <div class="sc-gp-head-left">
+          <div class="sc-gp-eyebrow" data-i18n="gal_eyebrow">安卓真机实拍预览</div>
+          <h2 class="sc-gp-title" data-i18n="gal_title">应用界面与实拍截屏</h2>
+          <p class="sc-gp-short" data-i18n="gal_short_desc">离线代码编辑器与手机编程软件：Python、C/C++、Java、JS、HTML、SQL、PHP 编译器，Git/SFTP</p>
+        </div>
+        <a class="sc-gp-store-bar" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-CN&amp;listing=js-lua-coding&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh%26utm_campaign%3Djs-lua-coding%26utm_content%3Dlua-game-scripting-metatables-oop" target="_blank" rel="noopener" aria-label="Code Editor: SuperCode IDE — Phoenix Global Studios">
+          <svg class="sc-gp-app-icon" width="38" height="38" viewBox="16 12 76 76" aria-hidden="true"><rect x="16" y="12" width="76" height="76" rx="18" fill="#070A10" stroke="#3B82F6" stroke-width="2"/><path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/><path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/><path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/><path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/></svg>
+          <span class="sc-gp-app-meta">
+            <span class="sc-gp-app-name">Code Editor: SuperCode IDE</span>
+            <span class="sc-gp-app-dev">Phoenix Global Studios</span>
+          </span>
+          <span class="sc-gp-store-arrow" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      </div>
+      <div class="sc-gp-stage">
+        <button type="button" class="sc-gp-nav sc-gp-nav--prev is-hidden" id="scGpPrev" aria-label="上一张">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="sc-gp-rail" id="scGpRail">
+          <button type="button" class="sc-gp-item sc-gp-item--feature" aria-label="Code Editor: SuperCode IDE — 安卓离线移动 IDE">
+            <img src="../assets/gallery/zh/00_feature_graphic.webp" data-sc-file="00_feature_graphic.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_0" data-cap="Code Editor: SuperCode IDE — 安卓离线移动 IDE" alt="Code Editor: SuperCode IDE — 安卓离线移动 IDE" width="1024" height="500" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="21 键符号编程键盘与 8 套精雕 IDE 主题">
+            <img src="../assets/gallery/zh/08_symbol_keyboard_themes.webp" data-sc-file="08_symbol_keyboard_themes.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_8" data-cap="21 键符号编程键盘与 8 套精雕 IDE 主题" alt="21 键符号编程键盘与 8 套精雕 IDE 主题" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="离线 Python 3.11 / 3.12 IDE 与分屏终端">
+            <img src="../assets/gallery/zh/01_python_ide.webp" data-sc-file="01_python_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_1" data-cap="离线 Python 3.11 / 3.12 IDE 与分屏终端" alt="离线 Python 3.11 / 3.12 IDE 与分屏终端" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="本地 C17 与 C++20 多文件编译器">
+            <img src="../assets/gallery/zh/02_cpp20_compiler.webp" data-sc-file="02_cpp20_compiler.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_2" data-cap="本地 C17 与 C++20 多文件编译器" alt="本地 C17 与 C++20 多文件编译器" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="本地 Web 与离线 PHP 服务器 + DevTools">
+            <img src="../assets/gallery/zh/03_web_php_devtools.webp" data-sc-file="03_web_php_devtools.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_3" data-cap="本地 Web 与离线 PHP 服务器 + DevTools" alt="本地 Web 与离线 PHP 服务器 + DevTools" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="全局工程文件树与本地文件管理器 (SAF)">
+            <img src="../assets/gallery/zh/04_file_manager_tree.webp" data-sc-file="04_file_manager_tree.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_4" data-cap="全局工程文件树与本地文件管理器 (SAF)" alt="全局工程文件树与本地文件管理器 (SAF)" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="离线 SQLite 3.54 数据库与 .db 检视器">
+            <img src="../assets/gallery/zh/05_sql_sqlite_studio.webp" data-sc-file="05_sql_sqlite_studio.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_5" data-cap="离线 SQLite 3.54 数据库与 .db 检视器" alt="离线 SQLite 3.54 数据库与 .db 检视器" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="离线 Java 17 IDE 与 SQLite JDBC">
+            <img src="../assets/gallery/zh/06_java17_ide.webp" data-sc-file="06_java17_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_6" data-cap="离线 Java 17 IDE 与 SQLite JDBC" alt="离线 Java 17 IDE 与 SQLite JDBC" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="可视化 Git 时光机与加密 SFTP/FTPS">
+            <img src="../assets/gallery/zh/07_visual_git_timemachine.webp" data-sc-file="07_visual_git_timemachine.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_7" data-cap="可视化 Git 时光机与加密 SFTP/FTPS" alt="可视化 Git 时光机与加密 SFTP/FTPS" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+        </div>
+        <button type="button" class="sc-gp-nav sc-gp-nav--next" id="scGpNext" aria-label="下一张">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  <div class="sc-lb-modal" id="scLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="应用预览与真机截屏">
+    <div class="sc-lb-topbar">
+      <button type="button" class="sc-lb-back" id="scLbBack">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-i18n="gal_back">返回页面</span>
+      </button>
+      <div class="sc-lb-meta">
+        <span class="sc-lb-counter" id="scLbCounter">1 / 9</span>
+        <span class="sc-lb-title" id="scLbTitle"></span>
+      </div>
+      <button type="button" class="sc-lb-close" id="scLbClose" aria-label="关闭全屏预览">&times;</button>
+    </div>
+    <div class="sc-lb-stage">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--prev" id="scLbPrev" aria-label="上一张">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <img class="sc-lb-img" id="scLbImg" src="" alt="SuperCode IDE Preview">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--next" id="scLbNext" aria-label="下一张">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="sc-lb-dots" id="scLbDots"></div>
+  </div>
+  <script defer src="../assets/gallery.js"></script>
+<!-- SC_REAL_GALLERY_END -->
+
+
+
+
+
+  <!-- ==================== 02 · CORE CAPABILITIES ==================== -->
+  <section class="section section--alt" id="capabilities">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">02</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_cap_eyebrow">核心工程能力</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="sec_cap_title">专为游戏脚本开发者、Mod 作者与独立游戏原型师打造</h2>
+        <p class="sec-lead" data-i18n="sec_cap_lead">桌面游戏引擎动辄数 GB，但 90% 的玩法开发本质上都是清晰的表结构、元表、状态机与数值计算。</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="feature-grid feature-grid--6">
+          <article class="feature-card" id="cap1">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-cube"/></svg></span>
+              <span class="f-idx">02.1</span>
+            </div>
+            <h3 class="f-title" data-i18n="f1_title">元表 OOP 类与向量运算符重载</h3>
+            <p class="f-desc" data-i18n="f1_desc">使用 __index、__newindex、__call 构造器、__tostring 调试输出以及算术元方法（__add、__sub、__mul、__eq）构建可复用的 Entity、Inventory 和 Vec2 类，与工业级 Lua 引擎完全一致。</p>
+            <div class="f-code" data-i18n="f1_badge">__index &#183; __call &#183; __add &#183; 自定义类继承体系</div>
+          </article>
+          <article class="feature-card" id="cap2">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
+              <span class="f-idx">02.2</span>
+            </div>
+            <h3 class="f-title" data-i18n="f2_title">协作式协程状态机（coroutine.*）</h3>
+            <p class="f-desc" data-i18n="f2_desc">用 coroutine.create、resume、yield、wrap 和 status 优雅编写多阶段 Boss 战、对话树、过场时间轴与技能冷却计时器 &#8212; 彻底告别嵌套回调地狱。</p>
+            <div class="f-code" data-i18n="f2_badge">coroutine.yield &#183; 对话与 AI 状态机 &#183; ~400&#181;s 运行</div>
+          </article>
+          <article class="feature-card" id="cap3">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-chip"/></svg></span>
+              <span class="f-idx">02.3</span>
+            </div>
+            <h3 class="f-title" data-i18n="f3_title">区分点号与冒号（. vs :）的离线 AST 自动补全</h3>
+            <p class="f-desc" data-i18n="f3_desc">混用点号函数（Vec2.new）与冒号方法（player:take_damage()）是 Lua 最常见的 Bug。SuperCode 的离线 AST 引擎可在 Lua 标准库和自定义表中精准区分 . 与 :。</p>
+            <div class="f-code" data-i18n="f3_badge">杜绝 nil self 报错 &#183; 感知表结构的 AST</div>
+          </article>
+          <article class="feature-card" id="cap4">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+              <span class="f-idx">02.4</span>
+            </div>
+            <h3 class="f-title" data-i18n="f4_title">通过 require() 实现模块化实体组件目录</h3>
+            <p class="f-desc" data-i18n="f4_desc">将战斗数值、掉落表与敌人行为拆分到 src/、core/ 和 modules/ 目录下的独立模块 &#8212; 完美契合 Roblox ModuleScripts 与 Love2D 项目结构。</p>
+            <div class="f-code" data-i18n="f4_badge">多文件 require() &#183; 未保存标签页自动解析</div>
+          </article>
+          <article class="feature-card" id="cap5">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-term"/></svg></span>
+              <span class="f-idx">02.5</span>
+            </div>
+            <h3 class="f-title" data-i18n="f5_title">内置 8 个可运行示例脚本（含 adventure.lua）</h3>
+            <p class="f-desc" data-i18n="f5_desc">打开内置模板选择器，离线直接拆解运行 adventure.lua、metatables.lua、tables.lua 和 guess.lua，支持通过 io.read() 进行实时回合制交互输入。</p>
+            <div class="f-code" data-i18n="f5_badge">adventure.lua &#183; metatables.lua &#183; 实时 io.read()</div>
+          </article>
+          <article class="feature-card" id="cap6">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <span class="f-idx">02.6</span>
+            </div>
+            <h3 class="f-title" data-i18n="f6_title">游戏死循环保护与内存耗时监控</h3>
+            <p class="f-desc" data-i18n="f6_desc">在手机上调试 while game.running do 循环？独立隔离的虚拟机内存上限与执行超时保护可安全拦截失控循环，并实时展示微秒级耗时与 KB 内存占用。</p>
+            <div class="f-code" data-i18n="f6_badge">安全循环保护 &#183; 微秒级计时 &#183; KB 内存监控</div>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">适配手机、折叠屏与平板 · 轻量 40.2 MB</span>
+        <a class="link-arrow" href="lua-ide.html">
+          <span>Lua 5.4 IDE Hub</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 03 · STEP-BY-STEP WORKFLOW GUIDE ==================== -->
+  <section class="section" id="workflow">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">03</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_wf_eyebrow">分步实操使用方法</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="workflow_title">如何在手机上高效演练游戏脚本逻辑</h2>
+        <p class="sec-lead" data-i18n="workflow_lead">通勤途中构建、测试并打磨核心玩法系统，回到电脑直接将纯 Lua 模块接入桌面引擎。</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="workflow-grid">
+          <article class="wf-step" id="step1">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 01</span>
+              <span class="wf-step__cmd">Templates -&gt; adventure.lua</span>
+            </div>
+            <h3 data-i18n="wf1_title">加载内置游戏脚本或新建实体模块</h3>
+            <p data-i18n="wf1_desc">从 adventure.lua 或 metatables.lua 起步，或在工作区创建 player.lua、combat.lua 和 main.lua。</p>
+          </article>
+          <article class="wf-step" id="step2">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 02</span>
+              <span class="wf-step__cmd">AST : and .</span>
+            </div>
+            <h3 data-i18n="wf2_title">借助冒号方法补全编写元表类</h3>
+            <p data-i18n="wf2_desc">在实体实例后输入 : 即可触发绑定 self 的方法补全，点击格式化一键对齐嵌套表构造器。</p>
+          </article>
+          <article class="wf-step" id="step3">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 03</span>
+              <span class="wf-step__cmd">Toolbar -&gt; Run &#9654;</span>
+            </div>
+            <h3 data-i18n="wf3_title">以 ~400 微秒速度模拟回合与协程帧步进</h3>
+            <p data-i18n="wf3_desc">点击运行 &#9654; 测试战斗公式、随机掉落概率与实时 io.read() 玩家抉择，享受亚毫秒级即时反馈。</p>
+          </article>
+          <article class="wf-step" id="step4">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 04</span>
+              <span class="wf-step__cmd">Visual Git / SFTP</span>
+            </div>
+            <h3 data-i18n="wf4_title">将纯 Lua 模块同步至 Love2D、Defold 或 GitHub</h3>
+            <p data-i18n="wf4_desc">通过可视化 Git 提交解耦后的玩法模块，让桌面端的 Love2D、Defold 或 Luau 项目一键拉取。</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="wf_foot_note">100% 离线 Lua 5.4.7 &#183; 8 个入门模板 &#183; 21 键 Lua 符号栏</span>
+        <a class="link-arrow" href="https://supercode-ide.github.io/tutorial/?lang=zh&amp;ref=official_web" data-supercode-tutorial="true">
+          <span data-i18n="cta_tutorial">新手引导</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 04 · FEATURED SUMMARY & COMPARISON MATRIX ==================== -->
+  <section class="section section--alt" id="comparison">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">04</span>
+        <span class="rule"></span>
+        <span data-i18n="comp_eyebrow">横向能力对比矩阵</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="table_h2">SuperCode Lua 游戏实验室与普通手机 Lua 编辑器对比</h2>
+        <p class="snippet-definition" data-i18n="snippet_p"><strong>SuperCode Lua 游戏脚本工作台</strong>让 Android 开发者能以亚毫秒级启动速度离线用原生 Lua 5.4.7 验证玩法原型。借助区分点号与冒号的 AST 自动补全、多文件 <code>require()</code> 以及 8 个内置 Lua 脚本，高效演练面向 Roblox/Luau 与 Love2D 的元表 OOP 类、向量运算符重载和协程状态机。</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="table-wrap">
+          <table class="obsidian-benchmark-table">
+            <caption data-i18n="table_caption">移动端 LUA 游戏脚本开发与演练能力对比</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="th_0">游戏脚本需求</th>
+                <th scope="col" data-i18n="th_1">SuperCode Lua 5.4 工作台</th>
+                <th scope="col" data-i18n="th_2">传统手机 Lua 应用</th>
+                <th scope="col" data-i18n="th_3">在线 Lua REPL</th>
+                <th scope="col" data-i18n="th_4">仅用 PC 游戏引擎</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="tr1_c0">元表与协程</th>
+                <td><strong data-i18n="tr1_c1">完整 Lua 5.4.7 OOP + coroutine.yield (~400 &#181;s)</strong></td>
+                <td data-i18n="tr1_c2">过时的 Lua 5.2 子集</td>
+                <td data-i18n="tr1_c3">每次运行都有网络延迟</td>
+                <td data-i18n="tr1_c4">完整引擎</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr2_c0">点号与冒号防错</th>
+                <td><strong data-i18n="tr2_c1">离线 AST 精准区分 . 函数与 : 方法</strong></td>
+                <td data-i18n="tr2_c2">仅纯文本编辑</td>
+                <td data-i18n="tr2_c3">无 AST 自动补全</td>
+                <td data-i18n="tr2_c4">依赖桌面端插件</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr3_c0">模块化 ModuleScripts</th>
+                <td><strong data-i18n="tr3_c1">多目录 require() + 智能 main.lua 入口路由</strong></td>
+                <td data-i18n="tr3_c2">仅限单文件草稿板</td>
+                <td data-i18n="tr3_c3">单个代码片段输入框</td>
+                <td data-i18n="tr3_c4">支持</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr4_c0">交互式回合测试</th>
+                <td><strong data-i18n="tr4_c1">实时 io.read() 终端 + 8 个内置模板</strong></td>
+                <td data-i18n="tr4_c2">仅静态输入或无输入</td>
+                <td data-i18n="tr4_c3">不支持交互式标准输入</td>
+                <td data-i18n="tr4_c4">GUI 窗口预览</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr5_c0">通勤离线可用</th>
+                <td><strong data-i18n="tr5_c1">100% 飞行模式可用 + 可视化 Git 同步</strong></td>
+                <td data-i18n="tr5_c2">表现不一 / 含广告限制</td>
+                <td data-i18n="tr5_c3">断网即无法使用</td>
+                <td data-i18n="tr5_c4">无法装进口袋随时写</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">适配手机、折叠屏与平板 · 轻量 40.2 MB</span>
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-CN&amp;listing=js-lua-coding&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh%26utm_campaign%3Djs-lua-coding%26utm_content%3Dlua-game-scripting-metatables-oop" target="_blank" rel="noopener">
+          <span>Google Play</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 05 · VISIBLE EDITORIAL FAQ ==================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-head">
+          <div class="sec-index">
+            <span class="num">05</span>
+            <span class="rule"></span>
+            <span data-i18n="sec3_eyebrow">常见问答</span>
+          </div>
+          <h2 class="h2" data-i18n="sec3_title">常见问题解答 (FAQ)</h2>
+          <p class="sec-lead" data-i18n="faq_lead">解答在 Android 上学习面向 Roblox/Luau、Love2D、元表及协程的 Lua 脚本常见问题。</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary><span data-i18n="faq1_q">在 SuperCode 中练习 Lua 5.4 能直接迁移到 Roblox (Luau) 和 Love2D 吗？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq1_a">完全可以！核心的 Lua 表、闭包、词法作用域、元表（`__index`、`__add`）、协程、数学库以及模块化 `return M` 写法，正是 Roblox Luau、Love2D、Defold、Solar2D 以及魔兽世界 / Garry's Mod 插件共同的技术基石。</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq2_q">SuperCode 能直接渲染 3D Roblox 场景或 Love2D OpenGL 窗口吗？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq2_a">SuperCode 专注于在原生终端中高效打磨解耦后的游戏玩法逻辑、数据驱动 RPG 系统、基于 SQLite/JSON 的背包存档以及算法原型 &#8212; 让你随时随地完善核心模块脚本，并通过 Git 同步到桌面端渲染器。</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq3_q">SuperCode 如何避免 Lua OOP 中的 `.` 与 `:` 调用错误？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq3_a">当你输入 `entity:` 或 `Entity.` 时，SuperCode 的离线 AST 自动补全会根据上下文过滤候选项，将冒号定义的实例方法与静态模块函数明确区分开来。</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq4_q">应用内是否自带可供离线学习的入门游戏脚本？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq4_a">是的。内置 8 个可直接运行的 Lua 模板 &#8212; 包括 `adventure.lua`、`guess.lua`、`metatables.lua` 和 `tables.lua` &#8212; 100% 支持离线学习与运行。</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==================== 06 · TOPICAL AUTHORITY ECOSYSTEM CLUSTER ==================== -->
+  <section class="section section--alt" id="ecosystem-guides">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">06</span>
+        <span class="rule"></span>
+        <span>Lua 5.4、游戏逻辑与内置模块指南</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2>完整 Lua 5.4.7 IDE 文档套件</h2>
+        <p class="sec-lead">在离线 Lua 5.4 IDE 主中心与全部 4 篇 Lua 脚本专项指南间快速切换。</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="py-cluster-grid">
+          <a href="lua-ide.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">LUA-HUB</span>
+              <span class="py-spoke-card__tag">Lua 5.4.7 · 11+ 模块 · 核心总览</span>
+            </div>
+            <h3>离线 Lua 5.4.7 工作台总览</h3>
+            <p>全面介绍 SuperCode 原生 ~400µs Lua 5.4.7 引擎、11+ 内置离线模块、多文件 require() 及 . 与 : AST 补全。</p>
+            <div class="py-spoke-card__go">
+              <span>lua-ide</span>
+              <span>打开指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="lua-game-scripting-metatables-oop.html" class="py-spoke-card is-active">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">LUA-01</span>
+              <span class="py-spoke-card__tag">实体 OOP · 协程 · ~400µs</span>
+            </div>
+            <h3>游戏脚本、元表与协程</h3>
+            <p>为 Luau/Roblox、Love2D 及嵌入式游戏引擎离线原型开发 RPG 状态机、协程与元表 OOP 类。</p>
+            <div class="py-spoke-card__go">
+              <span>lua-game-scripting-metatables-oop</span>
+              <span>正在查看指南</span>
+            </div>
+          </a>
+          <a href="lua-builtin-modules-cjson-sqlite.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">LUA-02</span>
+              <span class="py-spoke-card__tag">cjson · lsqlite3 · lfs · crypto</span>
+            </div>
+            <h3>11+ 内置模块 (cjson、lsqlite3、lfs)</h3>
+            <p>无需配置 luarocks，开箱即用 require 引入 cjson、lsqlite3、lfs (LuaFileSystem)、crypto/sha2、regex、base64、socket.http 及 inspect。</p>
+            <div class="py-spoke-card__go">
+              <span>lua-builtin-modules-cjson-sqlite</span>
+              <span>打开指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="lua-54-bitwise-close-multifile.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">LUA-03</span>
+              <span class="py-spoke-card__tag">64 位 &amp; | &lt;&lt; // · &lt;const&gt;/&lt;close&gt;</span>
+            </div>
+            <h3>Lua 5.4 位运算、&lt;close&gt; 与多文件</h3>
+            <p>支持原生 Lua 5.4 64 位按位运算符、整除 //、&lt;const&gt;/&lt;close&gt; 变量、utf8 及多目录 require() 包管理。</p>
+            <div class="py-spoke-card__go">
+              <span>lua-54-bitwise-close-multifile</span>
+              <span>打开指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="learn-lua-offline-android.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">LUA-04</span>
+              <span class="py-spoke-card__tag">8 个 Lua 脚本 · . 与 : AST · PDF</span>
+            </div>
+            <h3>在 Android 上离线学习 Lua</h3>
+            <p>配备 8 个可运行模板、. 与 : AST 自动补全、Lua 格式化器及 PDF 导出，离线精通 Lua 表、闭包与模式匹配。</p>
+            <div class="py-spoke-card__go">
+              <span>learn-lua-offline-android</span>
+              <span>打开指南 &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span>5 篇互联 Lua 5.4.7 指南 · 内置 cjson、lfs、lsqlite3、crypto 与 socket</span>
+        <a class="link-arrow" href="lua-ide.html">
+          <span>Lua 5.4 IDE 中心</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="siteFooter">
+  <div class="container">
+    <div class="footer-cta" id="footerCta">
+      <div>
+        <h2 class="h2" data-i18n="cta_h2">随时随地进阶你的 Lua 游戏脚本功底。</h2>
+        <p data-i18n="cta_desc">前往 Google Play 免费下载 SuperCode IDE &#8212; ~400&#181;s 原生 Lua 5.4.7、元表 OOP、协程与 8 个内置模板。</p>
+      </div>
+      <div class="footer-cta__btns">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-CN&amp;listing=js-lua-coding&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh%26utm_campaign%3Djs-lua-coding%26utm_content%3Dlua-game-scripting-metatables-oop" target="_blank" rel="noopener" class="btn btn--gold">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="cta_btn">Google Play 获取</span>
+        </a>
+        <a href="https://supercode-ide.github.io/tutorial/?lang=zh&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+          <span data-i18n="cta_tutorial">新手引导</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+          <span>SuperCode</span>
+          <span class="brand__tag">IDE</span>
+        </a>
+        <p data-i18n="footer_tagline">为全球 Android 工程师、高校学子与教育者匠心打造的原生移动代码编辑器与全栈离线开发工作室。</p>
+        <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
+        <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-CN&amp;listing=js-lua-coding&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh%26utm_campaign%3Djs-lua-coding%26utm_content%3Dlua-game-scripting-metatables-oop" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://supercode-ide.github.io/tutorial/?lang=zh&amp;ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">新手引导</span> &#8599;</a>
+          <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">选择语言</span></button>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_core">核心编辑器与巨型文件</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">总览首页</a></li>
+          <li><a href="code-editor.html" data-i18n="nav_code_editor">代码编辑器</a></li>
+          <li><a href="large-file-editor.html" data-i18n="nav_large_file">GB 大文件</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_lang">离线编译器与脚本语言</h4>
+        <ul>
+          <li><a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a></li>
+          <li><a href="c-compiler.html" data-i18n="nav_c_compiler">C 语言编译</a></li>
+          <li><a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a></li>
+          <li><a href="java-ide.html" data-i18n="nav_java_ide">Java 17</a></li>
+          <li><a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a></li>
+          <li><a href="lua-ide.html" data-i18n="nav_lua_ide">Lua 5.4</a></li>
+          <li><a href="shell-ide.html" data-i18n="nav_shell_ide">Shell & Kotlin</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_devops">全栈 Web · 数据库 · 远程运维</h4>
+        <ul>
+          <li><a href="web-ide.html" data-i18n="nav_web_ide">Web & PHP</a></li>
+          <li><a href="sql-ide.html" data-i18n="nav_sql_ide">SQL 数据库</a></li>
+          <li><a href="git-client.html" data-i18n="nav_git_client">可视化 Git</a></li>
+          <li><a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP & FTPS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <span>&copy; 2026 Phoenix Global Studios. All rights reserved.</span>
+      <span class="mono">com.phoenixglobal.supercodeeditor</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="mobile-bottom-bar" id="mobileBottomBar" aria-label="Quick App Actions">
+  <div class="dock-app-icon" aria-hidden="true"><svg><use href="#sc-logo"/></svg></div>
+  <div class="bottom-bar-info">
+    <div class="bottom-bar-title">SuperCode</div>
+    <div class="bottom-bar-sub"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  </div>
+  <div class="bottom-bar-actions">
+    <a href="https://supercode-ide.github.io/tutorial/?lang=zh&amp;ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">新手引导</a>
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-CN&amp;listing=js-lua-coding&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh%26utm_campaign%3Djs-lua-coding%26utm_content%3Dlua-game-scripting-metatables-oop" target="_blank" rel="noopener" class="btn-play-mini">
+      <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
+      <span data-i18n="bottom_cta">获取</span>
+    </a>
+  </div>
+</aside>
+
+<div class="modal-overlay" id="langModal" role="dialog" aria-modal="true" aria-labelledby="langModalTitle">
+  <div class="lang-modal">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div class="modal-header">
+      <h3 id="langModalTitle"><span data-i18n="modal_title">选择语言</span><span class="modal-lang-count">32</span></h3>
+      <button type="button" class="btn-close-modal" onclick="closeLangModal()" aria-label="关闭">&#10005;</button>
+    </div>
+    <div class="lang-grid">
+      <button type="button" class="lang-option" data-code="en" onclick="setLanguage('en')"><span class="lang-option__name">English</span><span class="lang-option__code">EN</span></button>
+      <button type="button" class="lang-option active" data-code="zh" onclick="setLanguage('zh')"><span class="lang-option__name">简体中文</span><span class="lang-option__code">简中</span></button>
+      <button type="button" class="lang-option" data-code="zh-tw" onclick="setLanguage('zh-tw')"><span class="lang-option__name">繁體中文</span><span class="lang-option__code">繁中</span></button>
+      <button type="button" class="lang-option" data-code="es" onclick="setLanguage('es')"><span class="lang-option__name">Español</span><span class="lang-option__code">ES</span></button>
+      <button type="button" class="lang-option" data-code="pt" onclick="setLanguage('pt')"><span class="lang-option__name">Português</span><span class="lang-option__code">PT</span></button>
+      <button type="button" class="lang-option" data-code="ja" onclick="setLanguage('ja')"><span class="lang-option__name">日本語</span><span class="lang-option__code">日本語</span></button>
+      <button type="button" class="lang-option" data-code="ko" onclick="setLanguage('ko')"><span class="lang-option__name">한국어</span><span class="lang-option__code">한국어</span></button>
+      <button type="button" class="lang-option" data-code="de" onclick="setLanguage('de')"><span class="lang-option__name">Deutsch</span><span class="lang-option__code">DE</span></button>
+      <button type="button" class="lang-option" data-code="fr" onclick="setLanguage('fr')"><span class="lang-option__name">Français</span><span class="lang-option__code">FR</span></button>
+      <button type="button" class="lang-option" data-code="ru" onclick="setLanguage('ru')"><span class="lang-option__name">Русский</span><span class="lang-option__code">RU</span></button>
+      <button type="button" class="lang-option" data-code="hi" onclick="setLanguage('hi')"><span class="lang-option__name">हिन्दी</span><span class="lang-option__code">HI</span></button>
+      <button type="button" class="lang-option" data-code="id" onclick="setLanguage('id')"><span class="lang-option__name">Bahasa Indonesia</span><span class="lang-option__code">ID</span></button>
+      <button type="button" class="lang-option" data-code="it" onclick="setLanguage('it')"><span class="lang-option__name">Italiano</span><span class="lang-option__code">IT</span></button>
+      <button type="button" class="lang-option" data-code="vi" onclick="setLanguage('vi')"><span class="lang-option__name">Tiếng Việt</span><span class="lang-option__code">VI</span></button>
+      <button type="button" class="lang-option" data-code="th" onclick="setLanguage('th')"><span class="lang-option__name">ไทย</span><span class="lang-option__code">ไทย</span></button>
+      <button type="button" class="lang-option" data-code="tr" onclick="setLanguage('tr')"><span class="lang-option__name">Türkçe</span><span class="lang-option__code">TR</span></button>
+      <button type="button" class="lang-option" data-code="ar" onclick="setLanguage('ar')"><span class="lang-option__name">العربية</span><span class="lang-option__code">AR</span></button>
+      <button type="button" class="lang-option" data-code="pl" onclick="setLanguage('pl')"><span class="lang-option__name">Polski</span><span class="lang-option__code">PL</span></button>
+      <button type="button" class="lang-option" data-code="nl" onclick="setLanguage('nl')"><span class="lang-option__name">Nederlands</span><span class="lang-option__code">NL</span></button>
+      <button type="button" class="lang-option" data-code="sv" onclick="setLanguage('sv')"><span class="lang-option__name">Svenska</span><span class="lang-option__code">SV</span></button>
+      <button type="button" class="lang-option" data-code="nb" onclick="setLanguage('nb')"><span class="lang-option__name">Norsk Bokmål</span><span class="lang-option__code">NB</span></button>
+      <button type="button" class="lang-option" data-code="da" onclick="setLanguage('da')"><span class="lang-option__name">Dansk</span><span class="lang-option__code">DA</span></button>
+      <button type="button" class="lang-option" data-code="fi" onclick="setLanguage('fi')"><span class="lang-option__name">Suomi</span><span class="lang-option__code">FI</span></button>
+      <button type="button" class="lang-option" data-code="cs" onclick="setLanguage('cs')"><span class="lang-option__name">Čeština</span><span class="lang-option__code">CS</span></button>
+      <button type="button" class="lang-option" data-code="uk" onclick="setLanguage('uk')"><span class="lang-option__name">Українська</span><span class="lang-option__code">UK</span></button>
+      <button type="button" class="lang-option" data-code="ro" onclick="setLanguage('ro')"><span class="lang-option__name">Română</span><span class="lang-option__code">RO</span></button>
+      <button type="button" class="lang-option" data-code="hu" onclick="setLanguage('hu')"><span class="lang-option__name">Magyar</span><span class="lang-option__code">HU</span></button>
+      <button type="button" class="lang-option" data-code="el" onclick="setLanguage('el')"><span class="lang-option__name">Ελληνικά</span><span class="lang-option__code">EL</span></button>
+      <button type="button" class="lang-option" data-code="he" onclick="setLanguage('he')"><span class="lang-option__name">עברית</span><span class="lang-option__code">HE</span></button>
+      <button type="button" class="lang-option" data-code="ms" onclick="setLanguage('ms')"><span class="lang-option__name">Bahasa Melayu</span><span class="lang-option__code">MS</span></button>
+      <button type="button" class="lang-option" data-code="tl" onclick="setLanguage('tl')"><span class="lang-option__name">Filipino</span><span class="lang-option__code">FIL</span></button>
+      <button type="button" class="lang-option" data-code="bn" onclick="setLanguage('bn')"><span class="lang-option__name">বাংলা</span><span class="lang-option__code">BN</span></button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var WORKBENCH_SAMPLES = {"oop": {"label": "lua-game-sandbox/entity_oop.lua \u2014 Metatable OOP & Operator Overloading", "status": "Lua 5.4.7 \u00b7 ~400\u00b5s Native", "lines": ["<span class=\"tok-cmt\">-- Entity OOP class with __index, __call &amp; __add metamethods<\/span>", "<span class=\"tok-kw\">local<\/span> Vec2 = {}; Vec2.__index = Vec2", "<span class=\"tok-kw\">function<\/span> Vec2.<span class=\"tok-fn\">new<\/span>(x, y) <span class=\"tok-kw\">return<\/span> <span class=\"tok-fn\">setmetatable<\/span>({ x = x, y = y }, Vec2) <span class=\"tok-kw\">end<\/span>", "<span class=\"tok-kw\">function<\/span> Vec2:<span class=\"tok-fn\">__add<\/span>(b) <span class=\"tok-kw\">return<\/span> Vec2.<span class=\"tok-fn\">new<\/span>(self.x + b.x, self.y + b.y) <span class=\"tok-kw\">end<\/span>", "<span class=\"tok-kw\">function<\/span> Vec2:<span class=\"tok-fn\">__tostring<\/span>() <span class=\"tok-kw\">return<\/span> <span class=\"tok-fn\">string.format<\/span>(<span class=\"tok-str\">&quot;Vec2(%d, %d)&quot;<\/span>, self.x, self.y) <span class=\"tok-kw\">end<\/span>", "", "<span class=\"tok-kw\">local<\/span> pos = Vec2.<span class=\"tok-fn\">new<\/span>(<span class=\"tok-num\">12<\/span>, <span class=\"tok-num\">8<\/span>) + Vec2.<span class=\"tok-fn\">new<\/span>(<span class=\"tok-num\">4<\/span>, <span class=\"tok-num\">-3<\/span>)", "<span class=\"tok-fn\">print<\/span>(<span class=\"tok-str\">&quot;Spawned hero at:&quot;<\/span>, pos)"], "output": ["<span class=\"term-prompt\">$<\/span> lua5.4 entity_oop.lua", "Spawned hero at: Vec2(16, 5)", "<span class=\"term-info\">[Finished in 412 \u00b5s \u00b7 28 KB VM memory \u00b7 . vs : AST verified]<\/span>"]}, "coro": {"label": "lua-game-sandbox/quest_fsm.lua \u2014 Cooperative Coroutine Boss AI", "status": "Coroutines \u00b7 State Machine", "lines": ["<span class=\"tok-cmt\">-- Multi-frame NPC / Boss state machine via coroutine.yield<\/span>", "<span class=\"tok-kw\">local<\/span> boss_ai = coroutine.<span class=\"tok-fn\">create<\/span>(<span class=\"tok-kw\">function<\/span>(target)", "    <span class=\"tok-fn\">print<\/span>(<span class=\"tok-str\">&quot;[Tick 1] Locking onto&quot;<\/span> .. <span class=\"tok-str\">&quot; &quot;<\/span> .. target)", "    coroutine.<span class=\"tok-fn\">yield<\/span>(<span class=\"tok-str\">&quot;CHARGE_SHIELD&quot;<\/span>)", "    <span class=\"tok-fn\">print<\/span>(<span class=\"tok-str\">&quot;[Tick 2] Unleashing dash strike!&quot;<\/span>)", "    <span class=\"tok-kw\">return<\/span> <span class=\"tok-str\">&quot;COOLDOWN&quot;<\/span>", "<span class=\"tok-kw\">end<\/span>)", "<span class=\"tok-kw\">local<\/span> _, s1 = coroutine.<span class=\"tok-fn\">resume<\/span>(boss_ai, <span class=\"tok-str\">&quot;Player_1&quot;<\/span>)", "<span class=\"tok-kw\">local<\/span> _, s2 = coroutine.<span class=\"tok-fn\">resume<\/span>(boss_ai)", "<span class=\"tok-fn\">print<\/span>(<span class=\"tok-str\">&quot;States:&quot;<\/span>, s1, <span class=\"tok-str\">&quot;-&gt;&quot;<\/span>, s2)"], "output": ["[Tick 1] Locking onto Player_1", "[Tick 2] Unleashing dash strike!", "States: CHARGE_SHIELD -&gt; COOLDOWN", "<span class=\"term-info\">[0 threads blocked \u00b7 Ideal for Luau/Roblox &amp; Love2D logic]<\/span>"]}, "adv": {"label": "lua-game-sandbox/adventure.lua \u2014 Built-In Interactive Dungeon Loop", "status": "Live io.read() \u00b7 8 Templates", "lines": ["<span class=\"tok-cmt\">-- 1 of 8 built-in Lua starter templates (works 100% offline)<\/span>", "io.<span class=\"tok-fn\">write<\/span>(<span class=\"tok-str\">&quot;Choose action [attack/parry]: &quot;<\/span>)", "<span class=\"tok-kw\">local<\/span> cmd = io.<span class=\"tok-fn\">read<\/span>(<span class=\"tok-str\">&quot;*l&quot;<\/span>)", "<span class=\"tok-kw\">local<\/span> dmg = (cmd == <span class=\"tok-str\">&quot;parry&quot;<\/span>) <span class=\"tok-kw\">and<\/span> <span class=\"tok-num\">35<\/span> <span class=\"tok-kw\">or<\/span> <span class=\"tok-num\">20<\/span>", "<span class=\"tok-fn\">print<\/span>(string.<span class=\"tok-fn\">format<\/span>(<span class=\"tok-str\">&quot;Action [%s] dealt %d crit damage!&quot;<\/span>, cmd, dmg))"], "output": ["Choose action [attack/parry]: parry", "Action [parry] dealt 35 crit damage!", "<span class=\"term-info\">[Interactive io.read() console \u00b7 8 Lua templates ready offline]<\/span>"]}};
+    var currentTab = 'oop';
+    var runTimer = null;
+
+    function renderWorkbench(tabKey, animateRun) {
+      var sample = WORKBENCH_SAMPLES[tabKey] || WORKBENCH_SAMPLES['oop'];
+      if (!sample) { return; }
+      currentTab = tabKey;
+      var labelEl = document.getElementById('ide-compiler-label');
+      if (labelEl) { labelEl.textContent = sample.label; }
+      var statusEl = document.getElementById('wbStatusLang');
+      if (statusEl) { statusEl.textContent = sample.status; }
+
+      var tabs = document.querySelectorAll('.ide-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        var active = tabs[i].getAttribute('data-tab') === tabKey;
+        tabs[i].classList.toggle('active', active);
+        tabs[i].setAttribute('aria-selected', active ? 'true' : 'false');
+      }
+      var files = document.querySelectorAll('.wb-file');
+      for (var f = 0; f < files.length; f++) {
+        files[f].classList.toggle('active', files[f].getAttribute('data-tab') === tabKey);
+      }
+
+      var codeBox = document.getElementById('ide-code-box');
+      if (codeBox) {
+        var html = '';
+        for (var l = 0; l < sample.lines.length; l++) {
+          var activeCls = (l === sample.lines.length - 1) ? ' active-line' : '';
+          html += '<div class="code-line' + activeCls + '"><span class="ln">' + (l + 1) + '</span><span class="code-content">' + sample.lines[l] + '</span></div>';
+        }
+        codeBox.innerHTML = html;
+      }
+
+      if (animateRun) {
+        runWorkbenchSample();
+      }
+    }
+
+    function runWorkbenchSample() {
+      var sample = WORKBENCH_SAMPLES[currentTab] || WORKBENCH_SAMPLES['oop'];
+      var drawer = document.getElementById('ide-terminal-drawer');
+      var out = document.getElementById('ide-term-output');
+      var badge = document.getElementById('ide-exec-status');
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (!drawer || !out || !sample) { return; }
+
+      if (runTimer) { clearTimeout(runTimer); }
+      drawer.classList.add('is-open');
+      if (runBtn) { runBtn.classList.add('is-running'); }
+      if (badge) { badge.textContent = 'Running...'; badge.classList.remove('done'); }
+      out.innerHTML = '';
+
+      var idx = 0;
+      function step() {
+        if (idx < sample.output.length) {
+          var row = document.createElement('span');
+          row.className = 'term-line-item';
+          row.innerHTML = sample.output[idx];
+          out.appendChild(row);
+          idx++;
+          runTimer = setTimeout(step, 80);
+        } else {
+          var cur = document.createElement('span');
+          cur.className = 'term-cursor';
+          cur.textContent = '\u258b';
+          out.appendChild(cur);
+          if (badge) { badge.textContent = 'Completed'; badge.classList.add('done'); }
+          if (runBtn) { runBtn.classList.remove('is-running'); }
+        }
+      }
+      step();
+    }
+
+    function initNavigationAndSmartBar() {
+      var menuBtn = document.getElementById('menuBtn');
+      var drawer = document.getElementById('siteDrawer');
+      var bar = document.getElementById('mobileBottomBar');
+      var heroCta = document.getElementById('heroCta');
+      var siteFooter = document.getElementById('siteFooter');
+
+      function syncBar() {
+        if (!bar) { return; }
+        var drawerOpen = Boolean(drawer && !drawer.hasAttribute('hidden'));
+        var modalEl = document.getElementById('langModal');
+        var modalOpen = Boolean(modalEl && modalEl.classList.contains('show'));
+        var vh = window.innerHeight || document.documentElement.clientHeight || 800;
+        var heroInView = false;
+        if (heroCta) {
+          var hr = heroCta.getBoundingClientRect();
+          heroInView = (hr.bottom > 0 && hr.top < vh);
+        }
+        var footerInView = false;
+        if (siteFooter) {
+          var fr = siteFooter.getBoundingClientRect();
+          footerInView = (fr.top < vh + 24);
+        }
+        var scrollYVal = window.pageYOffset || window.scrollY || 0;
+        var docH = Math.max(document.body ? document.body.scrollHeight : 0, document.documentElement ? document.documentElement.scrollHeight : 0);
+        var nearBottom = (vh + scrollYVal) >= (docH - 120);
+        var shouldShow = !drawerOpen && !modalOpen && !heroInView && !footerInView && !nearBottom;
+        bar.classList.toggle('is-visible', shouldShow);
+      }
+
+      window.__supercodeSyncMobileBar = syncBar;
+
+      function setDrawer(open) {
+        if (!menuBtn || !drawer) { return; }
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { drawer.removeAttribute('hidden'); }
+        else { drawer.setAttribute('hidden', ''); }
+        syncBar();
+      }
+      if (menuBtn && drawer) {
+        menuBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          setDrawer(menuBtn.getAttribute('aria-expanded') !== 'true');
+        });
+        drawer.addEventListener('click', function (e) {
+          if (e.target && e.target.closest('a')) { setDrawer(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!drawer.hasAttribute('hidden') && !drawer.contains(e.target) && e.target !== menuBtn && !menuBtn.contains(e.target)) {
+            setDrawer(false);
+          }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') { setDrawer(false); }
+        });
+      }
+
+      if (bar) {
+        window.addEventListener('scroll', syncBar, { passive: true });
+        window.addEventListener('resize', syncBar);
+        syncBar();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var tabBtns = document.querySelectorAll('.ide-tab, .wb-file');
+      for (var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', function () {
+          renderWorkbench(this.getAttribute('data-tab'), true);
+        });
+      }
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (runBtn) { runBtn.addEventListener('click', function () { runWorkbenchSample(); }); }
+      var closeTerm = document.getElementById('btn-close-term');
+      if (closeTerm) {
+        closeTerm.addEventListener('click', function () {
+          var d = document.getElementById('ide-terminal-drawer');
+          if (d) { d.classList.remove('is-open'); }
+        });
+      }
+      initNavigationAndSmartBar();
+      renderWorkbench('oop', false);
+    });
+  })();
+</script>
+<script>window.__SUPERCODE_STATIC_LANG__="zh";window.__SUPERCODE_STATIC_CANONICAL__="https://supercode-ide.github.io/zh/lua-game-scripting-metatables-oop.html";</script>
+<script src="../i18n_extended.js"></script>
+</body>
+</html>

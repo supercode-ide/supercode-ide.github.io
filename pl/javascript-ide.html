@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090A0F">
+  <meta name="color-scheme" content="only dark">
+  <meta name="supported-color-schemes" content="dark">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <title>JavaScript IDE i kodowanie Node/ES2024 offline na Androida — fs, Crypto i ESM | SuperCode</title>
+  <meta name="description" content="Uruchamiaj samodzielny JavaScript ES2024 i ponad 29 modułów rdzeniowych Node.js (fs, path, crypto, stream, zlib) offline na Androidzie. Obsługa ESM i CommonJS, Web Crypto AES-GCM, ochrona pętli &lt;1 ms i Node.js w chmurze.">
+  <meta name="keywords" content="javascript ide for android, javascript coding app, run node js offline on android, js compiler app android, es2024 console runner mobile, node fs crypto android, learn javascript offline app">
+  <meta name="author" content="Phoenix Global Studios">
+  <meta name="google-play-app" content="app-id=com.phoenixglobal.supercodeeditor">
+
+  <link id="canonical-link" rel="canonical" href="https://supercode-ide.github.io/pl/javascript-ide.html">
+  <link rel="alternate" hreflang="x-default" href="https://supercode-ide.github.io/javascript-ide.html">
+  <link rel="alternate" hreflang="en" href="https://supercode-ide.github.io/javascript-ide.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://supercode-ide.github.io/zh/javascript-ide.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://supercode-ide.github.io/zh-tw/javascript-ide.html">
+  <link rel="alternate" hreflang="es" href="https://supercode-ide.github.io/es/javascript-ide.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://supercode-ide.github.io/pt/javascript-ide.html">
+  <link rel="alternate" hreflang="ja" href="https://supercode-ide.github.io/ja/javascript-ide.html">
+  <link rel="alternate" hreflang="ko" href="https://supercode-ide.github.io/ko/javascript-ide.html">
+  <link rel="alternate" hreflang="de" href="https://supercode-ide.github.io/de/javascript-ide.html">
+  <link rel="alternate" hreflang="fr" href="https://supercode-ide.github.io/fr/javascript-ide.html">
+  <link rel="alternate" hreflang="ru" href="https://supercode-ide.github.io/ru/javascript-ide.html">
+  <link rel="alternate" hreflang="hi" href="https://supercode-ide.github.io/hi/javascript-ide.html">
+  <link rel="alternate" hreflang="id" href="https://supercode-ide.github.io/id/javascript-ide.html">
+  <link rel="alternate" hreflang="it" href="https://supercode-ide.github.io/it/javascript-ide.html">
+  <link rel="alternate" hreflang="vi" href="https://supercode-ide.github.io/vi/javascript-ide.html">
+  <link rel="alternate" hreflang="th" href="https://supercode-ide.github.io/th/javascript-ide.html">
+  <link rel="alternate" hreflang="tr" href="https://supercode-ide.github.io/tr/javascript-ide.html">
+  <link rel="alternate" hreflang="ar" href="https://supercode-ide.github.io/ar/javascript-ide.html">
+  <link rel="alternate" hreflang="pl" href="https://supercode-ide.github.io/pl/javascript-ide.html">
+  <link rel="alternate" hreflang="nl" href="https://supercode-ide.github.io/nl/javascript-ide.html">
+  <link rel="alternate" hreflang="sv" href="https://supercode-ide.github.io/sv/javascript-ide.html">
+  <link rel="alternate" hreflang="nb" href="https://supercode-ide.github.io/nb/javascript-ide.html">
+  <link rel="alternate" hreflang="da" href="https://supercode-ide.github.io/da/javascript-ide.html">
+  <link rel="alternate" hreflang="fi" href="https://supercode-ide.github.io/fi/javascript-ide.html">
+  <link rel="alternate" hreflang="cs" href="https://supercode-ide.github.io/cs/javascript-ide.html">
+  <link rel="alternate" hreflang="uk" href="https://supercode-ide.github.io/uk/javascript-ide.html">
+  <link rel="alternate" hreflang="ro" href="https://supercode-ide.github.io/ro/javascript-ide.html">
+  <link rel="alternate" hreflang="hu" href="https://supercode-ide.github.io/hu/javascript-ide.html">
+  <link rel="alternate" hreflang="el" href="https://supercode-ide.github.io/el/javascript-ide.html">
+  <link rel="alternate" hreflang="he" href="https://supercode-ide.github.io/he/javascript-ide.html">
+  <link rel="alternate" hreflang="ms" href="https://supercode-ide.github.io/ms/javascript-ide.html">
+  <link rel="alternate" hreflang="fil" href="https://supercode-ide.github.io/tl/javascript-ide.html">
+  <link rel="alternate" hreflang="bn" href="https://supercode-ide.github.io/bn/javascript-ide.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
+  <meta property="og:title" content="JavaScript IDE i kodowanie Node/ES2024 offline na Androida — fs, Crypto i ESM | SuperCode">
+  <meta property="og:description" content="Uruchamiaj samodzielny JavaScript ES2024 i ponad 29 modułów rdzeniowych Node.js (fs, path, crypto, stream, zlib) offline na Androidzie. Obsługa ESM i CommonJS, Web Crypto AES-GCM, ochrona pętli &lt;1 ms i Node.js w chmurze.">
+  <meta property="og:url" content="https://supercode-ide.github.io/pl/javascript-ide.html">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-hero-pl.png">
+  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-hero-pl.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="21-klawiszowy pasek symboli i 8 dopracowanych motywów IDE">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-hero-pl.png">
+  <meta name="twitter:title" content="JavaScript IDE i kodowanie Node/ES2024 offline na Androida — fs, Crypto i ESM | SuperCode">
+  <meta name="twitter:description" content="Uruchamiaj samodzielny JavaScript ES2024 i ponad 29 modułów rdzeniowych Node.js (fs, path, crypto, stream, zlib) offline na Androidzie. Obsługa ESM i CommonJS, Web Crypto AES-GCM, ochrona pętli &lt;1 ms i Node.js w chmurze.">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <script>if(/SamsungBrowser/i.test(navigator.userAgent)){document.documentElement.classList.add('is-samsung');}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "SoftwareApplication",
+        "MobileApplication",
+        "WebApplication"
+      ],
+      "@id": "https://supercode-ide.github.io/#supercode-app",
+      "name": "Code Editor: SuperCode IDE",
+      "alternateName": [
+        "JavaScript IDE for Android",
+        "Offline JS Runner App",
+        "Mobile ES2024 & Node Module Studio"
+      ],
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Standalone ES2024 JavaScript & Module Runner for Android",
+      "inLanguage": "pl",
+      "fileSize": "40.2MB",
+      "softwareVersion": "1.55.05",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=pl-PL&listing=js-lua-coding",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=pl-PL&listing=js-lua-coding",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=pl-PL"
+      ],
+      "potentialAction": [
+        {
+          "@type": "InstallAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=pl-PL&listing=js-lua-coding",
+            "actionPlatform": [
+              "http://schema.org/AndroidPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          }
+        },
+        {
+          "@type": "ViewAction",
+          "name": "Przewodnik",
+          "target": [
+            "https://supercode-ide.github.io/tutorial/?lang=pl",
+            "android-app://com.phoenixglobal.supercodeeditor/https/supercode-ide.github.io/tutorial"
+          ]
+        }
+      ],
+      "identifier": "com.phoenixglobal.supercodeeditor",
+      "url": "https://supercode-ide.github.io/pl/javascript-ide.html",
+      "screenshot": [
+        "https://supercode-ide.github.io/assets/gallery/pl/08_symbol_keyboard_themes.webp",
+        "https://supercode-ide.github.io/assets/gallery/pl/01_python_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/pl/02_cpp20_compiler.webp",
+        "https://supercode-ide.github.io/assets/gallery/pl/03_web_php_devtools.webp",
+        "https://supercode-ide.github.io/assets/gallery/pl/04_file_manager_tree.webp",
+        "https://supercode-ide.github.io/assets/gallery/pl/05_sql_sqlite_studio.webp",
+        "https://supercode-ide.github.io/assets/gallery/pl/06_java17_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/pl/07_visual_git_timemachine.webp"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Phoenix Global Studios",
+        "url": "https://supercode-ide.github.io/pl/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "66"
+      },
+      "featureList": [
+        "Dedicated off-UI isolated JavaScript worker runtime supporting full ES6–ES2024 syntax offline",
+        "Multi-file ES Modules (import/export) & CommonJS (require/module.exports) across .js, .mjs, .cjs & .json",
+        "<1ms zero-freeze infinite-loop termination via isolated worker + 15s CPU watchdog",
+        "Structured console formatting (log, info, warn, error, timers) & live interactive prompt stdin",
+        "Offline AST completion, JS/TS/JSON one-tap formatter & 21-key JS/TS symbol keyboard profile",
+        "Automatic Cloud Node.js multi-module bundler when server OS/HTTP modules are imported"
+      ],
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-pl.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://supercode-ide.github.io/pl/javascript-ide.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SuperCode IDE",
+          "item": "https://supercode-ide.github.io/pl/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Centrum IDE JavaScript i Node",
+          "item": "https://supercode-ide.github.io/pl/javascript-ide.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Build & Test Modular JavaScript in SuperCode",
+      "description": "Ideal for LeetCode in JS, modular utilities, API payload modeling, and frontend logic testing.",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Create Standalone .js, .mjs, .cjs, or .json Files",
+          "text": "Write pure JavaScript or modular packages directly — no index.html wrapper needed.",
+          "url": "https://supercode-ide.github.io/javascript-ide.html#step1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Author Clean Async & Arrow Functions",
+          "text": "Use 1-tap =>, ?., ===, and template-literal backticks with offline AST autocomplete and one-tap JS formatting.",
+          "url": "https://supercode-ide.github.io/javascript-ide.html#step2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Execute Instantly in the Isolated Worker Console",
+          "text": "Tap Run to link local modules, inspect structured console output, and verify millisecond execution timing.",
+          "url": "https://supercode-ide.github.io/javascript-ide.html#step3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Switch to Live DOM Preview or Push to Git",
+          "text": "Need full browser DOM/Canvas/WASM? Pair your scripts with an .html file in Web Studio, or commit directly via Visual Git.",
+          "url": "https://supercode-ide.github.io/javascript-ide.html#step4"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://supercode-ide.github.io/javascript-ide.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Czy mogę uruchomić plik .js na Androidzie bez tworzenia strony HTML?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tak! Dotknięcie Uruchom na dowolnym pliku .js, .mjs lub .cjs natychmiast otwiera samodzielną konsolę JavaScript w SuperCode — w pełni offline."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy mogę dzielić kod JavaScript na wiele plików z import/export lub require()?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tak. Zarówno ES Modules (import / export), jak i CommonJS (require / module.exports), a także importy .json działają między lokalnymi plikami projektu i niezapisanymi kartami."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Czy przypadkowa pętla while(true) zawiesi edytor lub usunie niezapisany kod?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nigdy. Skrypty działają w izolowanym workerze w tle, chronionym 15-sekundowym watchdogiem i bezpiecznikiem zalewu wyjścia — przerywają zbuntowane pętle w poniżej 1 milisekundy bez obciążania wątku UI."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A co jeśli chcę zbudować wizualną stronę DOM z HTML, CSS i WebAssembly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SuperCode ma oba tryby! Używaj samodzielnego IDE JavaScript do czystych modułów JS/Node i algorytmów, a Full-Stack Web & PHP Studio zawsze, gdy potrzebujesz renderowania DOM przez HTTP na żywo, responsywnych widoków oraz Web DevTools."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-page="js_ide">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="sc-logo" viewBox="20 14 68 72">
+    <path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/>
+    <path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/>
+    <path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/>
+    <path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+  </symbol>
+  <symbol id="gp-prism" viewBox="0 0 24 24">
+    <path fill="#4285F4" d="M3.6,2.4C3.3,2.7,3.1,3.2,3.1,3.8v16.4c0,0.6,0.2,1.1,0.5,1.4l0.1,0.1L12.9,12v-0.2L3.7,2.3L3.6,2.4z"/>
+    <path fill="#34A853" d="M16,15.1l-3.1-3.1v-0.2L16,8.7l0.1,0.1l3.6,2.1c1,0.6,1,1.5,0,2.1l-3.6,2.1L16,15.1z"/>
+    <path fill="#FBBC05" d="M16.1,15.1L12.9,12L3.6,21.3c0.3,0.4,0.9,0.4,1.6,0.1L16.1,15.1z"/>
+    <path fill="#EA4335" d="M16.1,8.9L5.2,2.6C4.5,2.2,3.9,2.3,3.6,2.7L12.9,12L16.1,8.9z"/>
+  </symbol>
+  <symbol id="i-ne" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8 20 7.2v9.6L12 21.2 4 16.8V7.2z"/><path d="M4 7.2l8 4.4 8-4.4M12 11.6v9.6"/></g></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2.8v3.2M15 2.8v3.2M9 18v3.2M15 18v3.2M2.8 9H6M2.8 15H6M18 9h3.2M18 15h3.2"/></g></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 2.8 7.8 12 12.6l9.2-4.8z"/><path d="m2.8 12 9.2 4.8 9.2-4.8"/><path d="m2.8 16.2 9.2 4.8 9.2-4.8"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="M2.8 8.5h18.4"/><path d="m9.5 12.5-2.2 2.2 2.2 2.2M14.5 12.5l2.2 2.2-2.2 2.2"/></g></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5.6" rx="7.6" ry="2.8"/><path d="M4.4 5.6v12.8c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8V5.6"/><path d="M4.4 12c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8"/></g></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="m7.2 9.5 3 2.5-3 2.5M12.8 15h4"/></g></symbol>
+  <symbol id="i-git" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.3"/><circle cx="6" cy="18" r="2.3"/><circle cx="18" cy="12" r="2.3"/><path d="M6 8.3v7.4M8.3 6h4.2a3.5 3.5 0 0 1 3.5 3.5v.2"/></g></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5h11a4 4 0 0 0 .7-7.94A5.5 5.5 0 0 0 7.4 9.2 3.8 3.8 0 0 0 6.5 18.5z"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M13 2.8 4.8 13.2h6.3L10.2 21.2 19.2 10.6h-6.4z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 2.8 4.8 5.8v5.6c0 5 3.1 8.5 7.2 9.8 4.1-1.3 7.2-4.8 7.2-9.8V5.8z"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="index.html" class="brand" aria-label="SuperCode IDE Home">
+      <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+      <span>SuperCode</span>
+      <span class="brand__tag">IDE</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary Workspaces">
+      <a href="code-editor.html" data-i18n="nav_code_editor">Edytor kodu</a>
+      <a href="large-file-editor.html" data-i18n="nav_large_file">Duże pliki GB</a>
+      <a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a>
+      <a href="c-compiler.html" data-i18n="nav_c_compiler">Kompilator C17</a>
+      <a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a>
+      <a href="java-ide.html" data-i18n="nav_java_ide">Java 17 IDE</a>
+      <a href="javascript-ide.html" class="is-current" data-i18n="nav_js_ide">JavaScript</a>
+      <a href="web-ide.html" data-i18n="nav_web_ide">Web i PHP</a>
+      <a href="sql-ide.html" data-i18n="nav_sql_ide">SQL Studio</a>
+      <a href="git-client.html" data-i18n="nav_git_client">Wizualny Git</a>
+      <a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP i FTPS</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button id="langModalBtn" class="btn-lang-trigger" type="button" onclick="openLangModal()" aria-label="Select Language">
+        <svg class="lang-globe-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span id="langTriggerText">PL</span>
+        <span class="lang-chevron" aria-hidden="true">&#9662;</span>
+      </button>
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=pl-PL&amp;listing=js-lua-coding&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dpl%26utm_campaign%3Djs-lua-coding%26utm_content%3Djavascript-ide" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+        <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+        <span data-i18n="nav_cta">Google Play</span>
+      </a>
+      <a href="index.html" class="btn-home-icon" aria-label="Home" title="Home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5"/>
+          <path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
+        </svg>
+      </a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteDrawer" aria-label="All Pages Directory">
+        <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 8.5h16M4 15.5h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-drawer" id="siteDrawer" hidden>
+  <nav class="container menu-drawer__inner" aria-label="All SuperCode Pages">
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_core">Edytor i duże pliki</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="index.html"><span data-i18n="nav_home">Przegląd</span><span class="mono">01</span></a>
+        <a class="menu-drawer__link" href="code-editor.html"><span data-i18n="nav_code_editor">Edytor kodu</span><span class="mono">02</span></a>
+        <a class="menu-drawer__link" href="large-file-editor.html"><span data-i18n="nav_large_file">Duże pliki GB</span><span class="mono">03</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_lang">Kompilatory offline i języki</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="python-ide.html"><span data-i18n="nav_python_ide">Python IDE</span><span class="mono">04</span></a>
+        <a class="menu-drawer__link" href="c-compiler.html"><span data-i18n="nav_c_compiler">Kompilator C17</span><span class="mono">05</span></a>
+        <a class="menu-drawer__link" href="cpp-ide.html"><span data-i18n="nav_cpp_ide">C++20 IDE</span><span class="mono">06</span></a>
+        <a class="menu-drawer__link" href="java-ide.html"><span data-i18n="nav_java_ide">Java 17 IDE</span><span class="mono">07</span></a>
+        <a class="menu-drawer__link is-current" href="javascript-ide.html"><span data-i18n="nav_js_ide">JavaScript</span><span class="mono">08</span></a>
+        <a class="menu-drawer__link" href="lua-ide.html"><span data-i18n="nav_lua_ide">Lua 5.4</span><span class="mono">09</span></a>
+        <a class="menu-drawer__link" href="shell-ide.html"><span data-i18n="nav_shell_ide">Shell i Kotlin</span><span class="mono">10</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_devops">Web, SQL i zdalny DevOps</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="web-ide.html"><span data-i18n="nav_web_ide">Web i PHP</span><span class="mono">11</span></a>
+        <a class="menu-drawer__link" href="sql-ide.html"><span data-i18n="nav_sql_ide">SQL Studio</span><span class="mono">12</span></a>
+        <a class="menu-drawer__link" href="git-client.html"><span data-i18n="nav_git_client">Wizualny Git</span><span class="mono">13</span></a>
+        <a class="menu-drawer__link" href="sftp-client.html"><span data-i18n="nav_sftp_client">SFTP i FTPS</span><span class="mono">14</span></a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<main id="top">
+  <!-- ==================== 01 · EDITORIAL HERO & INTERACTIVE WORKBENCH ==================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <div class="trust-pill">
+            <span class="trust-pill__score"><span data-play-rating>4.9</span> &#9733;</span>
+            <span data-i18n="hero_tag">SAMODZIELNY JAVASCRIPT ES2024 &amp; STUDIO MODUŁÓW</span>
+          </div>
+
+          <h1 class="hero-h1" data-i18n="hero_h1">Uruchamiaj samodzielny <span class="text-gradient">JavaScript ES2024 i moduły</span> offline w izolacji bez zacięć.</h1>
+
+          <p class="hero-lead" data-i18n="hero_desc">Nie musisz owijać skryptów w kod HTML, by testować logikę JavaScript. Wykonuj <strong><code>async/await</code> ES2024</strong>, <strong>wieloplikowe moduły ESM i CommonJS</strong> oraz <strong>algorytmy</strong> w izolowanej konsoli workera z <strong>ochroną przed pętlami &lt;1 ms</strong>.</p>
+
+          <div class="hero__cta" id="heroCta">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=pl-PL&amp;listing=js-lua-coding&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dpl%26utm_campaign%3Djs-lua-coding%26utm_content%3Djavascript-ide" target="_blank" rel="noopener" class="btn btn--gold">
+              <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+              <span data-i18n="cta_btn">Pobierz z Google Play</span>
+            </a>
+            <a href="https://supercode-ide.github.io/tutorial/?lang=pl&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+              <span data-i18n="cta_tutorial">Przewodnik</span>
+              <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <dl class="specs" aria-label="Key Specifications">
+          <div class="spec"><dt>ES2024</dt><dd data-i18n="js_spec1">Nowoczesna składnia JS</dd></div>
+          <div class="spec"><dt>ESM+CJS</dt><dd data-i18n="js_spec2">Moduły wieloplikowe</dd></div>
+          <div class="spec"><dt>&lt;1<small>ms</small></dt><dd data-i18n="js_spec3">Izolacja i limit pętli</dd></div>
+          <div class="spec"><dt>Node</dt><dd data-i18n="js_spec4">Auto-bundler chmurowy</dd></div>
+        </dl>
+      </div>
+
+      <div class="wb-caption">
+        <div class="sec-index" style="margin-bottom:0">
+          <span class="num">01</span>
+          <span class="rule"></span>
+          <span data-i18n="wb_eyebrow">SAMODZIELNA KONSOLA WORKERA JAVASCRIPT</span>
+        </div>
+        <span class="wb-caption__hint mono">ES2024 Async &#183; ESM + CommonJS &#183; Zero-Freeze Worker &#183; Cloud Node.js</span>
+      </div>
+
+      <div class="ide-workbench">
+        <div class="wb-titlebar">
+          <div class="wb-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="wb-title" id="ide-compiler-label">js-es2024-studio/pipeline.mjs &#8212; ES2024 Async &amp; Modules</div>
+          <button type="button" class="wb-run" id="btn-run-sandbox">
+            <span class="wb-run__tri" aria-hidden="true">&#9654;</span>
+            <span data-i18n="btn_run">Uruchom demo</span>
+          </button>
+        </div>
+
+        <div class="wb-tabs" role="tablist" aria-label="Interactive Workspace Tabs">
+          <button type="button" class="ide-tab active" data-tab="js_esm" role="tab" aria-selected="true"><i></i>pipeline.mjs</button>
+          <button type="button" class="ide-tab" data-tab="js_mod" role="tab" aria-selected="false"><i></i>mathUtil.js</button>
+          <button type="button" class="ide-tab" data-tab="js_node" role="tab" aria-selected="false"><i></i>crypto_hash.js</button>
+        </div>
+
+        <div class="wb-body">
+          <aside class="wb-explorer" aria-label="Project Explorer">
+            <div class="wb-explorer__head">Explorer</div>
+            <div class="wb-folder">&#9662; js-es2024-studio</div>
+            <button type="button" class="wb-file active" data-tab="js_esm"><b>ESM</b><span>pipeline.mjs</span></button>
+            <button type="button" class="wb-file" data-tab="js_mod"><b>MOD</b><span>mathUtil.js</span></button>
+            <button type="button" class="wb-file" data-tab="js_node"><b>API</b><span>crypto_hash.js</span></button>
+          </aside>
+
+          <div class="wb-main">
+            <div class="ide-editor-body" id="ide-code-box" role="region" aria-label="Interactive Code Preview"></div>
+            <div class="ide-terminal" id="ide-terminal-drawer" aria-live="polite">
+              <div class="term-header">
+                <span data-i18n="term_title">Interaktywne wyjście konsoli</span>
+                <div class="term-header-right">
+                  <span class="term-exec-badge" id="ide-exec-status">Ready</span>
+                  <button type="button" class="btn-term-close" id="btn-close-term" aria-label="Close terminal">&#10005;</button>
+                </div>
+              </div>
+              <div class="term-stream" id="ide-term-output"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wb-statusbar">
+          <span class="wb-statusbar__dot"><i></i><span id="wbStatusLang">JavaScript ES2024 &#183; Isolated Worker</span></span>
+          <div class="wb-statusbar__right">
+            <span>UTF-8</span>
+            <span>LF</span>
+            <span>Ln 3, Col 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- SC_REAL_GALLERY_START -->
+  <section class="section sc-real-gallery" id="screenshots" aria-label="Podgląd aplikacji i zrzuty ekranu">
+    <div class="container">
+      <div class="sc-gp-head">
+        <div class="sc-gp-head-left">
+          <div class="sc-gp-eyebrow" data-i18n="gal_eyebrow">PRAWDZIWE ZRZUTY Z ANDROID</div>
+          <h2 class="sc-gp-title" data-i18n="gal_title">Podgląd aplikacji i zrzuty ekranu</h2>
+          <p class="sc-gp-short" data-i18n="gal_short_desc">Edytor kodu i IDE offline: kompilator Python, C/C++, Java, HTML, SQL, PHP i Git</p>
+        </div>
+        <a class="sc-gp-store-bar" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=pl-PL&amp;listing=js-lua-coding&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dpl%26utm_campaign%3Djs-lua-coding%26utm_content%3Djavascript-ide" target="_blank" rel="noopener" aria-label="Code Editor: SuperCode IDE — Phoenix Global Studios">
+          <svg class="sc-gp-app-icon" width="38" height="38" viewBox="16 12 76 76" aria-hidden="true"><rect x="16" y="12" width="76" height="76" rx="18" fill="#070A10" stroke="#3B82F6" stroke-width="2"/><path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/><path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/><path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/><path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/></svg>
+          <span class="sc-gp-app-meta">
+            <span class="sc-gp-app-name">Code Editor: SuperCode IDE</span>
+            <span class="sc-gp-app-dev">Phoenix Global Studios</span>
+          </span>
+          <span class="sc-gp-store-arrow" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      </div>
+      <div class="sc-gp-stage">
+        <button type="button" class="sc-gp-nav sc-gp-nav--prev is-hidden" id="scGpPrev" aria-label="Poprzedni obraz">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="sc-gp-rail" id="scGpRail">
+          <button type="button" class="sc-gp-item sc-gp-item--feature" aria-label="Edytor kodu: SuperCode IDE — mobilne IDE offline">
+            <img src="../assets/gallery/pl/00_feature_graphic.webp" data-sc-file="00_feature_graphic.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_0" data-cap="Edytor kodu: SuperCode IDE — mobilne IDE offline" alt="Edytor kodu: SuperCode IDE — mobilne IDE offline" width="1024" height="500" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="21-klawiszowy pasek symboli i 8 dopracowanych motywów IDE">
+            <img src="../assets/gallery/pl/08_symbol_keyboard_themes.webp" data-sc-file="08_symbol_keyboard_themes.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_8" data-cap="21-klawiszowy pasek symboli i 8 dopracowanych motywów IDE" alt="21-klawiszowy pasek symboli i 8 dopracowanych motywów IDE" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Python 3.11 / 3.12 IDE offline i podzielona konsola">
+            <img src="../assets/gallery/pl/01_python_ide.webp" data-sc-file="01_python_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_1" data-cap="Python 3.11 / 3.12 IDE offline i podzielona konsola" alt="Python 3.11 / 3.12 IDE offline i podzielona konsola" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Lokalny kompilator wieloplikowy C17 i C++20">
+            <img src="../assets/gallery/pl/02_cpp20_compiler.webp" data-sc-file="02_cpp20_compiler.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_2" data-cap="Lokalny kompilator wieloplikowy C17 i C++20" alt="Lokalny kompilator wieloplikowy C17 i C++20" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Lokalny serwer WWW, PHP offline i DevTools">
+            <img src="../assets/gallery/pl/03_web_php_devtools.webp" data-sc-file="03_web_php_devtools.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_3" data-cap="Lokalny serwer WWW, PHP offline i DevTools" alt="Lokalny serwer WWW, PHP offline i DevTools" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Globalne drzewo plików i lokalny menedżer (SAF)">
+            <img src="../assets/gallery/pl/04_file_manager_tree.webp" data-sc-file="04_file_manager_tree.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_4" data-cap="Globalne drzewo plików i lokalny menedżer (SAF)" alt="Globalne drzewo plików i lokalny menedżer (SAF)" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="SQLite 3.54 Studio offline i inspektor .db">
+            <img src="../assets/gallery/pl/05_sql_sqlite_studio.webp" data-sc-file="05_sql_sqlite_studio.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_5" data-cap="SQLite 3.54 Studio offline i inspektor .db" alt="SQLite 3.54 Studio offline i inspektor .db" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Java 17 IDE offline i SQLite JDBC">
+            <img src="../assets/gallery/pl/06_java17_ide.webp" data-sc-file="06_java17_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_6" data-cap="Java 17 IDE offline i SQLite JDBC" alt="Java 17 IDE offline i SQLite JDBC" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Wizualny klient Git, Time Machine i SFTP">
+            <img src="../assets/gallery/pl/07_visual_git_timemachine.webp" data-sc-file="07_visual_git_timemachine.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_7" data-cap="Wizualny klient Git, Time Machine i SFTP" alt="Wizualny klient Git, Time Machine i SFTP" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+        </div>
+        <button type="button" class="sc-gp-nav sc-gp-nav--next" id="scGpNext" aria-label="Następny obraz">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  <div class="sc-lb-modal" id="scLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Podgląd aplikacji i zrzuty ekranu">
+    <div class="sc-lb-topbar">
+      <button type="button" class="sc-lb-back" id="scLbBack">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-i18n="gal_back">Wstecz</span>
+      </button>
+      <div class="sc-lb-meta">
+        <span class="sc-lb-counter" id="scLbCounter">1 / 9</span>
+        <span class="sc-lb-title" id="scLbTitle"></span>
+      </div>
+      <button type="button" class="sc-lb-close" id="scLbClose" aria-label="Zamknij podgląd">&times;</button>
+    </div>
+    <div class="sc-lb-stage">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--prev" id="scLbPrev" aria-label="Poprzedni obraz">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <img class="sc-lb-img" id="scLbImg" src="" alt="SuperCode IDE Preview">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--next" id="scLbNext" aria-label="Następny obraz">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="sc-lb-dots" id="scLbDots"></div>
+  </div>
+  <script defer src="../assets/gallery.js"></script>
+<!-- SC_REAL_GALLERY_END -->
+
+
+
+
+
+  <!-- ==================== 02 · CORE CAPABILITIES ==================== -->
+  <section class="section section--alt" id="capabilities">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">02</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_cap_eyebrow">KLUCZOWE MOŻLIWOŚCI</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="sec_cap_title">Prawdziwe samodzielne środowisko uruchomieniowe JavaScript niezależne od przeglądarki</h2>
+        <p class="sec-lead" data-i18n="sec_cap_lead">Testuj struktury danych, potoki asynchroniczne, transformacje JSON i pakiety modularne z natychmiastową informacją zwrotną i precyzyjnymi numerami linii błędów.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="feature-grid feature-grid--6">
+          <article class="feature-card" id="cap1">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
+              <span class="f-idx">02.1</span>
+            </div>
+            <h3 class="f-title" data-i18n="f1_title">Pełne wsparcie języka ES6–ES2024 offline</h3>
+            <p class="f-desc" data-i18n="f1_desc">Uruchamiaj offline async/await, Promise.allSettled/any, generatory, prywatne pola klas (#), optional chaining (?.), nullish coalescing (??), BigInt, structuredClone, timery i performance.now().</p>
+            <div class="f-code" data-i18n="f1_badge">ES2024 · BigInt · Prywatne #pola · structuredClone</div>
+          </article>
+          <article class="feature-card" id="cap2">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+              <span class="f-idx">02.2</span>
+            </div>
+            <h3 class="f-title" data-i18n="f2_title">Wieloplikowe łączenie ES Modules &amp; CommonJS</h3>
+            <p class="f-desc" data-i18n="f2_desc">Importuj swobodnie lokalne moduły .js, .mjs, .cjs i .json przez import/export lub require()/module.exports — włącznie z niezapisanymi otwartymi kartami i inteligentnym wyborem punktu wejścia.</p>
+            <div class="f-code" data-i18n="f2_badge">import / export · require() · Importy modułów .json</div>
+          </article>
+          <article class="feature-card" id="cap3">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <span class="f-idx">02.3</span>
+            </div>
+            <h3 class="f-title" data-i18n="f3_title">Izolacja workera poza UI &amp; przerwanie pętli &lt;1 ms</h3>
+            <p class="f-desc" data-i18n="f3_desc">Działa w dedykowanym wątku workera w tle zamiast w wątku UI. Nawet ciasna pętla nieskończona while(true){} jest czysto przerywana w mniej niż 1 ms bez żadnego przycięcia edytora.</p>
+            <div class="f-code" data-i18n="f3_badge">Zero zacięć UI · Watchdog 15 s · Błędy w linii 1:1</div>
+          </article>
+          <article class="feature-card" id="cap4">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-term"/></svg></span>
+              <span class="f-idx">02.4</span>
+            </div>
+            <h3 class="f-title" data-i18n="f4_title">Ustrukturyzowana konsola &amp; interaktywne Stdin</h3>
+            <p class="f-desc" data-i18n="f4_desc">Przeglądaj przejrzyście zagnieżdżone obiekty, tablice, poziomy console.warn/error i precyzyjne timery, jednocześnie podając interaktywne dane wejściowe na żywo do zadań CLI w JavaScript.</p>
+            <div class="f-code" data-i18n="f4_badge">Złożone obiekty · Wejście na żywo · Dzielona konsola</div>
+          </article>
+          <article class="feature-card" id="cap5">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-cube"/></svg></span>
+              <span class="f-idx">02.5</span>
+            </div>
+            <h3 class="f-title" data-i18n="f5_title">Autouzupełnianie AST JS/TS &amp; formater w stylu Prettier jednym dotknięciem</h3>
+            <p class="f-desc" data-i18n="f5_desc">Zawiera dedykowany 21-klawiszowy pasek symboli JS/TS (=&gt;, ?., ===, ``, ${}), podpowiadanie AST offline dla Array/Promise/JSON/Math/DOM oraz atomowe formatowanie JS/TS/JSON.</p>
+            <div class="f-code" data-i18n="f5_badge">Pasek symboli JS/TS · Podpowiadanie AST · Walidator JSON</div>
+          </article>
+          <article class="feature-card" id="cap6">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-cloud"/></svg></span>
+              <span class="f-idx">02.6</span>
+            </div>
+            <h3 class="f-title" data-i18n="f6_title">Automatyczny bundler wieloplikowy chmurowego Node.js</h3>
+            <p class="f-desc" data-i18n="f6_desc">Importujesz rdzeniowe API Node.js (http, fs, crypto, child_process) lub używasz // @cloud? SuperCode automatycznie spakuje lokalne moduły w jeden pakiet Node.js.</p>
+            <div class="f-code" data-i18n="f6_badge">Wykrywanie API Node.js · Bundler chmurowy wielu modułów</div>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">Dla telefonów, składaków i tabletów · Lekkie 40,2 MB</span>
+        <a class="link-arrow" href="index.html">
+          <span data-i18n="nav_home">Przegląd</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 03 · STEP-BY-STEP WORKFLOW GUIDE ==================== -->
+  <section class="section" id="workflow">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">03</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_wf_eyebrow">PRZEPŁYW KROK PO KROKU</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="workflow_title">Jak tworzyć i testować modularny JavaScript w SuperCode</h2>
+        <p class="sec-lead" data-i18n="workflow_lead">Idealne do zadań LeetCode w JS, narzędzi modularnych, modelowania payloadów API i testów logiki frontendowej.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="workflow-grid">
+          <article class="wf-step" id="step1">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 01</span>
+              <span class="wf-step__cmd">index.js / util.mjs</span>
+            </div>
+            <h3 data-i18n="wf1_title">Twórz samodzielne pliki .js, .mjs, .cjs lub .json</h3>
+            <p data-i18n="wf1_desc">Pisz czysty JavaScript lub pakiety modularne bezpośrednio — bez otoczki index.html.</p>
+          </article>
+          <article class="wf-step" id="step2">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 02</span>
+              <span class="wf-step__cmd">JS/TS Symbol Bar</span>
+            </div>
+            <h3 data-i18n="wf2_title">Twórz czytelne funkcje async i strzałkowe</h3>
+            <p data-i18n="wf2_desc">Wstawiaj jednym dotknięciem =&gt;, ?., === oraz backticki literałów szablonowych z podpowiadaniem AST offline i formatowaniem JS jednym kliknięciem.</p>
+          </article>
+          <article class="wf-step" id="step3">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 03</span>
+              <span class="wf-step__cmd">Toolbar -&gt; Run &#9654;</span>
+            </div>
+            <h3 data-i18n="wf3_title">Wykonuj natychmiast w izolowanej konsoli workera</h3>
+            <p data-i18n="wf3_desc">Dotknij Uruchom, aby połączyć lokalne moduły, sprawdzić ustrukturyzowane wyjście konsoli i zweryfikować milisekundowy czas wykonania.</p>
+          </article>
+          <article class="wf-step" id="step4">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 04</span>
+              <span class="wf-step__cmd">Web Studio / Git</span>
+            </div>
+            <h3 data-i18n="wf4_title">Przełącz na podgląd DOM na żywo lub wypchnij do Git</h3>
+            <p data-i18n="wf4_desc">Potrzebujesz pełnego DOM/Canvas/WASM w przeglądarce? Połącz skrypty z plikiem .html w Web Studio lub zatwierdź zmiany bezpośrednio przez Wizualny Git.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="wf_foot_note">6 wbudowanych przykładów JavaScript · Obsługa .js · .mjs · .cjs · .ts · .json</span>
+        <a class="link-arrow" href="https://supercode-ide.github.io/tutorial/?lang=pl&amp;ref=official_web" data-supercode-tutorial="true">
+          <span data-i18n="cta_tutorial">Przewodnik</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 04 · FEATURED SUMMARY & COMPARISON MATRIX ==================== -->
+  <section class="section section--alt" id="comparison">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">04</span>
+        <span class="rule"></span>
+        <span data-i18n="comp_eyebrow">MATRYCA MOŻLIWOŚCI</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="table_h2">SuperCode JavaScript IDE kontra obejścia w konsoli przeglądarki</h2>
+        <p class="snippet-definition" data-i18n="snippet_p"><strong>SuperCode JavaScript IDE</strong> to dedykowany runner JavaScript ES2024 offline i modularny edytor kodu dla Androida. Wykonuje wieloplikowe skrypty ES Modules i CommonJS w izolowanym wątku workera poza UI, z submilisekundowym przerywaniem nieskończonych pętli, ustrukturyzowaną konsolą, podpowiadaniem AST i wsparciem chmurowego Node.js.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="table-wrap">
+          <table class="obsidian-benchmark-table">
+            <caption data-i18n="table_caption">ZESTAWIENIE ŚRODOWISK I EDYTORÓW JAVASCRIPT NA ANDROIDA</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="th_0">Możliwości JS</th>
+                <th scope="col" data-i18n="th_1">SuperCode JS IDE</th>
+                <th scope="col" data-i18n="th_2">Edytory Web tylko pod HTML</th>
+                <th scope="col" data-i18n="th_3">Edytory JS online</th>
+                <th scope="col" data-i18n="th_4">Instalacja CLI Node</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="tr1_c0">Samodzielne uruchomienie JS</th>
+                <td><strong data-i18n="tr1_c1">Bezpośrednie wykonanie .js / .mjs / .cjs offline</strong></td>
+                <td data-i18n="tr1_c2">Wymaga pustego pliku HTML</td>
+                <td data-i18n="tr1_c3">Wymaga internetu</td>
+                <td data-i18n="tr1_c4">Instalacja CLI 100 MB+</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr2_c0">System modułów</th>
+                <td><strong data-i18n="tr2_c1">Lokalne ESM import/export + CommonJS + .json</strong></td>
+                <td data-i18n="tr2_c2">Często psuje się przez CORS na file://</td>
+                <td data-i18n="tr2_c3">Jeden plik lub wolny CDN</td>
+                <td data-i18n="tr2_c4">Obsługiwane</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr3_c0">Ochrona przed pętlami</th>
+                <td><strong data-i18n="tr3_c1">Izolowany worker (&lt;1 ms natychmiastowe przerwanie, 0 zacięć)</strong></td>
+                <td data-i18n="tr3_c2">Zamraża cały interfejs WebView</td>
+                <td data-i18n="tr3_c3">Zawiesza kartę mobilnej przeglądarki</td>
+                <td data-i18n="tr3_c4">Ręczne zatrzymanie</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr4_c0">Formatowanie JS/TS</th>
+                <td><strong data-i18n="tr4_c1">Formater JS/TS/JSX/JSON w 100% offline</strong></td>
+                <td data-i18n="tr4_c2">Podstawowe lub zależne od wtyczek</td>
+                <td data-i18n="tr4_c3">Tylko online</td>
+                <td data-i18n="tr4_c4">Wymaga npm prettier</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr5_c0">Interfejsy API Node.js</th>
+                <td><strong data-i18n="tr5_c1">Auto-bundling lokalnych modułów do chmury Node.js</strong></td>
+                <td data-i18n="tr5_c2">Tylko API przeglądarkowe</td>
+                <td data-i18n="tr5_c3">Tylko API przeglądarkowe</td>
+                <td data-i18n="tr5_c4">Tylko lokalne CLI</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">Dla telefonów, składaków i tabletów · Lekkie 40,2 MB</span>
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=pl-PL&amp;listing=js-lua-coding&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dpl%26utm_campaign%3Djs-lua-coding%26utm_content%3Djavascript-ide" target="_blank" rel="noopener">
+          <span>Google Play</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 05 · VISIBLE EDITORIAL FAQ ==================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-head">
+          <div class="sec-index">
+            <span class="num">05</span>
+            <span class="rule"></span>
+            <span data-i18n="sec3_eyebrow">PYTANIA I ODPOWIEDZI</span>
+          </div>
+          <h2 class="h2" data-i18n="sec3_title">Często zadawane pytania</h2>
+          <p class="sec-lead" data-i18n="faq_lead">Odpowiedzi o uruchamianiu plików .js bez HTML, modułach ES, nieskończonych pętlach i modułach Node.js.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary><span data-i18n="faq1_q">Czy mogę uruchomić plik .js na Androidzie bez tworzenia strony HTML?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq1_a">Tak! Dotknięcie Uruchom na dowolnym pliku .js, .mjs lub .cjs natychmiast otwiera samodzielną konsolę JavaScript w SuperCode — w pełni offline.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq2_q">Czy mogę dzielić kod JavaScript na wiele plików z import/export lub require()?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq2_a">Tak. Zarówno ES Modules (import / export), jak i CommonJS (require / module.exports), a także importy .json działają między lokalnymi plikami projektu i niezapisanymi kartami.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq3_q">Czy przypadkowa pętla while(true) zawiesi edytor lub usunie niezapisany kod?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq3_a">Nigdy. Skrypty działają w izolowanym workerze w tle, chronionym 15-sekundowym watchdogiem i bezpiecznikiem zalewu wyjścia — przerywają zbuntowane pętle w poniżej 1 milisekundy bez obciążania wątku UI.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq4_q">A co jeśli chcę zbudować wizualną stronę DOM z HTML, CSS i WebAssembly?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq4_a">SuperCode ma oba tryby! Używaj samodzielnego IDE JavaScript do czystych modułów JS/Node i algorytmów, a Full-Stack Web &amp; PHP Studio zawsze, gdy potrzebujesz renderowania DOM przez HTTP na żywo, responsywnych widoków oraz Web DevTools.</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==================== 06 · TOPICAL AUTHORITY ECOSYSTEM CLUSTER ==================== -->
+  <section class="section section--alt" id="ecosystem-guides">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">06</span>
+        <span class="rule"></span>
+        <span>PRZEWODNIKI JAVASCRIPT, NODE CORE I CRYPTO</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2>Poznaj 4 szczegółowe poradniki JavaScript i Node na Androidzie</h2>
+        <p class="sec-lead">Odkryj ponad 29 modułów rdzenia Node.js offline (fs, path, crypto, stream, zlib), pakiety dual ESM/CommonJS, Web Crypto i zadania rekrutacyjne z JS.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="py-cluster-grid">
+          <a href="javascript-node-core-modules-offline.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JS-01</span>
+              <span class="py-spoke-card__tag">node:fs · path · stream · zlib</span>
+            </div>
+            <h3>29+ modułów rdzenia Node.js offline</h3>
+            <p>Używaj fs/promises, path, Buffer, EventEmitter, stream, zlib, readline, util oraz modułów package.json ESM + CommonJS w 100% offline na Androidzie.</p>
+            <div class="py-spoke-card__go">
+              <span>javascript-node-core-modules-offline</span>
+              <span>Otwórz przewodnik &rarr;</span>
+            </div>
+          </a>
+          <a href="javascript-es2024-async-console.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JS-02</span>
+              <span class="py-spoke-card__tag">Top-Level await · BigInt · Fetch</span>
+            </div>
+            <h3>ES2024 Async, Top-Level Await i Fetch</h3>
+            <p>Uruchamiaj nowoczesną składnię ES2024, top-level await, generatory async, console.table() i chronione przed pętlami (&lt;1ms) skrypty bez zbędnych plików HTML.</p>
+            <div class="py-spoke-card__go">
+              <span>javascript-es2024-async-console</span>
+              <span>Otwórz przewodnik &rarr;</span>
+            </div>
+          </a>
+          <a href="javascript-web-crypto-security.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JS-03</span>
+              <span class="py-spoke-card__tag">crypto.subtle · AES-256 · HMAC</span>
+            </div>
+            <h3>Node i Web Crypto (AES-GCM / SHA)</h3>
+            <p>Prototypuj skróty kryptograficzne, HMAC, PBKDF2, UUID i szyfrowanie AES-256-GCM offline za pomocą interfejsów Web Crypto i node:crypto.</p>
+            <div class="py-spoke-card__go">
+              <span>javascript-web-crypto-security</span>
+              <span>Otwórz przewodnik &rarr;</span>
+            </div>
+          </a>
+          <a href="learn-javascript-dsa-android.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">JS-04</span>
+              <span class="py-spoke-card__tag">6 szablonów · Pasek =&gt; · JSON</span>
+            </div>
+            <h3>Nauka JS i trening DSA offline</h3>
+            <p>Opanuj algorytmy JavaScript, funkcyjne tablice i przetwarzanie JSON w trybie samolotowym dzięki autouzupełnianiu AST i formatowaniu 1 kliknięciem.</p>
+            <div class="py-spoke-card__go">
+              <span>learn-javascript-dsa-android</span>
+              <span>Otwórz przewodnik &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span>5 powiązanych przewodników JS/Node · ES2024 + 29 wbudowanych modułów Node offline</span>
+        <a class="link-arrow" href="javascript-ide.html">
+          <span>Centrum JavaScript i Node IDE</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="siteFooter">
+  <div class="container">
+    <div class="footer-cta" id="footerCta">
+      <div>
+        <h2 class="h2" data-i18n="cta_h2">Koduj i uruchamiaj nowoczesny JavaScript ES2024 wszędzie.</h2>
+        <p data-i18n="cta_desc">Zainstaluj SuperCode IDE z Google Play, by korzystać z samodzielnych modułów JS offline, podpowiadania AST i pełnego Web DevTools.</p>
+      </div>
+      <div class="footer-cta__btns">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=pl-PL&amp;listing=js-lua-coding&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dpl%26utm_campaign%3Djs-lua-coding%26utm_content%3Djavascript-ide" target="_blank" rel="noopener" class="btn btn--gold">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="cta_btn">Pobierz z Google Play</span>
+        </a>
+        <a href="https://supercode-ide.github.io/tutorial/?lang=pl&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+          <span data-i18n="cta_tutorial">Przewodnik</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+          <span>SuperCode</span>
+          <span class="brand__tag">IDE</span>
+        </a>
+        <p data-i18n="footer_tagline">Natywny mobilny edytor kodu i studio programistyczne offline stworzone dla inżynierów Android, studentów i edukatorów na całym świecie.</p>
+        <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
+        <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=pl-PL&amp;listing=js-lua-coding&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dpl%26utm_campaign%3Djs-lua-coding%26utm_content%3Djavascript-ide" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://supercode-ide.github.io/tutorial/?lang=pl&amp;ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">Przewodnik</span> &#8599;</a>
+          <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">Wybierz język</span></button>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_core">Edytor i duże pliki</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Przegląd</a></li>
+          <li><a href="code-editor.html" data-i18n="nav_code_editor">Edytor kodu</a></li>
+          <li><a href="large-file-editor.html" data-i18n="nav_large_file">Duże pliki GB</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_lang">Kompilatory offline i języki</h4>
+        <ul>
+          <li><a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a></li>
+          <li><a href="c-compiler.html" data-i18n="nav_c_compiler">Kompilator C17</a></li>
+          <li><a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a></li>
+          <li><a href="java-ide.html" data-i18n="nav_java_ide">Java 17 IDE</a></li>
+          <li><a href="javascript-ide.html" class="is-current" data-i18n="nav_js_ide">JavaScript</a></li>
+          <li><a href="lua-ide.html" data-i18n="nav_lua_ide">Lua 5.4</a></li>
+          <li><a href="shell-ide.html" data-i18n="nav_shell_ide">Shell i Kotlin</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_devops">Web, SQL i zdalny DevOps</h4>
+        <ul>
+          <li><a href="web-ide.html" data-i18n="nav_web_ide">Web i PHP</a></li>
+          <li><a href="sql-ide.html" data-i18n="nav_sql_ide">SQL Studio</a></li>
+          <li><a href="git-client.html" data-i18n="nav_git_client">Wizualny Git</a></li>
+          <li><a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP i FTPS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <span>&copy; 2026 Phoenix Global Studios. All rights reserved.</span>
+      <span class="mono">com.phoenixglobal.supercodeeditor</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="mobile-bottom-bar" id="mobileBottomBar" aria-label="Quick App Actions">
+  <div class="dock-app-icon" aria-hidden="true"><svg><use href="#sc-logo"/></svg></div>
+  <div class="bottom-bar-info">
+    <div class="bottom-bar-title">SuperCode</div>
+    <div class="bottom-bar-sub"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  </div>
+  <div class="bottom-bar-actions">
+    <a href="https://supercode-ide.github.io/tutorial/?lang=pl&amp;ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">Przewodnik</a>
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=pl-PL&amp;listing=js-lua-coding&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dpl%26utm_campaign%3Djs-lua-coding%26utm_content%3Djavascript-ide" target="_blank" rel="noopener" class="btn-play-mini">
+      <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
+      <span data-i18n="bottom_cta">Pobierz</span>
+    </a>
+  </div>
+</aside>
+
+<div class="modal-overlay" id="langModal" role="dialog" aria-modal="true" aria-labelledby="langModalTitle">
+  <div class="lang-modal">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div class="modal-header">
+      <h3 id="langModalTitle"><span data-i18n="modal_title">Wybierz język</span><span class="modal-lang-count">32</span></h3>
+      <button type="button" class="btn-close-modal" onclick="closeLangModal()" aria-label="Zamknij">&#10005;</button>
+    </div>
+    <div class="lang-grid">
+      <button type="button" class="lang-option" data-code="en" onclick="setLanguage('en')"><span class="lang-option__name">English</span><span class="lang-option__code">EN</span></button>
+      <button type="button" class="lang-option" data-code="zh" onclick="setLanguage('zh')"><span class="lang-option__name">简体中文</span><span class="lang-option__code">简中</span></button>
+      <button type="button" class="lang-option" data-code="zh-tw" onclick="setLanguage('zh-tw')"><span class="lang-option__name">繁體中文</span><span class="lang-option__code">繁中</span></button>
+      <button type="button" class="lang-option" data-code="es" onclick="setLanguage('es')"><span class="lang-option__name">Español</span><span class="lang-option__code">ES</span></button>
+      <button type="button" class="lang-option" data-code="pt" onclick="setLanguage('pt')"><span class="lang-option__name">Português</span><span class="lang-option__code">PT</span></button>
+      <button type="button" class="lang-option" data-code="ja" onclick="setLanguage('ja')"><span class="lang-option__name">日本語</span><span class="lang-option__code">日本語</span></button>
+      <button type="button" class="lang-option" data-code="ko" onclick="setLanguage('ko')"><span class="lang-option__name">한국어</span><span class="lang-option__code">한국어</span></button>
+      <button type="button" class="lang-option" data-code="de" onclick="setLanguage('de')"><span class="lang-option__name">Deutsch</span><span class="lang-option__code">DE</span></button>
+      <button type="button" class="lang-option" data-code="fr" onclick="setLanguage('fr')"><span class="lang-option__name">Français</span><span class="lang-option__code">FR</span></button>
+      <button type="button" class="lang-option" data-code="ru" onclick="setLanguage('ru')"><span class="lang-option__name">Русский</span><span class="lang-option__code">RU</span></button>
+      <button type="button" class="lang-option" data-code="hi" onclick="setLanguage('hi')"><span class="lang-option__name">हिन्दी</span><span class="lang-option__code">HI</span></button>
+      <button type="button" class="lang-option" data-code="id" onclick="setLanguage('id')"><span class="lang-option__name">Bahasa Indonesia</span><span class="lang-option__code">ID</span></button>
+      <button type="button" class="lang-option" data-code="it" onclick="setLanguage('it')"><span class="lang-option__name">Italiano</span><span class="lang-option__code">IT</span></button>
+      <button type="button" class="lang-option" data-code="vi" onclick="setLanguage('vi')"><span class="lang-option__name">Tiếng Việt</span><span class="lang-option__code">VI</span></button>
+      <button type="button" class="lang-option" data-code="th" onclick="setLanguage('th')"><span class="lang-option__name">ไทย</span><span class="lang-option__code">ไทย</span></button>
+      <button type="button" class="lang-option" data-code="tr" onclick="setLanguage('tr')"><span class="lang-option__name">Türkçe</span><span class="lang-option__code">TR</span></button>
+      <button type="button" class="lang-option" data-code="ar" onclick="setLanguage('ar')"><span class="lang-option__name">العربية</span><span class="lang-option__code">AR</span></button>
+      <button type="button" class="lang-option active" data-code="pl" onclick="setLanguage('pl')"><span class="lang-option__name">Polski</span><span class="lang-option__code">PL</span></button>
+      <button type="button" class="lang-option" data-code="nl" onclick="setLanguage('nl')"><span class="lang-option__name">Nederlands</span><span class="lang-option__code">NL</span></button>
+      <button type="button" class="lang-option" data-code="sv" onclick="setLanguage('sv')"><span class="lang-option__name">Svenska</span><span class="lang-option__code">SV</span></button>
+      <button type="button" class="lang-option" data-code="nb" onclick="setLanguage('nb')"><span class="lang-option__name">Norsk Bokmål</span><span class="lang-option__code">NB</span></button>
+      <button type="button" class="lang-option" data-code="da" onclick="setLanguage('da')"><span class="lang-option__name">Dansk</span><span class="lang-option__code">DA</span></button>
+      <button type="button" class="lang-option" data-code="fi" onclick="setLanguage('fi')"><span class="lang-option__name">Suomi</span><span class="lang-option__code">FI</span></button>
+      <button type="button" class="lang-option" data-code="cs" onclick="setLanguage('cs')"><span class="lang-option__name">Čeština</span><span class="lang-option__code">CS</span></button>
+      <button type="button" class="lang-option" data-code="uk" onclick="setLanguage('uk')"><span class="lang-option__name">Українська</span><span class="lang-option__code">UK</span></button>
+      <button type="button" class="lang-option" data-code="ro" onclick="setLanguage('ro')"><span class="lang-option__name">Română</span><span class="lang-option__code">RO</span></button>
+      <button type="button" class="lang-option" data-code="hu" onclick="setLanguage('hu')"><span class="lang-option__name">Magyar</span><span class="lang-option__code">HU</span></button>
+      <button type="button" class="lang-option" data-code="el" onclick="setLanguage('el')"><span class="lang-option__name">Ελληνικά</span><span class="lang-option__code">EL</span></button>
+      <button type="button" class="lang-option" data-code="he" onclick="setLanguage('he')"><span class="lang-option__name">עברית</span><span class="lang-option__code">HE</span></button>
+      <button type="button" class="lang-option" data-code="ms" onclick="setLanguage('ms')"><span class="lang-option__name">Bahasa Melayu</span><span class="lang-option__code">MS</span></button>
+      <button type="button" class="lang-option" data-code="tl" onclick="setLanguage('tl')"><span class="lang-option__name">Filipino</span><span class="lang-option__code">FIL</span></button>
+      <button type="button" class="lang-option" data-code="bn" onclick="setLanguage('bn')"><span class="lang-option__name">বাংলা</span><span class="lang-option__code">BN</span></button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var WORKBENCH_SAMPLES = {"js_esm": {"label": "js-es2024-studio/pipeline.mjs \u2014 ES2024 Async & Modules", "status": "JavaScript ES2024 \u00b7 Isolated Worker", "lines": ["<span class=\"tok-kw\">const<\/span> tasks = [<span class=\"tok-num\">12<\/span>, <span class=\"tok-num\">24<\/span>, <span class=\"tok-num\">36<\/span>].<span class=\"tok-fn\">map<\/span>(<span class=\"tok-kw\">async<\/span> (n) =&gt; ({ n, sq: n ** <span class=\"tok-num\">2<\/span> }));", "<span class=\"tok-kw\">const<\/span> settled = <span class=\"tok-kw\">await<\/span> Promise.<span class=\"tok-fn\">all<\/span>(tasks);", "console.<span class=\"tok-fn\">log<\/span>(<span class=\"tok-str\">&quot;Computed:&quot;<\/span>, JSON.<span class=\"tok-fn\">stringify<\/span>(settled));"], "output": ["<span class=\"term-prompt\">&#9656;<\/span> JS Worker &middot; pipeline.mjs (ES2024)", "Computed: [{&quot;n&quot;:12,&quot;sq&quot;:144},{&quot;n&quot;:24,&quot;sq&quot;:576},{&quot;n&quot;:36,&quot;sq&quot;:1296}]", "<span class=\"term-info\">&#10003; Exit 0 &middot; 3.2 ms &middot; Off-UI Worker Thread<\/span>"]}, "js_mod": {"label": "js-es2024-studio/mathUtil.js \u2192 index.js \u2014 ESM + CommonJS", "status": "JS Project \u00b7 Multi-Module Linked", "lines": ["<span class=\"tok-kw\">export class<\/span> <span class=\"tok-fn\">MovingAvg<\/span> {", "  #window = [];", "  <span class=\"tok-fn\">push<\/span>(v) { <span class=\"tok-kw\">this<\/span>.#window.<span class=\"tok-fn\">push<\/span>(v); <span class=\"tok-kw\">return<\/span> <span class=\"tok-kw\">this<\/span>.#window.<span class=\"tok-fn\">reduce<\/span>((a,b)=&gt;a+b,<span class=\"tok-num\">0<\/span>) / <span class=\"tok-kw\">this<\/span>.#window.length; }", "}"], "output": ["<span class=\"term-prompt\">&#9656;<\/span> [JS Project] Linked 2 local modules (entry: index.js)", "Moving average: 25.0 -> 37.5 -> 50.0", "<span class=\"term-info\">&#10003; Supports import/export, require(), &amp; .json imports<\/span>"]}, "js_node": {"label": "js-es2024-studio/crypto_hash.js \u2014 Timers, structuredClone & Cloud Node", "status": "JavaScript \u00b7 15s Loop Watchdog", "lines": ["<span class=\"tok-kw\">const<\/span> t0 = performance.<span class=\"tok-fn\">now<\/span>();", "<span class=\"tok-kw\">const<\/span> state = <span class=\"tok-fn\">structuredClone<\/span>({ env: <span class=\"tok-str\">&quot;mobile&quot;<\/span>, flags: [<span class=\"tok-num\">1<\/span>, <span class=\"tok-num\">2<\/span>, <span class=\"tok-num\">3<\/span>] });", "console.<span class=\"tok-fn\">info<\/span>(<span class=\"tok-str\">`Cloned ${state.flags.length} flags in ${(performance.now()-t0).toFixed(2)} ms`<\/span>);"], "output": ["<span class=\"term-prompt\">&#9656;<\/span> JS Worker &middot; crypto_hash.js", "Cloned 3 flags in 0.18 ms", "<span class=\"term-info\">&#10003; &lt;1ms Infinite-Loop Kill &middot; Cloud Node.js Auto-Bundler<\/span>"]}};
+    var currentTab = 'js_esm';
+    var runTimer = null;
+
+    function renderWorkbench(tabKey, animateRun) {
+      var sample = WORKBENCH_SAMPLES[tabKey] || WORKBENCH_SAMPLES['js_esm'];
+      if (!sample) { return; }
+      currentTab = tabKey;
+      var labelEl = document.getElementById('ide-compiler-label');
+      if (labelEl) { labelEl.textContent = sample.label; }
+      var statusEl = document.getElementById('wbStatusLang');
+      if (statusEl) { statusEl.textContent = sample.status; }
+
+      var tabs = document.querySelectorAll('.ide-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        var active = tabs[i].getAttribute('data-tab') === tabKey;
+        tabs[i].classList.toggle('active', active);
+        tabs[i].setAttribute('aria-selected', active ? 'true' : 'false');
+      }
+      var files = document.querySelectorAll('.wb-file');
+      for (var f = 0; f < files.length; f++) {
+        files[f].classList.toggle('active', files[f].getAttribute('data-tab') === tabKey);
+      }
+
+      var codeBox = document.getElementById('ide-code-box');
+      if (codeBox) {
+        var html = '';
+        for (var l = 0; l < sample.lines.length; l++) {
+          var activeCls = (l === sample.lines.length - 1) ? ' active-line' : '';
+          html += '<div class="code-line' + activeCls + '"><span class="ln">' + (l + 1) + '</span><span class="code-content">' + sample.lines[l] + '</span></div>';
+        }
+        codeBox.innerHTML = html;
+      }
+
+      if (animateRun) {
+        runWorkbenchSample();
+      }
+    }
+
+    function runWorkbenchSample() {
+      var sample = WORKBENCH_SAMPLES[currentTab] || WORKBENCH_SAMPLES['js_esm'];
+      var drawer = document.getElementById('ide-terminal-drawer');
+      var out = document.getElementById('ide-term-output');
+      var badge = document.getElementById('ide-exec-status');
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (!drawer || !out || !sample) { return; }
+
+      if (runTimer) { clearTimeout(runTimer); }
+      drawer.classList.add('is-open');
+      if (runBtn) { runBtn.classList.add('is-running'); }
+      if (badge) { badge.textContent = 'Running...'; badge.classList.remove('done'); }
+      out.innerHTML = '';
+
+      var idx = 0;
+      function step() {
+        if (idx < sample.output.length) {
+          var row = document.createElement('span');
+          row.className = 'term-line-item';
+          row.innerHTML = sample.output[idx];
+          out.appendChild(row);
+          idx++;
+          runTimer = setTimeout(step, 80);
+        } else {
+          var cur = document.createElement('span');
+          cur.className = 'term-cursor';
+          cur.textContent = '\u258b';
+          out.appendChild(cur);
+          if (badge) { badge.textContent = 'Completed'; badge.classList.add('done'); }
+          if (runBtn) { runBtn.classList.remove('is-running'); }
+        }
+      }
+      step();
+    }
+
+    function initNavigationAndSmartBar() {
+      var menuBtn = document.getElementById('menuBtn');
+      var drawer = document.getElementById('siteDrawer');
+      var bar = document.getElementById('mobileBottomBar');
+      var heroCta = document.getElementById('heroCta');
+      var siteFooter = document.getElementById('siteFooter');
+
+      function syncBar() {
+        if (!bar) { return; }
+        var drawerOpen = Boolean(drawer && !drawer.hasAttribute('hidden'));
+        var modalEl = document.getElementById('langModal');
+        var modalOpen = Boolean(modalEl && modalEl.classList.contains('show'));
+        var vh = window.innerHeight || document.documentElement.clientHeight || 800;
+        var heroInView = false;
+        if (heroCta) {
+          var hr = heroCta.getBoundingClientRect();
+          heroInView = (hr.bottom > 0 && hr.top < vh);
+        }
+        var footerInView = false;
+        if (siteFooter) {
+          var fr = siteFooter.getBoundingClientRect();
+          footerInView = (fr.top < vh + 24);
+        }
+        var scrollYVal = window.pageYOffset || window.scrollY || 0;
+        var docH = Math.max(document.body ? document.body.scrollHeight : 0, document.documentElement ? document.documentElement.scrollHeight : 0);
+        var nearBottom = (vh + scrollYVal) >= (docH - 120);
+        var shouldShow = !drawerOpen && !modalOpen && !heroInView && !footerInView && !nearBottom;
+        bar.classList.toggle('is-visible', shouldShow);
+      }
+
+      window.__supercodeSyncMobileBar = syncBar;
+
+      function setDrawer(open) {
+        if (!menuBtn || !drawer) { return; }
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { drawer.removeAttribute('hidden'); }
+        else { drawer.setAttribute('hidden', ''); }
+        syncBar();
+      }
+      if (menuBtn && drawer) {
+        menuBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          setDrawer(menuBtn.getAttribute('aria-expanded') !== 'true');
+        });
+        drawer.addEventListener('click', function (e) {
+          if (e.target && e.target.closest('a')) { setDrawer(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!drawer.hasAttribute('hidden') && !drawer.contains(e.target) && e.target !== menuBtn && !menuBtn.contains(e.target)) {
+            setDrawer(false);
+          }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') { setDrawer(false); }
+        });
+      }
+
+      if (bar) {
+        window.addEventListener('scroll', syncBar, { passive: true });
+        window.addEventListener('resize', syncBar);
+        syncBar();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var tabBtns = document.querySelectorAll('.ide-tab, .wb-file');
+      for (var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', function () {
+          renderWorkbench(this.getAttribute('data-tab'), true);
+        });
+      }
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (runBtn) { runBtn.addEventListener('click', function () { runWorkbenchSample(); }); }
+      var closeTerm = document.getElementById('btn-close-term');
+      if (closeTerm) {
+        closeTerm.addEventListener('click', function () {
+          var d = document.getElementById('ide-terminal-drawer');
+          if (d) { d.classList.remove('is-open'); }
+        });
+      }
+      initNavigationAndSmartBar();
+      renderWorkbench('js_esm', false);
+    });
+  })();
+</script>
+<script>window.__SUPERCODE_STATIC_LANG__="pl";window.__SUPERCODE_STATIC_CANONICAL__="https://supercode-ide.github.io/pl/javascript-ide.html";</script>
+<script src="../i18n_extended.js"></script>
+</body>
+</html>

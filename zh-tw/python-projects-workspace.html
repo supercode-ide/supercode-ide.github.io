@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090A0F">
+  <meta name="color-scheme" content="only dark">
+  <meta name="supported-color-schemes" content="dark">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <title>Android 版多檔案 Python IDE — 專案資料夾、互動式 input()、PEP 8 與 Git | SuperCode</title>
+  <meta name="description" content="在 Android 上開發真正的多檔案 Python 專案。支援智慧 main.py 進入點導向、PEP 420 套件、未存檔分頁即時記憶體覆寫、互動式 input() 分割終端機、AST 自動補全、PEP 8 排版器與視覺化 Git。">
+  <meta name="keywords" content="multi file python ide android, run python project folder on android, python git client android, pep8 formatter android app, python ast autocomplete mobile, python coding app for developers">
+  <meta name="author" content="Phoenix Global Studios">
+  <meta name="google-play-app" content="app-id=com.phoenixglobal.supercodeeditor">
+
+  <link id="canonical-link" rel="canonical" href="https://supercode-ide.github.io/zh-tw/python-projects-workspace.html">
+  <link rel="alternate" hreflang="x-default" href="https://supercode-ide.github.io/python-projects-workspace.html">
+  <link rel="alternate" hreflang="en" href="https://supercode-ide.github.io/python-projects-workspace.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://supercode-ide.github.io/zh/python-projects-workspace.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://supercode-ide.github.io/zh-tw/python-projects-workspace.html">
+  <link rel="alternate" hreflang="es" href="https://supercode-ide.github.io/es/python-projects-workspace.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://supercode-ide.github.io/pt/python-projects-workspace.html">
+  <link rel="alternate" hreflang="ja" href="https://supercode-ide.github.io/ja/python-projects-workspace.html">
+  <link rel="alternate" hreflang="ko" href="https://supercode-ide.github.io/ko/python-projects-workspace.html">
+  <link rel="alternate" hreflang="de" href="https://supercode-ide.github.io/de/python-projects-workspace.html">
+  <link rel="alternate" hreflang="fr" href="https://supercode-ide.github.io/fr/python-projects-workspace.html">
+  <link rel="alternate" hreflang="ru" href="https://supercode-ide.github.io/ru/python-projects-workspace.html">
+  <link rel="alternate" hreflang="hi" href="https://supercode-ide.github.io/hi/python-projects-workspace.html">
+  <link rel="alternate" hreflang="id" href="https://supercode-ide.github.io/id/python-projects-workspace.html">
+  <link rel="alternate" hreflang="it" href="https://supercode-ide.github.io/it/python-projects-workspace.html">
+  <link rel="alternate" hreflang="vi" href="https://supercode-ide.github.io/vi/python-projects-workspace.html">
+  <link rel="alternate" hreflang="th" href="https://supercode-ide.github.io/th/python-projects-workspace.html">
+  <link rel="alternate" hreflang="tr" href="https://supercode-ide.github.io/tr/python-projects-workspace.html">
+  <link rel="alternate" hreflang="ar" href="https://supercode-ide.github.io/ar/python-projects-workspace.html">
+  <link rel="alternate" hreflang="pl" href="https://supercode-ide.github.io/pl/python-projects-workspace.html">
+  <link rel="alternate" hreflang="nl" href="https://supercode-ide.github.io/nl/python-projects-workspace.html">
+  <link rel="alternate" hreflang="sv" href="https://supercode-ide.github.io/sv/python-projects-workspace.html">
+  <link rel="alternate" hreflang="nb" href="https://supercode-ide.github.io/nb/python-projects-workspace.html">
+  <link rel="alternate" hreflang="da" href="https://supercode-ide.github.io/da/python-projects-workspace.html">
+  <link rel="alternate" hreflang="fi" href="https://supercode-ide.github.io/fi/python-projects-workspace.html">
+  <link rel="alternate" hreflang="cs" href="https://supercode-ide.github.io/cs/python-projects-workspace.html">
+  <link rel="alternate" hreflang="uk" href="https://supercode-ide.github.io/uk/python-projects-workspace.html">
+  <link rel="alternate" hreflang="ro" href="https://supercode-ide.github.io/ro/python-projects-workspace.html">
+  <link rel="alternate" hreflang="hu" href="https://supercode-ide.github.io/hu/python-projects-workspace.html">
+  <link rel="alternate" hreflang="el" href="https://supercode-ide.github.io/el/python-projects-workspace.html">
+  <link rel="alternate" hreflang="he" href="https://supercode-ide.github.io/he/python-projects-workspace.html">
+  <link rel="alternate" hreflang="ms" href="https://supercode-ide.github.io/ms/python-projects-workspace.html">
+  <link rel="alternate" hreflang="fil" href="https://supercode-ide.github.io/tl/python-projects-workspace.html">
+  <link rel="alternate" hreflang="bn" href="https://supercode-ide.github.io/bn/python-projects-workspace.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
+  <meta property="og:title" content="Android 版多檔案 Python IDE — 專案資料夾、互動式 input()、PEP 8 與 Git | SuperCode">
+  <meta property="og:description" content="在 Android 上開發真正的多檔案 Python 專案。支援智慧 main.py 進入點導向、PEP 420 套件、未存檔分頁即時記憶體覆寫、互動式 input() 分割終端機、AST 自動補全、PEP 8 排版器與視覺化 Git。">
+  <meta property="og:url" content="https://supercode-ide.github.io/zh-tw/python-projects-workspace.html">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-hero-zh-tw.png">
+  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-hero-zh-tw.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="離線 Python 3.11 / 3.12 IDE 與分割終端機">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-hero-zh-tw.png">
+  <meta name="twitter:title" content="Android 版多檔案 Python IDE — 專案資料夾、互動式 input()、PEP 8 與 Git | SuperCode">
+  <meta name="twitter:description" content="在 Android 上開發真正的多檔案 Python 專案。支援智慧 main.py 進入點導向、PEP 420 套件、未存檔分頁即時記憶體覆寫、互動式 input() 分割終端機、AST 自動補全、PEP 8 排版器與視覺化 Git。">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <script>if(/SamsungBrowser/i.test(navigator.userAgent)){document.documentElement.classList.add('is-samsung');}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "SoftwareApplication",
+        "MobileApplication",
+        "WebApplication"
+      ],
+      "@id": "https://supercode-ide.github.io/#supercode-app",
+      "name": "Code Editor: SuperCode IDE",
+      "alternateName": [
+        "Multi-File Python IDE Android",
+        "Python Project Folder App Android",
+        "Mobile Python Git & SFTP IDE"
+      ],
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "Multi-File Python Project IDE, PEP 8 Formatter & Git Client for Android",
+      "inLanguage": "zh-Hant",
+      "fileSize": "40.2MB",
+      "softwareVersion": "1.55.05",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=zh-TW&listing=python-ide",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=zh-TW&listing=python-ide",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=zh-TW"
+      ],
+      "potentialAction": [
+        {
+          "@type": "InstallAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=zh-TW&listing=python-ide",
+            "actionPlatform": [
+              "http://schema.org/AndroidPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          }
+        },
+        {
+          "@type": "ViewAction",
+          "name": "使用指南",
+          "target": [
+            "https://supercode-ide.github.io/tutorial/?lang=zh-tw",
+            "android-app://com.phoenixglobal.supercodeeditor/https/supercode-ide.github.io/tutorial"
+          ]
+        }
+      ],
+      "identifier": "com.phoenixglobal.supercodeeditor",
+      "url": "https://supercode-ide.github.io/zh-tw/python-projects-workspace.html",
+      "screenshot": [
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/01_python_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/02_cpp20_compiler.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/03_web_php_devtools.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/04_file_manager_tree.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/05_sql_sqlite_studio.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/06_java17_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/07_visual_git_timemachine.webp",
+        "https://supercode-ide.github.io/assets/gallery/zh-tw/08_symbol_keyboard_themes.webp"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Phoenix Global Studios",
+        "url": "https://supercode-ide.github.io/zh-tw/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "66"
+      },
+      "featureList": [
+        "Automatic Python project root discovery via pyproject.toml, requirements.txt, setup.py, .git, and src/ layouts",
+        "Smart entry-point arbitration (main.py, app.py, run.py, __main__.py, cli.py, server.py, manage.py, src/main.py)",
+        "Unsaved dirty-tab live memory overlay so edits across open tabs take effect on Run without manual saving",
+        "PEP 420 implicit namespace packages & Python 3.12 syntax support (match/case, tomllib, PEP 695 type aliases)",
+        "Offline AST member autocomplete, 1-tap PEP 8 formatter, Error Radar (TabError & missing colons) & 21-key symbol bar",
+        "Integrated Visual Git Client (Clone, Branch, Diff, Conflict Resolver, Push) & SFTP remote mirroring"
+      ],
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-zh-tw.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://supercode-ide.github.io/zh-tw/python-projects-workspace.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SuperCode IDE",
+          "item": "https://supercode-ide.github.io/zh-tw/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Python 程式開發中心",
+          "item": "https://supercode-ide.github.io/zh-tw/python-ide.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "多檔專案與 Git",
+          "item": "https://supercode-ide.github.io/zh-tw/python-projects-workspace.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Clone, Refactor, Test & Push a Python Repo on Android",
+      "description": "A complete software engineering lifecycle right on your phone or Android tablet.",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Clone a GitHub Repo or Open a Local Project Tree",
+          "text": "Clone via HTTPS Personal Access Token or open any folder on device storage — `.git`, `venv`, and `__pycache__` clutter are automatically ignored during scans.",
+          "url": "https://supercode-ide.github.io/python-projects-workspace.html#step1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Edit Modules with AST Completion & 21-Key Symbol Bar",
+          "text": "Swipe up on the 21-key symbol bar for `:`, `->`, `_`, `()`, `[]`, and `INDENT`, and tap Format for clean 4-space PEP 8 alignment.",
+          "url": "https://supercode-ide.github.io/python-projects-workspace.html#step2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Run Entry Scripts or Unit Test Suites Offline",
+          "text": "Execute `main.py` or `unittest` suites offline with instant millisecond timing and clickable stack-trace navigation.",
+          "url": "https://supercode-ide.github.io/python-projects-workspace.html#step3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Review Unified Diffs, Commit & Push Upstream",
+          "text": "Inspect line-by-line changes in the Git Time Machine, stage files, and push cleanly back to GitHub, GitLab, or Bitbucket.",
+          "url": "https://supercode-ide.github.io/python-projects-workspace.html#step4"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://supercode-ide.github.io/python-projects-workspace.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "在編輯 `utils/helpers.py` 這類輔助模組時按下執行會發生什麼事？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "若 `helpers.py` 僅定義函式或類別而無頂層執行程式碼，SuperCode 會自動尋找專案的進入點腳本（`main.py`、`app.py`、`run.py`、`__main__.py` 或 `src/main.py`）並執行完整應用程式。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "SuperCode 支援 `match/case` 與 `type` 型別別名等 Python 3.12 語法嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "結構化 `match/case` 與 `tomllib` 可於 Python 3.11+ 完全離線運作，而使用 PEP 695 泛型 `type` 別名語法的檔案則會自動啟用 Python 3.12 支援。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "跨資料夾匯入時，每個資料夾都必須建立 `__init__.py` 嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不需要。SuperCode 完整遵循 PEP 420 隱含命名空間套件標準，會乾淨地掛載您的專案根目錄，絕不擅自向您的儲存庫注入多餘的 `__init__.py` 檔案。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "我可以複製私人 GitHub 儲存庫並離線執行其 Python 單元測試嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以。透過視覺化 Git 以 HTTPS 搭配個人存取權杖 (PAT) 複製專案、一次性批次安裝 `requirements.txt`，之後無論身處何地都能完全離線編輯並執行 `unittest` 測試套件。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-page="py_workspace">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="sc-logo" viewBox="20 14 68 72">
+    <path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/>
+    <path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/>
+    <path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/>
+    <path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+  </symbol>
+  <symbol id="gp-prism" viewBox="0 0 24 24">
+    <path fill="#4285F4" d="M3.6,2.4C3.3,2.7,3.1,3.2,3.1,3.8v16.4c0,0.6,0.2,1.1,0.5,1.4l0.1,0.1L12.9,12v-0.2L3.7,2.3L3.6,2.4z"/>
+    <path fill="#34A853" d="M16,15.1l-3.1-3.1v-0.2L16,8.7l0.1,0.1l3.6,2.1c1,0.6,1,1.5,0,2.1l-3.6,2.1L16,15.1z"/>
+    <path fill="#FBBC05" d="M16.1,15.1L12.9,12L3.6,21.3c0.3,0.4,0.9,0.4,1.6,0.1L16.1,15.1z"/>
+    <path fill="#EA4335" d="M16.1,8.9L5.2,2.6C4.5,2.2,3.9,2.3,3.6,2.7L12.9,12L16.1,8.9z"/>
+  </symbol>
+  <symbol id="i-ne" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8 20 7.2v9.6L12 21.2 4 16.8V7.2z"/><path d="M4 7.2l8 4.4 8-4.4M12 11.6v9.6"/></g></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2.8v3.2M15 2.8v3.2M9 18v3.2M15 18v3.2M2.8 9H6M2.8 15H6M18 9h3.2M18 15h3.2"/></g></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 2.8 7.8 12 12.6l9.2-4.8z"/><path d="m2.8 12 9.2 4.8 9.2-4.8"/><path d="m2.8 16.2 9.2 4.8 9.2-4.8"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="M2.8 8.5h18.4"/><path d="m9.5 12.5-2.2 2.2 2.2 2.2M14.5 12.5l2.2 2.2-2.2 2.2"/></g></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5.6" rx="7.6" ry="2.8"/><path d="M4.4 5.6v12.8c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8V5.6"/><path d="M4.4 12c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8"/></g></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="m7.2 9.5 3 2.5-3 2.5M12.8 15h4"/></g></symbol>
+  <symbol id="i-git" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.3"/><circle cx="6" cy="18" r="2.3"/><circle cx="18" cy="12" r="2.3"/><path d="M6 8.3v7.4M8.3 6h4.2a3.5 3.5 0 0 1 3.5 3.5v.2"/></g></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5h11a4 4 0 0 0 .7-7.94A5.5 5.5 0 0 0 7.4 9.2 3.8 3.8 0 0 0 6.5 18.5z"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M13 2.8 4.8 13.2h6.3L10.2 21.2 19.2 10.6h-6.4z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 2.8 4.8 5.8v5.6c0 5 3.1 8.5 7.2 9.8 4.1-1.3 7.2-4.8 7.2-9.8V5.8z"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="index.html" class="brand" aria-label="SuperCode IDE Home">
+      <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+      <span>SuperCode</span>
+      <span class="brand__tag">IDE</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary Workspaces">
+      <a href="code-editor.html" data-i18n="nav_code_editor">程式碼編輯器</a>
+      <a href="large-file-editor.html" data-i18n="nav_large_file">GB 級大檔案</a>
+      <a href="python-ide.html" class="is-current" data-i18n="nav_python_ide">Python IDE</a>
+      <a href="c-compiler.html" data-i18n="nav_c_compiler">C17 編譯器</a>
+      <a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a>
+      <a href="java-ide.html" data-i18n="nav_java_ide">Java 17 IDE</a>
+      <a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a>
+      <a href="web-ide.html" data-i18n="nav_web_ide">Web 與 PHP</a>
+      <a href="sql-ide.html" data-i18n="nav_sql_ide">SQL 工作室</a>
+      <a href="git-client.html" data-i18n="nav_git_client">視覺化 Git</a>
+      <a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP 與 FTPS</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button id="langModalBtn" class="btn-lang-trigger" type="button" onclick="openLangModal()" aria-label="Select Language">
+        <svg class="lang-globe-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span id="langTriggerText">繁中</span>
+        <span class="lang-chevron" aria-hidden="true">&#9662;</span>
+      </button>
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-TW&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh-tw%26utm_campaign%3Dpython-ide%26utm_content%3Dpython-projects-workspace" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+        <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+        <span data-i18n="nav_cta">Google Play</span>
+      </a>
+      <a href="index.html" class="btn-home-icon" aria-label="Home" title="Home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5"/>
+          <path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
+        </svg>
+      </a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteDrawer" aria-label="All Pages Directory">
+        <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 8.5h16M4 15.5h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-drawer" id="siteDrawer" hidden>
+  <nav class="container menu-drawer__inner" aria-label="All SuperCode Pages">
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_core">編輯器與大檔案</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="index.html"><span data-i18n="nav_home">總覽</span><span class="mono">01</span></a>
+        <a class="menu-drawer__link" href="code-editor.html"><span data-i18n="nav_code_editor">程式碼編輯器</span><span class="mono">02</span></a>
+        <a class="menu-drawer__link" href="large-file-editor.html"><span data-i18n="nav_large_file">GB 級大檔案</span><span class="mono">03</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_lang">離線編譯器與語言</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link is-current" href="python-ide.html"><span data-i18n="nav_python_ide">Python IDE</span><span class="mono">04</span></a>
+        <a class="menu-drawer__link" href="c-compiler.html"><span data-i18n="nav_c_compiler">C17 編譯器</span><span class="mono">05</span></a>
+        <a class="menu-drawer__link" href="cpp-ide.html"><span data-i18n="nav_cpp_ide">C++20 IDE</span><span class="mono">06</span></a>
+        <a class="menu-drawer__link" href="java-ide.html"><span data-i18n="nav_java_ide">Java 17 IDE</span><span class="mono">07</span></a>
+        <a class="menu-drawer__link" href="javascript-ide.html"><span data-i18n="nav_js_ide">JavaScript</span><span class="mono">08</span></a>
+        <a class="menu-drawer__link" href="lua-ide.html"><span data-i18n="nav_lua_ide">Lua 5.4</span><span class="mono">09</span></a>
+        <a class="menu-drawer__link" href="shell-ide.html"><span data-i18n="nav_shell_ide">Shell 與 Kotlin</span><span class="mono">10</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_devops">網頁、SQL 與遠端維運</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="web-ide.html"><span data-i18n="nav_web_ide">Web 與 PHP</span><span class="mono">11</span></a>
+        <a class="menu-drawer__link" href="sql-ide.html"><span data-i18n="nav_sql_ide">SQL 工作室</span><span class="mono">12</span></a>
+        <a class="menu-drawer__link" href="git-client.html"><span data-i18n="nav_git_client">視覺化 Git</span><span class="mono">13</span></a>
+        <a class="menu-drawer__link" href="sftp-client.html"><span data-i18n="nav_sftp_client">SFTP 與 FTPS</span><span class="mono">14</span></a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<main id="top">
+  <!-- ==================== 01 · EDITORIAL HERO & INTERACTIVE WORKBENCH ==================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <div class="py-hub-crumb"><a href="python-ide.html"><span class="crumb-arrow" aria-hidden="true">&larr;</span> Python 程式開發中心</a><span class="sep">/</span><span>多檔專案與 Git</span></div>
+          <div class="trust-pill">
+            <span class="trust-pill__score"><span data-play-rating>4.9</span> &#9733;</span>
+            <span data-i18n="hero_tag">多檔案套件 &#183; 智慧進入點導向 &#183; PEP 8 &#183; 視覺化 GIT</span>
+          </div>
+
+          <h1 class="hero-h1" data-i18n="hero_h1">在 Android 上實現真正的<span class="text-gradient">多檔案 Python 架構</span>與 Git 協作。</h1>
+
+          <p class="hero-lead" data-i18n="hero_desc">告別陽春的單檔草稿本。SuperCode 能自動解析 <strong><code>src/</code> 套件、相對匯入與 <code>pyproject.toml</code> 專案根目錄</strong> &#8212; 讓您搭配 <strong>AST 自動補全</strong>編輯輔助模組，在任何分頁點擊執行即可啟動 <strong><code>main.py</code></strong>，並透過<strong>視覺化 Git</strong> 推送提交。</p>
+
+          <div class="hero__cta" id="heroCta">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-TW&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh-tw%26utm_campaign%3Dpython-ide%26utm_content%3Dpython-projects-workspace" target="_blank" rel="noopener" class="btn btn--gold">
+              <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+              <span data-i18n="cta_btn">前往 Google Play 下載</span>
+            </a>
+            <a href="https://supercode-ide.github.io/tutorial/?lang=zh-tw&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+              <span data-i18n="cta_tutorial">使用指南</span>
+              <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <dl class="specs" aria-label="Key Specifications">
+          <div class="spec"><dt>250</dt><dd data-i18n="ws_s1">檔案 / 工作區</dd></div>
+          <div class="spec"><dt>Auto</dt><dd data-i18n="ws_s2">main.py 智慧仲裁</dd></div>
+          <div class="spec"><dt>PEP 8</dt><dd data-i18n="ws_s3">AST 與錯誤雷達</dd></div>
+          <div class="spec"><dt>Git</dt><dd data-i18n="ws_s4">&amp; 內建 SFTP</dd></div>
+        </dl>
+      </div>
+
+      <div class="wb-caption">
+        <div class="sec-index" style="margin-bottom:0">
+          <span class="num">01</span>
+          <span class="rule"></span>
+          <span data-i18n="wb_eyebrow">多模組 PYTHON 工作區與 UNITTEST 測試工作台</span>
+        </div>
+        <span class="wb-caption__hint mono">src/ Layout &#183; Smart Entry Arbitration &#183; Unsaved Tab Overlay &#183; unittest</span>
+      </div>
+
+      <div class="ide-workbench">
+        <div class="wb-titlebar">
+          <div class="wb-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="wb-title" id="ide-compiler-label">multi-module-app/src/main.py &#8212; Smart Entry Point &amp; Python 3.12 Syntax</div>
+          <button type="button" class="wb-run" id="btn-run-sandbox">
+            <span class="wb-run__tri" aria-hidden="true">&#9654;</span>
+            <span data-i18n="btn_run">執行範例</span>
+          </button>
+        </div>
+
+        <div class="wb-tabs" role="tablist" aria-label="Interactive Workspace Tabs">
+          <button type="button" class="ide-tab active" data-tab="main" role="tab" aria-selected="true"><i></i>src/main.py</button>
+          <button type="button" class="ide-tab" data-tab="sub" role="tab" aria-selected="false"><i></i>services/ledger.py</button>
+          <button type="button" class="ide-tab" data-tab="test" role="tab" aria-selected="false"><i></i>tests/test_ledger.py</button>
+        </div>
+
+        <div class="wb-body">
+          <aside class="wb-explorer" aria-label="Project Explorer">
+            <div class="wb-explorer__head">Explorer</div>
+            <div class="wb-folder">&#9662; multi-module-app</div>
+            <button type="button" class="wb-file active" data-tab="main"><b>MAIN</b><span>src/main.py</span></button>
+            <button type="button" class="wb-file" data-tab="sub"><b>MOD</b><span>services/ledger.py</span></button>
+            <button type="button" class="wb-file" data-tab="test"><b>TEST</b><span>tests/test_ledger.py</span></button>
+          </aside>
+
+          <div class="wb-main">
+            <div class="ide-editor-body" id="ide-code-box" role="region" aria-label="Interactive Code Preview"></div>
+            <div class="ide-terminal" id="ide-terminal-drawer" aria-live="polite">
+              <div class="term-header">
+                <span data-i18n="term_title">互動式終端機輸出</span>
+                <div class="term-header-right">
+                  <span class="term-exec-badge" id="ide-exec-status">Ready</span>
+                  <button type="button" class="btn-term-close" id="btn-close-term" aria-label="Close terminal">&#10005;</button>
+                </div>
+              </div>
+              <div class="term-stream" id="ide-term-output"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wb-statusbar">
+          <span class="wb-statusbar__dot"><i></i><span id="wbStatusLang">Multi-File &#183; PEP 420</span></span>
+          <div class="wb-statusbar__right">
+            <span>UTF-8</span>
+            <span>LF</span>
+            <span>Ln 6, Col 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- SC_REAL_GALLERY_START -->
+  <section class="section sc-real-gallery" id="screenshots" aria-label="應用程式預覽與螢幕擷圖">
+    <div class="container">
+      <div class="sc-gp-head">
+        <div class="sc-gp-head-left">
+          <div class="sc-gp-eyebrow" data-i18n="gal_eyebrow">Android 實機擷圖</div>
+          <h2 class="sc-gp-title" data-i18n="gal_title">應用程式預覽與螢幕擷圖</h2>
+          <p class="sc-gp-short" data-i18n="gal_short_desc">離線程式碼編輯器與手機寫程式 IDE：Python、C/C++、Java、JS、HTML、SQL、PHP 編譯器，Git/SFTP</p>
+        </div>
+        <a class="sc-gp-store-bar" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-TW&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh-tw%26utm_campaign%3Dpython-ide%26utm_content%3Dpython-projects-workspace" target="_blank" rel="noopener" aria-label="Code Editor: SuperCode IDE — Phoenix Global Studios">
+          <svg class="sc-gp-app-icon" width="38" height="38" viewBox="16 12 76 76" aria-hidden="true"><rect x="16" y="12" width="76" height="76" rx="18" fill="#070A10" stroke="#3B82F6" stroke-width="2"/><path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/><path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/><path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/><path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/></svg>
+          <span class="sc-gp-app-meta">
+            <span class="sc-gp-app-name">Code Editor: SuperCode IDE</span>
+            <span class="sc-gp-app-dev">Phoenix Global Studios</span>
+          </span>
+          <span class="sc-gp-store-arrow" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      </div>
+      <div class="sc-gp-stage">
+        <button type="button" class="sc-gp-nav sc-gp-nav--prev is-hidden" id="scGpPrev" aria-label="上一張">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="sc-gp-rail" id="scGpRail">
+          <button type="button" class="sc-gp-item sc-gp-item--feature" aria-label="程式碼編輯器：SuperCode IDE — 離線行動 IDE">
+            <img src="../assets/gallery/zh-tw/00_feature_graphic.webp" data-sc-file="00_feature_graphic.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_0" data-cap="程式碼編輯器：SuperCode IDE — 離線行動 IDE" alt="程式碼編輯器：SuperCode IDE — 離線行動 IDE" width="1024" height="500" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="離線 Python 3.11 / 3.12 IDE 與分割終端機">
+            <img src="../assets/gallery/zh-tw/01_python_ide.webp" data-sc-file="01_python_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_1" data-cap="離線 Python 3.11 / 3.12 IDE 與分割終端機" alt="離線 Python 3.11 / 3.12 IDE 與分割終端機" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="本機 C17 與 C++20 多檔編譯器">
+            <img src="../assets/gallery/zh-tw/02_cpp20_compiler.webp" data-sc-file="02_cpp20_compiler.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_2" data-cap="本機 C17 與 C++20 多檔編譯器" alt="本機 C17 與 C++20 多檔編譯器" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="本機 Web 伺服器、離線 PHP 與 DevTools">
+            <img src="../assets/gallery/zh-tw/03_web_php_devtools.webp" data-sc-file="03_web_php_devtools.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_3" data-cap="本機 Web 伺服器、離線 PHP 與 DevTools" alt="本機 Web 伺服器、離線 PHP 與 DevTools" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="全域檔案樹與本機檔案管理員 (SAF)">
+            <img src="../assets/gallery/zh-tw/04_file_manager_tree.webp" data-sc-file="04_file_manager_tree.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_4" data-cap="全域檔案樹與本機檔案管理員 (SAF)" alt="全域檔案樹與本機檔案管理員 (SAF)" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="離線 SQLite 3.54 工作室與 .db 檢視器">
+            <img src="../assets/gallery/zh-tw/05_sql_sqlite_studio.webp" data-sc-file="05_sql_sqlite_studio.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_5" data-cap="離線 SQLite 3.54 工作室與 .db 檢視器" alt="離線 SQLite 3.54 工作室與 .db 檢視器" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="離線 Java 17 IDE 與 SQLite JDBC">
+            <img src="../assets/gallery/zh-tw/06_java17_ide.webp" data-sc-file="06_java17_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_6" data-cap="離線 Java 17 IDE 與 SQLite JDBC" alt="離線 Java 17 IDE 與 SQLite JDBC" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="視覺化 Git 用戶端、時光機與 SFTP">
+            <img src="../assets/gallery/zh-tw/07_visual_git_timemachine.webp" data-sc-file="07_visual_git_timemachine.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_7" data-cap="視覺化 Git 用戶端、時光機與 SFTP" alt="視覺化 Git 用戶端、時光機與 SFTP" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="21 鍵符號列與 8 款匠心 IDE 主題">
+            <img src="../assets/gallery/zh-tw/08_symbol_keyboard_themes.webp" data-sc-file="08_symbol_keyboard_themes.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_8" data-cap="21 鍵符號列與 8 款匠心 IDE 主題" alt="21 鍵符號列與 8 款匠心 IDE 主題" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+        </div>
+        <button type="button" class="sc-gp-nav sc-gp-nav--next" id="scGpNext" aria-label="下一張">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  <div class="sc-lb-modal" id="scLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="應用程式預覽與螢幕擷圖">
+    <div class="sc-lb-topbar">
+      <button type="button" class="sc-lb-back" id="scLbBack">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-i18n="gal_back">返回</span>
+      </button>
+      <div class="sc-lb-meta">
+        <span class="sc-lb-counter" id="scLbCounter">1 / 9</span>
+        <span class="sc-lb-title" id="scLbTitle"></span>
+      </div>
+      <button type="button" class="sc-lb-close" id="scLbClose" aria-label="關閉預覽">&times;</button>
+    </div>
+    <div class="sc-lb-stage">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--prev" id="scLbPrev" aria-label="上一張">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <img class="sc-lb-img" id="scLbImg" src="" alt="SuperCode IDE Preview">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--next" id="scLbNext" aria-label="下一張">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="sc-lb-dots" id="scLbDots"></div>
+  </div>
+  <script defer src="../assets/gallery.js"></script>
+<!-- SC_REAL_GALLERY_END -->
+
+
+
+
+
+  <!-- ==================== 02 · CORE CAPABILITIES ==================== -->
+  <section class="section section--alt" id="capabilities">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">02</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_cap_eyebrow">核心能力</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="sec_cap_title">專為觸控體驗重新打造的桌面級 Python 專案開發流</h2>
+        <p class="sec-lead" data-i18n="sec_cap_lead">SuperCode 的 Python 工作區解析器打磨了每個細節，徹底消除手機端管理多檔案的繁瑣阻礙。</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="feature-grid feature-grid--6">
+          <article class="feature-card" id="cap1">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+              <span class="f-idx">02.1</span>
+            </div>
+            <h3 class="f-title" data-i18n="f1_title">從任意分頁智慧判定專案進入點</h3>
+            <p class="f-desc" data-i18n="f1_desc">正在編輯沒有頂層執行區塊的 `services/ledger.py` 或 `models/user.py` 嗎？點擊執行會自動向上追溯專案根目錄（`pyproject.toml`、`requirements.txt`、`.git`），並啟動 `main.py`、`app.py`、`run.py` 或 `src/main.py`。</p>
+            <div class="f-code" data-i18n="f1_badge">編輯輔助模組 -&gt; 按下執行 -&gt; 自動執行 main.py</div>
+          </article>
+          <article class="feature-card" id="cap2">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
+              <span class="f-idx">02.2</span>
+            </div>
+            <h3 class="f-title" data-i18n="f2_title">未存檔分頁即時記憶體覆寫與 PEP 420 命名空間</h3>
+            <p class="f-desc" data-i18n="f2_desc">同時修改三個開啟中的 `.py` 分頁後直接點擊執行 &#8212; SuperCode 會在記憶體中即時疊加未存檔的編輯緩衝區，同時不會在 `src/` 資料夾中塞入多餘的空白 `__init__.py` 檔案。</p>
+            <div class="f-code" data-i18n="f2_badge">免存檔即刻執行 &#183; PEP 420 隱含命名空間套件</div>
+          </article>
+          <article class="feature-card" id="cap3">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-term"/></svg></span>
+              <span class="f-idx">02.3</span>
+            </div>
+            <h3 class="f-title" data-i18n="f3_title">真互動式 input() 與 [EOF] 雙窗格終端機</h3>
+            <p class="f-desc" data-i18n="f3_desc">輕鬆測試包含連續 `input()` 與 `sys.stdin.readline()` 呼叫的 CLI 程式。終端機在手機上會自動停靠於程式碼下方，平板上則呈 55%/45% 並排分割，並支援即時停止/中斷控制。</p>
+            <div class="f-code" data-i18n="f3_badge">非阻塞 Stdin 佇列 &#183; [EOF] 訊號 &#183; 55:45 分割視窗</div>
+          </article>
+          <article class="feature-card" id="cap4">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-chip"/></svg></span>
+              <span class="f-idx">02.4</span>
+            </div>
+            <h3 class="f-title" data-i18n="f4_title">離線 AST 自動補全、PEP 8 排版器與錯誤雷達</h3>
+            <p class="f-desc" data-i18n="f4_desc">在類別與模組後輸入 `.` 即可享受毫秒內離線 AST 自動補全，一鍵將凌亂縮排整理為 PEP 8 規範，並在執行前透過錯誤雷達即時抓出 Tab/空白混用 (`TabError`) 或遺漏冒號。</p>
+            <div class="f-code" data-i18n="f4_badge">AST 作用域引擎 &#183; 一鍵 PEP 8 &#183; TabError 雷達</div>
+          </article>
+          <article class="feature-card" id="cap5">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-git"/></svg></span>
+              <span class="f-idx">02.5</span>
+            </div>
+            <h3 class="f-title" data-i18n="f5_title">獨立內建視覺化 Git 與 120 次提交時光機</h3>
+            <p class="f-desc" data-i18n="f5_desc">透過 HTTPS PAT 複製私人 GitHub/GitLab Python 儲存庫、建立功能分支、檢視語法著色差異比對、視覺化解決合併衝突並推送提交，全程無須離開編輯器。</p>
+            <div class="f-code" data-i18n="f5_badge">複製 &#183; 分支 &#183; 視覺化合併 &#183; 提交與推送</div>
+          </article>
+          <article class="feature-card" id="cap6">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-cloud"/></svg></span>
+              <span class="f-idx">02.6</span>
+            </div>
+            <h3 class="f-title" data-i18n="f6_title">50,000 節點模糊檔案搜尋與全域 Regex 取代</h3>
+            <p class="f-desc" data-i18n="f6_desc">利用模糊檔案搜尋在大型 Monorepo 中毫秒跳轉至任意 `.py` 模組，或使用串流式正規表示式搜尋與取代，安全重構整個專案的函式名稱。</p>
+            <div class="f-code" data-i18n="f6_badge">模糊快速跳轉 &#183; 跨專案 Regex 重構</div>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">專為手機、摺疊機與平板打造 · 輕量 40.2 MB</span>
+        <a class="link-arrow" href="python-ide.html">
+          <span>Python Coding App Hub</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 03 · STEP-BY-STEP WORKFLOW GUIDE ==================== -->
+  <section class="section" id="workflow">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">03</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_wf_eyebrow">逐步操作流程</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="workflow_title">如何在 Android 上複製、重構、測試並推送 Python 專案</h2>
+        <p class="sec-lead" data-i18n="workflow_lead">直接在手機或 Android 平板上完成完整的軟體工程開發週期。</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="workflow-grid">
+          <article class="wf-step" id="step1">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 01</span>
+              <span class="wf-step__cmd">Git Clone / Open Folder</span>
+            </div>
+            <h3 data-i18n="wf1_title">複製 GitHub 儲存庫或開啟本機專案檔案樹</h3>
+            <p data-i18n="wf1_desc">透過 HTTPS 個人存取權杖 (PAT) 複製專案，或開啟裝置上的任意資料夾 &#8212; 掃描時會自動過濾 `.git`、`venv` 與 `__pycache__` 等雜訊目錄。</p>
+          </article>
+          <article class="wf-step" id="step2">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 02</span>
+              <span class="wf-step__cmd">Multi-Tab Edit + PEP 8</span>
+            </div>
+            <h3 data-i18n="wf2_title">搭配 AST 自動補全與 21 鍵符號列編輯模組</h3>
+            <p data-i18n="wf2_desc">在 21 鍵符號列上滑快速輸入 `:`、`-&gt;`、`_`、`()`、`[]` 與 `INDENT`，點擊排版即可自動對齊為乾淨的 4 空白 PEP 8 格式。</p>
+          </article>
+          <article class="wf-step" id="step3">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 03</span>
+              <span class="wf-step__cmd">Run &#9654; / unittest</span>
+            </div>
+            <h3 data-i18n="wf3_title">離線執行進入點腳本或單元測試套件</h3>
+            <p data-i18n="wf3_desc">離線執行 `main.py` 或 `unittest` 測試套件，享有毫秒級執行計時與可點擊跳轉的堆疊追蹤導覽。</p>
+          </article>
+          <article class="wf-step" id="step4">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 04</span>
+              <span class="wf-step__cmd">Git Time Machine -&gt; Push</span>
+            </div>
+            <h3 data-i18n="wf4_title">檢視差異比對、提交並推送至遠端分支</h3>
+            <p data-i18n="wf4_desc">在 Git 時光機中逐行檢視程式碼變更、暫存檔案，並將提交乾淨地推送回 GitHub、GitLab 或 Bitbucket。</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="wf_foot_note">單次執行支援高達 250 個工作區檔案 &#183; 2.5 秒自動更新位元組碼快取</span>
+        <a class="link-arrow" href="https://supercode-ide.github.io/tutorial/?lang=zh-tw&amp;ref=official_web" data-supercode-tutorial="true">
+          <span data-i18n="cta_tutorial">使用指南</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 04 · FEATURED SUMMARY & COMPARISON MATRIX ==================== -->
+  <section class="section section--alt" id="comparison">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">04</span>
+        <span class="rule"></span>
+        <span data-i18n="comp_eyebrow">功能矩陣</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="table_h2">SuperCode 多檔案 Python 工作區 vs. 行動端單檔草稿本</h2>
+        <p class="snippet-definition" data-i18n="snippet_p"><strong>SuperCode IDE</strong> 在 Android 上提供桌面級的多檔案 Python 專案支援，具備自動解析 `pyproject.toml`/`src/` 根目錄、智慧 `main.py` 進入點仲裁、未存檔分頁記憶體覆寫、PEP 8 排版、AST 自動補全以及內建視覺化 Git。</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="table-wrap">
+          <table class="obsidian-benchmark-table">
+            <caption data-i18n="table_caption">ANDROID 多檔案 PYTHON 專案 IDE 功能比較</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="th_0">工程開發功能</th>
+                <th scope="col" data-i18n="th_1">SuperCode Python 工作室</th>
+                <th scope="col" data-i18n="th_2">單檔案 Python App</th>
+                <th scope="col" data-i18n="th_3">瀏覽器雲端 IDE</th>
+                <th scope="col" data-i18n="th_4">命令列終端機編輯器</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="tr1_c0">專案根目錄與 src/</th>
+                <td><strong data-i18n="tr1_c1">自動解析 pyproject.toml、src/ 與 PEP 420</strong></td>
+                <td data-i18n="tr1_c2">僅限扁平單一腳本</td>
+                <td data-i18n="tr1_c3">支援（僅限連網）</td>
+                <td data-i18n="tr1_c4">須手動設定 PYTHONPATH</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr2_c0">從子模組直接執行</th>
+                <td><strong data-i18n="tr2_c1">智慧進入點仲裁 -&gt; 執行 main.py/app.py</strong></td>
+                <td data-i18n="tr2_c2">誤執行輔助模組導致錯誤</td>
+                <td data-i18n="tr2_c3">須手動設定 launch.json</td>
+                <td data-i18n="tr2_c4">須手動輸入終端機指令</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr3_c0">未存檔多分頁執行</th>
+                <td><strong data-i18n="tr3_c1">跨所有開啟分頁即時記憶體覆寫</strong></td>
+                <td data-i18n="tr3_c2">須逐一手動存檔</td>
+                <td data-i18n="tr3_c3">受限於自動存檔延遲</td>
+                <td data-i18n="tr3_c4">僅限單一緩衝區</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr4_c0">程式碼品質工具</th>
+                <td><strong data-i18n="tr4_c1">AST 補全 + PEP 8 排版 + TabError 雷達</strong></td>
+                <td data-i18n="tr4_c2">僅基本關鍵字清單</td>
+                <td data-i18n="tr4_c3">支援</td>
+                <td data-i18n="tr4_c4">需另裝 LSP 外掛</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr5_c0">版本控制</th>
+                <td><strong data-i18n="tr5_c1">視覺化 Git 時光機與衝突解決器</strong></td>
+                <td data-i18n="tr5_c2">無</td>
+                <td data-i18n="tr5_c3">網頁版 Git 介面</td>
+                <td data-i18n="tr5_c4">純文字命令列 git merge</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">專為手機、摺疊機與平板打造 · 輕量 40.2 MB</span>
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-TW&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh-tw%26utm_campaign%3Dpython-ide%26utm_content%3Dpython-projects-workspace" target="_blank" rel="noopener">
+          <span>Google Play</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 05 · VISIBLE EDITORIAL FAQ ==================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-head">
+          <div class="sec-index">
+            <span class="num">05</span>
+            <span class="rule"></span>
+            <span data-i18n="sec3_eyebrow">常見問答</span>
+          </div>
+          <h2 class="h2" data-i18n="sec3_title">常見問題</h2>
+          <p class="sec-lead" data-i18n="faq_lead">關於 Android 版 Python 的 `src/` 目錄結構、相對匯入、`unittest` 與 Git 整合常見問題。</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary><span data-i18n="faq1_q">在編輯 `utils/helpers.py` 這類輔助模組時按下執行會發生什麼事？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq1_a">若 `helpers.py` 僅定義函式或類別而無頂層執行程式碼，SuperCode 會自動尋找專案的進入點腳本（`main.py`、`app.py`、`run.py`、`__main__.py` 或 `src/main.py`）並執行完整應用程式。</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq2_q">SuperCode 支援 `match/case` 與 `type` 型別別名等 Python 3.12 語法嗎？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq2_a">結構化 `match/case` 與 `tomllib` 可於 Python 3.11+ 完全離線運作，而使用 PEP 695 泛型 `type` 別名語法的檔案則會自動啟用 Python 3.12 支援。</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq3_q">跨資料夾匯入時，每個資料夾都必須建立 `__init__.py` 嗎？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq3_a">不需要。SuperCode 完整遵循 PEP 420 隱含命名空間套件標準，會乾淨地掛載您的專案根目錄，絕不擅自向您的儲存庫注入多餘的 `__init__.py` 檔案。</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq4_q">我可以複製私人 GitHub 儲存庫並離線執行其 Python 單元測試嗎？</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq4_a">可以。透過視覺化 Git 以 HTTPS 搭配個人存取權杖 (PAT) 複製專案、一次性批次安裝 `requirements.txt`，之後無論身處何地都能完全離線編輯並執行 `unittest` 測試套件。</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==================== 06 · TOPICAL AUTHORITY ECOSYSTEM CLUSTER ==================== -->
+  <section class="section section--alt" id="ecosystem-guides">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">06</span>
+        <span class="rule"></span>
+        <span>Python 開發應用生態系與指南</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2>完整 Python 編程 App 文件套件</h2>
+        <p class="sec-lead">直接在 Python 開發應用主中樞與全部 7 篇 Android Python 專業工程指南間快速跳轉。</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="py-cluster-grid">
+          <a href="python-ide.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-HUB</span>
+              <span class="py-spoke-card__tag">Python 3.11/3.12 · 核心總覽</span>
+            </div>
+            <h3>Python 開發 App 與 IDE 總覽</h3>
+            <p>SuperCode 離線 Python 3.11 與 3.12 執行環境、互動式 input() 終端機、PEP 8 工具與多語言工作區總覽。</p>
+            <div class="py-spoke-card__go">
+              <span>python-ide</span>
+              <span>開啟指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="python-pip-manager.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-01</span>
+              <span class="py-spoke-card__tag">PIP · .whl · requirements.txt</span>
+            </div>
+            <h3>PIP 與離線 .whl 安裝指南</h3>
+            <p>安裝 PyPI 套件、自動對應 35+ 模組別名、批次執行 requirements.txt，或從「下載」資料夾匯入離線 .whl 封裝檔。</p>
+            <div class="py-spoke-card__go">
+              <span>python-pip-manager</span>
+              <span>開啟指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="python-offline-libraries.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-02</span>
+              <span class="py-spoke-card__tag">250+ 標準庫 · PyPI · 科學計算</span>
+            </div>
+            <h3>支援的 Python 函式庫</h3>
+            <p>完整相容性清冊，涵蓋 200+ Python 3.11 標準模組、純 Python PyPI wheel 套件、60+ 科學計算套件與雲端機器學習。</p>
+            <div class="py-spoke-card__go">
+              <span>python-offline-libraries</span>
+              <span>開啟指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="python-data-science.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-03</span>
+              <span class="py-spoke-card__tag">NumPy · Pandas · Polars · DuckDB</span>
+            </div>
+            <h3>NumPy、Pandas 與 Matplotlib</h3>
+            <p>於裝置快取執行科學計算專用 Python 3.12，分析 CSV/Parquet/SQLite 資料集，並自動將 Matplotlib 與 Seaborn 圖表儲存至資料夾。</p>
+            <div class="py-spoke-card__go">
+              <span>python-data-science</span>
+              <span>開啟指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="python-machine-learning.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-04</span>
+              <span class="py-spoke-card__tag">sklearn · XGBoost · cv2 · PyTorch</span>
+            </div>
+            <h3>Scikit-Learn、OpenCV 與 AI</h3>
+            <p>離線訓練 Scikit-Learn 與 XGBoost 模型、使用 OpenCV 與 Pillow 處理影像，並以 1:1 錯誤追蹤執行繁重的 PyTorch/TensorFlow 任務。</p>
+            <div class="py-spoke-card__go">
+              <span>python-machine-learning</span>
+              <span>開啟指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="python-web-scraping-automation.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-05</span>
+              <span class="py-spoke-card__tag">Requests · BS4 · Flask · Telebot</span>
+            </div>
+            <h3>網頁爬蟲、API 與機器人</h3>
+            <p>在 Android 上打造 BeautifulSoup 爬蟲、Pydantic REST 用戶端、Flask 微型應用、Telegram 機器人與 python-docx/SQLite 自動化腳本。</p>
+            <div class="py-spoke-card__go">
+              <span>python-web-scraping-automation</span>
+              <span>開啟指南 &rarr;</span>
+            </div>
+          </a>
+          <a href="python-projects-workspace.html" class="py-spoke-card is-active">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-06</span>
+              <span class="py-spoke-card__tag">進入點路由 · PEP 8 · Git/SFTP</span>
+            </div>
+            <h3>多檔案專案與 Git</h3>
+            <p>掌握多資料夾 Python 專案、智慧 main.py 仲裁、即時互動 input()、PEP 8 格式化、AST 自動補全與視覺化 Git。</p>
+            <div class="py-spoke-card__go">
+              <span>python-projects-workspace</span>
+              <span>檢視指南中</span>
+            </div>
+          </a>
+          <a href="learn-python-android.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">PY-07</span>
+              <span class="py-spoke-card__tag">免登入 · 8 個範本 · CS101</span>
+            </div>
+            <h3>離線學習 Python</h3>
+            <p>在飛航模式下隨時隨地練習 Python，內建 8 個可執行入門範本、21 鍵 Python 符號列與即時語法錯誤雷達。</p>
+            <div class="py-spoke-card__go">
+              <span>learn-python-android</span>
+              <span>開啟指南 &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span>8 篇互連 Android Python 指南 · 離線 Python 3.11 與科學運算 3.12</span>
+        <a class="link-arrow" href="python-ide.html">
+          <span>Python 開發應用中樞</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="siteFooter">
+  <div class="container">
+    <div class="footer-cta" id="footerCta">
+      <div>
+        <h2 class="h2" data-i18n="cta_h2">在 Android 上建置真正的多檔案 Python 專案。</h2>
+        <p data-i18n="cta_desc">前往 Google Play 免費下載 SuperCode IDE，立即體驗多模組 Python 開發、PEP 8 工具與視覺化 Git。</p>
+      </div>
+      <div class="footer-cta__btns">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-TW&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh-tw%26utm_campaign%3Dpython-ide%26utm_content%3Dpython-projects-workspace" target="_blank" rel="noopener" class="btn btn--gold">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="cta_btn">前往 Google Play 下載</span>
+        </a>
+        <a href="https://supercode-ide.github.io/tutorial/?lang=zh-tw&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+          <span data-i18n="cta_tutorial">使用指南</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+          <span>SuperCode</span>
+          <span class="brand__tag">IDE</span>
+        </a>
+        <p data-i18n="footer_tagline">專為全球 Android 工程師、學生與教育工作者打造的原生行動程式碼編輯器與離線開發工作室。</p>
+        <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
+        <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-TW&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh-tw%26utm_campaign%3Dpython-ide%26utm_content%3Dpython-projects-workspace" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://supercode-ide.github.io/tutorial/?lang=zh-tw&amp;ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">使用指南</span> &#8599;</a>
+          <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">選擇語言</span></button>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_core">編輯器與大檔案</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">總覽</a></li>
+          <li><a href="code-editor.html" data-i18n="nav_code_editor">程式碼編輯器</a></li>
+          <li><a href="large-file-editor.html" data-i18n="nav_large_file">GB 級大檔案</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_lang">離線編譯器與語言</h4>
+        <ul>
+          <li><a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a></li>
+          <li><a href="c-compiler.html" data-i18n="nav_c_compiler">C17 編譯器</a></li>
+          <li><a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a></li>
+          <li><a href="java-ide.html" data-i18n="nav_java_ide">Java 17 IDE</a></li>
+          <li><a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a></li>
+          <li><a href="lua-ide.html" data-i18n="nav_lua_ide">Lua 5.4</a></li>
+          <li><a href="shell-ide.html" data-i18n="nav_shell_ide">Shell 與 Kotlin</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_devops">網頁、SQL 與遠端維運</h4>
+        <ul>
+          <li><a href="web-ide.html" data-i18n="nav_web_ide">Web 與 PHP</a></li>
+          <li><a href="sql-ide.html" data-i18n="nav_sql_ide">SQL 工作室</a></li>
+          <li><a href="git-client.html" data-i18n="nav_git_client">視覺化 Git</a></li>
+          <li><a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP 與 FTPS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <span>&copy; 2026 Phoenix Global Studios. All rights reserved.</span>
+      <span class="mono">com.phoenixglobal.supercodeeditor</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="mobile-bottom-bar" id="mobileBottomBar" aria-label="Quick App Actions">
+  <div class="dock-app-icon" aria-hidden="true"><svg><use href="#sc-logo"/></svg></div>
+  <div class="bottom-bar-info">
+    <div class="bottom-bar-title">SuperCode</div>
+    <div class="bottom-bar-sub"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  </div>
+  <div class="bottom-bar-actions">
+    <a href="https://supercode-ide.github.io/tutorial/?lang=zh-tw&amp;ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">使用指南</a>
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=zh-TW&amp;listing=python-ide&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dzh-tw%26utm_campaign%3Dpython-ide%26utm_content%3Dpython-projects-workspace" target="_blank" rel="noopener" class="btn-play-mini">
+      <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
+      <span data-i18n="bottom_cta">下載</span>
+    </a>
+  </div>
+</aside>
+
+<div class="modal-overlay" id="langModal" role="dialog" aria-modal="true" aria-labelledby="langModalTitle">
+  <div class="lang-modal">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div class="modal-header">
+      <h3 id="langModalTitle"><span data-i18n="modal_title">選擇語言</span><span class="modal-lang-count">32</span></h3>
+      <button type="button" class="btn-close-modal" onclick="closeLangModal()" aria-label="關閉">&#10005;</button>
+    </div>
+    <div class="lang-grid">
+      <button type="button" class="lang-option" data-code="en" onclick="setLanguage('en')"><span class="lang-option__name">English</span><span class="lang-option__code">EN</span></button>
+      <button type="button" class="lang-option" data-code="zh" onclick="setLanguage('zh')"><span class="lang-option__name">简体中文</span><span class="lang-option__code">简中</span></button>
+      <button type="button" class="lang-option active" data-code="zh-tw" onclick="setLanguage('zh-tw')"><span class="lang-option__name">繁體中文</span><span class="lang-option__code">繁中</span></button>
+      <button type="button" class="lang-option" data-code="es" onclick="setLanguage('es')"><span class="lang-option__name">Español</span><span class="lang-option__code">ES</span></button>
+      <button type="button" class="lang-option" data-code="pt" onclick="setLanguage('pt')"><span class="lang-option__name">Português</span><span class="lang-option__code">PT</span></button>
+      <button type="button" class="lang-option" data-code="ja" onclick="setLanguage('ja')"><span class="lang-option__name">日本語</span><span class="lang-option__code">日本語</span></button>
+      <button type="button" class="lang-option" data-code="ko" onclick="setLanguage('ko')"><span class="lang-option__name">한국어</span><span class="lang-option__code">한국어</span></button>
+      <button type="button" class="lang-option" data-code="de" onclick="setLanguage('de')"><span class="lang-option__name">Deutsch</span><span class="lang-option__code">DE</span></button>
+      <button type="button" class="lang-option" data-code="fr" onclick="setLanguage('fr')"><span class="lang-option__name">Français</span><span class="lang-option__code">FR</span></button>
+      <button type="button" class="lang-option" data-code="ru" onclick="setLanguage('ru')"><span class="lang-option__name">Русский</span><span class="lang-option__code">RU</span></button>
+      <button type="button" class="lang-option" data-code="hi" onclick="setLanguage('hi')"><span class="lang-option__name">हिन्दी</span><span class="lang-option__code">HI</span></button>
+      <button type="button" class="lang-option" data-code="id" onclick="setLanguage('id')"><span class="lang-option__name">Bahasa Indonesia</span><span class="lang-option__code">ID</span></button>
+      <button type="button" class="lang-option" data-code="it" onclick="setLanguage('it')"><span class="lang-option__name">Italiano</span><span class="lang-option__code">IT</span></button>
+      <button type="button" class="lang-option" data-code="vi" onclick="setLanguage('vi')"><span class="lang-option__name">Tiếng Việt</span><span class="lang-option__code">VI</span></button>
+      <button type="button" class="lang-option" data-code="th" onclick="setLanguage('th')"><span class="lang-option__name">ไทย</span><span class="lang-option__code">ไทย</span></button>
+      <button type="button" class="lang-option" data-code="tr" onclick="setLanguage('tr')"><span class="lang-option__name">Türkçe</span><span class="lang-option__code">TR</span></button>
+      <button type="button" class="lang-option" data-code="ar" onclick="setLanguage('ar')"><span class="lang-option__name">العربية</span><span class="lang-option__code">AR</span></button>
+      <button type="button" class="lang-option" data-code="pl" onclick="setLanguage('pl')"><span class="lang-option__name">Polski</span><span class="lang-option__code">PL</span></button>
+      <button type="button" class="lang-option" data-code="nl" onclick="setLanguage('nl')"><span class="lang-option__name">Nederlands</span><span class="lang-option__code">NL</span></button>
+      <button type="button" class="lang-option" data-code="sv" onclick="setLanguage('sv')"><span class="lang-option__name">Svenska</span><span class="lang-option__code">SV</span></button>
+      <button type="button" class="lang-option" data-code="nb" onclick="setLanguage('nb')"><span class="lang-option__name">Norsk Bokmål</span><span class="lang-option__code">NB</span></button>
+      <button type="button" class="lang-option" data-code="da" onclick="setLanguage('da')"><span class="lang-option__name">Dansk</span><span class="lang-option__code">DA</span></button>
+      <button type="button" class="lang-option" data-code="fi" onclick="setLanguage('fi')"><span class="lang-option__name">Suomi</span><span class="lang-option__code">FI</span></button>
+      <button type="button" class="lang-option" data-code="cs" onclick="setLanguage('cs')"><span class="lang-option__name">Čeština</span><span class="lang-option__code">CS</span></button>
+      <button type="button" class="lang-option" data-code="uk" onclick="setLanguage('uk')"><span class="lang-option__name">Українська</span><span class="lang-option__code">UK</span></button>
+      <button type="button" class="lang-option" data-code="ro" onclick="setLanguage('ro')"><span class="lang-option__name">Română</span><span class="lang-option__code">RO</span></button>
+      <button type="button" class="lang-option" data-code="hu" onclick="setLanguage('hu')"><span class="lang-option__name">Magyar</span><span class="lang-option__code">HU</span></button>
+      <button type="button" class="lang-option" data-code="el" onclick="setLanguage('el')"><span class="lang-option__name">Ελληνικά</span><span class="lang-option__code">EL</span></button>
+      <button type="button" class="lang-option" data-code="he" onclick="setLanguage('he')"><span class="lang-option__name">עברית</span><span class="lang-option__code">HE</span></button>
+      <button type="button" class="lang-option" data-code="ms" onclick="setLanguage('ms')"><span class="lang-option__name">Bahasa Melayu</span><span class="lang-option__code">MS</span></button>
+      <button type="button" class="lang-option" data-code="tl" onclick="setLanguage('tl')"><span class="lang-option__name">Filipino</span><span class="lang-option__code">FIL</span></button>
+      <button type="button" class="lang-option" data-code="bn" onclick="setLanguage('bn')"><span class="lang-option__name">বাংলা</span><span class="lang-option__code">BN</span></button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var WORKBENCH_SAMPLES = {"main": {"label": "multi-module-app/src/main.py \u2014 Smart Entry Point & Python 3.12 Syntax", "status": "Multi-File \u00b7 PEP 420", "lines": ["<span class=\"tok-kw\">from<\/span> services.ledger <span class=\"tok-kw\">import<\/span> reconcile_balances", "<span class=\"tok-kw\">import<\/span> tomllib", "", "cfg = tomllib.<span class=\"tok-fn\">loads<\/span>(<span class=\"tok-str\">&quot;tax_rate = 0.08&quot;<\/span>)", "net = <span class=\"tok-fn\">reconcile_balances<\/span>([<span class=\"tok-num\">120.0<\/span>, <span class=\"tok-num\">85.5<\/span>, -<span class=\"tok-num\">30.0<\/span>], cfg[<span class=\"tok-str\">&quot;tax_rate&quot;<\/span>])", "<span class=\"tok-fn\">print<\/span>(<span class=\"tok-str\">&quot;Settled total (USD):&quot;<\/span>, <span class=\"tok-fn\">round<\/span>(net, <span class=\"tok-num\">2<\/span>))"], "output": ["<span class=\"term-prompt\">[Workspace Resolver]<\/span> Mounted src/, services/, tests/ (unsaved tab overlay active)", "Settled total (USD): 189.54", "<span class=\"term-info\">[Process exited 0 \u00b7 19ms \u00b7 0KB disk clutter]<\/span>"]}, "sub": {"label": "multi-module-app/services/ledger.py \u2014 Auto Entry-Point Arbitration", "status": "AST Completion \u00b7 PEP 8", "lines": ["<span class=\"tok-cmt\"># Hit Run right inside this helper file \u2014 SuperCode runs src/main.py!<\/span>", "<span class=\"tok-kw\">def<\/span> <span class=\"tok-fn\">reconcile_balances<\/span>(entries: <span class=\"tok-fn\">list<\/span>[<span class=\"tok-fn\">float<\/span>], tax: <span class=\"tok-fn\">float<\/span>) -> <span class=\"tok-fn\">float<\/span>:", "    subtotal = <span class=\"tok-fn\">sum<\/span>(entries)", "    <span class=\"tok-kw\">return<\/span> <span class=\"tok-fn\">round<\/span>(subtotal * (<span class=\"tok-num\">1.0<\/span> + tax), <span class=\"tok-num\">2<\/span>)"], "output": ["<span class=\"term-prompt\">[Smart Entry Arbitration]<\/span> Active tab services/ledger.py -> Executing src/main.py", "Settled total (USD): 189.54", "<span class=\"term-info\">\u2713 Edit helper modules and press Run without switching tabs!<\/span>"]}, "test": {"label": "multi-module-app/tests/test_ledger.py \u2014 Built-In Unittest Runner", "status": "unittest \u00b7 Offline", "lines": ["<span class=\"tok-kw\">import<\/span> unittest", "<span class=\"tok-kw\">from<\/span> services.ledger <span class=\"tok-kw\">import<\/span> reconcile_balances", "", "<span class=\"tok-kw\">class<\/span> <span class=\"tok-fn\">LedgerSpec<\/span>(unittest.TestCase):", "    <span class=\"tok-kw\">def<\/span> <span class=\"tok-fn\">test_tax_calculation<\/span>(self):", "        self.<span class=\"tok-fn\">assertEqual<\/span>(<span class=\"tok-fn\">reconcile_balances<\/span>([<span class=\"tok-num\">100.0<\/span>], <span class=\"tok-num\">0.10<\/span>), <span class=\"tok-num\">110.0<\/span>)", "", "unittest.<span class=\"tok-fn\">main<\/span>(verbosity=<span class=\"tok-num\">2<\/span>, exit=<span class=\"tok-kw\">False<\/span>)"], "output": ["test_tax_calculation (__main__.LedgerSpec.test_tax_calculation) ... ok", "----------------------------------------------------------------------", "Ran 1 test in 0.002s \u2014 OK"]}};
+    var currentTab = 'main';
+    var runTimer = null;
+
+    function renderWorkbench(tabKey, animateRun) {
+      var sample = WORKBENCH_SAMPLES[tabKey] || WORKBENCH_SAMPLES['main'];
+      if (!sample) { return; }
+      currentTab = tabKey;
+      var labelEl = document.getElementById('ide-compiler-label');
+      if (labelEl) { labelEl.textContent = sample.label; }
+      var statusEl = document.getElementById('wbStatusLang');
+      if (statusEl) { statusEl.textContent = sample.status; }
+
+      var tabs = document.querySelectorAll('.ide-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        var active = tabs[i].getAttribute('data-tab') === tabKey;
+        tabs[i].classList.toggle('active', active);
+        tabs[i].setAttribute('aria-selected', active ? 'true' : 'false');
+      }
+      var files = document.querySelectorAll('.wb-file');
+      for (var f = 0; f < files.length; f++) {
+        files[f].classList.toggle('active', files[f].getAttribute('data-tab') === tabKey);
+      }
+
+      var codeBox = document.getElementById('ide-code-box');
+      if (codeBox) {
+        var html = '';
+        for (var l = 0; l < sample.lines.length; l++) {
+          var activeCls = (l === sample.lines.length - 1) ? ' active-line' : '';
+          html += '<div class="code-line' + activeCls + '"><span class="ln">' + (l + 1) + '</span><span class="code-content">' + sample.lines[l] + '</span></div>';
+        }
+        codeBox.innerHTML = html;
+      }
+
+      if (animateRun) {
+        runWorkbenchSample();
+      }
+    }
+
+    function runWorkbenchSample() {
+      var sample = WORKBENCH_SAMPLES[currentTab] || WORKBENCH_SAMPLES['main'];
+      var drawer = document.getElementById('ide-terminal-drawer');
+      var out = document.getElementById('ide-term-output');
+      var badge = document.getElementById('ide-exec-status');
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (!drawer || !out || !sample) { return; }
+
+      if (runTimer) { clearTimeout(runTimer); }
+      drawer.classList.add('is-open');
+      if (runBtn) { runBtn.classList.add('is-running'); }
+      if (badge) { badge.textContent = 'Running...'; badge.classList.remove('done'); }
+      out.innerHTML = '';
+
+      var idx = 0;
+      function step() {
+        if (idx < sample.output.length) {
+          var row = document.createElement('span');
+          row.className = 'term-line-item';
+          row.innerHTML = sample.output[idx];
+          out.appendChild(row);
+          idx++;
+          runTimer = setTimeout(step, 80);
+        } else {
+          var cur = document.createElement('span');
+          cur.className = 'term-cursor';
+          cur.textContent = '\u258b';
+          out.appendChild(cur);
+          if (badge) { badge.textContent = 'Completed'; badge.classList.add('done'); }
+          if (runBtn) { runBtn.classList.remove('is-running'); }
+        }
+      }
+      step();
+    }
+
+    function initNavigationAndSmartBar() {
+      var menuBtn = document.getElementById('menuBtn');
+      var drawer = document.getElementById('siteDrawer');
+      var bar = document.getElementById('mobileBottomBar');
+      var heroCta = document.getElementById('heroCta');
+      var siteFooter = document.getElementById('siteFooter');
+
+      function syncBar() {
+        if (!bar) { return; }
+        var drawerOpen = Boolean(drawer && !drawer.hasAttribute('hidden'));
+        var modalEl = document.getElementById('langModal');
+        var modalOpen = Boolean(modalEl && modalEl.classList.contains('show'));
+        var vh = window.innerHeight || document.documentElement.clientHeight || 800;
+        var heroInView = false;
+        if (heroCta) {
+          var hr = heroCta.getBoundingClientRect();
+          heroInView = (hr.bottom > 0 && hr.top < vh);
+        }
+        var footerInView = false;
+        if (siteFooter) {
+          var fr = siteFooter.getBoundingClientRect();
+          footerInView = (fr.top < vh + 24);
+        }
+        var scrollYVal = window.pageYOffset || window.scrollY || 0;
+        var docH = Math.max(document.body ? document.body.scrollHeight : 0, document.documentElement ? document.documentElement.scrollHeight : 0);
+        var nearBottom = (vh + scrollYVal) >= (docH - 120);
+        var shouldShow = !drawerOpen && !modalOpen && !heroInView && !footerInView && !nearBottom;
+        bar.classList.toggle('is-visible', shouldShow);
+      }
+
+      window.__supercodeSyncMobileBar = syncBar;
+
+      function setDrawer(open) {
+        if (!menuBtn || !drawer) { return; }
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { drawer.removeAttribute('hidden'); }
+        else { drawer.setAttribute('hidden', ''); }
+        syncBar();
+      }
+      if (menuBtn && drawer) {
+        menuBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          setDrawer(menuBtn.getAttribute('aria-expanded') !== 'true');
+        });
+        drawer.addEventListener('click', function (e) {
+          if (e.target && e.target.closest('a')) { setDrawer(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!drawer.hasAttribute('hidden') && !drawer.contains(e.target) && e.target !== menuBtn && !menuBtn.contains(e.target)) {
+            setDrawer(false);
+          }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') { setDrawer(false); }
+        });
+      }
+
+      if (bar) {
+        window.addEventListener('scroll', syncBar, { passive: true });
+        window.addEventListener('resize', syncBar);
+        syncBar();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var tabBtns = document.querySelectorAll('.ide-tab, .wb-file');
+      for (var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', function () {
+          renderWorkbench(this.getAttribute('data-tab'), true);
+        });
+      }
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (runBtn) { runBtn.addEventListener('click', function () { runWorkbenchSample(); }); }
+      var closeTerm = document.getElementById('btn-close-term');
+      if (closeTerm) {
+        closeTerm.addEventListener('click', function () {
+          var d = document.getElementById('ide-terminal-drawer');
+          if (d) { d.classList.remove('is-open'); }
+        });
+      }
+      initNavigationAndSmartBar();
+      renderWorkbench('main', false);
+    });
+  })();
+</script>
+<script>window.__SUPERCODE_STATIC_LANG__="zh-tw";window.__SUPERCODE_STATIC_CANONICAL__="https://supercode-ide.github.io/zh-tw/python-projects-workspace.html";</script>
+<script src="../i18n_extended.js"></script>
+</body>
+</html>

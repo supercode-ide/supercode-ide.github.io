@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#090A0F">
+  <meta name="color-scheme" content="only dark">
+  <meta name="supported-color-schemes" content="dark">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <title>Compilateur C POSIX pour Android — unistd.h, pthread, sockets &amp; TP systèmes | SuperCode</title>
+  <meta name="description" content="Codez en C POSIX et systèmes d&#x27;exploitation sur Android. Compilez unistd.h, fcntl.h, dirent.h, getopt.h, regex.h et stdatomic.h hors ligne, plus pthread, sémaphores, fork/pipe et sockets.">
+  <meta name="keywords" content="posix c compiler android, unistd.h pthread socket c programming on phone, systems programming c app android, operating systems lab c ide android, getopt regex.h stdatomic c mobile">
+  <meta name="author" content="Phoenix Global Studios">
+  <meta name="google-play-app" content="app-id=com.phoenixglobal.supercodeeditor">
+
+  <link id="canonical-link" rel="canonical" href="https://supercode-ide.github.io/fr/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="x-default" href="https://supercode-ide.github.io/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="en" href="https://supercode-ide.github.io/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://supercode-ide.github.io/zh/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://supercode-ide.github.io/zh-tw/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="es" href="https://supercode-ide.github.io/es/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://supercode-ide.github.io/pt/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="ja" href="https://supercode-ide.github.io/ja/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="ko" href="https://supercode-ide.github.io/ko/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="de" href="https://supercode-ide.github.io/de/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="fr" href="https://supercode-ide.github.io/fr/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="ru" href="https://supercode-ide.github.io/ru/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="hi" href="https://supercode-ide.github.io/hi/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="id" href="https://supercode-ide.github.io/id/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="it" href="https://supercode-ide.github.io/it/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="vi" href="https://supercode-ide.github.io/vi/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="th" href="https://supercode-ide.github.io/th/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="tr" href="https://supercode-ide.github.io/tr/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="ar" href="https://supercode-ide.github.io/ar/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="pl" href="https://supercode-ide.github.io/pl/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="nl" href="https://supercode-ide.github.io/nl/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="sv" href="https://supercode-ide.github.io/sv/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="nb" href="https://supercode-ide.github.io/nb/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="da" href="https://supercode-ide.github.io/da/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="fi" href="https://supercode-ide.github.io/fi/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="cs" href="https://supercode-ide.github.io/cs/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="uk" href="https://supercode-ide.github.io/uk/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="ro" href="https://supercode-ide.github.io/ro/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="hu" href="https://supercode-ide.github.io/hu/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="el" href="https://supercode-ide.github.io/el/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="he" href="https://supercode-ide.github.io/he/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="ms" href="https://supercode-ide.github.io/ms/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="fil" href="https://supercode-ide.github.io/tl/c-posix-systems-programming.html">
+  <link rel="alternate" hreflang="bn" href="https://supercode-ide.github.io/bn/c-posix-systems-programming.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Phoenix Global Studios &middot; SuperCode IDE">
+  <meta property="og:title" content="Compilateur C POSIX pour Android — unistd.h, pthread, sockets &amp; TP systèmes | SuperCode">
+  <meta property="og:description" content="Codez en C POSIX et systèmes d&#x27;exploitation sur Android. Compilez unistd.h, fcntl.h, dirent.h, getopt.h, regex.h et stdatomic.h hors ligne, plus pthread, sémaphores, fork/pipe et sockets.">
+  <meta property="og:url" content="https://supercode-ide.github.io/fr/c-posix-systems-programming.html">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:image" content="https://supercode-ide.github.io/assets/media/og-hero-fr.png">
+  <meta property="og:image:secure_url" content="https://supercode-ide.github.io/assets/media/og-hero-fr.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Compilateur local C17 &amp; C++20 multi-fichiers">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://supercode-ide.github.io/assets/media/og-hero-fr.png">
+  <meta name="twitter:title" content="Compilateur C POSIX pour Android — unistd.h, pthread, sockets &amp; TP systèmes | SuperCode">
+  <meta name="twitter:description" content="Codez en C POSIX et systèmes d&#x27;exploitation sur Android. Compilez unistd.h, fcntl.h, dirent.h, getopt.h, regex.h et stdatomic.h hors ligne, plus pthread, sémaphores, fork/pipe et sockets.">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <script>if(/SamsungBrowser/i.test(navigator.userAgent)){document.documentElement.classList.add('is-samsung');}</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "SoftwareApplication",
+        "MobileApplication",
+        "WebApplication"
+      ],
+      "@id": "https://supercode-ide.github.io/#supercode-app",
+      "name": "Code Editor: SuperCode IDE",
+      "alternateName": [
+        "POSIX C Compiler Android",
+        "pthread Socket C IDE Mobile",
+        "Operating Systems Lab C App Android"
+      ],
+      "operatingSystem": "Android 8.0+",
+      "applicationCategory": "DeveloperApplication",
+      "applicationSubCategory": "POSIX C Compiler, Multithreading (pthread) & Socket Programming App for Android",
+      "inLanguage": "fr",
+      "fileSize": "40.2MB",
+      "softwareVersion": "1.55.05",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=fr-FR&listing=c-cpp-compiler",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=fr-FR&listing=c-cpp-compiler",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=fr-FR"
+      ],
+      "potentialAction": [
+        {
+          "@type": "InstallAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&hl=fr-FR&listing=c-cpp-compiler",
+            "actionPlatform": [
+              "http://schema.org/AndroidPlatform",
+              "http://schema.org/MobileWebPlatform"
+            ]
+          }
+        },
+        {
+          "@type": "ViewAction",
+          "name": "Guide App",
+          "target": [
+            "https://supercode-ide.github.io/tutorial/?lang=fr",
+            "android-app://com.phoenixglobal.supercodeeditor/https/supercode-ide.github.io/tutorial"
+          ]
+        }
+      ],
+      "identifier": "com.phoenixglobal.supercodeeditor",
+      "url": "https://supercode-ide.github.io/fr/c-posix-systems-programming.html",
+      "screenshot": [
+        "https://supercode-ide.github.io/assets/gallery/fr/02_cpp20_compiler.webp",
+        "https://supercode-ide.github.io/assets/gallery/fr/01_python_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/fr/03_web_php_devtools.webp",
+        "https://supercode-ide.github.io/assets/gallery/fr/04_file_manager_tree.webp",
+        "https://supercode-ide.github.io/assets/gallery/fr/05_sql_sqlite_studio.webp",
+        "https://supercode-ide.github.io/assets/gallery/fr/06_java17_ide.webp",
+        "https://supercode-ide.github.io/assets/gallery/fr/07_visual_git_timemachine.webp",
+        "https://supercode-ide.github.io/assets/gallery/fr/08_symbol_keyboard_themes.webp"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Phoenix Global Studios",
+        "url": "https://supercode-ide.github.io/fr/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "66"
+      },
+      "featureList": [
+        "Offline POSIX & systems C headers: unistd.h, fcntl.h, dirent.h, poll.h, regex.h, fnmatch.h, getopt.h, sys/stat.h, sys/time.h",
+        "Offline C11/C17 <stdatomic.h>, <complex.h>, and <signal.h> support for lock-free atomics and DSP math",
+        "Automatic multi-file Cloud C (-pthread -lm) burst for <pthread.h>, <semaphore.h>, <sys/socket.h>, fork(), and pipe()",
+        "#line-preserving multi-file diagnostics mapping remote POSIX compiler errors 1:1 to local .c/.h lines",
+        "Unix CLI tool development combining <getopt.h> flag parsing with // @args command-line arguments",
+        "Built-in companion Shell runner, Visual Git client, and SSH/SFTP client for end-to-end Linux workflows"
+      ],
+      "image": "https://supercode-ide.github.io/assets/media/og-hero-fr.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://supercode-ide.github.io/fr/c-posix-systems-programming.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SuperCode IDE",
+          "item": "https://supercode-ide.github.io/fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Hub Compilateur C & IDE",
+          "item": "https://supercode-ide.github.io/fr/c-compiler.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "En-têtes POSIX, Threads & Sockets",
+          "item": "https://supercode-ide.github.io/fr/c-posix-systems-programming.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How POSIX Routing Works Automatically in SuperCode",
+      "description": "Write standard POSIX C code—SuperCode picks offline compilation or Linux `-pthread` execution automatically.",
+      "totalTime": "PT2M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Include Standard C17 & POSIX Systems Headers",
+          "text": "Write file descriptors, directory scanners, regex matchers, or getopt() parsers using standard POSIX headers.",
+          "url": "https://supercode-ide.github.io/c-posix-systems-programming.html#step1"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Filesystem, Regex & Atomic Labs Compile Offline",
+          "text": "Programs using unistd.h, fcntl.h, dirent.h, regex.h, getopt.h, or stdatomic.h build and run locally with 0 network.",
+          "url": "https://supercode-ide.github.io/c-posix-systems-programming.html#step2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Thread, Semaphore & Socket Labs Burst to Linux C",
+          "text": "Including <pthread.h>, <semaphore.h>, <sys/socket.h>, fork(), or pipe() engages Linux Cloud C with -pthread -lm.",
+          "url": "https://supercode-ide.github.io/c-posix-systems-programming.html#step3"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Fix Warnings With 1:1 Local File & Line Precision",
+          "text": "Compiler diagnostics map directly to your local .c and .h tabs regardless of offline or cloud execution.",
+          "url": "https://supercode-ide.github.io/c-posix-systems-programming.html#step4"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://supercode-ide.github.io/c-posix-systems-programming.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Puis-je compiler `<unistd.h>`, `<dirent.h>` et `<getopt.h>` entièrement hors ligne ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Les principaux en-têtes POSIX dont `unistd.h`, `fcntl.h`, `dirent.h`, `poll.h`, `regex.h`, `fnmatch.h`, `getopt.h`, `sys/stat.h`, `sys/time.h`, `signal.h` et `stdatomic.h` sont intégrés directement au sysroot C17 hors ligne."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dois-je ajouter `-pthread` manuellement avec `<pthread.h>` ou `<semaphore.h>` ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. SuperCode détecte `<pthread.h>` et `<semaphore.h>` automatiquement et transmet `-pthread -lm` au compilateur POSIX Cloud C sans aucune configuration de flags."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi `fork()`, `pipe()` et `<sys/socket.h>` s'exécutent-ils sur POSIX Cloud C ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les politiques SELinux d'Android bloquent les hiérarchies `fork()` non fiables et l'ouverture directe de sockets dans le bac à sable applicatif. Les router vers un conteneur Linux isolé permet d'exécuter le code des manuels d'OS sans modification."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Si mon projet `pthread` multi-fichiers contient une faute dans `worker.h`, l'erreur indique-t-elle le bon fichier et la bonne ligne ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. L'empaqueteur multi-fichiers de SuperCode émet des marqueurs C `#line` standards pour chaque en-tête inclus et unité `.c`, mappant les diagnostics 1:1 sur `worker.h` et son numéro de ligne exact."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-page="c_posix_sys">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="sc-logo" viewBox="20 14 68 72">
+    <path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/>
+    <path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/>
+    <path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/>
+    <path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+  </symbol>
+  <symbol id="gp-prism" viewBox="0 0 24 24">
+    <path fill="#4285F4" d="M3.6,2.4C3.3,2.7,3.1,3.2,3.1,3.8v16.4c0,0.6,0.2,1.1,0.5,1.4l0.1,0.1L12.9,12v-0.2L3.7,2.3L3.6,2.4z"/>
+    <path fill="#34A853" d="M16,15.1l-3.1-3.1v-0.2L16,8.7l0.1,0.1l3.6,2.1c1,0.6,1,1.5,0,2.1l-3.6,2.1L16,15.1z"/>
+    <path fill="#FBBC05" d="M16.1,15.1L12.9,12L3.6,21.3c0.3,0.4,0.9,0.4,1.6,0.1L16.1,15.1z"/>
+    <path fill="#EA4335" d="M16.1,8.9L5.2,2.6C4.5,2.2,3.9,2.3,3.6,2.7L12.9,12L16.1,8.9z"/>
+  </symbol>
+  <symbol id="i-ne" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M12 2.8 20 7.2v9.6L12 21.2 4 16.8V7.2z"/><path d="M4 7.2l8 4.4 8-4.4M12 11.6v9.6"/></g></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2.8v3.2M15 2.8v3.2M9 18v3.2M15 18v3.2M2.8 9H6M2.8 15H6M18 9h3.2M18 15h3.2"/></g></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 2.8 7.8 12 12.6l9.2-4.8z"/><path d="m2.8 12 9.2 4.8 9.2-4.8"/><path d="m2.8 16.2 9.2 4.8 9.2-4.8"/></g></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="M2.8 8.5h18.4"/><path d="m9.5 12.5-2.2 2.2 2.2 2.2M14.5 12.5l2.2 2.2-2.2 2.2"/></g></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5.6" rx="7.6" ry="2.8"/><path d="M4.4 5.6v12.8c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8V5.6"/><path d="M4.4 12c0 1.55 3.4 2.8 7.6 2.8s7.6-1.25 7.6-2.8"/></g></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="4" width="18.4" height="16" rx="2.5"/><path d="m7.2 9.5 3 2.5-3 2.5M12.8 15h4"/></g></symbol>
+  <symbol id="i-git" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.3"/><circle cx="6" cy="18" r="2.3"/><circle cx="18" cy="12" r="2.3"/><path d="M6 8.3v7.4M8.3 6h4.2a3.5 3.5 0 0 1 3.5 3.5v.2"/></g></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 18.5h11a4 4 0 0 0 .7-7.94A5.5 5.5 0 0 0 7.4 9.2 3.8 3.8 0 0 0 6.5 18.5z"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M13 2.8 4.8 13.2h6.3L10.2 21.2 19.2 10.6h-6.4z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 2.8 4.8 5.8v5.6c0 5 3.1 8.5 7.2 9.8 4.1-1.3 7.2-4.8 7.2-9.8V5.8z"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="index.html" class="brand" aria-label="SuperCode IDE Home">
+      <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+      <span>SuperCode</span>
+      <span class="brand__tag">IDE</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary Workspaces">
+      <a href="code-editor.html" data-i18n="nav_code_editor">Éditeur</a>
+      <a href="large-file-editor.html" data-i18n="nav_large_file">Fichiers Go</a>
+      <a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a>
+      <a href="c-compiler.html" class="is-current" data-i18n="nav_c_compiler">Compilateur C</a>
+      <a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a>
+      <a href="java-ide.html" data-i18n="nav_java_ide">Java 17</a>
+      <a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a>
+      <a href="web-ide.html" data-i18n="nav_web_ide">Web & PHP</a>
+      <a href="sql-ide.html" data-i18n="nav_sql_ide">SQL Studio</a>
+      <a href="git-client.html" data-i18n="nav_git_client">Git Visuel</a>
+      <a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP & FTPS</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button id="langModalBtn" class="btn-lang-trigger" type="button" onclick="openLangModal()" aria-label="Select Language">
+        <svg class="lang-globe-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span id="langTriggerText">FR</span>
+        <span class="lang-chevron" aria-hidden="true">&#9662;</span>
+      </button>
+      <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=fr-FR&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dfr%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dc-posix-systems-programming" target="_blank" rel="noopener" class="btn btn--gold btn--sm topbar__play">
+        <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+        <span data-i18n="nav_cta">Google Play</span>
+      </a>
+      <a href="index.html" class="btn-home-icon" aria-label="Home" title="Home">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 10.5L12 3l9 7.5"/>
+          <path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/>
+        </svg>
+      </a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteDrawer" aria-label="All Pages Directory">
+        <svg class="i-menu" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 8.5h16M4 15.5h16"/></svg>
+        <svg class="i-close" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-drawer" id="siteDrawer" hidden>
+  <nav class="container menu-drawer__inner" aria-label="All SuperCode Pages">
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_core">Éditeur & Gros Fichiers</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="index.html"><span data-i18n="nav_home">Aperçu</span><span class="mono">01</span></a>
+        <a class="menu-drawer__link" href="code-editor.html"><span data-i18n="nav_code_editor">Éditeur</span><span class="mono">02</span></a>
+        <a class="menu-drawer__link" href="large-file-editor.html"><span data-i18n="nav_large_file">Fichiers Go</span><span class="mono">03</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_lang">Compilateurs & Langages Hors Ligne</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="python-ide.html"><span data-i18n="nav_python_ide">Python IDE</span><span class="mono">04</span></a>
+        <a class="menu-drawer__link is-current" href="c-compiler.html"><span data-i18n="nav_c_compiler">Compilateur C</span><span class="mono">05</span></a>
+        <a class="menu-drawer__link" href="cpp-ide.html"><span data-i18n="nav_cpp_ide">C++20 IDE</span><span class="mono">06</span></a>
+        <a class="menu-drawer__link" href="java-ide.html"><span data-i18n="nav_java_ide">Java 17</span><span class="mono">07</span></a>
+        <a class="menu-drawer__link" href="javascript-ide.html"><span data-i18n="nav_js_ide">JavaScript</span><span class="mono">08</span></a>
+        <a class="menu-drawer__link" href="lua-ide.html"><span data-i18n="nav_lua_ide">Lua 5.4</span><span class="mono">09</span></a>
+        <a class="menu-drawer__link" href="shell-ide.html"><span data-i18n="nav_shell_ide">Shell & Kotlin</span><span class="mono">10</span></a>
+      </div>
+    </div>
+    <div class="drawer-group">
+      <div class="drawer-group__title" data-i18n="grp_devops">Web, SQL & DevOps Distant</div>
+      <div class="drawer-group__list">
+        <a class="menu-drawer__link" href="web-ide.html"><span data-i18n="nav_web_ide">Web & PHP</span><span class="mono">11</span></a>
+        <a class="menu-drawer__link" href="sql-ide.html"><span data-i18n="nav_sql_ide">SQL Studio</span><span class="mono">12</span></a>
+        <a class="menu-drawer__link" href="git-client.html"><span data-i18n="nav_git_client">Git Visuel</span><span class="mono">13</span></a>
+        <a class="menu-drawer__link" href="sftp-client.html"><span data-i18n="nav_sftp_client">SFTP & FTPS</span><span class="mono">14</span></a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<main id="top">
+  <!-- ==================== 01 · EDITORIAL HERO & INTERACTIVE WORKBENCH ==================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <div class="py-hub-crumb"><a href="c-compiler.html"><span class="crumb-arrow" aria-hidden="true">&larr;</span> Hub Compilateur C &amp; IDE</a><span class="sep">/</span><span>En-têtes POSIX, Threads &amp; Sockets</span></div>
+          <div class="trust-pill">
+            <span class="trust-pill__score"><span data-play-rating>4.9</span> &#9733;</span>
+            <span data-i18n="hero_tag">EN-TÊTES POSIX HORS LIGNE &#183; PTHREAD &amp; SÉMAPHORES &#183; SOCKETS UNIX &amp; IPC</span>
+          </div>
+
+          <h1 class="hero-h1" data-i18n="hero_h1">C système <span class="text-gradient">POSIX, pthreads &amp; sockets</span> sur votre appareil Android.</h1>
+
+          <p class="hero-lead" data-i18n="hero_desc">Pensé pour les cours de systèmes d'exploitation et réseaux. Compilez <strong><code>unistd.h</code>, <code>fcntl.h</code>, <code>dirent.h</code>, <code>getopt.h</code>, <code>regex.h</code> et <code>stdatomic.h</code></strong> hors ligne &#8212; puis basculez sans couture vers <strong>POSIX Cloud C (<code>-pthread -lm</code>)</strong> pour vos TP <strong><code>pthread</code>, <code>fork/pipe</code> et <code>sys/socket.h</code></strong>.</p>
+
+          <div class="hero__cta" id="heroCta">
+            <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=fr-FR&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dfr%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dc-posix-systems-programming" target="_blank" rel="noopener" class="btn btn--gold">
+              <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+              <span data-i18n="cta_btn">Sur Google Play</span>
+            </a>
+            <a href="https://supercode-ide.github.io/tutorial/?lang=fr&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+              <span data-i18n="cta_tutorial">Guide App</span>
+              <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <dl class="specs" aria-label="Key Specifications">
+          <div class="spec"><dt>POSIX</dt><dd data-i18n="cp4_s1">unistd &#183; fcntl &#183; dirent</dd></div>
+          <div class="spec"><dt>C17</dt><dd data-i18n="cp4_s2">stdatomic &amp; complex</dd></div>
+          <div class="spec"><dt>-pthread</dt><dd data-i18n="cp4_s3">Threads &amp; Sémaphores</dd></div>
+          <div class="spec"><dt>#line</dt><dd data-i18n="cp4_s4">Diagnostics 1:1 par fichier</dd></div>
+        </dl>
+      </div>
+
+      <div class="wb-caption">
+        <div class="sec-index" style="margin-bottom:0">
+          <span class="num">01</span>
+          <span class="rule"></span>
+          <span data-i18n="wb_eyebrow">ATELIER EN-TÊTES POSIX, CONCURRENCE PTHREAD &amp; IPC SOCKETS</span>
+        </div>
+        <span class="wb-caption__hint mono">unistd.h &#183; dirent.h &#183; stdatomic.h &#183; pthread &#183; sys/socket.h</span>
+      </div>
+
+      <div class="ide-workbench">
+        <div class="wb-titlebar">
+          <div class="wb-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="wb-title" id="ide-compiler-label">posix-systems-c/dir_audit.c &#8212; Offline unistd.h, dirent.h &amp; stdatomic.h</div>
+          <button type="button" class="wb-run" id="btn-run-sandbox">
+            <span class="wb-run__tri" aria-hidden="true">&#9654;</span>
+            <span data-i18n="btn_run">Lancer la démo</span>
+          </button>
+        </div>
+
+        <div class="wb-tabs" role="tablist" aria-label="Interactive Workspace Tabs">
+          <button type="button" class="ide-tab active" data-tab="posix" role="tab" aria-selected="true"><i></i>dir_audit.c</button>
+          <button type="button" class="ide-tab" data-tab="pthread" role="tab" aria-selected="false"><i></i>worker_pool.c</button>
+          <button type="button" class="ide-tab" data-tab="sock" role="tab" aria-selected="false"><i></i>ipc_socket.c</button>
+        </div>
+
+        <div class="wb-body">
+          <aside class="wb-explorer" aria-label="Project Explorer">
+            <div class="wb-explorer__head">Explorer</div>
+            <div class="wb-folder">&#9662; posix-systems-c</div>
+            <button type="button" class="wb-file active" data-tab="posix"><b>POSIX</b><span>dir_audit.c</span></button>
+            <button type="button" class="wb-file" data-tab="pthread"><b>MT</b><span>worker_pool.c</span></button>
+            <button type="button" class="wb-file" data-tab="sock"><b>SOCK</b><span>ipc_socket.c</span></button>
+          </aside>
+
+          <div class="wb-main">
+            <div class="ide-editor-body" id="ide-code-box" role="region" aria-label="Interactive Code Preview"></div>
+            <div class="ide-terminal" id="ide-terminal-drawer" aria-live="polite">
+              <div class="term-header">
+                <span data-i18n="term_title">Sortie Console Interactive</span>
+                <div class="term-header-right">
+                  <span class="term-exec-badge" id="ide-exec-status">Ready</span>
+                  <button type="button" class="btn-term-close" id="btn-close-term" aria-label="Close terminal">&#10005;</button>
+                </div>
+              </div>
+              <div class="term-stream" id="ide-term-output"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wb-statusbar">
+          <span class="wb-statusbar__dot"><i></i><span id="wbStatusLang">Offline POSIX Headers &#183; C17</span></span>
+          <div class="wb-statusbar__right">
+            <span>UTF-8</span>
+            <span>LF</span>
+            <span>Ln 13, Col 1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- SC_REAL_GALLERY_START -->
+  <section class="section sc-real-gallery" id="screenshots" aria-label="Aperçu et captures d&#x27;écran">
+    <div class="container">
+      <div class="sc-gp-head">
+        <div class="sc-gp-head-left">
+          <div class="sc-gp-eyebrow" data-i18n="gal_eyebrow">CAPTURES RÉELLES ANDROID</div>
+          <h2 class="sc-gp-title" data-i18n="gal_title">Aperçu et captures d'écran</h2>
+          <p class="sc-gp-short" data-i18n="gal_short_desc">Éditeur de code & IDE hors ligne : Python, C/C++, Java, HTML, SQL, PHP, Lua, Git</p>
+        </div>
+        <a class="sc-gp-store-bar" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=fr-FR&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dfr%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dc-posix-systems-programming" target="_blank" rel="noopener" aria-label="Code Editor: SuperCode IDE — Phoenix Global Studios">
+          <svg class="sc-gp-app-icon" width="38" height="38" viewBox="16 12 76 76" aria-hidden="true"><rect x="16" y="12" width="76" height="76" rx="18" fill="#070A10" stroke="#3B82F6" stroke-width="2"/><path fill="#FFD700" d="M52,28 L56,28 L56,80 L52,80 Z"/><path fill="#FF4500" d="M48,54 L30,40 L30,46 L44,54 L30,62 L30,68 Z"/><path fill="#FF4500" d="M60,54 L78,40 L78,46 L64,54 L78,62 L78,68 Z"/><path fill="#FFF176" d="M54,22m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/></svg>
+          <span class="sc-gp-app-meta">
+            <span class="sc-gp-app-name">Code Editor: SuperCode IDE</span>
+            <span class="sc-gp-app-dev">Phoenix Global Studios</span>
+          </span>
+          <span class="sc-gp-store-arrow" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      </div>
+      <div class="sc-gp-stage">
+        <button type="button" class="sc-gp-nav sc-gp-nav--prev is-hidden" id="scGpPrev" aria-label="Image précédente">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="sc-gp-rail" id="scGpRail">
+          <button type="button" class="sc-gp-item sc-gp-item--feature" aria-label="Code Editor: SuperCode IDE — IDE mobile hors ligne">
+            <img src="../assets/gallery/fr/00_feature_graphic.webp" data-sc-file="00_feature_graphic.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_0" data-cap="Code Editor: SuperCode IDE — IDE mobile hors ligne" alt="Code Editor: SuperCode IDE — IDE mobile hors ligne" width="1024" height="500" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Compilateur local C17 &amp; C++20 multi-fichiers">
+            <img src="../assets/gallery/fr/02_cpp20_compiler.webp" data-sc-file="02_cpp20_compiler.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_2" data-cap="Compilateur local C17 &amp; C++20 multi-fichiers" alt="Compilateur local C17 &amp; C++20 multi-fichiers" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="IDE Python 3.11 / 3.12 hors ligne et console divisée">
+            <img src="../assets/gallery/fr/01_python_ide.webp" data-sc-file="01_python_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_1" data-cap="IDE Python 3.11 / 3.12 hors ligne et console divisée" alt="IDE Python 3.11 / 3.12 hors ligne et console divisée" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Serveur Web local, PHP hors ligne et DevTools">
+            <img src="../assets/gallery/fr/03_web_php_devtools.webp" data-sc-file="03_web_php_devtools.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_3" data-cap="Serveur Web local, PHP hors ligne et DevTools" alt="Serveur Web local, PHP hors ligne et DevTools" width="720" height="1280" loading="eager" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Gestionnaire local et arborescence de projets (SAF)">
+            <img src="../assets/gallery/fr/04_file_manager_tree.webp" data-sc-file="04_file_manager_tree.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_4" data-cap="Gestionnaire local et arborescence de projets (SAF)" alt="Gestionnaire local et arborescence de projets (SAF)" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Studio SQLite 3.54 hors ligne et inspecteur .db">
+            <img src="../assets/gallery/fr/05_sql_sqlite_studio.webp" data-sc-file="05_sql_sqlite_studio.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_5" data-cap="Studio SQLite 3.54 hors ligne et inspecteur .db" alt="Studio SQLite 3.54 hors ligne et inspecteur .db" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="IDE Java 17 hors ligne et SQLite JDBC">
+            <img src="../assets/gallery/fr/06_java17_ide.webp" data-sc-file="06_java17_ide.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_6" data-cap="IDE Java 17 hors ligne et SQLite JDBC" alt="IDE Java 17 hors ligne et SQLite JDBC" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Client Git visuel, historique et SFTP/FTPS">
+            <img src="../assets/gallery/fr/07_visual_git_timemachine.webp" data-sc-file="07_visual_git_timemachine.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_7" data-cap="Client Git visuel, historique et SFTP/FTPS" alt="Client Git visuel, historique et SFTP/FTPS" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+          <button type="button" class="sc-gp-item sc-gp-item--shot" aria-label="Clavier 21 symboles et 8 thèmes IDE">
+            <img src="../assets/gallery/fr/08_symbol_keyboard_themes.webp" data-sc-file="08_symbol_keyboard_themes.webp" data-sc-prefix="../" data-sc-cap-key="gal_cap_8" data-cap="Clavier 21 symboles et 8 thèmes IDE" alt="Clavier 21 symboles et 8 thèmes IDE" width="720" height="1280" loading="lazy" decoding="async">
+            <span class="sc-gp-zoom-cue" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></span>
+          </button>
+        </div>
+        <button type="button" class="sc-gp-nav sc-gp-nav--next" id="scGpNext" aria-label="Image suivante">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  <div class="sc-lb-modal" id="scLightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Aperçu et captures d&#x27;écran">
+    <div class="sc-lb-topbar">
+      <button type="button" class="sc-lb-back" id="scLbBack">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        <span data-i18n="gal_back">Retour</span>
+      </button>
+      <div class="sc-lb-meta">
+        <span class="sc-lb-counter" id="scLbCounter">1 / 9</span>
+        <span class="sc-lb-title" id="scLbTitle"></span>
+      </div>
+      <button type="button" class="sc-lb-close" id="scLbClose" aria-label="Fermer l&#x27;aperçu">&times;</button>
+    </div>
+    <div class="sc-lb-stage">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--prev" id="scLbPrev" aria-label="Image précédente">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <img class="sc-lb-img" id="scLbImg" src="" alt="SuperCode IDE Preview">
+      <button type="button" class="sc-lb-arrow sc-lb-arrow--next" id="scLbNext" aria-label="Image suivante">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <div class="sc-lb-dots" id="scLbDots"></div>
+  </div>
+  <script defer src="../assets/gallery.js"></script>
+<!-- SC_REAL_GALLERY_END -->
+
+
+
+
+
+  <!-- ==================== 02 · CORE CAPABILITIES ==================== -->
+  <section class="section section--alt" id="capabilities">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">02</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_cap_eyebrow">FONCTIONNALITÉS CLÉS</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="sec_cap_title">Reliez en-têtes systèmes hors ligne et concurrence Linux complète</h2>
+        <p class="sec-lead" data-i18n="sec_cap_lead">SuperCode analyse les directives `#include` et appels système du projet pour exécuter vos TP d'OS sans configuration de cross-compilation.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="feature-grid feature-grid--6">
+          <article class="feature-card" id="cap1">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-chip"/></svg></span>
+              <span class="f-idx">02.1</span>
+            </div>
+            <h3 class="f-title" data-i18n="f1_title">Large couverture des en-têtes POSIX hors ligne</h3>
+            <p class="f-desc" data-i18n="f1_desc">Compilez des utilitaires systèmes Unix 100 % hors ligne avec &lt;unistd.h&gt;, &lt;fcntl.h&gt;, &lt;dirent.h&gt;, &lt;poll.h&gt;, &lt;sys/stat.h&gt;, &lt;sys/time.h&gt;, &lt;signal.h&gt;, &lt;regex.h&gt;, &lt;fnmatch.h&gt; et &lt;getopt.h&gt;.</p>
+            <div class="f-code" data-i18n="f1_badge">unistd.h &#183; fcntl.h &#183; dirent.h &#183; poll.h &#183; regex.h &#183; getopt.h</div>
+          </article>
+          <article class="feature-card" id="cap2">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-bolt"/></svg></span>
+              <span class="f-idx">02.2</span>
+            </div>
+            <h3 class="f-title" data-i18n="f2_title">C11/C17 &lt;stdatomic.h&gt; &amp; &lt;complex.h&gt; prêts hors ligne</h3>
+            <p class="f-desc" data-i18n="f2_desc">Expérimentez les compteurs atomiques sans verrou (atomic_int, atomic_fetch_add, memory_order_acq_rel) et l'arithmétique complexe C17 (&lt;complex.h&gt;) directement sur l'appareil.</p>
+            <div class="f-code" data-i18n="f2_badge">&lt;stdatomic.h&gt; &#183; &lt;complex.h&gt; &#183; Pur GNU C17</div>
+          </article>
+          <article class="feature-card" id="cap3">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-cloud"/></svg></span>
+              <span class="f-idx">02.3</span>
+            </div>
+            <h3 class="f-title" data-i18n="f3_title">Compilation Cloud C automatique avec -pthread &amp; IPC</h3>
+            <p class="f-desc" data-i18n="f3_desc">Le bac à sable Android restreint localement fork() et certains IPC noyau. Dès que votre code inclut &lt;pthread.h&gt;, &lt;semaphore.h&gt;, &lt;sys/socket.h&gt;, fork() ou pipe(), SuperCode compile automatiquement sur Linux Cloud C (-pthread -lm).</p>
+            <div class="f-code" data-i18n="f3_badge">&lt;pthread.h&gt; &#183; &lt;semaphore.h&gt; &#183; &lt;sys/socket.h&gt; &#183; fork / pipe</div>
+          </article>
+          <article class="feature-card" id="cap4">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+              <span class="f-idx">02.4</span>
+            </div>
+            <h3 class="f-title" data-i18n="f4_title">Empaquetage POSIX multi-fichiers avec #line préservés</h3>
+            <p class="f-desc" data-i18n="f4_desc">Même lors d'un envoi multi-fichiers .c/.h vers Cloud C, SuperCode injecte les directives #line standard afin que chaque alerte ou erreur pointe exactement vers votre fichier et ligne locaux.</p>
+            <div class="f-code" data-i18n="f4_badge">Bundle Cloud multi-fichiers &#183; Mapping ligne local exact</div>
+          </article>
+          <article class="feature-card" id="cap5">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-term"/></svg></span>
+              <span class="f-idx">02.5</span>
+            </div>
+            <h3 class="f-title" data-i18n="f5_title">Prototypage CLI Unix &lt;getopt.h&gt; + // @args</h3>
+            <p class="f-desc" data-i18n="f5_desc">Concevez de vrais outils CLI POSIX avec getopt() et getopt_long(), en testant des options comme // @args -r -n 16 -o out.log directement en tête de fichier source.</p>
+            <div class="f-code" data-i18n="f5_badge">getopt / getopt_long &#183; Test d'options // @args</div>
+          </article>
+          <article class="feature-card" id="cap6">
+            <div class="f-top">
+              <span class="f-icon"><svg aria-hidden="true"><use href="#i-web"/></svg></span>
+              <span class="f-idx">02.6</span>
+            </div>
+            <h3 class="f-title" data-i18n="f6_title">Shell intégré, Git visuel &amp; déploiement serveur SFTP</h3>
+            <p class="f-desc" data-i18n="f6_desc">Prototypez votre démon POSIX ou outil CLI sur Android, suivez vos versions avec Git visuel et déployez sur votre VPS Linux ou serveur de TP via le client SFTP intégré.</p>
+            <div class="f-code" data-i18n="f6_badge">Exécuteur Shell &#183; Git visuel &#183; Enregistrement atomique SFTP</div>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">Conçu pour Smartphones, Pliables & Tablettes · Léger 40,2 Mo</span>
+        <a class="link-arrow" href="c-compiler.html">
+          <span>C Compiler &amp; IDE Hub</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 03 · STEP-BY-STEP WORKFLOW GUIDE ==================== -->
+  <section class="section" id="workflow">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">03</span>
+        <span class="rule"></span>
+        <span data-i18n="sec_wf_eyebrow">GUIDE D’UTILISATION ÉTAPE PAR ÉTAPE</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="workflow_title">Comment le routage POSIX opère automatiquement dans SuperCode</h2>
+        <p class="sec-lead" data-i18n="workflow_lead">Écrivez du C POSIX standard &#8212; SuperCode choisit compilation hors ligne ou exécution Linux `-pthread` automatiquement.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="workflow-grid">
+          <article class="wf-step" id="step1">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 01</span>
+              <span class="wf-step__cmd">#include &lt;unistd.h&gt;</span>
+            </div>
+            <h3 data-i18n="wf1_title">Incluez les en-têtes systèmes C17 et POSIX standard</h3>
+            <p data-i18n="wf1_desc">Codez descripteurs de fichiers, parcours de répertoires, regex ou parseurs getopt() avec les en-têtes POSIX standards.</p>
+          </article>
+          <article class="wf-step" id="step2">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 02</span>
+              <span class="wf-step__cmd">Offline Fast Path</span>
+            </div>
+            <h3 data-i18n="wf2_title">Fichiers, regex et atomiques compilent hors ligne</h3>
+            <p data-i18n="wf2_desc">Les programmes utilisant unistd.h, fcntl.h, dirent.h, regex.h, getopt.h ou stdatomic.h s'exécutent localement sans réseau.</p>
+          </article>
+          <article class="wf-step" id="step3">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 03</span>
+              <span class="wf-step__cmd">pthread / socket</span>
+            </div>
+            <h3 data-i18n="wf3_title">Threads, sémaphores et sockets basculent sur Linux C</h3>
+            <p data-i18n="wf3_desc">Inclure &lt;pthread.h&gt;, &lt;semaphore.h&gt;, &lt;sys/socket.h&gt;, fork() ou pipe() déclenche Linux Cloud C avec -pthread -lm.</p>
+          </article>
+          <article class="wf-step" id="step4">
+            <div class="wf-step__head">
+              <span class="wf-step__badge">STEP 04</span>
+              <span class="wf-step__cmd">#line Diagnostics</span>
+            </div>
+            <h3 data-i18n="wf4_title">Corrigez avec une précision 1:1 fichier et ligne locaux</h3>
+            <p data-i18n="wf4_desc">Les diagnostics du compilateur pointent vers vos onglets .c et .h locaux, en mode hors ligne comme cloud.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="wf_foot_note">Zéro option -pthread manuelle &#183; Expansion d'en-têtes multi-fichiers &#183; Prêt pour déploiement SFTP Linux</span>
+        <a class="link-arrow" href="https://supercode-ide.github.io/tutorial/?lang=fr&amp;ref=official_web" data-supercode-tutorial="true">
+          <span data-i18n="cta_tutorial">Guide App</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 04 · FEATURED SUMMARY & COMPARISON MATRIX ==================== -->
+  <section class="section section--alt" id="comparison">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">04</span>
+        <span class="rule"></span>
+        <span data-i18n="comp_eyebrow">TABLEAU COMPARATIF</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2 data-i18n="table_h2">Matrice de prise en charge C POSIX et systèmes dans SuperCode</h2>
+        <p class="snippet-definition" data-i18n="snippet_p"><strong>Le studio C POSIX systèmes de SuperCode</strong> apporte le développement C17 de style Unix sur smartphones et tablettes Android. Compilez <code>unistd.h</code>, <code>fcntl.h</code>, <code>dirent.h</code>, <code>poll.h</code>, <code>getopt.h</code>, <code>regex.h</code> et <code>stdatomic.h</code> hors ligne, tandis que les projets multi-fichiers avec <code>pthread.h</code>, sémaphores, tubes et sockets basculent sur POSIX Cloud C avec diagnostics exacts.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="table-wrap">
+          <table class="obsidian-benchmark-table">
+            <caption data-i18n="table_caption">NIVEAUX D'EN-TÊTES &amp; APPELS SYSTÈMES C POSIX SUPERCODE ANDROID</caption>
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="th_0">Domaine système</th>
+                <th scope="col" data-i18n="th_1">En-têtes &amp; primitives clés</th>
+                <th scope="col" data-i18n="th_2">Niveau d'exécution</th>
+                <th scope="col" data-i18n="th_3">Multi-fichiers .c/.h ?</th>
+                <th scope="col" data-i18n="th_4">Options de l'éditeur de liens</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="tr1_c0">E/S fichiers &amp; répertoires POSIX</th>
+                <td><strong data-i18n="tr1_c1">unistd.h, fcntl.h, dirent.h, sys/stat.h, poll.h</strong></td>
+                <td data-i18n="tr1_c2">C17 100 % hors ligne</td>
+                <td data-i18n="tr1_c3">Oui (jusqu'à 350 fichiers)</td>
+                <td data-i18n="tr1_c4">Auto `-std=gnu17 -lm`</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr2_c0">CLI, Glob &amp; Regex</th>
+                <td><strong data-i18n="tr2_c1">getopt.h, regex.h, fnmatch.h, sys/time.h, signal.h</strong></td>
+                <td data-i18n="tr2_c2">C17 100 % hors ligne</td>
+                <td data-i18n="tr2_c3">Oui + `// @args`</td>
+                <td data-i18n="tr2_c4">Auto `-std=gnu17 -lm`</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr3_c0">Atomiques &amp; maths DSP</th>
+                <td><strong data-i18n="tr3_c1">stdatomic.h, complex.h, stdint.h, inttypes.h</strong></td>
+                <td data-i18n="tr3_c2">C17 100 % hors ligne</td>
+                <td data-i18n="tr3_c3">Oui (`.o` en cache)</td>
+                <td data-i18n="tr3_c4">Auto `-std=gnu17 -lm`</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr4_c0">Threads &amp; synchro POSIX</th>
+                <td><strong data-i18n="tr4_c1">pthread.h, semaphore.h, mutex, variables de condition</strong></td>
+                <td data-i18n="tr4_c2">Auto POSIX Cloud C</td>
+                <td data-i18n="tr4_c3">Oui (mappé `#line`)</td>
+                <td data-i18n="tr4_c4">Auto `-pthread -lm`</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="tr5_c0">Processus &amp; sockets</th>
+                <td><strong data-i18n="tr5_c1">sys/socket.h, netinet/in.h, arpa/inet.h, fork, pipe</strong></td>
+                <td data-i18n="tr5_c2">Auto POSIX Cloud C</td>
+                <td data-i18n="tr5_c3">Oui (mappé `#line`)</td>
+                <td data-i18n="tr5_c4">Auto `-pthread -lm`</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span data-i18n="meta_ver">Conçu pour Smartphones, Pliables & Tablettes · Léger 40,2 Mo</span>
+        <a class="link-arrow" href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=fr-FR&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dfr%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dc-posix-systems-programming" target="_blank" rel="noopener">
+          <span>Google Play</span>
+          <svg aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 05 · VISIBLE EDITORIAL FAQ ==================== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-head">
+          <div class="sec-index">
+            <span class="num">05</span>
+            <span class="rule"></span>
+            <span data-i18n="sec3_eyebrow">QUESTIONS & RÉPONSES</span>
+          </div>
+          <h2 class="h2" data-i18n="sec3_title">Questions Fréquentes (FAQ)</h2>
+          <p class="sec-lead" data-i18n="faq_lead">Questions sur les TP systèmes, l'édition de liens `pthread`, `fork()` et la programmation sockets sur Android.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary><span data-i18n="faq1_q">Puis-je compiler `&lt;unistd.h&gt;`, `&lt;dirent.h&gt;` et `&lt;getopt.h&gt;` entièrement hors ligne ?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq1_a">Oui. Les principaux en-têtes POSIX dont `unistd.h`, `fcntl.h`, `dirent.h`, `poll.h`, `regex.h`, `fnmatch.h`, `getopt.h`, `sys/stat.h`, `sys/time.h`, `signal.h` et `stdatomic.h` sont intégrés directement au sysroot C17 hors ligne.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq2_q">Dois-je ajouter `-pthread` manuellement avec `&lt;pthread.h&gt;` ou `&lt;semaphore.h&gt;` ?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq2_a">Non. SuperCode détecte `&lt;pthread.h&gt;` et `&lt;semaphore.h&gt;` automatiquement et transmet `-pthread -lm` au compilateur POSIX Cloud C sans aucune configuration de flags.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq3_q">Pourquoi `fork()`, `pipe()` et `&lt;sys/socket.h&gt;` s'exécutent-ils sur POSIX Cloud C ?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq3_a">Les politiques SELinux d'Android bloquent les hiérarchies `fork()` non fiables et l'ouverture directe de sockets dans le bac à sable applicatif. Les router vers un conteneur Linux isolé permet d'exécuter le code des manuels d'OS sans modification.</div>
+          </details>
+          <details class="faq-item">
+            <summary><span data-i18n="faq4_q">Si mon projet `pthread` multi-fichiers contient une faute dans `worker.h`, l'erreur indique-t-elle le bon fichier et la bonne ligne ?</span><span class="faq-icon" aria-hidden="true">+</span></summary>
+            <div class="faq-answer" data-i18n="faq4_a">Oui. L'empaqueteur multi-fichiers de SuperCode émet des marqueurs C `#line` standards pour chaque en-tête inclus et unité `.c`, mappant les diagnostics 1:1 sur `worker.h` et son numéro de ligne exact.</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==================== 06 · TOPICAL AUTHORITY ECOSYSTEM CLUSTER ==================== -->
+  <section class="section section--alt" id="ecosystem-guides">
+    <div class="container">
+      <div class="sec-index">
+        <span class="num">06</span>
+        <span class="rule"></span>
+        <span>GUIDES PROGRAMMATION C &amp; GNU C17</span>
+      </div>
+
+      <div class="sec-grid">
+        <h2>Documentation complète du compilateur C17</h2>
+        <p class="sec-lead">Naviguez entre le hub principal du compilateur C17 hors ligne et les 4 guides spécialisés de programmation C sur Android.</p>
+      </div>
+
+      <div class="sec-body">
+        <div class="py-cluster-grid">
+          <a href="c-compiler.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">C-HUB</span>
+              <span class="py-spoke-card__tag">GNU C17 · -lm · Hub principal</span>
+            </div>
+            <h3>Aperçu du compilateur GNU C17 hors ligne</h3>
+            <p>Présentation du compilateur GNU C17 hors ligne de SuperCode, édition de liens auto .c/.h, stdin scanf non tamponné et studio système.</p>
+            <div class="py-spoke-card__go">
+              <span>c-compiler</span>
+              <span>Ouvrir le guide &rarr;</span>
+            </div>
+          </a>
+          <a href="c-pointers-memory-coursework.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">C-01</span>
+              <span class="py-spoke-card__tag">Pointeurs · malloc/free · CS101</span>
+            </div>
+            <h3>Labo Pointeurs, Structs &amp; Mémoire</h3>
+            <p>Maîtrisez les pointeurs ANSI/ISO C17, structs, allocations dynamiques sur le tas et opérations bit à bit hors ligne, sans bidouilles Turbo C.</p>
+            <div class="py-spoke-card__go">
+              <span>c-pointers-memory-coursework</span>
+              <span>Ouvrir le guide &rarr;</span>
+            </div>
+          </a>
+          <a href="c-multifile-header-projects.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">C-02</span>
+              <span class="py-spoke-card__tag">Auto .c/.h · Makefile · CMake</span>
+            </div>
+            <h3>Builds multi-fichiers .c/.h &amp; CMake</h3>
+            <p>Compilez automatiquement des projets C jusqu'à 350 fichiers : analyse de CMakeLists.txt, Makefiles et graphes #include avec cache incrémental.</p>
+            <div class="py-spoke-card__go">
+              <span>c-multifile-header-projects</span>
+              <span>Ouvrir le guide &rarr;</span>
+            </div>
+          </a>
+          <a href="c-scanf-file-io-console.html" class="py-spoke-card">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">C-03</span>
+              <span class="py-spoke-card__tag">scanf non tamponné · fopen · @args</span>
+            </div>
+            <h3>Stdin scanf en direct &amp; E/S fichiers</h3>
+            <p>Exécutez des boucles scanf/fgets interactives avec vidage auto de stdout, options CLI // @args et synchro fichiers fopen/fwrite.</p>
+            <div class="py-spoke-card__go">
+              <span>c-scanf-file-io-console</span>
+              <span>Ouvrir le guide &rarr;</span>
+            </div>
+          </a>
+          <a href="c-posix-systems-programming.html" class="py-spoke-card is-active">
+            <div class="py-spoke-card__top">
+              <span class="py-spoke-card__code">C-04</span>
+              <span class="py-spoke-card__tag">unistd.h · pthread · sys/socket</span>
+            </div>
+            <h3>En-têtes POSIX, Threads &amp; Sockets</h3>
+            <p>Utilisez les en-têtes POSIX (unistd.h, fcntl.h, dirent.h, regex.h, stdatomic.h) hors ligne et compilez en Cloud C -pthread et sockets.</p>
+            <div class="py-spoke-card__go">
+              <span>c-posix-systems-programming</span>
+              <span>Lecture du guide</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="sec-foot">
+        <span>5 guides d'ingénierie C17 interconnectés · GNU C17 pur (-std=gnu17) + POSIX</span>
+        <a class="link-arrow" href="c-compiler.html">
+          <span>Hub Compilateur &amp; IDE C</span>
+          <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="siteFooter">
+  <div class="container">
+    <div class="footer-cta" id="footerCta">
+      <div>
+        <h2 class="h2" data-i18n="cta_h2">Réalisez vos TP systèmes et OS en C partout sur Android.</h2>
+        <p data-i18n="cta_desc">Installez SuperCode IDE gratuitement sur Google Play &#8212; en-têtes POSIX hors ligne, builds -pthread fluides et SFTP dans une app de 40,2 Mo.</p>
+      </div>
+      <div class="footer-cta__btns">
+        <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=fr-FR&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dfr%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dc-posix-systems-programming" target="_blank" rel="noopener" class="btn btn--gold">
+          <svg class="gp-prism" aria-hidden="true"><use href="#gp-prism"/></svg>
+          <span data-i18n="cta_btn">Sur Google Play</span>
+        </a>
+        <a href="https://supercode-ide.github.io/tutorial/?lang=fr&amp;ref=official_web" data-supercode-tutorial="true" class="btn btn--ghost">
+          <span data-i18n="cta_tutorial">Guide App</span>
+          <svg class="icon-ne" aria-hidden="true"><use href="#i-ne"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <span class="brand__icon"><svg aria-hidden="true"><use href="#sc-logo"/></svg></span>
+          <span>SuperCode</span>
+          <span class="brand__tag">IDE</span>
+        </a>
+        <p data-i18n="footer_tagline">Éditeur de code mobile natif et studio de développement hors ligne conçu pour les ingénieurs et étudiants sur Android.</p>
+        <div class="footer-rating"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733; &middot; Google Play</div>
+        <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:14px;font-size:0.8125rem;color:var(--fg-2)">
+          <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=fr-FR&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dfr%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dc-posix-systems-programming" target="_blank" rel="noopener">Google Play &#8599;</a>
+          <a href="https://supercode-ide.github.io/tutorial/?lang=fr&amp;ref=official_web" data-supercode-tutorial="true"><span data-i18n="cta_tutorial">Guide App</span> &#8599;</a>
+          <button type="button" onclick="openLangModal()" style="color:var(--fg-2);font-size:0.8125rem"><span data-i18n="modal_title">Choisir la langue</span></button>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_core">Éditeur & Gros Fichiers</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav_home">Aperçu</a></li>
+          <li><a href="code-editor.html" data-i18n="nav_code_editor">Éditeur</a></li>
+          <li><a href="large-file-editor.html" data-i18n="nav_large_file">Fichiers Go</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_lang">Compilateurs & Langages Hors Ligne</h4>
+        <ul>
+          <li><a href="python-ide.html" data-i18n="nav_python_ide">Python IDE</a></li>
+          <li><a href="c-compiler.html" data-i18n="nav_c_compiler">Compilateur C</a></li>
+          <li><a href="cpp-ide.html" data-i18n="nav_cpp_ide">C++20 IDE</a></li>
+          <li><a href="java-ide.html" data-i18n="nav_java_ide">Java 17</a></li>
+          <li><a href="javascript-ide.html" data-i18n="nav_js_ide">JavaScript</a></li>
+          <li><a href="lua-ide.html" data-i18n="nav_lua_ide">Lua 5.4</a></li>
+          <li><a href="shell-ide.html" data-i18n="nav_shell_ide">Shell & Kotlin</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="grp_devops">Web, SQL & DevOps Distant</h4>
+        <ul>
+          <li><a href="web-ide.html" data-i18n="nav_web_ide">Web & PHP</a></li>
+          <li><a href="sql-ide.html" data-i18n="nav_sql_ide">SQL Studio</a></li>
+          <li><a href="git-client.html" data-i18n="nav_git_client">Git Visuel</a></li>
+          <li><a href="sftp-client.html" data-i18n="nav_sftp_client">SFTP & FTPS</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <span>&copy; 2026 Phoenix Global Studios. All rights reserved.</span>
+      <span class="mono">com.phoenixglobal.supercodeeditor</span>
+    </div>
+  </div>
+</footer>
+
+<aside class="mobile-bottom-bar" id="mobileBottomBar" aria-label="Quick App Actions">
+  <div class="dock-app-icon" aria-hidden="true"><svg><use href="#sc-logo"/></svg></div>
+  <div class="bottom-bar-info">
+    <div class="bottom-bar-title">SuperCode</div>
+    <div class="bottom-bar-sub"><span data-play-rating>4.9</span> &#9733;&#9733;&#9733;&#9733;&#9733;</div>
+  </div>
+  <div class="bottom-bar-actions">
+    <a href="https://supercode-ide.github.io/tutorial/?lang=fr&amp;ref=official_web" data-supercode-tutorial="true" class="btn-guide-mini" data-i18n="bottom_tutorial">Guide App</a>
+    <a href="https://play.google.com/store/apps/details?id=com.phoenixglobal.supercodeeditor&amp;hl=fr-FR&amp;listing=c-cpp-compiler&amp;referrer=utm_source%3Dsupercode_web%26utm_medium%3Dfr%26utm_campaign%3Dc-cpp-compiler%26utm_content%3Dc-posix-systems-programming" target="_blank" rel="noopener" class="btn-play-mini">
+      <svg class="gp-prism" style="width:12px;height:12px" aria-hidden="true"><use href="#gp-prism"/></svg>
+      <span data-i18n="bottom_cta">Obtenir</span>
+    </a>
+  </div>
+</aside>
+
+<div class="modal-overlay" id="langModal" role="dialog" aria-modal="true" aria-labelledby="langModalTitle">
+  <div class="lang-modal">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div class="modal-header">
+      <h3 id="langModalTitle"><span data-i18n="modal_title">Choisir la langue</span><span class="modal-lang-count">32</span></h3>
+      <button type="button" class="btn-close-modal" onclick="closeLangModal()" aria-label="Fermer">&#10005;</button>
+    </div>
+    <div class="lang-grid">
+      <button type="button" class="lang-option" data-code="en" onclick="setLanguage('en')"><span class="lang-option__name">English</span><span class="lang-option__code">EN</span></button>
+      <button type="button" class="lang-option" data-code="zh" onclick="setLanguage('zh')"><span class="lang-option__name">简体中文</span><span class="lang-option__code">简中</span></button>
+      <button type="button" class="lang-option" data-code="zh-tw" onclick="setLanguage('zh-tw')"><span class="lang-option__name">繁體中文</span><span class="lang-option__code">繁中</span></button>
+      <button type="button" class="lang-option" data-code="es" onclick="setLanguage('es')"><span class="lang-option__name">Español</span><span class="lang-option__code">ES</span></button>
+      <button type="button" class="lang-option" data-code="pt" onclick="setLanguage('pt')"><span class="lang-option__name">Português</span><span class="lang-option__code">PT</span></button>
+      <button type="button" class="lang-option" data-code="ja" onclick="setLanguage('ja')"><span class="lang-option__name">日本語</span><span class="lang-option__code">日本語</span></button>
+      <button type="button" class="lang-option" data-code="ko" onclick="setLanguage('ko')"><span class="lang-option__name">한국어</span><span class="lang-option__code">한국어</span></button>
+      <button type="button" class="lang-option" data-code="de" onclick="setLanguage('de')"><span class="lang-option__name">Deutsch</span><span class="lang-option__code">DE</span></button>
+      <button type="button" class="lang-option active" data-code="fr" onclick="setLanguage('fr')"><span class="lang-option__name">Français</span><span class="lang-option__code">FR</span></button>
+      <button type="button" class="lang-option" data-code="ru" onclick="setLanguage('ru')"><span class="lang-option__name">Русский</span><span class="lang-option__code">RU</span></button>
+      <button type="button" class="lang-option" data-code="hi" onclick="setLanguage('hi')"><span class="lang-option__name">हिन्दी</span><span class="lang-option__code">HI</span></button>
+      <button type="button" class="lang-option" data-code="id" onclick="setLanguage('id')"><span class="lang-option__name">Bahasa Indonesia</span><span class="lang-option__code">ID</span></button>
+      <button type="button" class="lang-option" data-code="it" onclick="setLanguage('it')"><span class="lang-option__name">Italiano</span><span class="lang-option__code">IT</span></button>
+      <button type="button" class="lang-option" data-code="vi" onclick="setLanguage('vi')"><span class="lang-option__name">Tiếng Việt</span><span class="lang-option__code">VI</span></button>
+      <button type="button" class="lang-option" data-code="th" onclick="setLanguage('th')"><span class="lang-option__name">ไทย</span><span class="lang-option__code">ไทย</span></button>
+      <button type="button" class="lang-option" data-code="tr" onclick="setLanguage('tr')"><span class="lang-option__name">Türkçe</span><span class="lang-option__code">TR</span></button>
+      <button type="button" class="lang-option" data-code="ar" onclick="setLanguage('ar')"><span class="lang-option__name">العربية</span><span class="lang-option__code">AR</span></button>
+      <button type="button" class="lang-option" data-code="pl" onclick="setLanguage('pl')"><span class="lang-option__name">Polski</span><span class="lang-option__code">PL</span></button>
+      <button type="button" class="lang-option" data-code="nl" onclick="setLanguage('nl')"><span class="lang-option__name">Nederlands</span><span class="lang-option__code">NL</span></button>
+      <button type="button" class="lang-option" data-code="sv" onclick="setLanguage('sv')"><span class="lang-option__name">Svenska</span><span class="lang-option__code">SV</span></button>
+      <button type="button" class="lang-option" data-code="nb" onclick="setLanguage('nb')"><span class="lang-option__name">Norsk Bokmål</span><span class="lang-option__code">NB</span></button>
+      <button type="button" class="lang-option" data-code="da" onclick="setLanguage('da')"><span class="lang-option__name">Dansk</span><span class="lang-option__code">DA</span></button>
+      <button type="button" class="lang-option" data-code="fi" onclick="setLanguage('fi')"><span class="lang-option__name">Suomi</span><span class="lang-option__code">FI</span></button>
+      <button type="button" class="lang-option" data-code="cs" onclick="setLanguage('cs')"><span class="lang-option__name">Čeština</span><span class="lang-option__code">CS</span></button>
+      <button type="button" class="lang-option" data-code="uk" onclick="setLanguage('uk')"><span class="lang-option__name">Українська</span><span class="lang-option__code">UK</span></button>
+      <button type="button" class="lang-option" data-code="ro" onclick="setLanguage('ro')"><span class="lang-option__name">Română</span><span class="lang-option__code">RO</span></button>
+      <button type="button" class="lang-option" data-code="hu" onclick="setLanguage('hu')"><span class="lang-option__name">Magyar</span><span class="lang-option__code">HU</span></button>
+      <button type="button" class="lang-option" data-code="el" onclick="setLanguage('el')"><span class="lang-option__name">Ελληνικά</span><span class="lang-option__code">EL</span></button>
+      <button type="button" class="lang-option" data-code="he" onclick="setLanguage('he')"><span class="lang-option__name">עברית</span><span class="lang-option__code">HE</span></button>
+      <button type="button" class="lang-option" data-code="ms" onclick="setLanguage('ms')"><span class="lang-option__name">Bahasa Melayu</span><span class="lang-option__code">MS</span></button>
+      <button type="button" class="lang-option" data-code="tl" onclick="setLanguage('tl')"><span class="lang-option__name">Filipino</span><span class="lang-option__code">FIL</span></button>
+      <button type="button" class="lang-option" data-code="bn" onclick="setLanguage('bn')"><span class="lang-option__name">বাংলা</span><span class="lang-option__code">BN</span></button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var WORKBENCH_SAMPLES = {"posix": {"label": "posix-systems-c/dir_audit.c \u2014 Offline unistd.h, dirent.h & stdatomic.h", "status": "Offline POSIX Headers \u00b7 C17", "lines": ["<span class=\"tok-kw\">#include<\/span> <span class=\"tok-str\">&lt;dirent.h&gt;<\/span>", "<span class=\"tok-kw\">#include<\/span> <span class=\"tok-str\">&lt;stdatomic.h&gt;<\/span>", "<span class=\"tok-kw\">#include<\/span> <span class=\"tok-str\">&lt;stdio.h&gt;<\/span>", "<span class=\"tok-kw\">#include<\/span> <span class=\"tok-str\">&lt;sys/stat.h&gt;<\/span>", "", "<span class=\"tok-kw\">int<\/span> <span class=\"tok-fn\">main<\/span>(<span class=\"tok-kw\">void<\/span>) {", "    <span class=\"tok-kw\">atomic_int<\/span> files = <span class=\"tok-num\">0<\/span>;", "    DIR *d = <span class=\"tok-fn\">opendir<\/span>(<span class=\"tok-str\">&quot;.&quot;<\/span>);", "    <span class=\"tok-kw\">struct<\/span> dirent *ent;", "    <span class=\"tok-kw\">while<\/span> (d &amp;&amp; (ent = <span class=\"tok-fn\">readdir<\/span>(d)) != NULL) <span class=\"tok-fn\">atomic_fetch_add<\/span>(&amp;files, <span class=\"tok-num\">1<\/span>);", "    <span class=\"tok-kw\">if<\/span> (d) <span class=\"tok-fn\">closedir<\/span>(d);", "    <span class=\"tok-fn\">printf<\/span>(<span class=\"tok-str\">&quot;Scanned %d directory entries offline\\n&quot;<\/span>, files);", "}"], "output": ["<span class=\"term-prompt\">\u25b8<\/span> Offline POSIX C17 \u00b7 dir_audit.c", "Scanned 5 directory entries offline", "<span class=\"term-info\">\u2713 unistd.h, fcntl.h, dirent.h, poll.h, regex.h, getopt.h &amp; stdatomic.h ready<\/span>"]}, "pthread": {"label": "posix-systems-c/worker_pool.c \u2014 Multi-Threaded <pthread.h> & Semaphores", "status": "POSIX Cloud C \u00b7 -pthread -lm", "lines": ["<span class=\"tok-kw\">#include<\/span> <span class=\"tok-str\">&lt;pthread.h&gt;<\/span>", "<span class=\"tok-kw\">#include<\/span> <span class=\"tok-str\">&lt;stdio.h&gt;<\/span>", "", "<span class=\"tok-kw\">static<\/span> pthread_mutex_t mtx = PTHREAD_MUTEX_INITIALIZER;", "<span class=\"tok-kw\">static long<\/span> total = <span class=\"tok-num\">0<\/span>;", "<span class=\"tok-kw\">void<\/span> *<span class=\"tok-fn\">worker<\/span>(<span class=\"tok-kw\">void<\/span> *arg) {", "    <span class=\"tok-fn\">pthread_mutex_lock<\/span>(&amp;mtx); total += *(<span class=\"tok-kw\">int<\/span> *)arg; <span class=\"tok-fn\">pthread_mutex_unlock<\/span>(&amp;mtx);", "    <span class=\"tok-kw\">return<\/span> NULL;", "}"], "output": ["<span class=\"term-prompt\">[POSIX Router]<\/span> Detected &lt;pthread.h&gt; -&gt; building multi-file bundle (-pthread -lm)", "Joined 4 worker threads | Aggregated total = 1000", "<span class=\"term-info\">\u2713 #line directives preserve exact local .c/.h line numbers on errors<\/span>"]}, "sock": {"label": "posix-systems-c/ipc_socket.c \u2014 <sys/socket.h> & Full-Duplex IPC", "status": "Sockets \u00b7 fork() \u00b7 pipe()", "lines": ["<span class=\"tok-kw\">#include<\/span> <span class=\"tok-str\">&lt;stdio.h&gt;<\/span>", "<span class=\"tok-kw\">#include<\/span> <span class=\"tok-str\">&lt;sys/socket.h&gt;<\/span>", "<span class=\"tok-kw\">#include<\/span> <span class=\"tok-str\">&lt;unistd.h&gt;<\/span>", "", "<span class=\"tok-kw\">int<\/span> <span class=\"tok-fn\">main<\/span>(<span class=\"tok-kw\">void<\/span>) {", "    <span class=\"tok-kw\">int<\/span> sv[<span class=\"tok-num\">2<\/span>]; <span class=\"tok-kw\">char<\/span> rx[<span class=\"tok-num\">32<\/span>] = {<span class=\"tok-num\">0<\/span>};", "    <span class=\"tok-fn\">socketpair<\/span>(AF_UNIX, SOCK_STREAM, <span class=\"tok-num\">0<\/span>, sv);", "    <span class=\"tok-fn\">write<\/span>(sv[<span class=\"tok-num\">0<\/span>], <span class=\"tok-str\">&quot;ACK_FRAME_42&quot;<\/span>, <span class=\"tok-num\">12<\/span>);", "    <span class=\"tok-fn\">read<\/span>(sv[<span class=\"tok-num\">1<\/span>], rx, <span class=\"tok-num\">12<\/span>);", "    <span class=\"tok-fn\">printf<\/span>(<span class=\"tok-str\">&quot;IPC socket frame: %s\\n&quot;<\/span>, rx);", "}"], "output": ["<span class=\"term-prompt\">\u25b8<\/span> POSIX Systems C \u00b7 ipc_socket.c", "IPC socket frame: ACK_FRAME_42", "<span class=\"term-info\">\u2713 Supports &lt;sys/socket.h&gt;, &lt;semaphore.h&gt;, fork(), pipe() &amp; signal.h<\/span>"]}};
+    var currentTab = 'posix';
+    var runTimer = null;
+
+    function renderWorkbench(tabKey, animateRun) {
+      var sample = WORKBENCH_SAMPLES[tabKey] || WORKBENCH_SAMPLES['posix'];
+      if (!sample) { return; }
+      currentTab = tabKey;
+      var labelEl = document.getElementById('ide-compiler-label');
+      if (labelEl) { labelEl.textContent = sample.label; }
+      var statusEl = document.getElementById('wbStatusLang');
+      if (statusEl) { statusEl.textContent = sample.status; }
+
+      var tabs = document.querySelectorAll('.ide-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        var active = tabs[i].getAttribute('data-tab') === tabKey;
+        tabs[i].classList.toggle('active', active);
+        tabs[i].setAttribute('aria-selected', active ? 'true' : 'false');
+      }
+      var files = document.querySelectorAll('.wb-file');
+      for (var f = 0; f < files.length; f++) {
+        files[f].classList.toggle('active', files[f].getAttribute('data-tab') === tabKey);
+      }
+
+      var codeBox = document.getElementById('ide-code-box');
+      if (codeBox) {
+        var html = '';
+        for (var l = 0; l < sample.lines.length; l++) {
+          var activeCls = (l === sample.lines.length - 1) ? ' active-line' : '';
+          html += '<div class="code-line' + activeCls + '"><span class="ln">' + (l + 1) + '</span><span class="code-content">' + sample.lines[l] + '</span></div>';
+        }
+        codeBox.innerHTML = html;
+      }
+
+      if (animateRun) {
+        runWorkbenchSample();
+      }
+    }
+
+    function runWorkbenchSample() {
+      var sample = WORKBENCH_SAMPLES[currentTab] || WORKBENCH_SAMPLES['posix'];
+      var drawer = document.getElementById('ide-terminal-drawer');
+      var out = document.getElementById('ide-term-output');
+      var badge = document.getElementById('ide-exec-status');
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (!drawer || !out || !sample) { return; }
+
+      if (runTimer) { clearTimeout(runTimer); }
+      drawer.classList.add('is-open');
+      if (runBtn) { runBtn.classList.add('is-running'); }
+      if (badge) { badge.textContent = 'Running...'; badge.classList.remove('done'); }
+      out.innerHTML = '';
+
+      var idx = 0;
+      function step() {
+        if (idx < sample.output.length) {
+          var row = document.createElement('span');
+          row.className = 'term-line-item';
+          row.innerHTML = sample.output[idx];
+          out.appendChild(row);
+          idx++;
+          runTimer = setTimeout(step, 80);
+        } else {
+          var cur = document.createElement('span');
+          cur.className = 'term-cursor';
+          cur.textContent = '\u258b';
+          out.appendChild(cur);
+          if (badge) { badge.textContent = 'Completed'; badge.classList.add('done'); }
+          if (runBtn) { runBtn.classList.remove('is-running'); }
+        }
+      }
+      step();
+    }
+
+    function initNavigationAndSmartBar() {
+      var menuBtn = document.getElementById('menuBtn');
+      var drawer = document.getElementById('siteDrawer');
+      var bar = document.getElementById('mobileBottomBar');
+      var heroCta = document.getElementById('heroCta');
+      var siteFooter = document.getElementById('siteFooter');
+
+      function syncBar() {
+        if (!bar) { return; }
+        var drawerOpen = Boolean(drawer && !drawer.hasAttribute('hidden'));
+        var modalEl = document.getElementById('langModal');
+        var modalOpen = Boolean(modalEl && modalEl.classList.contains('show'));
+        var vh = window.innerHeight || document.documentElement.clientHeight || 800;
+        var heroInView = false;
+        if (heroCta) {
+          var hr = heroCta.getBoundingClientRect();
+          heroInView = (hr.bottom > 0 && hr.top < vh);
+        }
+        var footerInView = false;
+        if (siteFooter) {
+          var fr = siteFooter.getBoundingClientRect();
+          footerInView = (fr.top < vh + 24);
+        }
+        var scrollYVal = window.pageYOffset || window.scrollY || 0;
+        var docH = Math.max(document.body ? document.body.scrollHeight : 0, document.documentElement ? document.documentElement.scrollHeight : 0);
+        var nearBottom = (vh + scrollYVal) >= (docH - 120);
+        var shouldShow = !drawerOpen && !modalOpen && !heroInView && !footerInView && !nearBottom;
+        bar.classList.toggle('is-visible', shouldShow);
+      }
+
+      window.__supercodeSyncMobileBar = syncBar;
+
+      function setDrawer(open) {
+        if (!menuBtn || !drawer) { return; }
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) { drawer.removeAttribute('hidden'); }
+        else { drawer.setAttribute('hidden', ''); }
+        syncBar();
+      }
+      if (menuBtn && drawer) {
+        menuBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          setDrawer(menuBtn.getAttribute('aria-expanded') !== 'true');
+        });
+        drawer.addEventListener('click', function (e) {
+          if (e.target && e.target.closest('a')) { setDrawer(false); }
+        });
+        document.addEventListener('click', function (e) {
+          if (!drawer.hasAttribute('hidden') && !drawer.contains(e.target) && e.target !== menuBtn && !menuBtn.contains(e.target)) {
+            setDrawer(false);
+          }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') { setDrawer(false); }
+        });
+      }
+
+      if (bar) {
+        window.addEventListener('scroll', syncBar, { passive: true });
+        window.addEventListener('resize', syncBar);
+        syncBar();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var tabBtns = document.querySelectorAll('.ide-tab, .wb-file');
+      for (var i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].addEventListener('click', function () {
+          renderWorkbench(this.getAttribute('data-tab'), true);
+        });
+      }
+      var runBtn = document.getElementById('btn-run-sandbox');
+      if (runBtn) { runBtn.addEventListener('click', function () { runWorkbenchSample(); }); }
+      var closeTerm = document.getElementById('btn-close-term');
+      if (closeTerm) {
+        closeTerm.addEventListener('click', function () {
+          var d = document.getElementById('ide-terminal-drawer');
+          if (d) { d.classList.remove('is-open'); }
+        });
+      }
+      initNavigationAndSmartBar();
+      renderWorkbench('posix', false);
+    });
+  })();
+</script>
+<script>window.__SUPERCODE_STATIC_LANG__="fr";window.__SUPERCODE_STATIC_CANONICAL__="https://supercode-ide.github.io/fr/c-posix-systems-programming.html";</script>
+<script src="../i18n_extended.js"></script>
+</body>
+</html>
