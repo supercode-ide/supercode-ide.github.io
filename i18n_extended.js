@@ -47,7 +47,15 @@
     };
   }
 
+  function isSearchBot() {
+    var ua = (window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : '';
+    return /googlebot|bingbot|yandex|baiduspider|duckduckbot|applebot|slurp|oai-searchbot|perplexitybot|claudebot|facebookexternalhit|twitterbot|linkedinbot|whatsapp|telegrambot|discordbot|lighthouse|pagespeed|chrome-lighthouse/i.test(ua);
+  }
+
   function detectInitialLanguage() {
+    if (isSearchBot()) {
+      return normalizeLangCode(window.__SUPERCODE_STATIC_LANG__) || 'en';
+    }
     var urlParams = new URLSearchParams(window.location.search);
     var fromUrl = normalizeLangCode(urlParams.get('lang'));
     if (fromUrl) {
@@ -213,21 +221,37 @@
     }
   }
 
-  function navigateToStaticLang(info, validLang) {
+  function navigateToStaticLang(info, validLang, useReplace) {
     var inSubdir = Boolean(window.__SUPERCODE_STATIC_LANG__);
     var cleanTargetFile = (info.filename === 'index.html') ? '' : info.filename;
+    var hashPart = window.location.hash || '';
+    var targetUrl = '';
     if (validLang === 'en') {
-      var rootTarget = inSubdir ? ('../' + cleanTargetFile) : (cleanTargetFile || './');
-      window.location.href = rootTarget;
-      return true;
+      targetUrl = (inSubdir ? ('../' + cleanTargetFile) : (cleanTargetFile || './')) + hashPart;
+    } else {
+      if (inSubdir && window.__SUPERCODE_STATIC_LANG__ === validLang && !window.location.search) {
+        return false;
+      }
+      targetUrl = (inSubdir ? ('../' + validLang + '/' + cleanTargetFile) : (validLang + '/' + cleanTargetFile)) + hashPart;
     }
-    if (inSubdir && window.__SUPERCODE_STATIC_LANG__ === validLang && !window.location.search) {
-      return false;
+    if (useReplace && window.location.replace) {
+      window.location.replace(targetUrl);
+    } else {
+      window.location.href = targetUrl;
     }
-    var nextPath = inSubdir ? ('../' + validLang + '/' + cleanTargetFile) : (validLang + '/' + cleanTargetFile);
-    window.location.href = nextPath;
     return true;
   }
+
+  // Instant synchronous bot-safe redirect BEFORE paint: ensures non-English visitors landing on root EN URLs
+  // (or legacy ?lang=xx links) immediately receive the 100% pure static localized page (0 mixed English!).
+  (function earlyStaticLocaleRedirect() {
+    if (window.location.protocol.indexOf('http') !== 0 || isSearchBot()) { return; }
+    var currentStatic = window.__SUPERCODE_STATIC_LANG__ || 'en';
+    var initialLang = detectInitialLanguage();
+    if (initialLang && initialLang !== currentStatic) {
+      navigateToStaticLang(getCurrentPageInfo(), initialLang, true);
+    }
+  })();
 
   function applyUniversalLanguage(lang, isManual) {
     var info = getCurrentPageInfo();
@@ -236,10 +260,11 @@
 
     if (isManual) {
       try { window.localStorage.setItem(STORAGE_KEY, validLang); } catch (e) {}
-      if (window.location.protocol.indexOf('http') === 0) {
-        if (currentStatic !== validLang || window.location.search) {
-          if (navigateToStaticLang(info, validLang)) { return; }
-        }
+    }
+
+    if (window.location.protocol.indexOf('http') === 0 && !isSearchBot()) {
+      if (currentStatic !== validLang || (isManual && window.location.search)) {
+        if (navigateToStaticLang(info, validLang, !isManual)) { return; }
       }
     }
 
